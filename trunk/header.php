@@ -33,6 +33,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<li><a href=".">Start</a></li>
 	<li class="r"><a href="/contact.php">Kontakt</a></li>
 	<!--<li class="r"><a href="/help.html">Hilfe</a></li>-->
+	<!--<li class="r"><a href="/supporter.php">Unterstützer</a></li>-->
 	<li class="r"><a href="/stat.php">Statistiken</a></li>
 	<li class="r"><a href="/blog/">Blog</a></li>
 </ul>
