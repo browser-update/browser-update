@@ -9,10 +9,10 @@ require("config.php");
 <p>
 	<?php
 	#$q=sprintf("SELECT 1 FROM updates GROUP BY referer");
-    $q=sprintf("SELECT 1 FROM views GROUP BY referer");
+    $q=sprintf("SELECT COUNT(DISTINCT referer) FROM views");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
-	$domainnum = mysql_num_rows($r)+25;
+	list($domainnum) = mysql_fetch_row($r);
 	echo $domainnum . ' Seiten verwenden das Browser-Update.org Script';
 	?>
 </p>

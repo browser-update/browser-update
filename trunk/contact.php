@@ -17,6 +17,10 @@ Ich bin Webdesigner, Open-Web-Enthusiast und arbeite unter anderem an folgenden 
 <a href="http://webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
 <a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>.
 </p>
+<p>
+Browser-Update.org ist eine von <a href="http://webmasterpro.de">Webmasterpro.de</a>
+gestartete Initiative zur Förderung neuer Browserversionen und Webstandards.
+</p>
 
 <h2>Copyright</h2>
 
