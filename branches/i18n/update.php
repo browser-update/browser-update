@@ -1,4 +1,8 @@
-<?php include("header.php");?>
+<?php
+require_once("functions.php");
+include("header.php");
+?>
+
 
 	<div class="right">
 			<h2>Kostenlose Webbrowser</h2>

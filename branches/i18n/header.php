@@ -4,7 +4,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Browser-Update.org - Benutzer über Browserupdates informieren</title>
+	<title>Browser-Update.org - <?php echo t('Inform your visitors about browser-updates'); ?></title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="browser, webbrowser, choice, change browser, firefox, safari, opera, firefox 3, internet explorer 6, internet explorer update, ie, safari, konqueror" />
 	<!--<meta http-equiv="content-language" content="de" />-->

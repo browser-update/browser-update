@@ -1,4 +1,8 @@
-<?php include("header.php");?>
+<?php
+require_once("functions.php");
+include("header.php");
+?>
+
    
 <div class="left">
 	<div class="message">
