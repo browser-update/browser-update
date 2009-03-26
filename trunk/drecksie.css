@@ -1,0 +1,13 @@
+#body {
+	/*margin-top: -1.5em;*/
+    zoom:1;
+}
+
+ul#tabs {
+	padding: 1px 0;
+    /*height: 45px;*/
+}
+
+.message {
+    padding-bottom: 1.2em;
+}
