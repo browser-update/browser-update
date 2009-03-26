@@ -6,4 +6,6 @@ $db = mysql_connect("localhost","username","password")
 mysql_select_db("database", $db)
 	or die('database not found');
 
+$default_lang = 'en';
+
 ?>
