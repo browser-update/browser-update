@@ -1,0 +1,309 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Browser-Update - Inform your visitors about browser-updates</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="browser, webbrowser, choice, change browser, firefox, safari, opera, firefox 3, internet explorer 6, internet explorer update, ie, safari, konqueror" />
+	<!--<meta http-equiv="content-language" content="de" />-->
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" href="/base.css" type="text/css" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="/drecksie.css" type="text/css" />
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" href="/drecksie6.css" type="text/css" />
+	<![endif]-->
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" src="base.js">	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	var buo_ol = window.onload;
+	window.onload=function(){
+			var e = document.createElement("script");
+			e.setAttribute("type", "text/javascript");
+			e.setAttribute("src", "notice.js");
+			document.body.appendChild(e);
+			if (buo_ol) buo_ol();
+	}
+	
+	redirect();
+	</script>
+	
+	
+	
+	
+
+<div id="co">
+<h1>Browser-Update.org</h1>
+<div class="tagline">An initiative by webdesigners to inform users about browser-updates</div>
+<ul id="tabs">
+	<li><a href=".">Start</a></li>
+	<li class="r"><a href="contact.html">Contact</a></li>
+	<li class="r"><a href="/help.html">Help</a></li>
+	<li class="r"><a href="/stat.php">Statistics</a></li>
+	<li class="r"><a href="/blog/">Blog</a></li>
+</ul>
+<div id="body">
+	<div class="message">
+
+		<p>
+			This service is an 	unobtrusive opportunity to inform your visitors to switch to a newer browser.
+		</p>
+		<p>
+			Many of your visitors are still using very old, outdated browsers, most of them for no real reason. Switching to an newer browser is better for them and for you as a webdesigner. 
+			
+			<!--They just have to be told, that using an old browser gives them disadvantages.-->
+		</p>
+		<!--<p>
+			The more Websites Participate, the more the awareness to update will increase and old browser market share will drop faster!
+		</p>-->
+	</div>
+		
+
+		<h2>How it works </h2>
+		<ol class="steps">
+			<!--<li><div>You should (of course) code the Website that it is accessible by old webbrowsers, but you can leave some features/gimmicks out.</div></li>-->
+			<li><div>You include the small javascript code <!--from browser-update.org--> on your website</div></li>
+			<li><div>When a user visits your site with an old browser, he will be informed by a little and undisturbing bar, that his browser is not up-to-date, and that is would be better to switch. (<a href="#" onclick="$buo({},true);">Test the notification bar here</a>)<!--, to see all the features of this website.--></div></li>
+			<li><div>
+			He can follow the advice or ignore it and it won't appear again for some days.<!-- or taking no note of it and it will close automaitcally after some seconds.-->
+			</div></li>
+			<li><div>By clicking the bar, he will get to <a href="update.html">a page with arguments why to change/update and some browser choices</a>.
+			</div></li>
+		</ol>
+		<h2>Features</h2>
+		<ul class="advantages">
+			<li>
+				<h3>Non-Intrusive<!--Unobtrusive--></h3>
+				The user will be notified only once, and won't be bothered any more.
+				The notification-bar is very small and won't harm the browsing experience.
+			</li>
+			<li>
+				<h3>Informative</h3>
+				Tell the user that he is using an old browser and that your website needs advanced browser-features in a "standardized way".
+			</li>
+			<li>
+				<h3>Idealistic</h3>
+				Help evolve the web! Help the standards-based web! Help  Open-Source software projects! Help the user! Help to increase security awareness! Support your favorite webbrowser!
+			</li>
+			<li>
+				<h3>Customize</h3>
+				You can customize the browsers and versions to notifiy. <br/>
+				In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things.
+			</li>
+			<li>
+				<h3>Localized</h3>
+				The message is automatically displayed in the users language. 
+			</li>
+			<li>
+				<h3>Statistics</h3>
+				You get <a href="stat.php">statistics</a> about what browsers your visitors are using, and about your "conversions": How many users updated or changed their browser through your advice. 
+			</li>
+
+		</ul>
+
+		
+		
+		<h2>Install notification on your site</h2>
+		
+		<p>
+			Here you can get the code to include on your website. Just include it it anywhere in the source of your page.
+			
+		</p>
+		<p>
+			You can customize the message or leave the defaults (recommended).
+		</p>
+		<div class="generate">
+		<h3>Customize the browsers to notify</h3>
+		<!--<p>Following browsers will be notified:</p>-->
+		<div>
+			<label for="f-i">IE</label> 
+			<select id="f-i" onchange="code();">
+				<option value="5.5">&lt;= 5.5</option>
+				<option value="6" selected="selected">&lt;= 6</option>
+				<option value="7">&lt;= 7</option>
+			</select>
+		</div>
+		<div>
+			<label for="f-f">Firefox</label>  
+			<select id="f-f" onchange="code();">
+				<option value="1">&lt;= 1.0</option>
+				<option value="1.5">&lt;= 1.5</option>
+				<option value="2" selected="selected">&lt;= 2.0</option>
+			</select>
+		</div>
+		<div>
+			<label for="f-o">Opera</label> 
+			<select id="f-o" onchange="code();">
+				<option value="8">&lt;= 8.0</option>
+				<option value="9">&lt;= 9.0</option>
+				<option value="9.2" selected="selected">&lt;= 9.2</option>
+			</select>
+		</div>
+		<div>
+			<label for="f-s">Safari</label>  
+			<select id="f-s" onchange="code();">
+				<option value="1">&lt;= 1.0</option>
+				<option value="1.2">&lt;= 1.2</option>
+				<option value="2" selected="selected">&lt;= 2.0</option>
+				<option value="3">&lt;= 3.0</option>
+			</select>
+		</div>
+
+		<p>
+			If you keep the default settings they will be automatically adjusted over time if browsers get out-of-date.
+		</p>
+		
+		<!--
+		<h3>Break</h3>
+		<div>
+			The message should be shown again after <input id="pause" value="24" class="small"  onchange="code();" /> hours 
+		</div>
+		<div>
+			or every time <input type="checkbox"  onchange="code();"/>.
+		</div>
+		
+		
+		<h3>Promote browsers</h3>
+		
+		<p>When the user reaches this page, he will be presented a collection of browsers he can download. You can modify this collection by your preferences.</p>
+		
+		<div>
+			<label for="pie">IE</label> 
+			<select id="pie">
+				<option>recommend</option>
+				<option selected="selected">neutral</option>
+				<option>disadvise</option>
+			</select>
+		</div>
+		<div>
+			<label for="pop">Opera</label> 
+			<select id="pop">
+				<option>recommend</option>
+				<option selected="selected">neutral</option>
+				<option>disadvise</option>
+			</select>
+		</div>
+		<div>	
+			<label for="psa">Safari</label>  
+			<select id="psa">
+				<option>recommend</option>
+				<option selected="selected">neutral</option>
+				<option>disadvise</option>
+			</select>
+		</div>
+		<div>
+			<label for="pff">Firefox</label>  
+			<select id="pff">
+				<option>recommend</option>
+				<option selected="selected">neutral</option>
+				<option>disadvise</option>
+			</select>
+		</div>
+		-->
+		<h3>Your Code</h3>
+		
+		<p>Include the following script in your website to install the Browser-Update.org notification on your website:</p>
+		<textarea id="f-code">
+<script type="text/javascript">
+var $buoop = {notify:{i:6,f:2,o:9.2,s:2,n:9},reminder:24}
+$buoop.ol = window.onload;
+window.onload=function(){
+ var e = document.createElement("script");
+ e.setAttribute("type", "text/javascript");
+ e.setAttribute("src", "notice.js");
+ document.body.appendChild(e);
+ if ($buoop.ol) $buoop.ol();
+}
+</script>
+		</textarea>
+		
+		</div>
+		<p>
+		</p>
+		
+		
+		
+		
+		
+		<h2>Arguments, why to tell users to update</h2>
+		<ul class="advantages">
+			<li>
+				<h3>Reduced development costs and time</h3>
+				<div>Optimizing websites for old browsers is time consuming and thus expensive.</div> 
+			</li>
+			<li>
+				<h3>Webdesign technologies and features</h3>
+				<div>There are all this great new webdevlopment standards and they are supported by modern browsers ... but you cant use them!! <br/>
+				Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing-experience for your users.</div>
+			</li>
+			<li>
+				<h3>Security and benefits for the user</h3>
+				<div>Numerous benefits: security, speed, features, ... See the <a href="update.html">update page</a></div>
+			</li>
+			<li>
+				<h3>The web is new and has to evolve</h3>
+				<div>That has to include the user-agents</div> 
+				The web has always evolved. The strong market share of a 6 year old webbrowser (IE6) is new. If we don't do something now, we'll have to code websites like in 2001 even if it is 2012.
+			</li>
+			<li>
+				<h3>Users don't oppose updating...</h3>
+				... they often just don't know about the need to update, or the existence of the browser as a software at all.
+			</li>
+		</ul>
+		
+		
+		
+		
+		
+		
+		<h2>Help this project</h2>
+		<ul class="advantages">
+			<li>
+				<h3>Participate</h3>
+				Include the notice code in your page to inform users of outdated browser to upgrade.
+			</li>
+			<li>
+				<h3>Spread the word</h3>
+				Tell others about this initiative! In your blog, on your webpage, ...
+			</li>
+			<li>
+				<h3>Translate this page</h3>
+				Translate this page to your language...
+			</li>
+		</ul>
+		
+	
+	<div class="clear">&nbsp;</div>
+	
+
+	<div id="lang">
+		<a href="/lang/en/">english</a>
+		<a href="/lang/de/">deutsch</a>
+		<a href="help.html">translate...</a>
+	</div>
+	
+	<div id="bookmark">
+		<!-- AddThis Button BEGIN -->
+		<script type="text/javascript">addthis_pub  = 'Jossele';</script>
+		<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-bm.gif" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+		<!-- AddThis Button END -->
+	</div>
+</div>
+
+
+</div>
+
+<img id="counter" style="width: 1px; height: 1px"/>
+
+<script type="text/javascript" src="http://fc.webmasterpro.de/counter.php?name=browserupdate&amp;style=none"></script>
+<noscript><div><img src="http://fc.webmasterpro.de/as_noscript.php?name=browserupdate" style="width:1px;height:1px;" alt="" /></div></noscript>
+
+
+</body>
+</html>
+
