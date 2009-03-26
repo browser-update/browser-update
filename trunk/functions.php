@@ -129,40 +129,40 @@ function t()
 }
 
 /**
- * Loads a block in the request language
+ * Loads a template in the request language
  *
- * falls back to $default_lang if block does not exist.
+ * Falls back to $default_lang if template does not exist.
  */
-function translate_block($blockfilename, $vars=array())
+function translate_template($filename, $vars=array())
 {
 	global $default_lang;
-	$blockfilename = BU_LANG_PATH . request_lang() .
-		DIRECTORY_SEPARATOR . $blockfilename;
-	if (!file_exists($blockfilename))
+	$incfilename = BU_LANG_PATH . request_lang() .
+		DIRECTORY_SEPARATOR . $filename;
+	if (!file_exists($incfilename))
 	{
-		$blockfilename = BU_LANG_PATH . $default_lang .
-			DIRECTORY_SEPARATOR . $blockfilename;
+		$incfilename = BU_LANG_PATH . $default_lang .
+			DIRECTORY_SEPARATOR . $filename;
 	}
-	if (file_exists($blockfilename))
+	if (file_exists($incfilename))
 	{
 		if ($vars)
 			extract($vars, EXTR_SKIP | EXTR_REFS);
 		unset($vars);
-		include($blockfilename);
+		include($incfilename);
 	}
 	else
 	{
-		throw new Exception('translate_block(): $blockfilename not found');
+		throw new Exception('translate_template(): $filename not found');
 	}
 }
 
 /**
- * Shortcut for translate_block()
+ * Shortcut for translate_template()
  */
-function tb()
+function tt()
 {
 	$args = func_get_args();
-	return call_user_func_array('translate_block', $args);
+	return call_user_func_array('translate_template', $args);
 }
 
 ?>
