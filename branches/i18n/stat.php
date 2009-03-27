@@ -1,6 +1,7 @@
 <?php
 require_once("config.php");
-require_once("functions.php");
+require_once("lib/init.php");
+require_once("lib/lang.php");
 include("header.php");
 ?>
 

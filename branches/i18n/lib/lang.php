@@ -1,6 +1,6 @@
 <?php
 
-define('BU_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
+require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php'); // just to be sure
 define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
 
 /**
