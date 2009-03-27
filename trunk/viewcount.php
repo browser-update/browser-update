@@ -5,8 +5,8 @@ require("config.php");
 //$ip 	= crc32(ip2long($_SERVER['REMOTE_ADDR']));
 $time	= time();
 $host	= urldecode($_GET["p"]);
-if ($host=='browser-update.org' || $host=='www.browser-update.org')
-    return;
+#if ($host=='browser-update.org' || $host=='www.browser-update.org')
+#    return;
 
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 $lang = explode (",", $lang);

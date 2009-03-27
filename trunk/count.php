@@ -5,8 +5,8 @@ require("config.php");
 
 $ip 	= crc32(ip2long($_SERVER['REMOTE_ADDR']));
 $time	= time();
-
-$q=sprintf("SELECT 1 FROM updates WHERE ip=%d AND time>%d",
+/*
+$q=sprintf("SELECT 1 FROM updates WHERE ip=%d AND time>%d LIMIT 1",
 	$ip,
 	$time-3600
 	);
@@ -14,6 +14,7 @@ $r = mysql_query($q)
 	or die (mysql_error(). $q);
 if (mysql_num_rows($r)>0)
 	exit;
+*/
 
 $ref	= parse_url(urldecode($_GET["ref"]));
 $host	= strtolower($ref['host']);

@@ -140,7 +140,7 @@
 function countBrowser(to) {
 		var f=getBrowser();
 		//TODO: / davor
-        if ((f.n=="f" && f.v>2) ||(f.n=="o" && f.v>9.6) ||(f.n=="s" && f.v>3.1) ||(f.n=="i" && f.v>8))
+        if ((f.n=="f" && f.v>2) ||(f.n=="o" && f.v>9.6) ||(f.n=="s" && f.v>3.1) ||(f.n=="i" && f.v>7))
             return;
         var i=new Image();
 		i.src="count.php?ref="+escape(document.referrer)+"&from="+f.n+"&fromv="+f.v+"&to="+to;
