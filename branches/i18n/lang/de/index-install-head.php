@@ -1,9 +1,9 @@
 		
 		<p>
-            Binden Sie einfach den hier generierten Code an bliebiger Stelle in Ihre Webseite ein.
+            Binden Sie einfach den hier generierten Code an beliebiger Stelle in Ihre Webseite ein.
 		</p>
         <!--
 		<p>
-			You can customize the message or leave the defaults (recommended).
+			Sie können den Hinweistext abändern oder die Voreinstellungen beibehalten (empfohlen).
 		</p>
         -->

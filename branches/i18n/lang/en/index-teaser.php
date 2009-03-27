@@ -1,10 +1,10 @@
 		<p>
 			<b>
-			This service is an 	unobtrusive opportunity to inform your visitors to switch to a newer browser.
+			This service is a subtle opportunity to inform your visitors to switch to a newer browser.
 			</b>
 		</p>
 		<p>
-			Many of your visitors are still using very old, outdated browsers, most of them for no real reason. Switching to an newer browser is better for them and for you as a webdesigner. 
+			Many internet users are still using very old, outdated browsers - most of them for no actual reason. Switching to a newer browser contains advantages for them and for you as a web designer. 
 			
 			<!--They just have to be told, that using an old browser gives them disadvantages.-->
 		</p>

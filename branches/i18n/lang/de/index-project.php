@@ -11,6 +11,6 @@
 			</li>
 			<li>
 				<h3>Übersetzen</h3>
-				Übersetzen Sie diese Webseite in Ihre Sprache!
+				Übersetzen Sie diese Webseite in Ihre Sprache.
 			</li>
 		</ul>
