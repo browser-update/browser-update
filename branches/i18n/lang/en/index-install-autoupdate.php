@@ -1,3 +1,1 @@
-<b>Browservorgabe verwenden und automatisch aktualisieren</b> wenn Browser vom Hersteller
-            nicht mehr unterstützt werden, Sicherheitslücken aufweisen oder
-            sehr lange veraltet sind.
+<b>Use the browser's default setting and refresh automatically</b> if the browser is no more supported from the producer, exhibit security gaps or has been very old for a long time.
