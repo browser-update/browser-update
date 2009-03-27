@@ -8,6 +8,7 @@ $addE = function ( obj, type, fn ) {
 }
 
 var $buo = function(op,test) {
+    var jsv=1;
 	var n = window.navigator;
 	var l =(n["language"])?n["language"]:n["userLanguage"];
 	var vs =op.vs||{i:6,f:2,o:9.3,s:2,n:10};
@@ -40,10 +41,11 @@ var $buo = function(op,test) {
 
 	if (!test && (!b.n || document.cookie.indexOf("browserupdateorg=pause")>-1 || b.v>vs[b.n]))
 		return;
-
-	var i = new Image();
-    i.src="http://browser-update.org/viewcount.php?n="+b.n+"&v="+b.v + "&p="+ escape(window.location.hostname);
-
+    
+    if (!test) {
+        var i = new Image();
+        i.src="http://browser-update.org/viewcount.php?n="+b.n+"&v="+b.v + "&p="+ escape(window.location.hostname) + "&jsv="+jsv;
+    }
 	document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'';
 	
 	var ll=l.substr(0,2);

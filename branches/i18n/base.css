@@ -173,15 +173,39 @@ h2  {
 }
 
 .advantages {
-    font-size: 13px;
+	font-size: 13px;
+	list-style: none;
+	margin-left: 5px;
+	padding-left: 0;
 }
 .advantages li {
-	margin-bottom: .5em;
+	margin-bottom: 1.5em;
+	padding-left: 40px;
 	background-repeat: no-repeat;
 	background-position: left top;
 	color: #777;
 }
 
+.advantages li h3 {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.advantages .security {
+	background: transparent url('./img/security.png') no-repeat 0 0;
+}
+
+.advantages .speed {
+	background: transparent url('./img/speed.png') no-repeat 0 0;
+}
+
+.advantages .compatibility {
+	background: transparent url('./img/compatibility.png') no-repeat 0 0;
+}
+
+.advantages .comfort {
+	background: transparent url('./img/comfort.png') no-repeat 0 0;
+}
 
 ul.browsers {
 	margin: 0;
