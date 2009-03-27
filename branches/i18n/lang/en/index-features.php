@@ -6,7 +6,7 @@
 			</li>
 			<li>
 				<h3>Informative</h3>
-				Tell the users that they are using an obsolete browser and your website gets more fetures and a better experience with a new one.
+				Tell the users that they are using an obsolete browser and your website gets more features and a better experience with a new one.
 			</li>
 			<li>
 				<h3>Idealistic</h3>
