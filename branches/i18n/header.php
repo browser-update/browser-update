@@ -39,9 +39,9 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 </ul>
 <!--
 <div id="lang">
-    <a href="/en/">english</a>
-    <a href="/de/">deutsch</a>
-    <a href="help.html">translate...</a>
+    <a href="/en/"><?php echo t('english'); ?></a>
+    <a href="/de/"><?php echo t('german'); ?></a>
+    <a href="help.html"><?php echo t('translate...'); ?></a>
 </div>
 -->
 <div id="bookmark">
