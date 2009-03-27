@@ -42,74 +42,94 @@
             </p>
 	</div>
 	<div class="left">
-	
-	<div class="message">
+
+		<div class="message">
+			<p>
+				Der Browser den Sie benutzen ist veraltet.
+
+				Er besitzt bekannte <strong>Sicherheitsschwachstellen</strong>,
+				bietet nur <strong>begrenzten Komfort</strong> und hat viele
+				<strong>weitere Nachteile</strong>.
+				<!--Sie können nicht alle Funktionen dieser Webseite sehen.-->
+			</p>
+		</div>
+
+		<div>
+			<p>
+				Der Wechsel zu einem neueren Browser kann Ihnen eine Menge
+				Vorteile bringen:
+			</p>
+			<ul class="advantages">
+				<li class="security">
+					<h3>Sicherheit</h3>
+					<div>
+						Neuere Browser schützen besser vor Betrug, Viren, Trojanern,
+						Datendiebstahl und anderen Bedrohungen Ihrer Privatsphäre
+						und Sicherheit. Aktuelle Browser schließen Sicherheitslücken,
+						durch die Angreifer in Ihren Computer gelangen können.
+					</div>
+				</li>
+				<li class="speed">
+					<h3>Geschwindigkeit</h3>
+					<div>
+						Jede neue Browsergeneration verbessert die Geschwindigkeit,
+						mit der Webseiten dargestellt werden.
+					</div>
+				</li>
+				<li class="compatibility">
+					<h3>Kompatibilität</h3>
+					<div>
+						Die auf modernen Webseiten eingesetzten Techniken werden
+						durch aktuelle Browser besser unterstützt, wodurch die
+						Funktionalität erhöht und die Darstellung verbessert wird.
+					</div>
+				</li>
+				<li class="comfort">
+					<h3>Komfort &amp; Leistung</h3>
+					<div>
+						Mit neuen Funktionen, Erweiterungen und besserer
+						Anpassbarkeit aktueller Browser werden Sie schneller und
+						einfacher im Internet surfen können.
+					</div>
+				</li>
+			</ul>
+		</div>
+
 		<p>
-            Der Browser den Sie benutzen ist veraltet.
+			Ein Update ist einfach, dauert nur wenige Minuten und ist komplett
+			kostenlos.
+		</p>
+		<p>Bitte wählen Sie einen Webbrowser auf der rechten Seite aus.</p>
 
-            Er besitzt bekannte <b>Sicherheitsschwachstellen</b>, bietet nur <b>begrenzten Komfort</b> und
-            hat viele <b>weitere Nachteile</b>.
-            <!--Sie können nicht alle Funktionen dieser Webseite sehen.-->
-        </p>
-	</div>
-    <div>
-        <p>
-            Der Wechsel zu einem neueren Browser kann Ihnen eine Menge Vorteile bringen:
-        </p>
-		<ul class="advantages">
-			<li>
-				<h3>Sicherheit</h3>
-				<div>Neuere Browser schützen besser gegen Betrug, Viren, Trojaner, Datenklau und andere Bedrohungen
-                Ihrer Privatsphäre und Sicherheit.
-                Aktuelle Browser schließen Sicherheitslücken, durch die Angreifer in Ihren
-                Computer gelangen können.</div>
-			</li>
-			<li>
-				<h3>Geschwindigkeit</h3>
-				<div>Jede neue Browsergeneration verbessert die Geschwindigkeit, mit der Webseiten dargestellt werden.</div>
-			</li>
-			<li>
-				<h3>Kompatibilität</h3>
-				<div>Webseiten werden besser und korrekter dargestellt.</div>
-			</li>
-			<li>
-				<h3>Komfort &amp; bessere Leistung</h3>
-				<div>Mit neuen Funktionen, Erweiterungen und besserer Anpassbarkeit
-                werden Sie schneller und einfacher im Internet surfen können.</div>
-			</li>
-		</ul>
-	</div>
-		<p>Ein Update ist einfach, dauert nur ungefähr fünf Minuten und ist komplett kostenlos.</p>
-        <p>Bitte wählen Sie einen Webbrowser auf der rechten Seite aus.</p>
-	
+		<div>
+			<h2>Wofür diese Webseite?</h2>
+			<p>
+				Diese Webseite ist eine Initiative von Webdesignern, Webmastern
+				und Bloggern, die ihren Besuchern helfen und das Web
+				weiterbringen	wollen:
+				Veraltete Browser sind ein <strong>Sicherheitsrisiko</strong>
+				und <strong>blockieren den Fortschritt im Internet</strong>
+				durch mangelhafte Funktionen und viele <strong>Fehler</strong>.
+			</p>
+			<p>
+				<a href="./">Weitere Informationen</a>
+			</p>
+		</div>
 
-	<div>
-		<h2>Wofür diese Webseite?</h2>
+
+		<h2>„Ich kann kein Update einspielen“</h2>
 		<p>
-			Diese Webseite ist eine Initiative von Webdesignern, Webmastern und Bloggern,
-            die ihren Besuchern helfen und das Web weiterbringen wollen:
-			Veraltete Browser sind ein <b>Sicherheitsrisiko</b> und
-            <b>blockieren den Fortschritt im Internet</b> durch mangelhafte Funktionen
-            und viele <b>Fehler</b>.
-        </p>
-        <p>
-            <a href="./">Weitere Informationen</a>
-        </p>
-	</div>
-
-
-    <h2>"Ich kann kein Update einspielen"</h2>
-    <p>
-        Wenn Sie sich an einem Computer in einem Firmennetzwerk befinden
-        und keinen neuen Browser installieren können, fragen Sie Ihren
-        Netzwerkadministrator nach einem Browserupdate.
+			Wenn Sie sich an einem Computer in einem Firmennetzwerk befinden
+			und keinen neuen Browser installieren können, fragen Sie Ihren
+			Netzwerkadministrator nach einem Browserupdate.
     </p>
 
-    <p>
-        Wenn Sie auf Grund von Kompatibilitätsproblemen keinen neuen Browser installieren können,
-        überlegen Sie sich, ob Sie nicht einfach einen zweiten Browser installieren wollen: Den Alten wegen der Kompatibilität
-        und den Neuen zum komfortableren Surfen.
-    </p>
+		<p>
+			Wenn Sie auf Grund von Kompatibilitätsproblemen keinen neuen
+			Browser installieren können, überlegen Sie sich, ob Sie nicht
+			einfach einen zweiten Browser installieren wollen: Den Alten wegen
+			der Kompatibilität und den Neuen zum komfortableren Surfen.
+		</p>
 	</div>
 
 
