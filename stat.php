@@ -40,13 +40,25 @@ function get_num($fromn=false, $ton=false) {
 
 
 
+$names = array(
+	"i"=>'Internet Explorer',
+	"f"=>'Firefox',
+	"o"=>'Opera',
+	"s"=>'Apple Safari',
+	"n"=>'Netscape Navigator',
+    "c"=>'Google Chrome',
+    ""=>'?'
+);
+
+
 ?>
 <p>
 	<?php
 	echo get_num() . ' Benutzer haben Ihre Browser schon aktualisiert.';
 	?>
 </p>
-
+<?php
+/*
 <ul class="statleft">
 	<li>to FF: <?php echo get_num(false,'f')?></li>
 	<li>to Opera: <?php echo get_num(false,'o')?></li>
@@ -60,9 +72,30 @@ function get_num($fromn=false, $ton=false) {
 	<li>from Safari: <?php echo get_num('s',false)?></li>
 	<li>from IE: <?php echo get_num('i',false)?></li>
 </ul>
-
-
-
+<table>
+    <thead>
+        <tr><td></td><td>zu Firefox</td><td>zu Opera</td><td>zu Safari</td><td>zu Chrome</td><td>zu IE</td></tr>
+    </thead>
+    <tbody>
+        <tr><th>von IE</th>         <td><?php echo get_num('i','f')?></td><td><?php echo get_num('i','o')?></td><td><?php echo get_num('i','s')?></td><td><?php echo get_num('i','c')?></td><td><?php echo get_num('i','i')?></td></tr>
+        <tr><th>von Firefox</th>    <td><?php echo get_num('f','f')?></td><td><?php echo get_num('f','o')?></td><td><?php echo get_num('f','s')?></td><td><?php echo get_num('f','c')?></td><td><?php echo get_num('f','i')?></td></tr>
+        <tr><th>von Opera</th>      <td><?php echo get_num('o','f')?></td><td><?php echo get_num('o','o')?></td><td><?php echo get_num('o','s')?></td><td><?php echo get_num('o','c')?></td><td><?php echo get_num('o','i')?></td></tr>
+        <tr><th>von Safari</th>     <td><?php echo get_num('s','f')?></td><td><?php echo get_num('s','o')?></td><td><?php echo get_num('s','s')?></td><td><?php echo get_num('s','c')?></td><td><?php echo get_num('s','i')?></td></tr>
+    </tbody>
+</table>
+*/
+?>
+<table>
+    <thead><tr><td>Von</td><td>Nach</td><td>Anzhal</td></tr></thead>
+    <tbody>
+    <?php
+    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
+     while ($a = mysql_fetch_assoc($q)) {
+         echo '<tr><td>'.$names[$a['fromn']].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['num'].'</td></tr>';
+     }
+    ?>
+    </tbody>
+</table>
 
 <h3>Geplante Statistiken</h3>
 <ul>
@@ -87,17 +120,6 @@ function get_num($fromn=false, $ton=false) {
 </thead>
 
 <?php
-
-
-$names = array(
-	"i"=>'Internet Explorer',
-	"f"=>'Firefox',
-	"o"=>'Opera',
-	"s"=>'Apple Safari',
-	"n"=>'Netscape Navigator'
-);
-
-
 $q=sprintf("SELECT * FROM updates ORDER BY time DESC LIMIT 100");
 
 $r = mysql_query($q)
@@ -106,10 +128,8 @@ $r = mysql_query($q)
 
 
 while ($a = mysql_fetch_assoc($r)) {
-
 	echo '<tr><td>'.$a['referer'].'</td><td>'.$names[$a['fromn']].' '.$a['fromv'].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['lang'].'</td><td>'.date("d.m.Y, H:i",$a['time']).'</td></tr>';
-//list($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
-
+    //list($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
 }
 ?>
 
