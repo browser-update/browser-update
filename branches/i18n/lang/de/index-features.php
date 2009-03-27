@@ -27,12 +27,6 @@
                 sehr lange veraltet sind nehmen wir sie automatisch in unsere Liste auf.
 			</li>
 			<li>
-				<h3>Statistiken</h3>
-				Sie erhalten <a href="/stat.php">Statistiken</a> darüber, welche Browser
-                Ihre Besucher benutzen und wie viele Benutzer durch Ihre Benachrichtigung
-                "bekehrt" wurden.
-			</li>
-			<li>
 				<h3>Anpassbar <span class="workingonit">in Arbeit...</span></h3>
 				Sie können einstellen, bei welchen Browsern und Versionen die Meldung
                 erscheinen soll.
@@ -42,6 +36,12 @@
             <li>
 				<h3>Lokalisierung <span class="workingonit">in Arbeit...</span></h3>
 				Die Benachrichtigung wird automatisch in der Sprache des Besuchers angezeigt.
+			</li>
+			<li>
+				<h3>Statistiken</h3>
+				Sie erhalten <a href="/stat.php">Statistiken</a> darüber, welche Browser
+                Ihre Besucher benutzen und wie viele Benutzer durch Ihre Benachrichtigung
+                "bekehrt" wurden: Wie viele Benutzer haben aufgrund ihres Rats den Browser gewechselt.
 			</li>
 
 
