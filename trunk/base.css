@@ -97,8 +97,9 @@ ul#tabs li a {
 
 #body {
 	clear: left;
-	background: #f8f8f8;
+	background-color: #f8f8f8;
 	border: 1px #f8f8f8 solid;
+	padding: 1em;
 	margin:0;
 	margin-bottom: 1em;
 	position: relative;
@@ -124,7 +125,7 @@ h2  {
 	/*border: 1px solid #eee;*/
 	padding: .2em .4em;
 	padding-left: 1em;
-	margin: 1em;
+	margin-left: 1em;
 	background-color: #FFF3DF;
 	overflow: hidden;
 	/*background: rgb(208, 227, 255);*/
@@ -137,7 +138,7 @@ h2  {
 
 .left {
 	overflow: hidden;
-	margin: 1em;
+	margin: 0;
 }
 
 .message {
