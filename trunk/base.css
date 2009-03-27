@@ -5,34 +5,38 @@ body {
 	color: #333;
 	text-align: center;
 	line-height:1.5;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-    padding-left: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding-right: 0;
+	padding-left: 0;
 }
+
 #co {
 	width: 775px;
 	margin: auto;
 	text-align: left;
-    position: relative;
+	position: relative;
 }
+
 .header {
-    background: url(img/logo.png) no-repeat left top;
-    height:120px;
-    margin-top:15px;
-    padding-left:113px;
-    padding-top:1px;
+	background: url(img/logo.png) no-repeat left top;
+	height:120px;
+	margin-top:15px;
+	padding-left:113px;
+	padding-top:1px;
 }
+
 .header a {
-    text-decoration: none;
-    color: #000;
+	text-decoration: none;
+	color: #000;
 }
+
 h1 {
 	margin-bottom: 0;
 	font-family:'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;
 	font-weight:bold;
-    margin-bottom:0;
-    margin-top:18px;
+	margin-bottom:0;
+	margin-top:18px;
 }
 
 img {
@@ -48,6 +52,7 @@ ul#tabs {
 	margin: 0;
 	padding: 0;
 }
+
 ul#tabs li {
 	list-style-type: none;
 	display: block;
@@ -58,9 +63,9 @@ ul#tabs li {
 	margin-right: 1.3em;
 	float: left;
 	font-size: 1.1em;
-	
+
 	background-color: #f8f8f8;
-	
+
 	border: 1px solid #aaa;
 	border-bottom: none;
 	-moz-border-radius-topright: 4px;
@@ -68,8 +73,7 @@ ul#tabs li {
 	border-radius-topright: 4px;
 	border-radius-topleft: 4px;
 	border: none;
-    font-style:italic;
-	
+	font-style:italic;
 }
 
 ul#tabs li.r {
@@ -79,10 +83,11 @@ ul#tabs li.r {
 }
 
 a {
-    color: #e25600;
+	color: #e25600;
 }
+
 a img {
-    border: 0;
+	border: 0;
 }
 
 ul#tabs li a {
@@ -105,11 +110,11 @@ ul h3 {
 }
 
 h2.top  {
-    margin-top: .1em;
+	margin-top: .1em;
 }
 
 h2  {
-    margin-top: 1.8em;
+	margin-top: 1.8em;
 	font-family:'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;
 }
 
@@ -120,19 +125,19 @@ h2  {
 	padding: .2em .4em;
 	padding-left: 1em;
 	margin: 1em;
-    background-color: #FFF3DF;
-    overflow: hidden;
-    /*background: rgb(208, 227, 255);*/
+	background-color: #FFF3DF;
+	overflow: hidden;
+	/*background: rgb(208, 227, 255);*/
 }
 
 .right h2 {
-    margin: 0;
-    font-size: 18px;
+	margin: 0;
+	font-size: 18px;
 }
 
 .left {
-    overflow: hidden;
-    margin: 1em;
+	overflow: hidden;
+	margin: 1em;
 }
 
 .message {
@@ -140,22 +145,22 @@ h2  {
 	/*border: 1px solid rgb(255, 120, 47);*/
 	background-color: rgb(254, 255, 175);
 	margin-bottom: 1.3em;
-    margin-left: .3em;
-    margin-right: .3em;
+	margin-left: .3em;
+	margin-right: .3em;
 	padding: 1em;
 	padding-top: .1em;
 	padding-bottom: .3em;
 	overflow: hidden;
-    font-weight: normal;
+	font-weight: normal;
 
-    background: url(img/bg.png) rgb(247, 91, 0) bottom left repeat-x;
-    color: #fff;
-    zoom: 1;
+	background: url(img/bg.png) rgb(247, 91, 0) bottom left repeat-x;
+	color: #fff;
+	zoom: 1;
 }
 
 .message p,
 .message2 p{
-    margin-top: .7em;
+	margin-top: .7em;
 }
 
 .message2 {
@@ -163,13 +168,13 @@ h2  {
 	border: 1px solid rgb(255, 120, 47);
 	background-color: rgb(254, 255, 175);
 	margin-bottom: 1em;
-    margin-left: .3em;
-    margin-right: .3em;
+	margin-left: .3em;
+	margin-right: .3em;
 	padding: 1em;
 	padding-top: .1em;
 	padding-bottom: .1em;
 	overflow: hidden;
-    font-weight: normal;
+	font-weight: normal;
 }
 
 .advantages {
@@ -232,22 +237,24 @@ ul.browsers li>a{
 }
 
 .ie {
-	background-image: url('img/medium/ie7.png');
+	background-image: url('img/medium/ie8.png');
 }
 
 .op {
 	background-image: url('img/medium/opera.png');
 }
+
 .ch {
 	background-image: url('img/medium/chrome.png');
 }
+
 .sa {
 	background-image: url('img/medium/safari.png');
 }
+
 .clear {
 	clear: both;
 }
-
 
 
 #lang {
@@ -267,11 +274,11 @@ ul.browsers li>a{
 	margin: 1em 0;
 	padding: .2em .6em;
 	border: 1px solid #eee;
-    background-color:#fff;
+	background-color:#fff;
 }
 
 .generate #browserversionchooser {
-    margin: .4em 1em;
+	margin: .4em 1em;
 }
 .generate #browserversionchooser.disabled  {
 	opacity: .4;
@@ -279,14 +286,14 @@ ul.browsers li>a{
 
 .generate label {
 	display: inline-block;
-    max-width: 90%;
+	max-width: 90%;
 }
 
 .generate textarea {
 	display: block;
 	width: 95%;
 	height: 17em;
-	
+
 	background:#F7F7F7 none repeat scroll 0 0;
 	border:1px solid #F1F1F1;
 	clear:both;
@@ -301,29 +308,29 @@ ul.browsers li>a{
 	padding-left: 2em;
 }
 .popupinfo {
-    position: relative;
+	position: relative;
 }
 .popupinfo .popup {
-    display: none;
+	display: none;
 }
 .popupinfo:hover .popup {
-    display: block;
-    position: absolute;
-    max-width: 50em;
-    left: 0;
-    bottom: 1em;
-    z-index: 100;
-    background-color: #fff;
-    border: 1px solid;
-    padding: .2em;
+	display: block;
+	position: absolute;
+	max-width: 50em;
+	left: 0;
+	bottom: 1em;
+	z-index: 100;
+	background-color: #fff;
+	border: 1px solid;
+	padding: .2em;
 }
 select, textarea, input {
 	background-color:#FAFAFF;
-	border:1px solid #DDDDDD;
-	color:#666699;
+	border:1px solid #ddd;
+	color:#669;
 }
 input {
-    vertical-align: top;
+	vertical-align: top;
 }
 input.small {
 	width: 3em;
@@ -341,24 +348,21 @@ ol.steps div {
 
 }
 
-
-
-
+.infoplus {
+	cursor: help;
+	text-decoration: none;
+	border-bottom: 1px dotted #777;
+}
 
 .workingonit {
-    vertical-align: top;
-    color: #68BFEF;
-    font-size: .7em;
-    font-weight: normal;
+	vertical-align: top;
+	color: #68BFEF;
+	font-size: .7em;
+	font-weight: normal;
 }
 
 
-
-
-
 /*Table*/
-
-
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -369,16 +373,16 @@ table {
 
 table th {
 	text-align: left;
-	background-color: #eeeeee;
+	background-color: #eee;
 }
 
 table thead th,
 table thead td,
 table.log thead td,
 table.notifications thead td {
-	background-color: #eeeeee;
+	background-color: #eee;
 	font-weight: bold;
-	border-bottom: 2px solid #aaaaaa;
+	border-bottom: 2px solid #aaa;
 }
 
 table tbody th:nth-child(odd),
@@ -397,17 +401,17 @@ table th
 }
 
 table tr:hover td {
-	background-color: rgb(245,245,245);
+	background-color: #f5f5f5;
 }
 
 
 .statleft {
-    float: left;
-    padding-right: 15em;
-    margin: 0;
+	float: left;
+	padding-right: 15em;
+	margin: 0;
 }
 
 strong.number {
-    font-size: 2em;
-    color: #666;
+	font-size: 2em;
+	color: #666;
 }

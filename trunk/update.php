@@ -56,8 +56,10 @@
 
 		<div>
 			<p>
-				Der Wechsel zu einem neueren Browser kann Ihnen eine Menge
-				Vorteile bringen:
+				Der Wechsel zu einem neueren
+				<a class="infoplus" href="http://de.wikipedia.org/wiki/Browser"
+				titel="Link zum Wikipedia-Artikel über Webbrowser">Browser</a> kann
+				Ihnen eine Menge Vorteile bringen:
 			</p>
 			<ul class="advantages">
 				<li class="security">
