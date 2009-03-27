@@ -13,7 +13,7 @@ require("config.php");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
 	list($domainnum) = mysql_fetch_row($r);
-	echo $domainnum . ' Seiten verwenden das Browser-Update.org Script';
+	echo '<strong class="number">'. $domainnum . '</strong> Seiten verwenden das Browser-Update.org Script';
 	?>
 </p>
 
@@ -54,7 +54,7 @@ $names = array(
 ?>
 <p>
 	<?php
-	echo get_num() . ' Benutzer haben Ihre Browser schon aktualisiert.';
+	echo '<strong class="number">'.get_num() . '</strong> Benutzer haben breits ihren Browser aktualisiert.';
 	?>
 </p>
 <?php
@@ -86,7 +86,7 @@ $names = array(
 */
 ?>
 <table>
-    <thead><tr><td>Von</td><td>Nach</td><td>Anzhal</td></tr></thead>
+    <thead><tr><td>Von</td><td>Nach</td><td>Anzahl</td></tr></thead>
     <tbody>
     <?php
     $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');

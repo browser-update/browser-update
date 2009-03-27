@@ -381,10 +381,9 @@ table.notifications thead td {
 	border-bottom: 2px solid #aaaaaa;
 }
 
-table,
-table td,
-table th {
-	border: 1px solid #aaaaaa;
+table tbody th:nth-child(odd),
+table tbody td:nth-child(odd) {
+	background-color: #fff;
 }
 
 
@@ -408,3 +407,7 @@ table tr:hover td {
     margin: 0;
 }
 
+strong.number {
+    font-size: 2em;
+    color: #666;
+}
