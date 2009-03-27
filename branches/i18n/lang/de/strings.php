@@ -30,6 +30,23 @@ $lang['german'] =
 $lang['translate...'] =
 	'übersetzen...';
 
+/* index.php */
+
+$lang['How it works'] =
+	'Wie funktioniert\'s?';
+$lang['Features'] =
+	'Vorteile und Funktionen';
+$lang['Install notification on your site'] =
+	'Installation &amp; Konfiguration';
+$lang['Following browsers will be notified:'] =
+	'Bei folgenden Browserversionen soll die Benachrichtigung erscheinen:';
+$lang['Your Code'] =
+	'Der Code';
+$lang['Why you should to tell users to update'] =
+	'Warum Sie Ihre Besucher über Browserupdates informieren sollten';
+$lang['Help this project'] =
+	'Helfen Sie diesem Projekt';
+
 /*
 $lang['XXXX'] =
 	'YYYYY';
