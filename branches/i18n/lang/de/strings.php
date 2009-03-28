@@ -43,6 +43,14 @@ $lang['Why you should to tell users to update'] =
 $lang['Help this project'] =
 	'Helfen Sie diesem Projekt';
 
+/* update.php */
+$lang['Free webbrowsers'] =
+	'Kostenlose Webbrowser';
+$lang['Why this website?'] =
+	'Wofür diese Webseite?';
+$lang['"I\'m not able to update my Browser"'] =
+	'„Ich kann kein Update einspielen“';
+
 /*
 $lang['XXXX'] =
 	'YYYYY';
