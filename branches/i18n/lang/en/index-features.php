@@ -6,7 +6,8 @@
 			</li>
 			<li>
 				<h3>Informative</h3>
-				Tell the users that they are using an obsolete browser and your website gets more features and a better experience with a new one.
+				Tell the users that they are using an out-dated browser and that your website
+                looks even better with a newer one.
 			</li>
 			<li>
 				<h3>Idealistic</h3>
@@ -19,7 +20,9 @@
 			</li>
 			<li>
 				<h3>Low maintenance and up-to-date</h3>
-                If there come more browser versions which won't be supported by the producer in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically.
+                If there come more browser versions which won't be supported by the vendor
+                in the future, exhibit security gaps or have been very old for a
+                long time we are going to add them to our list automatically.
 			</li>
 			<li>
 				<h3>Customizable</h3>
@@ -32,7 +35,9 @@
 			</li>
 			<li>
 				<h3>Statistics</h3>
-				You get <a href="/stat.php">statistics</a> about which browsers your visitors are using and how much users got proselyted: How many users updated or changed their browser through your advice. 
+				You get <a href="/stat.php">statistics</a> about which browsers your
+                visitors are using and how much users got proselyted: How many users
+                updated or changed their browser through your advice.
 			</li>
 
 		</ul>

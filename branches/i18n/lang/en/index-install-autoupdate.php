@@ -1,1 +1,2 @@
-<b>Use the browser's default setting and refresh automatically</b> if the browser is no more supported from the producer, exhibit security gaps or has been very old for a long time.
+<b>Notify recommended set of browsers and adjust it automatically over time</b>:
+If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set.

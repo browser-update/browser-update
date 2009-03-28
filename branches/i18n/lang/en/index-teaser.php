@@ -4,8 +4,8 @@
 			</b>
 		</p>
 		<p>
-			Many internet users are still using very old, outdated browsers - most of them for no actual reason. Switching to a newer browser contains advantages for them and for you as a web designer. 
-			
+			Many internet users are still using very old, out-dated browsers – most of them for no actual reason.
+            Switching to an newer browser is better for them and for you as a webdesigner.
 			<!--They just have to be told, that using an old browser gives them disadvantages.-->
 		</p>
 		<!--<p>

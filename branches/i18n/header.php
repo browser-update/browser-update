@@ -37,13 +37,11 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<li class="r"><a href="/stat.php"><?php echo t('Statistics'); ?></a></li>
 	<li class="r"><a href="/blog/"><?php echo t('Blog'); ?></a></li>
 </ul>
-<!--
 <div id="lang">
-    <a href="/en/"><?php echo t('english'); ?></a>
-    <a href="/de/"><?php echo t('german'); ?></a>
+    <a href="/en/">english</a>
+    <a href="/de/">deutsch</a>
     <a href="help.html"><?php echo t('translate...'); ?></a>
 </div>
--->
 <div id="bookmark">
     <!-- AddThis Button BEGIN -->
     <script type="text/javascript">addthis_pub  = 'Jossele';</script>

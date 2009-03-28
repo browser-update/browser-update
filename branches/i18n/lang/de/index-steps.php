@@ -13,7 +13,7 @@
 			<li><div>
                 Durch Anklicken der Meldung gelangt der Besucher auf eine
                 <a href="update.php">Seite mit Argumenten für ein Update
-                und einer Auswahl an aktuellen Browsern</a>.
+                und einer Auswahl aktueller Browsern</a>.
 			</div></li>
 			<li><div>
                 Der Besucher muss der Empfehlung nicht folgen

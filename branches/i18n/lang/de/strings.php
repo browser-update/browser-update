@@ -23,10 +23,6 @@ $lang['Supporters'] =
 	'Unterstützer';
 
 // Sprach-Wahl
-$lang['english'] =
-	'englisch';
-$lang['german'] =
-	'deutsch';
 $lang['translate...'] =
 	'übersetzen...';
 
