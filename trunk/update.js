@@ -13,7 +13,7 @@ var $buo = function(op,test) {
 	var l =(n["language"])?n["language"]:n["userLanguage"];
 	var vs =op.vs||{i:6,f:2,o:9.3,s:2,n:10};
 	var hours=op.reminder||24;
-	var url="http://browser-update.org/update.php";
+	var url="http://browser-update.org/update.html";
 	var d = new Date(new Date().getTime() +1000*3600*hours);
 
 
