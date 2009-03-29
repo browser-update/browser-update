@@ -51,6 +51,33 @@ $lang['Why this website?'] =
 $lang['"I\'m not able to update my Browser"'] =
 	'„Ich kann kein Update einspielen“';
 
+/* stat.php */
+
+$lang['Browser updates'] =
+	'Browserupdates';
+$lang['<strong class="number">%d</strong> sites are using the Browser-Update.org script.'] =
+	'<strong class="number">%d</strong> Seiten verwenden das Browser-Update.org Script.';
+$lang['<strong class="number">%d</strong> visitors have already upgraded their browser.'] =
+	'<strong class="number">%d</strong> Besucher haben breits ihren Browser aktualisiert';
+$lang['From'] =
+	'Von';
+$lang['To'] =
+	'Nach';
+$lang['Amount'] =
+	'Anzahl';
+$lang['Recent browser updates'] =
+	'Kürzlich aktualisierte Browser';
+$lang['Site'] =
+	'Seite';
+$lang['Old browser'] =
+	'Alter Browser';
+$lang['New browser'] =
+	'Neuer Browser';
+$lang['Language'] =
+	'Sprache';
+$lang['Date'] =
+	'Datum';
+
 /*
 $lang['XXXX'] =
 	'YYYYY';
