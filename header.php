@@ -12,7 +12,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
 
 	<meta name="robots" content="index,follow" />
-	<link rel="stylesheet" href="base.css" type="text/css" />
+	<link rel="stylesheet" href="/base.css" type="text/css" />
 	<!--[if lte IE 7]>
 	<link rel="stylesheet" href="/drecksie.css" type="text/css" />
 	<![endif]-->
@@ -20,21 +20,21 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<link rel="stylesheet" href="/drecksie6.css" type="text/css" />
 	<![endif]-->
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-	<script type="text/javascript" src="base.js">	</script>
+	<script type="text/javascript" src="/base.js">	</script>
 </head>
 <body>
 
 <div id="co">
 <div class="header">
-    <h1><a href="/"><?php echo t('Browser-Update.org'); ?></a></h1>
+    <h1><a href="index.html"><?php echo t('Browser-Update.org'); ?></a></h1>
     <div class="tagline"><?php echo t('An initiative by webdesigners to inform users about browser-updates'); ?></div>
 </div>
 <ul id="tabs">
-	<li><a href="."><?php echo t('Start'); ?></a></li>
-	<li class="r"><a href="/contact.php"><?php echo t('Contact'); ?></a></li>
+	<li><a href="index.html"><?php echo t('Start'); ?></a></li>
+	<li class="r"><a href="contact.html"><?php echo t('Contact'); ?></a></li>
 	<!--<li class="r"><a href="/help.html"><?php echo t('Help'); ?></a></li>-->
-	<!--<li class="r"><a href="/supporter.php"><?php echo t('Supporters'); ?></a></li>-->
-	<li class="r"><a href="/stat.php"><?php echo t('Statistics'); ?></a></li>
+	<!--<li class="r"><a href="/supporters.html"><?php echo t('Supporters'); ?></a></li>-->
+	<li class="r"><a href="stat.html"><?php echo t('Statistics'); ?></a></li>
 	<li class="r"><a href="/blog/"><?php echo t('Blog'); ?></a></li>
 </ul>
 <div id="lang">
