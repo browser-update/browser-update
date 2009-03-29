@@ -4,10 +4,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Browser-Update.org - Benutzer über Browserupdates informieren</title>
+	<title><?php echo t('Browser-Update.org'); ?> - <?php echo t('Inform your visitors about browser-updates'); ?></title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="browser, webbrowser, choice, change browser, firefox, safari, opera, firefox 3, internet explorer 6, internet explorer update, ie, safari, konqueror" />
-	<!--<meta http-equiv="content-language" content="de" />-->
+	<meta http-equiv="content-language" content="<?php echo request_lang(); ?>" />
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
 
@@ -26,24 +26,22 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
 <div id="co">
 <div class="header">
-    <h1><a href="/">Browser-Update.org</a></h1>
-    <div class="tagline">Eine Initiative von Webdesignern um Benutzer über Browserupdates zu informieren</div>
+    <h1><a href="/"><?php echo t('Browser-Update.org'); ?></a></h1>
+    <div class="tagline"><?php echo t('An initiative by webdesigners to inform users about browser-updates'); ?></div>
 </div>
 <ul id="tabs">
-	<li><a href=".">Start</a></li>
-	<li class="r"><a href="/contact.php">Kontakt</a></li>
-	<!--<li class="r"><a href="/help.html">Hilfe</a></li>-->
-	<!--<li class="r"><a href="/supporter.php">Unterstützer</a></li>-->
-	<li class="r"><a href="/stat.php">Statistiken</a></li>
-	<li class="r"><a href="/blog/">Blog</a></li>
+	<li><a href="."><?php echo t('Start'); ?></a></li>
+	<li class="r"><a href="/contact.php"><?php echo t('Contact'); ?></a></li>
+	<!--<li class="r"><a href="/help.html"><?php echo t('Help'); ?></a></li>-->
+	<!--<li class="r"><a href="/supporter.php"><?php echo t('Supporters'); ?></a></li>-->
+	<li class="r"><a href="/stat.php"><?php echo t('Statistics'); ?></a></li>
+	<li class="r"><a href="/blog/"><?php echo t('Blog'); ?></a></li>
 </ul>
-<!--
 <div id="lang">
-    <a href="/lang/en/">english</a>
-    <a href="/lang/de/">deutsch</a>
-    <a href="help.html">translate...</a>
+    <a href="/en/">english</a>
+    <a href="/de/">deutsch</a>
+    <a href="help.html"><?php echo t('translate...'); ?></a>
 </div>
--->
 <div id="bookmark">
     <!-- AddThis Button BEGIN -->
     <script type="text/javascript">addthis_pub  = 'Jossele';</script>

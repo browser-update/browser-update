@@ -1,9 +1,28 @@
-<?php include("header.php");?>
+<?php
+require_once("lib/init.php");
+require_once("lib/lang.php");
+include("header.php");
+?>
 
 
 
 <div class="left">
-<h2 class="top">Kontakt</h2>
+<h2 class="top"><?php echo t('Contact'); ?></h2>
+<?php
+if (request_lang() != 'de')
+{
+	?>
+	<hr />
+	<h2 style="margin-top: 0">Not yet translated</h2>
+	<p>
+		This site is not yet translated. Please watch our <a href="/blog/">blog</a>
+		for updates. If you are interested in translating Browser-Update.org or
+		helping with its development, please contact us (See email adresses below).
+	</p>
+	<hr />
+	<?php
+}
+?>
 <p>
 Über aktuelle Ereignisse informieren wir in unserem <a href="/blog/">Blog</a>.
 </p>

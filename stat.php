@@ -1,10 +1,12 @@
 <?php
+require_once("config.php");
+require_once("lib/init.php");
+require_once("lib/lang.php");
 include("header.php");
-require("config.php");
 ?>
 
 <div class="left">
-<h2 class="top">Statistiken</h2>
+<h2 class="top"><?php echo t('Statistics'); ?></h2>
 
 <p>
 	<?php
@@ -13,11 +15,11 @@ require("config.php");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
 	list($domainnum) = mysql_fetch_row($r);
-	echo '<strong class="number">'. $domainnum . '</strong> Seiten verwenden das Browser-Update.org Script';
+	echo t('<strong class="number">%d</strong> sites are using the Browser-Update.org script.', $domainnum);
 	?>
 </p>
 
-<h3>Browserupdates</h3>
+<h3><?php echo t('Browser updates'); ?></h3>
 <?php
 
 
@@ -54,7 +56,7 @@ $names = array(
 ?>
 <p>
 	<?php
-	echo '<strong class="number">'.get_num() . '</strong> Benutzer haben breits ihren Browser aktualisiert.';
+	echo t('<strong class="number">%d</strong> visitors have already upgraded their browser.', get_num());
 	?>
 </p>
 <?php
@@ -86,7 +88,7 @@ $names = array(
 */
 ?>
 <table>
-    <thead><tr><td>Von</td><td>Nach</td><td>Anzahl</td></tr></thead>
+    <thead><tr><td><?php echo t('From'); ?></td><td><?php echo t('To'); ?></td><td><?php echo t('Amount'); ?></td></tr></thead>
     <tbody>
     <?php
     $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
@@ -97,25 +99,32 @@ $names = array(
     </tbody>
 </table>
 
-<h3>Geplante Statistiken</h3>
-<ul>
-    <li>Statistiken pro Seite</li>
-    <li>Angezeigte Benachrichtigungen</li>
-    <li>Klickraten</li>
-    <li>Wie gut wirken verschiedene Formulierungen in den Benachrichtigungen</li>
-</ul>
+<?php
+if (request_lang() == 'de')
+{
+	?>
+	<h3>Geplante Statistiken</h3>
+	<ul>
+		<li>Statistiken pro Seite</li>
+		<li>Angezeigte Benachrichtigungen</li>
+		<li>Klickraten</li>
+		<li>Wie gut wirken verschiedene Formulierungen in den Benachrichtigungen</li>
+	</ul>
+	<?php
+}
+?>
 
 
-<h3>Kürzlich aktualisierte Browser </h3>
+<h3><?php echo t('Recent browser updates'); ?></h3>
 
 <table>
 <thead>
 <tr>
-<td>Site</td>
-<td>Old Browser</td>
-<td>New Browser</td>
-<td>Language</td>
-<td>Date</td>
+<td><?php echo t('Site'); ?></td>
+<td><?php echo t('Old browser'); ?></td>
+<td><?php echo t('New browser'); ?></td>
+<td><?php echo t('Language'); ?></td>
+<td><?php echo t('Date'); ?></td>
 </tr>
 </thead>
 

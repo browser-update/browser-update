@@ -1,6 +1,6 @@
 <?php
 
-define('BU_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
+require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php'); // just to be sure
 define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
 
 /**
@@ -40,7 +40,7 @@ function request_lang()
 {
 	global $default_lang;
 	static $request_lang = null;
-	if (is_null($request_lang)) return $request_lang;
+	if (!is_null($request_lang)) return $request_lang;
 	$lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 	$lang = preg_split('#[,;]#', $lang);
 	$lang = array_map('lang_normalize', $lang);
@@ -103,7 +103,7 @@ function load_translation($l)
 function translate($string)
 {
 	static $translation = null;
-	if (!is_null($translation))
+	if (is_null($translation))
 	{
 		$l = request_lang();
 		$translation = load_translation($l);
