@@ -58,7 +58,7 @@ $lang['Browser updates'] =
 $lang['<strong class="number">%d</strong> sites are using the Browser-Update.org script.'] =
 	'<strong class="number">%d</strong> Seiten verwenden das Browser-Update.org Script.';
 $lang['<strong class="number">%d</strong> visitors have already upgraded their browser.'] =
-	'<strong class="number">%d</strong> Besucher haben breits ihren Browser aktualisiert';
+	'<strong class="number">%d</strong> Besucher haben bereits ihren Browser aktualisiert';
 $lang['From'] =
 	'Von';
 $lang['To'] =
