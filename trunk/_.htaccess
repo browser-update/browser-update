@@ -11,3 +11,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,QSA]
 
+RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
+
