@@ -8,11 +8,11 @@
                 ihr Browser nicht aktuell ist und es besser wäre auf eine neuere
                 Version zu aktualisieren.
                 (<a href="#" onclick="$bu=new $buo({},true);">Benachrichtigung testen!</a>)<br/>
-                <a href="#" onclick="$bu=new $buo({},true);"><img src="img/bar-small.png" alt="" style="padding-top:6px;"/></a>
+                <a href="#" onclick="$bu=new $buo({},true);"><img src="/img/bar-small.png" alt="" style="padding-top:6px;"/></a>
                 </div></li>
 			<li><div>
                 Durch Anklicken der Meldung gelangt der Besucher auf eine
-                <a href="update.php">Seite mit Argumenten für ein Update
+                <a href="update.html">Seite mit Argumenten für ein Update
                 und einer Auswahl aktueller Browsern</a>.
 			</div></li>
 			<li><div>

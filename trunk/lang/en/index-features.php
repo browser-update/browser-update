@@ -35,7 +35,7 @@
 			</li>
 			<li>
 				<h3>Statistics</h3>
-				You get <a href="/stat.php">statistics</a> about which browsers your
+				You get <a href="stat.html">statistics</a> about which browsers your
                 visitors are using and how much users got proselyted: How many users
                 updated or changed their browser through your advice.
 			</li>

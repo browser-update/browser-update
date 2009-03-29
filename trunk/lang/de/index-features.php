@@ -39,7 +39,7 @@
 			</li>
 			<li>
 				<h3>Statistiken</h3>
-				Sie erhalten <a href="/stat.php">Statistiken</a> darüber, welche Browser
+				Sie erhalten <a href="stat.html">Statistiken</a> darüber, welche Browser
                 Ihre Besucher benutzen und wie viele Benutzer durch Ihre Benachrichtigung
                 "bekehrt" wurden: Wie viele Benutzer haben aufgrund ihres Rats den Browser gewechselt.
 			</li>
