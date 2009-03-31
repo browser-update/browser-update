@@ -6,7 +6,7 @@
 $lang['Inform your visitors about browser-updates'] =
 	'Benutzer über Browserupdates informieren';
 $lang['An initiative by webdesigners to inform users about browser-updates'] =
-	'Eine Initiative von Webdesignern um Benutzer über Browserupdates zu informieren';
+	'Eine Initiative von Webdesignern, um Benutzer über Browserupdates zu informieren';
 
 // Menü
 $lang['Start'] =
