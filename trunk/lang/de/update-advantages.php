@@ -1,15 +1,18 @@
 			<p>
 				Der Wechsel zu einem neueren
 				<a class="infoplus" href="http://de.wikipedia.org/wiki/Browser"
-				titel="Link zum Wikipedia-Artikel über Webbrowser">Browser</a> kann
+				title="Link zum Wikipedia-Artikel über Webbrowser">Browser</a> kann
 				Ihnen eine Menge Vorteile bringen:
 			</p>
 			<ul class="advantages">
 				<li class="security">
 					<h3>Sicherheit</h3>
 					<div>
-						Neuere Browser schützen besser vor Betrug, Viren, Trojanern,
-						Datendiebstahl und anderen Bedrohungen Ihrer Privatsphäre
+						Neuere Browser schützen besser vor 
+						<a href="http://de.wikipedia.org/wiki/Internet-Betrug" title="Artikel auf Wikipedia">Betrug,</a>
+						Viren, Trojanern,	
+						<a href="http://de.wikipedia.org/wiki/Phishing" title="Fachbegriff: Phishing, Erläuterung auf Wikipedia">Datendiebstahl</a>
+						und anderen Bedrohungen Ihrer Privatsphäre
 						und Sicherheit. Aktuelle Browser schließen Sicherheitslücken,
 						durch die Angreifer in Ihren Computer gelangen können.
 					</div>
@@ -18,15 +21,15 @@
 					<h3>Geschwindigkeit</h3>
 					<div>
 						Jede neue Browsergeneration verbessert die Geschwindigkeit,
-						mit der Webseiten dargestellt werden.
+						mit der Webseiten dargestellt werden. Surfen im Internet wird wieder zum Vergnügen.
 					</div>
 				</li>
 				<li class="compatibility">
 					<h3>Kompatibilität</h3>
 					<div>
 						Die auf modernen Webseiten eingesetzten Techniken werden
-						durch aktuelle Browser besser unterstützt, wodurch die
-						Funktionalität erhöht und die Darstellung verbessert wird.
+						durch aktuelle Browser besser unterstützt. So erhöht sich die
+						Funktionalität, und die Darstellung wird drastisch verbessert.
 					</div>
 				</li>
 				<li class="comfort">

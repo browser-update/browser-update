@@ -1,8 +1,6 @@
 			<p>Diese Browser sind die neuesten Versionen der meistbenutzten kostenlosen Webbrowser.</p>
-			<p>
-                Klicken Sie einfach einen Browser an um ihn von der Herstellerseite
-                herunterzuladen:
-            </p>
+			<p>Klicken Sie einfach einen Browser an, um ihn von der Herstellerseite herunterzuladen:</p>
+			
 			<ul class="browsers">
 				<li class="ff">
 					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
@@ -30,10 +28,6 @@
 					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')">Download</a>
 				</li>
 			</ul>
-			<p>
-                Alle Browser bieten den selben grundlegenden Funktionsumfang und eine ähnliche Benutzerführung.
-               <!-- Wir empfehlen alle Browser – bis auf den Internet Explorer
-                wegen seiner begrenzten Funktionen, veralteten Webstandardsunterstützung und
-                langsamen Geschwindigkeit.-->
-            </p>
-
+			<p>Alle Browser bieten den selben grundlegenden Funktionsumfang und eine ähnliche Benutzerführung.</p>
+			<!-- <p>Wir empfehlen alle Browser (bis auf den Internet Explorer) wegen seiner begrenzten Funktionen, veralteten Webstandardsunterstützung und
+                langsamen Geschwindigkeit.</p> -->

@@ -7,10 +7,10 @@
 			<li>
 				<h3>Weitersagen!</h3>
 				Erzählen Sie anderen Webdesignern und Webmastern über die Initiative!
-                In Ihrem Blog, auf Ihrer Webseite, ...
+                In Ihrem Blog, auf Ihrer Webseite, &hellip;
 			</li>
 			<li>
-				<h3>Übersetzen</h3>
-				Übersetzen Sie diese Webseite in Ihre Sprache.
+				<h3>Übersetzen!</h3>
+				Helfen Sie mit, diese Webseite in Ihre Sprache zu übersetzen.
 			</li>
 		</ul>

@@ -1,6 +1,6 @@
 		<p>
             <b>
-			Dieser Service bietet eine dezente und unaufdringliche Möglichkeit, ihre Besucher darüber zu informieren, dass sie auf einen neueren Browser wechseln sollten.
+			Dieser Service bietet eine dezente und unaufdringliche Möglichkeit, Ihre Besucher darüber zu informieren, dass sie auf einen neueren Browser wechseln sollten.
             </b>
 		</p>
 		<p>
