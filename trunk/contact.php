@@ -31,7 +31,7 @@ if (request_lang() != 'de')
     Wir freuen uns über jeden Entwickler, der diese Chance ergreifen will
     um aktiv seine Vorschläge an Browser-Update.org einzubringen.
     Dazu haben wir ein <a href="http://code.google.com/p/browser-update/">Google-Code-Projekt</a>
-    gestartet. Hier sammeln wir <a hrer="http://code.google.com/p/browser-update/issues/list">Ideen und Fehlerberichte</a>,
+    gestartet. Hier sammeln wir <a href="http://code.google.com/p/browser-update/issues/list">Ideen und Fehlerberichte</a>,
     die Seite kann übersetzt werden und der Code verbessert.
 </p>
 <p>

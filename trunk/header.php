@@ -40,7 +40,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <div id="lang">
     <a href="/en/">english</a>
     <a href="/de/">deutsch</a>
-    <a href="help.html"><?php echo t('translate...'); ?></a>
+    <a href="contact.html"><?php echo t('translate...'); ?></a>
 </div>
 <div id="bookmark">
     <!-- AddThis Button BEGIN -->
