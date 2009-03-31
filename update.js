@@ -48,7 +48,7 @@ var $buo = function(op,test) {
         var i = new Image();
         i.src="http://browser-update.org/viewcount.php?n="+b.n+"&v="+b.v + "&p="+ escape(window.location.hostname) + "&jsv="+jsv;
     }
-	document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'';
+	document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 	
 	var ll=l.substr(0,2);
 	if (ll=="de")// <b>Sicherheitsl&uuml;cken</b>
