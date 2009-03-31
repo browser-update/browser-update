@@ -16,7 +16,9 @@ var $buo = function(op,test) {
 	var url="http://browser-update.org/update.html";
 	var d = new Date(new Date().getTime() +1000*3600*hours);
 
-
+    if (window.location.hash=="#test-bu")
+        var test=true;
+    
 	function getBrowser() {
 		var n,v,t,ua = navigator.userAgent;
 		var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator'};
@@ -55,7 +57,8 @@ var $buo = function(op,test) {
             Funktionen dieser Webseite nutzen</b>. \
             <a href="'+url+'" style="color:#E25600;">Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
 	else 
-		t = 'Your Browser ('+b.t+') <b>is long time out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites.<br> For your own security and advantages: <a href="'+url+'">Please Upgade your Browser by clicking here</a>';
+		t = 'Your browser ('+b.t+') <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites.<br> \
+             <a href="'+url+'">Learn how to update your browser</a>';
 	
 
 	var languages = "de,xx";
@@ -80,7 +83,7 @@ var $buo = function(op,test) {
     //document.getElementsByTagName("body")[0];
 	document.body.appendChild(div);
 	var mt = document.body.style.marginTop;
-	document.body.style.marginTop = (div.clientHeight+5)+"px";
+	document.body.style.marginTop = (div.clientHeight)+"px";
     document.getElementById("buoclose").onclick = function(e) {
       var event = e || window.event;
         if (event.stopPropagation) {

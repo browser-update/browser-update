@@ -127,6 +127,7 @@ h2  {
 	padding-left: 1em;
 	margin-left: 1em;
 	background-color: #FFF3DF;
+    border: 1px solid  rgb(228, 86, 0);
 	overflow: hidden;
 	/*background: rgb(208, 227, 255);*/
 }
