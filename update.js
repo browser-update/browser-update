@@ -64,7 +64,7 @@ var $buo = function(op,test) {
 	var languages = "de,xx";
     //todo
 	//if (languages.indexOf(ll)!==false)
-	//	var url="http://browser-update.org/lang/"+ll+"/update.php";
+	//	var url="http://browser-update.org/"+ll+"/update.php";
 	
 	var div = document.createElement("div"); 
 	div.style.cssText = "position:absolute; \

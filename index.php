@@ -91,7 +91,7 @@ $buoop.ol = window.onload;
 window.onload=function(){
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "update.js");
+     e.setAttribute("src", "/update.js");
      document.body.appendChild(e);
      if ($buoop.ol) $buoop.ol();
 }
