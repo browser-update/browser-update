@@ -1,6 +1,6 @@
 		<p>
 			<b>
-			This service is a subtle opportunity to inform your visitors to switch to a newer browser.
+			This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser.
 			</b>
 		</p>
 		<p>

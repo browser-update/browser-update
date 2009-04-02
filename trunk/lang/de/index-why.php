@@ -30,8 +30,9 @@
 				<h3>Das Web entwickelt sich weiter&hellip;</h3>
 				und wird immer besser und komfortabler. Leider haben nicht alle etwas davon:
 				Viele veraltete Browser wie der acht Jahre alte Internet Explorer 6 stehen der 
-				Entwicklung entgegen. Helfen Sie mit und profitieren Sie davon, 
-				dass Webseiten im Jahre 2011 nicht mehr mit den Techniken	von 2001 entwickelt werden müssen.
+				Entwicklung entgegen. 
+                Helfen Sie mit, um Webseiten im Jahre 2011 nicht mehr mit den Techniken
+                von 2001 entwickeln zu müssen.
 			</li>
 			<li>
 				<h3>Benutzer lehnen Updates nicht ab&hellip;</h3>
