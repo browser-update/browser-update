@@ -38,7 +38,7 @@ $lang['Following browsers will be notified:'] =
 	'Bei folgenden Browserversionen soll die Benachrichtigung erscheinen:';
 $lang['Your Code'] =
 	'Der Code';
-$lang['Why you should to tell users to update'] =
+$lang['Why you should tell users to update'] =
 	'Warum Sie Ihre Besucher über Browserupdates informieren sollten';
 $lang['Help this project'] =
 	'Helfen Sie diesem Projekt';
