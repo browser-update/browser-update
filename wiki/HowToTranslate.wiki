@@ -1,0 +1,17 @@
+#labels Featured
+#An introduction on how to translate browser-update.org
+
+= Introduction =
+
+Translating is very easy
+
+
+= Files =
+
+Under /lang/ are directories for the different languages.
+
+Files to be translated (in order of importance):
+  * update-*.php files
+  * update.js: notifiation text
+  * strings.php
+  * index-*.php files
