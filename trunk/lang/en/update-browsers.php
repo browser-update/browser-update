@@ -1,5 +1,5 @@
 			<p>These browsers are the newest versions of the most used free web browsers.</p>
-			<p>Just choose a browser to download form the original vendor's website:</p>
+			<p>Just choose a browser to download from the original vendor's website:</p>
 			<ul class="browsers">
 				<li class="ff">
 					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
