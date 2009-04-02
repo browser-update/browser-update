@@ -79,7 +79,7 @@ window.onload=function(){
 		</div>
 		<p>
 		</p>
-		<h2><?php echo t('Why you should to tell users to update'); ?></h2>
+		<h2><?php echo t('Why you should tell users to update'); ?></h2>
 		<?php tt('index-why.php'); ?>
 		<h2><?php echo t('Help this project'); ?></h2>
 		<?php tt('index-project.php'); ?>
