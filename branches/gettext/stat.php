@@ -11,11 +11,15 @@ include("header.php");
 <p>
 	<?php
 	#$q=sprintf("SELECT 1 FROM updates GROUP BY referer");
-    $q=sprintf("SELECT COUNT_(DISTINCT referer) FROM views");
+    $q=sprintf("SELECT COUNT(DISTINCT referer) FROM views");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
-	lisT_($domainnum) = mysql_fetch_row($r);
-	echo T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.', $domainnum);
+	list($domainnum) = mysql_fetch_row($r);
+	echo sprintf(T_ngettext(
+		'<strong class="number">%d</strong> site is using the Browser-Update.org script.',
+		'<strong class="number">%d</strong> sites are using the Browser-Update.org script.',
+		$domainnum
+	), $domainnum);
 	?>
 </p>
 
@@ -27,16 +31,16 @@ include("header.php");
 
 function get_num($fromn=false, $ton=false) {
 	if (!$fromn AND !$ton)
-		$q=sprintf("SELECT COUNT_(*) FROM updates");
+		$q=sprintf("SELECT COUNT(*) FROM updates");
 	elseif (!$fromn)
-		$q=sprintf("SELECT COUNT_(*) FROM updates WHERE ton='$ton'");
+		$q=sprintf("SELECT COUNT(*) FROM updates WHERE ton='$ton'");
 	elseif (!$ton)
-		$q=sprintf("SELECT COUNT_(*) FROM updates WHERE fromn='$fromn'");
+		$q=sprintf("SELECT COUNT(*) FROM updates WHERE fromn='$fromn'");
 	else
-		$q=sprintf("SELECT COUNT_(*) FROM updates WHERE fromn='$fromn' AND ton='$ton'");
+		$q=sprintf("SELECT COUNT(*) FROM updates WHERE fromn='$fromn' AND ton='$ton'");
 	$r = mysql_query($q)
 		or die (mysql_error(). $q);
-	lisT_($num) = mysql_fetch_row($r);
+	list($num) = mysql_fetch_row($r);
 	return $num;
 }
 
@@ -56,7 +60,12 @@ $names = array(
 ?>
 <p>
 	<?php
-	echo T_('<strong class="number">%d</strong> visitors have already upgraded their browser.', get_num());
+	$visitors_upgraded = get_num();
+	echo sprintf(T_ngettext(
+		'<strong class="number">%d</strong> visitor has already upgraded his browser.',
+		'<strong class="number">%d</strong> visitors have already upgraded their browser.',
+		$visitors_upgraded
+	), $visitors_upgraded);
 	?>
 </p>
 <?php
@@ -91,7 +100,7 @@ $names = array(
     <thead><tr><td><?php echo T_('From'); ?></td><td><?php echo T_('To'); ?></td><td><?php echo T_('Amount'); ?></td></tr></thead>
     <tbody>
     <?php
-    $q=mysql_query('SELECT fromn,ton,COUNT_(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
+    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
      while ($a = mysql_fetch_assoc($q)) {
          echo '<tr><td>'.$names[$a['fromn']].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['num'].'</td></tr>';
      }

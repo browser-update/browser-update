@@ -8,13 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-03 19:24+0200\n"
+"POT-Creation-Date: 2009-04-03 19:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: config.sample.php:5
+msgid "database connection problem"
+msgstr ""
+
+#: config.sample.php:7
+msgid "database not found"
+msgstr ""
 
 #: contact.php:10 header.php:34 test.php:5
 msgid "Contact"
@@ -334,57 +343,65 @@ msgstr ""
 msgid "Translate this page into your language."
 msgstr ""
 
-#: stat.php:18
+#: stat.php:19
 #, php-format
 msgid ""
+"<strong class=\"number\">%d</strong> site is using the Browser-Update.org "
+"script."
+msgid_plural ""
 "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
 "script."
-msgstr ""
+msgstr[0] ""
+msgstr[1] ""
 
-#: stat.php:22
+#: stat.php:26
 msgid "Browser updates"
 msgstr ""
 
-#: stat.php:59
+#: stat.php:65
 #, php-format
 msgid ""
+"<strong class=\"number\">%d</strong> visitor has already upgraded his "
+"browser."
+msgid_plural ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
-msgstr ""
+msgstr[0] ""
+msgstr[1] ""
 
-#: stat.php:91
+#: stat.php:100
 msgid "From"
 msgstr ""
 
-#: stat.php:91
+#: stat.php:100
 msgid "To"
 msgstr ""
 
-#: stat.php:91
+#: stat.php:100
 msgid "Amount"
 msgstr ""
 
-#: stat.php:118
+#: stat.php:127
 msgid "Recent browser updates"
 msgstr ""
 
-#: stat.php:123
+#: stat.php:132
 msgid "Site"
 msgstr ""
 
-#: stat.php:124
+#: stat.php:133
 msgid "Old browser"
 msgstr ""
 
-#: stat.php:125
+#: stat.php:134
 msgid "New browser"
 msgstr ""
 
-#: stat.php:126
+#: stat.php:135
 msgid "Language"
 msgstr ""
 
-#: stat.php:127
+#: stat.php:136
 msgid "Date"
 msgstr ""
 

@@ -9,13 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-03 19:24+0200\n"
-"PO-Revision-Date: 2009-04-03 19:28+0200\n"
+"POT-Creation-Date: 2009-04-03 19:39+0200\n"
+"PO-Revision-Date: 2009-04-03 19:40+0200\n"
 "Last-Translator: David Danier <david.danier@team23.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config.sample.php:5
+msgid "database connection problem"
+msgstr "Datenbank Verbindungsproblem"
+
+#: config.sample.php:7
+msgid "database not found"
+msgstr "Datenbank nicht gefunden"
 
 #: contact.php:10 header.php:34 test.php:5
 msgid "Contact"
@@ -345,22 +353,24 @@ msgstr "Das Web entwickelt sich weiter&hellip;"
 
 #: index.php:194
 msgid "That works only if the browsers do also evolve."
-msgstr "und wird immer besser und komfortabler. Leider haben nicht alle etwas davon:"
-"				Viele veraltete Browser wie der acht Jahre alte Internet Explorer 6 stehen der "
-"				Entwicklung entgegen. "
-"                Helfen Sie mit, um Webseiten im Jahre 2011 nicht mehr mit den Techniken"
-"                von 2001 entwickeln zu müssen."
+msgstr ""
+"und wird immer besser und komfortabler. Leider haben nicht alle etwas davon:"
+"\t\t\t\tViele veraltete Browser wie der acht Jahre alte Internet Explorer 6 "
+"stehen der \t\t\t\tEntwicklung entgegen.                 Helfen Sie mit, um "
+"Webseiten im Jahre 2011 nicht mehr mit den Techniken                von 2001 "
+"entwickeln zu müssen."
 
 #: index.php:195
 msgid ""
 "The web has always developed further. The strong market share of a 6 years "
 "old webbrowser (called Internet Explorer 6) is new. If we take no action "
 "now, we will have to code websites like in 2001 even if it is 2012."
-msgstr "und wird immer besser und komfortabler. Leider haben nicht alle etwas davon:"
-"				Viele veraltete Browser wie der acht Jahre alte Internet Explorer 6 stehen der "
-"				Entwicklung entgegen. "
-"                Helfen Sie mit, um Webseiten im Jahre 2011 nicht mehr mit den Techniken"
-"                von 2001 entwickeln zu müssen."
+msgstr ""
+"und wird immer besser und komfortabler. Leider haben nicht alle etwas davon:"
+"\t\t\t\tViele veraltete Browser wie der acht Jahre alte Internet Explorer 6 "
+"stehen der \t\t\t\tEntwicklung entgegen.                 Helfen Sie mit, um "
+"Webseiten im Jahre 2011 nicht mehr mit den Techniken                von 2001 "
+"entwickeln zu müssen."
 
 #: index.php:198
 msgid "Users don't oppose updating..."
@@ -370,7 +380,10 @@ msgstr "Benutzer lehnen Updates nicht ab&hellip;"
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
-msgstr "&hellip;sie wissen nur meist einfach nicht, dass sie ihren Browser aktualisieren können oder sollten. Viele Benutzer sind sich sogar der Existenz eines \"Webbrowsers\" als eigenständige Software gar nicht bewusst."
+msgstr ""
+"&hellip;sie wissen nur meist einfach nicht, dass sie ihren Browser "
+"aktualisieren können oder sollten. Viele Benutzer sind sich sogar der "
+"Existenz eines \"Webbrowsers\" als eigenständige Software gar nicht bewusst."
 
 #: index.php:202
 msgid "Help this project"
@@ -384,7 +397,9 @@ msgstr "Mitmachen!"
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
-msgstr "Binden Sie die automatische Benachrichtigung in Ihre Webseite ein und informieren Sie so Ihre Besucher über Browserupdates."
+msgstr ""
+"Binden Sie die automatische Benachrichtigung in Ihre Webseite ein und "
+"informieren Sie so Ihre Besucher über Browserupdates."
 
 #: index.php:209
 msgid "Spread the word!"
@@ -392,7 +407,9 @@ msgstr "Weitersagen!"
 
 #: index.php:210
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr "Erzählen Sie anderen Webdesignern und Webmastern über die Initiative. In Ihrem Blog, auf Ihrer Webseite, &hellip;"
+msgstr ""
+"Erzählen Sie anderen Webdesignern und Webmastern über die Initiative. In "
+"Ihrem Blog, auf Ihrer Webseite, &hellip;"
 
 #: index.php:213
 msgid "Translate this page"
@@ -402,57 +419,71 @@ msgstr "Übersetzen!"
 msgid "Translate this page into your language."
 msgstr "Helfen Sie mit, diese Webseite in Ihre Sprache zu übersetzen."
 
-#: stat.php:18
-#, php-format
+#: stat.php:19
 msgid ""
+"<strong class=\"number\">%d</strong> site is using the Browser-Update.org "
+"script."
+msgid_plural ""
 "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
 "script."
-msgstr "<strong class=\"number\">%d</strong> Seiten verwenden das Script von Browser-Update.org."
+msgstr[0] ""
+"<strong class=\"number\">%d</strong> Seite verwendet das Script von Browser-"
+"Update.org."
+msgstr[1] ""
+"<strong class=\"number\">%d</strong> Seiten verwenden das Script "
+"von Browser-Update.org."
 
-#: stat.php:22
+#: stat.php:26
 msgid "Browser updates"
 msgstr "Browserupdates"
 
-#: stat.php:59
-#, php-format
+#: stat.php:65
 msgid ""
+"<strong class=\"number\">%d</strong> visitor has already upgraded his "
+"browser."
+msgid_plural ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
-msgstr "<strong class=\"number\">%d</strong> Besucher haben bereits ihren Browser aktualisiert"
+msgstr[0] ""
+"<strong class=\"number\">%d</strong> Besucher hat bereits seinen Browser "
+"aktualisiert"
+msgstr[1] ""
+"<strong class=\"number\">%d</strong> Besucher haben bereits "
+"ihren Browser aktualisiert"
 
-#: stat.php:91
+#: stat.php:100
 msgid "From"
 msgstr "Von"
 
-#: stat.php:91
+#: stat.php:100
 msgid "To"
 msgstr "Zu"
 
-#: stat.php:91
+#: stat.php:100
 msgid "Amount"
 msgstr "Anzahl"
 
-#: stat.php:118
+#: stat.php:127
 msgid "Recent browser updates"
 msgstr "Kürzliche Browser-Updates"
 
-#: stat.php:123
+#: stat.php:132
 msgid "Site"
 msgstr "Seite"
 
-#: stat.php:124
+#: stat.php:133
 msgid "Old browser"
 msgstr "Alter Browser"
 
-#: stat.php:125
+#: stat.php:134
 msgid "New browser"
 msgstr "Neuer Browser"
 
-#: stat.php:126
+#: stat.php:135
 msgid "Language"
 msgstr "Sprache"
 
-#: stat.php:127
+#: stat.php:136
 msgid "Date"
 msgstr "Datum"
 
