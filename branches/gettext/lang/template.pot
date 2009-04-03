@@ -1,0 +1,401 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-04-03 19:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contact.php:10 header.php:34 test.php:5
+msgid "Contact"
+msgstr ""
+
+#: header.php:7 header.php:29
+msgid "Browser-Update.org"
+msgstr ""
+
+#: header.php:7
+msgid "Inform your visitors about browser-updates"
+msgstr ""
+
+#: header.php:30
+msgid "An initiative by webdesigners to inform users about browser-updates"
+msgstr ""
+
+#: header.php:33
+msgid "Start"
+msgstr ""
+
+#: header.php:35
+msgid "Help"
+msgstr ""
+
+#: header.php:36
+msgid "Supporters"
+msgstr ""
+
+#: header.php:37 index.php:84 stat.php:9
+msgid "Statistics"
+msgstr ""
+
+#: header.php:38
+msgid "Blog"
+msgstr ""
+
+#: header.php:43
+msgid "translate..."
+msgstr ""
+
+#: index.php:12
+msgid ""
+"This service is an  opportunity to inform your visitors  unobtrusively to "
+"switch to a newer browser."
+msgstr ""
+
+#: index.php:16
+msgid ""
+"Many internet users are still using very old, out-dated browsers – most of "
+"them for no actual reason. Switching to an newer browser is better for them "
+"and for you as a webdesigner."
+msgstr ""
+
+#: index.php:25
+msgid "How it works"
+msgstr ""
+
+#: index.php:29
+#, php-format
+msgid ""
+"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr ""
+
+#: index.php:32
+msgid ""
+"Visitors with out-dated browser will be informed by a little, undisturbing "
+"bar, that his browser is not up-to-date and it is recommended to update."
+msgstr ""
+
+#: index.php:35
+msgid "Test the notification bar!"
+msgstr ""
+
+#: index.php:39
+#, php-format
+msgid ""
+"By clicking the bar, he will get to <a href=\"%s\">an info page with "
+"arguments why to change/update and some browser choices</a>."
+msgstr ""
+
+#: index.php:43
+msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgstr ""
+
+#: index.php:46
+msgid "Features"
+msgstr ""
+
+#: index.php:49
+msgid "Subtle"
+msgstr ""
+
+#: index.php:50
+msgid ""
+"The user will be notified only once, and won't be bothered any more. The "
+"notification bar is very small and won't affect the browsing experience "
+"negatively."
+msgstr ""
+
+#: index.php:54
+msgid "Informative"
+msgstr ""
+
+#: index.php:55
+msgid ""
+"Tell the users that they are using an out-dated browser and that your "
+"website looks even better with a newer one."
+msgstr ""
+
+#: index.php:59
+msgid "Idealistic"
+msgstr ""
+
+#: index.php:60
+msgid "Help evolve the web!"
+msgstr ""
+
+#: index.php:61
+msgid "Support the standards-based web!"
+msgstr ""
+
+#: index.php:62
+msgid "Support Open Source software projects!"
+msgstr ""
+
+#: index.php:63
+msgid "Help your visitors!"
+msgstr ""
+
+#: index.php:64
+msgid "Help increase security awareness!"
+msgstr ""
+
+#: index.php:65
+msgid "Support your favorite webbrowser!"
+msgstr ""
+
+#: index.php:68
+msgid "Low maintenance and up-to-date"
+msgstr ""
+
+#: index.php:69
+msgid ""
+"If there come more browser versions which won't be supported by the vendor "
+"in the future, exhibit security gaps or have been very old for a long time "
+"we are going to add them to our list automatically."
+msgstr ""
+
+#: index.php:74
+msgid "Customizable"
+msgstr ""
+
+#: index.php:74 index.php:80 index.php:84
+msgid "<span class=\"workingonit\">work in progress</span>"
+msgstr ""
+
+#: index.php:75
+msgid ""
+"You can customize the browsers and versions to notifiy.<br/> In future "
+"releases you can also customize the text that should be shown, the frequency "
+"of the bar to appear and many other things."
+msgstr ""
+
+#: index.php:80
+msgid "Localized"
+msgstr ""
+
+#: index.php:81
+msgid "The message is automatically displayed in the user's language."
+msgstr ""
+
+#: index.php:85
+#, php-format
+msgid ""
+"You get <a href=\"%s\">statistics</a> about which browsers your visitors are "
+"using and how much users got proselyted: How many users updated or changed "
+"their browser through your advice."
+msgstr ""
+
+#: index.php:91
+msgid "Install notification on your site"
+msgstr ""
+
+#: index.php:93
+msgid ""
+"Here you can get the code to include in your website. Just include it "
+"anywhere in the source of your page."
+msgstr ""
+
+#: index.php:97
+#, php-format
+msgid ""
+"You may also use third-party plugins for <a href=\"%s\">WordPress</a> "
+"(german) or <a href=\"%s\">TYPOlight</a> (german)."
+msgstr ""
+
+#: index.php:106
+msgid "You can customize the message or leave the defaults (recommended)."
+msgstr ""
+
+#: index.php:110
+msgid "Following browsers will be notified:"
+msgstr ""
+
+#: index.php:147
+msgid ""
+"Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist "
+"deshalb immer aktuell"
+msgstr ""
+
+#: index.php:153
+msgid ""
+"<b>Notify recommended set of browsers and adjust it automatically over time:"
+"</b>If a browser is no longer supported by the vendor or has security "
+"vulnerabilities, it will be added to the set."
+msgstr ""
+
+#: index.php:158
+msgid "Your Code"
+msgstr ""
+
+#: index.php:176
+msgid "Why you should tell users to update"
+msgstr ""
+
+#: index.php:179
+msgid "Reduced development costs and time"
+msgstr ""
+
+#: index.php:180
+msgid ""
+"Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr ""
+
+#: index.php:183
+msgid "Webdesign technologies and features"
+msgstr ""
+
+#: index.php:184
+msgid ""
+"There are all these great new webdevlopment standards and they are supported "
+"by modern browsers... but you may not use them."
+msgstr ""
+
+#: index.php:186
+msgid ""
+"Newer browsers let you use more features and new technologies (CSS3, SVG, "
+"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
+"resulting in a better browsing experience for your users."
+msgstr ""
+
+#: index.php:189
+msgid "Security and benefits for the user"
+msgstr ""
+
+#: index.php:190
+#, php-format
+msgid ""
+"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
+"\">update page</a>. The security-threads of outdates browsers are listed in "
+"this <a href=\"%s\">paper</a>."
+msgstr ""
+
+#: index.php:193
+msgid "The web has to evolve..."
+msgstr ""
+
+#: index.php:194
+msgid "That works only if the browsers do also evolve."
+msgstr ""
+
+#: index.php:195
+msgid ""
+"The web has always developed further. The strong market share of a 6 years "
+"old webbrowser (called Internet Explorer 6) is new. If we take no action "
+"now, we will have to code websites like in 2001 even if it is 2012."
+msgstr ""
+
+#: index.php:198
+msgid "Users don't oppose updating..."
+msgstr ""
+
+#: index.php:199
+msgid ""
+"... they often just do not appreciate the ‚need to update or the existence "
+"of the \"webbrowser\" as a software at all."
+msgstr ""
+
+#: index.php:202
+msgid "Help this project"
+msgstr ""
+
+#: index.php:205
+msgid "Participate!"
+msgstr ""
+
+#: index.php:206
+msgid ""
+"Include the notification code in your page to inform users about browser "
+"updates."
+msgstr ""
+
+#: index.php:209
+msgid "Spread the word!"
+msgstr ""
+
+#: index.php:210
+msgid "Tell others about this initiative! In your blog, on your webpage, ..."
+msgstr ""
+
+#: index.php:213
+msgid "Translate this page"
+msgstr ""
+
+#: index.php:214
+msgid "Translate this page into your language."
+msgstr ""
+
+#: stat.php:18
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
+"script."
+msgstr ""
+
+#: stat.php:22
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:59
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> visitors have already upgraded their "
+"browser."
+msgstr ""
+
+#: stat.php:91
+msgid "From"
+msgstr ""
+
+#: stat.php:91
+msgid "To"
+msgstr ""
+
+#: stat.php:91
+msgid "Amount"
+msgstr ""
+
+#: stat.php:118
+msgid "Recent browser updates"
+msgstr ""
+
+#: stat.php:123
+msgid "Site"
+msgstr ""
+
+#: stat.php:124
+msgid "Old browser"
+msgstr ""
+
+#: stat.php:125
+msgid "New browser"
+msgstr ""
+
+#: stat.php:126
+msgid "Language"
+msgstr ""
+
+#: stat.php:127
+msgid "Date"
+msgstr ""
+
+#: update.php:9
+msgid "Free webbrowsers"
+msgstr ""
+
+#: update.php:25
+msgid "Why this website?"
+msgstr ""
+
+#: update.php:30
+msgid "\"I'm not able to update my Browser\""
+msgstr ""

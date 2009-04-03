@@ -1,0 +1,3 @@
+Backup:
+
+INSERT INTO views_backup (referer) SELECT DISTINCT referer FROM views
