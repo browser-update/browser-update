@@ -7,28 +7,87 @@ include("header.php");
 
 	<div class="right">
 			<h2><?php echo T_('Free webbrowsers'); ?></h2>
-			<?php tT_('update-browsers.php'); ?>
+			<p><?php echo T_('These browsers are the newest versions of the most used free web browsers.'); ?></p>
+			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
+			<ul class="browsers">
+				<li class="ff">
+					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
+					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
+					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
+				</li>
+				<li class="op">
+					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 9.6</a></h3>
+					<div><?php echo T_('Browser with many features'); ?></div>
+					<a href="http://www.opera.com/" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
+				</li>
+				<li class="sa">
+					<h3><a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">Safari 3.2</a></h3>
+					<div><?php echo T_('Apple\'s fast browser'); ?></div>
+					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
+				</li>
+				<li class="ch">
+					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 1.0</a></h3>
+					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
+					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
+				</li>
+				<li class="ie">
+					<h3><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')">Internet Explorer 8</a></h3>
+					<div><?php echo T_('Windows built-in browser'); ?></div>
+					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
+				</li>
+			</ul>
+			<p>
+                <?php echo T_('All browsers have the same basic features and easy interface.'); ?>
+                <!--We recommend all browsers but Internet Explorer due to its small
+                feature set and poor webstandards support.-->
+            </p>
 	</div>
 	<div class="left">
 
 		<div class="message">
-			<?php tT_('update-message.php'); ?>
+			<p><?php echo T_('The Browser you are using is out of date. It has known <b>security-flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites.'); ?> </p>
 		</div>
 
 		<div>
-			<?php tT_('update-advantages.php'); ?>
+			<p><?php echo T_('Switching to a newer Browser could give you a lot of advantages:'); ?></p>
+			<ul class="advantages">
+				<li class="security">
+					<h3><?php echo T_('Security'); ?></h3>
+					<div><?php echo T_('Newer Browsers protect you better against scams, viruses, trojans, fishing and other treats. They also fix security holes in your current browser!'); ?></div> 
+				</li>
+				<li class="speed">
+					<h3><?php echo T_('Speed'); ?></h3>
+					<div><?php echo T_('Every new Browser Generation improves speed'); ?></div>
+				</li>
+				<li class="compatibility">
+					<h3><?php echo T_('Compatibility'); ?></h3>
+					<div><?php echo T_('Websites will be displayed more correctly in the future'); ?></div>
+				</li>
+				<li class="comfort">
+					<h3><?php echo T_('Comfort &amp; better experience'); ?></h3>
+					<div><?php echo T_('With new features, extensions and better customisability, you will have a more comfortable web-experience'); ?></div>
+				</li>
+			</ul>
 		</div>
 		
-		<?php tT_('update-action.php'); ?>
+		<p><?php echo T_('Updating just costs about 5 Minutes and will be totally free.'); ?></p>
+	
+		<p><?php echo T_('If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it.'); ?></p>
+
 		
 		<div>
 			<h2><?php echo T_('Why this website?'); ?></h2>
-			<?php tT_('update-why.php'); ?>
+			<p>
+				<?php echo T_('This website is an initiative by webdesigners, webmasters an bloggers who want to bring the web further and help their visitors.'); ?>
+			</p>
+			<p>
+				<?php echo T_('Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement oft the web</b> because of their limited features and many <b>bugs</b>.'); ?>
+			</p>
 		</div>
 
 
 		<h2><?php echo T_('"I\'m not able to update my Browser"'); ?></h2>
-		<?php tT_('update-employee.php'); ?>
+		<p><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility.'); ?></p>
 	</div>
 
 

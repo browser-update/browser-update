@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-03 19:39+0200\n"
+"POT-Creation-Date: 2009-04-04 11:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -409,10 +409,124 @@ msgstr ""
 msgid "Free webbrowsers"
 msgstr ""
 
+#: update.php:10
+msgid ""
+"These browsers are the newest versions of the most used free web browsers."
+msgstr ""
+
+#: update.php:11
+msgid "Just choose a browser to download from the original vendor's website:"
+msgstr ""
+
+#: update.php:15
+msgid "Widely-used open-source browser, highly extendable and customizable"
+msgstr ""
+
+#: update.php:16 update.php:21 update.php:26 update.php:31 update.php:36
+msgid "Download"
+msgstr ""
+
+#: update.php:20
+msgid "Browser with many features"
+msgstr ""
+
 #: update.php:25
-msgid "Why this website?"
+msgid "Apple's fast browser"
 msgstr ""
 
 #: update.php:30
+msgid "Google's browser with compact interface"
+msgstr ""
+
+#: update.php:35
+msgid "Windows built-in browser"
+msgstr ""
+
+#: update.php:40
+msgid "All browsers have the same basic features and easy interface."
+msgstr ""
+
+#: update.php:48
+msgid ""
+"The Browser you are using is out of date. It has known <b>security-flaws and "
+"disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
+"features of some websites."
+msgstr ""
+
+#: update.php:52
+msgid "Switching to a newer Browser could give you a lot of advantages:"
+msgstr ""
+
+#: update.php:55
+msgid "Security"
+msgstr ""
+
+#: update.php:56
+msgid ""
+"Newer Browsers protect you better against scams, viruses, trojans, fishing "
+"and other treats. They also fix security holes in your current browser!"
+msgstr ""
+
+#: update.php:59
+msgid "Speed"
+msgstr ""
+
+#: update.php:60
+msgid "Every new Browser Generation improves speed"
+msgstr ""
+
+#: update.php:63
+msgid "Compatibility"
+msgstr ""
+
+#: update.php:64
+msgid "Websites will be displayed more correctly in the future"
+msgstr ""
+
+#: update.php:67
+msgid "Comfort &amp; better experience"
+msgstr ""
+
+#: update.php:68
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+
+#: update.php:73
+msgid "Updating just costs about 5 Minutes and will be totally free."
+msgstr ""
+
+#: update.php:75
+msgid ""
+"If you are on a computer, that is maintained by a admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+
+#: update.php:79
+msgid "Why this website?"
+msgstr ""
+
+#: update.php:81
+msgid ""
+"This website is an initiative by webdesigners, webmasters an bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+
+#: update.php:84
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement oft the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+
+#: update.php:89
 msgid "\"I'm not able to update my Browser\""
+msgstr ""
+
+#: update.php:90
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
 msgstr ""
