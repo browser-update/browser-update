@@ -417,3 +417,22 @@ strong.number {
 	font-size: 2em;
 	color: #666;
 }
+
+
+.developer {
+    width: 46%;
+    border: 1px solid #ccc;
+    margin-bottom: .5em;
+    margin-left: 1%;
+    padding: 1%;
+    float: left;
+    height: 7em;
+}
+
+.developer h4 {
+   margin: .3em 0;
+}
+
+.developer p {
+   margin: .3em 0;
+}
