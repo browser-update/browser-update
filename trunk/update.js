@@ -18,7 +18,7 @@ var $buo = function(op,test) {
 
     if (window.location.hash=="#test-bu")
         var test=true;
-    
+
 	function getBrowser() {
 		var n,v,t,ua = navigator.userAgent;
 		var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator'};
@@ -43,30 +43,30 @@ var $buo = function(op,test) {
 
 	if (!test && (!b.n || document.cookie.indexOf("browserupdateorg=pause")>-1 || b.v>vs[b.n]))
 		return;
-    
+
     if (!test) {
         var i = new Image();
         i.src="http://browser-update.org/viewcount.php?n="+b.n+"&v="+b.v + "&p="+ escape(window.location.hostname) + "&jsv="+jsv;
     }
 	document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
-	
+
 	var ll=l.substr(0,2);
 	if (ll=="de")// <b>Sicherheitsl&uuml;cken</b>
 		t = 'Sie verwenden einen <b>veralteten Browser</b> ('+b.t+') \
             mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle \
             Funktionen dieser Webseite nutzen</b>. \
             <a href="'+url+'" style="color:#E25600;">Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
-	else 
-		t = 'Your browser ('+b.t+') <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites.<br> \
+	else
+		t = 'Your browser ('+b.t+') is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. \
              <a href="'+url+'">Learn how to update your browser</a>';
-	
+
 
 	var languages = "de,xx";
     //todo
 	//if (languages.indexOf(ll)!==false)
 	//	var url="http://browser-update.org/"+ll+"/update.php";
-	
-	var div = document.createElement("div"); 
+
+	var div = document.createElement("div");
 	div.style.cssText = "position:absolute; \
     width:100%;\
     top:0px; left:0px; cursor:pointer; border-bottom:1px solid #A29330; \
