@@ -1,7 +1,7 @@
 <p>
     Über aktuelle Ereignisse informieren wir in unserem <a href="/blog/">Blog</a>.
 </p>
-<h2>Mithelfen</h2>
+<h2>一緒にやりましょう</h2>
 <p>
     Wir freuen uns über jeden Entwickler, der diese Chance ergreifen will
     um aktiv seine Vorschläge an Browser-Update.org einzubringen.
