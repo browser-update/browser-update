@@ -64,14 +64,14 @@ include("header.php");
 		<h3><?php echo t('Your Code'); ?></h3>
 		<textarea id="f-code" rows="10" cols="80">
 &lt;script type="text/javascript">
-var $buoop = {reminder:24}
+var $buoop = {}
 $buoop.ol = window.onload;
 window.onload=function(){
+     if ($buoop.ol) $buoop.ol();
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
      e.setAttribute("src", "http://browser-update.org/update.js");
      document.body.appendChild(e);
-     if ($buoop.ol) $buoop.ol();
 }
 &lt;/script>
 		</textarea>
@@ -86,7 +86,7 @@ window.onload=function(){
 </div>
 
 <script type="text/javascript">
-var $buoop = {reminder:24};
+var $buoop = {};
 $buoop.ol = window.onload;
 window.onload=function(){
      var e = document.createElement("script");
@@ -96,7 +96,6 @@ window.onload=function(){
      if ($buoop.ol) $buoop.ol();
 }
 code();
-//redirect();
 </script>
 	
 
