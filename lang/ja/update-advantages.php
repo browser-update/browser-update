@@ -1,12 +1,12 @@
 			<p>
-				新しいバージョンの<a class="infoplus" href="http://de.wikipedia.org/wiki/Browser"
-				title="Link zum Wikipedia-Artikel über Webbrowser">ブラウザー</a>に変更することでたくさんの利点を生むことができます：
+				新しいバージョンの<a class="infoplus" href="http://ja.wikipedia.org/wiki/ウェブブラウザ"
+				title="インターネットブラウザ">ブラウザー</a>に変更することでたくさんの利点を生むことができます：
 			</p>
 			<ul class="advantages">
 				<li class="security">
 					<h3>安全保障</h3>
 					<div>
-						新しいブラウザーはより<a href="http://de.wikipedia.org/wiki/Internet-Betrug" title="Artikel auf Wikipedia">詐欺</a>、ウイルス、<a href="http://de.wikipedia.org/wiki/Phishing" title="Fachbegriff: Phishing, Erläuterung auf Wikipedia">フィッシングサイト</a>や他の脅威からあなたの個人データを守ることが可能です。更新されたブラウザーはウイルスなどがあなたのコンピューターに侵略すると言ったセキュリティーホールを補修します。。
+						新しいブラウザーはより<a href="http://en.wikipedia.org/wiki/Internet_fraud" title="Internet fraud">詐欺</a>、ウイルス、<a href="http://ja.wikipedia.org/wiki/フィッシング_(詐欺)" title="フィッシング">フィッシングサイト</a>や他の脅威からあなたの個人データを守ることが可能です。更新されたブラウザーはウイルスなどがあなたのコンピューターに侵略すると言ったセキュリティーホールを補修します。。
 					</div>
 				</li>
 				<li class="speed">

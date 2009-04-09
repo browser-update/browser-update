@@ -6,9 +6,9 @@
 			<li>
 				<h3>ウェブデザインテクノロジーとその機能</h3>
 				<div>今利用中のブラウザーをサポートしてくれる、素晴らしい新しいウェブ標準があります・・・・が、私達はそれをしょっちゅう使うことはできません。<br/>
-				新しいブラウザーを利用することによって、ウェブデザイナーの際、よりたくさんの機能により良い技術（<a href="http://css3.com" title="Die neue CSS-Generation mit vielen neuen Features">CSS3,</a> 
-				<a href="http://de.wikipedia.org/wiki/SVG" title="Skalierbare Vektorgrafiken, Artikel auf Wikipedia">SVG,</a> 
-				HTML5, <a href="http://de.wikipedia.org/wiki/Rss" title="Internet-Nachrichtenformat, Artikel auf Wikipedia">RSS,</a>	CSS Generated Content, flexible Layouts）を使うことができ、それによって、サイト訪問者にもより良いサイトを提供することができます。</div>
+				新しいブラウザーを利用することによって、ウェブデザイナーの際、よりたくさんの機能により良い技術（<a href="http://css3.com" title="Die neue CSS-Generation mit vielen neuen Features新しいＣＳＳの生成と沢山のフィーチャー">CSS3,</a> 
+				<a href="http://ja.wikipedia.org/wiki/SVG" title="スケーラブル ベクター グラフィックス">SVG,</a> 
+				HTML5, <a href="http://ja.wikipedia.org/wiki/Rss" title="ＲＳＳ">RSS,</a>	CSS Generated Content, flexible Layouts）を使うことができ、それによって、サイト訪問者にもより良いサイトを提供することができます。</div>
 			</li>
 			<li>
 				<h3>Sicherheit und viele Vorteile für den Benutzer</h3>

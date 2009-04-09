@@ -37,7 +37,7 @@ $lang['Install notification on your site'] =
 $lang['Following browsers will be notified:'] =
 	'次に表記するブラウザーのバージョンはお知らせ機能はこのように表示される可能性があります：';
 $lang['Your Code'] =
-	'コード';
+	'コード：';
 $lang['Why you should tell users to update'] =
 	'何故あなたのサイト訪問者にブラウザーのアップデートをお知らせしないといけないのでしょうか';
 $lang['Help this project'] =
