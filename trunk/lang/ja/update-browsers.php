@@ -13,19 +13,19 @@
 					<a href="http://www.opera.com/" onmousedown="countBrowser('o')">ダウンロード</a>
 				</li>
 				<li class="sa">
-					<h3><a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">Ｓａｆａｒｉ 3.2</a></h3>
+					<h3><a href="http://www.apple.com/jp/safari/" onmousedown="countBrowser('s')">Ｓａｆａｒｉ 3.2</a></h3>
 					<div>Ａｐｐｌｅ社製のブラウザー</div>
-					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">ダウンロード</a>
+					<a href="http://www.apple.com/jp/safari/" onmousedown="countBrowser('s')">ダウンロード</a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Ｇｏｏｇｌｅ　Ｃｈｒｏｍｅ １.０</a></h3>
+					<h3><a href="http://www.google.com/chrome?hl=ja" onmousedown="countBrowser('c')">Ｇｏｏｇｌｅ　Ｃｈｒｏｍｅ １.０</a></h3>
 					<div>コンパクトサーフェイスブラウザー Ｇｏｏｇｌｅ製</div>
-					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">ダウンロード</a>
+					<a href="http://www.google.com/chrome?hl=ja" onmousedown="countBrowser('c')">ダウンロード</a>
 				</li>
 				<li class="ie">
-					<h3><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')">Ｉｎｔｅｒｎｅｔ　Ｅｘｐｌｏｒｅｒ　８</a></h3>
+					<h3><a href="http://www.microsoft.com/japan/windows/products/winfamily/ie/default.mspx" onmousedown="countBrowser('i')">Ｉｎｔｅｒｎｅｔ　Ｅｘｐｌｏｒｅｒ　８</a></h3>
 					<div>Ｗｉｎｄｏｗｓの標準ウェブブラウザー</div>
-					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')">ダウンロード</a>
+					<a href="http://www.microsoft.com/japan/windows/products/winfamily/ie/default.mspx" onmousedown="countBrowser('i')">ダウンロード</a>
 				</li>
 			</ul>
 			<p>すべてのブラウザーは同じような基礎容量が必要で、また同じような操作で使用可能です。</p>
