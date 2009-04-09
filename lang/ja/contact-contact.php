@@ -1,10 +1,10 @@
-<h2>Team</h2>
+<h2>ティーム</h2>
 <p>
-Wir sind ein Team aus Webdesignern, Webmastern und Open-Web-Enthusiasten. Wir freuen uns jederzeit über Verstärkung.
+私たちはウェブデザイナーやウェブマスターとオープンウェブ狂です。 どうぞ宜しくお願いします。
 </p>
 
 <div class="developer">
-<h4>Thomas Hümmer (Projektinitiator)</h4>
+<h4>Thomas Hümmer（計画イニシエータ）</h4>
 <p>
     jossele <var>æ</var> gmx.de<br/>
     <a href="http://webmasterpro.de">Webmasterpro.de</a>,
@@ -15,7 +15,7 @@ Wir sind ein Team aus Webdesignern, Webmastern und Open-Web-Enthusiasten. Wir fr
 </div>
 
 <div class="developer">
-<h4>David Danier (Projektinitiator)</h4>
+<h4>David Danier（計画イニシエータ）</h4>
 <p>
     david.danier <var>æ</var> team23.de<br/>
     <a href="http://webmasterpro.de">Webmasterpro.de</a>,
@@ -28,7 +28,7 @@ Wir sind ein Team aus Webdesignern, Webmastern und Open-Web-Enthusiasten. Wir fr
 
 </p>
 
-<h2>Initiator</h2>
+<h2>イニシエータ</h2>
 
 <p>
     <a href="http://webmasterpro.de"><img src="/img/wmp_logo.png" alt="" /></a><br />
