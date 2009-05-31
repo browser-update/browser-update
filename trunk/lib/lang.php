@@ -50,7 +50,7 @@ function request_lang()
 	}
 	foreach ($lang as $ll)
 	{
-		if (file_exists(BU_LANG_PATH . $ll))
+		if (file_exists(BU_LANG_PATH . $ll) && $ll!="")
 		{
 			$request_lang = $ll;
 			return $request_lang;

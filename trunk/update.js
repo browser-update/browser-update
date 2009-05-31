@@ -2,12 +2,18 @@
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
 
-var jsv=2;
-var n = window.navigator;
+var jsv=3;
+var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vs =op.vs||{i:6,f:2,o:9.63,s:2,n:10};
+this.op.vsakt = {i:8,f:3,o:9.64,s:3.2,n:10};
+this.op.vsdefault = {i:6,f:2,o:9.63,s:2,n:10};
+this.op.vs =op.vs||this.op.vsdefault;
+for (b in this.op.vsakt)
+    if (this.op.vs[b]>=this.op.vsakt[b])
+        this.op.vs[b]=this.op.vsdefault[b];
+
 this.op.reminder=op.reminder||24;
 this.op.onshow = op.onshow||function(o){};
 this.op.url= op.url||"http://browser-update.org/update.html";
@@ -21,6 +27,8 @@ function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator'};
     if (/MSIE (\d+\.\d+);/.test(ua))					n="i";
+    else if (/Arora/.test(ua))                          return {};
+    else if (/Chrome/.test(ua))                         return {};
     else if (/Firefox.(\d+\.\d+)/.test(ua))				n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/.test(ua))	n="s";
     else if (/Safari.(\d+)/.test(ua))					n="so";
@@ -38,16 +46,17 @@ function getBrowser() {
 }
 
 this.op.browser=getBrowser();
-if (!this.op.test && (!this.op.browser || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
+if (!this.op.test && (!this.op.browser || !this.op.browser.n || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
     return;
 
 if (!this.op.test) {
     var i = new Image();
     i.src="http://browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
 }
-var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
-document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
-
+if (this.op.reminder!=0) {
+    var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
+    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+}
 var ll=this.op.l.substr(0,2);
 var languages = "de,en";
 if (languages.indexOf(ll)!==false)
