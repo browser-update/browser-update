@@ -3,7 +3,7 @@
 			
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
+					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.5</a></h3>
 					<div>Weit verbreiteter Open-Source-Browser, stark erweiterbar und anpassbar</div>
 					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Download</a>
 				</li>
