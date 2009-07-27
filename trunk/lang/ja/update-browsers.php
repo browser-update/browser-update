@@ -3,7 +3,7 @@
 			
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
+					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.5</a></h3>
 					<div>倍拡張版オープンソースブラウザー、強力な拡張と調整機能 </div>
 					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">ダウンロード</a>
 				</li>
