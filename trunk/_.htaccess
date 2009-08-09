@@ -13,3 +13,33 @@ RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,
 
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
+RewriteEngine On
+
+#RewriteCond %{HTTP_HOST} !^browser-update\.org$
+#RewriteRule ^/?(.*)$ http://browser-update.org/$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?([a-zA-Z0-9_-]+)\.html$ $1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,QSA]
+
+RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
+
+
+
+
+#4 Weeks cache for the files
+
+<FilesMatch "update.js">
+  Header set Cache-Control "public, max-age=2419200"
+  ExpiresDefault "access plus 4 weeks"
+  SetOutputFilter DEFLATE
+</FilesMatch>
+
+<FilesMatch "dialog-warning.gif">
+  Header set Cache-Control "public, max-age=2419200"
+</FilesMatch>
+
