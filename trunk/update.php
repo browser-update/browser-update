@@ -32,38 +32,45 @@ include("header.php");
 	</div>
 
 
-<!--<![CDATA[]]>-->
 <script type="text/javascript">
 
 
 function countBrowser(to) {
 		var f=getBrowser();
 		//TODO: / davor
-        if ((f.n=="f" && f.v>2) ||(f.n=="o" && f.v>9.6) ||(f.n=="s" && f.v>3.1) ||(f.n=="i" && f.v>7))
+        if ((f.n=="f" && f.v>=3.5) ||
+            (f.n=="o" && f.v>=9.64) ||
+            (f.n=="s" && f.v>=4) ||
+            (f.n=="i" && f.v>=8))
             return;
         var i=new Image();
-		i.src="count.php?ref="+escape(document.referrer)+"&from="+f.n+"&fromv="+f.v+"&to="+to;
-		//console.log(i.src);
+		i.src="/count.php?ref="+escape((document.referrer||"unknown").substring(0,35))+"&from="+f.n+"&fromv="+f.v+"&to="+to;
+        //console.log(i.src, f);
 }
-	function getBrowser() {
-		var n,v,t,ua = navigator.userAgent;
-		var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator'};
-		if (/MSIE (\d+\.\d+);/.test(ua))					n="i";
-		else if (/Firefox.(\d+\.\d+)/.test(ua))				n="f";
-		else if (/Version.(\d+.\d+).{0,10}Safari/.test(ua))	n="s";
-		else if (/Safari.(\d+)/.test(ua))					n="so";
-		else if (/Opera.(\d+\.\d+)/.test(ua))				n="o";
-		else if (/Netscape.(\d+)/.test(ua))					n="n";
-		else return {};
+function getBrowser() {
+    var n,v,t,ua = navigator.userAgent;
+    var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
+    if (/MSIE (\d+\.\d+);/.test(ua))					n="i";
+    else if (/Arora.(\d+\.\d+)/.test(ua))               n="x";
+    else if (/Chrome.(\d+\.\d+)/.test(ua))              n="c";
+    else if (/Firefox.(\d+\.\d+)/.test(ua))				n="f";
+    else if (/Version.(\d+.\d+).{0,10}Safari/.test(ua))	n="s";
+    else if (/Safari.(\d+)/.test(ua))					n="so";
+    else if (/Opera.*Version.(\d+\.\d+)/.test(ua))			n="o";
+    else if (/Opera.(\d+\.\d+)/.test(ua))				n="o";
+    else if (/Netscape.(\d+)/.test(ua))					n="n";
+    else return {n:"x",v:0,t:names[n]};
 
-		v=new Number(RegExp.$1);
-		if (n=="so") {
-			v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
-			n="s";
-		}
-		t=names[n];
-		return {n:n,v:v,t:t+" "+v}
-	}
+    v=new Number(RegExp.$1);
+    if (n=="so") {
+        v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
+        n="s";
+    }
+    if (n=="i" && v==7 && window.XDomainRequest) {
+        v=8;
+    }
+    return {n:n,v:v,t:names[n]+" "+v}
+}
 
 </script>
 
