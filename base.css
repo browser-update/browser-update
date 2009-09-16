@@ -442,3 +442,11 @@ strong.number {
 .developer p {
    margin: .3em 0;
 }
+
+pre {
+    color:maroon;
+}
+
+code {
+    color:maroon;
+}
