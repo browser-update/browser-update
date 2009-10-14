@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 18:23+0200\n"
+"POT-Creation-Date: 2009-10-14 18:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -291,54 +291,54 @@ msgstr ""
 msgid "The web has to evolve..."
 msgstr ""
 
-#: index.php:197
-msgid "That works only if the browsers do also evolve."
-msgstr ""
-
 #: index.php:198
-msgid ""
-"The web has always developed further. The strong market share of a 6 years "
-"old webbrowser (called Internet Explorer 6) is new. If we take no action "
-"now, we will have to code websites like in 2001 even if it is 2012."
+msgid "But that's only possible if the browsers also evolve."
 msgstr ""
 
-#: index.php:201
+#: index.php:199
+msgid ""
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
+"something new in the history of the web. If we take no action now, we will "
+"have to code websites like in 2001 even if it is 2011."
+msgstr ""
+
+#: index.php:203
 msgid "Users don't oppose updating..."
 msgstr ""
 
-#: index.php:202
+#: index.php:204
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
 msgstr ""
 
-#: index.php:205
+#: index.php:207
 msgid "Help this project"
 msgstr ""
 
-#: index.php:208
+#: index.php:210
 msgid "Participate!"
 msgstr ""
 
-#: index.php:209
+#: index.php:211
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
 
-#: index.php:212
+#: index.php:214
 msgid "Spread the word!"
 msgstr ""
 
-#: index.php:213
+#: index.php:215
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
 
-#: index.php:216
+#: index.php:218
 msgid "Translate this page"
 msgstr ""
 
-#: index.php:217
+#: index.php:219
 msgid "Translate this page into your language."
 msgstr ""
 

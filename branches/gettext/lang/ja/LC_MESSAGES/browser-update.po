@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 18:23+0200\n"
+"POT-Creation-Date: 2009-10-14 18:54+0200\n"
 "PO-Revision-Date: 2009-10-14 18:49+0200\n"
 "Last-Translator: David Danier <david.danier@team23.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -351,27 +351,29 @@ msgstr ""
 msgid "The web has to evolve..."
 msgstr "ウェブはどんどん進化していきます・・・。"
 
-#: index.php:197
-msgid "That works only if the browsers do also evolve."
+#: index.php:198
+#, fuzzy
+msgid "But that's only possible if the browsers also evolve."
 msgstr "そして、どんどんより良く、更に快適になっていっているのです。"
 
-#: index.php:198
+#: index.php:199
+#, fuzzy
 msgid ""
-"The web has always developed further. The strong market share of a 6 years "
-"old webbrowser (called Internet Explorer 6) is new. If we take no action "
-"now, we will have to code websites like in 2001 even if it is 2012."
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
+"something new in the history of the web. If we take no action now, we will "
+"have to code websites like in 2001 even if it is 2011."
 msgstr ""
 "しかし、残念ながら、例えば8年もののInternet Explorer 6などはこのウェブの進化"
 "を妨げると言った状況があります。２０１１年のウェブサイトではもう２００１年か"
 "らの技術が使われないようご協力お願いします。"
 
-#: index.php:201
+#: index.php:203
 msgid "Users don't oppose updating..."
 msgstr ""
 "ウェブサイトの訪問者はブラウザーのアップデートを避けることは出来ないので"
 "す・・・。"
 
-#: index.php:202
+#: index.php:204
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
@@ -380,15 +382,15 @@ msgstr ""
 "たするべきだと言うことを知らないだけなのです。多くのウェブ利用者はウェブブラ"
 "ウザーあ自主的な剃るとであることさえ知らないのです。"
 
-#: index.php:205
+#: index.php:207
 msgid "Help this project"
 msgstr "Helfen Sie diesem Projekt"
 
-#: index.php:208
+#: index.php:210
 msgid "Participate!"
 msgstr "一緒にやりましょう！"
 
-#: index.php:209
+#: index.php:211
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
@@ -396,22 +398,22 @@ msgstr ""
 "あなたのサイトに自動お知らせ機能を追加し、あなたのサイト訪問者にブラウザーの"
 "アップデートするようお知らせしましょう。"
 
-#: index.php:212
+#: index.php:214
 msgid "Spread the word!"
 msgstr "お知らせしましょう！"
 
-#: index.php:213
+#: index.php:215
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
 "他のウェブデザイナーやウェブマスターをしている人にこの自動お知らせ機能のこと"
 "をお知らせしましょう！\n"
 "                あなたのブログやウェブサイトで・・・。"
 
-#: index.php:216
+#: index.php:218
 msgid "Translate this page"
 msgstr "翻訳しましょう！"
 
-#: index.php:217
+#: index.php:219
 msgid "Translate this page into your language."
 msgstr "このサイトをあなたの母国語で翻訳するのにご協力お願いします！"
 
