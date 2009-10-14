@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 11:25+0200\n"
+"POT-Creation-Date: 2009-10-14 17:29+0200\n"
 "PO-Revision-Date: 2009-04-04 11:24+0200\n"
 "Last-Translator: David Danier <david.danier@team23.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
@@ -26,11 +26,11 @@ msgstr "Datenbank Verbindungsproblem"
 msgid "database not found"
 msgstr "Datenbank nicht gefunden"
 
-#: contact.php:10 header.php:34 test.php:5
+#: contact.php:8 header.php:35 test.php:5
 msgid "Contact"
 msgstr "Kontakt"
 
-#: header.php:7 header.php:29
+#: header.php:7 header.php:30
 msgid "Browser-Update.org"
 msgstr "Browser-Update.org"
 
@@ -38,33 +38,33 @@ msgstr "Browser-Update.org"
 msgid "Inform your visitors about browser-updates"
 msgstr "Benutzer über Browserupdates informieren"
 
-#: header.php:30
+#: header.php:31
 msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr ""
 "Eine Initiative von Webdesignern, um Benutzer über Browserupdates zu "
 "informieren"
 
-#: header.php:33
+#: header.php:34
 msgid "Start"
 msgstr "Start"
 
-#: header.php:35
+#: header.php:36
 msgid "Help"
 msgstr "Hilfe"
 
-#: header.php:36
+#: header.php:37
 msgid "Supporters"
 msgstr "Unterstützer"
 
-#: header.php:37 index.php:84 stat.php:9
+#: header.php:38 index.php:84 stat.php:9
 msgid "Statistics"
 msgstr "Statistiken"
 
-#: header.php:38
+#: header.php:39
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:43
+#: header.php:44
 msgid "translate..."
 msgstr "übersetzen..."
 
@@ -269,13 +269,13 @@ msgstr ""
 msgid "Following browsers will be notified:"
 msgstr "Bei folgenden Browserversionen soll die Benachrichtigung erscheinen:"
 
-#: index.php:147
+#: index.php:150
 msgid ""
 "Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist "
 "deshalb immer aktuell"
 msgstr ""
 
-#: index.php:153
+#: index.php:156
 msgid ""
 "<b>Notify recommended set of browsers and adjust it automatically over time:"
 "</b>If a browser is no longer supported by the vendor or has security "
@@ -285,30 +285,30 @@ msgstr ""
 "vom Hersteller nicht mehr unterstützt werden, Sicherheitslücken aufweisen "
 "oder sehr lange veraltet sind."
 
-#: index.php:158
+#: index.php:161
 msgid "Your Code"
 msgstr "Der Code"
 
-#: index.php:176
+#: index.php:179
 msgid "Why you should tell users to update"
 msgstr "Warum Sie Ihre Besucher über Browserupdates informieren sollten"
 
-#: index.php:179
+#: index.php:182
 msgid "Reduced development costs and time"
 msgstr "Langfristige Senkung der Entwicklungskosten und -zeit"
 
-#: index.php:180
+#: index.php:183
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
 msgstr ""
 "Webseiten für veraltete Browser zu optimieren ist äußerst zeitaufwendig, "
 "lästig und teuer."
 
-#: index.php:183
+#: index.php:186
 msgid "Webdesign technologies and features"
 msgstr "Webdesign-Technologien und Funktionen"
 
-#: index.php:184
+#: index.php:187
 msgid ""
 "There are all these great new webdevlopment standards and they are supported "
 "by modern browsers... but you may not use them."
@@ -317,7 +317,7 @@ msgstr ""
 "aktuellen Browsern unterstützt werden&hellip; doch oft können wir sie nicht "
 "nutzen."
 
-#: index.php:186
+#: index.php:189
 msgid ""
 "Newer browsers let you use more features and new technologies (CSS3, SVG, "
 "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
@@ -332,11 +332,11 @@ msgstr ""
 "Generated Content, flexible Layouts)und damit ihren Besuchern auch eine "
 "besser bedienbare Webseite bieten."
 
-#: index.php:189
+#: index.php:192
 msgid "Security and benefits for the user"
 msgstr "Sicherheit und viele Vorteile für den Benutzer"
 
-#: index.php:190
+#: index.php:193
 #, php-format
 msgid ""
 "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
@@ -348,11 +348,11 @@ msgstr ""
 "veralteter Browser wird <a href=\"%s\"> in dieser Veröffentlichung "
 "ausführlich behandelt</a>."
 
-#: index.php:193
+#: index.php:196
 msgid "The web has to evolve..."
 msgstr "Das Web entwickelt sich weiter&hellip;"
 
-#: index.php:194
+#: index.php:197
 #, fuzzy
 msgid "That works only if the browsers do also evolve."
 msgstr ""
@@ -362,7 +362,7 @@ msgstr ""
 "Webseiten im Jahre 2011 nicht mehr mit den Techniken                von 2001 "
 "entwickeln zu müssen."
 
-#: index.php:195
+#: index.php:198
 #, fuzzy
 msgid ""
 "The web has always developed further. The strong market share of a 6 years "
@@ -375,11 +375,11 @@ msgstr ""
 "Webseiten im Jahre 2011 nicht mehr mit den Techniken                von 2001 "
 "entwickeln zu müssen."
 
-#: index.php:198
+#: index.php:201
 msgid "Users don't oppose updating..."
 msgstr "Benutzer lehnen Updates nicht ab&hellip;"
 
-#: index.php:199
+#: index.php:202
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
@@ -388,15 +388,15 @@ msgstr ""
 "aktualisieren können oder sollten. Viele Benutzer sind sich sogar der "
 "Existenz eines \"Webbrowsers\" als eigenständige Software gar nicht bewusst."
 
-#: index.php:202
+#: index.php:205
 msgid "Help this project"
 msgstr "Helfen Sie diesem Projekt"
 
-#: index.php:205
+#: index.php:208
 msgid "Participate!"
 msgstr "Mitmachen!"
 
-#: index.php:206
+#: index.php:209
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
@@ -404,21 +404,21 @@ msgstr ""
 "Binden Sie die automatische Benachrichtigung in Ihre Webseite ein und "
 "informieren Sie so Ihre Besucher über Browserupdates."
 
-#: index.php:209
+#: index.php:212
 msgid "Spread the word!"
 msgstr "Weitersagen!"
 
-#: index.php:210
+#: index.php:213
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
 "Erzählen Sie anderen Webdesignern und Webmastern über die Initiative. In "
 "Ihrem Blog, auf Ihrer Webseite, &hellip;"
 
-#: index.php:213
+#: index.php:216
 msgid "Translate this page"
 msgstr "Übersetzen!"
 
-#: index.php:214
+#: index.php:217
 msgid "Translate this page into your language."
 msgstr "Helfen Sie mit, diese Webseite in Ihre Sprache zu übersetzen."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-04-04 11:25+0200\n"
+"POT-Creation-Date: 2009-10-14 17:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,11 @@ msgstr ""
 msgid "database not found"
 msgstr ""
 
-#: contact.php:10 header.php:34 test.php:5
+#: contact.php:8 header.php:35 test.php:5
 msgid "Contact"
 msgstr ""
 
-#: header.php:7 header.php:29
+#: header.php:7 header.php:30
 msgid "Browser-Update.org"
 msgstr ""
 
@@ -37,31 +37,31 @@ msgstr ""
 msgid "Inform your visitors about browser-updates"
 msgstr ""
 
-#: header.php:30
+#: header.php:31
 msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr ""
 
-#: header.php:33
+#: header.php:34
 msgid "Start"
 msgstr ""
 
-#: header.php:35
+#: header.php:36
 msgid "Help"
 msgstr ""
 
-#: header.php:36
+#: header.php:37
 msgid "Supporters"
 msgstr ""
 
-#: header.php:37 index.php:84 stat.php:9
+#: header.php:38 index.php:84 stat.php:9
 msgid "Statistics"
 msgstr ""
 
-#: header.php:38
+#: header.php:39
 msgid "Blog"
 msgstr ""
 
-#: header.php:43
+#: header.php:44
 msgid "translate..."
 msgstr ""
 
@@ -229,58 +229,58 @@ msgstr ""
 msgid "Following browsers will be notified:"
 msgstr ""
 
-#: index.php:147
+#: index.php:150
 msgid ""
 "Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist "
 "deshalb immer aktuell"
 msgstr ""
 
-#: index.php:153
+#: index.php:156
 msgid ""
 "<b>Notify recommended set of browsers and adjust it automatically over time:"
 "</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
 
-#: index.php:158
+#: index.php:161
 msgid "Your Code"
 msgstr ""
 
-#: index.php:176
+#: index.php:179
 msgid "Why you should tell users to update"
 msgstr ""
 
-#: index.php:179
+#: index.php:182
 msgid "Reduced development costs and time"
 msgstr ""
 
-#: index.php:180
+#: index.php:183
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
 msgstr ""
 
-#: index.php:183
+#: index.php:186
 msgid "Webdesign technologies and features"
 msgstr ""
 
-#: index.php:184
+#: index.php:187
 msgid ""
 "There are all these great new webdevlopment standards and they are supported "
 "by modern browsers... but you may not use them."
 msgstr ""
 
-#: index.php:186
+#: index.php:189
 msgid ""
 "Newer browsers let you use more features and new technologies (CSS3, SVG, "
 "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
 "resulting in a better browsing experience for your users."
 msgstr ""
 
-#: index.php:189
+#: index.php:192
 msgid "Security and benefits for the user"
 msgstr ""
 
-#: index.php:190
+#: index.php:193
 #, php-format
 msgid ""
 "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
@@ -288,58 +288,58 @@ msgid ""
 "this <a href=\"%s\">paper</a>."
 msgstr ""
 
-#: index.php:193
+#: index.php:196
 msgid "The web has to evolve..."
 msgstr ""
 
-#: index.php:194
+#: index.php:197
 msgid "That works only if the browsers do also evolve."
 msgstr ""
 
-#: index.php:195
+#: index.php:198
 msgid ""
 "The web has always developed further. The strong market share of a 6 years "
 "old webbrowser (called Internet Explorer 6) is new. If we take no action "
 "now, we will have to code websites like in 2001 even if it is 2012."
 msgstr ""
 
-#: index.php:198
+#: index.php:201
 msgid "Users don't oppose updating..."
 msgstr ""
 
-#: index.php:199
+#: index.php:202
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
 msgstr ""
 
-#: index.php:202
+#: index.php:205
 msgid "Help this project"
 msgstr ""
 
-#: index.php:205
+#: index.php:208
 msgid "Participate!"
 msgstr ""
 
-#: index.php:206
+#: index.php:209
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
 
-#: index.php:209
+#: index.php:212
 msgid "Spread the word!"
 msgstr ""
 
-#: index.php:210
+#: index.php:213
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
 
-#: index.php:213
+#: index.php:216
 msgid "Translate this page"
 msgstr ""
 
-#: index.php:214
+#: index.php:217
 msgid "Translate this page into your language."
 msgstr ""
 
