@@ -41,6 +41,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 <div id="lang">
     <a href="/en/">english</a>
     <a href="/de/">deutsch</a>
+    <a href="/ja/">japanese</a>
     <a href="contact.html"><?php echo T_('translate...'); ?></a>
 </div>
 <div id="bookmark">

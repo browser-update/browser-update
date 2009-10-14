@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 17:29+0200\n"
+"POT-Creation-Date: 2009-10-14 18:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: header.php:44
+#: header.php:45
 msgid "translate..."
 msgstr ""
 
@@ -110,7 +110,7 @@ msgid "If the visitor ignores the advice, it won't appear again for some time."
 msgstr ""
 
 #: index.php:46
-msgid "Features"
+msgid "Advantages and features"
 msgstr ""
 
 #: index.php:49
@@ -231,8 +231,7 @@ msgstr ""
 
 #: index.php:150
 msgid ""
-"Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist "
-"deshalb immer aktuell"
+"Google Chrome will automatically itself and is therefor always up to date"
 msgstr ""
 
 #: index.php:156

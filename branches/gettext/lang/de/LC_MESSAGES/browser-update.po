@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 17:29+0200\n"
-"PO-Revision-Date: 2009-04-04 11:24+0200\n"
+"POT-Creation-Date: 2009-10-14 18:23+0200\n"
+"PO-Revision-Date: 2009-10-14 18:24+0200\n"
 "Last-Translator: David Danier <david.danier@team23.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr "Statistiken"
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:44
+#: header.php:45
 msgid "translate..."
 msgstr "übersetzen..."
 
@@ -129,8 +129,8 @@ msgstr ""
 "wird dann längere Zeit von einer erneuten Benachrichtigung verschont."
 
 #: index.php:46
-msgid "Features"
-msgstr "Funktionen"
+msgid "Advantages and features"
+msgstr "Vorteile und Funktionen"
 
 #: index.php:49
 msgid "Subtle"
@@ -271,9 +271,10 @@ msgstr "Bei folgenden Browserversionen soll die Benachrichtigung erscheinen:"
 
 #: index.php:150
 msgid ""
+"Google Chrome will automatically itself and is therefor always up to date"
+msgstr ""
 "Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist "
 "deshalb immer aktuell"
-msgstr ""
 
 #: index.php:156
 msgid ""
@@ -423,7 +424,7 @@ msgid "Translate this page into your language."
 msgstr "Helfen Sie mit, diese Webseite in Ihre Sprache zu übersetzen."
 
 #: stat.php:19
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "<strong class=\"number\">%d</strong> site is using the Browser-Update.org "
 "script."
@@ -432,19 +433,17 @@ msgid_plural ""
 "script."
 msgstr[0] ""
 "<strong class=\"number\">%d</strong> Seite verwendet das Script von Browser-"
-"Update.org.<strong class=\"number\">%d</strong> Seiten verwenden das Script "
-"von Browser-Update.org."
+"Update.org."
 msgstr[1] ""
-"<strong class=\"number\">%d</strong> Seite verwendet das Script von Browser-"
-"Update.org.<strong class=\"number\">%d</strong> Seiten verwenden das Script "
-"von Browser-Update.org."
+"<strong class=\"number\">%d</strong> Seiten verwenden das Script von Browser-"
+"Update.org."
 
 #: stat.php:26
 msgid "Browser updates"
 msgstr "Browserupdates"
 
 #: stat.php:65
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "<strong class=\"number\">%d</strong> visitor has already upgraded his "
 "browser."
@@ -453,12 +452,10 @@ msgid_plural ""
 "browser."
 msgstr[0] ""
 "<strong class=\"number\">%d</strong> Besucher hat bereits seinen Browser "
-"aktualisiert<strong class=\"number\">%d</strong> Besucher haben bereits "
-"ihren Browser aktualisiert"
+"aktualisiert"
 msgstr[1] ""
-"<strong class=\"number\">%d</strong> Besucher hat bereits seinen Browser "
-"aktualisiert<strong class=\"number\">%d</strong> Besucher haben bereits "
-"ihren Browser aktualisiert"
+"<strong class=\"number\">%d</strong> Besucher haben bereits ihren Browser "
+"aktualisiert"
 
 #: stat.php:100
 msgid "From"
@@ -667,3 +664,6 @@ msgstr ""
 "eine gute Lösung:Verwenden Sie den alten wegen der Kompatibilität und den "
 "neuen zum komfortableren Surfen, wenn es mal schneller (und sicherer) gehen "
 "soll."
+
+#~ msgid "Features"
+#~ msgstr "Funktionen"

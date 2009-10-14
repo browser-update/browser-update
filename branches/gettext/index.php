@@ -43,7 +43,7 @@ include("header.php");
                 <?php echo T_('If the visitor ignores the advice, it won\'t appear again for some time.'); ?>
 			</div></li>
 		</ol>
-		<h2><?php echo T_('Features'); ?></h2>
+		<h2><?php echo T_('Advantages and features'); ?></h2>
 		<ul class="advantages">
 			<li>
 				<h3><?php echo T_('Subtle'); ?><!--Unobtrusive / Non-Intrusive--></h3>
@@ -147,7 +147,7 @@ include("header.php");
 		</span>
 		<span class="browser">
 			<label for="f-s">Chrome: </label>
-			<span class="popupinfo">auto<span class="popup"><?php echo T_('Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist deshalb immer aktuell'); ?>.</span></span>
+			<span class="popupinfo">auto<span class="popup"><?php echo T_('Google Chrome will automatically itself and is therefor always up to date'); ?>.</span></span>
 		</span>
         </div>
         <div>
