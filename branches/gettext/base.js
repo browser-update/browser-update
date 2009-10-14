@@ -12,20 +12,20 @@ function code() {
         vc.className = "disabled";
     }
     else {
-        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',n:9} ,';
+        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',n:9}';
         vc.className = "enabled";
     }
 	var code="";
 	code = '\
 <script type="text/javascript"> \n\
-var $buoop = {'+notify+'reminder:24} \n\
+var $buoop = {'+notify+'} \n\
 $buoop.ol = window.onload; \n\
 window.onload=function(){ \n\
+ if ($buoop.ol) $buoop.ol(); \n\
  var e = document.createElement("script"); \n\
  e.setAttribute("type", "text/javascript"); \n\
  e.setAttribute("src", "http://browser-update.org/update.js"); \n\
  document.body.appendChild(e); \n\
- if ($buoop.ol) $buoop.ol(); \n\
 } \n\
 </script> \n\
 	';

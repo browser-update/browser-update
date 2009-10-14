@@ -19,7 +19,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<!--[if lt IE 7]>
 	<link rel="stylesheet" href="/drecksie6.css" type="text/css" />
 	<![endif]-->
-	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
+    <link rel="icon" href="/img/favicon.png" type="image/png"/>
 	<script type="text/javascript" src="/base.js">	</script>
 </head>
 <body>

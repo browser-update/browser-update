@@ -346,8 +346,14 @@ ol.steps li {
 	margin-bottom: .6em;
 }
 
-ol.steps div {
-
+ol.steps div.example {
+	border-bottom:1px solid #A29330;
+	background: #FDF2AB url(/img/dialog-warning.gif) no-repeat 1em 0.55em;
+	padding: 5px 36px 5px 40px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#000;
+	font-size: 12px;
 }
 
 .infoplus {
@@ -416,4 +422,31 @@ table tr:hover td {
 strong.number {
 	font-size: 2em;
 	color: #666;
+}
+
+
+.developer {
+    width: 46%;
+    border: 1px solid #ccc;
+    margin-bottom: .5em;
+    margin-left: 1%;
+    padding: 1%;
+    float: left;
+    height: 7em;
+}
+
+.developer h4 {
+   margin: .3em 0;
+}
+
+.developer p {
+   margin: .3em 0;
+}
+
+pre {
+    color:maroon;
+}
+
+code {
+    color:maroon;
 }
