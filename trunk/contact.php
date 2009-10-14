@@ -7,6 +7,7 @@ include("header.php");
 <div class="left">
 <h2 class="top"><?php echo T_('Contact'); ?></h2>
 
+<!-- TODO: Translate! -->
 <p>
     Über aktuelle Ereignisse informieren wir in unserem <a href="/blog/">Blog</a>.
 </p>

@@ -112,6 +112,7 @@ $names = array(
 if (request_lang() == 'de')
 {
 	?>
+	<!-- TODO: Translate or remove -->
 	<h3>Geplante Statistiken</h3>
 	<ul>
 		<li>Statistiken pro Seite</li>
