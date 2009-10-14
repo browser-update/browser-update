@@ -1,6 +1,7 @@
 <?php
 
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php'); // just to be sure
+require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'gettext.inc');
 define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
 
 /**
@@ -13,13 +14,18 @@ define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
  *  - ...
  *
  * This function tries to return a normalized version, regardless of the format
- * given. This is done by replacing "_" with "-" and converting the string to
- * lower case.
+ * given. This is done by replacing "-" with "_" and converting the string to
+ * xx_YY.
  * @return string
  */
 function lang_normalize($lang)
 {
-	return strtolower(str_replace('_', '-', $lang));
+	$lang = strtolower(str_replace('-', '_', $lang));
+	if (strlen($lang) >= 5)
+	{
+		$lang = substr($lang, 0, 3) . strtoupper(substr($lang, 4, 2));
+	}
+	return $lang;
 }
 
 /**
@@ -85,84 +91,10 @@ function log_lang()
 	return lang_normalize($lang[0]);
 }
 
-/**
- * Load a translation and returns its strings.
- */
-function load_translation($l)
-{
-	$lang = array();
-	require_once(BU_LANG_PATH . $l . DIRECTORY_SEPARATOR . 'strings.php');
-	return $lang;
-}
-
-/**
- * Translates a given string to the request language.
- *
- * 
- */
-function translate($string)
-{
-	static $translation = null;
-	if (is_null($translation))
-	{
-		$l = request_lang();
-		$translation = load_translation($l);
-	}
-	$args = func_get_args();
-	if (isset($translation[$string]))
-	{
-		// remove $string
-		array_shift($args);
-		// add translation as first arg
-		array_unshift($args, $translation[$string]);
-	}
-	return call_user_func_array('sprintf', $args);
-}
-
-/**
- * Shortcut for translate()
- */
-function t()
-{
-	$args = func_get_args();
-	return call_user_func_array('translate', $args);
-}
-
-/**
- * Loads a template in the request language
- *
- * Falls back to $default_lang if template does not exist.
- */
-function translate_template($filename, $vars=array())
-{
-	global $default_lang;
-	$incfilename = BU_LANG_PATH . request_lang() .
-		DIRECTORY_SEPARATOR . $filename;
-	if (!file_exists($incfilename))
-	{
-		$incfilename = BU_LANG_PATH . $default_lang .
-			DIRECTORY_SEPARATOR . $filename;
-	}
-	if (file_exists($incfilename))
-	{
-		if ($vars)
-			extract($vars, EXTR_SKIP | EXTR_REFS);
-		unset($vars);
-		include($incfilename);
-	}
-	else
-	{
-		throw new Exception('translate_template(): $filename not found');
-	}
-}
-
-/**
- * Shortcut for translate_template()
- */
-function tt()
-{
-	$args = func_get_args();
-	return call_user_func_array('translate_template', $args);
-}
+/* Init i18n */
+T_setlocale(LC_MESSAGES, request_lang());
+T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('browser-update', 'UTF8');
+T_textdomain('browser-update');
 
 ?>

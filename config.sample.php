@@ -2,9 +2,9 @@
 
 /* copy this to config.php */
 $db = mysql_connect("localhost","username","password")
-	or die('database connection problem');
+	or die(T_('database connection problem'));
 mysql_select_db("database", $db)
-	or die('database not found');
+	or die(T_('database not found'));
 
 $default_lang = 'en';
 

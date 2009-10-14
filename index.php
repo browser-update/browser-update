@@ -7,17 +7,107 @@ include("header.php");
    
 <div class="left">
 	<div class="message">
-		<?php tt('index-teaser.php'); ?>
+		<p>
+			<b>
+			<?php echo T_('This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser.'); ?>
+			</b>
+		</p>
+		<p>
+			<?php echo T_('Many internet users are still using very old, out-dated browsers – most of them for no actual reason. ' . 
+				'Switching to an newer browser is better for them and for you as a webdesigner.'); ?>
+			<!--They just have to be told, that using an old browser gives them disadvantages.-->
+		</p>
+		<!--<p>
+			The more Websites Participate, the more the awareness to update will increase and old browser market share will drop faster!
+		</p>-->
 	</div>
 
-		<h2><?php echo t('How it works'); ?></h2>
-		<?php tt('index-steps.php'); ?>
-		<h2><?php echo t('Features'); ?></h2>
-		<?php tt('index-features.php'); ?>
-		<h2 id="install"><?php echo t('Install notification on your site'); ?></h2>
-		<?php tt('index-install-head.php'); ?>
+		<h2><?php echo T_('How it works'); ?></h2>
+		<ol class="steps">
+			<!--<li><div>You should (of course) code the Website that it is accessible by old webbrowsers, but you can leave some features/gimmicks out.</div></li>-->
+			<li><div>
+                <?php echo sprintf(T_('Include our small javascript <a href="%s">notification</a> on your website'), '#install'); ?>
+            </div></li>
+			<li><div>
+                <?php echo T_('Visitors with out-dated browser will be informed by a little, ' . 
+					'undisturbing bar, that his browser is not up-to-date and it ' . 
+					'is recommended to update.'); ?>
+                (<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
+                <a href="#" onclick="$bu=new $buo({},true);"><img src="/img/bar-small.png" alt="" style="padding-top:6px;"/></a>
+                <!--, to see all the features of this website.--></div></li>
+			<li><div>
+                <?php echo sprintf(T_('By clicking the bar, he will get to <a href="%s">an info page ' . 
+					'with arguments why to change/update and some browser choices</a>.'), 'update.php'); ?>
+            </div></li>
+            <li><div>
+                <?php echo T_('If the visitor ignores the advice, it won\'t appear again for some time.'); ?>
+			</div></li>
+		</ol>
+		<h2><?php echo T_('Advantages and features'); ?></h2>
+		<ul class="advantages">
+			<li>
+				<h3><?php echo T_('Subtle'); ?><!--Unobtrusive / Non-Intrusive--></h3>
+				<?php echo T_('The user will be notified only once, and won\'t be bothered any more. ' . 
+					'The notification bar is very small and won\'t affect the browsing experience negatively.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Informative'); ?></h3>
+				<?php echo T_('Tell the users that they are using an out-dated browser ' . 
+					'and that your website looks even better with a newer one.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Idealistic'); ?></h3>
+				<?php echo T_('Help evolve the web!'); ?>
+				<?php echo T_('Support the standards-based web!'); ?>
+				<?php echo T_('Support Open Source software projects!'); ?>
+				<?php echo T_('Help your visitors!'); ?>
+				<?php echo T_('Help increase security awareness!'); ?>
+				<?php echo T_('Support your favorite webbrowser!'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Low maintenance and up-to-date'); ?></h3>
+                <?php echo T_('If there come more browser versions which won\'t be supported by the vendor ' . 
+                'in the future, exhibit security gaps or have been very old for a ' . 
+                'long time we are going to add them to our list automatically.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Customizable'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
+				<?php echo T_('You can customize the browsers and versions to notifiy.<br/> ' . 
+				'In future releases you can also customize the text that should be shown, ' . 
+				'the frequency of the bar to appear and many other things.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Localized'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
+				<?php echo T_('The message is automatically displayed in the user\'s language.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Statistics'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
+				<?php echo sprintf(T_('You get <a href="%s">statistics</a> about which browsers your ' . 
+                'visitors are using and how much users got proselyted: How many users ' . 
+                'updated or changed their browser through your advice.'), 'stat.html'); ?>
+			</li>
+
+		</ul>
+		<h2 id="install"><?php echo T_('Install notification on your site'); ?></h2>
+		<p>
+			<?php echo T_('Here you can get the code to include in your website. ' .
+				'Just include it anywhere in the source of your page.'); ?>
+		</p>
+		<p>
+			<?php echo sprintf(T_('You may also use third-party plugins for ' .
+				'<a href="%s">WordPress</a> (german) ' .
+				'or ' .
+				'<a href="%s">TYPOlight</a> (german).'),
+				'http://fileserver.julianbrinke.de/WP/',
+				'http://typolight.org/erweiterungsliste/view/browser_update.html'); ?>
+		</p>
+		<!--
+		<p>
+			<?php echo T_('You can customize the message or leave the defaults (recommended).'); ?>
+		</p>
+		-->
 		<div class="generate">
-        <p><?php echo t('Following browsers will be notified:'); ?></p>
+        <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
 		<span class="browser">
 			<label for="f-i">IE</label> 
@@ -57,14 +147,18 @@ include("header.php");
 		</span>
 		<span class="browser">
 			<label for="f-s">Chrome: </label>
-			<span class="popupinfo">auto<span class="popup">Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist deshalb immer aktuell.</span></span>
+			<span class="popupinfo">auto<span class="popup"><?php echo T_('Google Chrome will automatically itself and is therefor always up to date'); ?>.</span></span>
 		</span>
         </div>
         <div>
             <input type="checkbox" checked="checked" id="autoupdate" onchange="code();"/>
-            <label for="autoupdate"><?php tt('index-install-autoupdate.php'); ?></label>
+            <label for="autoupdate">
+				<?php echo T_('<b>Notify recommended set of browsers and adjust it automatically over time:</b>' .
+					'If a browser is no longer supported by the vendor or has security vulnerabilities, ' .
+					'it will be added to the set.'); ?>
+			</label>
         </div>
-		<h3><?php echo t('Your Code'); ?></h3>
+		<h3><?php echo T_('Your Code'); ?></h3>
 		<textarea id="f-code" rows="10" cols="80">
 &lt;script type="text/javascript">
 var $buoop = {}
@@ -82,10 +176,49 @@ window.onload=function(){
 		</div>
 		<p>
 		</p>
-		<h2><?php echo t('Why you should tell users to update'); ?></h2>
-		<?php tt('index-why.php'); ?>
-		<h2><?php echo t('Help this project'); ?></h2>
-		<?php tt('index-project.php'); ?>
+		<h2><?php echo T_('Why you should tell users to update'); ?></h2>
+		<ul class="advantages">
+			<li>
+				<h3><?php echo T_('Reduced development costs and time'); ?></h3>
+				<div><?php echo T_('Optimizing websites for old browsers is time consuming and thus expensive.'); ?></div> 
+			</li>
+			<li>
+				<h3><?php echo T_('Webdesign technologies and features'); ?></h3>
+				<div><?php echo T_('There are all these great new webdevlopment standards and they are supported by modern browsers... but you may not use them.'); ?> 
+				<br/>
+				<?php echo T_('Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users.'); ?></div>
+			</li>
+			<li>
+				<h3><?php echo T_('Security and benefits for the user'); ?></h3>
+				<div><?php echo sprintf(T_('Numerous benefits: security, speed, features, ... Look at the <a href="%s">update page</a>. The security-threads of outdates browsers are listed in this <a href="%s">paper</a>.'), 'update.html', 'http://www.techzoom.net/publications/insecurity-iceberg/index.en'); ?></div>
+			</li>
+			<li>	
+				<h3><?php echo T_('The web has to evolve...'); ?></h3>
+				<div>
+					<?php echo T_("But that's only possible if the browsers also evolve."); ?>
+					<?php echo T_('The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011.'); ?>
+				</div>
+			</li>
+			<li>
+				<h3><?php echo T_('Users don\'t oppose updating...'); ?></h3>
+				<?php echo T_('... they often just do not appreciate the ‚need to update or the existence of the "webbrowser" as a software at all.'); ?>
+			</li>
+		</ul>
+		<h2><?php echo T_('Help this project'); ?></h2>
+		<ul class="advantages">
+			<li>
+				<h3><?php echo T_('Participate!'); ?></h3>
+				<?php echo T_('Include the notification code in your page to inform users about browser updates.'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Spread the word!'); ?></h3>
+				<?php echo T_('Tell others about this initiative! In your blog, on your webpage, ...'); ?>
+			</li>
+			<li>
+				<h3><?php echo T_('Translate this page'); ?></h3>
+				<?php echo T_('Translate this page into your language.'); ?>
+			</li>
+		</ul>
 </div>
 
 <script type="text/javascript">
