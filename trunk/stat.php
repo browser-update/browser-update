@@ -6,7 +6,7 @@ include("header.php");
 ?>
 
 <div class="left">
-<h2 class="top"><?php echo t('Statistics'); ?></h2>
+<h2 class="top"><?php echo T_('Statistics'); ?></h2>
 
 <p>
 	<?php
@@ -15,11 +15,15 @@ include("header.php");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
 	list($domainnum) = mysql_fetch_row($r);
-	echo t('<strong class="number">%d</strong> sites are using the Browser-Update.org script.', $domainnum);
+	echo sprintf(T_ngettext(
+		'<strong class="number">%d</strong> site is using the Browser-Update.org script.',
+		'<strong class="number">%d</strong> sites are using the Browser-Update.org script.',
+		$domainnum
+	), $domainnum);
 	?>
 </p>
 
-<h3><?php echo t('Browser updates'); ?></h3>
+<h3><?php echo T_('Browser updates'); ?></h3>
 <?php
 
 
@@ -56,7 +60,12 @@ $names = array(
 ?>
 <p>
 	<?php
-	echo t('<strong class="number">%d</strong> visitors have already upgraded their browser.', get_num());
+	$visitors_upgraded = get_num();
+	echo sprintf(T_ngettext(
+		'<strong class="number">%d</strong> visitor has already upgraded his browser.',
+		'<strong class="number">%d</strong> visitors have already upgraded their browser.',
+		$visitors_upgraded
+	), $visitors_upgraded);
 	?>
 </p>
 <?php
@@ -88,7 +97,7 @@ $names = array(
 */
 ?>
 <table>
-    <thead><tr><td><?php echo t('From'); ?></td><td><?php echo t('To'); ?></td><td><?php echo t('Amount'); ?></td></tr></thead>
+    <thead><tr><td><?php echo T_('From'); ?></td><td><?php echo T_('To'); ?></td><td><?php echo T_('Amount'); ?></td></tr></thead>
     <tbody>
     <?php
     $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
@@ -115,16 +124,16 @@ if (request_lang() == 'de')
 ?>
 
 
-<h3><?php echo t('Recent browser updates'); ?></h3>
+<h3><?php echo T_('Recent browser updates'); ?></h3>
 
 <table>
 <thead>
 <tr>
-<td><?php echo t('Site'); ?></td>
-<td><?php echo t('Old browser'); ?></td>
-<td><?php echo t('New browser'); ?></td>
-<td><?php echo t('Language'); ?></td>
-<td><?php echo t('Date'); ?></td>
+<td><?php echo T_('Site'); ?></td>
+<td><?php echo T_('Old browser'); ?></td>
+<td><?php echo T_('New browser'); ?></td>
+<td><?php echo T_('Language'); ?></td>
+<td><?php echo T_('Date'); ?></td>
 </tr>
 </thead>
 
@@ -138,7 +147,7 @@ $r = mysql_query($q)
 
 while ($a = mysql_fetch_assoc($r)) {
 	echo '<tr><td>'.$a['referer'].'</td><td>'.$names[$a['fromn']].' '.$a['fromv'].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['lang'].'</td><td>'.date("d.m.Y, H:i",$a['time']).'</td></tr>';
-    //list($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
+    //lisT_($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
 }
 ?>
 

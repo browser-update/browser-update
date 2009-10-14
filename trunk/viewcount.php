@@ -9,8 +9,8 @@ $host	= urldecode($_GET["p"]);
 #    return;
 
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-$lang = explode (",", $lang);
-$lang = explode (";", $lang[0]);
+$lang = explode(",", $lang);
+$lang = explode(";", $lang[0]);
 $ll = trim(strtolower(substr($lang[0],0,5)));
 if(strlen($ll)==5) 
 {
