@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 18:54+0200\n"
+"POT-Creation-Date: 2009-10-14 19:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -447,13 +447,13 @@ msgstr ""
 
 #: update.php:48
 msgid ""
-"The Browser you are using is out of date. It has known <b>security-flaws and "
+"The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
 "features of some websites."
 msgstr ""
 
 #: update.php:52
-msgid "Switching to a newer Browser could give you a lot of advantages:"
+msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr ""
 
 #: update.php:55
@@ -462,7 +462,7 @@ msgstr ""
 
 #: update.php:56
 msgid ""
-"Newer Browsers protect you better against scams, viruses, trojans, fishing "
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other treats. They also fix security holes in your current browser!"
 msgstr ""
 
@@ -471,7 +471,7 @@ msgid "Speed"
 msgstr ""
 
 #: update.php:60
-msgid "Every new Browser Generation improves speed"
+msgid "Every new browser generation improves speed"
 msgstr ""
 
 #: update.php:63
@@ -479,7 +479,7 @@ msgid "Compatibility"
 msgstr ""
 
 #: update.php:64
-msgid "Websites will be displayed more correctly in the future"
+msgid "Websites using new technoligy will be displayed more correctly"
 msgstr ""
 
 #: update.php:67
@@ -493,7 +493,7 @@ msgid ""
 msgstr ""
 
 #: update.php:73
-msgid "Updating just costs about 5 Minutes and will be totally free."
+msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
 
 #: update.php:75
@@ -508,19 +508,19 @@ msgstr ""
 
 #: update.php:81
 msgid ""
-"This website is an initiative by webdesigners, webmasters an bloggers who "
+"This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
 
 #: update.php:84
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement oft the web</b> because of their limited features and many "
+"advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
 
 #: update.php:89
-msgid "\"I'm not able to update my Browser\""
+msgid "\"I'm not able to update my browser\""
 msgstr ""
 
 #: update.php:90
