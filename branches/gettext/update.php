@@ -45,23 +45,23 @@ include("header.php");
 	<div class="left">
 
 		<div class="message">
-			<p><?php echo T_('The Browser you are using is out of date. It has known <b>security-flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites.'); ?> </p>
+			<p><?php echo T_('The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites.'); ?> </p>
 		</div>
 
 		<div>
-			<p><?php echo T_('Switching to a newer Browser could give you a lot of advantages:'); ?></p>
+			<p><?php echo T_('Switching to a newer browser could give you a lot of advantages:'); ?></p>
 			<ul class="advantages">
 				<li class="security">
 					<h3><?php echo T_('Security'); ?></h3>
-					<div><?php echo T_('Newer Browsers protect you better against scams, viruses, trojans, fishing and other treats. They also fix security holes in your current browser!'); ?></div> 
+					<div><?php echo T_('Newer browsers protect you better against scams, viruses, trojans, phishing and other treats. They also fix security holes in your current browser!'); ?></div>
 				</li>
 				<li class="speed">
 					<h3><?php echo T_('Speed'); ?></h3>
-					<div><?php echo T_('Every new Browser Generation improves speed'); ?></div>
+					<div><?php echo T_('Every new browser generation improves speed'); ?></div>
 				</li>
 				<li class="compatibility">
 					<h3><?php echo T_('Compatibility'); ?></h3>
-					<div><?php echo T_('Websites will be displayed more correctly in the future'); ?></div>
+					<div><?php echo T_('Websites using new technoligy will be displayed more correctly'); ?></div>
 				</li>
 				<li class="comfort">
 					<h3><?php echo T_('Comfort &amp; better experience'); ?></h3>
@@ -70,7 +70,7 @@ include("header.php");
 			</ul>
 		</div>
 		
-		<p><?php echo T_('Updating just costs about 5 Minutes and will be totally free.'); ?></p>
+		<p><?php echo T_('Updating is easy, takes just a few minutes and is totally free.'); ?></p>
 	
 		<p><?php echo T_('If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it.'); ?></p>
 
@@ -81,12 +81,12 @@ include("header.php");
 				<?php echo T_('This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors.'); ?>
 			</p>
 			<p>
-				<?php echo T_('Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement oft the web</b> because of their limited features and many <b>bugs</b>.'); ?>
+				<?php echo T_('Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>.'); ?>
 			</p>
 		</div>
 
 
-		<h2><?php echo T_('"I\'m not able to update my Browser"'); ?></h2>
+		<h2><?php echo T_('"I\'m not able to update my browser"'); ?></h2>
 		<p><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility.'); ?></p>
 	</div>
 

@@ -587,12 +587,11 @@ msgid "Windows built-in browser"
 msgstr "Windows-Standardbrowser"
 
 #: update.php:68
-#, fuzzy
 msgid "With new features, extensions and better customisability, you will "
 "have a more comfortable web-experience"
-msgstr "Mit neuen Funktionen, Erweiterungen und besserer Anpassbarkeit "
-"aktueller Browser werden Sie schneller und einfacher im Internet "
-"surfen können."
+msgstr "Mit neuen Funktionen, Erweiterungen und besserer Anpassbarkeit werden "
+"Sie schneller und einfacher im Internet surfen "
+"können."
 
 #: index.php:75
 msgid "You can customize the browsers and versions to notifiy.<br/> In "
