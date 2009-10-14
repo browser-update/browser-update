@@ -11,22 +11,22 @@ include("header.php");
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3</a></h3>
+					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.5</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="op">
-					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 9.6</a></h3>
+					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 10</a></h3>
 					<div><?php echo T_('Browser with many features'); ?></div>
 					<a href="http://www.opera.com/" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="sa">
-					<h3><a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">Safari 3.2</a></h3>
+					<h3><a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">Safari 4</a></h3>
 					<div><?php echo T_('Apple\'s fast browser'); ?></div>
 					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 1.0</a></h3>
+					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 3.0</a></h3>
 					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
 					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>

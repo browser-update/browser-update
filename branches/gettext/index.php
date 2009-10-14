@@ -192,10 +192,12 @@ window.onload=function(){
 				<h3><?php echo T_('Security and benefits for the user'); ?></h3>
 				<div><?php echo sprintf(T_('Numerous benefits: security, speed, features, ... Look at the <a href="%s">update page</a>. The security-threads of outdates browsers are listed in this <a href="%s">paper</a>.'), 'update.html', 'http://www.techzoom.net/publications/insecurity-iceberg/index.en'); ?></div>
 			</li>
-			<li>
+			<li>	
 				<h3><?php echo T_('The web has to evolve...'); ?></h3>
-				<div><?php echo T_('That works only if the browsers do also evolve.'); ?></div> 
-				<?php echo T_('The web has always developed further. The strong market share of a 6 years old webbrowser (called Internet Explorer 6) is new. If we take no action now, we will have to code websites like in 2001 even if it is 2012.'); ?>
+				<div>
+					<?php echo T_("But that's only possible if the browsers also evolve."); ?>
+					<?php echo T_('The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011.'); ?>
+				</div>
 			</li>
 			<li>
 				<h3><?php echo T_('Users don\'t oppose updating...'); ?></h3>
