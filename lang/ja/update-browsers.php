@@ -8,17 +8,17 @@
 					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">ダウンロード</a>
 				</li>
 				<li class="op">
-					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 9.6</a></h3>
+					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 10</a></h3>
 					<div>Viele integrierte Extrafunktionen</div>
 					<a href="http://www.opera.com/" onmousedown="countBrowser('o')">ダウンロード</a>
 				</li>
 				<li class="sa">
-					<h3><a href="http://www.apple.com/jp/safari/" onmousedown="countBrowser('s')">Safari 3.2</a></h3>
+					<h3><a href="http://www.apple.com/jp/safari/" onmousedown="countBrowser('s')">Safari 4</a></h3>
 					<div>Apple社製のブラウザー</div>
 					<a href="http://www.apple.com/jp/safari/" onmousedown="countBrowser('s')">ダウンロード</a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome?hl=ja" onmousedown="countBrowser('c')">Google　Chrome 1.0</a></h3>
+					<h3><a href="http://www.google.com/chrome?hl=ja" onmousedown="countBrowser('c')">Google　Chrome 3.0</a></h3>
 					<div>コンパクトサーフェイスブラウザー Google製</div>
 					<a href="http://www.google.com/chrome?hl=ja" onmousedown="countBrowser('c')">ダウンロード</a>
 				</li>

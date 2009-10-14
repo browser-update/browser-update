@@ -1,3 +1,11 @@
 Backup:
 
 INSERT INTO views_backup (referer) SELECT DISTINCT referer FROM views
+
+
+
+SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( * ) AS num
+FROM views
+GROUP BY m
+ORDER BY m DESC
+LIMIT 0 , 30
