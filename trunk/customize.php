@@ -5,33 +5,33 @@ include("header.php");
 ?>
 
 <div class="left">
-<h2 class="top"><?php echo t('Customize and test'); ?></h2>
+<h2 class="top"><?php echo T_('Customize and test'); ?></h2>
 
 
-<h3>Test the script</h3>
+<h3><?php echo T_('Test the script'); ?></h3>
 
 <p>
-    If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up.
-    Example: <code>http://browser-update.org/#test-bu</code>.
-    Make sure the page is properly reloaded by opening the url in an new browser tab.
+    <?php echo T_('If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up.'); ?>
+    <?php echo T_('Example: <code>http://browser-update.org/#test-bu</code>.'); ?>
+    <?php echo T_('Make sure the page is properly reloaded by opening the url in an new browser tab.'); ?>
 </p>
 
-<h3>Options</h3>
+<h3><?php echo T_('Options'); ?></h3>
 
 <p>
-    The following options can be passed to the script:
+    <?php echo T_('The following options can be passed to the script:'); ?>
 </p>
 
 <pre>
 var $buoop = {
-    vs: {i:6,f:2,o:9.63,s:2,n:10},  // browser versions to notify
-    reminder: 24,                   // afer how many hours should the message reappear.
-                                    // 0 = show all the time
-    onshow: function(infos){},      // callback function after the bar has appeared
+    vs: {i:6,f:2,o:9.63,s:2,n:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
+    reminder: 24,                   // <?php echo T_('afer how many hours should the message reappear') . "\n"; ?>
+                                    // <?php echo T_('0 = show all the time') . "\n"; ?>
+    onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
 
-    l: false,                       // set a language for the message, e.g. "en"
-                                    // overrides the default detection
-    test: false                     // true = always show the bar (for tesing)
+    l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
+                                    // <?php echo T_('overrides the default detection') . "\n"; ?>
+    test: false                     // <?php echo T_('true = always show the bar (for tesing)') . "\n"; ?>
 }
 </pre>
 <!--
@@ -55,12 +55,11 @@ var $buoop = {
 </tbody>
 </table>
 -->
-<h3>Edit the CSS</h3>
+<h3><?php echo T_('Edit the CSS'); ?></h3>
 
 <p>
-    The following CSS rules are applied by the script.
-    You can overwrite them in your own CSS.
-    To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>
+    <?php echo T_('The following CSS rules are applied by the script. '); ?>
+    <?php echo T_('You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>'); ?>
 </p>
 
 <pre>
