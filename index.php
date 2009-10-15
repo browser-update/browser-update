@@ -32,9 +32,14 @@ include("header.php");
                 <?php echo T_('Visitors with out-dated browser will be informed by a little, ' . 
 					'undisturbing bar, that his browser is not up-to-date and it ' . 
 					'is recommended to update.'); ?>
-                (<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
-                <a href="#" onclick="$bu=new $buo({},true);"><img src="/img/bar-small.png" alt="" style="padding-top:6px;"/></a>
-                <!--, to see all the features of this website.--></div></li>
+				(<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
+				<div class="example">
+					<?php echo T_('Your browser (Internet Explorer 6) is <strong>out of date</strong>.' .
+					'It has known <strong>security flaws</strong> and may <strong>not' .
+					'display all features</strong> of this and other websites.' .
+					'<a%s>Learn how to update your browser</a>',' href="#" onclick="$bu=new $buo({},true);"');?>
+				</div>
+			</div></li>
 			<li><div>
                 <?php echo sprintf(T_('By clicking the bar, he will get to <a href="%s">an info page ' . 
 					'with arguments why to change/update and some browser choices</a>.'), 'update.php'); ?>
@@ -77,7 +82,7 @@ include("header.php");
 				'the frequency of the bar to appear and many other things.'); ?>
 			</li>
 			<li>
-				<h3><?php echo T_('Localized'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
+				<h3><?php echo T_('Localized'); ?></h3>
 				<?php echo T_('The message is automatically displayed in the user\'s language.'); ?>
 			</li>
 			<li>
