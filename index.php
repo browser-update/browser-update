@@ -34,10 +34,10 @@ include("header.php");
 					'is recommended to update.'); ?>
 				(<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
 				<div class="example">
-					<?php echo T_('Your browser (Internet Explorer 6) is <strong>out of date</strong>.' .
-					'It has known <strong>security flaws</strong> and may <strong>not' .
-					'display all features</strong> of this and other websites.' .
-					'<a%s>Learn how to update your browser</a>',' href="#" onclick="$bu=new $buo({},true);"');?>
+					<?php echo sprintf(T_('Your browser (Internet Explorer 6) is <strong>out of date</strong>. ' .
+					'It has known <strong>security flaws</strong> and may <strong>not ' .
+					'display all features</strong> of this and other websites. ' .
+					'<a%s>Learn how to update your browser</a>'),' href="#" onclick="$bu=new $buo({},true);"');?>
 				</div>
 			</div></li>
 			<li><div>
