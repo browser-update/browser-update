@@ -4,6 +4,12 @@ require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'init.php'); // just to b
 require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'gettext.inc');
 define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
 
+$lang_rewrite = array(
+	"de"=>"de_DE",
+	"en"=>"en_GB",
+	"ja"=>"ja_JP"
+);
+
 /**
  * Normalizes the language-string
  *
@@ -92,9 +98,25 @@ function log_lang()
 }
 
 /* Init i18n */
-T_setlocale(LC_MESSAGES, request_lang());
+$detected_lang=request_lang();
+
+if (isset($lang_rewrite[$detected_lang]))
+	$detected_lang=$lang_rewrite[$detected_lang];
+
+T_setlocale(LC_MESSAGES, $detected_lang);
 T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 T_bind_textdomain_codeset('browser-update', 'UTF8');
 T_textdomain('browser-update');
+
+
+
+//var_dump($CURRENTLOCALE);
+//var_dump($EMULATEGETTEXT);
+//var_dump(request_lang());
+//var_dump(setlocale(LC_ALL, 'de_DE'));
+//$EMULATEGETTEXT=0;
+//var_dump(setlocale(LC_MESSAGES, 'deutsch'));
+
+
 
 ?>
