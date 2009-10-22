@@ -32,12 +32,12 @@ var $buoop = {
     l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
                                     // <?php echo T_('overrides the default detection') . "\n"; ?>
     test: false                     // <?php echo T_('true = always show the bar (for tesing)') . "\n"; ?>
+	text: ""                        // <?php echo T_(' custom notification html text') . "\n"; ?>
 }
 </pre>
 <!--
     url: "http://browser-update.org/update.php",   // url to redirect to
-    pageurl: ""                          // url to show in the las
-    text: ""                            // custom notification html text
+    pageurl: ""                          // url to show in the las    
 -->
 <!--
 <p>
