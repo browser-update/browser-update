@@ -38,10 +38,16 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<li class="r"><a href="stat.html"><?php echo T_('Statistics'); ?></a></li>
 	<li class="r"><a href="/blog/"><?php echo T_('Blog'); ?></a></li>
 </ul>
+
+<?php
+//preg_match ("#[^?]#", string subject [, array matches [, int flags]])
+$parts = Explode('/', $_SERVER["REQUEST_URI"]);
+$curfile = end($parts);
+?>
 <div id="lang">
-    <a href="/en/">english</a>
-    <a href="/de/">deutsch</a>
-    <a href="/ja/">japanese</a>
+    <a href="/en/<?echo $curfile?>">english</a>
+    <a href="/de/<?echo $curfile?>">deutsch</a>
+    <a href="/ja/<?echo $curfile?>">japanese</a>
     <a href="contact.html"><?php echo T_('translate...'); ?></a>
 </div>
 <div id="bookmark">
