@@ -18,8 +18,9 @@ this.op.reminder=op.reminder||24;
 this.op.onshow = op.onshow||function(o){};
 this.op.url= op.url||"http://browser-update.org/update.html";
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
-this.op.test=test;
+this.op.newwindow=op.newwindow||false;
 
+this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
 
@@ -107,7 +108,12 @@ catch(e) {
     }
 }
 var me=this;
-div.onclick=function(){window.location.href=me.op.url;};
+div.onclick=function(){
+    if (me.op.newwindow)
+        window.open(me.op.url,"_blank");
+    else
+        window.location.href=me.op.url;
+};
 this.op.bodymt = document.body.style.marginTop;
 document.body.style.marginTop = (div.clientHeight)+"px";
 document.getElementById("buorgclose").onclick = function(e) {
