@@ -32,7 +32,8 @@ var $buoop = {
     l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
                                     // <?php echo T_('overrides the default detection') . "\n"; ?>
     test: false                     // <?php echo T_('true = always show the bar (for tesing)') . "\n"; ?>
-	text: ""                        // <?php echo T_(' custom notification html text') . "\n"; ?>
+    text: ""                        // <?php echo T_('custom notification html text') . "\n"; ?>
+    newwindow: false                // <?php echo T_('open link in new window/tab') . "\n"; ?>
 }
 </pre>
 <!--

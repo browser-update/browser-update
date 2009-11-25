@@ -106,11 +106,13 @@ include("header.php");
 				'http://fileserver.julianbrinke.de/WP/',
 				'http://typolight.org/erweiterungsliste/view/browser_update.html'); ?>
 		</p>
-		<!--
 		<p>
-			<?php echo T_('You can customize the message or leave the defaults (recommended).'); ?>
+			<?php echo sprintf(
+					T_('You can <a href="%s">customize</a> the style of the message, the text and other options.'),
+					'customize.html'
+					);
+			?>
 		</p>
-		-->
 		<div class="generate">
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
