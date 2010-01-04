@@ -6,13 +6,12 @@ An introduction on how to translate browser-update.org
 
 Browser-update.org can be translated using [http://en.wikipedia.org/wiki/Gettext gettext] tools.
 
-The central template file is written in english and can be found at http://code.google.com/p/browser-update/source/browse/trunk/lang/template.pot
+The central template file is written in english and can be found [http://code.google.com/p/browser-update/source/browse/trunk/lang/template.pot here].
 
-To translate the template in your language, you need a .po file editor, like [http://www.poedit.net/ Poedit] or [http://gorm.po.dk/ Gorm]
+To translate the template in your language, you need to load it in a .po file editor, like [http://www.poedit.net/ Poedit] or [http://gorm.po.dk/ Gorm]
 
 
 After you've created the .po file for your language, just send it to one of the [http://code.google.com/p/browser-update/people/list project owners].
 
 
-.po files fpr already started translations can be found at
-http://code.google.com/p/browser-update/source/browse/#svn/trunk/lang
+The .po files for already started translations can be found [http://code.google.com/p/browser-update/source/browse/#svn/trunk/lang here].
