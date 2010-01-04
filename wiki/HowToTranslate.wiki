@@ -1,17 +1,16 @@
 #labels Featured
-#An introduction on how to translate browser-update.org
-
-= Introduction =
-
-Translating is very easy
+An introduction on how to translate browser-update.org
 
 
-= Files =
+Browser-update.org can be translated using [http://en.wikipedia.org/wiki/Gettext gettext] tools.
 
-Under /lang/ are directories for the different languages.
+The central template file can be found at http://code.google.com/p/browser-update/source/browse/trunk/lang/template.pot
 
-Files to be translated (in order of importance):
-  * update-*.php files
-  * update.js: notifiation text
-  * strings.php
-  * index-*.php files
+To translate the template in your language, you need a .po file editor, like [http://www.poedit.net/ Poedit] or [http://gorm.po.dk/ Gorm]
+
+
+After you've created the .po file for your language, just send it to one of the [http://code.google.com/p/browser-update/people/list project owners].
+
+
+Already translated languages can be found here:
+http://code.google.com/p/browser-update/source/browse/#svn/trunk/lang
