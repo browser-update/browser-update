@@ -2,6 +2,8 @@
 An introduction on how to translate browser-update.org
 
 
+
+
 Browser-update.org can be translated using [http://en.wikipedia.org/wiki/Gettext gettext] tools.
 
 The central template file can be found at http://code.google.com/p/browser-update/source/browse/trunk/lang/template.pot
