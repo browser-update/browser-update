@@ -61,7 +61,7 @@ include("header.php");
 				</li>
 				<li class="compatibility">
 					<h3><?php echo T_('Compatibility'); ?></h3>
-					<div><?php echo T_('Websites using new technoligy will be displayed more correctly'); ?></div>
+					<div><?php echo T_('Websites using new technology will be displayed more correctly'); ?></div>
 				</li>
 				<li class="comfort">
 					<h3><?php echo T_('Comfort &amp; better experience'); ?></h3>

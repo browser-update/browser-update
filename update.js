@@ -65,15 +65,17 @@ var ll=this.op.l.substr(0,2);
 var languages = "de,en";
 if (languages.indexOf(ll)!==false)
     this.op.url="http://browser-update.org/"+ll+"/update.html";
-
+var tar="";
+if (this.op.newwindow)
+    tar=' target="_blank"';
 if (ll=="de")
     this.op.text = 'Sie verwenden einen <b>veralteten Browser</b> ('+this.op.browser.t+') \
         mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle \
         Funktionen dieser Webseite nutzen</b>. \
-        <a href="'+this.op.url+'">Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
+        <a href="'+this.op.url+'"'+tar+'>Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
 else
     this.op.text = 'Your browser ('+this.op.browser.t+') is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. \
-         <a href="'+this.op.url+'">Learn how to update your browser</a>';
+         <a href="'+this.op.url+'"'+tar+'>Learn how to update your browser</a>';
 
 
 var div = document.createElement("div");
@@ -84,7 +86,7 @@ div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose">X</div></div>';
 
 var sheet = document.createElement("style");
 //sheet.setAttribute("type", "text/css");
-var style = ".buorg {position:absolute; \
+var style = ".buorg {position:absolute;z-index:111111;\
 width:100%; top:0px; left:0px; \
 border-bottom:1px solid #A29330; \
 background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);\
@@ -93,7 +95,7 @@ font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
 .buorg div { padding:5px 36px 5px 40px; } \
 .buorg a {color:#E25600; text-decoration: underline;}\
 #buorgclose { position: absolute; right: .5em; top:.2em; height: 20px; width: 12px; font-weight: bold;font-size:14px; padding:0; }";
-document.body.appendChild(div);
+document.body.insertBefore(div,document.body.firstChild);
 document.getElementsByTagName("head")[0].appendChild(sheet);
 try {
     sheet.innerText=style;
@@ -113,7 +115,15 @@ div.onclick=function(){
         window.open(me.op.url,"_blank");
     else
         window.location.href=me.op.url;
+    return false;
 };
+div.getElementsByTagName("a")[0].onclick = function(e) {
+    var e = e || window.event;
+    if (e.stopPropagation) e.stopPropagation();
+    else e.cancelBubble = true;
+    return true;
+}
+
 this.op.bodymt = document.body.style.marginTop;
 document.body.style.marginTop = (div.clientHeight)+"px";
 document.getElementById("buorgclose").onclick = function(e) {

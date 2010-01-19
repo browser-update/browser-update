@@ -42,7 +42,7 @@ include("header.php");
 			</div></li>
 			<li><div>
                 <?php echo sprintf(T_('By clicking the bar, he will get to <a href="%s">an info page ' . 
-					'with arguments why to change/update and some browser choices</a>.'), 'update.php'); ?>
+					'with arguments why to change/update and some browser choices</a>.'), 'update.html'); ?>
             </div></li>
             <li><div>
                 <?php echo T_('If the visitor ignores the advice, it won\'t appear again for some time.'); ?>
@@ -136,10 +136,10 @@ include("header.php");
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-				<option value="8">&lt;= 8.0</option>
 				<option value="9">&lt;= 9.0</option>
 				<option value="9.25">&lt;= 9.25</option>
-                <option value="9.64" selected="selected">&lt;= 9.64</option>
+                <option value="9.63" selected="selected">&lt;= 9.63</option>
+				<option value="10.01">&lt;= 10.01</option>
 			</select>
 		</span>
 		<span class="browser">
