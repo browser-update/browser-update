@@ -3,7 +3,6 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 
-echo ' --> ' . request_lang();
 ?>
 
    
