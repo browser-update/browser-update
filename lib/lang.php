@@ -7,7 +7,11 @@ define('BU_LANG_PATH', BU_PATH . 'lang' . DIRECTORY_SEPARATOR);
 $lang_rewrite = array(
 	"de"=>"de_DE",
 	"en"=>"en_GB",
-	"ja"=>"ja_JP"
+	"ja"=>"ja_JP",
+	"es"=>"es_ES",
+	"pl"=>"pl_PL",
+	"nl"=>"nl_NL",
+	"it"=>"it_IT"
 );
 
 /**
@@ -50,7 +54,7 @@ function lang_normalize($lang)
  */
 function request_lang()
 {
-	global $default_lang;
+	global $default_lang, $lang_rewrite;
 	static $request_lang = null;
 	if (!is_null($request_lang)) return $request_lang;
 	$lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -67,6 +71,15 @@ function request_lang()
 			$request_lang = $ll;
 			return $request_lang;
 		}
+		if (isset($lang_rewrite[$ll]))
+		{
+			$ll = $lang_rewrite[$ll];
+			if (file_exists(BU_LANG_PATH . $ll) && $ll!="")
+			{
+				$request_lang = $ll;
+				return $request_lang;
+			}
+		}
 	}
 	// Second try, use only the first two chars
 	foreach ($lang as $ll)
@@ -77,6 +90,15 @@ function request_lang()
 		{
 			$request_lang = $ll;
 			return $request_lang;
+		}
+		if (isset($lang_rewrite[$ll]))
+		{
+			$ll = $lang_rewrite[$ll];
+			if (file_exists(BU_LANG_PATH . $ll) && $ll!="")
+			{
+				$request_lang = $ll;
+				return $request_lang;
+			}
 		}
 	}
 	$request_lang = $default_lang;
@@ -98,17 +120,16 @@ function log_lang()
 }
 
 /* Init i18n */
-$detected_lang=request_lang();
+$detected_lang = request_lang();
 
-if (isset($lang_rewrite[$detected_lang]))
-	$detected_lang=$lang_rewrite[$detected_lang];
+// moved into request_lang()
+//if (isset($lang_rewrite[$detected_lang]))
+//	$detected_lang=$lang_rewrite[$detected_lang];
 
 T_setlocale(LC_MESSAGES, $detected_lang);
 T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 T_bind_textdomain_codeset('browser-update', 'UTF8');
 T_textdomain('browser-update');
-
-
 
 //var_dump($CURRENTLOCALE);
 //var_dump($EMULATEGETTEXT);
