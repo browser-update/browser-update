@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-11 13:42+0100\n"
-"PO-Revision-Date: 2010-03-11 14:29+0100\n"
+"PO-Revision-Date: 2010-03-11 15:17+0100\n"
 "Last-Translator: Thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: Spanish\n"
 
 #: config.sample.php:5
@@ -178,7 +178,7 @@ msgstr ""
 #: index.php:45
 #, php-format
 msgid "By clicking the bar, he will get to <a href=\"%s\">an info page with arguments why to change/update and some browser choices</a>."
-msgstr "Al hacer clic en la barra, ser&#225; enviado a <a href=\"%s\"> una p&#225;gina informativa con argumentos de porqu&#233; debe cambiar/actualizar y algunas opciones de navegadores"
+msgstr "Al hacer clic en la barra, ser&#225; enviado a <a href=\"%s\"> una p&#225;gina informativa </a>con argumentos de porqu&#233; debe cambiar/actualizar y algunas opciones de navegadores"
 
 #: index.php:49
 msgid "If the visitor ignores the advice, it won't appear again for some time."
