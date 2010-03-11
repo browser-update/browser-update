@@ -7,8 +7,8 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:8,f:3.5,o:9.64,s:4,n:10};
-this.op.vsdefault = {i:6,f:2,o:9.63,s:3,n:10};
+this.op.vsakt = {i:8,f:3.6,o:10.1,s:4,n:10};
+this.op.vsdefault = {i:6,f:2,o:9.64,s:3,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])

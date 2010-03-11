@@ -7,54 +7,45 @@ include("header.php");
 <div class="left">
 <h2 class="top"><?php echo T_('Contact'); ?></h2>
 
-<!-- TODO: Translate! -->
 <p>
-    Über aktuelle Ereignisse informieren wir in unserem <a href="/blog/">Blog</a>.
+    Updates on the project can be found in our <a href="/blog/">blog</a>.
 </p>
-<h2>Mithelfen</h2>
+<h2>Help Us</h2><!--Mithelfen-->
 <p>
-    Wir freuen uns über jeden Entwickler, der diese Chance ergreifen will
-    um aktiv seine Vorschläge an Browser-Update.org einzubringen.
-    Dazu haben wir ein <a href="http://code.google.com/p/browser-update/">Google-Code-Projekt</a>
-    gestartet. Hier sammeln wir <a href="http://code.google.com/p/browser-update/issues/list">Ideen und Fehlerberichte</a>,
-    die Seite kann übersetzt werden und der Code verbessert.
+	We are happy about every coder or translator that helps us with code, translations or ideas.
+    We have a <a href="http://code.google.com/p/browser-update/">google-code project page</a>
+	There we collect <a href="http://code.google.com/p/browser-update/issues/list">ideas and bugs</a> and the
+	page can be translated and improved.
 </p>
 <p>
-    Wir benötigen noch Programmierer und Übersetzer.
-    Interessierte können einfach eine Email schreiben
-    (siehe Emailadressen weiter unten)
-    und wir fügen sie dann zum Projekt hinzu.
+	If you are interesed in helping, just write us an email (see below) and we will add you to the project.
 </p>
 
 <h2>Team</h2>
 <p>
-	Wir sind ein Team aus Webdesignern, Webmastern und Open-Web-Enthusiasten. Wir freuen uns jederzeit über Verstärkung.
+	We are a team of webdesigners, webmasters and open-web enthusiasts. Join us.
 </p>
 
-<div class="developer">
-<h4>Thomas Hümmer (Projektinitiator)</h4>
-<p>
-    jossele <var>æ</var> gmx.de<br/>
-    <a href="http://webmasterpro.de">Webmasterpro.de</a>,
-    <a href="http://fc.webmasterpro.de">FlashCounter Webseitenstatistiken</a>,
-    <a href="http://webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
-    <a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>
-</p>
-</div>
+<ul>
+	<li>
+		David Danier (Projektinitiator): david.danier <var>æ</var> team23.de<br/>
+		<a href="http://webmasterpro.de">Webmasterpro.de</a>,
+		<a href="http://serverstats.berlios.de">Serverstats</a>
+	</li>
+	<li>
+		Thomas Hümmer (Projektinitiator):  jossele <var>æ</var> gmx.de<br/>
+		<a href="http://webmasterpro.de">Webmasterpro.de</a>,
+		<a href="http://fc.webmasterpro.de">FlashCounter Webseitenstatistiken</a>,
+		<a href="http://webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
+		<a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>
+	</li>
+	<li>Tomasz Olędzki (polish translation)</li>
+	<li>Giacomo (Italian translation)</li>
+	<li>Patrick Wever (dutch translation)</li>
+	<li>Francisco Chacón (spanish translation)</li>
+	<li>Rob Schneider (japanese translation)</li>
+</ul>
 
-<div class="developer">
-<h4>David Danier (Projektinitiator)</h4>
-<p>
-    david.danier <var>æ</var> team23.de<br/>
-    <a href="http://webmasterpro.de">Webmasterpro.de</a>,
-    <a href="http://serverstats.berlios.de">Serverstats</a>
-</p>
-</div>
-
-
-<p class="clear">
-
-</p>
 
 <h2>Initiator</h2>
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 19:20+0200\n"
+"POT-Creation-Date: 2010-03-11 13:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,8 +25,90 @@ msgstr ""
 msgid "database not found"
 msgstr ""
 
-#: contact.php:8 header.php:35 test.php:5
+#: contact.php:8 header.php:35
 msgid "Contact"
+msgstr ""
+
+#: customize.php:8
+msgid "Customize and test"
+msgstr ""
+
+#: customize.php:11
+msgid "Test the script"
+msgstr ""
+
+#: customize.php:14
+msgid ""
+"If you open your website with <code>#test-bu</code> appended to the url, the "
+"bar will always show up."
+msgstr ""
+
+#: customize.php:15
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr ""
+
+#: customize.php:16
+msgid ""
+"Make sure the page is properly reloaded by opening the url in an new browser "
+"tab."
+msgstr ""
+
+#: customize.php:19
+msgid "Options"
+msgstr ""
+
+#: customize.php:22
+msgid "The following options can be passed to the script:"
+msgstr ""
+
+#: customize.php:27
+msgid "browser versions to notify"
+msgstr ""
+
+#: customize.php:28
+msgid "afer how many hours should the message reappear"
+msgstr ""
+
+#: customize.php:29
+msgid "0 = show all the time"
+msgstr ""
+
+#: customize.php:30
+msgid "callback function after the bar has appeared"
+msgstr ""
+
+#: customize.php:32
+msgid "set a language for the message, e.g. \"en\""
+msgstr ""
+
+#: customize.php:33
+msgid "overrides the default detection"
+msgstr ""
+
+#: customize.php:34
+msgid "true = always show the bar (for tesing)"
+msgstr ""
+
+#: customize.php:35
+msgid "custom notification html text"
+msgstr ""
+
+#: customize.php:36
+msgid "open link in new window/tab"
+msgstr ""
+
+#: customize.php:59
+msgid "Edit the CSS"
+msgstr ""
+
+#: customize.php:62
+msgid "The following CSS rules are applied by the script. "
+msgstr ""
+
+#: customize.php:63
+msgid ""
+"You can overwrite them in your own CSS. To do so you need to add some more "
+"specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
 
 #: header.php:7 header.php:30
@@ -53,7 +135,7 @@ msgstr ""
 msgid "Supporters"
 msgstr ""
 
-#: header.php:38 index.php:84 stat.php:9
+#: header.php:38 index.php:90 stat.php:9
 msgid "Statistics"
 msgstr ""
 
@@ -61,142 +143,150 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: header.php:45
+#: header.php:52
 msgid "translate..."
 msgstr ""
 
-#: index.php:12
+#: index.php:13
 msgid ""
 "This service is an  opportunity to inform your visitors  unobtrusively to "
 "switch to a newer browser."
 msgstr ""
 
-#: index.php:16
+#: index.php:17
 msgid ""
 "Many internet users are still using very old, out-dated browsers – most of "
 "them for no actual reason. Switching to an newer browser is better for them "
 "and for you as a webdesigner."
 msgstr ""
 
-#: index.php:25
+#: index.php:26
 msgid "How it works"
 msgstr ""
 
-#: index.php:29
+#: index.php:30
 #, php-format
 msgid ""
 "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr ""
 
-#: index.php:32
+#: index.php:33
 msgid ""
 "Visitors with out-dated browser will be informed by a little, undisturbing "
 "bar, that his browser is not up-to-date and it is recommended to update."
 msgstr ""
 
-#: index.php:35
+#: index.php:36
 msgid "Test the notification bar!"
 msgstr ""
 
-#: index.php:39
+#: index.php:38
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a%"
+"s>Learn how to update your browser</a>"
+msgstr ""
+
+#: index.php:45
 #, php-format
 msgid ""
 "By clicking the bar, he will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
 
-#: index.php:43
+#: index.php:49
 msgid "If the visitor ignores the advice, it won't appear again for some time."
 msgstr ""
 
-#: index.php:46
+#: index.php:52
 msgid "Advantages and features"
 msgstr ""
 
-#: index.php:49
+#: index.php:55
 msgid "Subtle"
 msgstr ""
 
-#: index.php:50
+#: index.php:56
 msgid ""
 "The user will be notified only once, and won't be bothered any more. The "
 "notification bar is very small and won't affect the browsing experience "
 "negatively."
 msgstr ""
 
-#: index.php:54
+#: index.php:60
 msgid "Informative"
 msgstr ""
 
-#: index.php:55
+#: index.php:61
 msgid ""
 "Tell the users that they are using an out-dated browser and that your "
 "website looks even better with a newer one."
 msgstr ""
 
-#: index.php:59
+#: index.php:65
 msgid "Idealistic"
 msgstr ""
 
-#: index.php:60
+#: index.php:66
 msgid "Help evolve the web!"
 msgstr ""
 
-#: index.php:61
+#: index.php:67
 msgid "Support the standards-based web!"
 msgstr ""
 
-#: index.php:62
+#: index.php:68
 msgid "Support Open Source software projects!"
 msgstr ""
 
-#: index.php:63
+#: index.php:69
 msgid "Help your visitors!"
 msgstr ""
 
-#: index.php:64
+#: index.php:70
 msgid "Help increase security awareness!"
 msgstr ""
 
-#: index.php:65
+#: index.php:71
 msgid "Support your favorite webbrowser!"
 msgstr ""
 
-#: index.php:68
+#: index.php:74
 msgid "Low maintenance and up-to-date"
 msgstr ""
 
-#: index.php:69
+#: index.php:75
 msgid ""
 "If there come more browser versions which won't be supported by the vendor "
 "in the future, exhibit security gaps or have been very old for a long time "
 "we are going to add them to our list automatically."
 msgstr ""
 
-#: index.php:74
+#: index.php:80
 msgid "Customizable"
 msgstr ""
 
-#: index.php:74 index.php:80 index.php:84
+#: index.php:80 index.php:90
 msgid "<span class=\"workingonit\">work in progress</span>"
 msgstr ""
 
-#: index.php:75
+#: index.php:81
 msgid ""
 "You can customize the browsers and versions to notifiy.<br/> In future "
 "releases you can also customize the text that should be shown, the frequency "
 "of the bar to appear and many other things."
 msgstr ""
 
-#: index.php:80
+#: index.php:86
 msgid "Localized"
 msgstr ""
 
-#: index.php:81
+#: index.php:87
 msgid "The message is automatically displayed in the user's language."
 msgstr ""
 
-#: index.php:85
+#: index.php:91
 #, php-format
 msgid ""
 "You get <a href=\"%s\">statistics</a> about which browsers your visitors are "
@@ -204,82 +294,85 @@ msgid ""
 "their browser through your advice."
 msgstr ""
 
-#: index.php:91
+#: index.php:97
 msgid "Install notification on your site"
 msgstr ""
 
-#: index.php:93
+#: index.php:99
 msgid ""
 "Here you can get the code to include in your website. Just include it "
 "anywhere in the source of your page."
 msgstr ""
 
-#: index.php:97
+#: index.php:103
 #, php-format
 msgid ""
 "You may also use third-party plugins for <a href=\"%s\">WordPress</a> "
 "(german) or <a href=\"%s\">TYPOlight</a> (german)."
 msgstr ""
 
-#: index.php:106
-msgid "You can customize the message or leave the defaults (recommended)."
+#: index.php:112
+#, php-format
+msgid ""
+"You can <a href=\"%s\">customize</a> the style of the message, the text and "
+"other options."
 msgstr ""
 
-#: index.php:110
+#: index.php:118
 msgid "Following browsers will be notified:"
 msgstr ""
 
-#: index.php:150
+#: index.php:157
 msgid ""
 "Google Chrome will automatically itself and is therefor always up to date"
 msgstr ""
 
-#: index.php:156
+#: index.php:163
 msgid ""
 "<b>Notify recommended set of browsers and adjust it automatically over time:"
 "</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
 
-#: index.php:161
+#: index.php:168
 msgid "Your Code"
 msgstr ""
 
-#: index.php:179
+#: index.php:186
 msgid "Why you should tell users to update"
 msgstr ""
 
-#: index.php:182
+#: index.php:189
 msgid "Reduced development costs and time"
 msgstr ""
 
-#: index.php:183
+#: index.php:190
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
 msgstr ""
 
-#: index.php:186
+#: index.php:193
 msgid "Webdesign technologies and features"
 msgstr ""
 
-#: index.php:187
+#: index.php:194
 msgid ""
 "There are all these great new webdevlopment standards and they are supported "
 "by modern browsers... but you may not use them."
 msgstr ""
 
-#: index.php:189
+#: index.php:196
 msgid ""
 "Newer browsers let you use more features and new technologies (CSS3, SVG, "
 "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
 "resulting in a better browsing experience for your users."
 msgstr ""
 
-#: index.php:192
+#: index.php:199
 msgid "Security and benefits for the user"
 msgstr ""
 
-#: index.php:193
+#: index.php:200
 #, php-format
 msgid ""
 "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
@@ -287,58 +380,58 @@ msgid ""
 "this <a href=\"%s\">paper</a>."
 msgstr ""
 
-#: index.php:196
+#: index.php:203
 msgid "The web has to evolve..."
 msgstr ""
 
-#: index.php:198
+#: index.php:205
 msgid "But that's only possible if the browsers also evolve."
 msgstr ""
 
-#: index.php:199
+#: index.php:206
 msgid ""
 "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
 "something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
 
-#: index.php:203
+#: index.php:210
 msgid "Users don't oppose updating..."
 msgstr ""
 
-#: index.php:204
+#: index.php:211
 msgid ""
 "... they often just do not appreciate the ‚need to update or the existence "
 "of the \"webbrowser\" as a software at all."
 msgstr ""
 
-#: index.php:207
+#: index.php:214
 msgid "Help this project"
 msgstr ""
 
-#: index.php:210
+#: index.php:217
 msgid "Participate!"
 msgstr ""
 
-#: index.php:211
+#: index.php:218
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
 
-#: index.php:214
+#: index.php:221
 msgid "Spread the word!"
 msgstr ""
 
-#: index.php:215
+#: index.php:222
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
 
-#: index.php:218
+#: index.php:225
 msgid "Translate this page"
 msgstr ""
 
-#: index.php:219
+#: index.php:226
 msgid "Translate this page into your language."
 msgstr ""
 
@@ -479,7 +572,7 @@ msgid "Compatibility"
 msgstr ""
 
 #: update.php:64
-msgid "Websites using new technoligy will be displayed more correctly"
+msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 
 #: update.php:67
