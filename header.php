@@ -47,6 +47,10 @@ $curfile = end($parts);
 <div id="lang">
     <a href="/en/<?echo $curfile?>">english</a>
     <a href="/de/<?echo $curfile?>">deutsch</a>
+	<a href="/pl/<?echo $curfile?>">polski</a>
+	<a href="/nl/<?echo $curfile?>">nederlands</a>
+	<a href="/it/<?echo $curfile?>">italiano</a>
+	<a href="/es/<?echo $curfile?>">español</a>
     <a href="/ja/<?echo $curfile?>">japanese</a>
     <a href="contact.html"><?php echo T_('translate...'); ?></a>
 </div>

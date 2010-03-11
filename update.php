@@ -11,7 +11,7 @@ include("header.php");
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.5</a></h3>
+					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -26,7 +26,7 @@ include("header.php");
 					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 3.0</a></h3>
+					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 4</a></h3>
 					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
 					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -97,8 +97,8 @@ include("header.php");
 function countBrowser(to) {
 		var f=getBrowser();
 		//TODO: / davor
-        if ((f.n=="f" && f.v>=3.5) ||
-            (f.n=="o" && f.v>=9.64) ||
+        if ((f.n=="f" && f.v>=3.7) ||
+            (f.n=="o" && f.v>=10.2) ||
             (f.n=="s" && f.v>=4) ||
             (f.n=="i" && f.v>=8))
             return;

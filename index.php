@@ -35,10 +35,10 @@ include("header.php");
 					'is recommended to update.'); ?>
 				(<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
 				<div class="example">
-					<?php echo sprintf(T_('Your browser (Internet Explorer 6) is <strong>out of date</strong>. ' .
-					'It has known <strong>security flaws</strong> and may <strong>not ' .
-					'display all features</strong> of this and other websites. ' .
-					'<a%s>Learn how to update your browser</a>'),' href="#" onclick="$bu=new $buo({},true);"');?>
+					<?php echo sprintf(T_('Your browser (%s) is <b>out of date</b>. ' .
+					'It has known <b>security flaws</b> and may <b>not ' .
+					'display all features</b> of this and other websites. ' .
+					'<a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="#" onclick="$bu=new $buo({},true);"');?>
 				</div>
 			</div></li>
 			<li><div>
@@ -137,9 +137,8 @@ include("header.php");
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-				<option value="9">&lt;= 9.0</option>
-				<option value="9.25">&lt;= 9.25</option>
-                <option value="9.63" selected="selected">&lt;= 9.63</option>
+				<option value="9.0">&lt;= 9.0</option>
+                <option value="9.64" selected="selected">&lt;= 9.64</option>
 				<option value="10.01">&lt;= 10.01</option>
 			</select>
 		</span>
