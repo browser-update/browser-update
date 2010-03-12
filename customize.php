@@ -25,13 +25,13 @@ include("header.php");
 <pre>
 var $buoop = {
     vs: {i:6,f:2,o:9.63,s:2,n:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
-    reminder: 24,                   // <?php echo T_('afer how many hours should the message reappear') . "\n"; ?>
+    reminder: 24,                   // <?php echo T_('atfer how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
     onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
 
     l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
                                     // <?php echo T_('overrides the default detection') . "\n"; ?>
-    test: false                     // <?php echo T_('true = always show the bar (for tesing)') . "\n"; ?>
+    test: false                     // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
     text: ""                        // <?php echo T_('custom notification html text') . "\n"; ?>
     newwindow: false                // <?php echo T_('open link in new window/tab') . "\n"; ?>
 }
