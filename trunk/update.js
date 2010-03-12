@@ -68,15 +68,33 @@ if (languages.indexOf(ll)!==false)
 var tar="";
 if (this.op.newwindow)
     tar=' target="_blank"';
-if (ll=="de")
-    this.op.text = 'Sie verwenden einen <b>veralteten Browser</b> ('+this.op.browser.t+') \
-        mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle \
-        Funktionen dieser Webseite nutzen</b>. \
-        <a href="'+this.op.url+'"'+tar+'>Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
-else
-    this.op.text = 'Your browser ('+this.op.browser.t+') is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. \
-         <a href="'+this.op.url+'"'+tar+'>Learn how to update your browser</a>';
 
+function busprintf() {
+    var args=arguments;
+    var data = args[ 0 ];
+    for( var k=1; k<args.length; ++k ) {
+        data = data.replace( /%s/, args[ k ] );
+    }
+    return data;
+}
+
+var t = 'Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. \
+         <a%s>Learn how to update your browser</a>';
+if (ll=="de")
+    t = 'Sie verwenden einen <b>veralteten Browser</b> (%s) mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen</b>. \
+        <a%s>Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
+else if (ll=="it")
+    t = 'Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le \
+        pagine di questo e altri siti. \
+        <a%s>Aggiorna il tuo browser</a>!';
+else if (ll=="pl")
+    t = 'Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>.';
+else if (ll=="es")
+    t = 'Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallas de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>';
+else if (ll=="nl")
+    t = 'Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>';
+    
+this.op.text=busprintf(t,this.op.browser.t,' href="'+this.op.url+'"'+tar);
 
 var div = document.createElement("div");
 this.op.div = div;

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-11 13:42+0100\n"
-"PO-Revision-Date: 2010-03-11 14:17+0100\n"
+"PO-Revision-Date: 2010-03-12 11:43+0100\n"
 "Last-Translator: Thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,79 +32,79 @@ msgstr "Kontakt"
 
 #: customize.php:8
 msgid "Customize and test"
-msgstr ""
+msgstr "Dostosuj i przetestuj"
 
 #: customize.php:11
 msgid "Test the script"
-msgstr ""
+msgstr "Przetestuj skrypt"
 
 #: customize.php:14
 msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
-msgstr ""
+msgstr "Jeśli otworzysz swoją stronę z wyrażeniem <code>#test-bu</code> dołączonym do adresu URL, pasek z komunikatem będzie się zawsze pojawiał."
 
 #: customize.php:15
 msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-msgstr ""
+msgstr "Przykład: <code>http://browser-update.org/#test-bu</code>."
 
 #: customize.php:16
 msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
-msgstr ""
+msgstr "Upewnij się, że strona jest prawidłowo ponownie załadowana otwierając ją w nowej karcie przeglądarki."
 
 #: customize.php:19
 msgid "Options"
-msgstr ""
+msgstr "Ustawienia"
 
 #: customize.php:22
 msgid "The following options can be passed to the script:"
-msgstr ""
+msgstr "W skrypcie można zdefiniować następujące ustawienia: "
 
 #: customize.php:27
 msgid "browser versions to notify"
-msgstr ""
+msgstr "wersje przeglądarek, dla których ma pojawiać się pasek z komunikatem"
 
 #: customize.php:28
 msgid "afer how many hours should the message reappear"
-msgstr ""
+msgstr "po ilu godzinach komunikat powinien się ponownie wyświetlić"
 
 #: customize.php:29
 msgid "0 = show all the time"
-msgstr ""
+msgstr "0 = pokazuj cały czas"
 
 #: customize.php:30
 msgid "callback function after the bar has appeared"
-msgstr ""
+msgstr "wywołanie zwrotne (callback) uruchamiane po pojawieniu się paska z komunikatem"
 
 #: customize.php:32
 msgid "set a language for the message, e.g. \"en\""
-msgstr ""
+msgstr "określenie języka komunikatu, np. \"pl\""
 
 #: customize.php:33
 msgid "overrides the default detection"
-msgstr ""
+msgstr "nadpisuje domyślne ustawienia"
 
 #: customize.php:34
 msgid "true = always show the bar (for tesing)"
-msgstr ""
+msgstr "true = zawsze pokazuje pasek z komunikatem (na potrzeby testowania)"
 
 #: customize.php:35
 msgid "custom notification html text"
-msgstr ""
+msgstr "określenie własnej treści komunikatu w języku HTML"
 
 #: customize.php:36
 msgid "open link in new window/tab"
-msgstr ""
+msgstr "otwórz link w nowym oknie lub w nowej karcie"
 
 #: customize.php:59
 msgid "Edit the CSS"
-msgstr ""
+msgstr "Edycja CSS"
 
 #: customize.php:62
 msgid "The following CSS rules are applied by the script. "
-msgstr ""
+msgstr "Skrypt definiuje niżej wymienione style CSS."
 
 #: customize.php:63
 msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-msgstr ""
+msgstr "Możesz je zmienić, edytując swój arkusz styli CSS. Żeby to zrobić musisz zastosować zawężone selektory stylów, np. <code>body .buorg {font-size:20px}</code>"
 
 #: header.php:7
 #: header.php:30
@@ -173,7 +173,7 @@ msgstr "Zobacz jak wygląda pasek z komunikatem!"
 #: index.php:38
 #, php-format
 msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
-msgstr "Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Unowocześniać</a>."
+msgstr "Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>."
 
 #: index.php:45
 #, php-format
@@ -282,7 +282,7 @@ msgstr "Możesz również użyć stworzonych przez programistów spoza zespołu 
 #: index.php:112
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
-msgstr ""
+msgstr "Możesz <a href=\"%s\">zmienić</a> wygląd paska z komunikatem, jego treść i inne ustawienia."
 
 #: index.php:118
 msgid "Following browsers will be notified:"
@@ -294,7 +294,7 @@ msgstr "Przeglądarka Google Chrome aktualizuje się automatycznie i dlatego jes
 
 #: index.php:163
 msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
-msgstr "<b>Wyświetl komunikat użytkownikom domyślnego zestawu przestarzałych przeglądarek i aktualizuj go w przyszłości:</b>jeśli przeglądarka przestanie być wspierana przez producenta lub będzie zawierać poważne luki bezpieczeństwa, dodamy ją do naszego zestawu."
+msgstr "<b>Wyświetl komunikat użytkownikom domyślnego zestawu przestarzałych przeglądarek i aktualizuj go w przyszłości:</b> jeśli przeglądarka przestanie być wspierana przez producenta lub będzie zawierać poważne luki bezpieczeństwa, dodamy ją do naszego zestawu."
 
 #: index.php:168
 msgid "Your Code"

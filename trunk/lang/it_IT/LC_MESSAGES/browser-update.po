@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-11 13:42+0100\n"
-"PO-Revision-Date: 2010-03-11 14:26+0100\n"
+"PO-Revision-Date: 2010-03-12 12:13+0100\n"
 "Last-Translator: Thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -170,9 +170,9 @@ msgid "Test the notification bar!"
 msgstr "Prova la barra di notifica!"
 
 #: index.php:38
-#, fuzzy, php-format
+#, php-format
 msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
-msgstr "Il browser che stai usando è molto vecchio. Ha delle <strong>falle di sicurezza</strong> e <strong>una quantità limitata di funzioni</strong>. Non riuscirai a vedere bene tutte le pagine di questo sito."
+msgstr "Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle disicurezza</b> e potrebbe <b>non visualizzare correttamente</b> lepagine di questo e altri siti. <a%s>Aggiorna il tuo browser!</a>"
 
 #: index.php:45
 #, php-format
