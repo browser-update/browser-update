@@ -28,14 +28,14 @@ function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
     if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
-    else if (/Arora|Camino/.test(ua)) n="x";
-    else if (/Chrome.(\d+\.\d+)/.test(ua)) n="c";
-    else if (/Firefox.(\d+\.\d+)/.test(ua)) n="f";
-    else if (/Version.(\d+.\d+).{0,10}Safari/.test(ua))	n="s";
-    else if (/Safari.(\d+)/.test(ua)) n="so";
-    else if (/Opera.*Version.(\d+\.\d+)/.test(ua)) n="o";
-    else if (/Opera.(\d+\.\d+)/.test(ua)) n="o";
-    else if (/Netscape.(\d+)/.test(ua)) n="n";
+    else if (/like firefox|seamonkey|meego|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian/i.test(ua)) n="x";
+    else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
+    else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
+    else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
+    else if (/Safari.(\d+)/i.test(ua)) n="so";
+    else if (/Opera.*Version.(\d+\.\d+)/i.test(ua)) n="o";
+    else if (/Opera.(\d+\.\d+)/i.test(ua)) n="o";
+    else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
 
     v=new Number(RegExp.$1);
