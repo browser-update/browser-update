@@ -53,7 +53,7 @@ include("header.php");
 			<ul class="advantages">
 				<li class="security">
 					<h3><?php echo T_('Security'); ?></h3>
-					<div><?php echo T_('Newer browsers protect you better against scams, viruses, trojans, phishing and other treats. They also fix security holes in your current browser!'); ?></div>
+					<div><?php echo T_('Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!'); ?></div>
 				</li>
 				<li class="speed">
 					<h3><?php echo T_('Speed'); ?></h3>
