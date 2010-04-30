@@ -1,0 +1,172 @@
+<!DOCTYPE html >
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+<style>
+.buorg {position:absolute;z-index:111111;width:100%; top:0; left:0; border-bottom:1px solid #A29330;
+background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);
+text-align:left; font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px; padding: 5px 0;margin: 0;}
+   
+.message {
+    padding-left: 36px;
+}
+
+
+a {
+    color:#E25600;
+    text-decoration: underline;
+}
+
+.update {
+    font-size: 1.5em;
+}
+
+.browsers {
+    width: 450px;
+    margin-left: 50px;
+    float: right;
+}
+.browsers p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+ul {
+    width: 99%;
+    float: right;
+    margin: 0;
+    padding:0;
+}
+li {
+    margin: 0;
+    padding:0;
+    display: block;
+    list-style-type: none;
+    float: left;
+    width: 70px;
+    height: 50px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: show;
+}
+li a {
+    display: block;
+    width: 70px;
+    padding-top: 30px;
+    text-align: center;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/*
+.bubrowsers li {
+    display: block;
+    list-style-type: none;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.bubrowsers a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: 250px;
+}*/
+
+.f {
+	background-image: url('http://browserupdate.org/img/medium/firefox.png');
+}
+
+.i {
+	background-image: url('http://browserupdate.org/img/medium/ie8.png');
+}
+
+.o {
+	background-image: url('http://browserupdate.org/img/medium/opera.png');
+}
+
+.c {
+	background-image: url('http://browserupdate.org/img/medium/chrome.png');
+}
+
+.s {
+	background-image: url('http://browserupdate.org/img/medium/safari.png');
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="buorg">
+    
+<div class="browsers">
+<p>Laden Sie einfach einen dieser aktuellen und kostenlosen Browser herunter:</p>
+<ul>
+    <li class="f">
+        <a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')" target="_top">Firefox</a>
+    </li>
+    <li class="o">
+        <a href="http://www.opera.com" onmousedown="countBrowser('o')" target="_top">Opera</a>
+    </li>
+    <li class="s">
+        <a href="http://www.apple.com/LANGUAGETODO/safari/" onmousedown="countBrowser('s')" target="_top">Safari</a>
+    </li>
+    <li class="c">
+        <a href="http://www.google.com/chrome?hl=LANGUAGETODO" onmousedown="countBrowser('c')" target="_top">Chrome</a>
+    </li>
+    <li class="i">
+        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')" target="_top">Internet&nbsp;Explorer</a>
+    </li>
+</ul>
+</div>
+
+<div class="message">
+    <p>
+        Sie verwenden einen <b>veralteten Browser</b> (Internet Explorer 6) mit Sicherheitsschwachstellen
+        und k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen.
+    </p>
+    <p class="update">
+        Aktualisieren Sie Ihren Webbrowser für mehr
+        <span title="">Sicherheit</span>,
+        <span title="">Geschwindigkeit</span>,
+        <span title="">Funktionen</span>,
+        und <span title="">Komfort</span>!
+    </p>
+    <!--
+    <p class="update">
+        Please update to a newer Browser for more
+        <span title="">security</span>,
+        <span title="">speed</span>,
+        <span title="">compatibility</span>,
+        and <span title="">comfort</span>.
+    </p>
+    -->
+</div>
+
+</div>
+<script type="text/javascript">
+    
+function ArrayShuffle(a)
+{
+    var d,
+    c,
+    b=a.length;
+    while(b)
+    {
+        c=Math.floor(Math.random()*b);
+        d=a[--b];
+        a[b]=a[c];
+        a[c]=d
+    }
+}
+
+</script>
+
+</body>
+</html>
