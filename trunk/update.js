@@ -15,6 +15,8 @@ for (b in this.op.vsakt)
         this.op.vs[b]=this.op.vsdefault[b];
 
 this.op.reminder=op.reminder||24;
+if (op.reminder==0)
+    this.op.reminder=0;
 this.op.onshow = op.onshow||function(o){};
 this.op.url= op.url||"http://browser-update.org/update.html";
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
@@ -57,7 +59,7 @@ if (!this.op.test) {
     var i = new Image();
     i.src="http://browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
 }
-if (this.op.reminder!=0) {
+if (this.op.reminder>0) {
     var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
     document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
@@ -93,7 +95,9 @@ else if (ll=="es")
     t = 'Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallas de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>';
 else if (ll=="nl")
     t = 'Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>';
-    
+if (op.text)
+    t = op.text;
+
 this.op.text=busprintf(t,this.op.browser.t,' href="'+this.op.url+'"'+tar);
 
 var div = document.createElement("div");
