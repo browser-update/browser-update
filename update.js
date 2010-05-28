@@ -30,7 +30,7 @@ function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
     if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
-    else if (/like firefox|seamonkey|meego|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian/i.test(ua)) n="x";
+    else if (/like firefox|seamonkey|opera mini|meego|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian/i.test(ua)) n="x";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";

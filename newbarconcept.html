@@ -6,11 +6,18 @@
 <title>test</title>
 <style>
 .buorg {position:absolute;z-index:111111;width:100%; top:0; left:0; border-bottom:1px solid #A29330;
-background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);
-text-align:left; font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px; padding: 5px 0;margin: 0;}
-   
+text-align:left; font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px; padding: 5px 0;margin: 0;
+background:#FDF2AB;
+}
+.buorg td {
+    vertical-align: top;
+    padding-right: 5px;
+}
+
+
 .message {
-    padding-left: 36px;
+    padding-left: 30px;
+    background:#FDF2AB no-repeat 3px 8px url(http://browser-update.org/img/dialog-warning.gif);
 }
 
 
@@ -25,8 +32,6 @@ a {
 
 .browsers {
     width: 450px;
-    margin-left: 50px;
-    float: right;
 }
 .browsers p {
     font-size: 1.1em;
@@ -78,24 +83,34 @@ p {
     text-indent: 250px;
 }*/
 
-.f {
+#buobf {
 	background-image: url('http://browserupdate.org/img/medium/firefox.png');
 }
 
-.i {
+#buobi {
 	background-image: url('http://browserupdate.org/img/medium/ie8.png');
+        width: 100px;
 }
 
-.o {
+#buobi a {
+    width: 100px;
+}
+
+#buobo {
 	background-image: url('http://browserupdate.org/img/medium/opera.png');
 }
 
-.c {
+#buobc {
 	background-image: url('http://browserupdate.org/img/medium/chrome.png');
 }
 
-.s {
+#buobs {
 	background-image: url('http://browserupdate.org/img/medium/safari.png');
+}
+
+#buorgclose {
+    font-weight: bold;
+    font-size:14px;
 }
 
 </style>
@@ -104,68 +119,129 @@ p {
 <body>
 
 <div class="buorg">
-    
-<div class="browsers">
-<p>Laden Sie einfach einen dieser aktuellen und kostenlosen Browser herunter:</p>
-<ul>
-    <li class="f">
-        <a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')" target="_top">Firefox</a>
-    </li>
-    <li class="o">
-        <a href="http://www.opera.com" onmousedown="countBrowser('o')" target="_top">Opera</a>
-    </li>
-    <li class="s">
-        <a href="http://www.apple.com/LANGUAGETODO/safari/" onmousedown="countBrowser('s')" target="_top">Safari</a>
-    </li>
-    <li class="c">
-        <a href="http://www.google.com/chrome?hl=LANGUAGETODO" onmousedown="countBrowser('c')" target="_top">Chrome</a>
-    </li>
-    <li class="i">
-        <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')" target="_top">Internet&nbsp;Explorer</a>
-    </li>
-</ul>
-</div>
+<table>
+    <tr>
+        <td class="message">
+            <p>
+                Sie verwenden einen <b>veralteten Browser</b> (Internet Explorer 6) mit Sicherheitsschwachstellen
+                und k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen.
+            </p>
+            <p class="update">
+                Aktualisieren Sie Ihren Webbrowser für mehr
+                <span title="">Sicherheit</span>,
+                <span title="">Geschwindigkeit</span>,
+                <span title="">Funktionen</span>,
+                und <span title="">Komfort</span>!
+            </p>
+            <!--
+            <p class="update">
+                Please update to a newer Browser for more
+                <span title="">security</span>,
+                <span title="">speed</span>,
+                <span title="">compatibility</span>,
+                and <span title="">comfort</span>.
+            </p>
 
-<div class="message">
-    <p>
-        Sie verwenden einen <b>veralteten Browser</b> (Internet Explorer 6) mit Sicherheitsschwachstellen
-        und k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen.
-    </p>
-    <p class="update">
-        Aktualisieren Sie Ihren Webbrowser für mehr
-        <span title="">Sicherheit</span>,
-        <span title="">Geschwindigkeit</span>,
-        <span title="">Funktionen</span>,
-        und <span title="">Komfort</span>!
-    </p>
-    <!--
-    <p class="update">
-        Please update to a newer Browser for more
-        <span title="">security</span>,
-        <span title="">speed</span>,
-        <span title="">compatibility</span>,
-        and <span title="">comfort</span>.
-    </p>
-    -->
-</div>
+Diese Website möchte Ihnen umfassende Sicherheit und das
+bestmögliche Einkaufserlebnis bieten und unterstützt darum
+nur Browser der neueren Generation.
+
+
+            -->
+        </td>
+
+        <td class="browsers" class="buobrowser">
+            <p>Laden Sie einfach einen dieser aktuellen und kostenlosen Browser herunter:</p>
+            <ul id="buolist">
+                <li id="buobf">
+                    <a href="" onmousedown="countBrowser('f')" target="_top">Firefox</a>
+                </li>
+                <li id="buobo">
+                    <a href="http://www.opera.com" onmousedown="countBrowser('o')" target="_top">Opera</a>
+                </li>
+                <li id="buobs">
+                    <a href="http://www.apple.com/LANGUAGETODO/safari/" onmousedown="countBrowser('s')" target="_top">Safari</a>
+                </li>
+                <li id="buobc">
+                    <a href="http://www.google.com/chrome?hl=LANGUAGETODO" onmousedown="countBrowser('c')" target="_top">Chrome</a>
+                </li>
+                <li id="buobi">
+                    <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')" target="_top">Internet&nbsp;Explorer</a>
+                </li>
+            </ul>
+        </td>
+        <td>
+            <div id="buorgclose">X</div>
+        </td>
+    </tr>
+</table>
+
 
 </div>
 <script type="text/javascript">
-    
-function ArrayShuffle(a)
-{
-    var d,
-    c,
-    b=a.length;
-    while(b)
-    {
+countBrowser = function(a) {
+
+};
+
+
+(function(){
+
+var op= {}
+
+var n = window.navigator,b;
+op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
+
+var sprintf=function() {
+    var args=arguments;
+    var data = args[ 0 ];
+    for( var k=1; k<args.length; ++k ) {
+        data = data.replace( /%s/, args[ k ] );
+    }
+    return data;
+}
+var browsers = [
+    ["f","Firefox","http://www.mozilla.com/firefox/"],
+    ["o","Opera","http://www.opera.com"],
+    ["s","Safari","http://www.apple.com/%s/safari/"],
+    ["c","Chrome","http://www.google.com/chrome?hl=%s"],
+    ["i","Internet Explorer","http://www.microsoft.com/windows/internet-explorer/default.aspx"]
+]
+/*
+var shuffle=function(a) {
+    var d,c,b=a.length;
+    while(b) {
         c=Math.floor(Math.random()*b);
         d=a[--b];
         a[b]=a[c];
         a[c]=d
     }
+}*/
+shuffle = function(a) {//fisherYates
+  var i = a.length;
+  if ( i == 0 ) return false;
+  while ( --i ) {
+     var j = Math.floor( Math.random() * ( i + 1 ) );
+     var tempi = a[i];
+     var tempj = a[j];
+     a[i] = tempj;
+     a[j] = tempi;
+   }
 }
+shuffle(browsers);
+var ge=function(id){return document.getElementById(id);}
+var h="";
+for( var i=0; i<browsers.length; i++ ) {
+    var b=browsers[i];
+    h+= '<li id="buob'+b[0]+'"><a href="'+sprintf(b[2],op.l)+'" onmousedown="countBrowser(\''+b[0]+'\')" target="_blank">'+b[1]+'</a></li>';
+}
+ge('buolist').innerHTML=h;
 
+var ua = navigator.userAgent;
+if (/os x|osx|linux/i.test(ua))
+    ge('buobi').style.display="none";
+//if (/linux/i.test(ua))
+//    ge('buobrowser').innerHTML="Linux!"
+})();
 </script>
 
 </body>

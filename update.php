@@ -26,7 +26,7 @@ include("header.php");
 					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 4</a></h3>
+					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 5</a></h3>
 					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
 					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>
