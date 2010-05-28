@@ -11,15 +11,11 @@ include("header.php");
 <p>
 	<?php
 	#$q=sprintf("SELECT 1 FROM updates GROUP BY referer");
-    $q=sprintf("SELECT COUNT(DISTINCT referer) FROM views");
+        $q=sprintf("SELECT COUNT(DISTINCT referer) FROM views");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
 	list($domainnum) = mysql_fetch_row($r);
-	echo sprintf(T_ngettext(
-		'<strong class="number">%d</strong> site is using the Browser-Update.org script.',
-		'<strong class="number">%d</strong> sites are using the Browser-Update.org script.',
-		$domainnum
-	), $domainnum);
+	echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), $domainnum);
 	?>
 </p>
 
@@ -59,14 +55,10 @@ $names = array(
 
 ?>
 <p>
-	<?php
-	$visitors_upgraded = get_num();
-	echo sprintf(T_ngettext(
-		'<strong class="number">%d</strong> visitor has already upgraded his browser.',
-		'<strong class="number">%d</strong> visitors have already upgraded their browser.',
-		$visitors_upgraded
-	), $visitors_upgraded);
-	?>
+    <?php
+    $visitors_upgraded = get_num();
+    echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), $visitors_upgraded);
+    ?>
 </p>
 <?php
 /*
@@ -108,22 +100,6 @@ $names = array(
     </tbody>
 </table>
 
-<?php
-if (request_lang() == 'de')
-{
-	?>
-	<!-- TODO: Translate or remove -->
-	<h3>Geplante Statistiken</h3>
-	<ul>
-		<li>Statistiken pro Seite</li>
-		<li>Angezeigte Benachrichtigungen</li>
-		<li>Klickraten</li>
-		<li>Wie gut wirken verschiedene Formulierungen in den Benachrichtigungen</li>
-	</ul>
-	<?php
-}
-?>
-
 
 <h3><?php echo T_('Recent browser updates'); ?></h3>
 
@@ -148,7 +124,7 @@ $r = mysql_query($q)
 
 while ($a = mysql_fetch_assoc($r)) {
 	echo '<tr><td>'.$a['referer'].'</td><td>'.$names[$a['fromn']].' '.$a['fromv'].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['lang'].'</td><td>'.date("d.m.Y, H:i",$a['time']).'</td></tr>';
-    //lisT_($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
+        //lisT_($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
 }
 ?>
 

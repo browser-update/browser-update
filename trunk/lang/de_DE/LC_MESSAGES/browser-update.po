@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-11 13:42+0100\n"
-"PO-Revision-Date: 2010-03-11 14:03+0100\n"
-"Last-Translator: Thomas <jossele@gmx.de>\n"
+"POT-Creation-Date: 2010-05-28 19:59+0200\n"
+"PO-Revision-Date: 2010-05-28 20:04+0100\n"
+"Last-Translator: Thomas\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgid "database not found"
 msgstr "Datenbank nicht gefunden"
 
 #: contact.php:8
-#: header.php:35
+#: header.php:33
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -63,7 +63,7 @@ msgid "browser versions to notify"
 msgstr ""
 
 #: customize.php:28
-msgid "afer how many hours should the message reappear"
+msgid "atfer how many hours should the message reappear"
 msgstr ""
 
 #: customize.php:29
@@ -83,7 +83,7 @@ msgid "overrides the default detection"
 msgstr ""
 
 #: customize.php:34
-msgid "true = always show the bar (for tesing)"
+msgid "true = always show the bar (for testing)"
 msgstr ""
 
 #: customize.php:35
@@ -106,42 +106,42 @@ msgstr ""
 msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
 
-#: header.php:7
-#: header.php:30
+#: header.php:5
+#: header.php:28
 msgid "Browser-Update.org"
 msgstr "Browser-Update.org"
 
-#: header.php:7
+#: header.php:5
 msgid "Inform your visitors about browser-updates"
 msgstr "Benutzer über Browserupdates informieren"
 
-#: header.php:31
+#: header.php:29
 msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr "Eine Initiative von Webdesignern, um Benutzer über Browserupdates zu informieren"
 
-#: header.php:34
+#: header.php:32
 msgid "Start"
 msgstr "Start"
 
-#: header.php:36
+#: header.php:34
 msgid "Help"
 msgstr "Hilfe"
 
-#: header.php:37
+#: header.php:35
 msgid "Supporters"
 msgstr "Unterstützer"
 
-#: header.php:38
+#: header.php:36
 #: index.php:90
 #: stat.php:9
 msgid "Statistics"
 msgstr "Statistiken"
 
-#: header.php:39
+#: header.php:37
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:52
+#: header.php:53
 msgid "translate..."
 msgstr "übersetzen..."
 
@@ -275,163 +275,158 @@ msgid "Here you can get the code to include in your website. Just include it any
 msgstr "Binden Sie einfach den hier generierten Code an beliebiger Stelle in Ihre Webseite ein."
 
 #: index.php:103
-#, php-format
-msgid "You may also use third-party plugins for <a href=\"%s\">WordPress</a> (german) or <a href=\"%s\">TYPOlight</a> (german)."
-msgstr "Als Alternativen stehen auch Plugins für <a href=\"%s\">WordPress</a> und <a href=\"%s\">TYPOlight</a> zu Verfügung."
-
-#: index.php:112
-#, php-format
-msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
-msgstr ""
+msgid "You may also use third-party plugins for: "
+msgstr "Es gibt auch fertige Plugins für folgende Systeme:"
 
 #: index.php:118
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "Benachrichtigungstext, Design und vieles anderes können <a href=\"%s\">angepasst</a> werden"
+
+#: index.php:124
 msgid "Following browsers will be notified:"
 msgstr "Bei folgenden Browserversionen soll die Benachrichtigung erscheinen:"
 
-#: index.php:157
+#: index.php:163
 msgid "Google Chrome will automatically itself and is therefor always up to date"
 msgstr "Google Chrome besitzt eine immer aktive automatische Update-Funktion und ist deshalb immer aktuell"
 
-#: index.php:163
+#: index.php:169
 msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
 msgstr "<b>Browservorgabe verwenden und automatisch aktualisieren,</b> wenn Browser vom Hersteller nicht mehr unterstützt werden, Sicherheitslücken aufweisen oder sehr lange veraltet sind."
 
-#: index.php:168
+#: index.php:174
 msgid "Your Code"
 msgstr "Der Code"
 
-#: index.php:186
+#: index.php:192
 msgid "Why you should tell users to update"
 msgstr "Warum Sie Ihre Besucher über Browserupdates informieren sollten"
 
-#: index.php:189
+#: index.php:195
 msgid "Reduced development costs and time"
 msgstr "Langfristige Senkung der Entwicklungskosten und -zeit"
 
-#: index.php:190
+#: index.php:196
 msgid "Optimizing websites for old browsers is time consuming and thus expensive."
 msgstr "Webseiten für veraltete Browser zu optimieren ist äußerst zeitaufwendig, lästig und teuer."
 
-#: index.php:193
+#: index.php:199
 msgid "Webdesign technologies and features"
 msgstr "Webdesign-Technologien und Funktionen"
 
-#: index.php:194
+#: index.php:200
 msgid "There are all these great new webdevlopment standards and they are supported by modern browsers... but you may not use them."
 msgstr "Es gibt all diese großartigen neuen Webstandards, die auch schon in aktuellen Browsern unterstützt werden&hellip; doch oft können wir sie nicht nutzen."
 
-#: index.php:196
+#: index.php:202
 msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
 msgstr "Durch neuere Browser können Sie beim Webdesign mehr Funktionen und bessere Technologien benutzen (<a href=\"http://css3.com\" title=\"Die neue CSS-Generation mit vielen neuen Features\">CSS3,</a> <a href=\"http://de.wikipedia.org/wiki/SVG\" title=\"Skalierbare Vektorgrafiken, Artikel auf Wikipedia\">SVG,</a> HTML5, <a href=\"http://de.wikipedia.org/wiki/Rss\" title=\"Internet-Nachrichtenformat, Artikel auf Wikipedia\">RSS,</a>CSS Generated Content, flexible Layouts)und damit ihren Besuchern auch eine besser bedienbare Webseite bieten."
 
-#: index.php:199
+#: index.php:205
 msgid "Security and benefits for the user"
 msgstr "Sicherheit und viele Vorteile für den Benutzer"
 
-#: index.php:200
+#: index.php:206
 #, php-format
 msgid "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s\">update page</a>. The security-threads of outdates browsers are listed in this <a href=\"%s\">paper</a>."
 msgstr "Sicherheit, Geschwindigkeit, Funktionen, Komfort: Alle aufgelistet auf unserer <a href=\"%s\">Update-Seite</a>. Die Sicherheitsproblematik veralteter Browser wird <a href=\"%s\"> in dieser Veröffentlichung ausführlich behandelt</a>."
 
-#: index.php:203
+#: index.php:209
 msgid "The web has to evolve..."
 msgstr "Das Web entwickelt sich weiter&hellip;"
 
-#: index.php:205
+#: index.php:211
 msgid "But that's only possible if the browsers also evolve."
 msgstr "Das geht nur wirklich, wenn die Browser sich ebenfalls entwickeln. "
 
-#: index.php:206
+#: index.php:212
 msgid "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011."
 msgstr "Der starke Marktanteil eines acht Jahre alten Webbrowsers (dem Internet Explorer 6) ist neu. Wenn wir nicht jetzt etwas unternehmen, müssen wir sogar noch im Jahr 2012 Webseiten programmieren, als wäre es noch 2001."
 
-#: index.php:210
+#: index.php:216
 msgid "Users don't oppose updating..."
 msgstr "Benutzer lehnen Updates nicht ab&hellip;"
 
-#: index.php:211
+#: index.php:217
 msgid "... they often just do not appreciate the ‚need to update or the existence of the \"webbrowser\" as a software at all."
 msgstr "&hellip;sie wissen nur meist einfach nicht, dass sie ihren Browser aktualisieren können oder sollten. Viele Benutzer sind sich sogar der Existenz eines \"Webbrowsers\" als eigenständige Software gar nicht bewusst."
 
-#: index.php:214
+#: index.php:220
 msgid "Help this project"
 msgstr "Helfen Sie diesem Projekt"
 
-#: index.php:217
+#: index.php:223
 msgid "Participate!"
 msgstr "Mitmachen!"
 
-#: index.php:218
+#: index.php:224
 msgid "Include the notification code in your page to inform users about browser updates."
 msgstr "Binden Sie die automatische Benachrichtigung in Ihre Webseite ein und informieren Sie so Ihre Besucher über Browserupdates."
 
-#: index.php:221
+#: index.php:227
 msgid "Spread the word!"
 msgstr "Weitersagen!"
 
-#: index.php:222
+#: index.php:228
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr "Erzählen Sie anderen Webdesignern und Webmastern über die Initiative. In Ihrem Blog, auf Ihrer Webseite, &hellip;"
 
-#: index.php:225
+#: index.php:231
 msgid "Translate this page"
 msgstr "Übersetzen!"
 
-#: index.php:226
+#: index.php:232
 msgid "Translate this page into your language."
 msgstr "Helfen Sie mit, diese Webseite in Ihre Sprache zu übersetzen."
 
-#: stat.php:19
+#: stat.php:18
 #, php-format
-msgid "<strong class=\"number\">%d</strong> site is using the Browser-Update.org script."
-msgid_plural "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
-msgstr[0] "<strong class=\"number\">%d</strong> Seite verwendet das Script von Browser-Update.org."
-msgstr[1] "<strong class=\"number\">%d</strong> Seiten verwenden das Script von Browser-Update.org."
+msgid "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
+msgstr "<strong class=\"number\">%d</strong> Seiten verwenden das Script von Browser-Update.org."
 
-#: stat.php:26
+#: stat.php:22
 msgid "Browser updates"
 msgstr "Browserupdates"
 
-#: stat.php:65
+#: stat.php:60
 #, php-format
-msgid "<strong class=\"number\">%d</strong> visitor has already upgraded his browser."
-msgid_plural "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
-msgstr[0] "<strong class=\"number\">%d</strong> Besucher hat bereits seinen Browser aktualisiert"
-msgstr[1] "<strong class=\"number\">%d</strong> Besucher haben bereits ihren Browser aktualisiert"
+msgid "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
+msgstr "<strong class=\"number\">%d</strong> Besucher haben bereits ihre Browser aktualisiert"
 
-#: stat.php:100
+#: stat.php:92
 msgid "From"
 msgstr "Von"
 
-#: stat.php:100
+#: stat.php:92
 msgid "To"
 msgstr "Zu"
 
-#: stat.php:100
+#: stat.php:92
 msgid "Amount"
 msgstr "Anzahl"
 
-#: stat.php:127
+#: stat.php:104
 msgid "Recent browser updates"
 msgstr "Kürzliche Browser-Updates"
 
-#: stat.php:132
+#: stat.php:109
 msgid "Site"
 msgstr "Seite"
 
-#: stat.php:133
+#: stat.php:110
 msgid "Old browser"
 msgstr "Alter Browser"
 
-#: stat.php:134
+#: stat.php:111
 msgid "New browser"
 msgstr "Neuer Browser"
 
-#: stat.php:135
+#: stat.php:112
 msgid "Language"
 msgstr "Sprache"
 
-#: stat.php:136
+#: stat.php:113
 msgid "Date"
 msgstr "Datum"
 
@@ -492,7 +487,7 @@ msgid "Security"
 msgstr "Sicherheit"
 
 #: update.php:56
-msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other treats. They also fix security holes in your current browser!"
+msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
 msgstr "Neuere Browser schützen besser vor <a href=\"http://de.wikipedia.org/wiki/Internet-Betrug\" title=\"Artikel auf Wikipedia\">Betrug,</a> Viren, Trojanern, <a href=\"http://de.wikipedia.org/wiki/Phishing\" title=\"Fachbegriff: Phishing, Erläuterung auf Wikipedia\">Datendiebstahl</a> und anderen Bedrohungen Ihrer Privatsphäre und Sicherheit. Aktuelle Browser schließen Sicherheitslücken, durch die Angreifer in Ihren Computer gelangen können."
 
 #: update.php:59
@@ -547,3 +542,9 @@ msgstr "„Ich kann kein Update einspielen“"
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
 msgstr "Wenn Sie Ihren alten Browser auf Grund von Kompatibilitätsproblemen nicht aktualisieren können, ist ein zweiter Browser vielleicht eine gute Lösung:Verwenden Sie den neuen zum komfortableren Surfen und den alten nur bei Inkompatibilitäten."
 
+#~ msgid ""
+#~ "You may also use third-party plugins for <a href=\"%s\">WordPress</a> "
+#~ "(german) or <a href=\"%s\">TYPOlight</a> (german)."
+#~ msgstr ""
+#~ "Als Alternativen stehen auch Plugins für <a href=\"%s\">WordPress</a> und "
+#~ "<a href=\"%s\">TYPOlight</a> zu Verfügung."

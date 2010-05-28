@@ -100,12 +100,18 @@ include("header.php");
 				'Just include it anywhere in the source of your page.'); ?>
 		</p>
 		<p>
-			<?php echo sprintf(T_('You may also use third-party plugins for ' .
-				'<a href="%s">WordPress</a> (german) ' .
-				'or ' .
-				'<a href="%s">TYPOlight</a> (german).'),
+			<?php echo T_('You may also use third-party plugins for: ');
+                                echo sprintf(
+				'<a href="%s">WordPress</a> (german), ' .
+				'<a href="%s">TYPO3</a>, ' .
+				'<a href="%s">TYPOlight</a> (german), ' .
+                                '<a href="%s">vBulletin</a>, ' .
+                                '<a href="%s">concrete5</a>.',
 				'http://fileserver.julianbrinke.de/WP/',
-				'http://typolight.org/erweiterungsliste/view/browser_update.html'); ?>
+                                'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
+				'http://typolight.org/erweiterungsliste/view/browser_update.html',
+                                'http://www.vbulletin.org/forum/showthread.php?t=239559',
+                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/'); ?>
 		</p>
 		<p>
 			<?php echo sprintf(
