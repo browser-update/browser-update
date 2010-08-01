@@ -38,7 +38,7 @@ include("header.php");
 					<?php echo sprintf(T_('Your browser (%s) is <b>out of date</b>. ' .
 					'It has known <b>security flaws</b> and may <b>not ' .
 					'display all features</b> of this and other websites. ' .
-					'<a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="#" onclick="$bu=new $buo({},true);"');?>
+					'<a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html"');?>
 				</div>
 			</div></li>
 			<li><div>
@@ -77,7 +77,7 @@ include("header.php");
                 'long time we are going to add them to our list automatically.'); ?>
 			</li>
 			<li>
-				<h3><?php echo T_('Customizable'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
+				<h3><?php echo T_('Customizable'); ?></h3>
 				<?php echo T_('You can customize the browsers and versions to notifiy.<br/> ' . 
 				'In future releases you can also customize the text that should be shown, ' . 
 				'the frequency of the bar to appear and many other things.'); ?>
@@ -214,7 +214,7 @@ window.onload=function(){
 			</li>
 			<li>
 				<h3><?php echo T_('Users don\'t oppose updating...'); ?></h3>
-				<?php echo T_('... they often just do not appreciate the ‚need to update or the existence of the "webbrowser" as a software at all.'); ?>
+				<?php echo T_('... they often just do not appreciate the need to update or the existence of the "webbrowser" as a software at all.'); ?>
 			</li>
 		</ul>
 		<h2><?php echo T_('Help this project'); ?></h2>

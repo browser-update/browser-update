@@ -11,7 +11,9 @@ $lang_rewrite = array(
 	"es"=>"es_ES",
 	"pl"=>"pl_PL",
 	"nl"=>"nl_NL",
-	"it"=>"it_IT"
+	"it"=>"it_IT",
+        "pt"=>"pt_BR",
+        "sl"=>"sl_SL"
 );
 
 /**
