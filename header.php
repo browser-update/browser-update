@@ -23,6 +23,26 @@
 </head>
 <body>
 
+<?php
+//preg_match ("#[^?]#", string subject [, array matches [, int flags]])
+$parts = Explode('/', $_SERVER["REQUEST_URI"]);
+$curfile = end($parts);
+?>
+
+<div id="lang">
+    <a href="/en/<?echo $curfile?>">english</a>
+    <a href="/de/<?echo $curfile?>">deutsch</a>
+    <a href="/pl/<?echo $curfile?>">polski</a>
+    <a href="/nl/<?echo $curfile?>">nederlands</a>
+    <a href="/it/<?echo $curfile?>">italiano</a>
+    <a href="/es/<?echo $curfile?>">español</a>
+    <a href="/pt/<?echo $curfile?>">português</a>
+    <a href="/ja/<?echo $curfile?>">japanese</a>
+    <a href="/sl/<?echo $curfile?>">slovenščina</a>
+
+    <a href="contact.html">translate...</a>
+</div>
+    
 <div id="co">
 <div class="header">
     <h1><a href="index.html"><?php echo T_('Browser-Update.org'); ?></a></h1>
@@ -37,21 +57,8 @@
 	<li class="r"><a href="/blog/"><?php echo T_('Blog'); ?></a></li>
 </ul>
 
-<?php
-//preg_match ("#[^?]#", string subject [, array matches [, int flags]])
-$parts = Explode('/', $_SERVER["REQUEST_URI"]);
-$curfile = end($parts);
-?>
-<div id="lang">
-    <a href="/en/<?echo $curfile?>">english</a>
-    <a href="/de/<?echo $curfile?>">deutsch</a>
-	<a href="/pl/<?echo $curfile?>">polski</a>
-	<a href="/nl/<?echo $curfile?>">nederlands</a>
-	<a href="/it/<?echo $curfile?>">italiano</a>
-	<a href="/es/<?echo $curfile?>">español</a>
-    <a href="/ja/<?echo $curfile?>">japanese</a>
-    <a href="contact.html"><?php echo T_('translate...'); ?></a>
-</div>
+
+
 <div id="bookmark">
     <!-- AddThis Button BEGIN -->
     <script type="text/javascript">addthis_pub  = 'Jossele';</script>

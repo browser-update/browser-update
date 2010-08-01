@@ -6,6 +6,26 @@ INSERT INTO views_backup (referer) SELECT DISTINCT referer FROM views
 
 SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( * ) AS num
 FROM views
+WHERE YEAR( FROM_UNIXTIME( time ) )=2010
+GROUP BY m
+ORDER BY m DESC
+LIMIT 0 , 30
+
+
+SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( *  ) AS num
+FROM updates
+WHERE YEAR( FROM_UNIXTIME( time ) ) =2010
+GROUP BY m
+ORDER BY m DESC
+LIMIT 0 , 30
+
+
+
+
+
+SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( *  ) AS num
+FROM updates
+WHERE time>1275256800
 GROUP BY m
 ORDER BY m DESC
 LIMIT 0 , 30

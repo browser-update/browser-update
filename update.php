@@ -1,4 +1,17 @@
 <?php
+$lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+$lll = explode (",", $lll);
+$lll = explode (";", $lll[0]);
+$ll = trim(strtolower(substr($lll[0],0,5)));
+if(strlen($ll)==5) {
+	$ll = substr($ll, 3, 2);
+}
+
+if ($ll=="de" && rand(1, 3)==3) {
+    include("update2.php");
+    exit;
+}
+
 require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
@@ -11,29 +24,29 @@ include("header.php");
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
+					<h3><a href="http://www.mozilla.com/firefox/" target="_blank" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
-					<a href="http://www.mozilla.com/firefox/" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
+					<a href="http://www.mozilla.com/firefox/" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="op">
-					<h3><a href="http://www.opera.com/" onmousedown="countBrowser('o')">Opera 10</a></h3>
+					<h3><a href="http://www.opera.com/" target="_blank" onmousedown="countBrowser('o')">Opera 10</a></h3>
 					<div><?php echo T_('Browser with many features'); ?></div>
-					<a href="http://www.opera.com/" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
+					<a href="http://www.opera.com/" target="_blank" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="sa">
-					<h3><a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')">Safari 4</a></h3>
+					<h3><a href="http://www.apple.com/safari/" target="_blank" onmousedown="countBrowser('s')">Safari 5</a></h3>
 					<div><?php echo T_('Apple\'s fast browser'); ?></div>
-					<a href="http://www.apple.com/safari/" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
+					<a href="http://www.apple.com/safari/" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" onmousedown="countBrowser('c')">Google Chrome 5</a></h3>
+					<h3><a href="http://www.google.com/chrome" target="_blank" onmousedown="countBrowser('c')">Google Chrome 5</a></h3>
 					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
-					<a href="http://www.google.com/chrome" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
+					<a href="http://www.google.com/chrome" target="_blank" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ie">
-					<h3><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')">Internet Explorer 8</a></h3>
+					<h3><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" onmousedown="countBrowser('i')">Internet Explorer 8</a></h3>
 					<div><?php echo T_('Windows built-in browser'); ?></div>
-					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
+					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
 				</li>
 			</ul>
 			<p>
@@ -72,8 +85,7 @@ include("header.php");
 		
 		<p><?php echo T_('Updating is easy, takes just a few minutes and is totally free.'); ?></p>
 	
-		<p><?php echo T_('If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it.'); ?></p>
-
+		
 		
 		<div>
 			<h2><?php echo T_('Why this website?'); ?></h2>
@@ -85,25 +97,29 @@ include("header.php");
 			</p>
 		</div>
 
-
 		<h2><?php echo T_('"I\'m not able to update my browser"'); ?></h2>
+                <p><?php echo T_('If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it.'); ?></p>
 		<p><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility.'); ?></p>
 	</div>
 
 
 <script type="text/javascript">
-
+var cv=1;
+var second=false;
 
 function countBrowser(to) {
-		var f=getBrowser();
-		//TODO: / davor
-        if ((f.n=="f" && f.v>=3.7) ||
-            (f.n=="o" && f.v>=10.2) ||
-            (f.n=="s" && f.v>=4) ||
+        var f=getBrowser();
+        if ((f.n=="f" && f.v>=3.6) ||
+            (f.n=="o" && f.v>=10.5) ||
+            (f.n=="s" && f.v>=5) ||
             (f.n=="i" && f.v>=8))
             return;
+        var s="";
+        if (second)
+            s="&second=1";
         var i=new Image();
-		i.src="/count.php?ref="+escape((document.referrer||"unknown").substring(0,35))+"&from="+f.n+"&fromv="+f.v+"&to="+to;
+        i.src="/count.php?cv="+cv+"&tv="+window.location.hash.substr(1, 3)+"&ref="+escape((document.referrer||"").substring(0,35))+"&from="+f.n+"&fromv="+f.v+"&to="+to + s + "&rnd="+Math.random();
+        second=true;
         //console.log(i.src, f);
 }
 function getBrowser() {
@@ -130,6 +146,21 @@ function getBrowser() {
     }
     return {n:n,v:v,t:names[n]+" "+v}
 }
+
+
+
+function countView() {
+        var f=getBrowser();
+        if ((f.n=="f" && f.v>=3.6) ||
+            (f.n=="o" && f.v>=10.5) ||
+            (f.n=="s" && f.v>=5) ||
+            (f.n=="i" && f.v>=8))
+            return;
+        var i=new Image();
+        i.src="/countchoice.php?cv="+cv+"&tv="+window.location.hash.substr(1, 3)+"&ref="+escape((document.referrer||"").substring(0,35))+"&from="+f.n+"&fromv="+f.v+ "&rnd="+Math.random();
+}
+
+countView();
 
 </script>
 

@@ -1,22 +1,23 @@
 //browser-update.org notification script, <browser-update.org>
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
-
-var jsv=4;
+var jsv=5;
 var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:8,f:3.6,o:10.1,s:4,n:10};
+this.op.vsakt = {i:8,f:3.6,o:10.6,s:5,n:10};
 this.op.vsdefault = {i:6,f:2,o:9.64,s:3,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
         this.op.vs[b]=this.op.vsdefault[b];
 
-this.op.reminder=op.reminder||24;
-if (op.reminder==0)
+if (!op.reminder || op.reminder<0.1 )
     this.op.reminder=0;
+else
+    this.op.reminder=op.reminder||24;
+
 this.op.onshow = op.onshow||function(o){};
 this.op.url= op.url||"http://browser-update.org/update.html";
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
@@ -26,11 +27,21 @@ this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
 
+
+if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)==1)) { //test new script
+     var e = document.createElement("script");
+     e.setAttribute("type", "text/javascript");
+     e.setAttribute("src", "http://browser-update.org/update7.js");
+     document.body.appendChild(e);
+     return;
+}
+
+
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
-    else if (/like firefox|seamonkey|opera mini|meego|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian/i.test(ua)) n="x";
+    if (/like firefox|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian|webos/i.test(ua)) n="x";
+    else if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
@@ -39,7 +50,8 @@ function getBrowser() {
     else if (/Opera.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
-
+    if (n=="x") return {n:"x",v:0,t:names[n]};
+    
     v=new Number(RegExp.$1);
     if (n=="so") {
         v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
@@ -66,7 +78,7 @@ if (this.op.reminder>0) {
 var ll=this.op.l.substr(0,2);
 var languages = "de,en";
 if (languages.indexOf(ll)!==false)
-    this.op.url="http://browser-update.org/"+ll+"/update.html";
+    this.op.url="http://browser-update.org/"+ll+"/update.html#"+jsv;
 var tar="";
 if (this.op.newwindow)
     tar=' target="_blank"';
@@ -95,6 +107,11 @@ else if (ll=="es")
     t = 'Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallas de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>';
 else if (ll=="nl")
     t = 'Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>';
+else if (ll=="pt")
+    t = 'Seu navegador (%s) está <b>desatualizado</b>. Ele possui <b>falhas de segurança</b> e pode <b>apresentar problemas</b> para exibir este e outros websites. <a%s>Veja como atualizar o seu navegador</a>';
+else if (ll=="sl")
+    t = 'Vaš brskalnik (%s) je <b>zastarel</b>. Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. \
+        <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
 if (op.text)
     t = op.text;
 
@@ -111,11 +128,11 @@ var sheet = document.createElement("style");
 var style = ".buorg {position:absolute;z-index:111111;\
 width:100%; top:0px; left:0px; \
 border-bottom:1px solid #A29330; \
-background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);\
+background:#FDF2AB no-repeat 10px center url(http://browser-update.org/img/dialog-warning.gif);\
 text-align:left; cursor:pointer; \
 font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
 .buorg div { padding:5px 36px 5px 40px; } \
-.buorg a {color:#E25600; text-decoration: underline;}\
+.buorg a,.buorg a:visited  {color:#E25600; text-decoration: underline;}\
 #buorgclose { position: absolute; right: .5em; top:.2em; height: 20px; width: 12px; font-weight: bold;font-size:14px; padding:0; }";
 document.body.insertBefore(div,document.body.firstChild);
 document.getElementsByTagName("head")[0].appendChild(sheet);

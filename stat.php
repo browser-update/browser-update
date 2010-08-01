@@ -48,8 +48,8 @@ $names = array(
 	"o"=>'Opera',
 	"s"=>'Apple Safari',
 	"n"=>'Netscape Navigator',
-    "c"=>'Google Chrome',
-    ""=>'?'
+        "c"=>'Google Chrome',
+        ""=>'?'
 );
 
 
@@ -94,6 +94,8 @@ $names = array(
     <?php
     $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton ORDER BY num DESC');
      while ($a = mysql_fetch_assoc($q)) {
+         if ($names[$a['fromn']]==""||$names[$a['fromn']]=="?")
+             continue;
          echo '<tr><td>'.$names[$a['fromn']].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['num'].'</td></tr>';
      }
     ?>
@@ -101,6 +103,48 @@ $names = array(
 </table>
 
 
+<?php /*
+<table>
+<thead>
+<tr>
+<td>Week</td><td>Shows</td><td>Updates</td><td>Updates per thousand</td>
+</tr>
+</thead>
+
+<?php
+$q=sprintf("SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( * ) AS n
+FROM views
+WHERE YEAR( FROM_UNIXTIME( time ) )=2010
+GROUP BY m
+ORDER BY m DESC");
+
+$r_sh = mysql_query($q)
+	or die (mysql_error(). $q);
+
+$q=sprintf("SELECT WEEK( FROM_UNIXTIME( time ) ) AS m, COUNT( *  ) AS n
+FROM updates
+WHERE YEAR( FROM_UNIXTIME( time ) ) =2010
+GROUP BY m
+ORDER BY m DESC");
+
+
+
+$r_up = mysql_query($q)
+	or die (mysql_error(). $q);
+
+
+
+while ($a_sh = mysql_fetch_assoc($r_sh)) {
+        $a_up = mysql_fetch_assoc($r_up);
+	echo '<tr><td>'.$a_sh['m'].'</td><td>'.$a_sh['n'].'</td><td>'.$a_up['n'].'</td><td>'.round($a_up['n']/$a_sh['n']*1000,1).'</td></tr>';
+        //lisT_($referer, $fromn, $fromv, $ton, $lang, $ip, $time) = mysql_fetch_row($r);
+}
+?>
+
+</table>
+*/?>
+
+<?php /*
 <h3><?php echo T_('Recent browser updates'); ?></h3>
 
 <table>
@@ -129,7 +173,8 @@ while ($a = mysql_fetch_assoc($r)) {
 ?>
 
 </table>
-
+*/
+?>
 
 </div>
 <?php include("footer.php");?>
