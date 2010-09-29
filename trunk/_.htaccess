@@ -29,7 +29,7 @@ RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
 
-
+AddCharset utf-8 .js
 
 #4 Weeks cache for the files
 
