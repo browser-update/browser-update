@@ -1,0 +1,543 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-28 19:59+0200\n"
+"PO-Revision-Date: 2010-09-08 11:04+0700\n"
+"Last-Translator: benny <bknliem@yahoo.com>\n"
+"Language-Team: benny <bknliem@yahoo.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config.sample.php:5
+msgid "database connection problem"
+msgstr "masalah koneksi database"
+
+#: config.sample.php:7
+msgid "database not found"
+msgstr "database tidak ditemukan"
+
+#: contact.php:8
+#: header.php:33
+msgid "Contact"
+msgstr "Kontak"
+
+#: customize.php:8
+msgid "Customize and test"
+msgstr "Sesuaikan dan uji"
+
+#: customize.php:11
+msgid "Test the script"
+msgstr "Test script"
+
+#: customize.php:14
+msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
+msgstr "Jika Anda membuka situs web Anda dengan <code>#test-bu</code> ditambahkan ke url, bar akan selalu muncul."
+
+#: customize.php:15
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Contoh: <code>http://browser-update.org/#test-bu</code>."
+
+# tes-bu </ code>."
+#: customize.php:16
+msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
+msgstr "Pastikan halaman dengan benar reloaded dengan membuka URL di tab browser yang baru."
+
+#: customize.php:19
+msgid "Options"
+msgstr "Pilihan"
+
+#: customize.php:22
+msgid "The following options can be passed to the script:"
+msgstr "Pilihan berikut dapat dikirimkan ke script berikut:"
+
+#: customize.php:27
+msgid "browser versions to notify"
+msgstr "versi browser untuk memberitahu"
+
+#: customize.php:28
+msgid "after how many hours should the message reappear"
+msgstr "setelah berapa jam harus pesan muncul kembali"
+
+#: customize.php:29
+msgid "0 = show all the time"
+msgstr "0 = menampilkan semua waktu"
+
+#: customize.php:30
+msgid "callback function after the bar has appeared"
+msgstr "fungsi panggilan balik setelah bar telah muncul"
+
+#: customize.php:32
+msgid "set a language for the message, e.g. \"en\""
+msgstr "menetapkan bahasa untuk pesan, misalnya \"en\""
+
+#: customize.php:33
+msgid "overrides the default detection"
+msgstr "menimpa deteksi default"
+
+#: customize.php:34
+msgid "true = always show the bar (for testing)"
+msgstr "true = selalu menampilkan bar (untuk pengujian)"
+
+#: customize.php:35
+msgid "custom notification html text"
+msgstr "teks pemberitahuan kustom html"
+
+#: customize.php:36
+msgid "open link in new window/tab"
+msgstr "membuka pranala di window/tab baru"
+
+#: customize.php:59
+msgid "Edit the CSS"
+msgstr "Edit CSS itu"
+
+#: customize.php:62
+msgid "The following CSS rules are applied by the script. "
+msgstr "CSS mengikuti peraturan yang diterapkan oleh skrip."
+
+#: customize.php:63
+msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgstr "Anda dapat menimpa mereka pada CSS sendiri. Untuk melakukannya Anda perlu menambahkan beberapa spesifisitas yang lebih kepada aturan css-: misalnya <code>body .buorg {font-size:20px}</code>"
+
+#: header.php:5
+#: header.php:28
+msgid "Browser-Update.org"
+msgstr "Browser-Update.org"
+
+#: header.php:5
+msgid "Inform your visitors about browser-updates"
+msgstr "Menginformasikan Anda pengunjung tentang browser-update"
+
+#: header.php:29
+msgid "An initiative by webdesigners to inform users about browser-updates"
+msgstr "Sebuah inisiatif oleh webdesigners untuk memberitahukan pengguna tentang browser-update"
+
+#: header.php:32
+msgid "Start"
+msgstr "Mulai"
+
+#: header.php:34
+msgid "Help"
+msgstr "Membantu"
+
+#: header.php:35
+msgid "Supporters"
+msgstr "Pendukung"
+
+#: header.php:36
+#: index.php:90
+#: stat.php:9
+msgid "Statistics"
+msgstr "Statistika"
+
+#: header.php:37
+msgid "Blog"
+msgstr "Blog"
+
+#: header.php:53
+msgid "translate..."
+msgstr "menerjemahkan..."
+
+#: index.php:13
+msgid "This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser."
+msgstr "Layanan ini adalah kesempatan untuk menginformasikan pengunjung Anda mencolok untuk beralih ke browser yang lebih baru."
+
+#: index.php:17
+msgid "Many internet users are still using very old, out-dated browsers – most of them for no actual reason. Switching to an newer browser is better for them and for you as a webdesigner."
+msgstr "Banyak pengguna internet masih menggunakan sangat tua, browser keluar-tanggal - kebanyakan dari mereka tanpa alasan yang sebenarnya. Berpindah ke browser yang lebih baru adalah lebih baik bagi mereka dan bagi Anda sebagai seorang desainer."
+
+#: index.php:26
+msgid "How it works"
+msgstr "Cara kerjanya"
+
+#: index.php:30
+#, php-format
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr "Sertakan javascript kecil kami <a href=\"%s\">pemberitahuan</a> pada situs anda"
+
+#: index.php:33
+msgid "Visitors with out-dated browser will be informed by a little, undisturbing bar, that his browser is not up-to-date and it is recommended to update."
+msgstr "Pengunjung dengan browser keluar-tanggal akan diinformasikan oleh bar, sedikit undisturbing, bahwa browser-nya tidak up-to-date dan dianjurkan untuk memperbarui."
+
+#: index.php:36
+msgid "Test the notification bar!"
+msgstr "Uji bar pemberitahuan!"
+
+#: index.php:38
+#, php-format
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "Browser Anda (% s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>"
+
+#: index.php:45
+#, php-format
+msgid "By clicking the bar, he will get to <a href=\"%s\">an info page with arguments why to change/update and some browser choices</a>."
+msgstr "Dengan mengklik bar, ia akan sampai <a href=\"%s\">sebuah halaman info dengan argumen mengapa untuk mengubah/update dan beberapa pilihan browser</a>."
+
+#: index.php:49
+msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgstr "Jika pengunjung yang mengabaikan nasihat, tidak akan muncul lagi untuk beberapa waktu."
+
+#: index.php:52
+msgid "Advantages and features"
+msgstr "Keuntungan dan fitur"
+
+#: index.php:55
+msgid "Subtle"
+msgstr "Halus"
+
+#: index.php:56
+msgid "The user will be notified only once, and won't be bothered any more. The notification bar is very small and won't affect the browsing experience negatively."
+msgstr "User akan diberitahu hanya sekali, dan tidak akan diganggu lagi. Pemberitahuan bar sangat kecil dan tidak akan mempengaruhi pengalaman browsing negatif."
+
+#: index.php:60
+msgid "Informative"
+msgstr "Informatif"
+
+#: index.php:61
+msgid "Tell the users that they are using an out-dated browser and that your website looks even better with a newer one."
+msgstr "Katakan pada pengguna bahwa mereka menggunakan browser yang keluar-tanggal dan bahwa situs web Anda terlihat lebih baik dengan yang baru."
+
+#: index.php:65
+msgid "Idealistic"
+msgstr "Idealistis"
+
+#: index.php:66
+msgid "Help evolve the web!"
+msgstr "Bantuan berevolusi web!"
+
+#: index.php:67
+msgid "Support the standards-based web!"
+msgstr "Mendukung standar berbasis web!"
+
+#: index.php:68
+msgid "Support Open Source software projects!"
+msgstr "Mendukung proyek-proyek perangkat lunak Open Source!"
+
+#: index.php:69
+msgid "Help your visitors!"
+msgstr "Bantu pengunjung Anda!"
+
+#: index.php:70
+msgid "Help increase security awareness!"
+msgstr "Membantu meningkatkan kesadaran keamanan!"
+
+#: index.php:71
+msgid "Support your favorite webbrowser!"
+msgstr "Dukungan penjelajah web favorit Anda!"
+
+#: index.php:74
+msgid "Low maintenance and up-to-date"
+msgstr "Rendah pemeliharaan dan up-to-date"
+
+#: index.php:75
+msgid "If there come more browser versions which won't be supported by the vendor in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically."
+msgstr "Jika ada versi browser datang lebih yang tidak akan didukung oleh vendor di masa depan, celah keamanan pameran atau sudah sangat tua untuk waktu yang lama kami akan menambahkan mereka ke daftar kami secara otomatis."
+
+#: index.php:80
+msgid "Customizable"
+msgstr "Customizable"
+
+#: index.php:80
+#: index.php:90
+msgid "<span class=\"workingonit\">work in progress</span>"
+msgstr "<span class=\"workingonit\">sedang dikerjakan</span>"
+
+#: index.php:81
+msgid "You can customize the browsers and versions to notifiy.<br/> In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things."
+msgstr "Anda dapat menyesuaikan browser dan versi untuk notifiy.<br/> Dalam rilis masa depan Anda juga dapat menyesuaikan teks yang harus ditampilkan, frekuensi bar untuk muncul dan banyak hal lainnya."
+
+#: index.php:86
+msgid "Localized"
+msgstr "Localized"
+
+#: index.php:87
+msgid "The message is automatically displayed in the user's language."
+msgstr "Pesan secara otomatis ditampilkan dalam bahasa pengguna."
+
+#: index.php:91
+#, php-format
+msgid "You get <a href=\"%s\">statistics</a> about which browsers your visitors are using and how much users got proselyted: How many users updated or changed their browser through your advice."
+msgstr "Anda mendapatkan <a href=\"%s\">statistik</a> tentang yang browser pengunjung menggunakan dan berapa banyak pengguna mendapatkan proselyted: Berapa banyak pengguna yang diperbarui atau diubah browser mereka melalui saran Anda."
+
+#: index.php:97
+msgid "Install notification on your site"
+msgstr "Instal pemberitahuan di situs Anda"
+
+#: index.php:99
+msgid "Here you can get the code to include in your website. Just include it anywhere in the source of your page."
+msgstr "Di sini Anda bisa mendapatkan kode untuk memasukkan ke dalam situs web Anda. Hanya mencakup di mana saja dalam sumber halaman Anda."
+
+#: index.php:103
+msgid "You may also use third-party plugins for: "
+msgstr "Anda juga dapat menggunakan plugin pihak ketiga untuk:"
+
+#: index.php:118
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "Anda dapat <a href=\"%s\">menyesuaikan</a> gaya pesan, teks dan pilihan lainnya."
+
+#: index.php:124
+msgid "Following browsers will be notified:"
+msgstr "Berikut browser akan diberitahu:"
+
+#: index.php:163
+msgid "Google Chrome will automatically itself and is therefor always up to date"
+msgstr "Google Chrome akan secara otomatis sendiri dan untuk itu selalu up to date"
+
+#: index.php:169
+msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
+msgstr "<b>Beritahu daftar rekomendasi browser dan menyesuaikan secara otomatis dari waktu ke waktu:</b> Jika browser tidak lagi didukung oleh vendor atau memiliki kerentanan keamanan, maka akan ditambahkan untuk mengatur."
+
+#: index.php:174
+msgid "Your Code"
+msgstr "Kode Anda"
+
+#: index.php:192
+msgid "Why you should tell users to update"
+msgstr "Mengapa Anda harus memberitahukan pengguna untuk memperbarui"
+
+#: index.php:195
+msgid "Reduced development costs and time"
+msgstr "Mengurangi biaya pengembangan dan waktu"
+
+#: index.php:196
+msgid "Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr "Mengoptimalkan situs untuk browser lama sehingga memakan waktu dan mahal."
+
+#: index.php:199
+msgid "Webdesign technologies and features"
+msgstr "Webdesign teknologi dan fitur"
+
+#: index.php:200
+msgid "There are all these great new webdevlopment standards and they are supported by modern browsers... but you may not use them."
+msgstr "Ada besar semua standar webdevlopment baru dan mereka didukung oleh browser modern ... tetapi Anda tidak dapat menggunakannya."
+
+#: index.php:202
+msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
+msgstr "Browser yang lebih baru membiarkan Anda menggunakan lebih banyak fitur dan teknologi baru (CSS3, SVG, HTML5, RSS, CSS Generated Content, Layout fleksibel) di situs web Anda, menghasilkan pengalaman browsing yang lebih baik bagi pengguna Anda."
+
+#: index.php:205
+msgid "Security and benefits for the user"
+msgstr "Keamanan dan manfaat bagi pengguna"
+
+#: index.php:206
+#, php-format
+msgid "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s\">update page</a>. The security-threads of outdates browsers are listed in this <a href=\"%s\">paper</a>."
+msgstr "Banyak manfaat: keamanan, kecepatan, fitur, ... Lihat <a href=\"%s\">halaman update</a>. Keamanan-benang outdates browser yang tercantum <a href=\"%s\">di sini</a>."
+
+#: index.php:209
+msgid "The web has to evolve..."
+msgstr "Web telah berevolusi ..."
+
+#: index.php:211
+msgid "But that's only possible if the browsers also evolve."
+msgstr "Tapi itu hanya mungkin jika browser juga berevolusi."
+
+#: index.php:212
+msgid "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011."
+msgstr "Pangsa pasar yang kuat dari berusia 8 tahun penjelajah web (Internet Explorer 6) adalah sesuatu yang baru dalam sejarah web. Jika kita tidak mengambil tindakan sekarang, kita harus kode website seperti pada tahun 2001 bahkan jika 2011."
+
+#: index.php:216
+msgid "Users don't oppose updating..."
+msgstr "Pengguna tidak menentang memperbarui ..."
+
+#: index.php:217
+msgid "... they often just do not appreciate the ‚need to update or the existence of the \"webbrowser\" as a software at all."
+msgstr "... mereka sering hanya tidak menghargai, perlu mengupdate atau adanya \"penjelajah web\" sebagai perangkat lunak sama sekali."
+
+#: index.php:220
+msgid "Help this project"
+msgstr "Bantuan proyek ini"
+
+#: index.php:223
+msgid "Participate!"
+msgstr "Berpartisipasi!"
+
+#: index.php:224
+msgid "Include the notification code in your page to inform users about browser updates."
+msgstr "Sertakan kode pemberitahuan di halaman Anda untuk memberitahukan pengguna tentang update browser."
+
+#: index.php:227
+msgid "Spread the word!"
+msgstr "Sebarkan kata!"
+
+#: index.php:228
+msgid "Tell others about this initiative! In your blog, on your webpage, ..."
+msgstr "Beritahu orang lain tentang inisiatif ini! Dalam blog Anda, pada halaman Web Anda, ..."
+
+#: index.php:231
+msgid "Translate this page"
+msgstr "Terjemahkan halaman ini"
+
+#: index.php:232
+msgid "Translate this page into your language."
+msgstr "Terjemahkan halaman ini ke dalam bahasa Anda."
+
+#: stat.php:18
+#, php-format
+msgid "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
+msgstr "Situs <strong class=\"number\">%d</strong> yang kuat menggunakan script Browser-Update.org."
+
+#: stat.php:22
+msgid "Browser updates"
+msgstr "Browser update"
+
+#: stat.php:60
+#, php-format
+msgid "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
+msgstr "Ada <strong class=\"number\">%d</strong> pengunjung yang sudah upgrade browser mereka."
+
+#: stat.php:92
+msgid "From"
+msgstr "Dari"
+
+#: stat.php:92
+msgid "To"
+msgstr "Untuk"
+
+#: stat.php:92
+msgid "Amount"
+msgstr "Jumlah"
+
+#: stat.php:104
+msgid "Recent browser updates"
+msgstr "Recent update browser"
+
+#: stat.php:109
+msgid "Site"
+msgstr "Situs"
+
+#: stat.php:110
+msgid "Old browser"
+msgstr "Lama browser"
+
+#: stat.php:111
+msgid "New browser"
+msgstr "Browser baru"
+
+#: stat.php:112
+msgid "Language"
+msgstr "Bahasa"
+
+#: stat.php:113
+msgid "Date"
+msgstr "Tanggal"
+
+#: update.php:9
+msgid "Free webbrowsers"
+msgstr "Gratis webbrowsers"
+
+#: update.php:10
+msgid "These browsers are the newest versions of the most used free web browsers."
+msgstr "Browser ini adalah versi terbaru dari browser web gratis yang paling banyak digunakan."
+
+#: update.php:11
+msgid "Just choose a browser to download from the original vendor's website:"
+msgstr "Cukup pilih browser untuk men-download dari situs web vendor asli:"
+
+#: update.php:15
+msgid "Widely-used open-source browser, highly extendable and customizable"
+msgstr "Banyak digunakan browser open-source, sangat dapat diperpanjang dan disesuaikan"
+
+#: update.php:16
+#: update.php:21
+#: update.php:26
+#: update.php:31
+#: update.php:36
+msgid "Download"
+msgstr "Download"
+
+#: update.php:20
+msgid "Browser with many features"
+msgstr "Browser dengan banyak fitur"
+
+#: update.php:25
+msgid "Apple's fast browser"
+msgstr "Apple browser cepat"
+
+#: update.php:30
+msgid "Google's browser with compact interface"
+msgstr "Google browser dengan antarmuka kompak"
+
+#: update.php:35
+msgid "Windows built-in browser"
+msgstr "Windows built-in browser"
+
+#: update.php:40
+msgid "All browsers have the same basic features and easy interface."
+msgstr "Semua browser memiliki fitur dasar yang sama dan antarmuka yang mudah."
+
+#: update.php:48
+msgid "The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites."
+msgstr "Browser yang Anda gunakan sudah ketinggalan jaman. Browser Anda telah diketahui memiliki <b>kelemahan keamanan dan kerugian</b> dan <b>fitur terbatas</b>. Anda tidak akan melihat semua fitur dari beberapa website."
+
+#: update.php:52
+msgid "Switching to a newer browser could give you a lot of advantages:"
+msgstr "Beralih ke browser yang lebih baru bisa memberikan banyak keuntungan:"
+
+#: update.php:55
+msgid "Security"
+msgstr "Keamanan"
+
+#: update.php:56
+msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
+msgstr "Browser yang lebih baru melindungi Anda lebih baik terhadap penipuan, virus, trojan, ancaman phishing dan lainnya. Mereka juga memperbaiki lubang keamanan pada browser Anda saat ini!"
+
+#: update.php:59
+msgid "Speed"
+msgstr "Kecepatan"
+
+#: update.php:60
+msgid "Every new browser generation improves speed"
+msgstr "Setiap generasi baru meningkatkan kecepatan browser"
+
+#: update.php:63
+msgid "Compatibility"
+msgstr "Kecocokan"
+
+#: update.php:64
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "Website yang menggunakan teknologi baru akan ditampilkan lebih tepatnya"
+
+#: update.php:67
+msgid "Comfort &amp; better experience"
+msgstr "Comfort & pengalaman yang lebih baik"
+
+#: update.php:68
+msgid "With new features, extensions and better customisability, you will have a more comfortable web-experience"
+msgstr "Dengan fitur baru, ekstensi dan customisability lebih baik, Anda akan memiliki web pengalaman lebih nyaman"
+
+#: update.php:73
+msgid "Updating is easy, takes just a few minutes and is totally free."
+msgstr "Memperbarui mudah, hanya memerlukan beberapa menit dan benar-benar gratis."
+
+#: update.php:75
+msgid "If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it."
+msgstr "Jika Anda berada di komputer, yang dikelola oleh admin dan Anda tidak dapat menginstal sebuah browser baru, tanyakan admin Anda tentang hal ini."
+
+#: update.php:79
+msgid "Why this website?"
+msgstr "Mengapa situs ini?"
+
+#: update.php:81
+msgid "This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors."
+msgstr "Website ini adalah sebuah inisiatif oleh webdesigners, webmaster dan blogger yang ingin membawa web lebih jauh dan membantu pengunjung mereka."
+
+#: update.php:84
+msgid "Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>."
+msgstr "Browser usang adalah ancaman <b>keamanan</ b> dan <b> memblokir kemajuan web</b> karena fitur terbatas dan banyak <b>bug</b>."
+
+#: update.php:89
+msgid "\"I'm not able to update my browser\""
+msgstr "\"Aku tidak dapat memperbarui browser\""
+
+#: update.php:90
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
+msgstr "Jika Anda tidak dapat mengubah browser Anda karena masalah kompatibilitas, pikirkan untuk menginstall browser kedua untuk browsing dan menyimpan yang lama untuk kompatibilitas."
+

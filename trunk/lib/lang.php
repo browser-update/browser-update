@@ -14,7 +14,8 @@ $lang_rewrite = array(
 	"it"=>"it_IT",
         "pt"=>"pt_BR",
         "sl"=>"sl_SL",
-        "ru"=>"ru_RU"
+        "ru"=>"ru_RU",
+        "id"=>"id_ID"
 );
 
 /**
