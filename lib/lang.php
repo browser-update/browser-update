@@ -13,7 +13,8 @@ $lang_rewrite = array(
 	"nl"=>"nl_NL",
 	"it"=>"it_IT",
         "pt"=>"pt_BR",
-        "sl"=>"sl_SL"
+        "sl"=>"sl_SL",
+        "ru"=>"ru_RU"
 );
 
 /**

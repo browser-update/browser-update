@@ -112,6 +112,8 @@ else if (ll=="pt")
 else if (ll=="sl")
     t = 'Vaš brskalnik (%s) je <b>zastarel</b>. Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. \
         <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
+else if (ll=="ru")
+    t = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
 if (op.text)
     t = op.text;
 
