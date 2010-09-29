@@ -114,6 +114,8 @@ else if (ll=="sl")
         <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
 else if (ll=="ru")
     t = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
+else if (ll=="id")
+    t = 'Browser Anda (% s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>';
 if (op.text)
     t = op.text;
 

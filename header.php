@@ -40,6 +40,8 @@ $curfile = end($parts);
     <a href="/ja/<?echo $curfile?>">japanese</a>
     <a href="/sl/<?echo $curfile?>">slovenščina</a>
     <a href="/ru/<?echo $curfile?>">Русский</a>
+    <a href="/id/<?echo $curfile?>">Bahasa Indonesia</a>
+
 
     <a href="contact.html">translate...</a>
 </div>
