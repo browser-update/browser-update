@@ -107,7 +107,7 @@ include("header.php");
 				'<a href="%s">TYPOlight</a> (german), ' .
                                 '<a href="%s">vBulletin</a>, ' .
                                 '<a href="%s">concrete5</a>.',
-				'http://fileserver.julianbrinke.de/WP/',
+				'http://dvnr.de/wordpress/browser-update/',
                                 'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
 				'http://typolight.org/erweiterungsliste/view/browser_update.html',
                                 'http://www.vbulletin.org/forum/showthread.php?t=239559',
