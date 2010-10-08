@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-28 19:59+0200\n"
+"POT-Creation-Date: 2010-10-08 14:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: config.sample.php:5
-msgid "database connection problem"
-msgstr ""
-
-#: config.sample.php:7
-msgid "database not found"
-msgstr ""
-
-#: contact.php:8 header.php:33
+#: contact.php:8 header.php:56
 msgid "Contact"
 msgstr ""
 
@@ -110,7 +102,7 @@ msgid ""
 "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
 
-#: header.php:5 header.php:28
+#: header.php:5 header.php:51
 msgid "Browser-Update.org"
 msgstr ""
 
@@ -118,32 +110,28 @@ msgstr ""
 msgid "Inform your visitors about browser-updates"
 msgstr ""
 
-#: header.php:29
+#: header.php:52
 msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr ""
 
-#: header.php:32
+#: header.php:55
 msgid "Start"
 msgstr ""
 
-#: header.php:34
+#: header.php:57
 msgid "Help"
 msgstr ""
 
-#: header.php:35
+#: header.php:58
 msgid "Supporters"
 msgstr ""
 
-#: header.php:36 index.php:90 stat.php:9
+#: header.php:59 index.php:90 stat.php:9
 msgid "Statistics"
 msgstr ""
 
-#: header.php:37
+#: header.php:60
 msgid "Blog"
-msgstr ""
-
-#: header.php:53
-msgid "translate..."
 msgstr ""
 
 #: index.php:13
@@ -266,10 +254,6 @@ msgstr ""
 msgid "Customizable"
 msgstr ""
 
-#: index.php:80 index.php:90
-msgid "<span class=\"workingonit\">work in progress</span>"
-msgstr ""
-
 #: index.php:81
 msgid ""
 "You can customize the browsers and versions to notifiy.<br/> In future "
@@ -283,6 +267,10 @@ msgstr ""
 
 #: index.php:87
 msgid "The message is automatically displayed in the user's language."
+msgstr ""
+
+#: index.php:90
+msgid "<span class=\"workingonit\">work in progress</span>"
 msgstr ""
 
 #: index.php:91
@@ -397,8 +385,8 @@ msgstr ""
 
 #: index.php:217
 msgid ""
-"... they often just do not appreciate the ‚need to update or the existence "
-"of the \"webbrowser\" as a software at all."
+"... they often just do not appreciate the need to update or the existence of "
+"the \"webbrowser\" as a software at all."
 msgstr ""
 
 #: index.php:220
@@ -461,150 +449,126 @@ msgstr ""
 msgid "Amount"
 msgstr ""
 
-#: stat.php:104
-msgid "Recent browser updates"
-msgstr ""
-
-#: stat.php:109
-msgid "Site"
-msgstr ""
-
-#: stat.php:110
-msgid "Old browser"
-msgstr ""
-
-#: stat.php:111
-msgid "New browser"
-msgstr ""
-
-#: stat.php:112
-msgid "Language"
-msgstr ""
-
-#: stat.php:113
-msgid "Date"
-msgstr ""
-
-#: update.php:9
+#: update.php:22
 msgid "Free webbrowsers"
 msgstr ""
 
-#: update.php:10
+#: update.php:23
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr ""
 
-#: update.php:11
+#: update.php:24
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
 
-#: update.php:15
+#: update.php:28
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr ""
 
-#: update.php:16 update.php:21 update.php:26 update.php:31 update.php:36
+#: update.php:29 update.php:34 update.php:39 update.php:44 update.php:49
 msgid "Download"
 msgstr ""
 
-#: update.php:20
+#: update.php:33
 msgid "Browser with many features"
 msgstr ""
 
-#: update.php:25
+#: update.php:38
 msgid "Apple's fast browser"
 msgstr ""
 
-#: update.php:30
+#: update.php:43
 msgid "Google's browser with compact interface"
 msgstr ""
 
-#: update.php:35
+#: update.php:48
 msgid "Windows built-in browser"
 msgstr ""
 
-#: update.php:40
+#: update.php:53
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 
-#: update.php:48
+#: update.php:61
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
 "features of some websites."
 msgstr ""
 
-#: update.php:52
+#: update.php:65
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr ""
 
-#: update.php:55
+#: update.php:68
 msgid "Security"
 msgstr ""
 
-#: update.php:56
+#: update.php:69
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
 
-#: update.php:59
+#: update.php:72
 msgid "Speed"
 msgstr ""
 
-#: update.php:60
+#: update.php:73
 msgid "Every new browser generation improves speed"
 msgstr ""
 
-#: update.php:63
+#: update.php:76
 msgid "Compatibility"
 msgstr ""
 
-#: update.php:64
+#: update.php:77
 msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 
-#: update.php:67
+#: update.php:80
 msgid "Comfort &amp; better experience"
 msgstr ""
 
-#: update.php:68
+#: update.php:81
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
 
-#: update.php:73
+#: update.php:86
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
 
-#: update.php:75
-msgid ""
-"If you are on a computer, that is maintained by a admin and you cannot "
-"install a new browser, ask your admin about it."
-msgstr ""
-
-#: update.php:79
+#: update.php:91
 msgid "Why this website?"
 msgstr ""
 
-#: update.php:81
+#: update.php:93
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
 
-#: update.php:84
+#: update.php:96
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
 
-#: update.php:89
+#: update.php:100
 msgid "\"I'm not able to update my browser\""
 msgstr ""
 
-#: update.php:90
+#: update.php:101
+msgid ""
+"If you are on a computer, that is maintained by a admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+
+#: update.php:102
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
