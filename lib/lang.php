@@ -12,10 +12,10 @@ $lang_rewrite = array(
 	"pl"=>"pl_PL",
 	"nl"=>"nl_NL",
 	"it"=>"it_IT",
-        "pt"=>"pt_BR",
-        "sl"=>"sl_SL",
-        "ru"=>"ru_RU",
-        "id"=>"id_ID"
+	"pt"=>"pt_BR",
+	"sl"=>"sl_SI",
+	"ru"=>"ru_RU",
+	"id"=>"id_ID"
 );
 
 /**
