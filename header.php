@@ -41,6 +41,11 @@ $curfile = end($parts);
     <a href="/sl/<?echo $curfile?>">slovenščina</a>
     <a href="/ru/<?echo $curfile?>">Русский</a>
     <a href="/id/<?echo $curfile?>">Bahasa Indonesia</a>
+	<a href="/kr/<?echo $curfile?>">한국어</a>
+	<a href="/uk/<?echo $curfile?>">Українська</a>
+	<a href="/rm/<?echo $curfile?>">Rumantsch</a>
+	
+	
 
 
     <a href="contact.html">translate...</a>
@@ -53,7 +58,8 @@ $curfile = end($parts);
 </div>
 <ul id="tabs">
 	<li><a href="index.html"><?php echo T_('Start'); ?></a></li>
-	<li class="r"><a href="contact.html"><?php echo T_('Contact'); ?></a></li>
+	<li><a href="update.html"><?php echo T_('Update Browser'); ?></a></li>
+	<li class="r"><a href="contact.html"><?php echo T_('Contact'); ?></a></li>	
 	<!--<li class="r"><a href="/help.html"><?php echo T_('Help'); ?></a></li>-->
 	<!--<li class="r"><a href="/supporters.html"><?php echo T_('Supporters'); ?></a></li>-->
 	<li class="r"><a href="stat.html"><?php echo T_('Statistics'); ?></a></li>
@@ -63,9 +69,16 @@ $curfile = end($parts);
 
 
 <div id="bookmark">
-    <!-- AddThis Button BEGIN -->
-    <script type="text/javascript">addthis_pub  = 'Jossele';</script>
-    <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-bm.gif" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
-    <!-- AddThis Button END -->
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+	<a class="addthis_button_preferred_1"></a>
+	<a class="addthis_button_preferred_2"></a>
+	<a class="addthis_button_preferred_3"></a>
+	<a class="addthis_button_preferred_4"></a>
+	<a class="addthis_button_compact"></a>
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=Jossele"></script>
+	<!-- AddThis Button END -->
 </div>
 <div id="body">

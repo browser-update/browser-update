@@ -1,102 +1,101 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# Park Shinjo <peremen@gmail.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2011-03-05 12:28+0100\n"
+"PO-Revision-Date: 2011-03-05 12:34+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
-"Language-Team: benny <bknliem@yahoo.com>\n"
+"Language-Team: Korean <kde@peremen.name>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contact.php:8
 #: header.php:62
 msgid "Contact"
-msgstr "Kontak"
+msgstr "정보"
 
 #: customize.php:8
 msgid "Customize and test"
-msgstr "Sesuaikan dan uji"
+msgstr "사용자 정의 및 테스트"
 
 #: customize.php:11
 msgid "Test the script"
-msgstr "Test script"
+msgstr "스크립트 테스트"
 
 #: customize.php:14
 msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
-msgstr "Jika Anda membuka situs web Anda dengan <code>#test-bu</code> ditambahkan ke url, bar akan selalu muncul."
+msgstr "웹 사이트 URL 맨 끝에 <code>#test-bu</code>를 붙이면 알림 표시줄을 항상 표시합니다."
 
 #: customize.php:15
 msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-msgstr "Contoh: <code>http://browser-update.org/#test-bu</code>."
+msgstr "예제: <code>http://browser-update.org/#test-bu</code>."
 
-# tes-bu </ code>."
 #: customize.php:16
 msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
-msgstr "Pastikan halaman dengan benar reloaded dengan membuka URL di tab browser yang baru."
+msgstr "새로운 창이나 탭으로 페이지를 열어서 페이지가 올바르게 새로 고쳐졌는지 확인하십시오."
 
 #: customize.php:19
 msgid "Options"
-msgstr "Pilihan"
+msgstr "옵션"
 
 #: customize.php:22
 msgid "The following options can be passed to the script:"
-msgstr "Pilihan berikut dapat dikirimkan ke script berikut:"
+msgstr "스크립트의 옵션은 다음과 같습니다:"
 
 #: customize.php:27
 msgid "browser versions to notify"
-msgstr "versi browser untuk memberitahu"
+msgstr "알릴 브라우저 버전"
 
 #: customize.php:28
 msgid "atfer how many hours should the message reappear"
-msgstr "setelah berapa jam harus pesan muncul kembali"
+msgstr "메시지를 다시 표시할 시간"
 
 #: customize.php:29
 msgid "0 = show all the time"
-msgstr "0 = menampilkan semua waktu"
+msgstr "0 = 항상 표시"
 
 #: customize.php:30
 msgid "callback function after the bar has appeared"
-msgstr "fungsi panggilan balik setelah bar telah muncul"
+msgstr "알림 표시줄이 나타난 다음 호출할 콜백 함수"
 
 #: customize.php:32
 msgid "set a language for the message, e.g. \"en\""
-msgstr "menetapkan bahasa untuk pesan, misalnya \"en\""
+msgstr "메시지 언어. 예: \"ko\""
 
 #: customize.php:33
 msgid "overrides the default detection"
-msgstr "menimpa deteksi default"
+msgstr "기본 언어 감지를 무시함"
 
 #: customize.php:34
 msgid "true = always show the bar (for testing)"
-msgstr "true = selalu menampilkan bar (untuk pengujian)"
+msgstr "true = 항상 표시줄 보이기 (테스트용)"
 
 #: customize.php:35
 msgid "custom notification html text"
-msgstr "teks pemberitahuan kustom html"
+msgstr "사용자 정의 알림 HTML 텍스트"
 
 #: customize.php:36
 msgid "open link in new window/tab"
-msgstr "membuka pranala di window/tab baru"
+msgstr "새 창이나 탭으로 링크 열기"
 
 #: customize.php:59
 msgid "Edit the CSS"
-msgstr "Edit CSS itu"
+msgstr "CSS 편집하기"
 
 #: customize.php:62
 msgid "The following CSS rules are applied by the script. "
-msgstr "CSS mengikuti peraturan yang diterapkan oleh skrip."
+msgstr "스크립트를 실행하면 다음 CSS 규칙이 적용됩니다. "
 
 #: customize.php:63
 msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-msgstr "Anda dapat menimpa mereka pada CSS sendiri. Untuk melakukannya Anda perlu menambahkan beberapa spesifisitas yang lebih kepada aturan css-: misalnya <code>body .buorg {font-size:20px}</code>"
+msgstr "CSS 규칙은 수정할 수 있습니다. CSS 규칙에 새로운 항목을 추가하시면 됩니다. 예: <code>body.buorg {font-size:20px}</code>"
 
 #: header.php:5
 #: header.php:56
@@ -105,314 +104,315 @@ msgstr "Browser-Update.org"
 
 #: header.php:5
 msgid "Inform your visitors about browser-updates"
-msgstr "Menginformasikan Anda pengunjung tentang browser-update"
+msgstr "웹 사이트 방문자에게 브라우저 업데이트를 알려 줍니다"
 
 #: header.php:57
 msgid "An initiative by webdesigners to inform users about browser-updates"
-msgstr "Sebuah inisiatif oleh webdesigners untuk memberitahukan pengguna tentang browser-update"
+msgstr "웹 디자이너들이 시작한 브라우저 업데이트 알림 프로그램"
 
 #: header.php:60
 msgid "Start"
-msgstr "Mulai"
+msgstr "시작"
 
 #: header.php:61
+#, fuzzy
 msgid "Update Browser"
-msgstr "äupdate"
+msgstr ""
 
 #: header.php:63
 msgid "Help"
-msgstr "Membantu"
+msgstr "도움말"
 
 #: header.php:64
 msgid "Supporters"
-msgstr "Pendukung"
+msgstr "후원자"
 
 #: header.php:65
 #: index.php:90
 #: stat.php:9
 #: statdetail.php:9
 msgid "Statistics"
-msgstr "Statistika"
+msgstr "통계"
 
 #: header.php:66
 msgid "Blog"
-msgstr "Blog"
+msgstr "블로그"
 
 #: index.php:13
 msgid "This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser."
-msgstr "Layanan ini adalah kesempatan untuk menginformasikan pengunjung Anda mencolok untuk beralih ke browser yang lebih baru."
+msgstr "이 서비스는 웹 사이트 방문자들을 크게 방해하지 않으면서 새로운 브라우저로 전환하라는 알림을 표시합니다."
 
 #: index.php:17
 msgid "Many internet users are still using very old, out-dated browsers – most of them for no actual reason. Switching to an newer browser is better for them and for you as a webdesigner."
-msgstr "Banyak pengguna internet masih menggunakan sangat tua, browser keluar-tanggal - kebanyakan dari mereka tanpa alasan yang sebenarnya. Berpindah ke browser yang lebih baru adalah lebih baik bagi mereka dan bagi Anda sebagai seorang desainer."
+msgstr "많은 인터넷 사용자들은 오래된 브라우저를 사용하고 있으며, 대부분은 큰 이유가 없습니다. 새로운 브라우저로 전환하면 사용자와 웹 디자이너 모두에게 도움이 됩니다."
 
 #: index.php:26
 msgid "How it works"
-msgstr "Cara kerjanya"
+msgstr "따라하기"
 
 #: index.php:30
 #, php-format
 msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
-msgstr "Sertakan javascript kecil kami <a href=\"%s\">pemberitahuan</a> pada situs anda"
+msgstr "웹 사이트에 작은 자바스크립트 <a href=\"%s\">알림</a>을 추가하십시오"
 
 #: index.php:33
 msgid "Visitors with out-dated browser will be informed by a little, undisturbing bar, that his browser is not up-to-date and it is recommended to update."
-msgstr "Pengunjung dengan browser keluar-tanggal akan diinformasikan oleh bar, sedikit undisturbing, bahwa browser-nya tidak up-to-date dan dianjurkan untuk memperbarui."
+msgstr "오래된 브라우저로 웹 사이트를 방문하면 사이트 맨 위에 현재 브라우저는 오래되었으며 업데이트를 추천하는 조그마한 알림 표시줄이 나타납니다."
 
 #: index.php:36
 msgid "Test the notification bar!"
-msgstr "Uji bar pemberitahuan!"
+msgstr "지금 확인해 보세요!"
 
 #: index.php:38
 #, php-format
 msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
-msgstr "Browser Anda (% s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>"
+msgstr "지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>"
 
 #: index.php:45
 #, php-format
 msgid "By clicking the bar, he will get to <a href=\"%s\">an info page with arguments why to change/update and some browser choices</a>."
-msgstr "Dengan mengklik bar, ia akan sampai <a href=\"%s\">sebuah halaman info dengan argumen mengapa untuk mengubah/update dan beberapa pilihan browser</a>."
+msgstr "표시줄을 누르면 방문자는 <a href=\"%s\">왜 웹 브라우저를 업데이트해야 하는지에 대한 이유와 최신 브라우저 목록을 소개하는 페이지</a>로 이동합니다."
 
 #: index.php:49
 msgid "If the visitor ignores the advice, it won't appear again for some time."
-msgstr "Jika pengunjung yang mengabaikan nasihat, tidak akan muncul lagi untuk beberapa waktu."
+msgstr "이 알림을 닫으면 당분간 표시되지 않습니다."
 
 #: index.php:52
 msgid "Advantages and features"
-msgstr "Keuntungan dan fitur"
+msgstr "장점과 기능"
 
 #: index.php:55
 msgid "Subtle"
-msgstr "Halus"
+msgstr "아담함"
 
 #: index.php:56
 msgid "The user will be notified only once, and won't be bothered any more. The notification bar is very small and won't affect the browsing experience negatively."
-msgstr "User akan diberitahu hanya sekali, dan tidak akan diganggu lagi. Pemberitahuan bar sangat kecil dan tidak akan mempengaruhi pengalaman browsing negatif."
+msgstr "사용자에게는 알림이 한 번만 표시됩니다. 알림 표시줄은 매우 작으며, 웹 사이트 탐색을 해치지 않습니다."
 
 #: index.php:60
 msgid "Informative"
-msgstr "Informatif"
+msgstr "정보성"
 
 #: index.php:61
 msgid "Tell the users that they are using an out-dated browser and that your website looks even better with a newer one."
-msgstr "Katakan pada pengguna bahwa mereka menggunakan browser yang keluar-tanggal dan bahwa situs web Anda terlihat lebih baik dengan yang baru."
+msgstr "사용자가 오래된 브라우저를 사용함을 알려 주고, 새 브라우저를 설치하면 더 예쁘게 보인다는 점을 알려 줍니다."
 
 #: index.php:65
 msgid "Idealistic"
-msgstr "Idealistis"
+msgstr "이상적"
 
 #: index.php:66
 msgid "Help evolve the web!"
-msgstr "Bantuan berevolusi web!"
+msgstr "웹의 발전에 동참합니다!"
 
 #: index.php:67
 msgid "Support the standards-based web!"
-msgstr "Mendukung standar berbasis web!"
+msgstr "표준 웹을 지지합니다!"
 
 #: index.php:68
 msgid "Support Open Source software projects!"
-msgstr "Mendukung proyek-proyek perangkat lunak Open Source!"
+msgstr "오픈소스 소프트웨어를 지원합니다!"
 
 #: index.php:69
 msgid "Help your visitors!"
-msgstr "Bantu pengunjung Anda!"
+msgstr "방문자들을 도와 줍니다!"
 
 #: index.php:70
 msgid "Help increase security awareness!"
-msgstr "Membantu meningkatkan kesadaran keamanan!"
+msgstr "보안에 대해서 다시 한 번 알려 줍니다!"
 
 #: index.php:71
 msgid "Support your favorite webbrowser!"
-msgstr "Dukungan penjelajah web favorit Anda!"
+msgstr "좋아하는 브라우저를 지원합니다!"
 
 #: index.php:74
 msgid "Low maintenance and up-to-date"
-msgstr "Rendah pemeliharaan dan up-to-date"
+msgstr "항상 새로움"
 
 #: index.php:75
 msgid "If there come more browser versions which won't be supported by the vendor in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically."
-msgstr "Jika ada versi browser datang lebih yang tidak akan didukung oleh vendor di masa depan, celah keamanan pameran atau sudah sangat tua untuk waktu yang lama kami akan menambahkan mereka ke daftar kami secara otomatis."
+msgstr "만약 웹 브라우저 제작사에서 지원을 중단하거나, 보안 취약점이 발견되었거나, 업데이트한 지 너무 오래 되었다면 자동으로 목록에 추가됩니다."
 
 #: index.php:80
 msgid "Customizable"
-msgstr "Customizable"
+msgstr "수정 가능함"
 
 #: index.php:81
 msgid "You can customize the browsers and versions to notify.<br/> In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things."
-msgstr "Anda dapat menyesuaikan browser dan versi untuk notifiy.<br/> Dalam rilis masa depan Anda juga dapat menyesuaikan teks yang harus ditampilkan, frekuensi bar untuk muncul dan banyak hal lainnya."
+msgstr "알려 줄 브라우저 종류와 버전을 선택할 수 있습니다.<br/>이후 버전에서는 보여 줄 텍스트나, 알림 표시줄이 나타날 주기 등을 설정할 수 있습니다."
 
 #: index.php:86
 msgid "Localized"
-msgstr "Localized"
+msgstr "지역화"
 
 #: index.php:87
 msgid "The message is automatically displayed in the user's language."
-msgstr "Pesan secara otomatis ditampilkan dalam bahasa pengguna."
+msgstr "사용자의 언어로 메시지가 표시됩니다."
 
 #: index.php:90
 msgid "<span class=\"workingonit\">work in progress</span>"
-msgstr "<span class=\"workingonit\">sedang dikerjakan</span>"
+msgstr "<span class=\"workingonit\">작업 중</span>"
 
 #: index.php:91
 #, php-format
 msgid "You get <a href=\"%s\">statistics</a> about which browsers your visitors are using and how much users got proselyted: How many users updated or changed their browser through your advice."
-msgstr "Anda mendapatkan <a href=\"%s\">statistik</a> tentang yang browser pengunjung menggunakan dan berapa banyak pengguna mendapatkan proselyted: Berapa banyak pengguna yang diperbarui atau diubah browser mereka melalui saran Anda."
+msgstr "방문자들이 사용하는 브라우저 <a href=\"%s\">통계</a>를 알 수 있으며, 이 메시지를 보고 얼마나 많은 사용자들이 웹 브라우저를 업데이트했는지 알 수 있습니다."
 
 #: index.php:97
 msgid "Install notification on your site"
-msgstr "Instal pemberitahuan di situs Anda"
+msgstr "여러분의 웹 사이트에 알림 달기"
 
 #: index.php:99
 msgid "Here you can get the code to include in your website. Just include it anywhere in the source of your page."
-msgstr "Di sini Anda bisa mendapatkan kode untuk memasukkan ke dalam situs web Anda. Hanya mencakup di mana saja dalam sumber halaman Anda."
+msgstr "웹 사이트에 추가할 코드입니다. 웹 페이지에 아래 코드를 추가하십시오."
 
 #: index.php:103
 msgid "You may also use third-party plugins for: "
-msgstr "Anda juga dapat menggunakan plugin pihak ketiga untuk:"
+msgstr "플러그인을 사용할 수도 있습니다: "
 
 #: index.php:121
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
-msgstr "Anda dapat <a href=\"%s\">menyesuaikan</a> gaya pesan, teks dan pilihan lainnya."
+msgstr "메시지의 스타일, 텍스트, 기타 옵션을 <a href=\"%s\">수정할 수</a>도 있습니다."
 
 #: index.php:127
 msgid "Following browsers will be notified:"
-msgstr "Berikut browser akan diberitahu:"
+msgstr "다음 브라우저로 접속하면 알림 표시:"
 
 #: index.php:166
 msgid "Google Chrome will automatically itself and is therefor always up to date"
-msgstr "Google Chrome akan secara otomatis sendiri dan untuk itu selalu up to date"
+msgstr "구글 Chrome은 자동으로 업데이트됩니다"
 
 #: index.php:172
 msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
-msgstr "<b>Beritahu daftar rekomendasi browser dan menyesuaikan secara otomatis dari waktu ke waktu:</b> Jika browser tidak lagi didukung oleh vendor atau memiliki kerentanan keamanan, maka akan ditambahkan untuk mengatur."
+msgstr "<b>추천하는 브라우저 목록으로 자동으로 갱신하기</b>: 제작사에서 브라우저를 지원하지 않거나 보안 취약점이 있는 경우 자동으로 목록에 추가됩니다."
 
 #: index.php:177
 msgid "Your Code"
-msgstr "Kode Anda"
+msgstr "추가할 코드"
 
 #: index.php:195
 msgid "Why you should tell users to update"
-msgstr "Mengapa Anda harus memberitahukan pengguna untuk memperbarui"
+msgstr "업데이트해야 한다고 말해야 하는 이유"
 
 #: index.php:198
 msgid "Reduced development costs and time"
-msgstr "Mengurangi biaya pengembangan dan waktu"
+msgstr "개발 시간과 비용 감소"
 
 #: index.php:199
 msgid "Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr "Mengoptimalkan situs untuk browser lama sehingga memakan waktu dan mahal."
+msgstr "오래 된 웹 브라우저에서도 동작하도록 최적화하려면 시간이 오래 걸리고 비용도 비싸집니다."
 
 #: index.php:202
 msgid "Webdesign technologies and features"
-msgstr "Webdesign teknologi dan fitur"
+msgstr "웹 디자인 기법과 기술"
 
 #: index.php:203
 msgid "There are all these great new web development standards and they are supported by modern browsers... but you may not use them."
-msgstr "Ada besar semua standar webdevlopment baru dan mereka didukung oleh browser modern ... tetapi Anda tidak dapat menggunakannya."
+msgstr "최신 웹 브라우저는 옛날보다 더 많은 웹 디자인 기술이나 웹 표준을 지원하지만... 한 번도 사용해 보지 못했을 수도 있습니다."
 
 #: index.php:205
 msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
-msgstr "Browser yang lebih baru membiarkan Anda menggunakan lebih banyak fitur dan teknologi baru (CSS3, SVG, HTML5, RSS, CSS Generated Content, Layout fleksibel) di situs web Anda, menghasilkan pengalaman browsing yang lebih baik bagi pengguna Anda."
+msgstr "새로운 브라우저는 더 많은 기능이나 신기술(CSS3, SVG, HTML5, RSS, CSS로 내용 생성, 유연한 레이아웃)을 지원합니다. 웹 사이트에 적용하면 더 좋은 모습을 더 쉽게 만들 수 있습니다."
 
 #: index.php:208
 msgid "Security and benefits for the user"
-msgstr "Keamanan dan manfaat bagi pengguna"
+msgstr "보안과 새로운 기능"
 
 #: index.php:209
 #, php-format
 msgid "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s\">update page</a>. The security-threats of outdates browsers are listed in this <a href=\"%s\">paper</a>."
-msgstr "Banyak manfaat: keamanan, kecepatan, fitur, ... Lihat <a href=\"%s\">halaman update</a>. Keamanan-benang outdates browser yang tercantum <a href=\"%s\">di sini</a>."
+msgstr "보안, 속도, 기능 등 여러 이점이 있습니다. <a href=\"%s\">업데이트 페이지</a>를 참고하십시오. 오래된 브라우저의 보안 취약점에 대한 분석은 <a href=\"%s\">이 논문</a>에 실려 있습니다."
 
 #: index.php:212
 msgid "The web has to evolve..."
-msgstr "Web telah berevolusi ..."
+msgstr "웹은 진화해야 합니다..."
 
 #: index.php:214
 msgid "But that's only possible if the browsers also evolve."
-msgstr "Tapi itu hanya mungkin jika browser juga berevolusi."
+msgstr "단 혼자서는 진화하지 못하고, 브라우저도 같이 진화해야 합니다."
 
 #: index.php:215
 msgid "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011."
-msgstr "Pangsa pasar yang kuat dari berusia 8 tahun penjelajah web (Internet Explorer 6) adalah sesuatu yang baru dalam sejarah web. Jika kita tidak mengambil tindakan sekarang, kita harus kode website seperti pada tahun 2001 bahkan jika 2011."
+msgstr "8년 전에 개발된 웹 브라우저(인터넷 익스플로러 6)가 아직까지도 사용되고 있다는 사실은 웹의 역사에서 드문 경우입니다. 지금 시작하지 않으면, 2011년에도 2001년처럼 웹 사이트를 디자인해야 합니다."
 
 #: index.php:219
 msgid "Users don't oppose updating..."
-msgstr "Pengguna tidak menentang memperbarui ..."
+msgstr "사용자는 업데이트를 싫어하지 않습니다..."
 
 #: index.php:220
 msgid "... they often just do not appreciate the need to update or the existence of the \"webbrowser\" as a software at all."
-msgstr "... mereka sering hanya tidak menghargai, perlu mengupdate atau adanya \"penjelajah web\" sebagai perangkat lunak sama sekali."
+msgstr "... 단지 업데이트할 이유를 모르거나 \"웹 브라우저\"가 존재한다는 것 자체도 모를 수도 있습니다."
 
 #: index.php:223
 msgid "Help this project"
-msgstr "Bantuan proyek ini"
+msgstr "이 프로젝트 돕기"
 
 #: index.php:226
 msgid "Participate!"
-msgstr "Berpartisipasi!"
+msgstr "동참하세요! "
 
 #: index.php:227
 msgid "Include the notification code in your page to inform users about browser updates."
-msgstr "Sertakan kode pemberitahuan di halaman Anda untuk memberitahukan pengguna tentang update browser."
+msgstr "웹 사이트에 브라우저 업데이트 알림을 추가하세요."
 
 #: index.php:230
 msgid "Spread the word!"
-msgstr "Sebarkan kata!"
+msgstr "널리 알려 주세요!"
 
 #: index.php:231
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr "Beritahu orang lain tentang inisiatif ini! Dalam blog Anda, pada halaman Web Anda, ..."
+msgstr "블로그나 웹 페이지를 통하여 이 운동을 알려 주세요!"
 
 #: index.php:234
 msgid "Translate this page"
-msgstr "Terjemahkan halaman ini"
+msgstr "번역해 주세요"
 
 #: index.php:235
 msgid "Translate this page into your language."
-msgstr "Terjemahkan halaman ini ke dalam bahasa Anda."
+msgstr "여러분의 모국어로 이 페이지를 번역해 주세요."
 
 #: stat.php:18
 #, php-format
 msgid "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
-msgstr "Situs <strong class=\"number\">%d</strong> yang kuat menggunakan script Browser-Update.org."
+msgstr "<strong class=\"number\">%d</strong>개의 웹 사이트에서 Browser-Update.org 스크립트를 사용하고 있습니다."
 
 #: stat.php:22
 msgid "Browser updates"
-msgstr "Browser update"
+msgstr "브라우저 업데이트"
 
 #: stat.php:60
 #, php-format
 msgid "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
-msgstr "Ada <strong class=\"number\">%d</strong> pengunjung yang sudah upgrade browser mereka."
+msgstr "<strong class=\"number\">%d</strong>명의 사용자가 웹 브라우저를 업그레이드했습니다."
 
 #: stat.php:92
 msgid "From"
-msgstr "Dari"
+msgstr "이전 브라우저"
 
 #: stat.php:92
 msgid "To"
-msgstr "Untuk"
+msgstr "업그레이드한 브라우저"
 
 #: stat.php:92
 msgid "Amount"
-msgstr "Jumlah"
+msgstr "사용자 수"
 
 #: update.php:46
 msgid "Free webbrowsers"
-msgstr "Gratis webbrowsers"
+msgstr "무료 웹 브라우저"
 
 #: update.php:47
 msgid "These browsers are the newest versions of the most used free web browsers."
-msgstr "Browser ini adalah versi terbaru dari browser web gratis yang paling banyak digunakan."
+msgstr "많이 사용되는 무료 웹 브라우저의 최신 버전입니다."
 
 #: update.php:48
 msgid "Just choose a browser to download from the original vendor's website:"
-msgstr "Cukup pilih browser untuk men-download dari situs web vendor asli:"
+msgstr "웹 브라우저 개발사의 웹 사이트에서 다운로드하십시오."
 
 #: update.php:52
 msgid "Widely-used open-source browser, highly extendable and customizable"
-msgstr "Banyak digunakan browser open-source, sangat dapat diperpanjang dan disesuaikan"
+msgstr "널리 사용되는 오픈 소스 브라우저. 다양한 확장 기능과 테마가 있음"
 
 #: update.php:53
 #: update.php:58
@@ -420,15 +420,15 @@ msgstr "Banyak digunakan browser open-source, sangat dapat diperpanjang dan dise
 #: update.php:77
 #: update.php:92
 msgid "Download"
-msgstr "Download"
+msgstr "다운로드"
 
 #: update.php:57
 msgid "Browser with many features"
-msgstr "Browser dengan banyak fitur"
+msgstr "다양한 기능이 있는 웹 브라우저"
 
 #: update.php:62
 msgid "Google's browser with compact interface."
-msgstr "Google browser dengan antarmuka kompak."
+msgstr "날씬한 인터페이스의 구글 웹 브라우저."
 
 #: update.php:62
 msgid "Automatically always up to date!"
@@ -446,108 +446,85 @@ msgstr " "
 
 #: update.php:76
 msgid "Apple's fast browser"
-msgstr "Apple browser cepat"
+msgstr "애플의 빠른 브라우저"
 
 #: update.php:84
 msgid "Only for Windows Vista or 7."
-msgstr ""
+msgstr "윈도우 비스타, 7 전용."
 
 #: update.php:91
 msgid "Windows built-in browser"
-msgstr "Windows built-in browser"
+msgstr "윈도에 내장된 웹 브라우저"
 
 #: update.php:97
 msgid "All browsers have the same basic features and easy interface."
-msgstr "Semua browser memiliki fitur dasar yang sama dan antarmuka yang mudah."
+msgstr "모든 웹 브라우저의 기본 기능은 큰 차이가 없으며 인터페이스도 어렵지 않습니다."
 
 #: update.php:105
 msgid "The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites."
-msgstr "Browser yang Anda gunakan sudah ketinggalan jaman. Browser Anda telah diketahui memiliki <b>kelemahan keamanan dan kerugian</b> dan <b>fitur terbatas</b>. Anda tidak akan melihat semua fitur dari beberapa website."
+msgstr "현재 사용하고 계신 웹 브라우저는 오래되었습니다. <b>알려진 보안 취약점</b>이 있으며, <b>새로운 기능</b>을 지원하지 않습니다. 일부 웹 사이트가 깨져 보일 수도 있습니다."
 
 #: update.php:109
 msgid "Switching to a newer browser could give you a lot of advantages:"
-msgstr "Beralih ke browser yang lebih baru bisa memberikan banyak keuntungan:"
+msgstr "새로운 브라우저로 업데이트하면 여러 이점이 있습니다."
 
 #: update.php:112
 msgid "Security"
-msgstr "Keamanan"
+msgstr "보안"
 
 #: update.php:113
 msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
-msgstr "Browser yang lebih baru melindungi Anda lebih baik terhadap penipuan, virus, trojan, ancaman phishing dan lainnya. Mereka juga memperbaiki lubang keamanan pada browser Anda saat ini!"
+msgstr "새로운 웹 브라우저는 사기, 바이러스, 악성 코드, 피싱 등 여러 위협에서 여러분을 지켜 줍니다. 현재 웹 브라우저의 보안 취약점도 수정되었습니다!"
 
 #: update.php:116
 msgid "Speed"
-msgstr "Kecepatan"
+msgstr "속도"
 
 #: update.php:117
 msgid "Every new browser generation improves speed"
-msgstr "Setiap generasi baru meningkatkan kecepatan browser"
+msgstr "새로운 브라우저가 나올 때마다 속도가 빨라집니다"
 
 #: update.php:120
 msgid "Compatibility"
-msgstr "Kecocokan"
+msgstr "호환성"
 
 #: update.php:121
 msgid "Websites using new technology will be displayed more correctly"
-msgstr "Website yang menggunakan teknologi baru akan ditampilkan lebih tepatnya"
+msgstr "새로운 기술을 사용하는 웹 사이트가 더 정확하게 표시됩니다"
 
 #: update.php:124
 msgid "Comfort &amp; better experience"
-msgstr "Comfort & pengalaman yang lebih baik"
+msgstr "향상된 사용자 경험"
 
 #: update.php:125
 msgid "With new features, extensions and better customisability, you will have a more comfortable web-experience"
-msgstr "Dengan fitur baru, ekstensi dan customisability lebih baik, Anda akan memiliki web pengalaman lebih nyaman"
+msgstr "새로운 기능, 확장, 옵션이 추가되어 더 나은 웹 브라우징을 즐길 수 있습니다"
 
 #: update.php:130
 msgid "Updating is easy, takes just a few minutes and is totally free."
-msgstr "Memperbarui mudah, hanya memerlukan beberapa menit dan benar-benar gratis."
+msgstr "업데이트는 쉽습니다. 시간도 얼마 걸리지 않으며 무료입니다."
 
 #: update.php:135
 msgid "Why this website?"
-msgstr "Mengapa situs ini?"
+msgstr "왜 이 사이트인가요?"
 
 #: update.php:137
 msgid "This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors."
-msgstr "Website ini adalah sebuah inisiatif oleh webdesigners, webmaster dan blogger yang ingin membawa web lebih jauh dan membantu pengunjung mereka."
+msgstr "이 웹 사이트는 웹 디자이너, 운영자, 블로거들이 힘을 모아서 방문자들을 돕기 위한 운동입니다."
 
 #: update.php:140
 msgid "Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>."
-msgstr "Browser usang adalah ancaman <b>keamanan</ b> dan <b> memblokir kemajuan web</b> karena fitur terbatas dan banyak <b>bug</b>."
+msgstr "오래된 브라우저는 <b>보안 취약점</b>이며, 제한된 기능과 <b>버그</b> 때문에 <b>웹의 발전을 가로막고 있습니다</b>."
 
 #: update.php:144
 msgid "\"I'm not able to update my browser\""
-msgstr "\"Aku tidak dapat memperbarui browser\""
+msgstr "\"저는 브라우저를 업데이트할 수 없어요\" "
 
 #: update.php:145
 msgid "If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it."
-msgstr "Jika Anda berada di komputer, yang dikelola oleh admin dan Anda tidak dapat menginstal sebuah browser baru, tanyakan admin Anda tentang hal ini."
+msgstr "별도의 관리자가 있는 컴퓨터라면 관리자에게 부탁하십시오."
 
 #: update.php:146
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
-msgstr "Jika Anda tidak dapat mengubah browser Anda karena masalah kompatibilitas, pikirkan untuk menginstall browser kedua untuk browsing dan menyimpan yang lama untuk kompatibilitas."
+msgstr "호환성 문제 때문에 브라우저를 바꿀 수 없으면 새로운 브라우저를 따로 설치하는 것도 고려해 보십시오."
 
-#~ msgid "database connection problem"
-#~ msgstr "masalah koneksi database"
-
-#~ msgid "database not found"
-#~ msgstr "database tidak ditemukan"
-
-#~ msgid "translate..."
-#~ msgstr "menerjemahkan..."
-
-#~ msgid "Recent browser updates"
-#~ msgstr "Recent update browser"
-
-#~ msgid "Site"
-#~ msgstr "Situs"
-
-#~ msgid "New browser"
-#~ msgstr "Browser baru"
-
-#~ msgid "Language"
-#~ msgstr "Bahasa"
-
-#~ msgid "Date"
-#~ msgstr "Tanggal"

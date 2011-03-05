@@ -27,7 +27,7 @@ this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
 
-
+/*
 if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)==1)) { //test new script
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
@@ -35,7 +35,7 @@ if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)=
      document.body.appendChild(e);
      return;
 }
-
+*/
 
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
@@ -116,6 +116,12 @@ else if (ll=="ru")
     t = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
 else if (ll=="id")
     t = 'Browser Anda (% s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>';
+else if (ll=="uk")
+    t = 'Ваш браузер (%s) <b>застарів</b>. Він <b>уразливий</b> й може <b>не відображати всі можливості</b> на цьому й інших сайтах. <a%s>Дізнайтесь, як оновити Ваш браузер</a>';
+else if (ll=="ko")
+    t = '지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>';
+else if (ll=="rm")
+    t = 'Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da segirezza</b> enconuschents e mussa eventualmain <b>betg tut las funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes navigatur</a>.';
 if (op.text)
     t = op.text;
 

@@ -9,21 +9,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-08 14:09+0200\n"
-"PO-Revision-Date: 2010-03-11 13:37+0100\n"
-"Last-Translator: David Danier <david.danier@team23.de>\n"
+"POT-Creation-Date: 2011-03-05 11:56+0100\n"
+"PO-Revision-Date: 2011-03-05 12:37+0100\n"
+"Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: contact.php:8 header.php:56
+#: contact.php:8
+#: header.php:62
 msgid "Contact"
 msgstr "コンタクト"
 
 #: customize.php:8
-#, fuzzy
 msgid "Customize and test"
 msgstr "調整可能"
 
@@ -32,9 +32,7 @@ msgid "Test the script"
 msgstr ""
 
 #: customize.php:14
-msgid ""
-"If you open your website with <code>#test-bu</code> appended to the url, the "
-"bar will always show up."
+msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
 msgstr ""
 
 #: customize.php:15
@@ -42,9 +40,7 @@ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
 msgstr ""
 
 #: customize.php:16
-msgid ""
-"Make sure the page is properly reloaded by opening the url in an new browser "
-"tab."
+msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
 msgstr ""
 
 #: customize.php:19
@@ -84,7 +80,6 @@ msgid "true = always show the bar (for testing)"
 msgstr ""
 
 #: customize.php:35
-#, fuzzy
 msgid "custom notification html text"
 msgstr "インストールとコンフィグレーション"
 
@@ -101,12 +96,11 @@ msgid "The following CSS rules are applied by the script. "
 msgstr ""
 
 #: customize.php:63
-msgid ""
-"You can overwrite them in your own CSS. To do so you need to add some more "
-"specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
 
-#: header.php:5 header.php:51
+#: header.php:5
+#: header.php:56
 msgid "Browser-Update.org"
 msgstr "Browser-Update.org"
 
@@ -114,49 +108,44 @@ msgstr "Browser-Update.org"
 msgid "Inform your visitors about browser-updates"
 msgstr "ブラウザーアップデートについてのお知らせ"
 
-#: header.php:52
+#: header.php:57
 msgid "An initiative by webdesigners to inform users about browser-updates"
-msgstr ""
-"ブラウザーアップデート利用者へお知らせするためのウェブデザイナーによる第一歩"
+msgstr "ブラウザーアップデート利用者へお知らせするためのウェブデザイナーによる第一歩"
 
-#: header.php:55
+#: header.php:60
 msgid "Start"
 msgstr "スタート"
 
-#: header.php:57
+#: header.php:61
+msgid "Update Browser"
+msgstr ""
+
+#: header.php:63
 msgid "Help"
 msgstr "ヘルプ"
 
-#: header.php:58
+#: header.php:64
 msgid "Supporters"
 msgstr "支援者"
 
-#: header.php:59 index.php:90 stat.php:9
+#: header.php:65
+#: index.php:90
+#: stat.php:9
+#: statdetail.php:9
 msgid "Statistics"
 msgstr "統計"
 
-#: header.php:60
+#: header.php:66
 msgid "Blog"
 msgstr "ブログ"
 
 #: index.php:13
-msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
-msgstr ""
-"このサービスは、控えめで目立ちにくいように、あなたのサイト訪問者に新しいブラ"
-"ウザーに変えた方がいいとお知らせできること提供しています。"
+msgid "This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser."
+msgstr "このサービスは、控えめで目立ちにくいように、あなたのサイト訪問者に新しいブラウザーに変えた方がいいとお知らせできること提供しています。"
 
 #: index.php:17
-msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
-"them for no actual reason. Switching to an newer browser is better for them "
-"and for you as a webdesigner."
-msgstr ""
-"多くのインターネットユーザーは、例えば8年前くらいの<strong>Internet Explorer "
-"6</strong>など、今もとても古いブラウザーを利用しています。なので、新しいバー"
-"ジョンのブラウザーに変更してもらうことは、ウェブデザイナーとしては多くの利点"
-"を生むと言えます。"
+msgid "Many internet users are still using very old, out-dated browsers – most of them for no actual reason. Switching to an newer browser is better for them and for you as a webdesigner."
+msgstr "多くのインターネットユーザーは、例えば8年前くらいの<strong>Internet Explorer 6</strong>など、今もとても古いブラウザーを利用しています。なので、新しいバージョンのブラウザーに変更してもらうことは、ウェブデザイナーとしては多くの利点を生むと言えます。"
 
 #: index.php:26
 msgid "How it works"
@@ -164,14 +153,11 @@ msgstr "どのように機能するか？"
 
 #: index.php:30
 #, php-format
-msgid ""
-"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr ""
 
 #: index.php:33
-msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that his browser is not up-to-date and it is recommended to update."
+msgid "Visitors with out-dated browser will be informed by a little, undisturbing bar, that his browser is not up-to-date and it is recommended to update."
 msgstr ""
 
 #: index.php:36
@@ -179,22 +165,13 @@ msgid "Test the notification bar!"
 msgstr ""
 
 #: index.php:38
-#, fuzzy, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a%"
-"s>Learn how to update your browser</a>"
+#, php-format
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
 msgstr ""
-"お使いのブラウザーは旧バージョンのようです。 このブラウザーは既に認知されてい"
-"る安全上の弱点があり、限られた機能しかなく、今後、更なる短所をもたらすことに"
-"なりかねません。\n"
-"\t\t\t\t<!--Sie können nicht alle Funktionen dieser Webseite sehen.-->"
 
 #: index.php:45
 #, php-format
-msgid ""
-"By clicking the bar, he will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+msgid "By clicking the bar, he will get to <a href=\"%s\">an info page with arguments why to change/update and some browser choices</a>."
 msgstr ""
 
 #: index.php:49
@@ -210,26 +187,16 @@ msgid "Subtle"
 msgstr "慎み深い"
 
 #: index.php:56
-msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
-msgstr ""
-"訪問者にはたった一度だけ報告され、そしてしばらくの間、無傷のまま残されます"
-"（被害を免れさせる）。"
+msgid "The user will be notified only once, and won't be bothered any more. The notification bar is very small and won't affect the browsing experience negatively."
+msgstr "訪問者にはたった一度だけ報告され、そしてしばらくの間、無傷のまま残されます（被害を免れさせる）。"
 
 #: index.php:60
 msgid "Informative"
 msgstr "情報量の多い"
 
 #: index.php:61
-msgid ""
-"Tell the users that they are using an out-dated browser and that your "
-"website looks even better with a newer one."
-msgstr ""
-"あなたのサイトの訪問者に、古いタイプのブラウザーではなく、より多くの機能を備"
-"えたブラウザーを使ってもらえるようお知らせして下さい。 すべて私達の道具を使っ"
-"て、標準的な方法で、たくさんの更なるウェブサイトを作ることができます。"
+msgid "Tell the users that they are using an out-dated browser and that your website looks even better with a newer one."
+msgstr "あなたのサイトの訪問者に、古いタイプのブラウザーではなく、より多くの機能を備えたブラウザーを使ってもらえるようお知らせして下さい。 すべて私達の道具を使って、標準的な方法で、たくさんの更なるウェブサイトを作ることができます。"
 
 #: index.php:65
 msgid "Idealistic"
@@ -274,28 +241,16 @@ msgid "Low maintenance and up-to-date"
 msgstr "Low maintenance and 現状"
 
 #: index.php:75
-msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
-msgstr ""
-"もし更なるブラウザーが将来的に製造メーカーよりサポートされなくなってから、セ"
-"キュリティーホールが指摘され、またはとても古くなってしまった場合、私達のリス"
-"トに自動的に掲載するようにします。"
+msgid "If there come more browser versions which won't be supported by the vendor in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically."
+msgstr "もし更なるブラウザーが将来的に製造メーカーよりサポートされなくなってから、セキュリティーホールが指摘され、またはとても古くなってしまった場合、私達のリストに自動的に掲載するようにします。"
 
 #: index.php:80
 msgid "Customizable"
 msgstr "調整可能"
 
 #: index.php:81
-msgid ""
-"You can customize the browsers and versions to notifiy.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
-msgstr ""
-"どのブラウザーのバージョンでも、調整可能です。将来的には、お知らせ表示の頻度"
-"やデザイン、大きさなど色々なことを調節できる表示テキストを使えるようにする予"
-"定です。"
+msgid "You can customize the browsers and versions to notify.<br/> In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things."
+msgstr "どのブラウザーのバージョンでも、調整可能です。将来的には、お知らせ表示の頻度やデザイン、大きさなど色々なことを調節できる表示テキストを使えるようにする予定です。"
 
 #: index.php:86
 msgid "Localized"
@@ -311,198 +266,136 @@ msgstr ""
 
 #: index.php:91
 #, php-format
-msgid ""
-"You get <a href=\"%s\">statistics</a> about which browsers your visitors are "
-"using and how much users got proselyted: How many users updated or changed "
-"their browser through your advice."
-msgstr ""
-"<a href=\"%s\">あなたのサイトの訪問者がどのブラウザーを使っているか、またはど"
-"のくらいの訪問者があなたの助言によってブラウザーを変えたかどうか統計を取って"
-"調べてみて下さい。</a>"
+msgid "You get <a href=\"%s\">statistics</a> about which browsers your visitors are using and how much users got proselyted: How many users updated or changed their browser through your advice."
+msgstr "<a href=\"%s\">あなたのサイトの訪問者がどのブラウザーを使っているか、またはどのくらいの訪問者があなたの助言によってブラウザーを変えたかどうか統計を取って調べてみて下さい。</a>"
 
 #: index.php:97
 msgid "Install notification on your site"
 msgstr "インストールとコンフィグレーション"
 
 #: index.php:99
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
+msgid "Here you can get the code to include in your website. Just include it anywhere in the source of your page."
 msgstr ""
 
 #: index.php:103
 msgid "You may also use third-party plugins for: "
 msgstr ""
 
-#: index.php:118
+#: index.php:121
 #, php-format
-msgid ""
-"You can <a href=\"%s\">customize</a> the style of the message, the text and "
-"other options."
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 msgstr ""
 
-#: index.php:124
+#: index.php:127
 msgid "Following browsers will be notified:"
-msgstr ""
-"次に表記するブラウザーのバージョンはお知らせ機能はこのように表示される可能性"
-"があります："
+msgstr "次に表記するブラウザーのバージョンはお知らせ機能はこのように表示される可能性があります："
 
-#: index.php:163
-msgid ""
-"Google Chrome will automatically itself and is therefor always up to date"
+#: index.php:166
+msgid "Google Chrome will automatically itself and is therefor always up to date"
 msgstr ""
 
-#: index.php:169
-msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
-"vulnerabilities, it will be added to the set."
-msgstr ""
-"もしブラウザーが製造業者によりもうサポートされなくなって、セキュリティーホー"
-"ルが発見され、更にはとても古くなっている場合、ブラウザーのコードは自動的に調"
-"整されます。"
+#: index.php:172
+msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
+msgstr "もしブラウザーが製造業者によりもうサポートされなくなって、セキュリティーホールが発見され、更にはとても古くなっている場合、ブラウザーのコードは自動的に調整されます。"
 
-#: index.php:174
+#: index.php:177
 msgid "Your Code"
 msgstr "コード："
 
-#: index.php:192
-msgid "Why you should tell users to update"
-msgstr ""
-"何故あなたのサイト訪問者にブラウザーのアップデートをお知らせしないといけない"
-"のでしょうか"
-
 #: index.php:195
+msgid "Why you should tell users to update"
+msgstr "何故あなたのサイト訪問者にブラウザーのアップデートをお知らせしないといけないのでしょうか"
+
+#: index.php:198
 msgid "Reduced development costs and time"
 msgstr ""
 
-#: index.php:196
-msgid ""
-"Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr ""
-"改良費用の長期に渡る低下古いウェブサイトを最善化することはかなりの時間の無駄"
-"であるばかりか、面倒な上に費用がかかります。"
-
 #: index.php:199
+msgid "Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr "改良費用の長期に渡る低下古いウェブサイトを最善化することはかなりの時間の無駄であるばかりか、面倒な上に費用がかかります。"
+
+#: index.php:202
 msgid "Webdesign technologies and features"
 msgstr "ウェブデザインテクノロジーとその機能"
 
-#: index.php:200
-msgid ""
-"There are all these great new webdevlopment standards and they are supported "
-"by modern browsers... but you may not use them."
+#: index.php:203
+msgid "There are all these great new web development standards and they are supported by modern browsers... but you may not use them."
 msgstr ""
-
-#: index.php:202
-msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
-msgstr ""
-"今利用中のブラウザーをサポートしてくれる、素晴らしい新しいウェブ標準がありま"
-"す・・・・が、私達はそれをしょっちゅう使うことはできません。<br/>\n"
-"\t\t\t\t新しいブラウザーを利用することによって、ウェブデザイナーの際、よりた"
-"くさんの機能により良い技術（<a href=\"http://css3.com\" title=\"Die neue CSS-"
-"Generation mit vielen neuen Features新しいＣＳＳの生成と沢山のフィーチャー"
-"\">CSS3,</a> \n"
-"\t\t\t\t<a href=\"http://ja.wikipedia.org/wiki/SVG\" title=\"スケーラブル ベ"
-"クター グラフィックス\">SVG,</a> \n"
-"\t\t\t\tHTML5, <a href=\"http://ja.wikipedia.org/wiki/Rss\" title=\"ＲＳＳ"
-"\">RSS,</a>\tCSS Generated Content, flexible Layouts）を使うことができ、それ"
-"によって、サイト訪問者にもより良いサイトを提供することができます。"
 
 #: index.php:205
+msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
+msgstr ""
+"今利用中のブラウザーをサポートしてくれる、素晴らしい新しいウェブ標準があります・・・・が、私達はそれをしょっちゅう使うことはできません。<br/>\n"
+"\t\t\t\t新しいブラウザーを利用することによって、ウェブデザイナーの際、よりたくさんの機能により良い技術（<a href=\"http://css3.com\" title=\"Die neue CSS-Generation mit vielen neuen Features新しいＣＳＳの生成と沢山のフィーチャー\">CSS3,</a> \n"
+"\t\t\t\t<a href=\"http://ja.wikipedia.org/wiki/SVG\" title=\"スケーラブル ベクター グラフィックス\">SVG,</a> \n"
+"\t\t\t\tHTML5, <a href=\"http://ja.wikipedia.org/wiki/Rss\" title=\"ＲＳＳ\">RSS,</a>\tCSS Generated Content, flexible Layouts）を使うことができ、それによって、サイト訪問者にもより良いサイトを提供することができます。"
+
+#: index.php:208
 msgid "Security and benefits for the user"
 msgstr ""
 
-#: index.php:206
+#: index.php:209
 #, php-format
-msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threads of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+msgid "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s\">update page</a>. The security-threats of outdates browsers are listed in this <a href=\"%s\">paper</a>."
 msgstr ""
-"サイト利用者の為の安全と長所、速度、機能、快適さ： すべてリスト化された私達の"
-"<a href=\"%s\">アップデートサイト</a>\n"
+"サイト利用者の為の安全と長所、速度、機能、快適さ： すべてリスト化された私達の<a href=\"%s\">アップデートサイト</a>\n"
 "                安全性における問題点\n"
 "                <a href=\"%s\">\n"
-"                古いバージョンのブラウザーは公表の際に細かく取り扱われます。"
-"</a>."
+"                古いバージョンのブラウザーは公表の際に細かく取り扱われます。</a>."
 
-#: index.php:209
+#: index.php:212
 msgid "The web has to evolve..."
 msgstr "ウェブはどんどん進化していきます・・・。"
 
-#: index.php:211
+#: index.php:214
 msgid "But that's only possible if the browsers also evolve."
 msgstr "そして、どんどんより良く、更に快適になっていっているのです。"
 
-#: index.php:212
-msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
-"have to code websites like in 2001 even if it is 2011."
-msgstr ""
-"しかし、残念ながら、例えば8年もののInternet Explorer 6などはこのウェブの進化"
-"を妨げると言った状況があります。２０１１年のウェブサイトではもう２００１年か"
-"らの技術が使われないようご協力お願いします。"
+#: index.php:215
+msgid "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011."
+msgstr "しかし、残念ながら、例えば8年もののInternet Explorer 6などはこのウェブの進化を妨げると言った状況があります。２０１１年のウェブサイトではもう２００１年からの技術が使われないようご協力お願いします。"
 
-#: index.php:216
+#: index.php:219
 msgid "Users don't oppose updating..."
-msgstr ""
-"ウェブサイトの訪問者はブラウザーのアップデートを避けることは出来ないので"
-"す・・・。"
-
-#: index.php:217
-#, fuzzy
-msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
-msgstr ""
-"旧バージョンのブラウザーを使い続けてる方々は単にアップデートが出来ること、ま"
-"たするべきだと言うことを知らないだけなのです。多くのウェブ利用者はウェブブラ"
-"ウザーあ自主的な剃るとであることさえ知らないのです。"
+msgstr "ウェブサイトの訪問者はブラウザーのアップデートを避けることは出来ないのです・・・。"
 
 #: index.php:220
+msgid "... they often just do not appreciate the need to update or the existence of the \"webbrowser\" as a software at all."
+msgstr "旧バージョンのブラウザーを使い続けてる方々は単にアップデートが出来ること、またするべきだと言うことを知らないだけなのです。多くのウェブ利用者はウェブブラウザーあ自主的な剃るとであることさえ知らないのです。"
+
+#: index.php:223
 msgid "Help this project"
 msgstr "Helfen Sie diesem Projekt"
 
-#: index.php:223
+#: index.php:226
 msgid "Participate!"
 msgstr "一緒にやりましょう！"
 
-#: index.php:224
-msgid ""
-"Include the notification code in your page to inform users about browser "
-"updates."
-msgstr ""
-"あなたのサイトに自動お知らせ機能を追加し、あなたのサイト訪問者にブラウザーの"
-"アップデートするようお知らせしましょう。"
-
 #: index.php:227
+msgid "Include the notification code in your page to inform users about browser updates."
+msgstr "あなたのサイトに自動お知らせ機能を追加し、あなたのサイト訪問者にブラウザーのアップデートするようお知らせしましょう。"
+
+#: index.php:230
 msgid "Spread the word!"
 msgstr "お知らせしましょう！"
 
-#: index.php:228
+#: index.php:231
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
-"他のウェブデザイナーやウェブマスターをしている人にこの自動お知らせ機能のこと"
-"をお知らせしましょう！\n"
+"他のウェブデザイナーやウェブマスターをしている人にこの自動お知らせ機能のことをお知らせしましょう！\n"
 "                あなたのブログやウェブサイトで・・・。"
 
-#: index.php:231
+#: index.php:234
 msgid "Translate this page"
 msgstr "翻訳しましょう！"
 
-#: index.php:232
+#: index.php:235
 msgid "Translate this page into your language."
 msgstr "このサイトをあなたの母国語で翻訳するのにご協力お願いします！"
 
 #: stat.php:18
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
+msgid "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
 msgstr ""
 
 #: stat.php:22
@@ -511,9 +404,7 @@ msgstr ""
 
 #: stat.php:60
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
+msgid "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
 msgstr ""
 
 #: stat.php:92
@@ -528,167 +419,141 @@ msgstr ""
 msgid "Amount"
 msgstr ""
 
-#: update.php:22
+#: update.php:46
 msgid "Free webbrowsers"
 msgstr "この無料ウェブブラウザー"
 
-#: update.php:23
-msgid ""
-"These browsers are the newest versions of the most used free web browsers."
+#: update.php:47
+msgid "These browsers are the newest versions of the most used free web browsers."
 msgstr "このブラウサーは無料配布されている中では最新バージョンです。"
 
-#: update.php:24
+#: update.php:48
 msgid "Just choose a browser to download from the original vendor's website:"
-msgstr ""
-"ブラウザーの提供サイトからブラウザーをダウンロードするには、どれか1つのブラウ"
-"ザーをクリックして下さい："
+msgstr "ブラウザーの提供サイトからブラウザーをダウンロードするには、どれか1つのブラウザーをクリックして下さい："
 
-#: update.php:28
+#: update.php:52
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr "倍拡張版オープンソースブラウザー、強力な拡張と調整機能"
 
-#: update.php:29 update.php:34 update.php:39 update.php:44 update.php:49
+#: update.php:53
+#: update.php:58
+#: update.php:63
+#: update.php:77
+#: update.php:92
 msgid "Download"
 msgstr ""
 
-#: update.php:33
+#: update.php:57
 msgid "Browser with many features"
 msgstr ""
 
-#: update.php:38
+#: update.php:62
+msgid "Google's browser with compact interface."
+msgstr "コンパクトサーフェイスブラウザー Google製"
+
+#: update.php:62
+msgid "Automatically always up to date!"
+msgstr ""
+
+#: update.php:69
+#: update.php:83
+msgid "Not available for your System."
+msgstr ""
+
+#: update.php:70
+#: update.php:85
+msgid "Please choose another browser."
+msgstr ""
+
+#: update.php:76
 msgid "Apple's fast browser"
 msgstr "Apple社製のブラウザー"
 
-#: update.php:43
-msgid "Google's browser with compact interface"
-msgstr "コンパクトサーフェイスブラウザー Google製"
+#: update.php:84
+msgid "Only for Windows Vista or 7."
+msgstr ""
 
-#: update.php:48
+#: update.php:91
 msgid "Windows built-in browser"
 msgstr "Windowsの標準ウェブブラウザー"
 
-#: update.php:53
+#: update.php:97
 msgid "All browsers have the same basic features and easy interface."
-msgstr ""
-"すべてのブラウザーは同じような基礎容量が必要で、また同じような操作で使用可能"
-"です。"
+msgstr "すべてのブラウザーは同じような基礎容量が必要で、また同じような操作で使用可能です。"
 
-#: update.php:61
-msgid ""
-"The browser you are using is out of date. It has known <b>security flaws and "
-"disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
-"features of some websites."
+#: update.php:105
+msgid "The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites."
 msgstr ""
-"お使いのブラウザーは旧バージョンのようです。 このブラウザーは既に認知されてい"
-"る安全上の弱点があり、限られた機能しかなく、今後、更なる短所をもたらすことに"
-"なりかねません。\n"
+"お使いのブラウザーは旧バージョンのようです。 このブラウザーは既に認知されている安全上の弱点があり、限られた機能しかなく、今後、更なる短所をもたらすことになりかねません。\n"
 "\t\t\t\t<!--Sie können nicht alle Funktionen dieser Webseite sehen.-->"
 
-#: update.php:65
+#: update.php:109
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr ""
-"新しいバージョンの<a class=\"infoplus\" href=\"http://ja.wikipedia.org/wiki/"
-"ウェブブラウザ\"\n"
-"\t\t\t\ttitle=\"インターネットブラウザ\">ブラウザー</a>に変更することでたくさ"
-"んの利点を生むことができます："
+"新しいバージョンの<a class=\"infoplus\" href=\"http://ja.wikipedia.org/wiki/ウェブブラウザ\"\n"
+"\t\t\t\ttitle=\"インターネットブラウザ\">ブラウザー</a>に変更することでたくさんの利点を生むことができます："
 
-#: update.php:68
+#: update.php:112
 msgid "Security"
 msgstr "安全保障"
 
-#: update.php:69
-#, fuzzy
-msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing "
-"and other threats. They also fix security holes in your current browser!"
-msgstr ""
-"新しいブラウザーはより<a href=\"http://en.wikipedia.org/wiki/Internet_fraud"
-"\" title=\"Internet fraud\">詐欺</a>、ウイルス、<a href=\"http://ja."
-"wikipedia.org/wiki/フィッシング_(詐欺)\" title=\"フィッシング\">フィッシング"
-"サイト</a>や他の脅威からあなたの個人データを守ることが可能です。更新されたブ"
-"ラウザーはウイルスなどがあなたのコンピューターに侵略すると言ったセキュリ"
-"ティーホールを補修します。。"
+#: update.php:113
+msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
+msgstr "新しいブラウザーはより<a href=\"http://en.wikipedia.org/wiki/Internet_fraud\" title=\"Internet fraud\">詐欺</a>、ウイルス、<a href=\"http://ja.wikipedia.org/wiki/フィッシング_(詐欺)\" title=\"フィッシング\">フィッシングサイト</a>や他の脅威からあなたの個人データを守ることが可能です。更新されたブラウザーはウイルスなどがあなたのコンピューターに侵略すると言ったセキュリティーホールを補修します。。"
 
-#: update.php:72
+#: update.php:116
 msgid "Speed"
 msgstr "速度"
 
-#: update.php:73
+#: update.php:117
 msgid "Every new browser generation improves speed"
-msgstr ""
-"新バージョンのブラウザーはそれぞれインターネット表示速度が早くなっています。"
-"インターネットサーフィンをまた楽しむことができます。"
+msgstr "新バージョンのブラウザーはそれぞれインターネット表示速度が早くなっています。インターネットサーフィンをまた楽しむことができます。"
 
-#: update.php:76
+#: update.php:120
 msgid "Compatibility"
 msgstr "互換性"
 
-#: update.php:77
-#, fuzzy
+#: update.php:121
 msgid "Websites using new technology will be displayed more correctly"
-msgstr ""
-"どんどん出てきている新しい技術を使ったウェブサイトは、更新された新バージョン"
-"のブラウザーを使うことによってより良く利用可能です。こうして表示も圧倒的によ"
-"くなると言ったことも実現可能になります。"
+msgstr "どんどん出てきている新しい技術を使ったウェブサイトは、更新された新バージョンのブラウザーを使うことによってより良く利用可能です。こうして表示も圧倒的によくなると言ったことも実現可能になります。"
 
-#: update.php:80
+#: update.php:124
 msgid "Comfort &amp; better experience"
 msgstr "快適さとその実績"
 
-#: update.php:81
-msgid ""
-"With new features, extensions and better customisability, you will have a "
-"more comfortable web-experience"
-msgstr ""
-"新しい機能とより良い拡張機能を備えたブラウザーを使うことによって、より早く簡"
-"単にインターネットサーフィンをすることが出来ます。"
+#: update.php:125
+msgid "With new features, extensions and better customisability, you will have a more comfortable web-experience"
+msgstr "新しい機能とより良い拡張機能を備えたブラウザーを使うことによって、より早く簡単にインターネットサーフィンをすることが出来ます。"
 
-#: update.php:86
+#: update.php:130
 msgid "Updating is easy, takes just a few minutes and is totally free."
-msgstr ""
-"ブラウザーのアップデートは簡単に短時間で出来る上に完全無料になっています。"
+msgstr "ブラウザーのアップデートは簡単に短時間で出来る上に完全無料になっています。"
 
-#: update.php:91
+#: update.php:135
 msgid "Why this website?"
 msgstr ""
 
-#: update.php:93
-msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who "
-"want to bring the web further and help their visitors."
+#: update.php:137
+msgid "This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors."
 msgstr ""
-"このサイトはウェブデザイナー、ウェブマスターとブロガー、そして彼らのサイトの"
-"訪問者を援助し、ウェブを更に向上させるための計画の第一歩となるためのもので"
-"す：\n"
-"\t\t\t\t古いバージョンのブラウザーは<strong>安全上にリスク</strong>をもたら"
-"し、インターネットの機能向上を妨げることになります。"
+"このサイトはウェブデザイナー、ウェブマスターとブロガー、そして彼らのサイトの訪問者を援助し、ウェブを更に向上させるための計画の第一歩となるためのものです：\n"
+"\t\t\t\t古いバージョンのブラウザーは<strong>安全上にリスク</strong>をもたらし、インターネットの機能向上を妨げることになります。"
 
-#: update.php:96
-msgid ""
-"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement of the web</b> because of their limited features and many "
-"<b>bugs</b>."
+#: update.php:140
+msgid "Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>."
 msgstr "更なる情報はこちら"
 
-#: update.php:100
+#: update.php:144
 msgid "\"I'm not able to update my browser\""
 msgstr "私はアップデートが出来ません。"
 
-#: update.php:101
-msgid ""
-"If you are on a computer, that is maintained by a admin and you cannot "
-"install a new browser, ask your admin about it."
+#: update.php:145
+msgid "If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it."
 msgstr "新しいブラウザーを右のページから選んで下さい。"
 
-#: update.php:102
-msgid ""
-"If you can't change your browser because of compatibility issues, think "
-"about installing a second browser for browsing and keep the old one for the "
-"compatibility."
-msgstr ""
-"もしお使いのパソコンが社内ネットワークでご利用なので、ご自身で新しいバージョ"
-"ンのブラウザーをインストールは出来ないと言う場合は、会社のネットワーク管理者"
-"にブラウザーのアップデートが可能かどうかお尋ね下さい。"
+#: update.php:146
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
+msgstr "もしお使いのパソコンが社内ネットワークでご利用なので、ご自身で新しいバージョンのブラウザーをインストールは出来ないと言う場合は、会社のネットワーク管理者にブラウザーのアップデートが可能かどうかお尋ね下さい。"
 
 #~ msgid "translate..."
 #~ msgstr "翻訳する。。。"
