@@ -29,3 +29,13 @@ WHERE time>1275256800
 GROUP BY m
 ORDER BY m DESC
 LIMIT 0 , 30
+
+
+##### languages
+SELECT count(*) as n, lang FROM `updates` GROUP by lang ORDER BY n DESC
+SELECT count(*) as n, lang FROM `updates` WHERE YEAR( FROM_UNIXTIME( time ) ) =2010 GROUP by lang ORDER BY n DESC
+SELECT count(*) as n, lang FROM `updates` WHERE YEAR( FROM_UNIXTIME( time ) ) =2010 GROUP by lang ORDER BY n DESC
+SELECT count(*) as n, lang FROM `updates` WHERE time > unix_timestamp('2010-10-01') GROUP by lang ORDER BY n DESC
+
+##### sites
+SELECT count(*) as n, referer FROM `updates` WHERE time > unix_timestamp('2010-10-01') GROUP by referer ORDER BY n DESC

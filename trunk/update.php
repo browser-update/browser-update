@@ -1,20 +1,44 @@
 <?php
-$lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-$lll = explode (",", $lll);
-$lll = explode (";", $lll[0]);
-$ll = trim(strtolower(substr($lll[0],0,5)));
-if(strlen($ll)==5) {
-	$ll = substr($ll, 3, 2);
+if (isset($_GET['lang'])) {
+	$ll = $_GET['lang'];
+}
+else {
+	$lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+	$lll = explode (",", $lll);
+	$lll = explode (";", $lll[0]);
+	$ll = trim(strtolower(substr($lll[0],0,5)));
+	if(strlen($ll)==5) {
+		$ll = substr($ll, 3, 2);
+	}
 }
 
+/*
 if ($ll=="de" && rand(1, 3)==3) {
     include("update2.php");
     exit;
 }
+*/
 
 require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
+
+$ua=strtolower($_SERVER['HTTP_USER_AGENT']);
+function has($t) {
+	global $ua;	
+	return !(strpos($ua,$t)===false);
+}
+
+//not complete list but 99% of systems share where ie9 is not available
+$no_ie = has("windows nt 4") || has("windows nt 5") || has("mac os") || has("linux");
+$no_sa = has("linux");
+
+
+$u_sa=sprintf("http://www.apple.com/%s/safari/",$ll);
+$u_ff="http://www.mozilla.com/firefox/";
+$u_op="http://www.opera.com";
+$u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
+$u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",str_replace("_","-",$detected_lang));
 ?>
 
 
@@ -24,30 +48,50 @@ include("header.php");
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="http://www.mozilla.com/firefox/" target="_blank" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
+					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
-					<a href="http://www.mozilla.com/firefox/" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
+					<a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="op">
-					<h3><a href="http://www.opera.com/" target="_blank" onmousedown="countBrowser('o')">Opera 10</a></h3>
+					<h3><a href="<?php echo $u_op;?>" target="_blank" onmousedown="countBrowser('o')">Opera 11</a></h3>
 					<div><?php echo T_('Browser with many features'); ?></div>
-					<a href="http://www.opera.com/" target="_blank" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
-				</li>
-				<li class="sa">
-					<h3><a href="http://www.apple.com/safari/" target="_blank" onmousedown="countBrowser('s')">Safari 5</a></h3>
-					<div><?php echo T_('Apple\'s fast browser'); ?></div>
-					<a href="http://www.apple.com/safari/" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
+					<a href="<?php echo $u_op;?>" target="_blank" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="ch">
-					<h3><a href="http://www.google.com/chrome" target="_blank" onmousedown="countBrowser('c')">Google Chrome 5</a></h3>
-					<div><?php echo T_('Google\'s browser with compact interface'); ?></div>
-					<a href="http://www.google.com/chrome" target="_blank" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
+					<h3><a href="<?php echo $u_ch;?>" target="_blank" onmousedown="countBrowser('c')">Google Chrome</a></h3>
+					<div><?php echo T_('Google\'s browser with compact interface.'); ?> <?php echo T_('Automatically always up to date!'); ?></div>
+					<a href="<?php echo $u_ch;?>" target="_blank" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>
+				<?php if ($no_sa) {?>
+				<li class="sa notavailable">
+					<h3>Safari 5</h3>
+					<div>
+					<?php echo T_('Not available for your System.');?> 
+					<?php echo T_('Please choose another browser.');?>
+					</div>
+				</li>
+				<?php } else {?>				
+				<li class="sa">
+					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari 5</a></h3>
+					<div><?php echo T_('Apple\'s fast browser'); ?></div>
+					<a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
+				</li>				
+				<?php } if ($no_ie) {?>
+				<li class="ie notavailable">
+					<h3>Internet Explorer 9</h3>
+					<div>
+					<?php echo T_('Not available for your System.');?> 
+					<?php echo T_('Only for Windows Vista or 7.');?> 
+					<?php echo T_('Please choose another browser.'); ?>
+					</div>
+				</li>
+				<?php } else {?>
 				<li class="ie">
-					<h3><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" onmousedown="countBrowser('i')">Internet Explorer 8</a></h3>
+					<h3><a href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')">Internet Explorer 9</a></h3>
 					<div><?php echo T_('Windows built-in browser'); ?></div>
-					<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
+					<a href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
 				</li>
+				<?php }?>
 			</ul>
 			<p>
                 <?php echo T_('All browsers have the same basic features and easy interface.'); ?>

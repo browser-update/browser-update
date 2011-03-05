@@ -78,7 +78,7 @@ include("header.php");
 			</li>
 			<li>
 				<h3><?php echo T_('Customizable'); ?></h3>
-				<?php echo T_('You can customize the browsers and versions to notifiy.<br/> ' . 
+				<?php echo T_('You can customize the browsers and versions to notify.<br/> ' . 
 				'In future releases you can also customize the text that should be shown, ' . 
 				'the frequency of the bar to appear and many other things.'); ?>
 			</li>
@@ -106,12 +106,15 @@ include("header.php");
 				'<a href="%s">TYPO3</a>, ' .
 				'<a href="%s">TYPOlight</a> (german), ' .
                                 '<a href="%s">vBulletin</a>, ' .
-                                '<a href="%s">concrete5</a>.',
+                                '<a href="%s">concrete5</a>, ' .
+								'<a href="%s">MODx</a>.',
 				'http://dvnr.de/wordpress/browser-update/',
                                 'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
 				'http://typolight.org/erweiterungsliste/view/browser_update.html',
                                 'http://www.vbulletin.org/forum/showthread.php?t=239559',
-                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/'); ?>
+                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
+								'http://modxcms.com/extras/package/737'); 
+								?>
 		</p>
 		<p>
 			<?php echo sprintf(
@@ -197,13 +200,13 @@ window.onload=function(){
 			</li>
 			<li>
 				<h3><?php echo T_('Webdesign technologies and features'); ?></h3>
-				<div><?php echo T_('There are all these great new webdevlopment standards and they are supported by modern browsers... but you may not use them.'); ?> 
+				<div><?php echo T_('There are all these great new web development standards and they are supported by modern browsers... but you may not use them.'); ?> 
 				<br/>
 				<?php echo T_('Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users.'); ?></div>
 			</li>
 			<li>
 				<h3><?php echo T_('Security and benefits for the user'); ?></h3>
-				<div><?php echo sprintf(T_('Numerous benefits: security, speed, features, ... Look at the <a href="%s">update page</a>. The security-threads of outdates browsers are listed in this <a href="%s">paper</a>.'), 'update.html', 'http://www.techzoom.net/publications/insecurity-iceberg/index.en'); ?></div>
+				<div><?php echo sprintf(T_('Numerous benefits: security, speed, features, ... Look at the <a href="%s">update page</a>. The security-threats of outdates browsers are listed in this <a href="%s">paper</a>.'), 'update.html', 'http://www.techzoom.net/publications/insecurity-iceberg/index.en'); ?></div>
 			</li>
 			<li>	
 				<h3><?php echo T_('The web has to evolve...'); ?></h3>
