@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2011-03-05 12:37+0100\n"
+"PO-Revision-Date: 2011-03-07 08:49+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -167,7 +167,7 @@ msgstr ""
 #: index.php:38
 #, php-format
 msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
-msgstr ""
+msgstr "お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 <a%s>ブラウザを更新する方法を確認する</a>"
 
 #: index.php:45
 #, php-format
