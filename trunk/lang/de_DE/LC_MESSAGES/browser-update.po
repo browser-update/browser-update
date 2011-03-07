@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2011-03-05 11:57+0100\n"
+"PO-Revision-Date: 2011-03-07 08:11+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -450,7 +450,7 @@ msgstr "Schneller Browser von Apple"
 
 #: update.php:84
 msgid "Only for Windows Vista or 7."
-msgstr "Nur für Windwos Vista und 7."
+msgstr "Nur für Windows Vista und 7."
 
 #: update.php:91
 msgid "Windows built-in browser"

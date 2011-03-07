@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2011-03-05 12:01+0100\n"
+"PO-Revision-Date: 2011-03-07 08:46+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -165,7 +165,7 @@ msgstr "¡Pruéba la barra de notificación!"
 #: index.php:38
 #, php-format
 msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
-msgstr "Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallas de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>"
+msgstr "Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallos de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>"
 
 #: index.php:45
 #, php-format
@@ -461,7 +461,7 @@ msgstr "Todos los navegadores tienen las mismas características básicas y fác
 
 #: update.php:105
 msgid "The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites."
-msgstr "El navegador que estás usando está desactualizado. Tiene conocidas <b>fallas de seguridad y desventajas</b> y un <b>limitado juego de características</b>. No podrás ver todas las características de algunos sitios."
+msgstr "El navegador que estás usando está desactualizado. Tiene conocidas <b>fallos de seguridad y desventajas</b> y un <b>limitado juego de características</b>. No podrás ver todas las características de algunos sitios."
 
 #: update.php:109
 msgid "Switching to a newer browser could give you a lot of advantages:"
