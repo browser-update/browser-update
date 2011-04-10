@@ -130,8 +130,9 @@ include("header.php");
 			<label for="f-i">IE</label> 
 			<select id="f-i" onchange="code();">
 				<option value="5.5">&lt;= 5.5</option>
-				<option value="6" selected="selected">&lt;= 6</option>
-				<option value="7">&lt;= 7</option>
+				<option value="6">&lt;= 6</option>
+				<option value="7" selected="selected">&lt;= 7</option>
+				<option value="8">&lt;= 8</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -139,16 +140,18 @@ include("header.php");
 			<select id="f-f" onchange="code();">
 				<option value="1">&lt;= 1.0</option>
 				<option value="1.5">&lt;= 1.5</option>
-				<option value="2" selected="selected">&lt;= 2.0</option>
+				<option value="2">&lt;= 2.0</option>
                 <option value="3" selected="selected">&lt;= 3.0</option>
+				<option value="3.5">&lt;= 3.5</option>
+				<option value="3.6">&lt;= 3.6</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-				<option value="9.0">&lt;= 9.0</option>
-                <option value="9.64" selected="selected">&lt;= 9.64</option>
-				<option value="10.01">&lt;= 10.01</option>
+                <option value="10.1" selected="selected">&lt;= 10.1</option>
+				<option value="10.5">&lt;= 10.5</option>
+				<option value="10.5">&lt;= 10.6</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -156,9 +159,10 @@ include("header.php");
 			<select id="f-s" onchange="code();">
 				<option value="1">&lt;= 1.0</option>
 				<option value="1.2">&lt;= 1.2</option>
-				<option value="2" selected="selected">&lt;= 2.0</option>
+				<option value="2">&lt;= 2.0</option>
 				<option value="3">&lt;= 3.0</option>
-                <option value="3">&lt;= 3.2</option>
+                <option value="3.2" selected="selected">&lt;= 3.2</option>
+				<option value="4">&lt;= 4</option>
 			</select>
 		</span>
 		<span class="browser">

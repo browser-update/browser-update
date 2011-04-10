@@ -30,20 +30,20 @@ $curfile = end($parts);
 ?>
 
 <div id="lang">
-    <a href="/en/<?echo $curfile?>">english</a>
-    <a href="/de/<?echo $curfile?>">deutsch</a>
-    <a href="/pl/<?echo $curfile?>">polski</a>
-    <a href="/nl/<?echo $curfile?>">nederlands</a>
-    <a href="/it/<?echo $curfile?>">italiano</a>
-    <a href="/es/<?echo $curfile?>">español</a>
-    <a href="/pt/<?echo $curfile?>">português</a>
-    <a href="/ja/<?echo $curfile?>">japanese</a>
-    <a href="/sl/<?echo $curfile?>">slovenščina</a>
-    <a href="/ru/<?echo $curfile?>">Русский</a>
-    <a href="/id/<?echo $curfile?>">Bahasa Indonesia</a>
-	<a href="/kr/<?echo $curfile?>">한국어</a>
-	<a href="/uk/<?echo $curfile?>">Українська</a>
-	<a href="/rm/<?echo $curfile?>">Rumantsch</a>
+    <a href="/en/<?php echo $curfile?>">english</a>
+    <a href="/de/<?php echo $curfile?>">deutsch</a>
+    <a href="/pl/<?php echo $curfile?>">polski</a>
+    <a href="/nl/<?php echo $curfile?>">nederlands</a>
+    <a href="/it/<?php echo $curfile?>">italiano</a>
+    <a href="/es/<?php echo $curfile?>">español</a>
+    <a href="/pt/<?php echo $curfile?>">português</a>
+    <a href="/ja/<?php echo $curfile?>">japanese</a>
+    <a href="/sl/<?php echo $curfile?>">slovenščina</a>
+    <a href="/ru/<?php echo $curfile?>">Русский</a>
+    <a href="/id/<?php echo $curfile?>">Bahasa Indonesia</a>
+	<a href="/kr/<?php echo $curfile?>">한국어</a>
+	<a href="/uk/<?php echo $curfile?>">Українська</a>
+	<a href="/rm/<?php echo $curfile?>">Rumantsch</a>
 	
 	
 

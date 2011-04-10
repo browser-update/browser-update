@@ -48,7 +48,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 3.6</a></h3>
+					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 4</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>

@@ -6,12 +6,12 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:8,f:3.6,o:10.6,s:5,n:10};
-this.op.vsdefault = {i:6,f:2,o:9.64,s:3,n:10};
+this.op.vsakt = {i:9,f:4,o:11,s:5,n:20};
+this.op.vsdefault = {i:6,f:3,o:10.1,s:3.2,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
-        this.op.vs[b]=this.op.vsdefault[b];
+        this.op.vs[b]=this.op.vsakt[b]-0.05;
 
 if (!op.reminder || op.reminder<0.1 )
     this.op.reminder=0;
@@ -40,14 +40,15 @@ if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)=
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/like firefox|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|symbian|webos/i.test(ua)) n="x";
-    else if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
+    if (/like firefox|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    else if (/trident.(\d+\.\d+);/.test(ua)) n="io";
+	else if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
     else if (/Safari.(\d+)/i.test(ua)) n="so";
-    else if (/Opera.*Version.(\d+\.\d+)/i.test(ua)) n="o";
-    else if (/Opera.(\d+\.\d+)/i.test(ua)) n="o";
+    else if (/Opera.*Version.(\d+\.?\d+)/i.test(ua)) n="o";
+    else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
     if (n=="x") return {n:"x",v:0,t:names[n]};
@@ -60,6 +61,12 @@ function getBrowser() {
     if (n=="i" && v==7 && window.XDomainRequest) {
         v=8;
     }
+    if (n=="io") {
+		n="i";
+        if (v>4) v=9;
+		else if (v>3.1) v=8;
+		else if (v>3) v=7;
+    }	
     return {n:n,v:v,t:names[n]+" "+v}
 }
 
