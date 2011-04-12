@@ -28,16 +28,17 @@ include("header.php");
 
 <ul>
 	<li>
-		David Danier (Projektinitiator): david.danier <var>æ</var> team23.de<br/>
-		<a href="http://webmasterpro.de">Webmasterpro.de</a>,
-		<a href="http://serverstats.berlios.de">Serverstats</a>
+		Thomas Hümmer (Projektinitiator):  jossele <var>æ</var> gmx.de<br/>
+		<a href="http://www.webmasterpro.de/">Webmasterpro.de</a>,
+		<a href="http://fc.webmasterpro.de/">FlashCounter Webseitenstatistiken</a>,
+		<a href="http://www.webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
+		<a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>
 	</li>
 	<li>
-		Thomas Hümmer (Projektinitiator):  jossele <var>æ</var> gmx.de<br/>
-		<a href="http://webmasterpro.de">Webmasterpro.de</a>,
-		<a href="http://fc.webmasterpro.de">FlashCounter Webseitenstatistiken</a>,
-		<a href="http://webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
-		<a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>
+		David Danier (Projektinitiator): david.danier <var>æ</var> team23.de<br/>
+		<a href="http://www.team23.de/kompetenzen/webagentur.html">Webagentur Team23</a>,
+		<a href="http://www.webmasterpro.de/">Webmasterpro.de</a>,
+		<a href="http://serverstats.berlios.de/">Serverstats</a>
 	</li>
 	<li>Tomasz Olędzki (polish translation)</li>
 	<li>Giacomo (Italian translation)</li>
@@ -50,8 +51,8 @@ include("header.php");
 <h2>Initiator</h2>
 
 <p>
-    <a href="http://webmasterpro.de"><img src="/img/wmp_logo.png" alt="" /></a><br />
-    Browser-Update.org ist eine von <a href="http://webmasterpro.de">Webmasterpro.de</a>
+    <a href="http://www.webmasterpro.de/"><img src="/img/wmp_logo.png" alt="" /></a><br />
+    Browser-Update.org ist eine von <a href="http://www.webmasterpro.de/">Webmasterpro.de</a>
     gestartete Initiative zur Förderung neuer Browserversionen und Webstandards.
 </p>
 
