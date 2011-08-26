@@ -6,8 +6,8 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:9,f:4,o:11,s:5,n:20};
-this.op.vsdefault = {i:6,f:3,o:10.1,s:3.2,n:10};
+this.op.vsakt = {i:9,f:7,o:11,s:5.1,n:20};
+this.op.vsdefault = {i:6,f:3.5,o:10.1,s:3.2,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -76,7 +76,8 @@ if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.
 
 if (!this.op.test) {
     var i = new Image();
-    i.src="http://browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
+	//DISABLED TEMPORARYLY
+    //i.src="http://browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
 }
 if (this.op.reminder>0) {
     var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
@@ -132,7 +133,13 @@ else if (ll=="rm")
 else if (ll=="ja")	
 	t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 \
          <a%s>ブラウザを更新する方法を確認する</a>';
-
+else if (ll=="fr")
+	t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
+else if (ll=="da")
+        t = 'Din browser (%s) er <b>forældet</b>. Den har kendte <b>sikkerhedshuller</b> og kan måske <b>ikke vise alle funktioner</b> på dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>';
+else if (ll=="al")
+        t = 'Shfletuesi juaj (%s) është <b>ca i vjetër</b>. Ai ka <b>të meta sigurie</b> të njohura dhe mundet të <b>mos i shfaqë të gjitha karakteristikat</b> e kësaj dhe shumë faqeve web të tjera. <a%s>Mësoni se si të përditësoni shfletuesin tuaj</a>';
+		
 if (op.text)
     t = op.text;
 

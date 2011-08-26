@@ -17,8 +17,6 @@
 	<!--[if lt IE 7]>
 	<link rel="stylesheet" href="/drecksie6.css" type="text/css" />
 	<![endif]-->
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
-    <link rel="icon" href="/img/favicon.png" type="image/png"/>
 	<script type="text/javascript" src="/base.js">	</script>
 </head>
 <body>
@@ -32,18 +30,23 @@ $curfile = end($parts);
 <div id="lang">
     <a href="/en/<?php echo $curfile?>">english</a>
     <a href="/de/<?php echo $curfile?>">deutsch</a>
+    <a href="/fr/<?php echo $curfile?>">français</a>
+    <a href="/it/<?php echo $curfile?>">italiano</a>
+    <a href="/pt/<?php echo $curfile?>">português</a>
+    <a href="/es/<?php echo $curfile?>">español</a>
     <a href="/pl/<?php echo $curfile?>">polski</a>
     <a href="/nl/<?php echo $curfile?>">nederlands</a>
-    <a href="/it/<?php echo $curfile?>">italiano</a>
-    <a href="/es/<?php echo $curfile?>">español</a>
-    <a href="/pt/<?php echo $curfile?>">português</a>
     <a href="/ja/<?php echo $curfile?>">japanese</a>
     <a href="/sl/<?php echo $curfile?>">slovenščina</a>
     <a href="/ru/<?php echo $curfile?>">Русский</a>
     <a href="/id/<?php echo $curfile?>">Bahasa Indonesia</a>
-	<a href="/kr/<?php echo $curfile?>">한국어</a>
-	<a href="/uk/<?php echo $curfile?>">Українська</a>
-	<a href="/rm/<?php echo $curfile?>">Rumantsch</a>
+    <a href="/kr/<?php echo $curfile?>">한국어</a>
+    <a href="/uk/<?php echo $curfile?>">Українська</a>
+    <a href="/rm/<?php echo $curfile?>">rumantsch</a>
+    <a href="/da/<?php echo $curfile?>">dansk</a>
+	<a href="/al/<?php echo $curfile?>">Gjuha Shqipe</a>
+	
+    
 	
 	
 
@@ -63,7 +66,7 @@ $curfile = end($parts);
 	<!--<li class="r"><a href="/help.html"><?php echo T_('Help'); ?></a></li>-->
 	<!--<li class="r"><a href="/supporters.html"><?php echo T_('Supporters'); ?></a></li>-->
 	<li class="r"><a href="stat.html"><?php echo T_('Statistics'); ?></a></li>
-	<li class="r"><a href="/blog/"><?php echo T_('Blog'); ?></a></li>
+	<li class="r"><a href="/blog.html"><?php echo T_('Blog'); ?></a></li>
 </ul>
 
 

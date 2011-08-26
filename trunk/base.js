@@ -5,10 +5,10 @@ function code() {
     //getomat('i')=="6" && getomat('f')=="2" && getomat('o')=="9.2" && getomat('s')=="2"
     if (autoupdate.checked) {
         var notify = "";
-        setomatdefault('i',1);
-        setomatdefault('f',2);
+        setomatdefault('i',2);
+        setomatdefault('f',4);
         setomatdefault('o',2);
-        setomatdefault('s',2);
+        setomatdefault('s',4);
         vc.className = "disabled";
     }
     else {
@@ -21,7 +21,7 @@ function code() {
 var $buoop = {'+notify+'} \n\
 $buoop.ol = window.onload; \n\
 window.onload=function(){ \n\
- if ($buoop.ol) $buoop.ol(); \n\
+ try {if ($buoop.ol) $buoop.ol();}catch (e) {} \n\
  var e = document.createElement("script"); \n\
  e.setAttribute("type", "text/javascript"); \n\
  e.setAttribute("src", "http://browser-update.org/update.js"); \n\

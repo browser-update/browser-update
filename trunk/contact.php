@@ -8,7 +8,7 @@ include("header.php");
 <h2 class="top"><?php echo T_('Contact'); ?></h2>
 
 <p>
-    Updates on the project can be found in our <a href="/blog/">blog</a>.
+    Updates on the project can be found in our <a href="blog.html">blog</a>.
 </p>
 <h2>Help Us</h2><!--Mithelfen-->
 <p>
