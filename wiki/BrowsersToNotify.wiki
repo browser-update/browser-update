@@ -1,5 +1,5 @@
+#summary discussion and status of which browsers to notify
 #labels Featured
-#discussion and status of which browsers to notify
 
 Browser update has a default list of browsers that get the update notification. This is adapted over time so the site owner does not have to take care about it.
 
