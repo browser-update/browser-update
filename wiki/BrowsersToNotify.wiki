@@ -1,3 +1,4 @@
+#labels Featured
 #discussion and status of which browsers to notify
 
 Browser update has a default list of browsers that get the update notification. This is adapted over time so the site owner does not have to take care about it.
@@ -23,26 +24,26 @@ When did we notify which browser version?
 
 = Browser releases =
 
-* Aug 2001 IE 6
-* Oct 2006 IE 7
-* Mar 2009 IE 8 
-* Mar 2011 IE 9
+  * Aug 2001 IE 6
+  * Oct 2006 IE 7
+  * Mar 2009 IE 8 
+  * Mar 2011 IE 9
 
-* Jun 2007 Safari 3
-* Nov 2008 Safari 3.2
-* Feb 2009 Safari 4
-* Jun 2010 Safari 5
-* Jul 2011 Safari 5.1
+  * Jun 2007 Safari 3
+  * Nov 2008 Safari 3.2
+  * Feb 2009 Safari 4
+  * Jun 2010 Safari 5
+  * Jul 2011 Safari 5.1
 
-* Opera 10
-* Opera 11
+  * Opera 10
+  * Opera 11
 
-* Firefox 3.5
-* Firefox 3.6
-* Firefox 4
-* Firefox 5 .... rapid releas cycle
+  * Firefox 3.5
+  * Firefox 3.6
+  * Firefox 4
+  * Firefox 5 .... rapid releas cycle
 
-* Chrome ...  rapid releas cycle and auto updates ("forced")
+  * Chrome ...  rapid releas cycle and auto updates ("forced")
 
 = Discussion =
 
