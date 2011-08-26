@@ -1,7 +1,7 @@
 #labels Featured
 ===Goals===
-* Cleaner, easier
-* Prettier
-* More trusworthy image
-
-* the "language"-selector is a mess right now. Takes up to much space.
+ * Cleaner, easier
+ * Prettier
+ * More trusworthy image
+ 
+ * the "language"-selector is a mess right now. Takes up to much space.
