@@ -101,19 +101,26 @@ include("header.php");
 		</p>
 		<p>
 			<?php echo T_('You may also use third-party plugins for: ');
-                                echo sprintf(
-				'<a href="%s">WordPress</a> (german), ' .
-				'<a href="%s">TYPO3</a>, ' .
-				'<a href="%s">TYPOlight</a> (german), ' .
+                                echo sprintf(' '.
+								'<a href="%s">WordPress</a> (german), ' .
+								'<a href="%s">TYPO3</a>, ' .
+								'<a href="%s">TYPOlight</a> (german), ' .
                                 '<a href="%s">vBulletin</a>, ' .
                                 '<a href="%s">concrete5</a>, ' .
-								'<a href="%s">MODx</a>.',
+								'<a href="%s">MODx</a>, ' .
+                                '<a href="%s">Drupal</a>, ' .
+								'<a href="%s">Habari</a>, ' .
+								'<a href="%s">vBulletin</a>',
 				'http://dvnr.de/wordpress/browser-update/',
                                 'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
 				'http://typolight.org/erweiterungsliste/view/browser_update.html',
                                 'http://www.vbulletin.org/forum/showthread.php?t=239559',
                                 'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
-								'http://modxcms.com/extras/package/737'); 
+								'http://modxcms.com/extras/package/737',
+                                        'https://drupal.org/project/bu',										
+										'http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate',
+										'http://www.vbulletin.org/forum/showthread.php?t=239559'
+										);
 								?>
 		</p>
 		<p>
@@ -141,17 +148,19 @@ include("header.php");
 				<option value="1">&lt;= 1.0</option>
 				<option value="1.5">&lt;= 1.5</option>
 				<option value="2">&lt;= 2.0</option>
-                <option value="3" selected="selected">&lt;= 3.0</option>
-				<option value="3.5">&lt;= 3.5</option>
+                                <option value="3">&lt;= 3.0</option>
+				<option value="3.5" selected="selected">&lt;= 3.5</option>
 				<option value="3.6">&lt;= 3.6</option>
+                                <option value="4">&lt;= 4</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-                <option value="10.1" selected="selected">&lt;= 10.1</option>
+                                <option value="10.1" selected="selected">&lt;= 10.1</option>
 				<option value="10.5">&lt;= 10.5</option>
-				<option value="10.5">&lt;= 10.6</option>
+				<option value="10.6">&lt;= 10.6</option>
+                                <option value="11">&lt;= 11</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -161,8 +170,9 @@ include("header.php");
 				<option value="1.2">&lt;= 1.2</option>
 				<option value="2">&lt;= 2.0</option>
 				<option value="3">&lt;= 3.0</option>
-                <option value="3.2" selected="selected">&lt;= 3.2</option>
+                                <option value="3.2" selected="selected">&lt;= 3.2</option>
 				<option value="4">&lt;= 4</option>
+                                <option value="5">&lt;= 5</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -184,7 +194,7 @@ include("header.php");
 var $buoop = {}
 $buoop.ol = window.onload;
 window.onload=function(){
-     if ($buoop.ol) $buoop.ol();
+     try {if ($buoop.ol) $buoop.ol();}catch (e) {}
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
      e.setAttribute("src", "http://browser-update.org/update.js");

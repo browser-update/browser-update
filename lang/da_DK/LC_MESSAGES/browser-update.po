@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-05 11:56+0100\n"
+"PO-Revision-Date: 2011-08-24 20:00+0100\n"
+"Last-Translator: thomas <jossele@gmx.de>\n"
+"Language-Team: danish <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+
+#: contact.php:8
+#: header.php:62
+msgid "Contact"
+msgstr "Kontakt"
+
+#: customize.php:8
+msgid "Customize and test"
+msgstr "Tilpas og test"
+
+#: customize.php:11
+msgid "Test the script"
+msgstr "Test scriptet"
+
+#: customize.php:14
+msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
+msgstr "Hvis du åbner dit website med <code>#test-bu</code> tilføjet til url'en, så vil notifikations-baren altid blive vist."
+
+#: customize.php:15
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Eksempel: <code>http://browser-update.org/#test-bu</code>."
+
+#: customize.php:16
+msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
+msgstr "Sørg for at siden er korrekt genindlæst når du åbner url'en i et nyt browserfaneblad."
+
+#: customize.php:19
+msgid "Options"
+msgstr "Indstillinger"
+
+#: customize.php:22
+msgid "The following options can be passed to the script:"
+msgstr "Følgende indstillinger kan blive sendt til scriptet:"
+
+#: customize.php:27
+msgid "browser versions to notify"
+msgstr "browser versioner der skal notificeres"
+
+#: customize.php:28
+msgid "atfer how many hours should the message reappear"
+msgstr "efter hvor mange timer skal beskeden vises igen"
+
+#: customize.php:29
+msgid "0 = show all the time"
+msgstr "0 = vis altid"
+
+#: customize.php:30
+msgid "callback function after the bar has appeared"
+msgstr "Callback funktion efter notifikations-baren er blevet vist"
+
+#: customize.php:32
+msgid "set a language for the message, e.g. \"en\""
+msgstr "sæt et sprog for beskeden, eks. \"en\""
+
+#: customize.php:33
+msgid "overrides the default detection"
+msgstr "tilsidesætter standard detektering"
+
+#: customize.php:34
+msgid "true = always show the bar (for testing)"
+msgstr "true = vis altid baren (for tests)"
+
+#: customize.php:35
+msgid "custom notification html text"
+msgstr "valgfri notifikation html tekst"
+
+#: customize.php:36
+msgid "open link in new window/tab"
+msgstr "åbn link i et nyt vindue/faneblad"
+
+#: customize.php:59
+msgid "Edit the CSS"
+msgstr "Ændr CSS'en"
+
+#: customize.php:62
+msgid "The following CSS rules are applied by the script. "
+msgstr "Følgende CSS regler påsættes af scriptet."
+
+#: customize.php:63
+msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgstr "Du kan overskrive dem med dit eget CSS. For at gøre dette skal du tilføje nogle flere speciferede CSS-regler: f.eks. <code>body .buorg {font-size:20px}</code>"
+
+#: header.php:5
+#: header.php:56
+msgid "Browser-Update.org"
+msgstr "Browser-Update.org"
+
+#: header.php:5
+msgid "Inform your visitors about browser-updates"
+msgstr "Informer dine besøgende om browser-updates"
+
+#: header.php:57
+msgid "An initiative by webdesigners to inform users about browser-updates"
+msgstr "Et initiativ fra webdesigners for at informere brugerne om browser-opdateringer"
+
+#: header.php:60
+msgid "Start"
+msgstr "Start"
+
+#: header.php:61
+msgid "Update Browser"
+msgstr "Opdater browser"
+
+#: header.php:63
+msgid "Help"
+msgstr "Hjælp"
+
+#: header.php:64
+msgid "Supporters"
+msgstr "Supporters"
+
+#: header.php:65
+#: index.php:90
+#: stat.php:9
+#: statdetail.php:9
+msgid "Statistics"
+msgstr "Statistikker"
+
+#: header.php:66
+msgid "Blog"
+msgstr "Blog"
+
+#: index.php:13
+msgid "This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser."
+msgstr "Denne service er en mulighed for at informere dine besøgende diskret at skifte/opdatere til en nyere browser."
+
+#: index.php:17
+msgid "Many internet users are still using very old, out-dated browsers – most of them for no actual reason. Switching to an newer browser is better for them and for you as a webdesigner."
+msgstr "Mange brugere af Internettet bruger stadig meget gamle og forældede browsere - de fleste af dem uden nogen egentlig grund. Et skift til en nyere browser er bedre for både dem og ikke mindst for dig som webudvikler."
+
+#: index.php:26
+msgid "How it works"
+msgstr "Hvordan virker det"
+
+#: index.php:30
+#, php-format
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr "Inkluder vores lille javascript <a href=\"%s\">notifikation</a> på dit website"
+
+#: index.php:33
+msgid "Visitors with out-dated browser will be informed by a little, undisturbing bar, that his browser is not up-to-date and it is recommended to update."
+msgstr "Besøgende med uddateret browser vil blive informeret af en lille diskret bar, at hans browser ikke er up-to-date, og at det anbefales at opdatere."
+
+#: index.php:36
+msgid "Test the notification bar!"
+msgstr "Test notifikations-baren!"
+
+#: index.php:38
+#, php-format
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "Din browser (%s) er <b>forældet</b>. Den har kendte <b>sikkerhedshuller</b> og kan måske <b>ikke vise alle funktioner</b> på dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>"
+
+#: index.php:45
+#, php-format
+msgid "By clicking the bar, he will get to <a href=\"%s\">an info page with arguments why to change/update and some browser choices</a>."
+msgstr "Ved at klikke på baren, vil han komme til <a href=\"%s\">en info side med argumenter hvorfor man bør ændre/opdatere og nogle mulige browser valg</a>."
+
+#: index.php:49
+msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgstr "Hvis den besøgende ignorerer rådet, vil det ikke vises igen i et stykke tid."
+
+#: index.php:52
+msgid "Advantages and features"
+msgstr "Fordele og funktioner"
+
+#: index.php:55
+msgid "Subtle"
+msgstr "Diskret"
+
+#: index.php:56
+msgid "The user will be notified only once, and won't be bothered any more. The notification bar is very small and won't affect the browsing experience negatively."
+msgstr "Brugeren vil blive meddelt én gang, og vil ikke blive påmindet igen. Notifikations-baren er meget lille og vil ikke påvirke brugeroplevelsen negativt."
+
+#: index.php:60
+msgid "Informative"
+msgstr "Informativ"
+
+#: index.php:61
+msgid "Tell the users that they are using an out-dated browser and that your website looks even better with a newer one."
+msgstr "Fortæl brugerne, at de bruger en forældet browser, og at dit website ser endnu bedre med en nyere."
+
+#: index.php:65
+msgid "Idealistic"
+msgstr "Idealistisk"
+
+#: index.php:66
+msgid "Help evolve the web!"
+msgstr "Hjælp med at udvikle nettet!"
+
+#: index.php:67
+msgid "Support the standards-based web!"
+msgstr "Støt det standard-baserede net!"
+
+#: index.php:68
+msgid "Support Open Source software projects!"
+msgstr "Støt open-source software projekter!"
+
+#: index.php:69
+msgid "Help your visitors!"
+msgstr "Hjælp dine besøgende!"
+
+#: index.php:70
+msgid "Help increase security awareness!"
+msgstr "Hjælp "
+
+#: index.php:71
+msgid "Support your favorite webbrowser!"
+msgstr "Støt din favorit webbrowser!"
+
+#: index.php:74
+msgid "Low maintenance and up-to-date"
+msgstr "Lav vedligeholdelse og up-to-date"
+
+#: index.php:75
+msgid "If there come more browser versions which won't be supported by the vendor in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically."
+msgstr "Hvis der kommer flere browserversioner, som ikke vil blive understøttet af leverandøren i fremtiden, udviser sikkerhedsmæssige huller eller har været meget gammel i lang tid, vil vi tilføje dem til vores liste automatisk."
+
+#: index.php:80
+msgid "Customizable"
+msgstr "Brugerdefinerbar"
+
+#: index.php:81
+msgid "You can customize the browsers and versions to notify.<br/> In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things."
+msgstr "Du kan tilpasse hvilke browsere og versioner der skal notificeres.<br/>I fremtidige udgivelser kan du også tilpasse teksten, hyppigheden af barens visning og mange andre ting."
+
+#: index.php:86
+msgid "Localized"
+msgstr "Oversat"
+
+#: index.php:87
+msgid "The message is automatically displayed in the user's language."
+msgstr "Meddelelsen vises automatisk i brugerens sprog."
+
+#: index.php:90
+msgid "<span class=\"workingonit\">work in progress</span>"
+msgstr "<span class=\"workingonit\">under udarbejdelse</span>"
+
+#: index.php:91
+#, php-format
+msgid "You get <a href=\"%s\">statistics</a> about which browsers your visitors are using and how much users got proselyted: How many users updated or changed their browser through your advice."
+msgstr "Du får <a href=\"%s\">statistik</a> om hvilke browsere dine besøgende bruger, og hvor mange brugere du har påvirket: Hvor mange brugere der har opdateret eller ændret deres browser igennem dit råd."
+
+#: index.php:97
+msgid "Install notification on your site"
+msgstr "Installer notifikationen på dit website"
+
+#: index.php:99
+msgid "Here you can get the code to include in your website. Just include it anywhere in the source of your page."
+msgstr "Her kan du få koden til at inkludere på dit websted. Inkluder den hvor som helst i kilden på dit website."
+
+#: index.php:103
+msgid "You may also use third-party plugins for: "
+msgstr "Du kan også bruge tredjeparts plugins til:"
+
+#: index.php:121
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "Du kan <a href=\"%s\">indstille</a> stylingen af beskedne, teksten og andre indstillinger."
+
+#: index.php:127
+msgid "Following browsers will be notified:"
+msgstr "Følgende browsere vil blive notificeret:"
+
+#: index.php:166
+msgid "Google Chrome will automatically itself and is therefor always up to date"
+msgstr "Google Chrome vil automatisk sig selv og er dermed altid er opdateret"
+
+#: index.php:172
+msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
+msgstr "<b>Advisér det anbefalede sæt af browsere og juster den automatisk over tid:</b> Hvis en browser ikke længere understøttes af udbyderen eller har sikkerhedshuller, vil den også blive tilføjet til listen."
+
+#: index.php:177
+msgid "Your Code"
+msgstr "Din kode"
+
+#: index.php:195
+msgid "Why you should tell users to update"
+msgstr "Hvorfor du skal fortælle brugerne til at opdatere"
+
+#: index.php:198
+msgid "Reduced development costs and time"
+msgstr "Reducerede udviklingsomkostninger og tid"
+
+#: index.php:199
+msgid "Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr "Optimering af hjemmesider for gamle browsere er tidskrævende og dermed dyrt."
+
+#: index.php:202
+msgid "Webdesign technologies and features"
+msgstr "Webdesign teknologier og funktioner"
+
+#: index.php:203
+msgid "There are all these great new web development standards and they are supported by modern browsers... but you may not use them."
+msgstr "Der er alle disse fantastiske nye web-udvikling standarder, og de understøttes af moderne browsere ... men du kan ikke bruge dem."
+
+#: index.php:205
+msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
+msgstr "Nyere browsere lader dig bruge flere funktioner og nye teknologier (CSS3, SVG, HTML5, RSS, CSS-genereret indhold, fleksible layouts) på din hjemmeside, hvilket resulterer i en bedre oplevelse for dine brugere."
+
+#: index.php:208
+msgid "Security and benefits for the user"
+msgstr "Sikkerhed og fordele for brugeren"
+
+#: index.php:209
+#, php-format
+msgid "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s\">update page</a>. The security-threats of outdates browsers are listed in this <a href=\"%s\">paper</a>."
+msgstr "Mange fordele: sikkerhed, hastighed, funktioner, ... Kig på <a href=\"%s\">opdateringssiden</a>. De sikkerhedsrelaterede trusler om uddaterede browsere er nævnt bl.a. <a href=\"%s\">her</a>."
+
+#: index.php:212
+msgid "The web has to evolve..."
+msgstr "Nettet skal udvikle sig ..."
+
+#: index.php:214
+msgid "But that's only possible if the browsers also evolve."
+msgstr "Men det er kun muligt, hvis brugernes browsere også udvikler sig."
+
+#: index.php:215
+msgid "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011."
+msgstr "Den stærke markedsandel af en 8 år gammel webbrowser (Internet Explorer 6) er noget nyt i historien om internettet. Hvis vi ikke tager handling nu, vil vi være nødt til at kode nye hjemmesider som i 2001, selvom det er 2011."
+
+#: index.php:219
+msgid "Users don't oppose updating..."
+msgstr "Brugerne behøver ikke modsætte sig opdatering .."
+
+#: index.php:220
+msgid "... they often just do not appreciate the need to update or the existence of the \"webbrowser\" as a software at all."
+msgstr "... de forstår bare ofte ikke behovet for at opdatere eller eksistensen af \"webbrowser\" som en software overhovedet."
+
+#: index.php:223
+msgid "Help this project"
+msgstr "Hjælp dette projekt"
+
+#: index.php:226
+msgid "Participate!"
+msgstr "Deltag!"
+
+#: index.php:227
+msgid "Include the notification code in your page to inform users about browser updates."
+msgstr "Inkluder notifikationens kode på din side for at informere brugerne om browser opdateringer."
+
+#: index.php:230
+msgid "Spread the word!"
+msgstr "Spred ordet!"
+
+#: index.php:231
+msgid "Tell others about this initiative! In your blog, on your webpage, ..."
+msgstr "Fortæl andre om dette initiativ! På din blog, på din webside ..."
+
+#: index.php:234
+msgid "Translate this page"
+msgstr "Oversæt denne side"
+
+#: index.php:235
+msgid "Translate this page into your language."
+msgstr "Oversæt denne side i dit sprog."
+
+#: stat.php:18
+#, php-format
+msgid "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org script."
+msgstr "<strong class=\"number\">%d</strong> websites benytter sig af Browser-Update.org scriptet."
+
+#: stat.php:22
+msgid "Browser updates"
+msgstr "Browser opdateringer"
+
+#: stat.php:60
+#, php-format
+msgid "<strong class=\"number\">%d</strong> visitors have already upgraded their browser."
+msgstr "<strong class=\"number\">%d</strong> besøgende har allrede opdateret eller udskiftet deres browser."
+
+#: stat.php:92
+msgid "From"
+msgstr "Fra"
+
+#: stat.php:92
+msgid "To"
+msgstr "Til"
+
+#: stat.php:92
+msgid "Amount"
+msgstr "Beløb"
+
+#: update.php:46
+msgid "Free webbrowsers"
+msgstr "Gratis webbrowsere"
+
+#: update.php:47
+msgid "These browsers are the newest versions of the most used free web browsers."
+msgstr "Disse browsere er de nyeste versioner af de mest brugte og gratis Internet browsers."
+
+#: update.php:48
+msgid "Just choose a browser to download from the original vendor's website:"
+msgstr "Vælg bare en browser og download den fra den oprindelige udviklers hjemmeside:"
+
+#: update.php:52
+msgid "Widely-used open-source browser, highly extendable and customizable"
+msgstr "Udbredt open-source browser, nem at udvide og tilpase"
+
+#: update.php:53
+#: update.php:58
+#: update.php:63
+#: update.php:77
+#: update.php:92
+msgid "Download"
+msgstr "Download"
+
+#: update.php:57
+msgid "Browser with many features"
+msgstr "Browser med mange funktioner"
+
+#: update.php:62
+msgid "Google's browser with compact interface."
+msgstr "Googles browser med kompakt brugergrænseflade."
+
+#: update.php:62
+msgid "Automatically always up to date!"
+msgstr "Automatisk altid opdateret til nyeste version!"
+
+#: update.php:69
+#: update.php:83
+msgid "Not available for your System."
+msgstr "Ikke tilgængenlig for dit system."
+
+#: update.php:70
+#: update.php:85
+msgid "Please choose another browser."
+msgstr "Vælg venligst en anden browser."
+
+#: update.php:76
+msgid "Apple's fast browser"
+msgstr "Apple's hurtige browser"
+
+#: update.php:84
+msgid "Only for Windows Vista or 7."
+msgstr "Kun til Windows Vista og Windows 7."
+
+#: update.php:91
+msgid "Windows built-in browser"
+msgstr "Windows indbygget browser"
+
+#: update.php:97
+msgid "All browsers have the same basic features and easy interface."
+msgstr "Alle browsere har de samme standard funktioner og lette brugergrænseflader."
+
+#: update.php:105
+msgid "The browser you are using is out of date. It has known <b>security flaws and disadvantages</b> and a <b>limited feature set</b>. You will not see all the features of some websites."
+msgstr "Den browser, du bruger, er forældet. Den har kendte <b>sikkerhedshuller og ulemper</b> og et <b>begrænset funktionssæt</b>. Du vil derfor ikke se alle funktioner og korrekt udseende på mange hjemmesider."
+
+#: update.php:109
+msgid "Switching to a newer browser could give you a lot of advantages:"
+msgstr "At skifte til en nyere browser kunne give dig en masse fordele:"
+
+#: update.php:112
+msgid "Security"
+msgstr "Sikkerhed"
+
+#: update.php:113
+msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
+msgstr "Nyere browsere beskytte dig bedre mod svindel, virus, trojanere, phishing og andre trusler. De retter også mange sikkerhedshuller i din nuværende browser!"
+
+#: update.php:116
+msgid "Speed"
+msgstr "Hastighed"
+
+#: update.php:117
+msgid "Every new browser generation improves speed"
+msgstr "Enhver ny browser generation øger hastigheden"
+
+#: update.php:120
+msgid "Compatibility"
+msgstr "Kompabilitet"
+
+#: update.php:121
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "Websites, der benytter sig af ny teknologi, vil blive vist mere korrekt."
+
+#: update.php:124
+msgid "Comfort &amp; better experience"
+msgstr "Komfort &;amp; bedre oplevelse"
+
+#: update.php:125
+msgid "With new features, extensions and better customisability, you will have a more comfortable web-experience"
+msgstr "Med nye funktioner, udvidelser og bedre indstillingsmuligheder, vil du have en mere komfortabel oplevelse på nettet."
+
+#: update.php:130
+msgid "Updating is easy, takes just a few minutes and is totally free."
+msgstr "At opdatere er nemt, tager kun få minutter og er helt gratis."
+
+#: update.php:135
+msgid "Why this website?"
+msgstr "Hvorfor dette website?"
+
+#: update.php:137
+msgid "This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors."
+msgstr "Denne hjemmeside er et initiativ fra webdesigners, webmastere og bloggere, der alle ønsker at bringe Internettet videre og hjælpe deres besøgende."
+
+#: update.php:140
+msgid "Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>."
+msgstr "Forældede browsere er en <b>sikkerhedstrussel</b> og <b>blokerer fremskridt på internettet</b> på grund af deres meget begrænsede funktioner og mange <b>fejl</b>."
+
+#: update.php:144
+msgid "\"I'm not able to update my browser\""
+msgstr "\"Jeg er ikke i stand til at opdatere min browser\""
+
+#: update.php:145
+msgid "If you are on a computer, that is maintained by a admin and you cannot install a new browser, ask your admin about it."
+msgstr "Hvis du er på en computer, der vedligeholdes af en anden, og du derfor ikke kan installere en ny browser, så spørg din vedkommende om at gøre det for dig."
+
+#: update.php:146
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
+msgstr "Hvis du ikke kan ændre din browser på grund af kompatibilitetsproblemer, så overvej at installere en sekundær browser til daglig Internet browsing og benyt den gamle for til fx Windows Update."
+

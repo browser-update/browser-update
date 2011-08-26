@@ -36,7 +36,7 @@ $no_sa = has("linux");
 
 $u_sa=sprintf("http://www.apple.com/%s/safari/",$ll);
 $u_ff="http://www.mozilla.com/firefox/";
-$u_op="http://www.opera.com";
+$u_op="http://www.opera.com/browser/";
 $u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
 $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",str_replace("_","-",$detected_lang));
 ?>
@@ -48,7 +48,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 4</a></h3>
+					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 6</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -72,7 +72,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 				</li>
 				<?php } else {?>				
 				<li class="sa">
-					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari 5</a></h3>
+					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari 5.1</a></h3>
 					<div><?php echo T_('Apple\'s fast browser'); ?></div>
 					<a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>				

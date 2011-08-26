@@ -18,7 +18,10 @@ $lang_rewrite = array(
 	"id"=>"id_ID",
 	"kr"=>"ko_KR",
 	"uk"=>"uk_UA",
-	"rm"=>"rm_CH"	
+	"rm"=>"rm_CH",
+	"fr"=>"fr_FR",
+    "da"=>"da_DK",
+	"al"=>"al_SQ"
 );
 
 /**
