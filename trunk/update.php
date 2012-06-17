@@ -48,12 +48,12 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 6</a></h3>
+					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 13</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
 				<li class="op">
-					<h3><a href="<?php echo $u_op;?>" target="_blank" onmousedown="countBrowser('o')">Opera 11</a></h3>
+					<h3><a href="<?php echo $u_op;?>" target="_blank" onmousedown="countBrowser('o')">Opera</a></h3>
 					<div><?php echo T_('Browser with many features'); ?></div>
 					<a href="<?php echo $u_op;?>" target="_blank" onmousedown="countBrowser('o')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -64,7 +64,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 				</li>
 				<?php if ($no_sa) {?>
 				<li class="sa notavailable">
-					<h3>Safari 5</h3>
+					<h3>Safari 5.1</h3>
 					<div>
 					<?php echo T_('Not available for your System.');?> 
 					<?php echo T_('Please choose another browser.');?>
@@ -72,7 +72,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 				</li>
 				<?php } else {?>				
 				<li class="sa">
-					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari 5.1</a></h3>
+					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari</a></h3>
 					<div><?php echo T_('Apple\'s fast browser'); ?></div>
 					<a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>				

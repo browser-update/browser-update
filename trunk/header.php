@@ -45,6 +45,8 @@ $curfile = end($parts);
     <a href="/rm/<?php echo $curfile?>">rumantsch</a>
     <a href="/da/<?php echo $curfile?>">dansk</a>
 	<a href="/al/<?php echo $curfile?>">Gjuha Shqipe</a>
+	<a href="/ca/<?php echo $curfile?>">català</a>
+	
 	
     
 	
