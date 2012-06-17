@@ -5,7 +5,7 @@ Browser update has a default list of browsers that get the update notification. 
 
 = Browsers =
 
-Using the default configuration, these browser currently get the update notification:
+Using the default configuration, these browsers currently get the update notification:
 
   * IE 7 or older
   * FF 3.6 or older
