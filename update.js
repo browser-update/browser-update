@@ -6,8 +6,8 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:9,f:7,o:11,s:5.1,n:20};
-this.op.vsdefault = {i:6,f:3.5,o:10.1,s:3.2,n:10};
+this.op.vsakt = {i:9,f:13,o:12,s:5.1,n:20};
+this.op.vsdefault = {i:7,f:3.6,o:10.6,s:4,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -139,7 +139,12 @@ else if (ll=="da")
         t = 'Din browser (%s) er <b>forældet</b>. Den har kendte <b>sikkerhedshuller</b> og kan måske <b>ikke vise alle funktioner</b> på dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>';
 else if (ll=="al")
         t = 'Shfletuesi juaj (%s) është <b>ca i vjetër</b>. Ai ka <b>të meta sigurie</b> të njohura dhe mundet të <b>mos i shfaqë të gjitha karakteristikat</b> e kësaj dhe shumë faqeve web të tjera. <a%s>Mësoni se si të përditësoni shfletuesin tuaj</a>';
-		
+else if (ll=="ca")
+        t = 'El teu navegador (%s) està <b>desactualitzat</b>. Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a%s>Aprèn a actualitzar el navegador</a>';
+else if (ll=="tr")
+    t = 'Tarayıcınız (%s) <b>güncel değildir.</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. \
+         <a%s>Tarayıcınızı nasıl güncelleyeceğinizi öğrenin!</a>';
+		 
 if (op.text)
     t = op.text;
 

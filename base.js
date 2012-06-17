@@ -6,9 +6,9 @@ function code() {
     if (autoupdate.checked) {
         var notify = "";
         setomatdefault('i',2);
-        setomatdefault('f',4);
+        setomatdefault('f',5);
         setomatdefault('o',2);
-        setomatdefault('s',4);
+        setomatdefault('s',5);
         vc.className = "disabled";
     }
     else {

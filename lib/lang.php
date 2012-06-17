@@ -21,7 +21,8 @@ $lang_rewrite = array(
 	"rm"=>"rm_CH",
 	"fr"=>"fr_FR",
     "da"=>"da_DK",
-	"al"=>"al_SQ"
+	"al"=>"al_SQ",
+	"ca"=>"ca_ES"
 );
 
 /**

@@ -10,25 +10,54 @@ include("header.php");
 <div class="entry">
 </div>
 -->
-<!--
-<h2>IE7 moved to the decrepated browsers</h2>
-<small>July 30th, 2011</small>
+
+<h2>IE7 moved to outdated browsers</h2>
+<small>June 17th, 2012</small>
 <div class="entry">
-Many users have claimed that we should move Internet Explorer 7 to the outdated Browser when IE9 is released.
-This has now happend. Users now get warnings when they still use Internet Explorer 7 which was releades
-almost 5 years ago, on 31. October 2006.
-It currently has a global Marketshare of around 5%.
+<p>
+Many webdesigners using browser-update.org have told us that we should move Internet 
+Explorer 7 to the outdated Browsers since the release of IE9 last year.
+</p>
+<p>
+Users now get warnings when they still use Internet Explorer 7 which was released 
+more than 5 years ago in October 2006.
+</p>
+<p>
+IE 7 currently approximately holds a global market share of less than 3%.
+</p>
+<p>
+The default outdated browser list is now:
+</p>
+<ul>
+    <li>Internet Explorer 7 or older (released Oct 2006, market share ≈< 3%)</li>
+    <li>Firefox 3.6  or older (released Jul 2010, not supported with security updates anymore, ≈< 3%)</li>
+    <li>Opera 10.6 or older (released Jan 2010, not supported with security updates anymore, ≈< 0.1%)</li>
+    <li>Safari 4.0 or older (released Feb 2009, not supported with security updates anymore, ≈<0.2%)</li>
+</ul>
+<p>
+    IE7 is after IE6 the browser webdesigners are struggling  the most with when creating their
+    sites. It supports almost none of the HTML5/CSS3 features and speed improvements of current browsers.
+    An interesting approach to get users to update their browser was chosen by an Australian online shop: 
+    They added an <a href="http://gizmodo.com/5918599/australian-electronics-retailer-shame+taxes-customers-who-use-internet-explorer-7-updated">additional tax for users of IE7</a>
+    to pay their webdevelopers for optimizing the site for this ancient browser.
+</p>
+<p>
+    Additional information on when we moved browsers to the outdated list and discussion
+    about it can be found on the wiki page 
+    <a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">"BrowsersToNotify"</a>.
+</p>
 </div>
--->
+<div class="com"><a href="blog-entry.php?n=ie7" onclick="SC('ie7'); return false;">Comments</a></div>
+
 
 <h2>French translation and Drupal module</h2>
 <small>July 30th, 2011</small>
 <div class="entry">
 Finally we can add French to the supported languages list.
 Now we have four of the five <a href="http://en.wikipedia.org/wiki/List_of_languages_by_total_number_of_speakers#George_H._J._Weber.27s_estimate">top languages by native and secondary speakers</a>.
-Thanks to <a href="http://www.ditwinemploi.com"Médéric</a> for the translation!
+Thanks to <a href="http://www.ditwinemploi.com">Médéric</a> for the translation!
 <p>
-Furthermore, there is now <a href="'https://drupal.org/project/bu'">a module</a> for the Drupal Content management system available. Thanks to <a href="http://pebosi.net/drupal-module/browser-update">Peter</a>.
+Furthermore, there is now <a href="https://drupal.org/project/bu">a module</a> for the Drupal Content management system available. Thanks to <a href="http://pebosi.net/drupal-module/browser-update">Peter</a>.
 </p>
 </div>
 <div class="com"><a href="blog-entry.php?n=frenchdrupal" onclick="SC('frenchdrupal'); return false;">Comments</a></div>
