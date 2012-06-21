@@ -52,3 +52,6 @@ When did we notify which browser version?
 = Discussion =
 
 In the comments below we can discuss which browser to move to the default list of outdated browser.
+
+= Market share =
+One of the sources for browser market share[http://gs.statcounter.com/#browser_version_partially_combined-ww-monthly-201203-201205-map Market Share]
