@@ -8,107 +8,105 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2014-01-04 16:33+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2013-06-23 16:26+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es_ES\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #: contact.php:8 header.php:62
 msgid "Contact"
-msgstr "Contacto"
+msgstr "Kapcsolat"
 
 #: customize.php:8
 msgid "Customize and test"
-msgstr "Personalízalo y pónlo a prueba"
+msgstr "Testreszabás és teszt"
 
 #: customize.php:11
 msgid "Test the script"
-msgstr "Pruéba el script"
+msgstr "Programkód tesztelés"
 
 #: customize.php:14
 msgid ""
 "If you open your website with <code>#test-bu</code> appended to the url, the "
 "bar will always show up."
 msgstr ""
-"Si abres tu sitio con <code>#test-bu</code> al final de la url, la barra se "
-"mostrará todo el tiempo."
+"Ha a <code>#test-bu</code> kódot az url-hez hozzáadva nyitja meg weboldalát, "
+"a értesítési sáv mindig megjelenik."
 
 #: customize.php:15
 msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-msgstr "Ejemplo: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Példa: <code>http://browser-update.org/#test-bu</code>."
 
 #: customize.php:16
 msgid ""
 "Make sure the page is properly reloaded by opening the url in an new browser "
 "tab."
 msgstr ""
-"Asegúrate de que la página cargue correctamente abriendo la url en una nueva "
-"pestaña del navegador."
+"Győződjön meg róla, hogy miután megnyitotta az url-t új böngésző lapon, az "
+"oldal megfelelően betöltődött."
 
 #: customize.php:19
 msgid "Options"
-msgstr "Opciones"
+msgstr "Beállítások"
 
 #: customize.php:22
 msgid "The following options can be passed to the script:"
-msgstr "Las siguientes opciones pueden ser incluídas en el script:"
+msgstr "Az alábbi beállítások állíthatók be a programkódhoz"
 
 #: customize.php:27
 msgid "browser versions to notify"
-msgstr "versiones de navegadores a notificar"
+msgstr "Értesítendő böngésző verziók"
 
 #: customize.php:28
 msgid "atfer how many hours should the message reappear"
-msgstr "cuántas horas deben pasar para que el mensaje vuelva a aparecer"
+msgstr "hány óra múlva jelenjen meg újra a szöveg"
 
 #: customize.php:29
 msgid "0 = show all the time"
-msgstr "0 = mostrar siempre"
+msgstr "0 = mindig mutassa"
 
 #: customize.php:30
 msgid "callback function after the bar has appeared"
-msgstr "función de callback luego de que la barra ha aparecido"
+msgstr "visszahívás funkció a sáv megjelenése után"
 
 #: customize.php:32
 msgid "set a language for the message, e.g. \"en\""
-msgstr "establecer un idioma para el mensaje, p.ej. \"en\""
+msgstr "üzenet nyelvének beállítása, pl.\"en\""
 
 #: customize.php:33
 msgid "overrides the default detection"
-msgstr "invalída la detección por default "
+msgstr "alapértelmezett felismerés felülírása"
 
 #: customize.php:34
 msgid "true = always show the bar (for testing)"
-msgstr "true = siempre se muestra la barra (para realizar pruebas)"
+msgstr "true = mindig mutassa az értesítési sávot (teszteléshez)"
 
 #: customize.php:35
 msgid "custom notification html text"
-msgstr "personaliza el texto html de la notificación"
+msgstr "egyéni értesítési html kód"
 
 #: customize.php:36
 msgid "open link in new window/tab"
-msgstr "abre el enlace en una nueva ventana/pestaña"
+msgstr "link megnyitása új ablakban/lapon"
 
 #: customize.php:59
 msgid "Edit the CSS"
-msgstr "Editar CSS"
+msgstr "Stíluslap szerkesztése"
 
 #: customize.php:62
 msgid "The following CSS rules are applied by the script. "
-msgstr "Las siguientes reglas de CSS aplican para el script."
+msgstr "Az alábbi stíluslap szabályok érvényesek a programkódhoz."
 
 #: customize.php:63
 msgid ""
 "You can overwrite them in your own CSS. To do so you need to add some more "
 "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
-"Puedes sobreescribirlas con tu propio CSS. Para ello debes ser más "
-"específico en las reglas css: p. ej. <code>body .buorg {font-size:20px}</"
+"Felülírhatja őket saját stíluslapjában. Ehhez továbbiakat kell megadnia "
+"stíluslap-szabályok meghatározása: pl. <code>body .buorg {font-size:20px}</"
 "code>"
 
 #: header.php:5 header.php:56
@@ -117,33 +115,33 @@ msgstr "Browser-Update.org"
 
 #: header.php:5
 msgid "Inform your visitors about browser-updates"
-msgstr "Inf&#243;rma a tus visitantes de actualizaciones a los navegadores"
+msgstr "Tájékoztassa látogatóit böngésző-frissítésekről"
 
 #: header.php:57
 msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr ""
-"Una iniciativa de diseñadores web para informar a los usuarios acerca de "
-"actualizaciones a los navegadores"
+"Webdizájnerek kezdeményezése a felhasználók böngésző-frissítésekről történő "
+"tájékoztatásáról"
 
 #: header.php:60
 msgid "Start"
-msgstr "Inicio"
+msgstr "Start"
 
 #: header.php:61
 msgid "Update Browser"
-msgstr "Actualice su navegador"
+msgstr "Böngésző frissítése"
 
 #: header.php:63
 msgid "Help"
-msgstr "Ayuda"
+msgstr "Segítség"
 
 #: header.php:64
 msgid "Supporters"
-msgstr "Partidarios"
+msgstr "Támogatók"
 
 #: header.php:65 index.php:90 stat.php:9 statdetail.php:9
 msgid "Statistics"
-msgstr "Estadísticas"
+msgstr "Statisztikák"
 
 #: header.php:66
 msgid "Blog"
@@ -154,43 +152,38 @@ msgid ""
 "This service is an  opportunity to inform your visitors  unobtrusively to "
 "switch to a newer browser."
 msgstr ""
-"Este servicio es una oportunidad para informar a tus visitantes de manera no "
-"molesta que deben cambiar a un navegador más reciente."
+"Ez a szolgáltatás egy lehetőséget kínál arra, hogy diszkréten tájékoztassa "
+"látogatóitfrissebb böngészőre történő átváltásról"
 
 #: index.php:17
 msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
+"Many internet users are still using very old, out-dated browsers â€“ most of "
 "them for no actual reason. Switching to an newer browser is better for them "
 "and for you as a webdesigner."
 msgstr ""
-"Muchos usuarios de la Internet continúan usando navegadores muy antiguos y "
-"desactualizados – la mayoría de ellos sin una razón particular. Cambiar a un "
-"navegador más reciente es mejor para ellos y para ti como diseñador web."
 
 #: index.php:26
 msgid "How it works"
-msgstr "Cómo funciona"
+msgstr "Hogyan működik"
 
 #: index.php:30
 #, php-format
 msgid ""
 "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr ""
-"Incluye nuestra pequeña <a href=\"%s\">notificación</a> javascript en tu "
-"sitio"
+"Építse be rövid javascript-ünket <a href=\"%s\">notification</a> weboldalába"
 
 #: index.php:33
 msgid ""
 "Visitors with out-dated browser will be informed by a little, undisturbing "
 "bar, that his browser is not up-to-date and it is recommended to update."
 msgstr ""
-"Los visitantes con navegadores no actualizados serán informados por una "
-"pequeña barra no molesta, que su navegador no está actualizado y que es "
-"recomendable actualizarlo."
+"Az elavult böngészőt használó látogatókat egy kis, nem zavaró értesítési sáv "
+"tájékoztatja arról, hogy böngészője nem korszerű és ajánlott frissítenie."
 
 #: index.php:36
 msgid "Test the notification bar!"
-msgstr "¡Pruéba la barra de notificación!"
+msgstr "Tesztelje az értesítési sávot!"
 
 #: index.php:38
 #, php-format
@@ -199,9 +192,10 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Tu navegador (%s) <b>no está actualizado</b>. Tiene conocidas <b>fallos de "
-"seguridad</b> y podría <b>no mostrar todas las características</b> de este y "
-"otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>"
+"Az Ön böngészője (%s) <b>elavult</b>. Ismert <b>biztonsági hiányosságai</b> "
+"vannakés esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy "
+"más weboldalakon. <a%s>Itt talál bővebb információt a böngészőjének "
+"frissítésével kapcsolatban</a>"
 
 #: index.php:45
 #, php-format
@@ -209,22 +203,23 @@ msgid ""
 "By clicking the bar, he will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
-"Al hacer clic en la barra, será enviado a <a href=\"%s\"> una página "
-"informativa </a>con argumentos de porqué debe cambiar/actualizar y algunas "
-"opciones de navegadores"
+"Az értesítési sávra kattintva egy <a href=\"%s\">információs oldalra kerül, "
+"ahol néhány indokot olvashat arról, miért érdemes váltania/frissítenie és "
+"néhány böngésző alternatíva kerül felsorolásra.</a>."
 
 #: index.php:49
 msgid "If the visitor ignores the advice, it won't appear again for some time."
 msgstr ""
-"Si el visitante ignora el aviso, no le volverá; a aparecer por algún tiempo."
+"Ha a látogató figyelmen kívül hagyja a tanácsot, az a továbbiakban nem "
+"jelenik."
 
 #: index.php:52
 msgid "Advantages and features"
-msgstr "Ventajas y características"
+msgstr "Előnyök és szolgáltatások"
 
 #: index.php:55
 msgid "Subtle"
-msgstr "Sutil"
+msgstr "Diszkrét"
 
 #: index.php:56
 msgid ""
@@ -232,53 +227,52 @@ msgid ""
 "notification bar is very small and won't affect the browsing experience "
 "negatively."
 msgstr ""
-"El usuario será notificado una sola vez, y no se le volverá a molestar. La "
-"barra de notificación es muy pequeña y no afectará la experiencia de "
-"navegació de manera negativa."
+"A felhasználó csak egyszer lesz értesítve, többet nem zavarjuk. Az "
+"értesítési sáv kicsi és nem befolyásolja az internetes élményt negatívan."
 
 #: index.php:60
 msgid "Informative"
-msgstr "Informativa"
+msgstr "Informatív"
 
 #: index.php:61
 msgid ""
 "Tell the users that they are using an out-dated browser and that your "
 "website looks even better with a newer one."
 msgstr ""
-"Díle a los usuarios que están usando un navegador desactualizado y que tu "
-"sitio se ve aún mejor con uno más reciente."
+"Tájékoztassa a felhasználókat, hogy elavult böngészőt használnak és egy "
+"újabb verzióval az Ön oldala is jobban jelenik meg."
 
 #: index.php:65
 msgid "Idealistic"
-msgstr "Idealista"
+msgstr "Példás"
 
 #: index.php:66
 msgid "Help evolve the web!"
-msgstr "¡Ayúda a evolucionar la web!"
+msgstr "Segítse a web fejlődését!"
 
 #: index.php:67
 msgid "Support the standards-based web!"
-msgstr "¡Apóya una web basada en estándares!"
+msgstr "Támogassa a szabvány alapú internetet!"
 
 #: index.php:68
 msgid "Support Open Source software projects!"
-msgstr "¡Apóya los proyectos de software de Código Libre!"
+msgstr "Támogassa a nyílt-forráskódú szoftver projekteket!"
 
 #: index.php:69
 msgid "Help your visitors!"
-msgstr "¡Ayúda a tus visitantes!"
+msgstr "Segítse látogatóit!"
 
 #: index.php:70
 msgid "Help increase security awareness!"
-msgstr "¡Ayúda a aumentar la conciencia acerca de la seguridad!"
+msgstr "Segítsen növelni biztonság-tudatosságot!"
 
 #: index.php:71
 msgid "Support your favorite webbrowser!"
-msgstr "¡Apóya a tu navegador favorito!"
+msgstr "Támogassa kedvenc böngészőjét!"
 
 #: index.php:74
 msgid "Low maintenance and up-to-date"
-msgstr "De bajo mantenimiento y actualizado"
+msgstr "Könnyen karbantartható és mindig korszerű"
 
 #: index.php:75
 msgid ""
@@ -286,14 +280,13 @@ msgid ""
 "in the future, exhibit security gaps or have been very old for a long time "
 "we are going to add them to our list automatically."
 msgstr ""
-"Si surgen más versiones de navegadore que no sean porcudaras por sus "
-"fabricantes en el futuro, que exhiban fallas de seguridad o se hayan "
-"mantenido viejos durante mucho tiempo serán agregados a la lista "
-"automáticamente."
+"Ha újabb böngésző verziók jelennek meg, melyeket a fejlesztő nem támogat a "
+"jövőben, ismert biztonsági résekkel bír, vagy régóta elavult, automatikusan "
+"listánkhoz adjuk. "
 
 #: index.php:80
 msgid "Customizable"
-msgstr "Personalizable"
+msgstr "Testreszabható"
 
 #: index.php:81
 msgid ""
@@ -301,21 +294,21 @@ msgid ""
 "releases you can also customize the text that should be shown, the frequency "
 "of the bar to appear and many other things."
 msgstr ""
-"Puedes personalizar a cuáles navegadores y versiones notificar.<br /> En "
-"futuras ediciones podrás además customizar el texto a mostrar, la frecuencia "
-"con que ha de aparecer la barra y muchas cosas m&#225;s."
+"Testreszabhatja, mely böngészők és verziók legyenek értesítve.<br/> A "
+"jövőben továbbá testreszabhatja a megjelenítendő szöveget, az értesítési sáv "
+"megjelenésének gyakoriságát és számos egyebet is."
 
 #: index.php:86
 msgid "Localized"
-msgstr "Localizado"
+msgstr "Többnyelvű"
 
 #: index.php:87
 msgid "The message is automatically displayed in the user's language."
-msgstr "El mensaje será desplegado automáticamente en el idioma del usuario."
+msgstr "Az üzenet automatikusan a felhasználó nyelvén jelenik meg."
 
 #: index.php:90
 msgid "<span class=\"workingonit\">work in progress</span>"
-msgstr "<span class=\"workingonit\">en desarrollo</span>"
+msgstr "<span class=\"workingonit\">folyamatban</span>"
 
 #: index.php:91
 #, php-format
@@ -324,25 +317,23 @@ msgid ""
 "using and how much users got proselyted: How many users updated or changed "
 "their browser through your advice."
 msgstr ""
-"Obtienes <a href=\"%s\">estadísticas</a> acerca de qué navegadores están "
-"usando tus visitantes y cuántos usuarios han sido proselitizados: Cuántos "
-"usuarios han actualizado o cambiado su navegador gracias a tu consejo."
+"Ön <a href=\"%s\">statistics</a>-t kap arról, hogy látogatói mely böngészőt "
+"használják és hány felhasználó váltott: Hány felhasználó frissítette vagy "
+"váltotta le böngészőjét az Ön tanácsa hatására."
 
 #: index.php:97
 msgid "Install notification on your site"
-msgstr "Instála la notificación en tu sitio"
+msgstr "Értesítések telepítése az Ön weboldalára"
 
 #: index.php:99
 msgid ""
 "Here you can get the code to include in your website. Just include it "
 "anywhere in the source of your page."
 msgstr ""
-"Aquí puedes obtener el código a incluir en tu sitio. Sólo colócalo en "
-"cualquier parte de la fuente de tu página."
 
 #: index.php:103
 msgid "You may also use third-party plugins for: "
-msgstr "Plugins: "
+msgstr "Esetlegesen harmadik fél által készített bővítményeket is használhat:"
 
 #: index.php:121
 #, php-format
@@ -350,17 +341,17 @@ msgid ""
 "You can <a href=\"%s\">customize</a> the style of the message, the text and "
 "other options."
 msgstr ""
-"Puedes < href=\"%s\">personalizar</a> el estilo del mensaje, el texto y "
-"otras opciones."
+"Testreszabhatja (<a href=\"%s\"> customize</a>) az üzenet stílusát, szövegét "
+"és egyéb beállításait."
 
 #: index.php:127
 msgid "Following browsers will be notified:"
-msgstr "Los siguientes navegadores serán notificados:"
+msgstr "A következő böngészők lesznek értesítve"
 
 #: index.php:166
 msgid ""
 "Google Chrome will automatically itself and is therefor always up to date"
-msgstr "Google Chrome se actualiza automáticamente y siempre está actualizado"
+msgstr "Google Chrome automatikusan frissíti önmagát, így mindig naprakész"
 
 #: index.php:172
 msgid ""
@@ -368,40 +359,38 @@ msgid ""
 "</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
-"<b>Notifíca a los navegadores recomendados y ajústalo automáticamente con el "
-"tiempo:</b>Si un navegador ya no es procurado por su fabricante o tiene "
-"vulnerabilidades de seguridad, será agregado a la lista."
 
 #: index.php:177
 msgid "Your Code"
-msgstr "Tu código"
+msgstr "Az Ön Kódja"
 
 #: index.php:195
 msgid "Why you should tell users to update"
-msgstr "Porqué deberíaas decirle a los usuarios que actualicen"
+msgstr "Miért érdemes a felhasználókat frissítésre ösztönözni"
 
 #: index.php:198
 msgid "Reduced development costs and time"
-msgstr "Reducción en costo y tiempo de desarrollo"
+msgstr "Alacsonyabb fejlesztésre szánt költségek és megspórolt idő"
 
 #: index.php:199
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
 msgstr ""
-"Optimizar los sitios web para los navegadores antiguos consume tiempo y es "
-"costoso."
+"Az oldalak régi böngészőre történő optimalizálása sok időt és pénzt emészt "
+"fel."
 
 #: index.php:202
 msgid "Webdesign technologies and features"
-msgstr "Tecnologías y características de diseño web"
+msgstr "Webdesign technológiák és szolgáltatások"
 
 #: index.php:203
 msgid ""
-"There are all these great new web development standards and they are "
-"supported by modern browsers... but you may not use them."
+"There are all these great new web development standards új webfejlesztési "
+"irányvonalak szabványokand they are supported by modern browsers... but you "
+"may not use them."
 msgstr ""
-"Existen grandiosos nuevos estándares de desarrollo web y son soportados por "
-"los navegadores modernos... pero tú tal vez no puedas usarlos."
+"Számos új, nagyszerű webfejlesztési szabvány létezik, melyeket a modern "
+"böngészők támogatnak... de sokan mégsem használják őket."
 
 #: index.php:205
 msgid ""
@@ -409,14 +398,13 @@ msgid ""
 "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
 "resulting in a better browsing experience for your users."
 msgstr ""
-"Los navegadores más modernos te permiten usar más características y nuevas "
-"tecnologías (CSS3, SVG, HTML5, RSS, Contenido Generado por CSS, Plantillas "
-"flexibles) en tu sitio web, dando por resultado una mejor experiencia de "
-"navegación para tus usuarios."
+"Frissebb böngészők több szolgáltatást és új technológiát engednek CSS3, SVG, "
+"HTML5, RSS, stíluslap által létrehozott tartalom, rugalmas elrendezések) "
+"használni weboldalán, jobb internetes élményt nyújtva felhasználóinak."
 
 #: index.php:208
 msgid "Security and benefits for the user"
-msgstr "Seguridad y beneficios para el usuario"
+msgstr "Biztonság és előnyök a felhasználók számára"
 
 #: index.php:209
 #, php-format
@@ -425,18 +413,17 @@ msgid ""
 "\">update page</a>. The security-threats of outdates browsers are listed in "
 "this <a href=\"%s\">paper</a>."
 msgstr ""
-"Numerosos beneficios: seguridad, velocidad, características, ... Míra la <a "
-"href=\"%s\">página de actualizacionese</a>. Los hilos de seguridad de los "
-"nevageadores no actualizados se enlistan en este <a href=\"%s\">documento</"
-"a>."
+"Számos előny: biztonság, gyorsaság, különböző szolgáltatások,... Tekintse "
+"meg a <a href=\"%s\">update page</a> oldalt. Az elavult böngészők biztonsági "
+"veszélyei az alábbi helyen olvashatók: <a href=\"%s\">paper</a>."
 
 #: index.php:212
 msgid "The web has to evolve..."
-msgstr "La web tiene que evolucionar..."
+msgstr "A világhálónak fejlődnie kell... "
 
 #: index.php:214
 msgid "But that's only possible if the browsers also evolve."
-msgstr "Pero eso sólo es posible si los navegadores también evolucionan."
+msgstr "De ez csak akkor lehetséges, ha a böngészők is fejlődnek."
 
 #: index.php:215
 msgid ""
@@ -444,55 +431,52 @@ msgid ""
 "something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
-"La fuerte porción de mercado que conserva un navegador antiguo (Internet "
-"Explorer 6) es algo inédito en la historia de la internet. Si no hacemos "
-"algo ahora, tendrémos que diseñar los sitio como si estuvieramos en 2001 aún "
-"estando en 2011."
+"A régi böngészők még ma is nagy piaci részesedéssel bírnak és határozottan "
+"jelen vannak. Ha most nem cselekszünk, "
 
 #: index.php:219
 msgid "Users don't oppose updating..."
-msgstr "Los usuarios no se oponen a actualizar..."
+msgstr "A felhasználók alapvetően nem ellenzik a frissítéseket..."
 
 #: index.php:220
 msgid ""
 "... they often just do not appreciate the need to update or the existence of "
 "the \"webbrowser\" as a software at all."
 msgstr ""
-"... muchas veces simplemente no aprecian la necesidad de actualizar o la "
-"existencia del \"navegador\" como software siquiera."
+"...gyakran egyszerűen csak nincsenek tisztában azzal, hogy a \"webes "
+"böngészők\" is szoftverek, melyeket időről-időre frissítésének kell."
 
 #: index.php:223
 msgid "Help this project"
-msgstr "Apóya este proyecto"
+msgstr "Segítse a projektet"
 
 #: index.php:226
 msgid "Participate!"
-msgstr "¡Particípa!"
+msgstr "Hozzájárulás!"
 
 #: index.php:227
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
-"Inclúye el código de notificación en tu página para informar a los usuarios "
-"acerca de las actualizaciones a los navegadores."
+"Építse be az értesítési kódot oldalába, hogy tájékoztatni tudja a "
+"felhasználókat böngésző frissítésekről."
 
 #: index.php:230
 msgid "Spread the word!"
-msgstr "¡Córre la voz!"
+msgstr "Terjessze az igét!"
 
 #: index.php:231
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr ""
-"¡Díle a otros acerca de esta iniciativa! En tu blog, en tu sitio web, ..."
+msgstr "Meséljen másoknak is erről! Blogjában, weboldalán,..."
 
 #: index.php:234
 msgid "Translate this page"
-msgstr "Tradúce esta página"
+msgstr "Oldal fordítása"
 
 #: index.php:235
 msgid "Translate this page into your language."
-msgstr "Tradúce esta página a tu idioma."
+msgstr "Fordítsa le jelen oldalt az Ön nyelvére."
 
 #: stat.php:18
 #, php-format
@@ -500,12 +484,11 @@ msgid ""
 "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
 "script."
 msgstr ""
-"<strong class=\"number\">%d</strong> sitios están usando el script de "
-"Browser-Update.org."
+"<strong class=\"number\">%d</strong> oldal használja a Browser-Update.org-ot "
 
 #: stat.php:22
 msgid "Browser updates"
-msgstr "Navegadores actualizados"
+msgstr "Böngésző frissítések"
 
 #: stat.php:60
 #, php-format
@@ -513,85 +496,80 @@ msgid ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
 msgstr ""
-"<strong class=\"number\">%d</strong> visitantes ya hanactualizado su "
-"navegador."
+"<strong class=\"number\">%d</strong> látogató frissítette már böngészőjét."
 
 #: stat.php:92
 msgid "From"
-msgstr "De"
+msgstr "Erről"
 
 #: stat.php:92
 msgid "To"
-msgstr "A"
+msgstr "Erre"
 
 #: stat.php:92
 msgid "Amount"
-msgstr "Cantidad"
+msgstr "Hány fő"
 
 #: update.php:46
 msgid "Free webbrowsers"
-msgstr "Navegadores gratuitos"
+msgstr "Ingyenes internetes böngészők"
 
 #: update.php:47
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr ""
-"Estas son la más recientes versiones de los navegadores gratuitos más "
-"utilizados."
+"Ezek a leggyakrabban használt ingyenes internetes böngészők legújabb verziói."
 
 #: update.php:48
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
-"Sólo elige un navegador y descárgalo desde la página original de su "
-"fabricante:"
+"Válasszon egy böngészőt, és töltse le a hivatalos fejlesztő weboldaláról:"
 
 #: update.php:52
 msgid "Widely-used open-source browser, highly extendable and customizable"
-msgstr ""
-"Navegador de código libre ampliamente usado, con muchas extensiones de "
-"capacidad de personalización"
+msgstr "Széles körben használt nyílt-forráskódú és testreszabható böngésző"
 
 #: update.php:53 update.php:58 update.php:63 update.php:77 update.php:92
 msgid "Download"
-msgstr "Descargar"
+msgstr "Letöltés"
 
 #: update.php:57
 msgid "Browser with many features"
-msgstr "Navegador con muchas características"
+msgstr "Böngésző számos szolgáltatással"
 
 #: update.php:62
 msgid "Google's browser with compact interface."
-msgstr "El navegador de Google, con su minimalista interfaz."
+msgstr "Google kereső egységes érintkező felülettel."
 
 #: update.php:62
 msgid "Automatically always up to date!"
-msgstr "Automáticamente siempre al día!"
+msgstr "Automatikusan frissül, mindig naprakész!"
 
 #: update.php:69 update.php:83
 msgid "Not available for your System."
-msgstr "No está disponible para su sistema operativo."
+msgstr "Nem elérhető az Ön Rendszere számára."
 
 #: update.php:70 update.php:85
 msgid "Please choose another browser."
-msgstr " "
+msgstr "Kérjük, válasszon egy másik böngészőt."
 
 #: update.php:76
 msgid "Apple's fast browser"
-msgstr "El veloz navegador de Apple"
+msgstr "Apple gyors böngésző"
 
 #: update.php:84
 msgid "Only for Windows Vista or 7."
-msgstr "Sólo para Windows Vista/7."
+msgstr "Windows Vista or 7. esetén"
 
 #: update.php:91
 msgid "Windows built-in browser"
-msgstr "El navegador que viene incluido con Windows"
+msgstr "A Windows beépített böngészője"
 
 #: update.php:97
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
-"Todos los navegadores tienen las mismas características básicas y fácil "
-"interfaz."
+"Az összes böngésző ugyanazon fő funkciókkal és egyszerű érintkező felülettel "
+"rendelkezik."
 
 #: update.php:105
 msgid ""
@@ -599,75 +577,71 @@ msgid ""
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
 "features of some websites."
 msgstr ""
-"El navegador que estás usando está desactualizado. Tiene conocidas <b>fallos "
-"de seguridad y desventajas</b> y un <b>limitado juego de características</"
-"b>. No podrás ver todas las características de algunos sitios."
+"Az Ön által használt böngésző elavult. Ismert <b>biztonsági hiányosságai,"
+"hátrányai</b> és <b>korlátozott szolgáltatás készletei</b> vannak. Ön nem "
+"fogja látni néhány oldal esetében azösszes funkciót."
 
 #: update.php:109
 msgid "Switching to a newer browser could give you a lot of advantages:"
-msgstr ""
-"Cambiar a un navegador más reciente podría darte una gran cantidad de "
-"ventajas:"
+msgstr "Frissebb böngészőre való átváltás számos előnyöket kínál:"
 
 #: update.php:112
 msgid "Security"
-msgstr "Seguridad"
+msgstr "Biztonság"
 
 #: update.php:113
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Los navegadores recientes te protegen mejor contra fraudes, virus, troyanos, "
-"phishing y otras amenazas. ¡Además corrigen los huecos de seguridad de tu "
-"navegador actual!"
+"Az frissebb böngészők megvédik Önt a csalásoktól, vírusoktól, trójai "
+"programoktól, adathalászattól és egyéb veszélyektől. Egyúttal betömi "
+"jelenlegi böngészőjének biztonsági réseit!"
 
 #: update.php:116
 msgid "Speed"
-msgstr "Velocidad"
+msgstr "Gyorsaság"
 
 #: update.php:117
 msgid "Every new browser generation improves speed"
-msgstr "Cada nueva generación de navegadores mejora en velocidad"
+msgstr "Minden újabb böngésző generáció növeli sebességét"
 
 #: update.php:120
 msgid "Compatibility"
-msgstr "Compatibilidad"
+msgstr "Kompatibilitás"
 
 #: update.php:121
 msgid "Websites using new technology will be displayed more correctly"
-msgstr ""
-"Los sitios que utilizan nuevas tecnologías se mostrarán de manera más "
-"correcta"
+msgstr "Az új technológiákat használó weboldalak pontosabban jelennek meg"
 
 #: update.php:124
 msgid "Comfort &amp; better experience"
-msgstr "Confort &amp; una mejor experiencia"
+msgstr "Kényelem &amp; jobb élmény"
 
 #: update.php:125
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
-"Con nuevas características, extensiones y más personalizables, tendrás una "
-"más confortable experienca web"
+"Az új funkciók, bővítések és a jobb testreszabhatóság kényelmesebb "
+"internetes élményt nyújtanak"
 
 #: update.php:130
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
-"Actualizar es fácil, tomas sólo unos minutos y es completamente gratis."
+"A frissítés egyszerű, mindössze néhány percig tart és teljesen ingyenes."
 
 #: update.php:135
 msgid "Why this website?"
-msgstr "¿Por qué este sitio?"
+msgstr "Miért ezt az oldalt?"
 
 #: update.php:137
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Este sitio es una iniciativa de diseñadores web, webmasters y bloggers que "
-"desean llevar la internet a otro nivel y ayudar a sus visitantes."
+"Ez az oldal webdizájnerek, webmester és bloggerek kezdeményezése, akik "
+"szeretnék előrébb vinni a internet világát és segíteni látogatóit."
 
 #: update.php:140
 msgid ""
@@ -675,22 +649,21 @@ msgid ""
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
-"Los navegadores no actualizados son una <b>amenaza a la seguridad</b> y son "
-"<b>un obstáculo al avance de la internet</b> debido a lo limitado de sus "
-"características y muchos <b>errores</b>."
+"Az elavult böngészők <b>biztonsági veszélyeket</b> rejtenek és "
+"<b>megakadályozzák azinternet fejlődését <b/> korlátozott funkcióik és "
+"számos <b>hibáik</b> miatt."
 
 #: update.php:144
 msgid "\"I'm not able to update my browser\""
-msgstr "\"No puedo actualizar mi navegador\""
+msgstr "\"Nem tudom frissíteni a böngészőmet\""
 
 #: update.php:145
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
 msgstr ""
-"Si utilizas un ordenador que recibe mantenimiento de un administrador y no "
-"puedes instalar un nuevo navegador, pregúntale a tu administrador al "
-"respecto."
+"Ha Ön rendszergazda által karbantartott számítógépnél ül, és nem tud új "
+"böngészőt telepíteni, érdeklődjön adminjánál."
 
 #: update.php:146
 msgid ""
@@ -698,43 +671,6 @@ msgid ""
 "about installing a second browser for browsing and keep the old one for the "
 "compatibility."
 msgstr ""
-"Si no puedes cambiar tu navegador por cuestiones de compatibilidad, piensa "
-"entonces en instalar un segundo navegador para navegar y conserva el antiguo "
-"para la compatibilidad."
-
-#~ msgid "Google's browser with compact interface. Always up-to-date."
-#~ msgstr "El navegador de Google, con su minimalista interfaz."
-
-#~ msgid "database connection problem"
-#~ msgstr "no se pudo conectar a la base de datos"
-
-#~ msgid "database not found"
-#~ msgstr "base de datos no encontrada"
-
-#~ msgid "translate..."
-#~ msgstr "traducir..."
-
-#~ msgid "Recent browser updates"
-#~ msgstr "Actualizaciones de navegador recientes"
-
-#~ msgid "Site"
-#~ msgstr "Sitio"
-
-#~ msgid "Old browser"
-#~ msgstr "Navegador antiguo"
-
-#~ msgid "New browser"
-#~ msgstr "Navegador nuevo"
-
-#~ msgid "Language"
-#~ msgstr "Idioma"
-
-#~ msgid "Date"
-#~ msgstr "Fecha"
-
-#~ msgid ""
-#~ "You may also use third-party plugins for <a href=\"%s\">WordPress</a> "
-#~ "(german) or <a href=\"%s\">TYPOlight</a> (german)."
-#~ msgstr ""
-#~ "También puedes usar los plugins creados por terceros para <a href=\"%s"
-#~ "\">WordPress</a> (alemán) o <a href=\"%s\">TYPOlight</a> (alemán)."
+"Ha kompatibilitási okokból kifolyólag nem tudja böngészőjét frissíteni, "
+"telepítsen egy másik böngészőt böngészés céljára, a régit pedig tartsa meg a "
+"kompatibilitás végett"
