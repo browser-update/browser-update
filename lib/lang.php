@@ -20,9 +20,12 @@ $lang_rewrite = array(
 	"uk"=>"uk_UA",
 	"rm"=>"rm_CH",
 	"fr"=>"fr_FR",
-    "da"=>"da_DK",
+        "da"=>"da_DK",
 	"al"=>"al_SQ",
-	"ca"=>"ca_ES"
+	"ca"=>"ca_ES",
+	"sv"=>"sv_SE",
+	"hu"=>"hu_HU",
+	"fa"=>"fa_IR"
 );
 
 /**
@@ -132,16 +135,22 @@ function log_lang()
 
 /* Init i18n */
 $detected_lang = request_lang();
-
 // moved into request_lang()
 //if (isset($lang_rewrite[$detected_lang]))
 //	$detected_lang=$lang_rewrite[$detected_lang];
 
-T_setlocale(LC_MESSAGES, $detected_lang);
-T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('browser-update', 'UTF8');
-T_textdomain('browser-update');
-
+if (!isset($slimmed))  {
+    T_setlocale(LC_MESSAGES, $detected_lang);
+    T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+    T_bind_textdomain_codeset('browser-update', 'UTF8');
+    T_textdomain('browser-update');
+}
+else {
+    T_setlocale(LC_MESSAGES, $detected_lang);
+    T_bindtextdomain('core', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+    T_bind_textdomain_codeset('core', 'UTF8');
+    T_textdomain('core');
+}
 //var_dump($CURRENTLOCALE);
 //var_dump($EMULATEGETTEXT);
 //var_dump(request_lang());

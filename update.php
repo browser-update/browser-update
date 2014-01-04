@@ -12,6 +12,11 @@ else {
 	}
 }
 
+if ($ll=="en"||$ll=="de") {
+    header("Location: updatex.html");
+    exit;
+}
+
 /*
 if ($ll=="de" && rand(1, 3)==3) {
     include("update2.php");
@@ -21,6 +26,7 @@ if ($ll=="de" && rand(1, 3)==3) {
 
 require_once("lib/init.php");
 require_once("lib/lang.php");
+$slimmed=true;
 include("header.php");
 
 $ua=strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -29,9 +35,12 @@ function has($t) {
 	return !(strpos($ua,$t)===false);
 }
 
-//not complete list but 99% of systems share where ie9 is not available
-$no_ie = has("windows nt 4") || has("windows nt 5") || has("mac os") || has("linux");
-$no_sa = has("linux");
+//not complete list but 99% of systems share where ie10 is not available
+//IE 09 is available for vista and up
+//IE 10 is only available for win7 and win8 || has("windows nt 6.0")
+// 5->2000/xp/2003 6.0->vista
+$no_ie = has("windows nt 4") || has("windows nt 5") || has("windows nt 6.0") || has("mac os") || has("linux");
+$no_sa = !has("mac os");
 
 
 $u_sa=sprintf("http://www.apple.com/%s/safari/",$ll);
@@ -48,7 +57,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 			<p><?php echo T_('Just choose a browser to download from the original vendor\'s website:'); ?></p>
 			<ul class="browsers">
 				<li class="ff">
-					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox 13</a></h3>
+					<h3><a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')">Firefox</a></h3>
 					<div><?php echo T_('Widely-used open-source browser, highly extendable and customizable'); ?></div>
 					<a href="<?php echo $u_ff;?>" target="_blank" onmousedown="countBrowser('f')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -62,32 +71,24 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 					<div><?php echo T_('Google\'s browser with compact interface.'); ?> <?php echo T_('Automatically always up to date!'); ?></div>
 					<a href="<?php echo $u_ch;?>" target="_blank" onmousedown="countBrowser('c')"><?php echo T_('Download'); ?></a>
 				</li>
-				<?php if ($no_sa) {?>
-				<li class="sa notavailable">
-					<h3>Safari 5.1</h3>
-					<div>
-					<?php echo T_('Not available for your System.');?> 
-					<?php echo T_('Please choose another browser.');?>
-					</div>
-				</li>
-				<?php } else {?>				
+				<?php if ($no_sa) {} else {?>				
 				<li class="sa">
-					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari</a></h3>
+					<h3><a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')">Safari 6</a></h3>
 					<div><?php echo T_('Apple\'s fast browser'); ?></div>
 					<a href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')"><?php echo T_('Download'); ?></a>
 				</li>				
 				<?php } if ($no_ie) {?>
 				<li class="ie notavailable">
-					<h3>Internet Explorer 9</h3>
+					<h3>Internet Explorer 10</h3>
 					<div>
 					<?php echo T_('Not available for your System.');?> 
-					<?php echo T_('Only for Windows Vista or 7.');?> 
+					<!--<?php echo T_('Only for Windows Vista or 7.');?> -->
 					<?php echo T_('Please choose another browser.'); ?>
 					</div>
 				</li>
 				<?php } else {?>
 				<li class="ie">
-					<h3><a href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')">Internet Explorer 9</a></h3>
+					<h3><a href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')">Internet Explorer 11</a></h3>
 					<div><?php echo T_('Windows built-in browser'); ?></div>
 					<a href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')"><?php echo T_('Download'); ?></a>
 				</li>
@@ -114,7 +115,7 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 				</li>
 				<li class="speed">
 					<h3><?php echo T_('Speed'); ?></h3>
-					<div><?php echo T_('Every new browser generation improves speed'); ?></div>
+					<div><?php echo T_('Every new browser generation gets faster'); ?></div>
 				</li>
 				<li class="compatibility">
 					<h3><?php echo T_('Compatibility'); ?></h3>
@@ -147,17 +148,21 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 	</div>
 
 
+
+
 <script type="text/javascript">
 var cv=1;
 var second=false;
 
 function countBrowser(to) {
         var f=getBrowser();
-        if ((f.n=="f" && f.v>=3.6) ||
-            (f.n=="o" && f.v>=10.5) ||
-            (f.n=="s" && f.v>=5) ||
-            (f.n=="i" && f.v>=8))
+        /*
+        if ((f.n=="f" && f.v>=14) ||
+            (f.n=="o" && f.v>=12) ||
+            (f.n=="s" && f.v>=6) ||
+            (f.n=="i" && f.v>=10))
             return;
+        */
         var s="";
         if (second)
             s="&second=1";
@@ -169,17 +174,19 @@ function countBrowser(to) {
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/MSIE (\d+\.\d+);/.test(ua))					n="i";
-    else if (/Arora.(\d+\.\d+)/.test(ua))               n="x";
-    else if (/Chrome.(\d+\.\d+)/.test(ua))              n="c";
-    else if (/Firefox.(\d+\.\d+)/.test(ua))				n="f";
-    else if (/Version.(\d+.\d+).{0,10}Safari/.test(ua))	n="s";
-    else if (/Safari.(\d+)/.test(ua))					n="so";
-    else if (/Opera.*Version.(\d+\.\d+)/.test(ua))			n="o";
-    else if (/Opera.(\d+\.\d+)/.test(ua))				n="o";
-    else if (/Netscape.(\d+)/.test(ua))					n="n";
+    if (/like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
+    else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
+    else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
+    else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
+    else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
+    else if (/Safari.(\d+)/i.test(ua)) n="so";
+    else if (/Opera.*Version.(\d+\.?\d+)/i.test(ua)) n="o";
+    else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
+    else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
-
+    if (n=="x") return {n:"x",v:0,t:names[n]};
+    
     v=new Number(RegExp.$1);
     if (n=="so") {
         v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
@@ -188,6 +195,14 @@ function getBrowser() {
     if (n=="i" && v==7 && window.XDomainRequest) {
         v=8;
     }
+    if (n=="io") {
+        n="i";
+        if (v>5) v=10;
+        else if (v>4) v=9;
+        else if (v>3.1) v=8;
+        else if (v>3) v=7;
+        else v=9;
+    }	
     return {n:n,v:v,t:names[n]+" "+v}
 }
 
@@ -195,11 +210,13 @@ function getBrowser() {
 
 function countView() {
         var f=getBrowser();
+        /*
         if ((f.n=="f" && f.v>=3.6) ||
             (f.n=="o" && f.v>=10.5) ||
             (f.n=="s" && f.v>=5) ||
             (f.n=="i" && f.v>=8))
             return;
+        */
         var i=new Image();
         i.src="/countchoice.php?cv="+cv+"&tv="+window.location.hash.substr(1, 3)+"&ref="+escape((document.referrer||"").substring(0,35))+"&from="+f.n+"&fromv="+f.v+ "&rnd="+Math.random();
 }

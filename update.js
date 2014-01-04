@@ -6,8 +6,9 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:9,f:13,o:12,s:5.1,n:20};
-this.op.vsdefault = {i:7,f:3.6,o:10.6,s:4,n:10};
+this.op.vsakt = {i:11,f:28,o:18,s:7,n:20};
+//this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
+this.op.vsdefault = {i:7,f:10,o:12,s:5,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -40,9 +41,10 @@ if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)=
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/like firefox|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
-    else if (/trident.(\d+\.\d+);/.test(ua)) n="io";
-	else if (/MSIE (\d+\.\d+);/.test(ua)) n="i";
+    if (/bot|googlebot|slurp|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
+    else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
+    else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
@@ -51,6 +53,9 @@ function getBrowser() {
     else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
+    
+    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) n="x";
+    
     if (n=="x") return {n:"x",v:0,t:names[n]};
     
     v=new Number(RegExp.$1);
@@ -62,10 +67,13 @@ function getBrowser() {
         v=8;
     }
     if (n=="io") {
-		n="i";
-        if (v>4) v=9;
-		else if (v>3.1) v=8;
-		else if (v>3) v=7;
+        n="i";
+        if (v>6) v=11;
+        else if (v>5) v=10;
+        else if (v>4) v=9;
+        else if (v>3.1) v=8;
+        else if (v>3) v=7;
+        else v=9;
     }	
     return {n:n,v:v,t:names[n]+" "+v}
 }
@@ -73,6 +81,7 @@ function getBrowser() {
 this.op.browser=getBrowser();
 if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.n=="c" || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
     return;
+
 
 if (!this.op.test) {
     var i = new Image();
@@ -112,7 +121,7 @@ else if (ll=="it")
 else if (ll=="pl")
     t = 'Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>.';
 else if (ll=="es")
-    t = 'Tu navegador (%s) está <b>desactualizado</b>. Tiene conocidas <b>fallas de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>';
+    t = 'Tu navegador (%s) <b>no está actualizado</b>. Tiene conocidas <b>fallos de seguridad</b> y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>';
 else if (ll=="nl")
     t = 'Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>';
 else if (ll=="pt")
@@ -144,7 +153,13 @@ else if (ll=="ca")
 else if (ll=="tr")
     t = 'Tarayıcınız (%s) <b>güncel değildir.</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. \
          <a%s>Tarayıcınızı nasıl güncelleyeceğinizi öğrenin!</a>';
-		 
+else if (ll=="fa")
+    t = 'مرورگر شما (%s) <b>از رده خارج شده</b> می باشد. این مرورگر دارای <b>مشکلات امنیتی شناخته شده</b> می باشد و <b>نمی تواند تمامی ویژگی های این</b> وب سایت و دیگر وب سایت ها را به خوبی نمایش دهد. \
+         <a%s>در خصوص گرفتن راهنمایی درخصوص نحوه ی به روز رسانی مرورگر خود اینجا کلیک کنید.</a>';
+else if (ll=="sv")
+    t = 'Din webbläsare (%s) är <b>föråldrad</b>. Den har kända <b>säkerhetshål</b> och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra webbsidor. <a%s>Uppdatera din webbläsare idag</a>';
+else if (ll=="hu")
+    t = 'Az Ön böngészője (%s) <b>elavult</b>. Ismert <b>biztonsági hiányosságai</b> vannakés esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy más weboldalakon. <a%s>Itt talál bővebb információt a böngészőjének frissítésével kapcsolatban</a>		 ';
 if (op.text)
     t = op.text;
 
@@ -161,7 +176,7 @@ var sheet = document.createElement("style");
 var style = ".buorg {position:absolute;z-index:111111;\
 width:100%; top:0px; left:0px; \
 border-bottom:1px solid #A29330; \
-background:#FDF2AB no-repeat 10px center url(http://browser-update.org/img/dialog-warning.gif);\
+background:#FDF2AB no-repeat 10px center url(//browser-update.org/img/dialog-warning.gif);\
 text-align:left; cursor:pointer; \
 font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
 .buorg div { padding:5px 36px 5px 40px; } \

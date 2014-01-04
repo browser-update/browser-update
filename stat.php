@@ -11,7 +11,7 @@ include("header.php");
 <p>
 	<?php
 	#$q=sprintf("SELECT 1 FROM updates GROUP BY referer");
-        $q=sprintf("SELECT COUNT(DISTINCT referer) FROM views");
+        $q=sprintf("SELECT COUNT(DISTINCT referer) FROM viewschoice");
 	$r = mysql_query($q)
     	or die (mysql_error(). $q);
 	list($domainnum) = mysql_fetch_row($r);
