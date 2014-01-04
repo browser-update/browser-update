@@ -28,18 +28,14 @@ include("header.php");
 
 <ul>
 	<li>
-		Thomas Hümmer (Projektinitiator):  jossele <var>æ</var> gmx.de<br/>
-		<a href="http://www.webmasterpro.de/">Webmasterpro.de</a>,
-		<a href="http://fc.webmasterpro.de/">FlashCounter Webseitenstatistiken</a>,
-		<a href="http://www.webmasterpro.de/portal/webanalyse.html">Webanalyse</a>,
-		<a href="http://www.webmasterpro.de/portal/article/editor.html">WMP Editor</a>
+		Thomas Hümmer (Projektinitiator):  jossele <var>æ</var> gmx.de
 	</li>
 	<li>
-		David Danier (Projektinitiator): david.danier <var>æ</var> team23.de<br/>
-		<a href="http://www.team23.de/kompetenzen/webagentur.html">Webagentur Team23</a>,
-		<a href="http://www.webmasterpro.de/">Webmasterpro.de</a>,
-		<a href="http://serverstats.berlios.de/">Serverstats</a>
+		David Danier (Projektinitiator): david.danier <var>æ</var> team23.de
 	</li>
+</ul>        
+<h2>Translators</h2>        
+<ul>        
 	<li>Tomasz Olędzki (polish translation)</li>
 	<li>Giacomo (Italian translation)</li>
 	<li>Patrick Wever (dutch translation)</li>
@@ -54,6 +50,30 @@ include("header.php");
     <a href="http://www.webmasterpro.de/"><img src="/img/wmp_logo.png" alt="" /></a><br />
     Browser-Update.org ist eine von <a href="http://www.webmasterpro.de/">Webmasterpro.de</a>
     gestartete Initiative zur Förderung neuer Browserversionen und Webstandards.
+</p>
+
+<h2>Impressum</h2>
+
+<p>browser-update.org ist ein Projekt der <a href="http://www.team23.de/">Team23 Internetagentur</a>. Inhaltlicher Verantwortlicher gemäß TMG ist die GmbH & Co. KG. Vertretungsberechtigte Gesellschafter sind Fabian Ziegler, David Danier.</p>
+
+<p>
+Team23 GmbH & Co. KG<br/>
+Werner-von-Siemens-Str. 6<br/>
+D-86159 Augsburg
+</p>
+
+<p>
+Telefon: +49 821 2170975<br/>
+Telefax: +49 8152 909411<br/>
+E-Mail: ziegler@webmasterpro.de<br/>
+Internet: Webagentur Team23
+</p>
+<p>
+Eintragung im Handelsregister.<br/>
+Registergericht: Augsburg<br/>
+Registernummer: HRA 17483<br/>
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+DE 217 549 808 
 </p>
 
 <h2>Copyright</h2>

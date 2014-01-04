@@ -87,11 +87,6 @@ include("header.php");
 				<?php echo T_('The message is automatically displayed in the user\'s language.'); ?>
 			</li>
 			<li>
-				<h3><?php echo T_('Statistics'); ?> <?php echo T_('<span class="workingonit">work in progress</span>'); ?></h3>
-				<?php echo sprintf(T_('You get <a href="%s">statistics</a> about which browsers your ' . 
-                'visitors are using and how much users got proselyted: How many users ' . 
-                'updated or changed their browser through your advice.'), 'stat.html'); ?>
-			</li>
 
 		</ul>
 		<h2 id="install"><?php echo T_('Install notification on your site'); ?></h2>
@@ -99,35 +94,7 @@ include("header.php");
 			<?php echo T_('Here you can get the code to include in your website. ' .
 				'Just include it anywhere in the source of your page.'); ?>
 		</p>
-		<p>
-			<?php echo T_('You may also use third-party plugins for: ');
-                                echo sprintf(' '.
-								'<a href="%s">WordPress</a> (german), ' .
-								'<a href="%s">TYPO3</a>, ' .
-								'<a href="%s">TYPOlight</a> (german), ' .
-                                '<a href="%s">vBulletin</a>, ' .
-                                '<a href="%s">concrete5</a>, ' .
-								'<a href="%s">MODx</a>, ' .
-                                '<a href="%s">Drupal</a>, ' .
-								'<a href="%s">Habari</a>',
-				'http://dvnr.de/wordpress/browser-update/',
-                                'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
-				'http://typolight.org/erweiterungsliste/view/browser_update.html',
-                                'http://www.vbulletin.org/forum/showthread.php?t=239559',
-                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
-								'http://modxcms.com/extras/package/737',
-                                        'https://drupal.org/project/bu',										
-										'http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate'
-										);
-								?>
-		</p>
-		<p>
-			<?php echo sprintf(
-					T_('You can <a href="%s">customize</a> the style of the message, the text and other options.'),
-					'customize.html'
-					);
-			?>
-		</p>
+		
 		<div class="generate">
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
@@ -138,31 +105,28 @@ include("header.php");
 				<option value="6">&lt;= 6</option>
 				<option value="7" selected="selected">&lt;= 7</option>
 				<option value="8">&lt;= 8</option>
+				<option value="9">&lt;= 9</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-f">Firefox</label>  
 			<select id="f-f" onchange="code();">
-				<option value="1">&lt;= 1.0</option>
-				<option value="1.5">&lt;= 1.5</option>
-				<option value="2">&lt;= 2.0</option>
-                                <option value="3">&lt;= 3.0</option>
 				<option value="3.5">&lt;= 3.5</option>
-				<option value="3.6" selected="selected">&lt;= 3.6</option>
-                                <option value="4">&lt;= 4</option>
-                                <option value="5">&lt;= 5</option>
-                                <option value="6">&lt;= 6</option>
-                                <option value="11">&lt;= 11</option>
-                                <option value="12">&lt;= 12</option>
+				<option value="3.6">&lt;= 3.6</option>
+				<option value="4" selected="selected">&lt;= 4</option>
+				<option value="5">&lt;= 5</option>
+				<option value="10">&lt;= 10</option>
+				<option value="15">&lt;= 15</option>
+				<option value="20">&lt;= 20</option>
+                                <option value="25">&lt;= 25</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-                                <option value="10.1">&lt;= 10.1</option>
-				<option value="10.5">&lt;= 10.5</option>
 				<option value="10.6" selected="selected">&lt;= 10.6</option>
-                                <option value="11">&lt;= 11</option>
+				<option value="11">&lt;= 11</option>
+                                <option value="12">&lt;= 12</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -172,9 +136,9 @@ include("header.php");
 				<option value="1.2">&lt;= 1.2</option>
 				<option value="2">&lt;= 2.0</option>
 				<option value="3">&lt;= 3.0</option>
-                                <option value="3.2">&lt;= 3.2</option>
+				<option value="3.2">&lt;= 3.2</option>
 				<option value="4" selected="selected">&lt;= 4</option>
-                                <option value="5">&lt;= 5</option>
+				<option value="5">&lt;= 5</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -193,13 +157,13 @@ include("header.php");
 		<h3><?php echo T_('Your Code'); ?></h3>
 		<textarea id="f-code" rows="10" cols="80">
 &lt;script type="text/javascript">
-var $buoop = {}
+var $buoop = {};
 $buoop.ol = window.onload;
 window.onload=function(){
      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "http://browser-update.org/update.js");
+     e.setAttribute("src", "//browser-update.org/update.js");
      document.body.appendChild(e);
 }
 &lt;/script>
@@ -207,7 +171,39 @@ window.onload=function(){
 		
 		</div>
 		<p>
+			<?php echo sprintf(
+					T_('You can <a href="%s">customize</a> the style of the message, the text and other options.'),
+					'customize.html'
+					);
+			?>
 		</p>
+<p>
+			<?php echo T_('You may also use third-party plugins for: ');
+                                echo sprintf(' '.
+                                            '<a href="%s">WordPress</a> (german), ' .
+                                            '<a href="%s">TYPO3</a>, ' .
+                                            '<a href="%s">TYPOlight</a> (german), ' .
+                                '<a href="%s">vBulletin</a>, ' .
+                                '<a href="%s">concrete5</a>, ' .
+								'<a href="%s">MODx</a>, ' .
+                                '<a href="%s">Drupal</a>, ' .
+								'<a href="%s">Habari</a>, '.
+								'<a href="%s">Magento</a>, <a href="%s">WCF 2</a>, <a href="%s">CMS made simple</a>.',
+				'http://wordpress.org/extend/plugins/wp-browser-update',
+                                'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
+				'http://typolight.org/erweiterungsliste/view/browser_update.html',
+                                'http://www.vbulletin.org/forum/showthread.php?t=239559',
+                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
+								'http://modxcms.com/extras/package/737',
+                                        'https://drupal.org/project/bu',										
+										'http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate',
+                                        'http://www.rapidcommerce.eu/blog/2012/10/magento-browser-update-notice/',
+                                        'https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/',
+                                        'http://dev.cmsmadesimple.org/projects/browserupdate'
+										);
+								?>
+		</p>
+
 		<h2><?php echo T_('Why you should tell users to update'); ?></h2>
 		<ul class="advantages">
 			<li>

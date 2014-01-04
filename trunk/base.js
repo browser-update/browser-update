@@ -18,13 +18,13 @@ function code() {
 	var code="";
 	code = '\
 <script type="text/javascript"> \n\
-var $buoop = {'+notify+'} \n\
+var $buoop = {'+notify+'}; \n\
 $buoop.ol = window.onload; \n\
 window.onload=function(){ \n\
  try {if ($buoop.ol) $buoop.ol();}catch (e) {} \n\
  var e = document.createElement("script"); \n\
  e.setAttribute("type", "text/javascript"); \n\
- e.setAttribute("src", "http://browser-update.org/update.js"); \n\
+ e.setAttribute("src", "//browser-update.org/update.js"); \n\
  document.body.appendChild(e); \n\
 } \n\
 </script> \n\

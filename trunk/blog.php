@@ -11,6 +11,79 @@ include("header.php");
 </div>
 -->
 
+
+<!--
+<h2>IE8 moved to outdated browsers</h2>
+<small>June 17th, 2012</small>
+<div class="entry">
+<p>
+The default outdated browser list is now:
+</p>
+<ul>
+    <li>Internet Explorer 8 or older (released Mar 2009)</li>
+    <li>Firefox 10  or older (released Jan 2012, not supported with security updates anymore, ≈< 0.5%)</li>
+    <li>Opera 12 or older (released Jun 2012    , not supported with security updates anymore, ≈< 0.1%)</li>
+    <li>Safari 5.0 or older (released Jun 2010, not supported with security updates anymore, ≈<1.5%)</li>
+</ul>
+<p>
+    Additional information on when we moved browsers to the outdated list and discussion
+    about it can be found on the wiki page 
+    <a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">"BrowsersToNotify"</a>.
+</p>
+</div>
+<div class="com"><a href="blog-entry.php?n=ie8" onclick="SC('ie8'); return false;">Comments</a></div>
+-->
+
+<h2>SSL Support finally arrived</h2>
+<small>January 4th, 2014</small>
+<div class="entry">
+<p>
+    Finally, browser-update.org can be used on SSL sites (https://)! Just grab the <a href="./">new code</a> and it will automatically work as expected!
+</p>
+</div>
+<div class="com"><a href="blog-entry.php?n=ssl" onclick="SC('ssl'); return false;">Comments</a></div>
+
+<h2>New and easier update page</h2>
+<small>January 4th, 2014</small>
+<div class="entry">
+<p>
+    We simplified the update page a lot. The goal was to focus more on the next step the user has to take to choose 
+    an up-to-date browser.
+</p>
+<p>
+    This is why the browsers to choose are now on top. With a simple, short message telling the user what to do.
+    Furthermore, we removed as many distractions as possible (the logo, we simplified header, smaller menu, less text).
+    The details why to update can sill be found, but are a but further down the page.
+</p>
+<p>
+    With these changes also the design of the whole page got updated.
+</p>
+</div>
+<div class="com"><a href="blog-entry.php?n=newdesign" onclick="SC('newdesign'); return false;">Comments</a></div>
+
+
+
+<h2> Small improvements</h2>
+<small>January 4th, 2014</small>
+<div class="entry">
+<ul>
+    <li>Links to two new plugins</li>
+    <li>Windows 98 and 2000 user will not see notifications since there are no up-to-date browsers available for these systems anyway.</li>
+    <li>Translators can start with a smaller "core" translation where only the notification part is translated</li>
+    <li>A lot of bugfixes</li>
+</ul>
+</div>
+<div class="com"><a href="blog-entry.php?n=improvements" onclick="SC('improvements'); return false;">Comments</a></div>
+
+
+
+
+
+
+
+
+
+
 <h2>IE7 moved to outdated browsers</h2>
 <small>June 17th, 2012</small>
 <div class="entry">
