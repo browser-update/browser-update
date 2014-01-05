@@ -10,7 +10,7 @@
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
 
     <meta name="robots" content="index,follow" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="/new/base.css" type="text/css" />
     <!--[if lte IE 7]>
     <link rel="stylesheet" href="/new/drecksie.css" type="text/css" />
@@ -84,3 +84,8 @@
 </div>
 <div id="body">
 -->
+<?php
+if (!isset($slimmed))  {
+    T_textdomain('browser-update');
+}
+?>

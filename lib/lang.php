@@ -139,18 +139,22 @@ $detected_lang = request_lang();
 //if (isset($lang_rewrite[$detected_lang]))
 //	$detected_lang=$lang_rewrite[$detected_lang];
 
-if (!isset($slimmed))  {
-    T_setlocale(LC_MESSAGES, $detected_lang);
-    T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-    T_bind_textdomain_codeset('browser-update', 'UTF8');
+T_setlocale(LC_MESSAGES, $detected_lang);
+
+T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('browser-update', 'UTF8');
+T_bindtextdomain('core', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('core', 'UTF8');
+T_textdomain('core');
+
+
+$newtrans=false;    
+if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr")
+    $newtrans=true;
+if (!$newtrans)
     T_textdomain('browser-update');
-}
-else {
-    T_setlocale(LC_MESSAGES, $detected_lang);
-    T_bindtextdomain('core', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-    T_bind_textdomain_codeset('core', 'UTF8');
-    T_textdomain('core');
-}
+
+
 //var_dump($CURRENTLOCALE);
 //var_dump($EMULATEGETTEXT);
 //var_dump(request_lang());
