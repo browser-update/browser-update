@@ -1,5 +1,22 @@
 <?php
 require_once("lib/init.php");
+
+//rederict people coming from search engines that have outdated browsers to the update page
+if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])) {
+    $vs="?(\d+[.]\d+)";
+    $__uastr=str_replace(array("/","+","_","\n","\t")," ", strtolower($_SERVER['HTTP_USER_AGENT']));
+    function det($str, $version) {
+        global $__uastr;
+        if(!preg_match("#".$str."#", $__uastr, $regs))
+            return false;
+        return $regs[1]<$version;
+    }
+    if(det("opera.*version $vs",16)||det("trident.$vs",7)||det("trident.*rv:$vs",10)||det("msie $vs",10)||det("firefox $vs",23)||det("version $vs.*safari",6)) {
+        header("Location: update.html");
+        exit;
+    }
+}
+
 require_once("lib/lang.php");
 include("header.php");
 

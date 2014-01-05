@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-core\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 19:51+0100\n"
+"POT-Creation-Date: 2014-01-05 12:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,32 +17,32 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: updatex.php:49
+#: update-browser.php:49
 msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
 
-#: updatex.php:75
-msgid "Not available for your System."
+#: update-browser.php:76
+msgid "Most recent version not available for your system."
 msgstr ""
 
-#: updatex.php:75
+#: update-browser.php:76
 msgid "Please choose another browser."
 msgstr ""
 
-#: updatex.php:87
+#: update-browser.php:90
 #, php-format
 msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
 
-#: updatex.php:95
+#: update-browser.php:98 update-browser.php:117
 msgid "Advertisement"
 msgstr ""
 
-#: updatex.php:121
+#: update-browser.php:138
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
@@ -50,77 +50,81 @@ msgid ""
 "%s>Learn how to update your browser</a>"
 msgstr ""
 
-#: updatex.php:136
+#: update-browser.php:149
+msgid "Why do I need an up-to-date browser?"
+msgstr ""
+
+#: update-browser.php:153
 msgid "Security"
 msgstr ""
 
-#: updatex.php:137
+#: update-browser.php:154
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
 
-#: updatex.php:140
+#: update-browser.php:157
 msgid "Speed"
 msgstr ""
 
-#: updatex.php:141
+#: update-browser.php:158
 msgid "Every new browser generation improves speed"
 msgstr ""
 
-#: updatex.php:144
+#: update-browser.php:161
 msgid "Compatibility"
 msgstr ""
 
-#: updatex.php:145
+#: update-browser.php:162
 msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 
-#: updatex.php:148
+#: update-browser.php:165
 msgid "Comfort &amp; better experience"
 msgstr ""
 
-#: updatex.php:149
+#: update-browser.php:166
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
 
-#: updatex.php:157
+#: update-browser.php:174
 msgid "Why this website?"
 msgstr ""
 
-#: updatex.php:159
+#: update-browser.php:176
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
 
-#: updatex.php:162
+#: update-browser.php:179
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
 
-#: updatex.php:165
+#: update-browser.php:182
 msgid "More information about the Project Browser-Update.org"
 msgstr ""
 
-#: updatex.php:170
+#: update-browser.php:187
 msgid "\"I'm not able to update my browser\""
 msgstr ""
 
-#: updatex.php:171
+#: update-browser.php:188
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
 "compatibility."
 msgstr ""
 
-#: updatex.php:172
+#: update-browser.php:189
 msgid ""
-"If you are on a computer, that is maintained by a admin and you cannot "
+"If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."
 msgstr ""
 
@@ -129,7 +133,7 @@ msgid "Update your Browser"
 msgstr ""
 
 #: header.php:28
-msgid "An initiative by webdesigners to inform users about browser-updates"
+msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 
 #: header.php:30

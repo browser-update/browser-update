@@ -118,7 +118,7 @@ msgid "Inform your visitors about browser-updates"
 msgstr "Informera dina besökare om webbläsaruppdateringar"
 
 #: header.php:57
-msgid "An initiative by webdesigners to inform users about browser-updates"
+msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 "Ett initiativ av webbutvecklare för att informera användare om "
 "webbläsaruppdateringar"

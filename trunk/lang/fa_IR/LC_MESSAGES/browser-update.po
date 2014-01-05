@@ -109,7 +109,7 @@ msgid "Inform your visitors about browser-updates"
 msgstr "اطلاع دادن به بازدید کنندگان شما در مورد به روز رسانی های مرورگر"
 
 #: header.php:57
-msgid "An initiative by webdesigners to inform users about browser-updates"
+msgid "An initiative by web designers to inform users about browser-updates"
 msgstr "یک ابتکار توسط طراحان وب برای مطلع کردن کاربران از به روز رسانی های مرورگر"
 
 #: header.php:60

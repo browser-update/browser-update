@@ -12,8 +12,8 @@ else {
 	}
 }
 
-if ($ll=="en"||$ll=="de") {
-    header("Location: updatex.html");
+if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr") {
+    header("Location: update-browser.html");
     exit;
 }
 
@@ -26,7 +26,6 @@ if ($ll=="de" && rand(1, 3)==3) {
 
 require_once("lib/init.php");
 require_once("lib/lang.php");
-$slimmed=true;
 include("header.php");
 
 $ua=strtolower($_SERVER['HTTP_USER_AGENT']);

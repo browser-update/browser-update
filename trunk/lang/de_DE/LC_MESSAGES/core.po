@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 19:51+0100\n"
-"PO-Revision-Date: 2014-01-03 19:59+0100\n"
+"POT-Creation-Date: 2014-01-05 12:21+0100\n"
+"PO-Revision-Date: 2014-01-05 12:30+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-Basepath: ../../../\n"
 "X-Generator: Poedit 1.6.3\n"
 
-#: updatex.php:49
+#: update-browser.php:49
 msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
@@ -27,15 +27,15 @@ msgstr ""
 "Ihr Browser ist veraltet. Bitte laden sie einen dieser aktuellen, "
 "kostenlosen und exzellenten Browser herunter:"
 
-#: updatex.php:75
-msgid "Not available for your System."
-msgstr "Nicht für ihr Betriebssystem verfügbar."
+#: update-browser.php:76
+msgid "Most recent version not available for your system."
+msgstr "Neueste Version nicht für ihr Betriebssystem verfügbar."
 
-#: updatex.php:75
+#: update-browser.php:76
 msgid "Please choose another browser."
 msgstr "Bitte wählen Sie einen anderen Browser aus."
 
-#: updatex.php:87
+#: update-browser.php:90
 #, php-format
 msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
@@ -44,11 +44,11 @@ msgstr ""
 "Für mehr <a href=\"%s\">Sicherheit</a>,    <a href=\"%s\">Geschwindigkeit</"
 "a>,    <a href=\"%s\">Komfort </a> und    <a href=\"%s\">Spaß</a>."
 
-#: updatex.php:95
+#: update-browser.php:98 update-browser.php:117
 msgid "Advertisement"
 msgstr "Werbung"
 
-#: updatex.php:121
+#: update-browser.php:138
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
@@ -60,11 +60,15 @@ msgstr ""
 "Webseite nutzen</b>. <a%s>Hier erfahren Sie, wie einfach Sie Ihren Browser "
 "aktualisieren können</a>"
 
-#: updatex.php:136
+#: update-browser.php:149
+msgid "Why do I need an up-to-date browser?"
+msgstr "Warum benötige ich einen aktuellen Browser?"
+
+#: update-browser.php:153
 msgid "Security"
 msgstr "Sicherheit"
 
-#: updatex.php:137
+#: update-browser.php:154
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -77,32 +81,32 @@ msgstr ""
 "schließen Sicherheitslücken, durch die Angreifer in Ihren Computer gelangen "
 "können."
 
-#: updatex.php:140
+#: update-browser.php:157
 msgid "Speed"
 msgstr "Geschwindigkeit"
 
-#: updatex.php:141
+#: update-browser.php:158
 msgid "Every new browser generation improves speed"
 msgstr ""
 " Jede neue Browsergeneration verbessert die Geschwindigkeit, mit der "
 "Webseiten dargestellt werden."
 
-#: updatex.php:144
+#: update-browser.php:161
 msgid "Compatibility"
 msgstr "Kompatibilität"
 
-#: updatex.php:145
+#: update-browser.php:162
 msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 "Die auf modernen Webseiten eingesetzten Techniken werden durch aktuelle "
 "Browser besser unterstützt. So erhöht sich die Funktionalität, und die "
 "Darstellung wird drastisch verbessert."
 
-#: updatex.php:148
+#: update-browser.php:165
 msgid "Comfort &amp; better experience"
 msgstr "Komfort &amp; Leistung"
 
-#: updatex.php:149
+#: update-browser.php:166
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -110,11 +114,11 @@ msgstr ""
 "Mit neuen Funktionen, Erweiterungen und besserer Anpassbarkeit werden Sie "
 "schneller und einfacher im Internet surfen können."
 
-#: updatex.php:157
+#: update-browser.php:174
 msgid "Why this website?"
 msgstr "Wofür diese Webseite?"
 
-#: updatex.php:159
+#: update-browser.php:176
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -122,7 +126,7 @@ msgstr ""
 "Diese Webseite ist eine Initiative von Webdesignern, Webmastern und "
 "Bloggern, die ihren Besuchern helfen und das Web weiterbringen wollen."
 
-#: updatex.php:162
+#: update-browser.php:179
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -132,15 +136,15 @@ msgstr ""
 "<strong>blockieren den Fortschritt</strong> im Internet durch mangelhafte "
 "Funktionen und <strong>viele Fehler</strong>."
 
-#: updatex.php:165
+#: update-browser.php:182
 msgid "More information about the Project Browser-Update.org"
 msgstr "Mehr Informationen über das Projekt Browser-Update.org"
 
-#: updatex.php:170
+#: update-browser.php:187
 msgid "\"I'm not able to update my browser\""
 msgstr "„Ich kann kein Update einspielen“"
 
-#: updatex.php:171
+#: update-browser.php:188
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
@@ -151,21 +155,21 @@ msgstr ""
 "Verwenden Sie den neuen zum komfortableren Surfen und den alten nur bei "
 "Inkompatibilitäten."
 
-#: updatex.php:172
+#: update-browser.php:189
 msgid ""
-"If you are on a computer, that is maintained by a admin and you cannot "
+"If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."
 msgstr ""
-"Wenn Sie sich an einem Computer in einem Firmennetzwerk befinden und selbst "
-"keinen neuen Browser installieren können, fragen Sie Ihren "
-"Netzwerkadministrator nach einem Browserupdate."
+"Wenn Sie an einem Firmencomputer verwenden und Sie selbst keinen neuen "
+"Browser installieren können, fragen Sie Ihren Netzwerkadministrator nach "
+"einem Browser-Update."
 
 #: header.php:5
 msgid "Update your Browser"
 msgstr "Browser aktualisieren"
 
 #: header.php:28
-msgid "An initiative by webdesigners to inform users about browser-updates"
+msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 "Eine Initiative von Webdesignern, um Benutzer über Browserupdates zu "
 "informieren"

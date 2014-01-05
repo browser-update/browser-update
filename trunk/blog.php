@@ -3,15 +3,6 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 ?>
-
-<!--
-<h2>Almost 400.000 Users updated their browser</h2>
-<small>August 30th, 2011</small>
-<div class="entry">
-</div>
--->
-
-
 <!--
 <h2>IE8 moved to outdated browsers</h2>
 <small>June 17th, 2012</small>
@@ -50,13 +41,22 @@ The default outdated browser list is now:
     We simplified the update page a lot. The goal was to focus more on the next step the user has to take to choose 
     an up-to-date browser.
 </p>
+<img src="/img/browser update screenshot.png"/>
 <p>
     This is why the browsers to choose are now on top. With a simple, short message telling the user what to do.
-    Furthermore, we removed as many distractions as possible (the logo, we simplified header, smaller menu, less text).
-    The details why to update can sill be found, but are a but further down the page.
+    Furthermore, we removed as many distractions as possible (removed the logo, we simplified the header, smaller menu, less text).
+    The details why to update can still be found, but are a but further down the page.
 </p>
 <p>
-    With these changes also the design of the whole page got updated.
+    The new page is available here in 
+    <a href="/en/update-browser.php">english</a>, 
+    <a href="/de/update-browser.php">deutsch</a>, 
+    <a href="/es/update-browser.php">français</a> and
+    <a href="/es/update-browser.php">español</a>. 
+    For other languages we need <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">your help for translating a few sentences</a>.
+</p>
+<p>
+    Along with these changes also the design of the rest page got a refresh.
 </p>
 </div>
 <div class="com"><a href="blog-entry.php?n=newdesign" onclick="SC('newdesign'); return false;">Comments</a></div>
@@ -64,19 +64,26 @@ The default outdated browser list is now:
 
 
 <h2> Small improvements</h2>
-<small>January 4th, 2014</small>
+<small>January 2nd, 2014</small>
 <div class="entry">
 <ul>
-    <li>Links to two new plugins</li>
-    <li>Windows 98 and 2000 user will not see notifications since there are no up-to-date browsers available for these systems anyway.</li>
-    <li>Translators can start with a smaller "core" translation where only the notification part is translated</li>
-    <li>A lot of bugfixes</li>
+    <li>Links to two new plugins for WCF 2 and CMS made simple</li>
+    <li>Users with Windows 98 and 2000 and on old OS X Versions will not see notifications since there are no up-to-date browsers available for these systems anyway.</li>
+    <li>Translators can start with a smaller "core" <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">translation</a> where only the notification part is translated</li>
+    <li>A lot of small bugfixes</li>
+    <li>Hungarian and Swedish translation</li>
 </ul>
 </div>
 <div class="com"><a href="blog-entry.php?n=improvements" onclick="SC('improvements'); return false;">Comments</a></div>
 
 
 
+<h2>1.000.000 Users updated their browser</h2>
+<small>Aug 1st, 2013</small>
+<div class="entry">
+<p>More than 1 000 000 Users updated their browser so far thanks to this service!</p>
+</div>
+<div class="com"><a href="blog-entry.php?n=improvements" onclick="SC('onemillion'); return false;">Comments</a></div>
 
 
 
