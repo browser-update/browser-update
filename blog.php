@@ -48,10 +48,12 @@ The default outdated browser list is now:
     The details why to update can still be found, but are a but further down the page.
 </p>
 <p>
-    The new page is available here in 
+    The new page is already available in 
     <a href="/en/update-browser.html">english</a>, 
-    <a href="/de/update-browser.html">deutsch</a>, 
-    <a href="/es/update-browser.html">français</a> and
+    <a href="/de/update-browser.html">Deutsch</a>, 
+    <a href="/es/update-browser.html">français</a>, 
+    <a href="/nl/update-browser.html">Nederlands</a>, 
+    <a href="/cs/update-browser.html">Čeština</a> and
     <a href="/es/update-browser.html">español</a>. 
     For other languages we need <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">your help for translating a few sentences</a>.
 </p>
