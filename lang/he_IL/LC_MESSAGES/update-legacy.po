@@ -18,12 +18,10 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #: header.php:5
-#, fuzzy
 msgid "Update your Browser"
 msgstr "עדכן דפדפן"
 
 #: header.php:28
-#, fuzzy
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr "יוזמה של מעצבי רשת להתריע למשתמשים אודות עדכוני דפדפן"
 
@@ -134,7 +132,6 @@ msgid "Speed"
 msgstr "מהירות"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "כל דור דפדפנים חדש מציג עמו שיפורי מהירות"
 

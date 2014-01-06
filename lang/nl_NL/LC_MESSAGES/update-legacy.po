@@ -18,12 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: header.php:5
-#, fuzzy
 msgid "Update your Browser"
 msgstr "Update uw browser"
 
 #: header.php:28
-#, fuzzy
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 "Een initiatief van webdesigners om bezoekers te informeren over browser-"
@@ -141,7 +139,6 @@ msgid "Speed"
 msgstr "Snelheid"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Nieuwere browsers werken veel sneller"
 

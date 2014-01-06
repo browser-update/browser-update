@@ -22,7 +22,6 @@ msgid "Contact"
 msgstr "Contact"
 
 #: index.php:33
-#, fuzzy
 msgid ""
 "This service is an  opportunity to inform your visitors  unobtrusively to "
 "switch to a newer browser."
