@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:22+0100\n"
 "Last-Translator: Pau Argelaguet <pau@paelladebits.cat>\n"
 "Language-Team: \n"
@@ -49,69 +49,69 @@ msgstr "Bloc"
 msgid "Contact"
 msgstr "Contacte"
 
-#: update.php:52
+#: update.php:56
 msgid "Free webbrowsers"
 msgstr "Navegadors gratuïts"
 
-#: update.php:53
+#: update.php:57
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr "Aquestes són les últimes versions dels navegadors més usats."
 
-#: update.php:54
+#: update.php:58
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
 "Només tria un navegador per descarregar-lo des del lloc web del creador:"
 
-#: update.php:58
+#: update.php:62
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr ""
 "Navegador de programari lliure molt utilitzar, brutalment extendible i "
 "personalitzable"
 
-#: update.php:59 update.php:64 update.php:69 update.php:75 update.php:90
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
 msgid "Download"
 msgstr "Descarrega"
 
-#: update.php:63
+#: update.php:67
 msgid "Browser with many features"
 msgstr "Navegador amb moltes característiques"
 
-#: update.php:68
+#: update.php:72
 msgid "Google's browser with compact interface."
 msgstr "El navegador de Google amb una interfície compacta"
 
-#: update.php:68
+#: update.php:72
 msgid "Automatically always up to date!"
 msgstr "Sempre actualitzat automàticament!"
 
-#: update.php:74
+#: update.php:78
 msgid "Apple's fast browser"
 msgstr "El ràpid navegador d'Apple"
 
-#: update.php:81
+#: update.php:85
 msgid "Not available for your System."
 msgstr "No disponible pel teu Sistema"
 
-#: update.php:82
+#: update.php:86
 msgid "Only for Windows Vista or 7."
 msgstr "Només per a Windows Vista o 7"
 
-#: update.php:83
+#: update.php:87
 msgid "Please choose another browser."
 msgstr "Siusplau, tria un altre navegador"
 
-#: update.php:89
+#: update.php:93
 msgid "Windows built-in browser"
 msgstr "Navegador per defecte de Windows"
 
-#: update.php:95
+#: update.php:99
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 "Tots els navegadors tenen les mateixes característiques bàsiques i una "
 "interfície simple."
 
-#: update.php:103
+#: update.php:107
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
@@ -121,15 +121,15 @@ msgstr ""
 "seguretat</b> conegudes i un <b>conjunt de característiques limitat</b>. No "
 "podràs veure totes les característiques d'alguns llocs web."
 
-#: update.php:107
+#: update.php:111
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr "Canviar-te a un navegador modern et pot donar molts avantatges:"
 
-#: update.php:110
+#: update.php:114
 msgid "Security"
 msgstr "Seguretat"
 
-#: update.php:111
+#: update.php:115
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -138,29 +138,29 @@ msgstr ""
 "altres amenaces. També corregeixen els forats de seguretat del teu navegador "
 "actual!"
 
-#: update.php:114
+#: update.php:118
 msgid "Speed"
 msgstr "Velocitat"
 
-#: update.php:115
+#: update.php:119
 #, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Cada nova generació del navegador millora la velocitat"
 
-#: update.php:118
+#: update.php:122
 msgid "Compatibility"
 msgstr "Compatibilitat"
 
-#: update.php:119
+#: update.php:123
 msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 "Els llocs webs que fan servir noves tecnologies seran mostrats correctament"
 
-#: update.php:122
+#: update.php:126
 msgid "Comfort &amp; better experience"
 msgstr "Confort i millor experiència"
 
-#: update.php:123
+#: update.php:127
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -168,15 +168,15 @@ msgstr ""
 "Amb noves característiques, extensions i millor personalització, tindras una "
 "experiència web més confortable."
 
-#: update.php:128
+#: update.php:132
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr "Actualitzar és fàcil, només dura uns minuts i és totalment gratuït."
 
-#: update.php:133
+#: update.php:137
 msgid "Why this website?"
 msgstr "Per què aquest lloc web?"
 
-#: update.php:135
+#: update.php:139
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -184,7 +184,7 @@ msgstr ""
 "Aquest lloc webés una iniciativa de dissenyadors web, webmasters i bloggers "
 "que volen ajudar als seus visitants i tenir un web millor."
 
-#: update.php:138
+#: update.php:142
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -194,11 +194,11 @@ msgstr ""
 "progrés del web</b> perquè tenen característiques limitades i <b>errors de "
 "programació</b>."
 
-#: update.php:142
+#: update.php:146
 msgid "\"I'm not able to update my browser\""
 msgstr "\"No poc actualitzar el meu navegador\""
 
-#: update.php:143
+#: update.php:147
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -206,7 +206,7 @@ msgstr ""
 "Si ets en un ordinador mantingut per un administrador i no pots instal·lar "
 "un navegador nou, comenta-li-ho."
 
-#: update.php:144
+#: update.php:148
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "

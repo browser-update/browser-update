@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-06 14:04+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: ru_RU <phg.azlk@gmail.com>\n"
@@ -51,67 +51,67 @@ msgstr "блог"
 msgid "Contact"
 msgstr "Контакты"
 
-#: update.php:52
+#: update.php:56
 msgid "Free webbrowsers"
 msgstr "Бесплатные веб-браузеры"
 
-#: update.php:53
+#: update.php:57
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr "Эти самые последние версии наиболее используемых веб-браузеров."
 
-#: update.php:54
+#: update.php:58
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr "Выберите браузер для установки с сайта производителя:"
 
-#: update.php:58
+#: update.php:62
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr ""
 "Широко используемый браузер с открытыми исходными кодами, легко расширяемый "
 "и настраиваемый"
 
-#: update.php:59 update.php:64 update.php:69 update.php:75 update.php:90
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
 msgid "Download"
 msgstr "Загрузить"
 
-#: update.php:63
+#: update.php:67
 msgid "Browser with many features"
 msgstr "Браузер со многими возможностями"
 
-#: update.php:68
+#: update.php:72
 msgid "Google's browser with compact interface."
 msgstr "Браузер Google с компактным интерфесом."
 
-#: update.php:68
+#: update.php:72
 msgid "Automatically always up to date!"
 msgstr "обновить Автоматически всегда в курсе событий!"
 
-#: update.php:74
+#: update.php:78
 msgid "Apple's fast browser"
 msgstr "Быстрый браузер от Apple"
 
-#: update.php:81
+#: update.php:85
 msgid "Not available for your System."
 msgstr "Не предназначенный для вашей операционной системы."
 
-#: update.php:82
+#: update.php:86
 msgid "Only for Windows Vista or 7."
 msgstr "Только для Windows Vista или 7."
 
-#: update.php:83
+#: update.php:87
 msgid "Please choose another browser."
 msgstr "Пожалуйста, выберите другой браузер."
 
-#: update.php:89
+#: update.php:93
 msgid "Windows built-in browser"
 msgstr "Встроенный браузер windows"
 
-#: update.php:95
+#: update.php:99
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 "Все браузеры имеют сходный набор базовых возможностей и удобный интерфейс."
 
-#: update.php:103
+#: update.php:107
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
@@ -121,15 +121,15 @@ msgstr ""
 "<b>безопасностью</b> и у него <b>ограниченные возможности</b>. Вам будут не "
 "доступны некоторые детали на многих сайтах."
 
-#: update.php:107
+#: update.php:111
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr "Переход на новый браузер даст Вам много преимуществ:"
 
-#: update.php:110
+#: update.php:114
 msgid "Security"
 msgstr "Безопасность"
 
-#: update.php:111
+#: update.php:115
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -137,28 +137,28 @@ msgstr ""
 "Новые браузеры лучше защищены от мошенничества, вирусов, троянов, фишинга и "
 "других атак. В них исправлены уязвимости, которые есть в Вашем браузере!"
 
-#: update.php:114
+#: update.php:118
 msgid "Speed"
 msgstr "Скорость"
 
-#: update.php:115
+#: update.php:119
 #, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Каждое новое поколение браузеров работает быстрее"
 
-#: update.php:118
+#: update.php:122
 msgid "Compatibility"
 msgstr "Совместимость"
 
-#: update.php:119
+#: update.php:123
 msgid "Websites using new technology will be displayed more correctly"
 msgstr "Новые технологи позволяют более точно отображать веб сайты"
 
-#: update.php:122
+#: update.php:126
 msgid "Comfort &amp; better experience"
 msgstr "Удобство и эффективность"
 
-#: update.php:123
+#: update.php:127
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -166,15 +166,15 @@ msgstr ""
 "Новые возможности, расширения и большая гибкость позволит Вам более "
 "эффективно пользоваться сетью интернет."
 
-#: update.php:128
+#: update.php:132
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr "Обновление абсолютно бесплатно и занимает всего пару минут."
 
-#: update.php:133
+#: update.php:137
 msgid "Why this website?"
 msgstr "Почему этот веб-сайт?"
 
-#: update.php:135
+#: update.php:139
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -182,7 +182,7 @@ msgstr ""
 "Этот веб сайт является инициативой веб-дизайнеров, веб-мастеров и блоггеров, "
 "которые хотят сделать сеть лучше и помочь своим посетителям."
 
-#: update.php:138
+#: update.php:142
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -192,11 +192,11 @@ msgstr ""
 "интернета</b> из-за своих ограниченных возможностей и множественных "
 "<b>багов</b>."
 
-#: update.php:142
+#: update.php:146
 msgid "\"I'm not able to update my browser\""
 msgstr "\"Мне не удается обновить браузер\""
 
-#: update.php:143
+#: update.php:147
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -204,7 +204,7 @@ msgstr ""
 "Если Вы не администратор этого компьютера и не можете сами установить новый "
 "браузер, обратитесь с этой просьбой к администратору."
 
-#: update.php:144
+#: update.php:148
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:25+0100\n"
 "Last-Translator: Johan R <johan1321@gmail.com>\n"
 "Language-Team: \n"
@@ -47,33 +47,33 @@ msgstr "Blogg"
 msgid "Contact"
 msgstr "Ta kontakt"
 
-#: update-browser.php:64
+#: update-browser.php:65
 msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
 
-#: update-browser.php:85 update-browser.php:99
+#: update-browser.php:86 update-browser.php:100
 #, fuzzy
 msgid "Most recent version not available for your system."
 msgstr "Inte tillgänglig för ditt system."
 
-#: update-browser.php:85 update-browser.php:99
+#: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
 msgstr "Vänligen välj en annan webbläsare."
 
-#: update-browser.php:113
+#: update-browser.php:114
 #, php-format
 msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
 
-#: update-browser.php:121 update-browser.php:140
+#: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
 msgstr ""
 
-#: update-browser.php:161
+#: update-browser.php:162
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
@@ -84,15 +84,15 @@ msgstr ""
 "och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra "
 "webbsidor. <a%s>Uppdatera din webbläsare idag</a>"
 
-#: update-browser.php:172
+#: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
 msgstr ""
 
-#: update-browser.php:176
+#: update-browser.php:177
 msgid "Security"
 msgstr "Säkerhet"
 
-#: update-browser.php:177
+#: update-browser.php:178
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -101,27 +101,27 @@ msgstr ""
 "mot andra hot. Dessutom avlägsnar den säkerhetshål från din nuvarande "
 "webbläsare."
 
-#: update-browser.php:180
+#: update-browser.php:181
 msgid "Speed"
 msgstr "Hastighet"
 
-#: update-browser.php:181
+#: update-browser.php:182
 msgid "Every new browser generation improves speed"
 msgstr "Varje ny webbläsargeneration är snabbare än en äldre."
 
-#: update-browser.php:184
+#: update-browser.php:185
 msgid "Compatibility"
 msgstr "Kompatibilitet"
 
-#: update-browser.php:185
+#: update-browser.php:186
 msgid "Websites using new technology will be displayed more correctly"
 msgstr "Webbsidor som använder nya webbtekniker kommer att fungera korrekt."
 
-#: update-browser.php:188
+#: update-browser.php:189
 msgid "Comfort &amp; better experience"
 msgstr "En bättre upplevelse"
 
-#: update-browser.php:189
+#: update-browser.php:190
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -129,11 +129,11 @@ msgstr ""
 "Med nya funktioner, tillägg samt bättre anpassningsbarhet kommer du att få "
 "en mycket mer komfortabel upplevelse på webben"
 
-#: update-browser.php:197
+#: update-browser.php:198
 msgid "Why this website?"
 msgstr "Varför en sådan här webbsida?"
 
-#: update-browser.php:199
+#: update-browser.php:200
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -141,7 +141,7 @@ msgstr ""
 "Denna webbsida är skapad av webbdesigners, webbutvecklare samt bloggare som "
 "vill ta webben ett steg längre samt hjälpa sina besökare."
 
-#: update-browser.php:202
+#: update-browser.php:203
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -151,15 +151,15 @@ msgstr ""
 "utvecklingen av webben</b> på grund av deras begränsade funktionalitet samt "
 "<b>buggar</b>."
 
-#: update-browser.php:205
+#: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
 msgstr ""
 
-#: update-browser.php:210
+#: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
 msgstr "\"Jag kan inte uppdatera min webbläsare\""
 
-#: update-browser.php:211
+#: update-browser.php:212
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
@@ -169,7 +169,7 @@ msgstr ""
 "att installera en ny webbläsare för alldagligt surfande och behåll din gamla "
 "för kompatibilitetens skull."
 
-#: update-browser.php:212
+#: update-browser.php:213
 #, fuzzy
 msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "

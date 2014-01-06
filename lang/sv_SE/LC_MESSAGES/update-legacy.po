@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:25+0100\n"
 "Last-Translator: Johan R <johan1321@gmail.com>\n"
 "Language-Team: \n"
@@ -47,68 +47,68 @@ msgstr "Blogg"
 msgid "Contact"
 msgstr "Ta kontakt"
 
-#: update.php:52
+#: update.php:56
 msgid "Free webbrowsers"
 msgstr "Gratis webbläsare"
 
-#: update.php:53
+#: update.php:57
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr ""
 "Dessa webbläsare är de senaste versionerna av de populäraste webbläsarna."
 
-#: update.php:54
+#: update.php:58
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
 "Vänligen välj en webbläsare att ladda ner från respektive utvecklares "
 "webbsida:"
 
-#: update.php:58
+#: update.php:62
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr "Mycket populär öppen webbläsare som är snabb och anpassningsbar"
 
-#: update.php:59 update.php:64 update.php:69 update.php:75 update.php:90
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
 msgid "Download"
 msgstr "Ladda ner"
 
-#: update.php:63
+#: update.php:67
 msgid "Browser with many features"
 msgstr "Webbläsare med många funktioner"
 
-#: update.php:68
+#: update.php:72
 msgid "Google's browser with compact interface."
 msgstr "Googles webbläsare med ett kompakt gränssnitt."
 
-#: update.php:68
+#: update.php:72
 msgid "Automatically always up to date!"
 msgstr "Uppdateras automatiskt"
 
-#: update.php:74
+#: update.php:78
 msgid "Apple's fast browser"
 msgstr "Apples snabba webbläsare"
 
-#: update.php:81
+#: update.php:85
 msgid "Not available for your System."
 msgstr "Inte tillgänglig för ditt system."
 
-#: update.php:82
+#: update.php:86
 msgid "Only for Windows Vista or 7."
 msgstr "Endast för Windows 7/Vista"
 
-#: update.php:83
+#: update.php:87
 msgid "Please choose another browser."
 msgstr "Vänligen välj en annan webbläsare."
 
-#: update.php:89
+#: update.php:93
 msgid "Windows built-in browser"
 msgstr "Windows inbyggda webbläsare"
 
-#: update.php:95
+#: update.php:99
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 "Alla webbläsare har samma grundläggande funktioner och ett enkelt gränssnitt."
 
-#: update.php:103
+#: update.php:107
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
@@ -118,15 +118,15 @@ msgstr ""
 "samt nackdelar</b> och <b>begränsad funktionalitet</b>. Du kommer inte att "
 "kunna se alla funktioner på vissa webbsidor."
 
-#: update.php:107
+#: update.php:111
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr "Ett byte till en modern webbläsare ger dig flera fördelar:"
 
-#: update.php:110
+#: update.php:114
 msgid "Security"
 msgstr "Säkerhet"
 
-#: update.php:111
+#: update.php:115
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -135,28 +135,28 @@ msgstr ""
 "mot andra hot. Dessutom avlägsnar den säkerhetshål från din nuvarande "
 "webbläsare."
 
-#: update.php:114
+#: update.php:118
 msgid "Speed"
 msgstr "Hastighet"
 
-#: update.php:115
+#: update.php:119
 #, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Varje ny webbläsargeneration är snabbare än en äldre."
 
-#: update.php:118
+#: update.php:122
 msgid "Compatibility"
 msgstr "Kompatibilitet"
 
-#: update.php:119
+#: update.php:123
 msgid "Websites using new technology will be displayed more correctly"
 msgstr "Webbsidor som använder nya webbtekniker kommer att fungera korrekt."
 
-#: update.php:122
+#: update.php:126
 msgid "Comfort &amp; better experience"
 msgstr "En bättre upplevelse"
 
-#: update.php:123
+#: update.php:127
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -164,17 +164,17 @@ msgstr ""
 "Med nya funktioner, tillägg samt bättre anpassningsbarhet kommer du att få "
 "en mycket mer komfortabel upplevelse på webben"
 
-#: update.php:128
+#: update.php:132
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
 "Att uppdatera är lätt! Det tar endast några få minuter och är givetvis helt "
 "gratis."
 
-#: update.php:133
+#: update.php:137
 msgid "Why this website?"
 msgstr "Varför en sådan här webbsida?"
 
-#: update.php:135
+#: update.php:139
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -182,7 +182,7 @@ msgstr ""
 "Denna webbsida är skapad av webbdesigners, webbutvecklare samt bloggare som "
 "vill ta webben ett steg längre samt hjälpa sina besökare."
 
-#: update.php:138
+#: update.php:142
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -192,11 +192,11 @@ msgstr ""
 "utvecklingen av webben</b> på grund av deras begränsade funktionalitet samt "
 "<b>buggar</b>."
 
-#: update.php:142
+#: update.php:146
 msgid "\"I'm not able to update my browser\""
 msgstr "\"Jag kan inte uppdatera min webbläsare\""
 
-#: update.php:143
+#: update.php:147
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -204,7 +204,7 @@ msgstr ""
 "Om du använder en dator som underhålls av en administratör, och du inte "
 "själv kan installera en webbläsare: fråga din administratör om saken."
 
-#: update.php:144
+#: update.php:148
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "

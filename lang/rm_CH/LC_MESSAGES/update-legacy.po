@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:25+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: RM <gion-andri@gmx.ch>\n"
@@ -47,72 +47,72 @@ msgstr "Blog"
 msgid "Contact"
 msgstr "Contact"
 
-#: update.php:52
+#: update.php:56
 msgid "Free webbrowsers"
 msgstr "Navigaturs gratuits"
 
-#: update.php:53
+#: update.php:57
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr ""
 "Sutvart chattas ti las versiuns las pli novas dals navigaturs gratuits ils "
 "pli frequents. "
 
-#: update.php:54
+#: update.php:58
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
 "Tscherna simplamain in navigatur per al telechargiar da la website dal "
 "producent:"
 
-#: update.php:58
+#: update.php:62
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr ""
 "Navigatur dad Open Source fitg derasà, simpel per extender e persunalisar"
 
-#: update.php:59 update.php:64 update.php:69 update.php:75 update.php:90
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
 msgid "Download"
 msgstr "Telechargiar"
 
-#: update.php:63
+#: update.php:67
 msgid "Browser with many features"
 msgstr "Navigatur cun ina massa funcziuns"
 
-#: update.php:68
+#: update.php:72
 #, fuzzy
 msgid "Google's browser with compact interface."
 msgstr "Il navigatur da Google cun ina interfatscha cumpacta"
 
-#: update.php:68
+#: update.php:72
 msgid "Automatically always up to date!"
 msgstr ""
 
-#: update.php:74
+#: update.php:78
 msgid "Apple's fast browser"
 msgstr "Il navigatur spert dad Apple"
 
-#: update.php:81
+#: update.php:85
 msgid "Not available for your System."
 msgstr ""
 
-#: update.php:82
+#: update.php:86
 msgid "Only for Windows Vista or 7."
 msgstr ""
 
-#: update.php:83
+#: update.php:87
 msgid "Please choose another browser."
 msgstr ""
 
-#: update.php:89
+#: update.php:93
 msgid "Windows built-in browser"
 msgstr "Il navigatur da standard da Windows"
 
-#: update.php:95
+#: update.php:99
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 "Tut ils navigaturs han las medemas funcziuns da basa ed ina interfatscha "
 "simpla."
 
-#: update.php:103
+#: update.php:107
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
@@ -122,15 +122,15 @@ msgstr ""
 "dischavantatgs</b> e <b>funcziuns limitadas</b>. Ti na vegns betg a vesair "
 "tut las funcziuns sin tschertas websites."
 
-#: update.php:107
+#: update.php:111
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr "Midar ad in navigatur pli nov ta porscha ina massa avantatgs:"
 
-#: update.php:110
+#: update.php:114
 msgid "Security"
 msgstr "Segirezza"
 
-#: update.php:111
+#: update.php:115
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -139,32 +139,32 @@ msgstr ""
 "auters privels. Navigaturs actuals serran rusnas da segirezza entras las "
 "qualas attatgaders pon acceder tes computer!"
 
-#: update.php:114
+#: update.php:118
 msgid "Speed"
 msgstr "Spertadad"
 
-#: update.php:115
+#: update.php:119
 #, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr ""
 "Mintga nova generaziun da navigaturs visualisescha pli spert las paginas "
 "d'internet."
 
-#: update.php:118
+#: update.php:122
 msgid "Compatibility"
 msgstr "Cumpatibilitad"
 
-#: update.php:119
+#: update.php:123
 msgid "Websites using new technology will be displayed more correctly"
 msgstr ""
 "Paginas web che utiliseschan tecnologias novas vegnan visualisadas "
 "correctamain."
 
-#: update.php:122
+#: update.php:126
 msgid "Comfort &amp; better experience"
 msgstr "Confort &amp; prestaziun"
 
-#: update.php:123
+#: update.php:127
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -172,16 +172,16 @@ msgstr ""
 "Cun novas funcziuns, cun supplements e la pussaivladad da persunalisar vegn "
 "il navigar en la rait pli confortabel."
 
-#: update.php:128
+#: update.php:132
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
 "Actualisar è simpel, cuzza be in per minutas ed è cumplettamain gratuit."
 
-#: update.php:133
+#: update.php:137
 msgid "Why this website?"
 msgstr "Pertge questa website?"
 
-#: update.php:135
+#: update.php:139
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -189,7 +189,7 @@ msgstr ""
 "Questa website è ina iniziativa da designers da web, administraturs e "
 "bloggers che vulan purtar enavant la rait e gidar a lur visitaders."
 
-#: update.php:138
+#: update.php:142
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -199,11 +199,11 @@ msgstr ""
 "svilup dal web</b> perquai ch'els han be funcziuns fitg limitadas e "
 "cuntegnan ina massa <b>sbagls</b>."
 
-#: update.php:142
+#: update.php:146
 msgid "\"I'm not able to update my browser\""
 msgstr "\"Jau na poss betg actualisar mes navigatur\""
 
-#: update.php:143
+#: update.php:147
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -212,7 +212,7 @@ msgstr ""
 "na pos betg installar in nov navigatur, contactescha tes administratur per "
 "far quai."
 
-#: update.php:144
+#: update.php:148
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
