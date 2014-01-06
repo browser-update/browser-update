@@ -15,6 +15,7 @@ else {
 
 
 $slimmed=true;
+$extratranslation=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
 

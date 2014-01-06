@@ -1,7 +1,10 @@
 <?php
 require_once("lib/init.php");
 require_once("lib/lang.php");
+
+$extratranslation=true;
 include("header.php");
+T_textdomain('customize');
 ?>
 
 <div class="left">

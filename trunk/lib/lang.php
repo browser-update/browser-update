@@ -143,19 +143,23 @@ $ll=substr($detected_lang, 0, 2);
 
 T_setlocale(LC_MESSAGES, $detected_lang);
 
-T_bindtextdomain('browser-update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('browser-update', 'UTF8');
-T_bindtextdomain('core', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('core', 'UTF8');
-T_textdomain('core');
+T_bindtextdomain('site', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('site', 'UTF8');
+T_bindtextdomain('update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('update', 'UTF8');
+T_bindtextdomain('update-legacy', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('update-legacy', 'UTF8');
+T_bindtextdomain('customize', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
+T_bind_textdomain_codeset('customize', 'UTF8');
+T_textdomain('update');
 
 
 
 $newtrans=false;    
 if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr")
     $newtrans=true;
-if (!$newtrans)
-    T_textdomain('browser-update');
+//if (!$newtrans)
+//    T_textdomain('browser-update');
 
 
 //var_dump($CURRENTLOCALE);
