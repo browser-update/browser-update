@@ -1,114 +1,115 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Galician translations for browser-update package.
+# Copyright (C) 2012 THE browser-update'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the browser-update package.
+# Fran Dieguez <frandieguez@gnome.org>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2014-01-06 14:34+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2014-01-06 14:50+0100\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl_NL\n"
+"Language: gl_ES\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Poedit 1.6.3\n"
 
 #: contact.php:8 header.php:62
 msgid "Contact"
-msgstr "Contact"
+msgstr "Contacto"
 
 #: customize.php:8
 msgid "Customize and test"
-msgstr "Aanpassen en testen"
+msgstr "Personalizar e probar"
 
 #: customize.php:11
 msgid "Test the script"
-msgstr "Test het script"
+msgstr "Probar o script"
 
 #: customize.php:14
 msgid ""
 "If you open your website with <code>#test-bu</code> appended to the url, the "
 "bar will always show up."
 msgstr ""
-"Als je de website opent met <code>#test-bu</code> achter de url, dan wordt "
-"de balk altijd getoond."
+"Se abre o seu sitio web con <code>#test-bu<code> ao final do enderezo, a "
+"barra sempre aparecerá."
 
 #: customize.php:15
 msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-msgstr "Voorbeeld: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Exemplo: <code>http://browser-update.org/#test-bu</code>."
 
 #: customize.php:16
 msgid ""
 "Make sure the page is properly reloaded by opening the url in an new browser "
 "tab."
 msgstr ""
-"Zorg er voor dat de pagina correct worden herladen door de url te openen in "
-"een nieuwe browser tab."
+"Asegúrese qeu a páxina recargouse correctamente abrindo a url nunha nova "
+"lapela do navegador."
 
 #: customize.php:19
 msgid "Options"
-msgstr "Opties"
+msgstr "Opcións"
 
 #: customize.php:22
 msgid "The following options can be passed to the script:"
-msgstr "De volgende opties kun je doorgeven aan het script:"
+msgstr "Pode pasarlle as seguintes opcións ao script:"
 
 #: customize.php:27
 msgid "browser versions to notify"
-msgstr "browser versies die een melding moeten geven"
+msgstr "versións do navegador nas que mostrar a mensaxe"
 
 #: customize.php:28
 msgid "atfer how many hours should the message reappear"
-msgstr "na hoeveel uur de melding weer moet verschijnen"
+msgstr "horas despois das que a mensaxe debería aparecer de novo"
 
 #: customize.php:29
 msgid "0 = show all the time"
-msgstr "0 = continu tonen"
+msgstr "0 = mostrar sempre"
 
 #: customize.php:30
 msgid "callback function after the bar has appeared"
-msgstr "callback functie als de balk getoond is"
+msgstr "función de «callback» á que invocar logo de que abarra apareza"
 
 #: customize.php:32
 msgid "set a language for the message, e.g. \"en\""
-msgstr "zet de taal voor de melding, bijvoorbeeld \"nl\""
+msgstr "estabelece o idioma para a mensaxe, p.ex. «gl»"
 
 #: customize.php:33
 msgid "overrides the default detection"
-msgstr "overruled de standaard detectie"
+msgstr "omite a detección por omisión"
 
 #: customize.php:34
 msgid "true = always show the bar (for testing)"
-msgstr "true = toont de balk altijd (om te testen)"
+msgstr "true = mostrar sempre a barra (para realizar probas)"
 
 #: customize.php:35
 msgid "custom notification html text"
-msgstr "aangepaste html melding "
+msgstr "texto personalizado en html para a notificación"
 
 #: customize.php:36
 msgid "open link in new window/tab"
-msgstr "open link in nieuw venster/tab"
+msgstr "abrir ligazón nunha nova xanela/lapela"
 
 #: customize.php:59
 msgid "Edit the CSS"
-msgstr "Bewerk de CSS"
+msgstr "Editar o CSS"
 
 #: customize.php:62
 msgid "The following CSS rules are applied by the script. "
-msgstr "De volgende CSS regels worden toegepast door het script."
+msgstr "O script aplicará as seguintes regras CSS."
 
 #: customize.php:63
 msgid ""
 "You can overwrite them in your own CSS. To do so you need to add some more "
 "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 msgstr ""
-"Je kunt ze overschrijven met je eigen CSS door eigen specifiekere regels toe "
-"te voegen, bijvoorbeeld <code>body .buorg {font-size:20px}</code>"
+"Pode sobrescribilas no seu propio CSS. Para facelo debe engadir algo máis de "
+"especificidade ás regras CSS: p.ex.  <code>body .buorg {font-size:20px}</"
+"code>"
 
 #: header.php:5 header.php:56
 msgid "Browser-Update.org"
@@ -116,33 +117,33 @@ msgstr "Browser-Update.org"
 
 #: header.php:5
 msgid "Inform your visitors about browser-updates"
-msgstr "Informeer bezoekers over browser-updates"
+msgstr "Informe aos seus visitantes sobre as actualizacións do navegador"
 
 #: header.php:57
-msgid "An initiative by web designers to inform users about browser-updates"
+msgid "An initiative by webdesigners to inform users about browser-updates"
 msgstr ""
-"Een initiatief van webdesigners om bezoekers te informeren over browser-"
-"updates"
+"Unha iniciativa de deseñadores web para informar aos usuarios sobre "
+"actualizacións dos navegadores"
 
 #: header.php:60
 msgid "Start"
-msgstr "Start"
+msgstr "Comezar"
 
 #: header.php:61
 msgid "Update Browser"
-msgstr "Update uw browser"
+msgstr "Actualizar navegador web"
 
 #: header.php:63
 msgid "Help"
-msgstr "Help"
+msgstr "Axuda"
 
 #: header.php:64
 msgid "Supporters"
-msgstr "Supporters"
+msgstr "Apoios"
 
 #: header.php:65 index.php:90 stat.php:9 statdetail.php:9
 msgid "Statistics"
-msgstr "Statistieken"
+msgstr "Estatísticas"
 
 #: header.php:66
 msgid "Blog"
@@ -153,8 +154,8 @@ msgid ""
 "This service is an  opportunity to inform your visitors  unobtrusively to "
 "switch to a newer browser."
 msgstr ""
-"Deze dienst biedt de mogelijkheid om bezoekers eenvoudig te bewegen een "
-"nieuwere versie van een browser te installeren."
+"Este servizo é unha oportunidade para informar aos seus visitantes dunha "
+"forma non intrusiva para que cambien a un navegador máis actualizado."
 
 #: index.php:17
 msgid ""
@@ -162,33 +163,34 @@ msgid ""
 "them for no actual reason. Switching to an newer browser is better for them "
 "and for you as a webdesigner."
 msgstr ""
-"Vele internetgebruikers maken nog gebruik van oude, achterhaalde browsers "
-"omdat men eenvoudig weg niet denkt aan upgraden. Het gebruik van een "
-"nieuwere browser is beter voor bezoekers en voor jou als webdesigner."
+"Algúns usuarios de internet aínda usan navegadores web antigos e sen "
+"actualizar – a maioría deles sen unha razón de peso. Cambiar a un navegador "
+"máis actualizado é unha gran ventaxa para vostede como deseñador web."
 
 #: index.php:26
 msgid "How it works"
-msgstr "Hoe werkt het"
+msgstr "Como funciona?"
 
 #: index.php:30
 #, php-format
 msgid ""
 "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr ""
-"Voeg een <a href=\"%s\">melding</a> toe aan de website via een klein stukje "
-"javascript"
+"Inclúa a nosa pequena <a href=\"%s\">notificación</a> en javascript no seu "
+"sitio web"
 
 #: index.php:33
 msgid ""
 "Visitors with out-dated browser will be informed by a little, undisturbing "
 "bar, that his browser is not up-to-date and it is recommended to update."
 msgstr ""
-"Bezoekers met een oude, achterhaalde browser krijgen een kleine "
-"notificatiebalk te zien met de oproep om een nieuwere browser te installeren."
+"Informaráselle aos seus visitantes que usan un navegador sen actualizar "
+"mediante unha pequena e non intrusiva barra que o seu navegador non está "
+"actualizado e é recomendábel facelo."
 
 #: index.php:36
 msgid "Test the notification bar!"
-msgstr "Test de notificatiebalk!"
+msgstr "Probar a barra de notificación!"
 
 #: index.php:38
 #, php-format
@@ -197,9 +199,9 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en "
-"kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a"
-"%s>Lees meer over hoe uw browser te upgraden</a>"
+"O seu navegador (%s) está <b>desactualizado</b>. Ten coñecidos <b>fallos de "
+"seguranza</b> e podería <b>non mostrar tódalas características</b> deste e "
+"outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>"
 
 #: index.php:45
 #, php-format
@@ -207,22 +209,23 @@ msgid ""
 "By clicking the bar, he will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
-"Door op de balk te klikken gaat de bezoeker naar <a href=\"%s\">een pagina "
-"met redenen waarom upgraden wenselijk is en een lijst met actuele browsers</"
-"a>."
+"Ao premer na barra redirixiráselle a unha <a href=\"%s\">páxina de "
+"información con argumentos de porqué cambiar/actualizar e algunhas escollas "
+"de navegadores</a>."
 
 #: index.php:49
 msgid "If the visitor ignores the advice, it won't appear again for some time."
 msgstr ""
-"Als bezoekers de balk negeren verdwijnt hij automatisch voor bepaalde tijd."
+"Se o visitante ignora a advertencia, a mensaxe non aparecerá de novo durante "
+"certo tempo."
 
 #: index.php:52
 msgid "Advantages and features"
-msgstr "Voordelen en mogelijkheden"
+msgstr "Ventaxas e características"
 
 #: index.php:55
 msgid "Subtle"
-msgstr "Subtiel"
+msgstr "Sutíl"
 
 #: index.php:56
 msgid ""
@@ -230,52 +233,53 @@ msgid ""
 "notification bar is very small and won't affect the browsing experience "
 "negatively."
 msgstr ""
-"De bezoeker krijgt de balk slechts één keer te zien per bezoek aan de "
-"website. De balk is klein en beïnvloed de website verder niet."
+"Informaráselle só unha vez ao usuario e non se lle voltará molestar de novo. "
+"A barra de notificación é moi pequena e non afectará negativamente á "
+"experiencia de navegación."
 
 #: index.php:60
 msgid "Informative"
-msgstr "Informatief"
+msgstr "Informativa"
 
 #: index.php:61
 msgid ""
 "Tell the users that they are using an out-dated browser and that your "
 "website looks even better with a newer one."
 msgstr ""
-"Vertel de bezoekers dat ze een oude, achterhaalde browser gebruiken en dat "
-"de website er beter uit ziet en beter werkt met een actuele browser."
+"Dille aos usuarios que están usando un navegador web desactualizado e que o "
+"seu sitio web verase mellor con un máis actual."
 
 #: index.php:65
 msgid "Idealistic"
-msgstr "Idealistisch"
+msgstr "Idealista"
 
 #: index.php:66
 msgid "Help evolve the web!"
-msgstr "Help het internet verbeteren!"
+msgstr "Axuda a evolucionar o web!"
 
 #: index.php:67
 msgid "Support the standards-based web!"
-msgstr "Ondersteun een op standaarden gebaseerd internet!"
+msgstr "Axuda a crear un web baseado en estándares!"
 
 #: index.php:68
 msgid "Support Open Source software projects!"
-msgstr "Ondersteun Open Source softwareprojecten!"
+msgstr "Axuda a proxectos de software de Fontes Abertas!"
 
 #: index.php:69
 msgid "Help your visitors!"
-msgstr "Help de bezoekers!"
+msgstr "Axuda aos seus visitantes!"
 
 #: index.php:70
 msgid "Help increase security awareness!"
-msgstr "Help het bewustzijn voor veilig internetten te verhogen!"
+msgstr "Axuda a incrementar a conciencia sobre a seguranza!"
 
 #: index.php:71
 msgid "Support your favorite webbrowser!"
-msgstr "Ondersteun je favorite browser!"
+msgstr "Apoio o seu navegador favorito!"
 
 #: index.php:74
 msgid "Low maintenance and up-to-date"
-msgstr "Bijna geen onderhoud en altijd up-to-date"
+msgstr "De baixo mantemento e actualizado"
 
 #: index.php:75
 msgid ""
@@ -283,13 +287,13 @@ msgid ""
 "in the future, exhibit security gaps or have been very old for a long time "
 "we are going to add them to our list automatically."
 msgstr ""
-"Als er meer browserversies komen die niet meer worden ondersteund door de "
-"makers, onveilig zijn of gewoon erg oud zijn, dan voegen wij ze automatisch "
-"toe aan de lijst."
+"Se xurden novas versións de navegadores que non teñen asistencia polo seu "
+"fabricante no futuro, que teñan fallas de seguranza ou se mantiveran moi "
+"vellas durante moito tempo engadirémolas á lista automaticamente."
 
 #: index.php:80
 msgid "Customizable"
-msgstr "Aanpasbaar"
+msgstr "Personalizábel"
 
 #: index.php:81
 msgid ""
@@ -297,22 +301,21 @@ msgid ""
 "releases you can also customize the text that should be shown, the frequency "
 "of the bar to appear and many other things."
 msgstr ""
-"Je kunt zelf aangeven in welke browsers en versies de balk getoond moet "
-"worden.<br />Binnenkort kun je ook de tekst, de frequentie van tonen en "
-"andere zaken instellen."
+"Pode personalizar que navegadores e versións notificar.<br/>En futuras "
+"versións tamén poderá personalizar o texto que debería aparecer, a "
+"frecuencia na que aparece a barra e moitas máis cousas."
 
 #: index.php:86
 msgid "Localized"
-msgstr "In eigen taal"
+msgstr "Internacionalizado"
 
 #: index.php:87
 msgid "The message is automatically displayed in the user's language."
-msgstr ""
-"De tekst in de balk wordt automatisch getoond in de taal van de bezoeker."
+msgstr "A mensaxe mostrarase automaticamente no idioma do usuario."
 
 #: index.php:90
 msgid "<span class=\"workingonit\">work in progress</span>"
-msgstr "<span class=\"workingonit\">werk in uitvoering</span>"
+msgstr "<span class=\"workingonit\">traballo en progreso</span>"
 
 #: index.php:91
 #, php-format
@@ -321,25 +324,25 @@ msgid ""
 "using and how much users got proselyted: How many users updated or changed "
 "their browser through your advice."
 msgstr ""
-"Je kunt <a href=\"%s\">statistieken</a> bekijken van welke browsers de "
-"bezoekers gebruiken en hoeveel bezoekers zijn overgehaald om een nieuwe "
-"versie of een andere browser te installeren."
+"Obterá <a href=\"%s\">estatísticas</a> sobre que navegadores usan os seus "
+"visitantes e cantos usuarios foron proselitizados: cantos usuarios anovaron "
+"ou cambiar o seu navegador mediante esta advertencia."
 
 #: index.php:97
 msgid "Install notification on your site"
-msgstr "Zet de notificatie op de website"
+msgstr "Instale a notificación no seu sitio web"
 
 #: index.php:99
 msgid ""
 "Here you can get the code to include in your website. Just include it "
 "anywhere in the source of your page."
 msgstr ""
-"Hier vind je de code die op de website geplaatst moet worden. Zet de code "
-"waar gewenst in de broncode van de html pagina."
+"Aquí pode obter o código a incluír no seu sitio web. Simplemente escríbao en "
+"calquera lugar do código fonte da súa páxina."
 
 #: index.php:103
 msgid "You may also use third-party plugins for: "
-msgstr "Plugins: "
+msgstr "Tamén pode empregar engadidos de terceiros para:"
 
 #: index.php:121
 #, php-format
@@ -347,18 +350,19 @@ msgid ""
 "You can <a href=\"%s\">customize</a> the style of the message, the text and "
 "other options."
 msgstr ""
-"Je kunt zelf aangeven in welke browsers en versies de balk getoond moet "
-"worden.<br />Binnenkort kun je ook de tekst, de frequentie van tonen en "
-"andere zaken instellen.<a href=\"%s\"></a>"
+"<a href=\"%s\">Personalizar</a> o estilo da mensaxe, o texto e outras "
+"opcións."
 
 #: index.php:127
 msgid "Following browsers will be notified:"
-msgstr "De volgende browsers zullen de notificatie tonen:"
+msgstr "Os seguintes navegadores web serán informados:"
 
 #: index.php:166
 msgid ""
 "Google Chrome will automatically itself and is therefor always up to date"
-msgstr "Google Chrome update zichzelf automatisch en is dus altijd up-to-date."
+msgstr ""
+"Google Chrome actualízase a si mesmo automaticamente polo que sempre está "
+"actualizado"
 
 #: index.php:172
 msgid ""
@@ -366,38 +370,40 @@ msgid ""
 "</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
-"<b>In aanbevolen browser verschijnt de notificatie en de lijst wordt "
-"automatisch geupdate:</b>Als een browser niet meer wordt ondersteund of "
-"onveilig is wordt hij toegevoegd aan de lijst."
+"<b>Notifica aos navegadores recomendados e axústao automaticamente no tempo:"
+"</b> Se un navegador non ten asistencia polo fabricante ou ten "
+"vulnerabilidades de seguranza, engadirase á lista."
 
 #: index.php:177
 msgid "Your Code"
-msgstr "De code"
+msgstr "O seu código"
 
 #: index.php:195
 msgid "Why you should tell users to update"
-msgstr "Waarom bezoekers informeren om te updaten"
+msgstr "Porque debería dicirlle aos usuarios que se actualicen?"
 
 #: index.php:198
 msgid "Reduced development costs and time"
-msgstr "Bespaar tijd en geld"
+msgstr "Reducción de custos e tempo de desenvolvemento"
 
 #: index.php:199
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr "Het ondersteunen van oude browsers kost tijd en is dus kostbaar."
+msgstr ""
+"A optimización de sitios web para navegadores antigos é unha perda de tempo "
+"e polo tanto moi caro."
 
 #: index.php:202
 msgid "Webdesign technologies and features"
-msgstr "Webdesign technieken en mogelijkheden"
+msgstr "Tecnoloxías e características de deseño web"
 
 #: index.php:203
 msgid ""
 "There are all these great new web development standards and they are "
 "supported by modern browsers... but you may not use them."
 msgstr ""
-"Er zijn legio nieuwe webdesignstandaarden en nieuwe browsers ondersteunen "
-"ze... maar ze kunnen niet gebruikt worden."
+"Hai incríbeis estándares de desenvolvemento web novos e que só se admiten en "
+"navegadores modernos pero se non están actualizados non poderá usalos."
 
 #: index.php:205
 msgid ""
@@ -405,14 +411,14 @@ msgid ""
 "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
 "resulting in a better browsing experience for your users."
 msgstr ""
-"Nieuwere browsers hebben meer mogelijkheden en ondersteunen nieuwe "
-"technieken ((CSS3, SVG, HTML5, RSS, CSS Generated Content, flexibele "
-"layouts) voor websites wat resulteert in mooiere en betere websites voor "
-"bezoekers."
+"Só os navegadores actualizados permitiranlle usar máis características e "
+"tecnoloxías novas (CSS3, SVG, HTML5, RSS, Contido xerado por CSS, deseños "
+"flexíbeis), o que resulta nunha mellor experiencia de navegación para os "
+"seus usuarios."
 
 #: index.php:208
 msgid "Security and benefits for the user"
-msgstr "Veiligheid en voordelen voor bezoekers"
+msgstr "Seguranza e beneficios para os usuarios"
 
 #: index.php:209
 #, php-format
@@ -421,17 +427,18 @@ msgid ""
 "\">update page</a>. The security-threats of outdates browsers are listed in "
 "this <a href=\"%s\">paper</a>."
 msgstr ""
-"De vele voordelen: veiliger, sneller, meer mogelijkheden... Kijk op de <a "
-"href=\"%s\">update pagina</a>. Lees meer over de <a href=\"%s"
-"\">veiligheidsrisico's van oude browers</a>."
+"Existen numerosos beneficios: seguranza, velocidade, características, ... "
+"Bote unha ollada á <a href=\"%s\">páxina de actualización</a>. Os problemas "
+"de seguranza dos navegadores antigos móstranse neste <a href=\"%s\">«paper»</"
+"a>."
 
 #: index.php:212
 msgid "The web has to evolve..."
-msgstr "Het internet moet beter worden..."
+msgstr "O web ten que evolucionar..."
 
 #: index.php:214
 msgid "But that's only possible if the browsers also evolve."
-msgstr "Maar dat gaat alleen als de browers ook beter worden."
+msgstr "Pero isto non é posíbel se os navegadores non o fan tamén."
 
 #: index.php:215
 msgid ""
@@ -439,53 +446,55 @@ msgid ""
 "something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
-"Oude browsers als Internet Explorer 6 bestaan al meer dan 8 jaar... Als we "
-"nu geen actie ondernemen moeten we nog steeds websites maken als in 2001 "
-"terwijl het al 2010 is!"
+"A forte cota de mercado dun antigo navegador web de 8 anos (Internet "
+"Explorer 6) é algo novo na historia do web. Se non facemos nada, terá que "
+"programar sitios web como en 20011 incluso estando no 2011."
 
 #: index.php:219
 msgid "Users don't oppose updating..."
-msgstr "Bezoekers willen best updaten..."
+msgstr "Os usuarios non se opoñen ás actualizacións..."
 
 #: index.php:220
 msgid ""
 "... they often just do not appreciate the need to update or the existence of "
 "the \"webbrowser\" as a software at all."
 msgstr ""
-"... maar 'vergeten' het of zijn helemaal niet op de hoogte van andere en/of "
-"nieuwere browsers."
+"... simplemente non saben que teñen que actualizar ou mesmo non saben da "
+"existencia do «navegador web» como un software de seu."
 
 #: index.php:223
 msgid "Help this project"
-msgstr "Help dit project"
+msgstr "Axude a este proxecto"
 
 #: index.php:226
 msgid "Participate!"
-msgstr "Doe mee!"
+msgstr "Participe!"
 
 #: index.php:227
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
-"Voeg de notificatie code toe aan de website en informeer bezoekers over "
-"nieuwe browsers."
+"Inclúa o código de notificación na súa páxina web para informarlle aos seus "
+"usuarios das actualizacións de software."
 
 #: index.php:230
 msgid "Spread the word!"
-msgstr "Zegt het voort!"
+msgstr "Difúndao!"
 
 #: index.php:231
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr "Vertel anderen over dit initiatief! In je blog, op je website, ..."
+msgstr ""
+"Comente a outros usuarios esta iniciativa! No seu blogue, na súa páxina "
+"web, ..."
 
 #: index.php:234
 msgid "Translate this page"
-msgstr "Vertaal deze pagina"
+msgstr "Axude a traducir esta páxina"
 
 #: index.php:235
 msgid "Translate this page into your language."
-msgstr "Vertaal deze pagina in je eigen taal."
+msgstr "Traduza esta páxina ao seu idioma."
 
 #: stat.php:18
 #, php-format
@@ -493,12 +502,12 @@ msgid ""
 "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
 "script."
 msgstr ""
-"<strong class=\"number\">%d</strong> site gebruikt het Browser-Update.org "
-"script."
+"<strong class=\"number\">%d</strong> sitios web están usando o script de "
+"Browser-Update.org."
 
 #: stat.php:22
 msgid "Browser updates"
-msgstr "Browser updates"
+msgstr "Actualizacións de navegador web"
 
 #: stat.php:60
 #, php-format
@@ -506,80 +515,84 @@ msgid ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
 msgstr ""
-"<strong class=\"number\">%d</strong> gebruiker heeft zijn browser al "
-"geupgrade."
+"<strong class=\"number\">%d</strong> visitantes xa actualizaron o seu "
+"navegador web."
 
 #: stat.php:92
 msgid "From"
-msgstr "Van"
+msgstr "Desde"
 
 #: stat.php:92
 msgid "To"
-msgstr "Aan"
+msgstr "A"
 
 #: stat.php:92
 msgid "Amount"
-msgstr "Bedrag"
+msgstr "Cantidade"
 
 #: update.php:46
 msgid "Free webbrowsers"
-msgstr "Gratis browsers"
+msgstr "Navegadores web libres"
 
 #: update.php:47
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
-msgstr "Deze browsers zijn de nieuwste en meest gebruikte gratis browser."
+msgstr ""
+"Estes navegadores son as versións máis actualizadas dos navegadores web "
+"libres máis usados."
 
 #: update.php:48
 msgid "Just choose a browser to download from the original vendor's website:"
-msgstr "Kies een browser en download hem van de officiële website:"
+msgstr ""
+"Simplemente escolla un navegador web para descargar desde a páxina orixinal:"
 
 #: update.php:52
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr ""
-"Meest gebruikte open-source browsers, makkelijk uitbreidbaar en naar wens "
-"aan te passen"
+"Navegadores web de fontes abertas amplamente usados, incribelmente "
+"extensíbeis e personalizábeis."
 
 #: update.php:53 update.php:58 update.php:63 update.php:77 update.php:92
 msgid "Download"
-msgstr "Download"
+msgstr "Descargar"
 
 #: update.php:57
 msgid "Browser with many features"
-msgstr "Browser met vele mogelijkheden"
+msgstr "Navegador con moitas características"
 
 #: update.php:62
 msgid "Google's browser with compact interface."
-msgstr "Google's browser met overzichtelijke interface."
+msgstr "O navegador web de Google cunha interface compacta."
 
 #: update.php:62
 msgid "Automatically always up to date!"
-msgstr "Automatisch altijd up-to-date!"
+msgstr "Actualízase automaticamente!"
 
 #: update.php:69 update.php:83
 msgid "Not available for your System."
-msgstr "Niet beschikbaar voor uw besturingssysteem."
+msgstr "Non dispoñíbel para o seu sistema operativo."
 
 #: update.php:70 update.php:85
 msgid "Please choose another browser."
-msgstr "Kies dan een andere browser."
+msgstr "Seleccione outro navegador web."
 
 #: update.php:76
 msgid "Apple's fast browser"
-msgstr "Apple's snelle browser"
+msgstr "O navegador web rápido de Apple"
 
 #: update.php:84
 msgid "Only for Windows Vista or 7."
-msgstr "Alleen voor Windows Vista of 7."
+msgstr "Só dispoñíbel para Windows Vista ou 7."
 
 #: update.php:91
 msgid "Windows built-in browser"
-msgstr "Windows’ eigen browser"
+msgstr "O navegador integrado de Windows"
 
 #: update.php:97
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
-"Alle browsers hebben dezelfde basismogelijkheden en een makkelijke interface."
+"Tódolos navegadores web teñen unhas características básicas semellantes e "
+"unha interface doada de usar."
 
 #: update.php:105
 msgid ""
@@ -587,70 +600,73 @@ msgid ""
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
 "features of some websites."
 msgstr ""
-"De browser die u gebruikt is achterhaald. Het heeft bekende "
-"<b>veiligheidslekken en nadelen</b> en <b>beperkte mogelijkheden</b>. "
-"Sommige websites kunnen daardoor minder goed werken."
+"O navegador que está usando está desactualizado. Ten coñecidas <b>fallas de "
+"seguranza e desvantaxas</b> e un <b>conxunto de características limitado</"
+"b>. Pode que non poida desfrutar de tódalas características dalgúns sitios "
+"web."
 
 #: update.php:109
 msgid "Switching to a newer browser could give you a lot of advantages:"
-msgstr "Stap over op een nieuwere browser en geniet van de voordelen:"
+msgstr "Se cambia a un navegador web máis actualizado obterá moitas vantaxas:"
 
 #: update.php:112
 msgid "Security"
-msgstr "Veiligheid"
+msgstr "Seguranza"
 
 #: update.php:113
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Nieuwere browsers kunnen beter beschermen tegen scams, virussen, trojans, "
-"phishing en andere bedreigingen."
+"Os navegadores web actualizados protéxenlle mellor fronte a suplantacións, "
+"virus, troianos, ataques de suplantación de identidade e outros engados. "
+"Tamén arranxan ocos de seguranza no seu navegador web!"
 
 #: update.php:116
 msgid "Speed"
-msgstr "Snelheid"
+msgstr "Velocidade"
 
 #: update.php:117
 msgid "Every new browser generation improves speed"
-msgstr "Nieuwere browsers werken veel sneller"
+msgstr "Cada nova xeración dos navegadores web mellora a velocidade"
 
 #: update.php:120
 msgid "Compatibility"
-msgstr "Betere werking"
+msgstr "Compatibilidade"
 
 #: update.php:121
 msgid "Websites using new technology will be displayed more correctly"
-msgstr "Websites die gebruik maken van nieuwe technieken werken (beter)"
+msgstr "Os sitios web que usan novas tecnoloxías mostraranse mellor"
 
 #: update.php:124
 msgid "Comfort &amp; better experience"
-msgstr "Comfort &amp; betere beleving"
+msgstr "Confort e mellor experiencia"
 
 #: update.php:125
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
-"Met nieuwe mogelijkheden, uitbreidingen, etc. gaat het internetten een stuk "
-"aangenamer"
+"Con novas características, extensións e mellor personalización, terá unha "
+"máis confortábel experiencia web."
 
 #: update.php:130
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
-"Updaten is makkelijk, neemt slechts een paar minuten in beslag en kost niets."
+"Actualizar o seu navegador é moi doado, lévalle só uns poucos minutos e é "
+"totalmente de balde."
 
 #: update.php:135
 msgid "Why this website?"
-msgstr "Waarom deze website?"
+msgstr "Porque existe este sitio web?"
 
 #: update.php:137
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Deze website is een initiatief van webdesigners, webmasters en bloggers die "
-"het internet verder willen brengen en hun bezoekers willen helpen."
+"Este sitio é unha iniciativa de deseñadores web, administradores e bloggers "
+"que queren facer evolucionar o web e axudar aos seus visitantes."
 
 #: update.php:140
 msgid ""
@@ -658,21 +674,21 @@ msgid ""
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
-"Oude, achterhaalde browsers zijn <b>onveilig</b> en <b>belemmeren de "
-"voortgang van het internet</b> omdat ze weinig mogelijkheden bieden en veel "
-"<b>fouten</b> bevatten."
+"Os navegadores web desactualizacións son un <b>fío de seguranza</b> e "
+"<b>bloquean a evolución do web</b> debido ás súas características limitadas "
+"e numerosos <b>erros</b>."
 
 #: update.php:144
 msgid "\"I'm not able to update my browser\""
-msgstr "\"Ik kan de browser niet updaten\""
+msgstr "\"Non son capaz a actualizar o meu navegador\""
 
 #: update.php:145
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
 msgstr ""
-"Als uw computer wordt beheerd door een systeembeheerder en u kunt geen "
-"nieuwe browser installeren, vraag dan om hulp."
+"Se o seu computador está xestioando por un administrador e non pode instar "
+"un novo navegador web, pregúntelle ao seu administrador para facelo."
 
 #: update.php:146
 msgid ""
@@ -680,5 +696,6 @@ msgid ""
 "about installing a second browser for browsing and keep the old one for the "
 "compatibility."
 msgstr ""
-"Als je niet van browser kunt wisselen in verband met de nodige "
-"ondersteuning, waarom dan niet een tweede browser installeren?"
+"Se non pode cambiar o seu navegador por problemas de compatibilidade, probe "
+"a instalar un segundo navegador web para navegar de cotío e manteña o antigo "
+"para compatibilidade."

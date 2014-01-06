@@ -10,7 +10,7 @@
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
 
     <meta name="robots" content="index,follow" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="/base.css" type="text/css" />
     <!--[if lte IE 7]>
     <link rel="stylesheet" href="/drecksie.css" type="text/css" />
@@ -64,7 +64,9 @@
                 <a href="/sq/<?php echo $curfile?>">Gjuha Shqipe</a>
                 <a href="/ca/<?php echo $curfile?>">català</a>
                 <a href="/sv/<?php echo $curfile?>">svenska</a>
-                    <a href="/hu/<?php echo $curfile?>">magyar</a>
+                <a href="/hu/<?php echo $curfile?>">magyar</a>
+                <a href="/fa/<?php echo $curfile?>">فارسی</a>
+                <a href="/gl/<?php echo $curfile?>">galego</a>
                 <a href="contact.html">translate...</a>
                 </div>
             </div>
