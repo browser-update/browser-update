@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-core\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-05 12:21+0100\n"
+"PO-Revision-Date: 2014-01-06 16:15+0100\n"
+"Last-Translator: Petr Mrazek <mrazek.petr@gmail.com>\n"
+"Language-Team: Petr Mrazek <mrazek.petr@gmail.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: update-browser.php:49
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr ""
+"Váš prohlížeč je zastaralý. Stáhněte si prosím jeden z těchto aktuálních, "
+"svobodných a vynikajících prohlížečů:"
+
+#: update-browser.php:76
+msgid "Most recent version not available for your system."
+msgstr "Nejnovější verze není k dispozici pro Váš systém."
+
+#: update-browser.php:76
+msgid "Please choose another browser."
+msgstr "Vyberte si prosím jiný prohlížeč."
+
+#: update-browser.php:90
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr ""
+"Pro více <a href=\"%s\">bezpečí</a>,    <a href=\"%s\">rychlosti</a>,    <a "
+"href=\"%s\">komfortu</a> a    <a href=\"%s\">zábavy</a>."
+
+#: update-browser.php:98 update-browser.php:117
+msgid "Advertisement"
+msgstr "Reklama"
+
+#: update-browser.php:138
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Váš prohlížeč(%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnostní rizika</b> "
+"a možná <b>nedokáže zobrazit všechny prvky</b> této a dalších webových "
+"stránek. <a%s>Naučte se, jak aktualizovat svůj prohlížeč</a>"
+
+#: update-browser.php:149
+msgid "Why do I need an up-to-date browser?"
+msgstr "Proč potřebuji aktualizovaný prohlížeč?"
+
+#: update-browser.php:153
+msgid "Security"
+msgstr "Bezpečnost"
+
+#: update-browser.php:154
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"Novější prohlížeče Vás lépe chrání před podvody, viry, trojskými koňmi, "
+"phishingem a dalšími hrozbami. Také opravují bezpečnostní díry ve Vašem "
+"stávajícím prohlížeči!"
+
+#: update-browser.php:157
+msgid "Speed"
+msgstr "Rychlost"
+
+#: update-browser.php:158
+msgid "Every new browser generation improves speed"
+msgstr "Každá nová generace prohlížeče zlepšuje rychlost"
+
+#: update-browser.php:161
+msgid "Compatibility"
+msgstr "Kompatibilita"
+
+#: update-browser.php:162
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "Webové stránky využívající nové technologie budou zobrazeny přesněji"
+
+#: update-browser.php:165
+msgid "Comfort &amp; better experience"
+msgstr "Komfort &amp; lepší zážitek"
+
+#: update-browser.php:166
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"S novými funkcemi, rozšířeními a lepší přizpůsobitelností budete mít lepší "
+"zážitky s webem"
+
+#: update-browser.php:174
+msgid "Why this website?"
+msgstr "Proč tato stránka?"
+
+#: update-browser.php:176
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"Tato webová stránka je iniciativa webdesignerů, webmasterů a bloggerů, kteří "
+"chtějí pomoci budoucnosti webu a svým návštěvníkům."
+
+#: update-browser.php:179
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"Zastaralé prohlížeče jsou <b>bezpečnostními dírami</b> a <b>blokují pokrok "
+"webu</b> protože jsou limitovány svými funkcemi a množstvím <b>chyb</b>."
+
+#: update-browser.php:182
+msgid "More information about the Project Browser-Update.org"
+msgstr "Více informací o projektu Browser-Update.org"
+
+#: update-browser.php:187
+msgid "\"I'm not able to update my browser\""
+msgstr "\"Nejsem schopen aktualizovat svůj prohlížeč\""
+
+#: update-browser.php:188
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"Pokud nemůžete změnit svůj prohlížeč z důvodu problémů s kompatibilitou, "
+"přemýšlejte o instalaci druhého prohlížeče pro prohlížení a zachování "
+"starého pro kompatibilitu."
+
+#: update-browser.php:189
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"Pokud jste na počítači, který je spravován administrátorem a nemůžete "
+"nainstalovat nový prohlížeč, zeptejte se na to svého administrátora."
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "Aktualizujte Váš prohlížeč"
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Iniciativa webových designerů informovat uživatele o aktualizacích prohlížečů"
+
+#: header.php:30
+msgid "The Project"
+msgstr "Projekt"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "Aktualizovat prohlížeč"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Statistiky"
+
+#: header.php:35
+msgid "Blog"
+msgstr "Blog"
+
+#: header.php:67
+msgid "Contact"
+msgstr "Kontakt"

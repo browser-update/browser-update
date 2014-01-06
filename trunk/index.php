@@ -200,7 +200,7 @@ window.onload=function(){
 <p>
 			<?php echo T_('You may also use third-party plugins for: ');
                                 echo sprintf(' '.
-                                            '<a href="%s">WordPress</a> (german), ' .
+                                            '<a href="%s">WordPress</a>, ' .
                                             '<a href="%s">TYPO3</a>, ' .
                                             '<a href="%s">TYPOlight</a> (german), ' .
                                 '<a href="%s">vBulletin</a>, ' .

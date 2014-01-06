@@ -26,7 +26,9 @@ $lang_rewrite = array(
 	"sv"=>"sv_SE",
 	"hu"=>"hu_HU",
 	"fa"=>"fa_IR",
-	"gl"=>"gl_ES"
+	"gl"=>"gl_ES",
+        "he"=>"he_IL",
+        "cs"=>"cs_CZ"
 );
 
 /**
@@ -156,7 +158,7 @@ T_textdomain('update');
 
 
 $newtrans=false;    
-if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr")
+if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr"||$ll=="cs")
     $newtrans=true;
 //if (!$newtrans)
 //    T_textdomain('browser-update');
