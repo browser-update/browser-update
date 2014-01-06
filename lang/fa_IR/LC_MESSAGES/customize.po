@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"PO-Revision-Date: 2011-09-13 03:25+0330\n"
+"Last-Translator: Persian Prince <persianprince@persianpros.com>\n"
+"Language-Team: Persian Professionals <persianpros@yahoo.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Persian\n"
+"X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: customize.php:8
+msgid "Customize and test"
+msgstr "سفارشی و تست"
+
+#: customize.php:11
+msgid "Test the script"
+msgstr "تست اسکریپت"
+
+#: customize.php:14
+msgid ""
+"If you open your website with <code>#test-bu</code> appended to the url, the "
+"bar will always show up."
+msgstr ""
+
+#: customize.php:15
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr "مثال : <code>http://browser-update.org/#test-bu</code>."
+
+#: customize.php:16
+msgid ""
+"Make sure the page is properly reloaded by opening the url in an new browser "
+"tab."
+msgstr ""
+
+#: customize.php:19
+msgid "Options"
+msgstr "گزینه ها"
+
+#: customize.php:22
+msgid "The following options can be passed to the script:"
+msgstr "گزینه های ذیل میتوانند در اسکریپت قبول شوند :"
+
+#: customize.php:27
+msgid "browser versions to notify"
+msgstr "نسخه های مرورگر برای اطلاع رسانی"
+
+#: customize.php:28
+msgid "atfer how many hours should the message reappear"
+msgstr "بعد از چند ساعت پیام باید دوباره نمایان شود"
+
+#: customize.php:29
+msgid "0 = show all the time"
+msgstr "0 = همیشه نشان داده شود"
+
+#: customize.php:30
+msgid "callback function after the bar has appeared"
+msgstr ""
+
+#: customize.php:32
+msgid "set a language for the message, e.g. \"en\""
+msgstr "یک زبان برای پیام انتخاب کنید ، مثلا \"en\""
+
+#: customize.php:33
+msgid "overrides the default detection"
+msgstr "باطل کردن تشخیص پیش فرض"
+
+#: customize.php:34
+msgid "true = always show the bar (for testing)"
+msgstr "درست = همیشه نوار را نشان دهد (برای تست کردن)"
+
+#: customize.php:35
+msgid "custom notification html text"
+msgstr "متن html اطلاع رسانی انتخابی"
+
+#: customize.php:36
+msgid "open link in new window/tab"
+msgstr "باز کردن لینک در پنجره/برگه جدید"
+
+#: customize.php:59
+msgid "Edit the CSS"
+msgstr "ویرایش CSS"
+
+#: customize.php:62
+msgid "The following CSS rules are applied by the script. "
+msgstr "قوانین CSS ذیل توسط اسکریپت بکار برده شدند"
+
+#: customize.php:63
+msgid ""
+"You can overwrite them in your own CSS. To do so you need to add some more "
+"specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgstr ""
+
+#~ msgid "Contact"
+#~ msgstr "ارتباط"
+
+#~ msgid "Browser-Update.org"
+#~ msgstr "Browser-Update.org"
+
+#~ msgid "Inform your visitors about browser-updates"
+#~ msgstr "اطلاع دادن به بازدید کنندگان شما در مورد به روز رسانی های مرورگر"
+
+#~ msgid "An initiative by web designers to inform users about browser-updates"
+#~ msgstr ""
+#~ "یک ابتکار توسط طراحان وب برای مطلع کردن کاربران از به روز رسانی های مرورگر"
+
+#~ msgid "Start"
+#~ msgstr "شروع"
+
+#~ msgid "Update Browser"
+#~ msgstr "به روز رسانی مرورگر"
+
+#~ msgid "Help"
+#~ msgstr "کمک"
+
+#~ msgid "Supporters"
+#~ msgstr "حامیان"
+
+#~ msgid "Statistics"
+#~ msgstr "آمار"
+
+#~ msgid "Blog"
+#~ msgstr "بلاگ"
+
+#~ msgid "How it works"
+#~ msgstr "چگونه کار میکند"
+
+#~ msgid "Test the notification bar!"
+#~ msgstr "تست نوار اطلاع رسانی !"
+
+#~ msgid ""
+#~ "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</"
+#~ "b> and may <b>not display all features</b> of this and other websites. <a"
+#~ "%s>Learn how to update your browser</a>"
+#~ msgstr ""
+#~ "مرورگر شما (%s) <b>تاریخ گذشته است</b>. تعدادی <b>معایب امنیتی</b> و "
+#~ "مشکلات <b>عدم نمایش همه امکانات</b> شناسایی شده است که باعث میشود این "
+#~ "سایت و دیگر سایت های اینترنتی را به درستی مشاهده نکنید <a%s>یاد بگیرید "
+#~ "چگونه مرورگر خود را به روز رسانی کنید</a>"
+
+#~ msgid ""
+#~ "If the visitor ignores the advice, it won't appear again for some time."
+#~ msgstr ""
+#~ "اگر بازدید کننده پند را نادیده بگیرد ، برای مدتی دوباره نمایان نخواهد شد"
+
+#~ msgid "Advantages and features"
+#~ msgstr "مزایا و امکانات"
+
+#~ msgid "Subtle"
+#~ msgstr "دقیق"
+
+#~ msgid "Informative"
+#~ msgstr "حاوی اطلاعات"
+
+#~ msgid "Idealistic"
+#~ msgstr "آرمان گرایی"
+
+#~ msgid "Help evolve the web!"
+#~ msgstr "به تکامل وب کمک کنید !"
+
+#~ msgid "Support the standards-based web!"
+#~ msgstr "پشتیبانی از وب بر پایه استاندارد !"
+
+#~ msgid "Support Open Source software projects!"
+#~ msgstr "پشتیبانی پروژه های نرم افزاری کد باز !"
+
+#~ msgid "Help your visitors!"
+#~ msgstr "به بازدید کنندگان خود کمک کنید !"
+
+#~ msgid "Help increase security awareness!"
+#~ msgstr "به افزایش هشیاری امنیتی کمک کنید !"
+
+#~ msgid "Support your favorite webbrowser!"
+#~ msgstr "مرورگر محبوب خود را پشتیبانی کنید"
+
+#~ msgid "Low maintenance and up-to-date"
+#~ msgstr "نگهداری کم و به روز"
+
+#~ msgid "Customizable"
+#~ msgstr "قابل سفارشی کردن"
+
+#~ msgid ""
+#~ "You can customize the browsers and versions to notify.<br/> In future "
+#~ "releases you can also customize the text that should be shown, the "
+#~ "frequency of the bar to appear and many other things."
+#~ msgstr ""
+#~ "شما میتوانید مرورگر ها و نسخه ها را برای اطلاع رسانی سفارشی کنید.<br/> در "
+#~ "انتشارات آینده شما همچنین میتوانید متنی که باید نشان داده شود را سفارشی "
+#~ "کنید ، فرکانس نوار برای نمایان شدن و بسیاری از موارد دیگر."
+
+#~ msgid "Localized"
+#~ msgstr "Localized"
+
+#~ msgid "The message is automatically displayed in the user's language."
+#~ msgstr "پیام به صورت خودکار به زبان کاربر نمایش داده خواهد شد"
+
+#~ msgid "<span class=\"workingonit\">work in progress</span>"
+#~ msgstr "<span class=\"workingonit\">در حال انجام</span>"
+
+#~ msgid "Install notification on your site"
+#~ msgstr "نصب اطلاع رسانی روی سایت شما"
+
+#~ msgid ""
+#~ "Here you can get the code to include in your website. Just include it "
+#~ "anywhere in the source of your page."
+#~ msgstr ""
+#~ "اینجا شما میتوانید کد را دریافت کنید تا در سایت خود قرار دهید. آن را "
+#~ "میتوانید در هر محلی از کد صفحه خود قرار دهید"
+
+#~ msgid ""
+#~ "You can <a href=\"%s\">customize</a> the style of the message, the text "
+#~ "and other options."
+#~ msgstr ""
+#~ "شما میتوانید استیل پیام ، متن و گزینه های دیگر را <a href=\"%s\">سفارشی</"
+#~ "a> کنید"
+
+#~ msgid "Following browsers will be notified:"
+#~ msgstr "در مرورگر های ذیل اطلاع رسانی خواهد شد :"
+
+#~ msgid ""
+#~ "Google Chrome will automatically itself and is therefor always up to date"
+#~ msgstr ""
+#~ "گوگل کروم به صورت خوکار به روز رسانی میشود لذا همیشه به روز خواهد بود"
+
+#~ msgid "Your Code"
+#~ msgstr "کد شما"
+
+#~ msgid "Why you should tell users to update"
+#~ msgstr "چرا شما باید به کاربران بگویید که به روز رسانی کنند"
+
+#~ msgid "Reduced development costs and time"
+#~ msgstr "هزینه و زمان توسعه را کاهش میدهد"
+
+#~ msgid "Webdesign technologies and features"
+#~ msgstr "تکنولوژی های طراحی وب و امکانات"
+
+#~ msgid ""
+#~ "Newer browsers let you use more features and new technologies (CSS3, SVG, "
+#~ "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
+#~ "resulting in a better browsing experience for your users."
+#~ msgstr ""
+#~ "مرورگر های جدید اجازه استفاده از امکانات بیشتر و تکنولوژی های جدید (CSS3, "
+#~ "SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) را به شما و در "
+#~ "سایت شما میدهند ، نتیجه تجربه مرور بهتر برای کاربران شما است. "
+
+#~ msgid "Security and benefits for the user"
+#~ msgstr "امنیت و مزایا برای کاربر"
+
+#~ msgid "The web has to evolve..."
+#~ msgstr "وب باید تکامل پیدا کند"
+
+#~ msgid "But that's only possible if the browsers also evolve."
+#~ msgstr "اما فقط زمانی امکان پذیر است که مرورگر ها نیز تکامل پیدا کنند"
+
+#~ msgid "Users don't oppose updating..."
+#~ msgstr "کاربران با به روز رسانی کردن مخالفت نخواهند کرد"
+
+#~ msgid "Help this project"
+#~ msgstr "به این پروژه کمک کنید"
+
+#~ msgid "Participate!"
+#~ msgstr "مشارکت !"
+
+#~ msgid ""
+#~ "Include the notification code in your page to inform users about browser "
+#~ "updates."
+#~ msgstr ""
+#~ "کد اطلاع رسانی را در صفحه خود قرار دهید تا کاربران را از به روز رسانی های "
+#~ "مرورگر مطلع کنید"
+
+#~ msgid "Spread the word!"
+#~ msgstr "کلمه را گسترش دهید !"
+
+#~ msgid ""
+#~ "Tell others about this initiative! In your blog, on your webpage, ..."
+#~ msgstr ""
+#~ "در مورد این ابتکار به دیگران بگویید ! در بلاگ خود ، روی صفحه وب خود و ..."
+
+#~ msgid "Translate this page"
+#~ msgstr "ترجمه این صفحه"
+
+#~ msgid "Translate this page into your language."
+#~ msgstr "ترجمه این صفحه به زبان شما"
+
+#~ msgid ""
+#~ "<strong class=\"number\">%d</strong> sites are using the Browser-Update."
+#~ "org script."
+#~ msgstr ""
+#~ "<strong class=\"number\">%d</strong> سایت از اسکریپت Browser-Update.org "
+#~ "استفاده میکنند."
+
+#~ msgid "Browser updates"
+#~ msgstr "به روز رسانی های مرورگر"
+
+#~ msgid ""
+#~ "<strong class=\"number\">%d</strong> visitors have already upgraded their "
+#~ "browser."
+#~ msgstr ""
+#~ "<strong class=\"number\">%d</strong> بازدید کنندگان مرورگر خود را به روز "
+#~ "رسانی کرده اند."
+
+#~ msgid "From"
+#~ msgstr "از"
+
+#~ msgid "To"
+#~ msgstr "به"
+
+#~ msgid "Amount"
+#~ msgstr "میزان"
+
+#~ msgid "Free webbrowsers"
+#~ msgstr "مرورگر های رایگان"
+
+#~ msgid ""
+#~ "These browsers are the newest versions of the most used free web browsers."
+#~ msgstr ""
+#~ "مرورگر ها جدید ترین نسخه های مرورگر های رایگانی هستند که از آنها بیشترین "
+#~ "استفاده میشود"
+
+#~ msgid "Download"
+#~ msgstr "دانلود"
+
+#~ msgid "Browser with many features"
+#~ msgstr "مرورگر با امکانات زیاد"
+
+#~ msgid "Google's browser with compact interface."
+#~ msgstr "مرورگر گوگل با رابط بسیار ساده"
+
+#~ msgid "Automatically always up to date!"
+#~ msgstr "همیشه به صورت خودکار به روز است !"
+
+#~ msgid "Not available for your System."
+#~ msgstr "برای سیستم شما در دسترس نیست !"
+
+#~ msgid "Please choose another browser."
+#~ msgstr "لطفا مرورگر دیگری را انتخاب کنید."
+
+#~ msgid "Apple's fast browser"
+#~ msgstr "مرورگر سریع اپل"
+
+#~ msgid "Only for Windows Vista or 7."
+#~ msgstr "فقط برای ویندوز Vista و 7"
+
+#~ msgid "Windows built-in browser"
+#~ msgstr "مرورگر داخلی ویندوز"
+
+#~ msgid "All browsers have the same basic features and easy interface."
+#~ msgstr "همه مرورگر ها امکانات بنیادی یکسان و رابط ساده ای دارند"
+
+#~ msgid "Switching to a newer browser could give you a lot of advantages:"
+#~ msgstr "تعویض به یک مرورگر جدید میتواند به شما مزایای زیادی بدهد :"
+
+#~ msgid "Security"
+#~ msgstr "امنیت"
+
+#~ msgid "Speed"
+#~ msgstr "سرعت"
+
+#~ msgid "Every new browser generation improves speed"
+#~ msgstr "هر نسل جدید مرورگر سرعت را بهبود میبخشد"
+
+#~ msgid "Compatibility"
+#~ msgstr "سازگاری"
+
+#~ msgid "Websites using new technology will be displayed more correctly"
+#~ msgstr ""
+#~ "سایت هایی که از تکنولوژی های جدید استفاده میکنند به درستی نمایش داده "
+#~ "خواهند شد"
+
+#~ msgid "Comfort &amp; better experience"
+#~ msgstr "آسایش &amp; تجربه ای بهتر"
+
+#~ msgid "Updating is easy, takes just a few minutes and is totally free."
+#~ msgstr ""
+#~ "به روز رسانی ساده است ، فقط چند دقیق زمان نیاز دارد و کاملا رایگان است"
+
+#~ msgid "Why this website?"
+#~ msgstr "چرا این سایت ؟"
+
+#~ msgid ""
+#~ "This website is an initiative by webdesigners, webmasters and bloggers "
+#~ "who want to bring the web further and help their visitors."
+#~ msgstr ""
+#~ "این سایت یک ابتکار توسط طراحان و صاحبان وب ، بلاگ نویسان و کسانی است که "
+#~ "میخواهند وب را پیش ببرند و به بازدید کنندگان خود کمک کنند"
+
+#~ msgid "\"I'm not able to update my browser\""
+#~ msgstr "\"من نمیتوانم مرورگر خود را به روز رسانی کنم\""
