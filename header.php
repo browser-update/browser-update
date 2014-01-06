@@ -92,7 +92,7 @@
 <div id="body">
 -->
 <?php
-if (!isset($slimmed))  {
-    T_textdomain('browser-update');
+if (!isset($extratranslation))  {
+    T_textdomain('site');
 }
 ?>

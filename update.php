@@ -12,6 +12,8 @@ else {
 	}
 }
 
+$slimmed=true;
+$extratranslation=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
 
@@ -45,6 +47,8 @@ $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
 $u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
 $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",str_replace("_","-",$detected_lang));
+
+T_textdomain('update-legacy');
 ?>
 
 
