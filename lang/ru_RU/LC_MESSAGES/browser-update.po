@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-05 11:56+0100\n"
-"PO-Revision-Date: 2014-01-05 15:25+0100\n"
+"PO-Revision-Date: 2014-01-06 14:04+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: ru_RU <phg.azlk@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -211,7 +211,7 @@ msgid ""
 "By clicking the bar, he will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
-"Нажава на панель, он попадёт на <a href=\"%s\">страницу с информацией о том, "
+"Нажав на панель, он попадёт на <a href=\"%s\">страницу с информацией о том, "
 "почему стоит сменить/обновить браузер и сможет выбрать браузер</a>."
 
 #: index.php:49
@@ -226,7 +226,7 @@ msgstr "Преимущества и возможности"
 
 #: index.php:55
 msgid "Subtle"
-msgstr "Тонкий"
+msgstr "Ненавязчивый"
 
 #: index.php:56
 msgid ""
@@ -234,7 +234,7 @@ msgid ""
 "notification bar is very small and won't affect the browsing experience "
 "negatively."
 msgstr ""
-"Пользователь будем уведомлен только один раз. Панель уведомления занимает "
+"Пользователь будет уведомлен только один раз. Панель уведомления занимает "
 "очень мало места и не отразится негативно на внешнем виде страницы."
 
 #: index.php:60
@@ -288,7 +288,7 @@ msgid ""
 "we are going to add them to our list automatically."
 msgstr ""
 "Если будут появляться браузеры, которые не будут поддерживаться "
-"разработчиками, иметь уязвимости в безопасности или долго время не будут "
+"разработчиками, иметь уязвимости в безопасности или долгое время не будут "
 "обновляться разработчиками, мы будем добавлять их в список автоматически."
 
 #: index.php:80

@@ -68,11 +68,11 @@ The default outdated browser list is now:
 <div class="entry">
 <ul>
     <li>The links for Safari now point to (free) OS X operating system upates, since Safari is distirbuted this way</li>
-    <li>Links to two new plugins for WCF 2 and CMS made simple</li>
+    <li>Added links to new plugins for WCF 2, CMS made simple and XenForo</li>
     <li>Users with Windows 98 and 2000 and on old OS X Versions will not see notifications since there are no up-to-date browsers available for these systems anyway.</li>
     <li>Translators can start with a smaller "core" <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">translation</a> where only the notification part is translated</li>
     <li>A lot of small bugfixes</li>
-    <li>Hungarian and Swedish translation</li>
+    <li>Added <a href="/hu/">Hungarian</a>, <a href="/sv/">Swedish</a>,<a href="/fa/">Farsi</a> and <a href="/gl/">Galician</a> translation. Fixed <a href="/sq/">Albanian</a>. More small fixes.</li>
 </ul>
 </div>
 <div class="com"><a href="blog-entry.html?n=improvements" onclick="SC('improvements'); return false;">Comments</a></div>

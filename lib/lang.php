@@ -25,7 +25,8 @@ $lang_rewrite = array(
 	"ca"=>"ca_ES",
 	"sv"=>"sv_SE",
 	"hu"=>"hu_HU",
-	"fa"=>"fa_IR"
+	"fa"=>"fa_IR",
+	"gl"=>"gl_ES"
 );
 
 /**
