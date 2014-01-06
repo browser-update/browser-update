@@ -11,16 +11,16 @@
 
     <meta name="robots" content="index,follow" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="/new/base.css" type="text/css" />
+    <link rel="stylesheet" href="/base.css" type="text/css" />
     <!--[if lte IE 7]>
-    <link rel="stylesheet" href="/new/drecksie.css" type="text/css" />
+    <link rel="stylesheet" href="/drecksie.css" type="text/css" />
     <![endif]-->
     <!--[if lte IE 6]>
-    <link rel="stylesheet" href="/new/drecksie6.css" type="text/css" />
+    <link rel="stylesheet" href="/drecksie6.css" type="text/css" />
     <![endif]-->    
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
-    <script type="text/javascript" src="/new/base.js">	</script>
+    <script type="text/javascript" src="/base.js">	</script>
 </head>
 <body><div class="header">
     <div class="innerhead">
@@ -35,7 +35,12 @@
             <div><a href="blog.html"><?php echo T_('Blog'); ?></a></div>
         <?php }?>
             
-            
+        <?php
+        $curfile="";
+        preg_match('#/([^/]*)$#', $_SERVER["REQUEST_URI"], $matches);
+        if (isset($matches[1]))
+            $curfile=$matches[1];
+        ?>    
             
             <div id="lang2">
                 <a>Languages  ▼</a>
@@ -56,7 +61,7 @@
                 <a href="/uk/<?php echo $curfile?>">Українська</a>
                 <a href="/rm/<?php echo $curfile?>">rumantsch</a>
                 <a href="/da/<?php echo $curfile?>">dansk</a>
-                <a href="/al/<?php echo $curfile?>">Gjuha Shqipe</a>
+                <a href="/sq/<?php echo $curfile?>">Gjuha Shqipe</a>
                 <a href="/ca/<?php echo $curfile?>">català</a>
                 <a href="/sv/<?php echo $curfile?>">svenska</a>
                     <a href="/hu/<?php echo $curfile?>">magyar</a>

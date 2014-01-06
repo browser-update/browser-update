@@ -455,10 +455,6 @@ body, p {
 	background-image: url('/img/big/sa.png');
 }
 
-.b.bs {
-    display: none;
-}
-
 #co {
     width: 750px;
 }
@@ -504,7 +500,7 @@ body, p {
 .men {
     position: absolute;
     right: 10px;
-    bottom: 5px;
+    top: 8px;
 }
 
 .men div {
@@ -580,6 +576,7 @@ a.notavailable .bro {
     float: right;
     text-align: right;
     margin-top:15px;
+    margin-bottom: 10px;
 }
 .ad {
     border: 1px solid #aaa;
@@ -610,17 +607,23 @@ body .advantages li {
     position: absolute;
     padding: 5px;
     margin:0;
-    margin-top: 14px;    
+    margin-top: 18px;    
     top:0;
     left: 0;
-    background: #fff;
+    background-color: #ddd;
     display: none;
     min-width: 100%;
 }
 
 #lang2:hover div{
     display: block;
+    background-color: #ddd;
 }
 #lang2 a {
     display: block;
+}
+
+.men div:hover,
+#lang2 a:hover {
+    background-color: #fff;
 }

@@ -21,7 +21,7 @@ $lang_rewrite = array(
 	"rm"=>"rm_CH",
 	"fr"=>"fr_FR",
         "da"=>"da_DK",
-	"al"=>"al_SQ",
+	"sq"=>"sq_AL",
 	"ca"=>"ca_ES",
 	"sv"=>"sv_SE",
 	"hu"=>"hu_HU",
@@ -135,6 +135,7 @@ function log_lang()
 
 /* Init i18n */
 $detected_lang = request_lang();
+$ll=substr($detected_lang, 0, 2);
 // moved into request_lang()
 //if (isset($lang_rewrite[$detected_lang]))
 //	$detected_lang=$lang_rewrite[$detected_lang];
@@ -146,6 +147,7 @@ T_bind_textdomain_codeset('browser-update', 'UTF8');
 T_bindtextdomain('core', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 T_bind_textdomain_codeset('core', 'UTF8');
 T_textdomain('core');
+
 
 
 $newtrans=false;    

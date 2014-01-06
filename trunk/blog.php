@@ -22,7 +22,7 @@ The default outdated browser list is now:
     <a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">"BrowsersToNotify"</a>.
 </p>
 </div>
-<div class="com"><a href="blog-entry.php?n=ie8" onclick="SC('ie8'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=ie8" onclick="SC('ie8'); return false;">Comments</a></div>
 -->
 
 <h2>SSL Support finally arrived</h2>
@@ -32,7 +32,7 @@ The default outdated browser list is now:
     Finally, browser-update.org can be used on SSL sites (https://)! Just grab the <a href="./">new code</a> and it will automatically work as expected!
 </p>
 </div>
-<div class="com"><a href="blog-entry.php?n=ssl" onclick="SC('ssl'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=ssl" onclick="SC('ssl'); return false;">Comments</a></div>
 
 <h2>New and easier update page</h2>
 <small>January 4th, 2014</small>
@@ -49,17 +49,17 @@ The default outdated browser list is now:
 </p>
 <p>
     The new page is available here in 
-    <a href="/en/update-browser.php">english</a>, 
-    <a href="/de/update-browser.php">deutsch</a>, 
-    <a href="/es/update-browser.php">français</a> and
-    <a href="/es/update-browser.php">español</a>. 
+    <a href="/en/update-browser.html">english</a>, 
+    <a href="/de/update-browser.html">deutsch</a>, 
+    <a href="/es/update-browser.html">français</a> and
+    <a href="/es/update-browser.html">español</a>. 
     For other languages we need <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">your help for translating a few sentences</a>.
 </p>
 <p>
     Along with these changes also the design of the rest page got a refresh.
 </p>
 </div>
-<div class="com"><a href="blog-entry.php?n=newdesign" onclick="SC('newdesign'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=newdesign" onclick="SC('newdesign'); return false;">Comments</a></div>
 
 
 
@@ -67,6 +67,7 @@ The default outdated browser list is now:
 <small>January 2nd, 2014</small>
 <div class="entry">
 <ul>
+    <li>The links for Safari now point to (free) OS X operating system upates, since Safari is distirbuted this way</li>
     <li>Links to two new plugins for WCF 2 and CMS made simple</li>
     <li>Users with Windows 98 and 2000 and on old OS X Versions will not see notifications since there are no up-to-date browsers available for these systems anyway.</li>
     <li>Translators can start with a smaller "core" <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">translation</a> where only the notification part is translated</li>
@@ -74,16 +75,16 @@ The default outdated browser list is now:
     <li>Hungarian and Swedish translation</li>
 </ul>
 </div>
-<div class="com"><a href="blog-entry.php?n=improvements" onclick="SC('improvements'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=improvements" onclick="SC('improvements'); return false;">Comments</a></div>
 
 
 
-<h2>1.000.000 Users updated their browser</h2>
+<h2>1 000 000 Users updated their browser</h2>
 <small>Aug 1st, 2013</small>
 <div class="entry">
 <p>More than 1 000 000 Users updated their browser so far thanks to this service!</p>
 </div>
-<div class="com"><a href="blog-entry.php?n=improvements" onclick="SC('onemillion'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=onemillion" onclick="SC('onemillion'); return false;">Comments</a></div>
 
 
 
@@ -127,7 +128,7 @@ The default outdated browser list is now:
     <a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">"BrowsersToNotify"</a>.
 </p>
 </div>
-<div class="com"><a href="blog-entry.php?n=ie7" onclick="SC('ie7'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=ie7" onclick="SC('ie7'); return false;">Comments</a></div>
 
 
 <h2>French translation and Drupal module</h2>
@@ -140,7 +141,7 @@ Thanks to <a href="http://www.ditwinemploi.com">Médéric</a> for the translatio
 Furthermore, there is now <a href="https://drupal.org/project/bu">a module</a> for the Drupal Content management system available. Thanks to <a href="http://pebosi.net/drupal-module/browser-update">Peter</a>.
 </p>
 </div>
-<div class="com"><a href="blog-entry.php?n=frenchdrupal" onclick="SC('frenchdrupal'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=frenchdrupal" onclick="SC('frenchdrupal'); return false;">Comments</a></div>
 
 
 
@@ -154,7 +155,7 @@ Nice to see them join us in the fight.
 We, <a href="http://browser-update.org">browser-update.org</a>, already have convinced
 about 300&nbsp;000 users to move off Internet Explorer 6!
 </div>
-<div class="com"><a href="blog-entry.php?n=msie6" onclick="SC('msie6'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=msie6" onclick="SC('msie6'); return false;">Comments</a></div>
 
 
 <h2>IE9 released</h2>
@@ -167,7 +168,7 @@ a message for people using other Systems that they need to choose another browse
 "Internet Explorer 9 - 
 Not available for your System. Only for Windows Vista or 7. Please choose another browser."
 </div>
-<div class="com"><a href="blog-entry.php?n=ie9update" onclick="SC('ie9update'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=ie9update" onclick="SC('ie9update'); return false;">Comments</a></div>
 
 
 
@@ -195,7 +196,7 @@ We were moving to a faster server in November, because our old server could not 
 <h5>Future</h5>
 This year we need to decide if we should move Internet Explorer 7 to the default-list of outdated browsers.
 </div>
-<div class="com"><a href="blog-entry.php?n=news" onclick="SC('news'); return false;">Comments</a></div>
+<div class="com"><a href="blog-entry.html?n=news" onclick="SC('news'); return false;">Comments</a></div>
 
 
 <!--
@@ -207,7 +208,7 @@ This year we need to decide if we should move Internet Explorer 7 to the default
 -->
 <script>
     function SC(name) {
-        document.getElementById('CF').src="blog-entry.php?n="+name;
+        document.getElementById('CF').src="blog-entry.html?n="+name;
         window.setTimeout(function(){ document.getElementById('CF').style.visibility="visible";},10);
        
     }
@@ -229,13 +230,13 @@ h2:first-child {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 10px solid #000000;
     bottom: 20%;
-    height: 400px;
-    left: 10%;
+    height: 60%;
+    left: 20%;
     overflow: auto;
-    position: absolute;
-    right: 10%;
-    top: 0;
-    width: 80%;
+    position: fixed;
+    right: 20%;
+    top: 20%;
+    width: 60%;
     visibility: hidden;
 }
 
