@@ -1,5 +1,5 @@
 #labels Featured
-An introduction on how to translate browser-update.org
+=An introduction on how to translate browser-update.org=
 
 
 
