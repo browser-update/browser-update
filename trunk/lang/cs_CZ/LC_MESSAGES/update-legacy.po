@@ -23,7 +23,6 @@ msgid "Update your Browser"
 msgstr ""
 
 #: header.php:28
-#, fuzzy
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 "Vložte notifikační kód na Vaší webovou stránku a informujte uživatele o "
@@ -107,7 +106,6 @@ msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 
 #: update.php:107
-#, fuzzy
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "

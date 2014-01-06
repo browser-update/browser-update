@@ -18,12 +18,10 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #: header.php:5
-#, fuzzy
 msgid "Update your Browser"
 msgstr "עדכן דפדפן"
 
 #: header.php:28
-#, fuzzy
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr "יוזמה של מעצבי רשת להתריע למשתמשים אודות עדכוני דפדפן"
 
@@ -54,7 +52,6 @@ msgid ""
 msgstr ""
 
 #: update-browser.php:86 update-browser.php:100
-#, fuzzy
 msgid "Most recent version not available for your system."
 msgstr "לא זמין למערכת שלך."
 
@@ -167,7 +164,6 @@ msgstr ""
 "עבור גלישה ושמור את הישן לאתרים אשר עבורם אתה זקוק לו."
 
 #: update-browser.php:213
-#, fuzzy
 msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."
