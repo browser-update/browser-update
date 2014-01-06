@@ -2,7 +2,10 @@
 require_once("lib/init.php");
 
 //rederict people coming from search engines that have outdated browsers to the update page
-if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])) {
+if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])
+        &&
+        !preg_match('#bot|googlebot|slurp|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos#i',$_SERVER['HTTP_REFERER'])
+        ) {
     $vs="?(\d+[.]\d+)";
     $__uastr=str_replace(array("/","+","_","\n","\t")," ", strtolower($_SERVER['HTTP_USER_AGENT']));
     function det($str, $version) {

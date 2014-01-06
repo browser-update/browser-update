@@ -6,9 +6,9 @@ var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:11,f:28,o:18,s:7,n:20};
+this.op.vsakt = {i:11,f:26,o:18,s:7,n:20};
 //this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
-this.op.vsdefault = {i:7,f:10,o:12,s:5,n:10};
+this.op.vsdefault = {i:7,f:10,o:12,s:4.5,n:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt)
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -50,7 +50,7 @@ function getBrowser() {
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
     else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
     else if (/Safari.(\d+)/i.test(ua)) n="so";
-    else if (/Opera.*Version.(\d+\.?\d+)/i.test(ua)) n="o";
+    else if (/Opera.*Version.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};

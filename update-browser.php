@@ -1,4 +1,5 @@
 <?php
+//language for the download links
 if (isset($_GET['lang'])) {
 	$ll = $_GET['lang'];
 }
@@ -12,12 +13,21 @@ else {
 	}
 }
 
+
 $slimmed=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
+
+
+if (!$newtrans) {
+    header("Location: update.html");
+    exit;
+}
+    
+
 include("header.php");
 
-$ua=strtolower($_SERVER['HTTP_USER_AGENT']);
+$ua=str_replace(array("/","+","_","\n","\t",".")," ", strtolower($_SERVER['HTTP_USER_AGENT']));
 function has($t) {
 	global $ua;	
 	return !(strpos($ua,$t)===false);
@@ -29,12 +39,17 @@ function has($t) {
 //IE 11 is only available for win7 and win8 || has("windows nt 6.0")
 // 5->2000/xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1
 $no_ie = has("mac os") || has("linux");
-$no_ie_system = has("windows nt 4") || has("windows nt 5") || has("windows nt 6.0")|| has("mac os") || has("linux");
+$no_ie_system = has("windows nt 4") || has("windows nt 5") || has("windows nt 6 0")|| has("mac os") || has("linux");
 $no_sa = !has("mac os");
+$no_sa_system =  has("os x 10 4") || has("os x 10 5") || has("os x 10 6") || has("os x 10 7");
+#echo $no_sa;
+#
+//$u_sa="http://www.apple.com/safari/";
+$sa_map=array("en"=>"","sv"=>"se","ja"=>"jp","sl"=>"si","uk"=>"ua","rm"=>"de","da"=>"dk","ca"=>"es");
+$u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$ll);
+if (isset($sa_map[$ll]))
+    $u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$sa_map[$ll]);
 
-$u_sa=sprintf("http://www.apple.com/%s/safari/",$ll);
-if ($ll=="en")
-    $u_sa=sprintf("http://www.apple.com/safari/",$ll);
 $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
 $u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
@@ -63,7 +78,15 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
         <a class="l" href="<?php echo $u_ch;?>" target="_blank" onmousedown="countBrowser('c')"><span class="bro">Chrome</span>   
         <span class="vendor">Google</span>           </a>
     </td>
-    <?php if ($no_sa) {} else {?>
+    <?php if ($no_sa_system) {?>
+    <td class="b bs">
+        <a class="l notavailable"><span class="bro">Safari</span>   
+        <span class="vendor">Apple</span>   
+        <span class="na"><?php echo T_('Most recent version not available for your system.');?> <?php echo T_('Please choose another browser.'); ?> </span>
+        </a>
+    </td>
+    <?php } else if ($no_sa) {?>
+    <?php } else {?>
     <td class="b bs">
         <a class="l" href="<?php echo $u_sa;?>" target="_blank" onmousedown="countBrowser('s')"><span class="bro">Safari</span>   
         <span class="vendor">Apple</span>         </a>
@@ -87,12 +110,12 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 </table>
     
 <h2 class="whatnow"> 
-    <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'security','#speed','#comfort','#fun');?>
+    <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'#security','#speed','#comfort','#fun');?>
 </h2>
 </div>
 
 <?php
-if ($ll=="de" && mt_rand(0, 50)==0) {
+if ($ll=="de" && mt_rand(0, 30)==0) {
 ?>
 <div class="adc">
     <?php echo T_("Advertisement");?>
@@ -111,7 +134,7 @@ if ($ll=="de" && mt_rand(0, 50)==0) {
     </div>
 </div>
 <?php }
-else if ($ll=="de" && mt_rand(0, 5)==0) {
+else if ($ll=="de" && mt_rand(0, 1)==0) {
 ?>
 <div class="adc">
     <?php echo T_("Advertisement");?>

@@ -12,20 +12,14 @@ else {
 	}
 }
 
-if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr") {
+require_once("lib/init.php");
+require_once("lib/lang.php");
+
+if ($newtrans) {
     header("Location: update-browser.html");
     exit;
 }
 
-/*
-if ($ll=="de" && rand(1, 3)==3) {
-    include("update2.php");
-    exit;
-}
-*/
-
-require_once("lib/init.php");
-require_once("lib/lang.php");
 include("header.php");
 
 $ua=strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -42,7 +36,11 @@ $no_ie = has("windows nt 4") || has("windows nt 5") || has("windows nt 6.0") || 
 $no_sa = !has("mac os");
 
 
-$u_sa=sprintf("http://www.apple.com/%s/safari/",$ll);
+$sa_map=array("en"=>"","sv"=>"se","ja"=>"jp","sl"=>"si","uk"=>"ua","rm"=>"de","da"=>"dk","ca"=>"es");
+$u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$ll);
+if (isset($sa_map[$ll]))
+    $u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$sa_map[$ll]);
+
 $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
 $u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
