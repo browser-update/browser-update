@@ -26,5 +26,11 @@ D="$1/LC_MESSAGES"
     msgmerge -U $D/site.po site.pot
     msgmerge -U $D/customize.po customize.pot
     msgmerge -U $D/update-legacy.po update-legacy.pot
+    # remove old files
+    rm $D/browser-update.po
+    if [ -e $D/core.po ]
+    then
+        rm $D/core.po
+    fi
 #done
 
