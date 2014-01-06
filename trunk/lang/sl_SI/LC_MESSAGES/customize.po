@@ -109,7 +109,6 @@ msgstr ""
 #~ msgid "Start"
 #~ msgstr "Začetek"
 
-#, fuzzy
 #~ msgid "Update Browser"
 #~ msgstr "Update Browser"
 

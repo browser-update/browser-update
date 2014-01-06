@@ -55,7 +55,6 @@ msgid ""
 msgstr ""
 
 #: update-browser.php:86 update-browser.php:100
-#, fuzzy
 msgid "Most recent version not available for your system."
 msgstr "Не призначений для вашої системи."
 
@@ -169,7 +168,6 @@ msgstr ""
 "встановити другий браузер й залишити старий для збереження сумісності."
 
 #: update-browser.php:213
-#, fuzzy
 msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -587,7 +585,6 @@ msgstr ""
 #~ msgid "Google's browser with compact interface."
 #~ msgstr "Браузер від Google з компактним інтерфейсом."
 
-#, fuzzy
 #~ msgid "Automatically always up to date!"
 #~ msgstr " "
 

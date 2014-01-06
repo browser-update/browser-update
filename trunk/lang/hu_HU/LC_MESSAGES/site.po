@@ -243,7 +243,6 @@ msgid "Webdesign technologies and features"
 msgstr "Webdesign technológiák és szolgáltatások"
 
 #: index.php:236
-#, fuzzy
 msgid ""
 "There are all these great new web development standards and they are "
 "supported by modern browsers... but you may not use them."

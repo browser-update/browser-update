@@ -98,7 +98,6 @@ msgid "The following CSS rules are applied by the script. "
 msgstr "Les següents normes CSS s'aplicaran a l'script"
 
 #: customize.php:66
-#, fuzzy
 msgid ""
 "You can overwrite them in your own CSS. To do so you need to add some more "
 "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"

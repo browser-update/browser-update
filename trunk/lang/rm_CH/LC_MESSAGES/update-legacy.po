@@ -78,7 +78,6 @@ msgid "Browser with many features"
 msgstr "Navigatur cun ina massa funcziuns"
 
 #: update.php:72
-#, fuzzy
 msgid "Google's browser with compact interface."
 msgstr "Il navigatur da Google cun ina interfatscha cumpacta"
 
@@ -144,7 +143,6 @@ msgid "Speed"
 msgstr "Spertadad"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr ""
 "Mintga nova generaziun da navigaturs visualisescha pli spert las paginas "

@@ -80,7 +80,6 @@ msgid "Google's browser with compact interface."
 msgstr "Браузер від Google з компактним інтерфейсом."
 
 #: update.php:72
-#, fuzzy
 msgid "Automatically always up to date!"
 msgstr " "
 
@@ -140,7 +139,6 @@ msgid "Speed"
 msgstr "Швидкість"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Кожне нове покоління браузерів швидше попереднього"
 

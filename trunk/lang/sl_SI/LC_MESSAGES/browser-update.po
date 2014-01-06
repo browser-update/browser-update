@@ -124,7 +124,6 @@ msgid "Start"
 msgstr "Začetek"
 
 #: header.php:61
-#, fuzzy
 msgid "Update Browser"
 msgstr "Update Browser"
 

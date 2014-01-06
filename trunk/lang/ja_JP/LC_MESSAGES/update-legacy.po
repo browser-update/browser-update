@@ -150,7 +150,6 @@ msgid "Speed"
 msgstr "速度"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr ""
 "新バージョンのブラウザーはそれぞれインターネット表示速度が早くなっています。"

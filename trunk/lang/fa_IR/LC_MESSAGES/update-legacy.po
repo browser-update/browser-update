@@ -20,7 +20,6 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: header.php:5
-#, fuzzy
 msgid "Update your Browser"
 msgstr "به روز رسانی مرورگر"
 
@@ -134,7 +133,6 @@ msgid "Speed"
 msgstr "سرعت"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "هر نسل جدید مرورگر سرعت را بهبود میبخشد"
 

@@ -173,7 +173,6 @@ msgstr ""
 "per la cumpatibilitad."
 
 #: update-browser.php:213
-#, fuzzy
 msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."

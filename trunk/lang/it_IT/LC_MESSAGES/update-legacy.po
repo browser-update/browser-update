@@ -19,7 +19,6 @@ msgstr ""
 "X-Generator: Poedit 1.6.3\n"
 
 #: header.php:5
-#, fuzzy
 msgid "Update your Browser"
 msgstr "Aggiorna il tuo Browser"
 
@@ -140,7 +139,6 @@ msgid "Speed"
 msgstr "Velocità"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Ogni generazione di browser aumenta la velocità di navigazione"
 
