@@ -158,7 +158,7 @@ T_textdomain('update');
 
 
 $newtrans=false;    
-if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr"||$ll=="cs")
+if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr"||$ll=="cs"||$ll=="nl")
     $newtrans=true;
 //if (!$newtrans)
 //    T_textdomain('browser-update');
