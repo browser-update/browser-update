@@ -552,7 +552,6 @@ msgid "Google's browser with compact interface."
 msgstr "Браузер від Google з компактним інтерфейсом."
 
 #: update.php:62
-#, fuzzy
 msgid "Automatically always up to date!"
 msgstr " "
 

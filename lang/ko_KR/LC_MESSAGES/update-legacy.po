@@ -134,7 +134,6 @@ msgid "Speed"
 msgstr "속도"
 
 #: update.php:119
-#, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "새로운 브라우저가 나올 때마다 속도가 빨라집니다"
 
