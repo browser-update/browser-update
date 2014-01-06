@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:23+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,68 +48,68 @@ msgstr "Blog"
 msgid "Contact"
 msgstr "Kapcsolat"
 
-#: update.php:52
+#: update.php:56
 msgid "Free webbrowsers"
 msgstr "Ingyenes internetes böngészők"
 
-#: update.php:53
+#: update.php:57
 msgid ""
 "These browsers are the newest versions of the most used free web browsers."
 msgstr ""
 "Ezek a leggyakrabban használt ingyenes internetes böngészők legújabb verziói."
 
-#: update.php:54
+#: update.php:58
 msgid "Just choose a browser to download from the original vendor's website:"
 msgstr ""
 "Válasszon egy böngészőt, és töltse le a hivatalos fejlesztő weboldaláról:"
 
-#: update.php:58
+#: update.php:62
 msgid "Widely-used open-source browser, highly extendable and customizable"
 msgstr "Széles körben használt nyílt-forráskódú és testreszabható böngésző"
 
-#: update.php:59 update.php:64 update.php:69 update.php:75 update.php:90
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
 msgid "Download"
 msgstr "Letöltés"
 
-#: update.php:63
+#: update.php:67
 msgid "Browser with many features"
 msgstr "Böngésző számos szolgáltatással"
 
-#: update.php:68
+#: update.php:72
 msgid "Google's browser with compact interface."
 msgstr "Google kereső egységes érintkező felülettel."
 
-#: update.php:68
+#: update.php:72
 msgid "Automatically always up to date!"
 msgstr "Automatikusan frissül, mindig naprakész!"
 
-#: update.php:74
+#: update.php:78
 msgid "Apple's fast browser"
 msgstr "Apple gyors böngésző"
 
-#: update.php:81
+#: update.php:85
 msgid "Not available for your System."
 msgstr "Nem elérhető az Ön Rendszere számára."
 
-#: update.php:82
+#: update.php:86
 msgid "Only for Windows Vista or 7."
 msgstr "Windows Vista or 7. esetén"
 
-#: update.php:83
+#: update.php:87
 msgid "Please choose another browser."
 msgstr "Kérjük, válasszon egy másik böngészőt."
 
-#: update.php:89
+#: update.php:93
 msgid "Windows built-in browser"
 msgstr "A Windows beépített böngészője"
 
-#: update.php:95
+#: update.php:99
 msgid "All browsers have the same basic features and easy interface."
 msgstr ""
 "Az összes böngésző ugyanazon fő funkciókkal és egyszerű érintkező felülettel "
 "rendelkezik."
 
-#: update.php:103
+#: update.php:107
 msgid ""
 "The browser you are using is out of date. It has known <b>security flaws and "
 "disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
@@ -119,15 +119,15 @@ msgstr ""
 "hátrányai</b> és <b>korlátozott szolgáltatás készletei</b> vannak. Ön nem "
 "fogja látni néhány oldal esetében azösszes funkciót."
 
-#: update.php:107
+#: update.php:111
 msgid "Switching to a newer browser could give you a lot of advantages:"
 msgstr "Frissebb böngészőre való átváltás számos előnyöket kínál:"
 
-#: update.php:110
+#: update.php:114
 msgid "Security"
 msgstr "Biztonság"
 
-#: update.php:111
+#: update.php:115
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -136,28 +136,28 @@ msgstr ""
 "programoktól, adathalászattól és egyéb veszélyektől. Egyúttal betömi "
 "jelenlegi böngészőjének biztonsági réseit!"
 
-#: update.php:114
+#: update.php:118
 msgid "Speed"
 msgstr "Gyorsaság"
 
-#: update.php:115
+#: update.php:119
 #, fuzzy
 msgid "Every new browser generation gets faster"
 msgstr "Minden újabb böngésző generáció növeli sebességét"
 
-#: update.php:118
+#: update.php:122
 msgid "Compatibility"
 msgstr "Kompatibilitás"
 
-#: update.php:119
+#: update.php:123
 msgid "Websites using new technology will be displayed more correctly"
 msgstr "Az új technológiákat használó weboldalak pontosabban jelennek meg"
 
-#: update.php:122
+#: update.php:126
 msgid "Comfort &amp; better experience"
 msgstr "Kényelem &amp; jobb élmény"
 
-#: update.php:123
+#: update.php:127
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
@@ -165,16 +165,16 @@ msgstr ""
 "Az új funkciók, bővítések és a jobb testreszabhatóság kényelmesebb "
 "internetes élményt nyújtanak"
 
-#: update.php:128
+#: update.php:132
 msgid "Updating is easy, takes just a few minutes and is totally free."
 msgstr ""
 "A frissítés egyszerű, mindössze néhány percig tart és teljesen ingyenes."
 
-#: update.php:133
+#: update.php:137
 msgid "Why this website?"
 msgstr "Miért ezt az oldalt?"
 
-#: update.php:135
+#: update.php:139
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -182,7 +182,7 @@ msgstr ""
 "Ez az oldal webdizájnerek, webmester és bloggerek kezdeményezése, akik "
 "szeretnék előrébb vinni a internet világát és segíteni látogatóit."
 
-#: update.php:138
+#: update.php:142
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -192,11 +192,11 @@ msgstr ""
 "<b>megakadályozzák azinternet fejlődését <b/> korlátozott funkcióik és "
 "számos <b>hibáik</b> miatt."
 
-#: update.php:142
+#: update.php:146
 msgid "\"I'm not able to update my browser\""
 msgstr "\"Nem tudom frissíteni a böngészőmet\""
 
-#: update.php:143
+#: update.php:147
 msgid ""
 "If you are on a computer, that is maintained by a admin and you cannot "
 "install a new browser, ask your admin about it."
@@ -204,7 +204,7 @@ msgstr ""
 "Ha Ön rendszergazda által karbantartott számítógépnél ül, és nem tud új "
 "böngészőt telepíteni, érdeklődjön adminjánál."
 
-#: update.php:144
+#: update.php:148
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "

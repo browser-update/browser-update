@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:25+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
@@ -19,15 +19,15 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.6.3\n"
 
-#: customize.php:8
+#: customize.php:11
 msgid "Customize and test"
 msgstr "Dostosuj i przetestuj"
 
-#: customize.php:11
+#: customize.php:14
 msgid "Test the script"
 msgstr "Przetestuj skrypt"
 
-#: customize.php:14
+#: customize.php:17
 msgid ""
 "If you open your website with <code>#test-bu</code> appended to the url, the "
 "bar will always show up."
@@ -35,11 +35,11 @@ msgstr ""
 "Jeśli otworzysz swoją stronę z wyrażeniem <code>#test-bu</code> dołączonym "
 "do adresu URL, pasek z komunikatem będzie się zawsze pojawiał."
 
-#: customize.php:15
+#: customize.php:18
 msgid "Example: <code>http://browser-update.org/#test-bu</code>."
 msgstr "Przykład: <code>http://browser-update.org/#test-bu</code>."
 
-#: customize.php:16
+#: customize.php:19
 msgid ""
 "Make sure the page is properly reloaded by opening the url in an new browser "
 "tab."
@@ -47,61 +47,61 @@ msgstr ""
 "Upewnij się, że strona jest prawidłowo ponownie załadowana otwierając ją w "
 "nowej karcie przeglądarki."
 
-#: customize.php:19
+#: customize.php:22
 msgid "Options"
 msgstr "Ustawienia"
 
-#: customize.php:22
+#: customize.php:25
 msgid "The following options can be passed to the script:"
 msgstr "W skrypcie można zdefiniować następujące ustawienia: "
 
-#: customize.php:27
+#: customize.php:30
 msgid "browser versions to notify"
 msgstr "wersje przeglądarek, dla których ma pojawiać się pasek z komunikatem"
 
-#: customize.php:28
+#: customize.php:31
 msgid "atfer how many hours should the message reappear"
 msgstr "po ilu godzinach komunikat powinien się ponownie wyświetlić"
 
-#: customize.php:29
+#: customize.php:32
 msgid "0 = show all the time"
 msgstr "0 = pokazuj cały czas"
 
-#: customize.php:30
+#: customize.php:33
 msgid "callback function after the bar has appeared"
 msgstr ""
 "wywołanie zwrotne (callback) uruchamiane po pojawieniu się paska z "
 "komunikatem"
 
-#: customize.php:32
+#: customize.php:35
 msgid "set a language for the message, e.g. \"en\""
 msgstr "określenie języka komunikatu, np. \"pl\""
 
-#: customize.php:33
+#: customize.php:36
 msgid "overrides the default detection"
 msgstr "nadpisuje domyślne ustawienia"
 
-#: customize.php:34
+#: customize.php:37
 msgid "true = always show the bar (for testing)"
 msgstr "true = zawsze pokazuje pasek z komunikatem (na potrzeby testowania)"
 
-#: customize.php:35
+#: customize.php:38
 msgid "custom notification html text"
 msgstr "określenie własnej treści komunikatu w języku HTML"
 
-#: customize.php:36
+#: customize.php:39
 msgid "open link in new window/tab"
 msgstr "otwórz link w nowym oknie lub w nowej karcie"
 
-#: customize.php:59
+#: customize.php:62
 msgid "Edit the CSS"
 msgstr "Edycja CSS"
 
-#: customize.php:62
+#: customize.php:65
 msgid "The following CSS rules are applied by the script. "
 msgstr "Skrypt definiuje niżej wymienione style CSS."
 
-#: customize.php:63
+#: customize.php:66
 msgid ""
 "You can overwrite them in your own CSS. To do so you need to add some more "
 "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"

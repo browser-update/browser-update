@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
 "PO-Revision-Date: 2014-01-05 15:24+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
@@ -45,33 +45,33 @@ msgstr "블로그"
 msgid "Contact"
 msgstr "정보"
 
-#: update-browser.php:64
+#: update-browser.php:65
 msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
 
-#: update-browser.php:85 update-browser.php:99
+#: update-browser.php:86 update-browser.php:100
 #, fuzzy
 msgid "Most recent version not available for your system."
 msgstr " "
 
-#: update-browser.php:85 update-browser.php:99
+#: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
 msgstr " "
 
-#: update-browser.php:113
+#: update-browser.php:114
 #, php-format
 msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
 
-#: update-browser.php:121 update-browser.php:140
+#: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
 msgstr ""
 
-#: update-browser.php:161
+#: update-browser.php:162
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
@@ -82,15 +82,15 @@ msgstr ""
 "점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브"
 "라우저를 어떻게 업데이트하나요?</a>"
 
-#: update-browser.php:172
+#: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
 msgstr ""
 
-#: update-browser.php:176
+#: update-browser.php:177
 msgid "Security"
 msgstr "보안"
 
-#: update-browser.php:177
+#: update-browser.php:178
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
@@ -98,38 +98,38 @@ msgstr ""
 "새로운 웹 브라우저는 사기, 바이러스, 악성 코드, 피싱 등 여러 위협에서 여러분"
 "을 지켜 줍니다. 현재 웹 브라우저의 보안 취약점도 수정되었습니다!"
 
-#: update-browser.php:180
+#: update-browser.php:181
 msgid "Speed"
 msgstr "속도"
 
-#: update-browser.php:181
+#: update-browser.php:182
 msgid "Every new browser generation improves speed"
 msgstr "새로운 브라우저가 나올 때마다 속도가 빨라집니다"
 
-#: update-browser.php:184
+#: update-browser.php:185
 msgid "Compatibility"
 msgstr "호환성"
 
-#: update-browser.php:185
+#: update-browser.php:186
 msgid "Websites using new technology will be displayed more correctly"
 msgstr "새로운 기술을 사용하는 웹 사이트가 더 정확하게 표시됩니다"
 
-#: update-browser.php:188
+#: update-browser.php:189
 msgid "Comfort &amp; better experience"
 msgstr "향상된 사용자 경험"
 
-#: update-browser.php:189
+#: update-browser.php:190
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
 "새로운 기능, 확장, 옵션이 추가되어 더 나은 웹 브라우징을 즐길 수 있습니다"
 
-#: update-browser.php:197
+#: update-browser.php:198
 msgid "Why this website?"
 msgstr "왜 이 사이트인가요?"
 
-#: update-browser.php:199
+#: update-browser.php:200
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
@@ -137,7 +137,7 @@ msgstr ""
 "이 웹 사이트는 웹 디자이너, 운영자, 블로거들이 힘을 모아서 방문자들을 돕기 위"
 "한 운동입니다."
 
-#: update-browser.php:202
+#: update-browser.php:203
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 "advancement of the web</b> because of their limited features and many "
@@ -146,15 +146,15 @@ msgstr ""
 "오래된 브라우저는 <b>보안 취약점</b>이며, 제한된 기능과 <b>버그</b> 때문에 "
 "<b>웹의 발전을 가로막고 있습니다</b>."
 
-#: update-browser.php:205
+#: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
 msgstr ""
 
-#: update-browser.php:210
+#: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
 msgstr "\"저는 브라우저를 업데이트할 수 없어요\" "
 
-#: update-browser.php:211
+#: update-browser.php:212
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
 "about installing a second browser for browsing and keep the old one for the "
@@ -163,7 +163,7 @@ msgstr ""
 "호환성 문제 때문에 브라우저를 바꿀 수 없으면 새로운 브라우저를 따로 설치하는 "
 "것도 고려해 보십시오."
 
-#: update-browser.php:212
+#: update-browser.php:213
 #, fuzzy
 msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "

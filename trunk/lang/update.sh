@@ -1,7 +1,15 @@
 #!/bin/bash
 
-for D in */LC_MESSAGES
-do
+if [ -z "$1" ]
+then
+    echo "Usage: $0 <lang>"
+    exit 1
+fi
+
+D="$1/LC_MESSAGES"
+
+#for D in */LC_MESSAGES
+#do
     echo $D
     # make sure all po files exist
     if [ -e $D/core.po ]
@@ -18,5 +26,5 @@ do
     msgmerge -U $D/site.po site.pot
     msgmerge -U $D/customize.po customize.pot
     msgmerge -U $D/update-legacy.po update-legacy.pot
-done
+#done
 
