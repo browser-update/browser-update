@@ -2,27 +2,27 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-06 14:34+0100\n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2011-03-05 12:25+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
-"Language: nl_NL\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
 
 #: contact.php:8
 msgid "Contact"
 msgstr "Contact"
 
 #: index.php:33
+#, fuzzy
 msgid ""
 "This service is an  opportunity to inform your visitors  unobtrusively to "
 "switch to a newer browser."
@@ -71,7 +71,7 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en "
+"Uw browser (%s) is <b>oud</b>. Hij heeft bekende <b>veiligheidsissues</b> en "
 "kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a"
 "%s>Lees meer over hoe uw browser te upgraden</a>"
 
@@ -105,7 +105,7 @@ msgid ""
 "negatively."
 msgstr ""
 "De bezoeker krijgt de balk slechts één keer te zien per bezoek aan de "
-"website. De balk is klein en beïnvloed de website verder niet."
+"website. De balk is klein en beïnvloedt de website verder niet."
 
 #: index.php:80
 msgid "Informative"
@@ -370,7 +370,7 @@ msgid ""
 "browser."
 msgstr ""
 "<strong class=\"number\">%d</strong> gebruiker heeft zijn browser al "
-"geupgrade."
+"geupgraded."
 
 #: stat.php:92
 msgid "From"
@@ -448,8 +448,8 @@ msgstr "Bedrag"
 
 #~ msgid ""
 #~ "You can overwrite them in your own CSS. To do so you need to add some "
-#~ "more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}"
-#~ "</code>"
+#~ "more specifity to the css-rules: e.g. <code>body .buorg {font-size:20px}</"
+#~ "code>"
 #~ msgstr ""
 #~ "Je kunt ze overschrijven met je eigen CSS door eigen specifiekere regels "
 #~ "toe te voegen, bijvoorbeeld <code>body .buorg {font-size:20px}</code>"
@@ -460,7 +460,7 @@ msgstr "Bedrag"
 #~ msgid "Inform your visitors about browser-updates"
 #~ msgstr "Informeer bezoekers over browser-updates"
 
-#~ msgid "An initiative by web designers to inform users about browser-updates"
+#~ msgid "An initiative by webdesigners to inform users about browser-updates"
 #~ msgstr ""
 #~ "Een initiatief van webdesigners om bezoekers te informeren over browser-"
 #~ "updates"
@@ -497,7 +497,7 @@ msgstr "Bedrag"
 
 #~ msgid ""
 #~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr "Deze browsers zijn de nieuwste en meest gebruikte gratis browser."
+#~ msgstr "Deze browsers zijn de nieuwste en meest gebruikte gratis browsers."
 
 #~ msgid ""
 #~ "Just choose a browser to download from the original vendor's website:"
@@ -533,11 +533,11 @@ msgstr "Bedrag"
 #~ msgstr "Alleen voor Windows Vista of 7."
 
 #~ msgid "Windows built-in browser"
-#~ msgstr "Windows’ eigen browser"
+#~ msgstr "Windows' eigen browser"
 
 #~ msgid "All browsers have the same basic features and easy interface."
 #~ msgstr ""
-#~ "Alle browsers hebben dezelfde basismogelijkheden en een makkelijke "
+#~ "Alle browsers hebben dezelfde basis mogelijkheden en een makkelijke "
 #~ "interface."
 
 #~ msgid ""
@@ -545,7 +545,7 @@ msgstr "Bedrag"
 #~ "and disadvantages</b> and a <b>limited feature set</b>. You will not see "
 #~ "all the features of some websites."
 #~ msgstr ""
-#~ "De browser die u gebruikt is achterhaald. Het heeft bekende "
+#~ "De browser die u gebruikt is achterhaald. Hij heeft bekende "
 #~ "<b>veiligheidslekken en nadelen</b> en <b>beperkte mogelijkheden</b>. "
 #~ "Sommige websites kunnen daardoor minder goed werken."
 

@@ -1,0 +1,545 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-01-06 16:28+0100\n"
+"Last-Translator: Petr Mrazek <mrazek.petr@gmail.com>\n"
+"Language-Team: Petr Mrazek <mrazek.petr@gmail.com>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr ""
+
+#: header.php:28
+#, fuzzy
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Vložte notifikační kód na Vaší webovou stránku a informujte uživatele o "
+"aktualizacích prohlížeče."
+
+#: header.php:30
+msgid "The Project"
+msgstr ""
+
+#: header.php:33
+msgid "Update Browser"
+msgstr ""
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Statistiky"
+
+#: header.php:35
+msgid "Blog"
+msgstr ""
+
+#: header.php:74
+msgid "Contact"
+msgstr "Kontakt"
+
+#: update.php:56
+msgid "Free webbrowsers"
+msgstr ""
+
+#: update.php:57
+msgid ""
+"These browsers are the newest versions of the most used free web browsers."
+msgstr ""
+
+#: update.php:58
+msgid "Just choose a browser to download from the original vendor's website:"
+msgstr ""
+
+#: update.php:62
+msgid "Widely-used open-source browser, highly extendable and customizable"
+msgstr ""
+
+#: update.php:63 update.php:68 update.php:73 update.php:79 update.php:94
+msgid "Download"
+msgstr ""
+
+#: update.php:67
+msgid "Browser with many features"
+msgstr ""
+
+#: update.php:72
+msgid "Google's browser with compact interface."
+msgstr ""
+
+#: update.php:72
+msgid "Automatically always up to date!"
+msgstr ""
+
+#: update.php:78
+msgid "Apple's fast browser"
+msgstr ""
+
+#: update.php:85
+msgid "Not available for your System."
+msgstr ""
+
+#: update.php:86
+msgid "Only for Windows Vista or 7."
+msgstr ""
+
+#: update.php:87
+msgid "Please choose another browser."
+msgstr ""
+
+#: update.php:93
+msgid "Windows built-in browser"
+msgstr ""
+
+#: update.php:99
+msgid "All browsers have the same basic features and easy interface."
+msgstr ""
+
+#: update.php:107
+#, fuzzy
+msgid ""
+"The browser you are using is out of date. It has known <b>security flaws and "
+"disadvantages</b> and a <b>limited feature set</b>. You will not see all the "
+"features of some websites."
+msgstr ""
+"Váš prohlížeč(%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnostní rizika</b> "
+"a možná <b>nedokáže zobrazit všechny prvky</b> této a dalších webových "
+"stránek. <a%s>Naučte se, jak aktualizovat svůj prohlížeč</a>"
+
+#: update.php:111
+msgid "Switching to a newer browser could give you a lot of advantages:"
+msgstr ""
+
+#: update.php:114
+msgid "Security"
+msgstr ""
+
+#: update.php:115
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+
+#: update.php:118
+msgid "Speed"
+msgstr ""
+
+#: update.php:119
+msgid "Every new browser generation gets faster"
+msgstr ""
+
+#: update.php:122
+msgid "Compatibility"
+msgstr ""
+
+#: update.php:123
+msgid "Websites using new technology will be displayed more correctly"
+msgstr ""
+
+#: update.php:126
+msgid "Comfort &amp; better experience"
+msgstr ""
+
+#: update.php:127
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+
+#: update.php:132
+msgid "Updating is easy, takes just a few minutes and is totally free."
+msgstr ""
+
+#: update.php:137
+msgid "Why this website?"
+msgstr ""
+
+#: update.php:139
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+
+#: update.php:142
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+
+#: update.php:146
+msgid "\"I'm not able to update my browser\""
+msgstr ""
+
+#: update.php:147
+msgid ""
+"If you are on a computer, that is maintained by a admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+
+#: update.php:148
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+
+#~ msgid "Customize and test"
+#~ msgstr "Přizpůsobit a otestovat"
+
+#~ msgid "Test the script"
+#~ msgstr "Otestovat skript"
+
+#~ msgid ""
+#~ "If you open your website with <code>#test-bu</code> appended to the url, "
+#~ "the bar will always show up."
+#~ msgstr ""
+#~ "Pokud otevřete vaše stránky s <code>#test-bu</code> v url, lišta se "
+#~ "zobrazí."
+
+#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+#~ msgstr "Příklad: <code>http://browser-update.org/#test-bu</code>."
+
+#~ msgid ""
+#~ "Make sure the page is properly reloaded by opening the url in an new "
+#~ "browser tab."
+#~ msgstr ""
+#~ "Ujistěte se, že se stránka řádně načetla po otevření URL v novém panelu "
+#~ "prohlížeče."
+
+#~ msgid "Options"
+#~ msgstr "Volby"
+
+#~ msgid "The following options can be passed to the script:"
+#~ msgstr "Následující možnosti mohou být předány do skriptu:"
+
+#~ msgid "browser versions to notify"
+#~ msgstr "verze prohlížečů k oznámení"
+
+#~ msgid "atfer how many hours should the message reappear"
+#~ msgstr "po kolika hodinách by se zpráva měla znovu zobrazit"
+
+#~ msgid "0 = show all the time"
+#~ msgstr "0 = zobrazit vždy"
+
+#~ msgid "callback function after the bar has appeared"
+#~ msgstr "callback funkce se objevila po liště"
+
+#~ msgid "set a language for the message, e.g. \"en\""
+#~ msgstr "nastavit jazky pro zprávu, např. \"cs\""
+
+#~ msgid "overrides the default detection"
+#~ msgstr "přepíše defualtní detekci"
+
+#~ msgid "true = always show the bar (for testing)"
+#~ msgstr "true = vždy zobrazit lištu (pro testování)"
+
+#~ msgid "custom notification html text"
+#~ msgstr "vlastní html text oznámení"
+
+#~ msgid "open link in new window/tab"
+#~ msgstr "otevřít link v novém okně/záložce"
+
+#~ msgid "Edit the CSS"
+#~ msgstr "Editovat CSS"
+
+#~ msgid "The following CSS rules are applied by the script. "
+#~ msgstr "Následující CSS pravidla se aplikují pomocí skriptu."
+
+#~ msgid ""
+#~ "You can overwrite them in your own CSS. To do so you need to add some "
+#~ "more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}"
+#~ "</code>"
+#~ msgstr ""
+#~ "Můžete je přepsat do svého vlastního CSS. Budete muset přidat nějaké "
+#~ "další CSS specifikace, např. <code>body .buorg {font-size:20px}</ code>"
+
+#~ msgid ""
+#~ "This service is an  opportunity to inform your visitors  unobtrusively to "
+#~ "switch to a newer browser."
+#~ msgstr ""
+#~ "Tato služba je příležitostí decentně informovat Vaše návštěvníky o "
+#~ "přechodu na novější prohlížeč."
+
+#~ msgid ""
+#~ "Many internet users are still using very old, out-dated browsers – most "
+#~ "of them for no actual reason. Switching to an newer browser is better for "
+#~ "them and for you as a webdesigner."
+#~ msgstr ""
+#~ "Mnozí uživatelé internetu stále používají velmi starý, neuaktualizovaný "
+#~ "prohlížeč - většina z nich bez skutečného důvodu. Přechod na novější "
+#~ "verzi prohlížeče je lepší pro ně i pro Vás jako webdesignera."
+
+#~ msgid "How it works"
+#~ msgstr "Jak to funguje"
+
+#~ msgid ""
+#~ "Include our small javascript <a href=\"%s\">notification</a> on your "
+#~ "website"
+#~ msgstr ""
+#~ "Vložte naší malou javascript <a href=\"%s\">notifikaci</a> na Vaše stránky"
+
+#~ msgid ""
+#~ "Visitors with out-dated browser will be informed by a little, "
+#~ "undisturbing bar, that his browser is not up-to-date and it is "
+#~ "recommended to update."
+#~ msgstr ""
+#~ "Návštěvníci se zastaralým prohlížečem budou informováni malou, "
+#~ "neobtěžující lištou, že jejich prohlížeč není aktuální a je doporučeno "
+#~ "jej aktualizovat."
+
+#~ msgid "Test the notification bar!"
+#~ msgstr "Otestujte notifikační lištu!"
+
+#~ msgid ""
+#~ "By clicking the bar, he will get to <a href=\"%s\">an info page with "
+#~ "arguments why to change/update and some browser choices</a>."
+#~ msgstr ""
+#~ "Kliknutím na lištu se dostanete na <a href=\"%s\">info stránku s "
+#~ "argumenty proč změnit/aktualizovat prohlížeč a s výběrem možných "
+#~ "prohlížečů</a>."
+
+#~ msgid ""
+#~ "If the visitor ignores the advice, it won't appear again for some time."
+#~ msgstr "Pokud návštěvník radu ignoruje, rada se skryje na nějakou dobu."
+
+#~ msgid "Advantages and features"
+#~ msgstr "Výhody a funkce"
+
+#~ msgid "Subtle"
+#~ msgstr "Jemně"
+
+#~ msgid ""
+#~ "The user will be notified only once, and won't be bothered any more. The "
+#~ "notification bar is very small and won't affect the browsing experience "
+#~ "negatively."
+#~ msgstr ""
+#~ "Uživatel bude upozorněn pouze jednou a nebude více obtěžován. Notifikační "
+#~ "lišta je velmi malá a nebude mít negativní vliv na prohlížení webu."
+
+#~ msgid "Informative"
+#~ msgstr "Informativní"
+
+#~ msgid ""
+#~ "Tell the users that they are using an out-dated browser and that your "
+#~ "website looks even better with a newer one."
+#~ msgstr ""
+#~ "Řekněte uživatelům, že používají zastaralý prohlížeč, a že Vaše webové "
+#~ "stránky vypadají ještě lépe v novějším."
+
+#~ msgid "Idealistic"
+#~ msgstr "Idealistický"
+
+#~ msgid "Help evolve the web!"
+#~ msgstr "Pomozte vývoji webu!"
+
+#~ msgid "Support the standards-based web!"
+#~ msgstr "Podpořte weby založené na standardech!"
+
+#~ msgid "Support Open Source software projects!"
+#~ msgstr "Podpořte softwarové Open Source projekty!"
+
+#~ msgid "Help your visitors!"
+#~ msgstr "Pomozte svým návštěvníkům!"
+
+#~ msgid "Help increase security awareness!"
+#~ msgstr "Pomozte zvýšit povědomí o bezpečnosti!"
+
+#~ msgid "Support your favorite webbrowser!"
+#~ msgstr "Podpořte svůj oblíbený prohlížeč!"
+
+#~ msgid "Low maintenance and up-to-date"
+#~ msgstr "Minimální údržba a aktualizace"
+
+#~ msgid ""
+#~ "If there come more browser versions which won't be supported by the "
+#~ "vendor in the future, exhibit security gaps or have been very old for a "
+#~ "long time we are going to add them to our list automatically."
+#~ msgstr ""
+#~ "Pokud přijde více verzí prohlížeče, které nebudou v budoucnu podporovány "
+#~ "výrobcem, budou obsahovat bezpečnostní chyby nebo budou velmi staré, "
+#~ "přidáme je do našeho seznamu automaticky."
+
+#~ msgid "Customizable"
+#~ msgstr "Přizpůsobitelné"
+
+#~ msgid ""
+#~ "You can customize the browsers and versions to notify.<br/> In future "
+#~ "releases you can also customize the text that should be shown, the "
+#~ "frequency of the bar to appear and many other things."
+#~ msgstr ""
+#~ "Můžete přizpůsobit prohlížeče a jeich verze, které chcete informovat. <br/"
+#~ "> V budoucích verzích můžete také upravit text, který se má zobrazit, "
+#~ "frekvence zobrazení panelu a mnoho dalších věcí."
+
+#~ msgid "Localized"
+#~ msgstr "Lokalizováno"
+
+#~ msgid "The message is automatically displayed in the user's language."
+#~ msgstr "Zpráva se automaticky zobrazí v jazyce uživatele."
+
+#~ msgid "Install notification on your site"
+#~ msgstr "Instalovat oznámení na Vaše stránky"
+
+#~ msgid ""
+#~ "Here you can get the code to include in your website. Just include it "
+#~ "anywhere in the source of your page."
+#~ msgstr ""
+#~ "Zde můžete získat kód pro své webové stránky. Vložte jej kamkoliv do "
+#~ "zdrojového kódu Vaší stránky."
+
+#~ msgid "Following browsers will be notified:"
+#~ msgstr "Následující prohlížeče budou informovány:"
+
+#~ msgid ""
+#~ "Google Chrome will automatically itself and is therefor always up to date"
+#~ msgstr ""
+#~ "Google Chrome se bude automaticky aktualizovat a bude tedy vždy aktuální."
+
+#~ msgid ""
+#~ "<b>Notify recommended set of browsers and adjust it automatically over "
+#~ "time:</b>If a browser is no longer supported by the vendor or has "
+#~ "security vulnerabilities, it will be added to the set."
+#~ msgstr ""
+#~ "<b>Informujte o doporučené sadé prohlížečů a automaticky ji upravujte v "
+#~ "průběhu času:</b>Pokud již prohlížeč není dále podporován výrobcem, nebo "
+#~ "je zranitelný, bude automaticky přidán do sady."
+
+#~ msgid "Your Code"
+#~ msgstr "Váš kód"
+
+#~ msgid ""
+#~ "You can <a href=\"%s\">customize</a> the style of the message, the text "
+#~ "and other options."
+#~ msgstr ""
+#~ "Můžete <a href=\"%s\">upravit</a> styl zprávy, text a další možnosti."
+
+#~ msgid "You may also use third-party plugins for: "
+#~ msgstr "Můžete také použít pluginy třetích stran pro:"
+
+#~ msgid "Why you should tell users to update"
+#~ msgstr "Proč byste měli říci uživatelům, aby aktualizovali"
+
+#~ msgid "Reduced development costs and time"
+#~ msgstr "Snížené náklady na vývoj a čas"
+
+#~ msgid ""
+#~ "Optimizing websites for old browsers is time consuming and thus expensive."
+#~ msgstr ""
+#~ "Optimalizace webových stránek pro staré prohlížeče je časově náročná, a "
+#~ "tudíž drahá."
+
+#~ msgid "Webdesign technologies and features"
+#~ msgstr "Webdesign technologie a funkce"
+
+#~ msgid ""
+#~ "There are all these great new web development standards and they are "
+#~ "supported by modern browsers... but you may not use them."
+#~ msgstr ""
+#~ "K dispozici jsou všechny tyto nové webové standardy, které podporují nové "
+#~ "moderní prohlížeče... ale Vy je možná nebudete moci použít."
+
+#~ msgid ""
+#~ "Newer browsers let you use more features and new technologies (CSS3, SVG, "
+#~ "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
+#~ "resulting in a better browsing experience for your users."
+#~ msgstr ""
+#~ "Novější prohlížeče Vám umožní používat více funkcí a nové technologie "
+#~ "(CSS3, SVG, HTML5, RSS, CSS generovaný obsah, flexibilní Layout) na svých "
+#~ "webových stránkách, což má za následek lepší procházení webu pro Vaše "
+#~ "uživatele."
+
+#~ msgid "Security and benefits for the user"
+#~ msgstr "Bezpečnost a výhody pro uživatele"
+
+#~ msgid ""
+#~ "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
+#~ "\">update page</a>. The security-threats of outdates browsers are listed "
+#~ "in this <a href=\"%s\">paper</a>."
+#~ msgstr ""
+#~ "Množství výhod: bezpečnost, rychlost, funkce, ... Koukněte na <a href=\"%s"
+#~ "\">stránku aktualizací</a>. Bezpečnostní hrozby zastaralých prohlížečů "
+#~ "jsou uvedeny v tomto <a href=\"%s\">dokumentu</a>."
+
+#~ msgid "The web has to evolve..."
+#~ msgstr "Web se má vyvíjet ..."
+
+#~ msgid "But that's only possible if the browsers also evolve."
+#~ msgstr "Ale to je možné pouze v případě, že se prohlížeče také vyvíjí."
+
+#~ msgid ""
+#~ "The strong market share of a 8 years old webbrowser (Internet Explorer 6) "
+#~ "is something new in the history of the web. If we take no action now, we "
+#~ "will have to code websites like in 2001 even if it is 2011."
+#~ msgstr ""
+#~ "Silný podíl na trhu 8 let starého prohlížeče (Internet Explorer 6) je "
+#~ "něco nového v historii webu. Neučiníme-li žádné kroky nyní, budeme muset "
+#~ "psát kód webových stránek stejný jako v roce 2001, i když je rok 2011."
+
+#~ msgid "Users don't oppose updating..."
+#~ msgstr "Uživatelé nejsou proti aktualizacím..."
+
+#~ msgid ""
+#~ "... they often just do not appreciate the need to update or the existence "
+#~ "of the \"webbrowser\" as a software at all."
+#~ msgstr ""
+#~ "... často prostě nevědí, že je třeba aktualizovat, nebo netuší o "
+#~ "existenci \"prohlížeče \" jako softwaru."
+
+#~ msgid "Help this project"
+#~ msgstr "Pomozte tomuto projektu"
+
+#~ msgid "Participate!"
+#~ msgstr "Zapojte se!"
+
+#~ msgid "Spread the word!"
+#~ msgstr "Šiřte slovo!"
+
+#~ msgid ""
+#~ "Tell others about this initiative! In your blog, on your webpage, ..."
+#~ msgstr ""
+#~ "Řekněte ostatním o této iniciativě! Na svém blogu, na své webové "
+#~ "stránce, ..."
+
+#~ msgid "Translate this page"
+#~ msgstr "Přeložte tuto stránku"
+
+#~ msgid "Translate this page into your language."
+#~ msgstr "Přeložte tuto stránku do vašeho jazyka."
+
+#~ msgid ""
+#~ "<strong class=\"number\">%d</strong> sites are using the Browser-Update."
+#~ "org script."
+#~ msgstr ""
+#~ "<strong class=\"number\">%d</strong> stránek používá skript Browser-"
+#~ "Update.org."
+
+#~ msgid "Browser updates"
+#~ msgstr "Aktualizace prohlížeče"
+
+#~ msgid ""
+#~ "<strong class=\"number\">%d</strong> visitors have already upgraded their "
+#~ "browser."
+#~ msgstr ""
+#~ "<strong class=\"number\">%d</strong> návštěvníků již upgradovalo svůj "
+#~ "prohlížeč."
+
+#~ msgid "From"
+#~ msgstr "Od"
+
+#~ msgid "To"
+#~ msgstr "Do"
+
+#~ msgid "Amount"
+#~ msgstr "Množství"
