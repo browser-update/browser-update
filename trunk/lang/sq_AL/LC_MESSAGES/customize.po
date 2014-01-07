@@ -1,7 +1,7 @@
 # Albanian translation of www.browser-update.org
 # Copyright (C) 2011
 # This file is distributed under the same license as the PACKAGE package.
-# GxE gereqi@gmail.com, 2011.
+# Genti Ereqi gereqi@gmail.com, 2013.
 #
 msgid ""
 msgstr ""
@@ -112,11 +112,11 @@ msgstr ""
 #~ msgstr "Browser-Update.org"
 
 #~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Informoni vizitorët tuaj rreth përditesimeve të shfletuesit"
+#~ msgstr "Informoni vizitorët tuaj rreth përditësimeve të shfletuesit"
 
 #~ msgid "An initiative by web designers to inform users about browser-updates"
 #~ msgstr ""
-#~ "Një iniciativë nga programatorët e faqeve web për të informuar "
+#~ "Një nismë nga programatorët e faqeve web për të informuar "
 #~ "përdoruesit mbi përditësimet e shfletuesve"
 
 #~ msgid "Start"
@@ -161,7 +161,7 @@ msgstr ""
 #~ "Include our small javascript <a href=\"%s\">notification</a> on your "
 #~ "website"
 #~ msgstr ""
-#~ "Integroni javascript tonë të vogël <a href=\"%s\">të njoftimit</a> në "
+#~ "Integroni javascript tonë të vogël <a href=\"%s\">njoftues</a> në "
 #~ "faqen tuaj web"
 
 #~ msgid ""
@@ -210,7 +210,7 @@ msgstr ""
 #~ "notification bar is very small and won't affect the browsing experience "
 #~ "negatively."
 #~ msgstr ""
-#~ "Përdoruesi do të njoftohet vetëm një herë, dhe nuk do të shqetësojë më. "
+#~ "Përdoruesi do të njoftohet vetëm një herë dhe nuk do të shqetësohet më. "
 #~ "Shiriti i njoftimit është shumë i vogël dhe nuk do të ndikojë negativisht "
 #~ "në eksperiencën e shfletimit."
 
@@ -296,7 +296,7 @@ msgstr ""
 #~ "Here you can get the code to include in your website. Just include it "
 #~ "anywhere in the source of your page."
 #~ msgstr ""
-#~ "Ketu mund të merrni kodin që duhet ta përfshini në faqen tuaj web. "
+#~ "Këtu mund të merrni kodin që duhet ta përfshini në faqen tuaj web. "
 #~ "Mjafton që ta përfshini atë kudo brenda faqes tuaj web."
 
 #~ msgid "You may also use third-party plugins for: "
@@ -334,7 +334,7 @@ msgstr ""
 #~ msgstr "Përse duhet ti thoni vizitorëve që të përditësojnë"
 
 #~ msgid "Reduced development costs and time"
-#~ msgstr "Kosto dhe kohe programimi më e ulët"
+#~ msgstr "Kosto dhe kohë programimi më e ulët"
 
 #~ msgid ""
 #~ "Optimizing websites for old browsers is time consuming and thus expensive."
@@ -349,7 +349,7 @@ msgstr ""
 #~ "There are all these great new web development standards and they are "
 #~ "supported by modern browsers... but you may not use them."
 #~ msgstr ""
-#~ "Ka kaq shume standarde të reja mbi programimin e faqeve web dhe ato "
+#~ "Ka kaq shumë standarde të reja mbi programimin e faqeve web dhe ato "
 #~ "përkrahen nga shfletuesit modernë... por ju nuk mund ti shfrytëzoni."
 
 #~ msgid ""
@@ -436,13 +436,13 @@ msgstr ""
 #~ "e Browser-Update.org"
 
 #~ msgid "Browser updates"
-#~ msgstr "Përditësime shfletuesi"
+#~ msgstr "Përditësime shfletuesish"
 
 #~ msgid ""
 #~ "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 #~ "browser."
 #~ msgstr ""
-#~ "<strong class=\"number\">%d</strong> vizitore kane perditesuar "
+#~ "<strong class=\"number\">%d</strong> vizitorë kanë përditësuar "
 #~ "shfletuesin e tyre."
 
 #~ msgid "From"
@@ -466,12 +466,12 @@ msgstr ""
 #~ msgid ""
 #~ "Just choose a browser to download from the original vendor's website:"
 #~ msgstr ""
-#~ "Vetem zgjidhni nje shfletues per ta shkarkuar nga faqja web e prodhuesit:"
+#~ "Vetëm zgjidhni një shfletues për ta shkarkuar nga faqja web e prodhuesit:"
 
 #~ msgid "Widely-used open-source browser, highly extendable and customizable"
 #~ msgstr ""
-#~ "Shfletues shume i perdorur dhe open-source, shume i zgjerueshem dhe i "
-#~ "personalizueshem"
+#~ "Shfletues shumë i përdorur dhe open-source, shumë i zgjerueshëm dhe i "
+#~ "personalizueshëm"
 
 #~ msgid "Download"
 #~ msgstr "Shkarko"
@@ -480,25 +480,25 @@ msgstr ""
 #~ msgstr "Shfletues me shumë karakteristika"
 
 #~ msgid "Google's browser with compact interface."
-#~ msgstr "Shfletuesi i Google me nje pamje shume kompakte."
+#~ msgstr "Shfletuesi i Google me një pamje shumë kompakte."
 
 #~ msgid "Automatically always up to date!"
 #~ msgstr "Automatikisht gjithnje i perditesuar!"
 
 #~ msgid "Not available for your System."
-#~ msgstr "Nuk eshte e mundur per Sistemin tuaj."
+#~ msgstr "Nuk është e mundur për Sistemin tuaj."
 
 #~ msgid "Please choose another browser."
-#~ msgstr "Ju lutem zgjidhni nje shfletues tjeter."
+#~ msgstr "Ju lutem zgjidhni një shfletues tjetër."
 
 #~ msgid "Apple's fast browser"
-#~ msgstr "Shfletuesi i shpejte i Apple"
+#~ msgstr "Shfletuesi i shpejtë i Apple"
 
 #~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Vetem per Windows Vista ose 7."
+#~ msgstr "Vetëm për Windows Vista ose 7."
 
 #~ msgid "Windows built-in browser"
-#~ msgstr "Shfletuesi i perfshire ne Windows"
+#~ msgstr "Shfletuesi i përfshirë në Windows"
 
 #~ msgid "All browsers have the same basic features and easy interface."
 #~ msgstr ""
@@ -530,10 +530,10 @@ msgstr ""
 #~ "sigurinë e shfletuesit tuaj aktual!"
 
 #~ msgid "Speed"
-#~ msgstr "Shpejtesia"
+#~ msgstr "Shpejtësia"
 
 #~ msgid "Every new browser generation improves speed"
-#~ msgstr "Çdo gjenerate e re shfletuesish permireson shpejtesine"
+#~ msgstr "Çdo brez i ri shfletuesish përmirëson shpejtësinë"
 
 #~ msgid "Compatibility"
 #~ msgstr "Pajtueshmëria"
@@ -543,7 +543,7 @@ msgstr ""
 #~ "Faqet web të cilat përdorin teknologji të reja do të shfaqen më saktë"
 
 #~ msgid "Comfort &amp; better experience"
-#~ msgstr "Komfort &amp; përvoje më të mirë"
+#~ msgstr "Komoditet dhe përvoje më e mirë"
 
 #~ msgid ""
 #~ "With new features, extensions and better customisability, you will have a "
@@ -554,17 +554,17 @@ msgstr ""
 
 #~ msgid "Updating is easy, takes just a few minutes and is totally free."
 #~ msgstr ""
-#~ "Perditesimi eshte i thjeshte, do ju marre vetem pak minuta dhe eshte "
-#~ "totalisht falas."
+#~ "Përditësimi është i thjeshtë, do marrë vetëm pak minuta nga koha juaj "
+#~ "dhe është totalisht falas."
 
 #~ msgid "Why this website?"
-#~ msgstr "Perse kete faqe web?"
+#~ msgstr "Përse këtë faqe web?"
 
 #~ msgid ""
 #~ "This website is an initiative by webdesigners, webmasters and bloggers "
 #~ "who want to bring the web further and help their visitors."
 #~ msgstr ""
-#~ "Kjo faqe web është një iniciativë nga programatorë faqesh web, "
+#~ "Kjo faqe web është një nismë nga programatorë faqesh web, "
 #~ "administratorë faqesh dhe blogger të cilët dëshirojnë që interneti të "
 #~ "evoluojë dhe të ndihmojnë vizitorët e tyre."
 
