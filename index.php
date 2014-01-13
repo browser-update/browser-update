@@ -15,7 +15,7 @@ if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])
         return $regs[1]<$version;
     }
     if(det("opera.*version $vs",16)||det("trident.$vs",7)||det("trident.*rv:$vs",10)||det("msie $vs",10)||det("firefox $vs",23)||det("version $vs.*safari",6)) {
-        header("Location: update.html");
+        header("Location: update-browser.html#2");
         exit;
     }
 }
@@ -121,21 +121,20 @@ include("header.php");
 		<span class="browser">
 			<label for="f-i">IE</label> 
 			<select id="f-i" onchange="code();">
-				<option value="5.5">&lt;= 5.5</option>
 				<option value="6">&lt;= 6</option>
-				<option value="7" selected="selected">&lt;= 7</option>
+				<option value="7" selected>&lt;= 7</option>
 				<option value="8">&lt;= 8</option>
 				<option value="9">&lt;= 9</option>
+                                <option value="10">&lt;= 10</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-f">Firefox</label>  
 			<select id="f-f" onchange="code();">
-				<option value="3.5">&lt;= 3.5</option>
 				<option value="3.6">&lt;= 3.6</option>
-				<option value="4" selected="selected">&lt;= 4</option>
+				<option value="4">&lt;= 4</option>
 				<option value="5">&lt;= 5</option>
-				<option value="10">&lt;= 10</option>
+				<option value="10" selected>&lt;= 10</option>
 				<option value="15">&lt;= 15</option>
 				<option value="20">&lt;= 20</option>
                                 <option value="25">&lt;= 25</option>
@@ -144,21 +143,19 @@ include("header.php");
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-				<option value="10.6" selected="selected">&lt;= 10.6</option>
+				<option value="10.6">&lt;= 10.6</option>
 				<option value="11">&lt;= 11</option>
-                                <option value="12">&lt;= 12</option>
+                                <option value="12" selected>&lt;= 12</option>
+                                <option value="15">&lt;= 15</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-s">Safari</label>  
 			<select id="f-s" onchange="code();">
-				<option value="1">&lt;= 1.0</option>
-				<option value="1.2">&lt;= 1.2</option>
-				<option value="2">&lt;= 2.0</option>
-				<option value="3">&lt;= 3.0</option>
-				<option value="3.2">&lt;= 3.2</option>
-				<option value="4" selected="selected">&lt;= 4</option>
-				<option value="5">&lt;= 5</option>
+				<option value="4">&lt;= 4</option>
+				<option value="5" selected>&lt;= 5</option>
+                                <option value="5.1">&lt;= 5.1</option>
+                                <option value="6">&lt;= 6</option>
 			</select>
 		</span>
 		<span class="browser">

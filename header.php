@@ -30,7 +30,7 @@
         <div><a href="./"><?php echo T_('The Project'); ?></a></div>
         <?php if (!isset($slimmed)) {?>
             
-            <div><a href="update.html"><?php echo T_('Update Browser'); ?></a></div>
+            <div><a href="update.html#3"><?php echo T_('Update Browser'); ?></a></div>
             <div><a href="stat.html"><?php echo T_('Statistics'); ?></a></div>
             <div><a href="blog.html"><?php echo T_('Blog'); ?></a></div>
         <?php }?>
@@ -61,7 +61,7 @@
                 <a href="/uk/<?php echo $curfile?>">Українська</a>
                 <a href="/rm/<?php echo $curfile?>">rumantsch</a>
                 <a href="/da/<?php echo $curfile?>">dansk</a>
-                <a href="/sq/<?php echo $curfile?>">Gjuha Shqipe</a>
+                <a href="/sq/<?php echo $curfile?>">shqipe</a>
                 <a href="/ca/<?php echo $curfile?>">català</a>
                 <a href="/sv/<?php echo $curfile?>">svenska</a>
                 <a href="/hu/<?php echo $curfile?>">magyar</a>

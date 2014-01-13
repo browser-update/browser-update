@@ -3,7 +3,7 @@
 require("config.php");
 
 
-$ip 	= crc32(ip2long($_SERVER['REMOTE_ADDR']));
+$ip 	= 0;//crc32(ip2long($_SERVER['REMOTE_ADDR']));
 $time	= time();
 /*
 $q=sprintf("SELECT 1 FROM updates WHERE ip=%d AND time>%d LIMIT 1",

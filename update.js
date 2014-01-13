@@ -1,28 +1,33 @@
 //browser-update.org notification script, <browser-update.org>
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
-var jsv=5;
+var jsv=9;
 var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:11,f:26,o:18,s:7,n:20};
+this.op.vsakt = {i:11,f:26,o:18,s:7,n:20,c:31};
 //this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
-this.op.vsdefault = {i:7,f:10,o:12,s:4.5,n:10};
+this.op.vsdefault = {i:7,f:10,o:12,s:4.5,n:12,c:10};
 this.op.vs =op.vs||this.op.vsdefault;
-for (b in this.op.vsakt)
+for (b in this.op.vsakt) {
     if (this.op.vs[b]>=this.op.vsakt[b])
-        this.op.vs[b]=this.op.vsakt[b]-0.05;
-
-if (!op.reminder || op.reminder<0.1 )
+        this.op.vs[b]=this.op.vsakt[b]-0.2;
+    if (!this.op.vs[b])
+        this.op.vs[b]=this.op.vsdefault[b];
+}
+if (op.reminder<0.1 || op.reminder===0)
     this.op.reminder=0;
+else if (!op.reminder)
+    this.op.reminder=24;
 else
     this.op.reminder=op.reminder||24;
 
 this.op.onshow = op.onshow||function(o){};
-this.op.url= op.url||"http://browser-update.org/update.html";
+this.op.onclick = op.onclick||function(o){};
+this.op.url= op.url||"http://browser-update.org/update-browser.html#"+jsv+"@"+(location.hostname||"x");
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
-this.op.newwindow=op.newwindow||false;
+this.op.newwindow=op.newwindow||true;
 
 this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
@@ -32,7 +37,7 @@ if (window.location.hash=="#test-bu")
 if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)==1)) { //test new script
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "http://browser-update.org/update7.js");
+     e.setAttribute("src", "//browser-update.org/update7.js");
      document.body.appendChild(e);
      return;
 }
@@ -41,7 +46,7 @@ if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)=
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|slurp|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
@@ -56,6 +61,10 @@ function getBrowser() {
     else return {n:"x",v:0,t:names[n]};
     
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) n="x";
+    
+    
+    if (n=="f" && v==24) //do not notify firefox ESR
+        n="x";
     
     if (n=="x") return {n:"x",v:0,t:names[n]};
     
@@ -76,27 +85,27 @@ function getBrowser() {
         else if (v>3) v=7;
         else v=9;
     }	
-    return {n:n,v:v,t:names[n]+" "+v}
+    return {n:n,v:v,t:names[n]+" "+v};
 }
 
 this.op.browser=getBrowser();
-if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.n=="c" || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
+if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
     return;
 
 
 if (!this.op.test) {
     var i = new Image();
 	//DISABLED TEMPORARYLY
-    //i.src="http://browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
+    //i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv;
 }
 if (this.op.reminder>0) {
     var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
     document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
 var ll=this.op.l.substr(0,2);
-var languages = "de,en";
-if (languages.indexOf(ll)!==false)
-    this.op.url="http://browser-update.org/"+ll+"/update.html#"+jsv;
+var languages = "xx,de,en,he,fr,cs,nl,sq,es";
+if (languages.indexOf(ll)===false)
+    this.op.url="http://browser-update.org/update.html#"+jsv+"@"+location.hostname;;
 var tar="";
 if (this.op.newwindow)
     tar=' target="_blank"';
@@ -170,6 +179,8 @@ else if (ll=="he")
 
 if (op.text)
     t = op.text;
+if (op["text_"+ll])
+    t = op["text_"+ll];
 
 this.op.text=busprintf(t,this.op.browser.t,' href="'+this.op.url+'"'+tar);
 
@@ -210,14 +221,16 @@ div.onclick=function(){
         window.open(me.op.url,"_blank");
     else
         window.location.href=me.op.url;
+    me.op.onclick(me.op);
     return false;
 };
 div.getElementsByTagName("a")[0].onclick = function(e) {
     var e = e || window.event;
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
+    me.op.onclick(me.op);
     return true;
-}
+};
 
 this.op.bodymt = document.body.style.marginTop;
 document.body.style.marginTop = (div.clientHeight)+"px";
@@ -228,9 +241,10 @@ document.getElementById("buorgclose").onclick = function(e) {
     me.op.div.style.display="none";
     document.body.style.marginTop = me.op.bodymt;
     return true;
-}
+};
 op.onshow(this.op);
 
-}
+};
+
 var $buoop = $buoop||{};
 $bu=$buo($buoop);
