@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:22+0100\n"
+"PO-Revision-Date: 2014-01-12 09:15+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: Genti Ereqi <gereqi@gmail.com>\n"
 "Language: sq_AL\n"
@@ -24,12 +24,12 @@ msgstr "Përditëso Shfletuesin"
 #: header.php:28
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
-"Një iniciativë nga programatorët e faqeve web për të informuar përdoruesit "
-"mbi përditësimet e shfletuesve"
+"Një nismë nga programatorët e faqeve web për të informuar përdoruesit mbi "
+"përditësimet e shfletuesve"
 
 #: header.php:30
 msgid "The Project"
-msgstr ""
+msgstr "Projekti"
 
 #: header.php:33
 msgid "Update Browser"
@@ -52,14 +52,16 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"Shfletuesi juaj është i vjetër. Ju lutem shkarkoni një nga këtashfletues të "
+"kohës:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
-msgstr "Nuk eshte e mundur per Sistemin tuaj."
+msgstr "Versioni më i ri nuk eshte i disponueshëm për sistemin tuaj."
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
-msgstr "Ju lutem zgjidhni nje shfletues tjeter."
+msgstr "Ju lutem zgjidhni një shfletues tjeter."
 
 #: update-browser.php:114
 #, php-format
@@ -67,10 +69,12 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Për më shumë <a href=\"%s\">siguri</a>,    <a href=\"%s\">shpejtësi</a>,    "
+"<a href=\"%s\">komoditet</a> dhe    <a href=\"%s\">argëtim</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
-msgstr ""
+msgstr "Reklamë"
 
 #: update-browser.php:162
 #, php-format
@@ -79,14 +83,14 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Shfletuesi juaj (%s) është <b>ca i vjetër</b>. Ai ka <b>të meta sigurie</b> "
-"të njohura dhe mundet të <b>mos i shfaqë të gjitha karakteristikat</b> e "
-"kësaj dhe shumë faqeve web të tjera. <a%s>Mësoni se si të përditësoni "
-"shfletuesin tuaj</a>"
+"Shfletuesi juaj (%s) është <b>i vjetër</b>. Ai ka <b>të meta sigurie</b> të "
+"njohura dhe mundet të <b>mos i shfaqë të gjitha karakteristikat</b> e kësaj "
+"dhe shumë faqeve të tjera web. <a%s>Mësoni se si të përditësoni shfletuesin "
+"tuaj</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Përse më nevojitet një shfletues i kohës?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -97,17 +101,17 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Shfletuesit e rinj ju mbrojnë më mirë nga mashtrimet, viruset, trojanet, "
-"phishing dhe kërcenime të tjera. Ato gjithashtu korigjojne të çarat në "
-"sigurinë e shfletuesit tuaj aktual!"
+"Shfletuesit e rinj ju mbrojnë më mirë nga mashtrimet, viruset, trojanët, "
+"faqet e peshkimit (phishing) dhe kërcenime të tjera. Ato gjithashtu "
+"korigjojne të problemet në sigurinë e shfletuesit tuaj aktual!"
 
 #: update-browser.php:181
 msgid "Speed"
-msgstr "Shpejtesia"
+msgstr "Shpejtësia"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Çdo gjenerate e re shfletuesish permireson shpejtesine"
+msgstr "Çdo brez i ri shfletuesish përmirëson shpejtësinë"
 
 #: update-browser.php:185
 msgid "Compatibility"
@@ -119,7 +123,7 @@ msgstr "Faqet web të cilat përdorin teknologji të reja do të shfaqen më sak
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
-msgstr "Komfort &amp; përvoje më të mirë"
+msgstr "Komoditet dhe përvoje më të mirë"
 
 #: update-browser.php:190
 msgid ""
@@ -131,16 +135,16 @@ msgstr ""
 
 #: update-browser.php:198
 msgid "Why this website?"
-msgstr "Perse kete faqe web?"
+msgstr "Përse këtë faqe web?"
 
 #: update-browser.php:200
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Kjo faqe web është një iniciativë nga programatorë faqesh web, "
-"administratorë faqesh dhe blogger të cilët dëshirojnë që interneti të "
-"evoluojë dhe të ndihmojnë vizitorët e tyre."
+"Kjo faqe web është një nismë nga programatorë faqesh web, administratorë "
+"faqesh dhe blogger të cilët dëshirojnë që interneti të evoluojë dhe të "
+"ndihmojnë vizitorët e tyre."
 
 #: update-browser.php:203
 msgid ""
@@ -148,13 +152,13 @@ msgid ""
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
-"Shfletuesit e vjetër janë një <b>kërcenim serioz për sigurinë</b> dhe po "
+"Shfletuesit e vjetër janë një <b>kërcënim serioz për sigurinë</b> dhe po "
 "<b>bllokojnë përparimin e webit</b> për shkak të karakteristikave të tyre të "
 "limituara dhe shumë <b>bug-eve</b>."
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
-msgstr ""
+msgstr "Më shumë informacion rreth projektit Browser-Update.org"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
@@ -253,7 +257,7 @@ msgstr ""
 #~ msgstr "Browser-Update.org"
 
 #~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Informoni vizitorët tuaj rreth përditesimeve të shfletuesit"
+#~ msgstr "Informoni vizitorët tuaj rreth përditësimeve të shfletuesit"
 
 #~ msgid "Start"
 #~ msgstr "Nisje"
@@ -320,16 +324,16 @@ msgstr ""
 #~ msgstr "Avantazhe dhe karakteristika"
 
 #~ msgid "Subtle"
-#~ msgstr "I mprehtë"
+#~ msgstr "I zgjuar"
 
 #~ msgid ""
 #~ "The user will be notified only once, and won't be bothered any more. The "
 #~ "notification bar is very small and won't affect the browsing experience "
 #~ "negatively."
 #~ msgstr ""
-#~ "Përdoruesi do të njoftohet vetëm një herë, dhe nuk do të shqetësojë më. "
+#~ "Përdoruesi do të njoftohet vetëm një herë, dhe nuk do të shqetësohet më. "
 #~ "Shiriti i njoftimit është shumë i vogël dhe nuk do të ndikojë negativisht "
-#~ "në eksperiencën e shfletimit."
+#~ "në përvojën e shfletimit."
 
 #~ msgid "Informative"
 #~ msgstr "Informues"
@@ -372,7 +376,7 @@ msgstr ""
 #~ msgstr ""
 #~ "Nëse dalin më shumë versione shfletuesish të cilët nuk do të përkrahen "
 #~ "nga faqja në të ardhmen, shfaqen pengesa sigurie ose janë shumë të vjetër "
-#~ "për një kohë të gjatëne do ti shtojmë ato në listën tonë automatikisht."
+#~ "për një kohë të gjatë ne do ti shtojmë ato në listën tonë automatikisht."
 
 #~ msgid "Customizable"
 #~ msgstr "I konfigurueshëm"
@@ -451,7 +455,7 @@ msgstr ""
 #~ msgstr "Përse duhet ti thoni vizitorëve që të përditësojnë"
 
 #~ msgid "Reduced development costs and time"
-#~ msgstr "Kosto dhe kohe programimi më e ulët"
+#~ msgstr "Kosto dhe kohë programimi më e ulët"
 
 #~ msgid ""
 #~ "Optimizing websites for old browsers is time consuming and thus expensive."
@@ -466,7 +470,7 @@ msgstr ""
 #~ "There are all these great new web development standards and they are "
 #~ "supported by modern browsers... but you may not use them."
 #~ msgstr ""
-#~ "Ka kaq shume standarde të reja mbi programimin e faqeve web dhe ato "
+#~ "Ka kaq shumë standarde të reja mbi programimin e faqeve web dhe ato "
 #~ "përkrahen nga shfletuesit modernë... por ju nuk mund ti shfrytëzoni."
 
 #~ msgid ""
@@ -502,10 +506,10 @@ msgstr ""
 #~ "is something new in the history of the web. If we take no action now, we "
 #~ "will have to code websites like in 2001 even if it is 2011."
 #~ msgstr ""
-#~ "Pjesa e madhe e tregut të zënë nga një shfletues 8 vjet i vjetër "
+#~ "Pjesa e madhe e tregut, e zënë nga një shfletues mbi 8 vjet i vjetër "
 #~ "(Internet Explorer 6) është diçka e re në historinë e internetit. Nëse ne "
 #~ "nuk ndërmarrim një veprim tani, neve do të na duhet të programojmë faqet "
-#~ "web si të ishim në 2001 edhe pse jemi në 2011."
+#~ "web si të ishim akoma në vitin 2001."
 
 #~ msgid "Users don't oppose updating..."
 #~ msgstr "Vizitorët nuk janë kundër përditësimit..."
@@ -578,17 +582,17 @@ msgstr ""
 #~ "These browsers are the newest versions of the most used free web browsers."
 #~ msgstr ""
 #~ "Këta shfletues janë versionet më të fundit të shfletuesve falas më të "
-#~ "perdorur në botë."
+#~ "përdorur në botë."
 
 #~ msgid ""
 #~ "Just choose a browser to download from the original vendor's website:"
 #~ msgstr ""
-#~ "Vetem zgjidhni nje shfletues per ta shkarkuar nga faqja web e prodhuesit:"
+#~ "Vetëm zgjidhni një shfletues për ta shkarkuar nga faqja web e prodhuesit:"
 
 #~ msgid "Widely-used open-source browser, highly extendable and customizable"
 #~ msgstr ""
-#~ "Shfletues shume i perdorur dhe open-source, shume i zgjerueshem dhe i "
-#~ "personalizueshem"
+#~ "Shfletues shumë i përdorur dhe open-source, shumë i zgjerueshëm dhe i "
+#~ "personalizueshëm"
 
 #~ msgid "Download"
 #~ msgstr "Shkarko"
@@ -597,19 +601,19 @@ msgstr ""
 #~ msgstr "Shfletues me shumë karakteristika"
 
 #~ msgid "Google's browser with compact interface."
-#~ msgstr "Shfletuesi i Google me nje pamje shume kompakte."
+#~ msgstr "Shfletuesi i Google me një pamje shumë kompakte."
 
 #~ msgid "Automatically always up to date!"
-#~ msgstr "Automatikisht gjithnje i perditesuar!"
+#~ msgstr "Automatikisht gjithnjë i përditësuar!"
 
 #~ msgid "Apple's fast browser"
-#~ msgstr "Shfletuesi i shpejte i Apple"
+#~ msgstr "Shfletuesi i shpejtë i Apple"
 
 #~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Vetem per Windows Vista ose 7."
+#~ msgstr "Vetëm për Windows Vista ose 7."
 
 #~ msgid "Windows built-in browser"
-#~ msgstr "Shfletuesi i perfshire ne Windows"
+#~ msgstr "Shfletuesi i përfshirë në Windows"
 
 #~ msgid "All browsers have the same basic features and easy interface."
 #~ msgstr ""
