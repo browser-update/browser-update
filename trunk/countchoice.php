@@ -2,11 +2,15 @@
 require("config.php");
 
 
-$ip 	= crc32(ip2long($_SERVER['REMOTE_ADDR']));
+$ip 	= 0;//crc32(ip2long($_SERVER['REMOTE_ADDR']));
 $time	= time();
 
 $ref	= parse_url(urldecode($_GET["ref"]));
 $host	= strtolower($ref['host']);
+$host = $_GET["ref"];
+
+preg_match('@^(https?://)?(.*)(/|$)@i', $_GET["ref"], $matches);
+$host = $matches[2];
 
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
 $lang = explode (",", $lang);

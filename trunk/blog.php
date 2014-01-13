@@ -53,7 +53,9 @@ The default outdated browser list is now:
     <a href="/de/update-browser.html">Deutsch</a>, 
     <a href="/es/update-browser.html">français</a>, 
     <a href="/nl/update-browser.html">Nederlands</a>, 
-    <a href="/cs/update-browser.html">Čeština</a> and
+    <a href="/cs/update-browser.html">Čeština</a>, 
+    <a href="/sq/update-browser.html">shqipe</a>, 
+    <a href="/he/update-browser.html">עברית</a> and
     <a href="/es/update-browser.html">español</a>. 
     For other languages we need <a href="http://code.google.com/p/browser-update/wiki/HowToTranslate">your help for translating a few sentences</a>.
 </p>

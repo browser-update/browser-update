@@ -602,6 +602,7 @@ body .advantages li {
 
 #lang2 {
 	position: relative;
+        z-index: 500;
 }
 #lang2 div {
     position: absolute;

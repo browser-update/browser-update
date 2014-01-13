@@ -27,22 +27,21 @@ T_textdomain('customize');
 
 <pre>
 var $buoop = {
-    vs: {i:6,f:2,o:9.63,s:2,n:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
+    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
     reminder: 24,                   // <?php echo T_('atfer how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
     onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
+    onclick: function(infos){},      // <?php echo T_('callback function if bar was clicked') . "\n"; ?>
 
     l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
                                     // <?php echo T_('overrides the default detection') . "\n"; ?>
     test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
     text: "",                       // <?php echo T_('custom notification html text') . "\n"; ?>
-    newwindow: false                // <?php echo T_('open link in new window/tab') . "\n"; ?>
-}
+    text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
+                                    // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
+    newwindow: true                 // <?php echo T_('open link in new window/tab') . "\n"; ?>
+};
 </pre>
-<!--
-    url: "http://browser-update.org/update.php",   // url to redirect to
-    pageurl: ""                          // url to show in the las    
--->
 <!--
 <p>
     The following options can be passed to the Javascript.
