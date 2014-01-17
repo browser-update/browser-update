@@ -61,7 +61,7 @@ function ignore(f) {
 }
 
 var ref=escape((document.referrer||"").substring(0,50)||window.location.hash.match(/.*@(.*)/i)[1]||"");
-var tv=window.location.hash.substr(1, 1);
+var tv=(window.location.hash||"").match(/#(\d*)/i)[1]||"";
 function countBrowser(to) {
         var f=getBrowser();
         if (ignore(f))

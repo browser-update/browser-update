@@ -1,14 +1,14 @@
 //browser-update.org notification script, <browser-update.org>
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
-var jsv=9;
+var jsv=10;
 var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
 this.op.vsakt = {i:11,f:26,o:18,s:7,n:20,c:31};
 //this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
-this.op.vsdefault = {i:7,f:10,o:12,s:4.5,n:12,c:10};
+this.op.vsdefault = {i:8,f:10,o:12,s:4.5,n:12,c:10};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt) {
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -105,7 +105,7 @@ if (this.op.reminder>0) {
 var ll=this.op.l.substr(0,2);
 var languages = "xx,de,en,he,fr,cs,nl,sq,es";
 if (languages.indexOf(ll)===false)
-    this.op.url="http://browser-update.org/update.html#"+jsv+"@"+location.hostname;;
+    this.op.url="http://browser-update.org/update.html#"+jsv+"@"+(location.hostname||"x");
 var tar="";
 if (this.op.newwindow)
     tar=' target="_blank"';
