@@ -42,10 +42,36 @@ include("header.php");
 			The more Websites Participate, the more the awareness to update will increase and old browser market share will drop faster!
 		</p>-->
 	</div>
+        <?php
+        #"it,sl,jp,nb,ch"
+        function countSites() {
+            require_once("config.php");
+            $r = mysql_query("SELECT COUNT(DISTINCT referer) FROM updates") or die(mysql_error(). $q);
+            list($num) = mysql_fetch_row($r);
+            return $num;
+        }
+        function countUpdates() {
+            require_once("config.php");
+            $r = mysql_query("SELECT COUNT(*) FROM updates") or die(mysql_error(). $q);
+            list($num) = mysql_fetch_row($r);
+            return $num;
+        }
 
+        ?>
+        <div class="numbs">
+        <p>
+            <?php
+            echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), number_format(cache_output('countSites'),0,".", ""));
+            ?>
+        </p>
+        <p>
+            <?php
+            echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), number_format(cache_output('countUpdates'),0,".", ""));
+            ?>
+        </p>
+        </div>
 		<h2><?php echo T_('How it works'); ?></h2>
 		<ol class="steps">
-			<!--<li><div>You should (of course) code the Website that it is accessible by old webbrowsers, but you can leave some features/gimmicks out.</div></li>-->
 			<li><div>
                 <?php echo sprintf(T_('Include our small javascript <a href="%s">notification</a> on your website'), '#install'); ?>
             </div></li>
@@ -116,6 +142,21 @@ include("header.php");
 		</p>
 		
 		<div class="generate">
+
+
+		<textarea id="f-code" rows="10" cols="80">
+&lt;script type="text/javascript">
+var $buoop = {};
+$buoop.ol = window.onload;
+window.onload=function(){
+     try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+     var e = document.createElement("script");
+     e.setAttribute("type", "text/javascript");
+     e.setAttribute("src", "//browser-update.org/update.js");
+     document.body.appendChild(e);
+}
+&lt;/script>
+		</textarea>
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
 		<span class="browser">
@@ -170,22 +211,7 @@ include("header.php");
 					'If a browser is no longer supported by the vendor or has security vulnerabilities, ' .
 					'it will be added to the set.'); ?>
 			</label>
-        </div>
-		<h3><?php echo T_('Your Code'); ?></h3>
-		<textarea id="f-code" rows="10" cols="80">
-&lt;script type="text/javascript">
-var $buoop = {};
-$buoop.ol = window.onload;
-window.onload=function(){
-     try {if ($buoop.ol) $buoop.ol();}catch (e) {}
-     var e = document.createElement("script");
-     e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "//browser-update.org/update.js");
-     document.body.appendChild(e);
-}
-&lt;/script>
-		</textarea>
-		
+        </div>		
 		</div>
 		<p>
 			<?php echo sprintf(
@@ -242,7 +268,6 @@ window.onload=function(){
 				<h3><?php echo T_('The web has to evolve...'); ?></h3>
 				<div>
 					<?php echo T_("But that's only possible if the browsers also evolve."); ?>
-					<?php echo T_('The strong market share of a 8 years old webbrowser (Internet Explorer 6) is something new in the history of the web. If we take no action now, we will have to code websites like in 2001 even if it is 2011.'); ?>
 				</div>
 			</li>
 			<li>

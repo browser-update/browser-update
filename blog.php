@@ -3,27 +3,33 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 ?>
-<!--
-<h2>IE8 moved to outdated browsers</h2>
-<small>June 17th, 2012</small>
+
+<h2>IE8 users will be notified</h2>
+<small>January 26th, 2014</small>
 <div class="entry">
 <p>
-The default outdated browser list is now:
-</p>
-<ul>
-    <li>Internet Explorer 8 or older (released Mar 2009)</li>
-    <li>Firefox 10  or older (released Jan 2012, not supported with security updates anymore, ≈< 0.5%)</li>
-    <li>Opera 12 or older (released Jun 2012    , not supported with security updates anymore, ≈< 0.1%)</li>
-    <li>Safari 5.0 or older (released Jun 2010, not supported with security updates anymore, ≈<1.5%)</li>
-</ul>
-<p>
-    Additional information on when we moved browsers to the outdated list and discussion
-    about it can be found on the wiki page 
-    <a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">"BrowsersToNotify"</a>.
-</p>
+Internet Explorer 8 was released almost five years ago in March 2009. We start now notifying users of this browser. 
+Furthermore we notify users of these outdated browsers, which are not supported with security updates anymore:
+Firefox 10 or older (released Jan 2012, ≈< 0.5%), Opera 12 or older (released Jun 2012, ≈< 0.1%), Safari 5.0 or older (released Jun 2010, ≈<1%), Chrome 10 or older.
+<a href="http://code.google.com/p/browser-update/wiki/BrowsersToNotify">BrowsersToNotify</a>.
 </div>
 <div class="com"><a href="blog-entry.html?n=ie8" onclick="SC('ie8'); return false;">Comments</a></div>
--->
+
+<h2>New Translations</h2>
+<small>January 26th, 2014</small>
+<div class="entry">
+<p>
+    The <a href="update-browser.html">update page</a> is now newly availabla in
+    <a href="/nb/update-browser.html">Norsk bokmål (norwegian)</a> and 
+    <a href="/zh/update-browser.html">中文 (simplified chinese)</a>. 
+    Also it was updated for
+    <a href="/pl/update-browser.html">polish</a>, 
+    <a href="/ru/update-browser.html">russian</a> and
+    <a href="/kr/update-browser.html">italian</a>. 
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=trans3" onclick="SC('trans3'); return false;">Comments</a></div>
+
 
 <h2>SSL Support finally arrived</h2>
 <small>January 4th, 2014</small>

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:25+0100\n"
+"PO-Revision-Date: 2014-01-26 12:19+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: Nícolas Iensen <nicolas@quavio.com.br>\n"
 "Language: pt_BR\n"
@@ -26,12 +26,12 @@ msgstr "Update"
 #: header.php:28
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
-"Uma iniciativa dos webdesigners para informar os usuários sobre as "
-"atualizações do navegador"
+"Uma iniciativa dos designers da web para informar os utilizadores sobre as "
+"atualizações dos browsers"
 
 #: header.php:30
 msgid "The Project"
-msgstr ""
+msgstr "Sobre o projeto"
 
 #: header.php:33
 msgid "Update Browser"
@@ -54,6 +54,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"O seu browser está desatualizado. Faça o download de um destes excelentes "
+"browsers grátis e atualizados:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -69,10 +71,12 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Para maior <a href=\"%s\">segurança</a>, <a href=\"%s\">velocidade</a>, <a "
+"href=\"%s\">conforto e <a href=\"%s\">divertimento</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
-msgstr ""
+msgstr "Publicidade"
 
 #: update-browser.php:162
 #, php-format
@@ -87,7 +91,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Porque preciso de um browser atualizado?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -98,8 +102,9 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Navegadores atualizados lhe protegem melhor contra fraudes, vírus, trojans, "
-"phishing, e outras ameaças!"
+"Um novo browser protege-o melhor contra esquemas, vírus, trojans, phishing e "
+"outras ameaças. Repara falhas de segurança que o seu browser atual possa ter "
+"e protege a sua privacidade!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -107,15 +112,19 @@ msgstr "Velocidade"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Todos os navegadores da nova geração melhoram a velocidade"
+msgstr ""
+"Qualquer nova geração de browsers melhora a velocidade e a facilidade de "
+"utilização."
 
 #: update-browser.php:185
 msgid "Compatibility"
-msgstr "Compatibilidade"
+msgstr "Tecnologia e compatibilidade"
 
 #: update-browser.php:186
 msgid "Websites using new technology will be displayed more correctly"
-msgstr "Sites que utilizam novas tecnologias serão melhor apresentados"
+msgstr ""
+"Disfrute de web sites elaborados utilizando as tecnologias mais modernas com "
+"melhor legibilidade, 3D e vídeo."
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
@@ -126,20 +135,21 @@ msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
-"Com novas funcionalidades, extensões e melhor personalização, você terá uma "
-"melhor experiência ao navegar na web"
+"Com novas características, extensões e melhor possibilidade de "
+"personalização terá uma experiência web mais confortável. Os novos browsers "
+"mantêm-se automaticamente atualizados e protegidos."
 
 #: update-browser.php:198
 msgid "Why this website?"
-msgstr "Por que este site?"
+msgstr "Porquê este web site?"
 
 #: update-browser.php:200
 msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Este site é uma iniciativa dos profissionais que trabalham com internet, que "
-"querem levar a web a evoluir e ajudar os seus usuários."
+"Este web site é uma iniciativa de designers da web, webmasters e bloguistas "
+"que desejam avançar com a web e ajudar os seus utilizadores."
 
 #: update-browser.php:203
 msgid ""
@@ -147,13 +157,12 @@ msgid ""
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
-"Navegadores desatualizados são uma <b>ameaça à segurança</b> e estão "
-"<b>dificultando o avanço da web</b> por causa das suas limitações e muitos "
-"<b>problemas de funcionamento</b>."
+"Os browsers desatualizados são uma ameaça à segurança e bloqueiam o avanço "
+"da web devido às suas caraterísticas limitadas e aos seus erros."
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
-msgstr ""
+msgstr "Mais informações sobre o projeto Browser-Update.org"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""

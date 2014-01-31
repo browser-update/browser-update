@@ -6,7 +6,7 @@ function code() {
     if (autoupdate.checked) {
         var notify = "";
         setomatdefault('i',2);
-        setomatdefault('f',2);
+        setomatdefault('f',3);
         setomatdefault('o',2);
         setomatdefault('s',1);
         vc.className = "disabled";
@@ -60,8 +60,8 @@ function ignore(f) {
             (f.n=="i" && f.v>=11);
 }
 
-var ref=escape((document.referrer||"").substring(0,50)||window.location.hash.match(/.*@(.*)/i)[1]||"");
-var tv=(window.location.hash||"").match(/#(\d*)/i)[1]||"";
+var ref=escape((document.referrer||"").substring(0,50)||((window.location.hash||"").match(/.*@(.*)/i)||["",""])[1]||"");
+var tv=((window.location.hash||"").match(/#(\d*)/i)||["",""])[1]||"";
 function countBrowser(to) {
         var f=getBrowser();
         if (ignore(f))

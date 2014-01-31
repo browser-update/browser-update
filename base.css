@@ -215,6 +215,19 @@ ul.browsers li>a{
 	right: 0;
 }
 
+.numbs {margin: -24px 0;}
+.numbs p {
+    width: 360px;
+         display: inline-block;
+         text-align: center;
+}
+.numbs strong {
+    display: block;
+    font-size: 35px;
+    color: #E97A00;
+    margin-bottom: -13px;
+}
+
 .generate {
 	margin: 1em 0;
 	padding: .2em .6em;
@@ -575,7 +588,7 @@ a.notavailable .bro {
     margin-left: 10px;
     float: right;
     text-align: right;
-    margin-top:15px;
+    margin-top:0;
     margin-bottom: 10px;
 }
 .ad {
@@ -592,10 +605,17 @@ a.notavailable .bro {
     background: #FFF4F4;
 }
 
+/*
 body .advantages li {
-    xxbackground: none !important;
-    xxpadding-left: 10px !important;
+    display: inline-block;
+    width: 231px;
+    padding-left: 13px;
+    vertical-align: top;
 }
+h3 {
+    text-transform: uppercase;
+}
+*/
 
 
 

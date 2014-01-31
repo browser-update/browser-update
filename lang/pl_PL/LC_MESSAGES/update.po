@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:25+0100\n"
+"PO-Revision-Date: 2014-01-26 12:28+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -54,6 +54,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"Twoja przeglądarka jest nieaktualna. Proszę pobrać jedną z podanych tu "
+"aktualnych, darmowych i znakomitych przeglądarek:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -69,6 +71,8 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Dla większego <a href=\"%s\">bezpieczeństwa</a>, <a href=\"%s\">szybkości</"
+"a>, <a href=\"%s\">komfortu</a> i <a href=\"%s\">zabawy</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -89,7 +93,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Dlaczego powinienem zaktualizować przeglądarkę?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -100,9 +104,9 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Nowsze przeglądarki lepiej chronią Cię przed takimi zagrożeniami, jak scam, "
-"wirusy, konie trojańskie, phishing i innymi. Nowsze przeglądarki naprawiają "
-"również luki bezpieczeństwa istniejące w Twojej obecnej przeglądarce!"
+"Nowa przeglądarka chroni lepiej przed oszustwami, wirusami, trojanami, "
+"phishingiem i innymi zagrożeniami. Pomaga usunąć luki w zabezpieczeniach "
+"bieżącej przeglądarki i chroni twoją prywatność!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -110,7 +114,7 @@ msgstr "Szybkość"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Każda nowa generacja przeglądarek przynosi poprawę szybkości."
+msgstr "Każda nowa generacja przeglądarek zwiększa szybkość i łatwość obsługi."
 
 #: update-browser.php:185
 msgid "Compatibility"

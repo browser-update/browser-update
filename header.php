@@ -69,6 +69,8 @@
                 <a href="/gl/<?php echo $curfile?>">galego</a>
                 <a href="/he/<?php echo $curfile?>">עברית</a>
                 <a href="/cs/<?php echo $curfile?>">Čeština</a>
+                <a href="/nb/<?php echo $curfile?>">Norsk bokmål</a>
+                <a href="/zh/<?php echo $curfile?>">中文</a>
                 <a href="contact.html">translate...</a>
                 </div>
             </div>
