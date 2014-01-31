@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-01-26 12:47+0100\n"
+"Last-Translator: Petar Vujic <pvujic@gmail.com>\n"
+"Language-Team: Petar Vujic <pvujic@gmail.com>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr ""
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr "网页设计师的创倡议：告知用户更新浏览器"
+
+#: header.php:30
+msgid "The Project"
+msgstr "关于项目"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr ""
+
+#: header.php:34
+msgid "Statistics"
+msgstr ""
+
+#: header.php:35
+msgid "Blog"
+msgstr ""
+
+#: header.php:74
+msgid "Contact"
+msgstr ""
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr "您的浏览器需要更新。请下载一款免费而优秀的最新版浏览器。"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr ""
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr ""
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr "带来更多安全、极速和乐趣。<!-- %s %s %s %s-->"
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "广告"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"您的浏览器(%s) 需要更新。该浏览器有诸多安全漏洞，无法显示本网站的所有功能。 "
+"<a%s>了解如何更新浏览器</a>"
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "为什么需要最新版浏览器。"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "安全"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"新浏览器能够更好避免欺诈、病毒、木马、钓鱼攻击和其它威胁。它能够修复当前浏览"
+"器中的安全漏洞，保护个人隐私。"
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "速度"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "每款新浏览器能够提升访问速度，增强使用便利性。"
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "技术与兼容性"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "使用拥有最新科技、更易读、三维和视频的网页，享受精彩内容。"
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "舒适性"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"借助全新功能、扩展和更强的兼容性，带来更舒适的网页体验。新浏览器能够自动更"
+"新，全方位保护。"
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "为什么是这个网站？"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"该网站是网页设计师、网管和博主的创新成果，他们希望提升网页内容并帮助访客。"
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"过时的浏览器具有安全威胁并因为限定性的功能与错误而阻挡网页的广告内容。点击这"
+"里了解更多有关Browser-Update.org项目的内容"
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "关于项目"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "<!-- -->"
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr "<!-- -->"
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr "<!-- -->"

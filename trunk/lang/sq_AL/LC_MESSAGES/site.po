@@ -1,7 +1,7 @@
 # Albanian translation of www.browser-update.org
-# Copyright (C) 2011
+# Copyright (C) 2014
 # This file is distributed under the same license as the PACKAGE package.
-# GxE gereqi@gmail.com, 2011.
+# Genti Ereqi - gereqi@gmail.com, 2014.
 #
 msgid ""
 msgstr ""
@@ -305,7 +305,7 @@ msgstr ""
 "Pjesa e madhe e tregut të zënë nga një shfletues 8 vjet i vjetër (Internet "
 "Explorer 6) është diçka e re në historinë e internetit. Nëse ne nuk "
 "ndërmarrim një veprim tani, neve do të na duhet të programojmë faqet web si "
-"të ishim në 2001 edhe pse jemi në 2011."
+"të ishim akoma në 2001."
 
 #: index.php:252
 msgid "Users don't oppose updating..."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 12:56+0100\n"
+"PO-Revision-Date: 2014-01-26 12:25+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -53,8 +53,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
-"Tu navegador no está actualizado. Por favor, descargue uno de estos "
-"navegadores actualizados, gratis y excelentes:"
+"Su navegador está desactualizado. Descargue uno de estos excelentes, "
+"gratuitos y actualizados navegadores:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -90,7 +90,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr "¿Por qué un navegador actualizado?"
+msgstr "¿Por qué necesito un navegador actualizado?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -101,9 +101,9 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Los navegadores recientes te protegen mejor contra fraudes, virus, troyanos, "
-"phishing y otras amenazas. ¡Además corrigen los huecos de seguridad de tu "
-"navegador actual!"
+"Un nuevo navegador le protege mejor contra estafas, virus, troyanos, fraudes "
+"por internet y otras amenazas. ¡Soluciona los problemas de seguridad que su "
+"navegador actual pueda tener y protege su privacidad!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -111,7 +111,9 @@ msgstr "Velocidad"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Cada nueva generación de navegadores mejora en velocidad"
+msgstr ""
+"Cada nueva generación de navegadores mejora la velocidad y la facilidad del "
+"uso."
 
 #: update-browser.php:185
 msgid "Compatibility"

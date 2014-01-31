@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:24+0100\n"
+"PO-Revision-Date: 2014-01-26 12:32+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
 "Language: ko_KR\n"
@@ -50,6 +50,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"브라우저가 최신 상태입니다. 이러한 업데이트, 무료 및 우수한 브라우저 중 하나"
+"를 다운로드하십시오:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -65,6 +67,8 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"이것은 더 많은 보안이, 더 빠른 속도, 더 편안하고  그리고 더 재미입니다. <!-- "
+"%s %s %s %s -->"
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -83,7 +87,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "이 업데이트 된 브라우저가 왜 필요합니까?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -94,8 +98,9 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"새로운 웹 브라우저는 사기, 바이러스, 악성 코드, 피싱 등 여러 위협에서 여러분"
-"을 지켜 줍니다. 현재 웹 브라우저의 보안 취약점도 수정되었습니다!"
+"새 브라우저는 사기, 바이러스, 트로이 목마, 피싱 및 기타 위협으로부터 더 나은 "
+"방법으로 당신을 보호합니다. 이것은 현재 브라우저에서 수리 보안 구멍을하고 사"
+"용자의 개인 정보를 보호합니다!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -103,7 +108,7 @@ msgstr "속도"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "새로운 브라우저가 나올 때마다 속도가 빨라집니다"
+msgstr "생성 된 모든 새로운 브라우저는 속도와 사용을 향상시킬 것입니다."
 
 #: update-browser.php:185
 msgid "Compatibility"

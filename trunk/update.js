@@ -1,14 +1,16 @@
 //browser-update.org notification script, <browser-update.org>
 //Copyright (c) 2007-2009, MIT Style License <browser-update.org/LICENSE.txt>
 var $buo = function(op,test) {
-var jsv=10;
+var jsv=11;
 var n = window.navigator,b;
 this.op=op||{};
 //options
 this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
-this.op.vsakt = {i:11,f:26,o:18,s:7,n:20,c:31};
+var ll=this.op.l.substr(0,2);
+this.op.vsakt = {i:11,f:26,o:18,s:7,n:20,c:32};
 //this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
-this.op.vsdefault = {i:8,f:10,o:12,s:4.5,n:12,c:10};
+this.op.vsdefault = {i:8,f:10,o:12,s:5.1,n:12,c:10};
+this.op.vsmin={i:6,f:3,o:9.64,s:4,n:10,c:5};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt) {
     if (this.op.vs[b]>=this.op.vsakt[b])
@@ -33,15 +35,15 @@ this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
 
-/*
-if (op.new7 || (this.op.l=="de" && !this.op.test && Math.round(Math.random()*3)==1)) { //test new script
+
+if (op.exp || (ll==="en" && !this.op.test && Math.round(Math.random()*100)<2)) { //test new script
      var e = document.createElement("script");
      e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "//browser-update.org/update7.js");
+     e.setAttribute("src", "//browser-update.org/updatex.js");
      document.body.appendChild(e);
      return;
 }
-*/
+
 
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
@@ -102,9 +104,9 @@ if (this.op.reminder>0) {
     var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
     document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
-var ll=this.op.l.substr(0,2);
-var languages = "xx,de,en,he,fr,cs,nl,sq,es";
-if (languages.indexOf(ll)===false)
+
+var languages = "xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl";
+if (languages.indexOf(ll)>0)
     this.op.url="http://browser-update.org/update.html#"+jsv+"@"+(location.hostname||"x");
 var tar="";
 if (this.op.newwindow)
@@ -176,6 +178,10 @@ else if (ll=="cs")
     t = 'Váš prohlížeč (%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnostní rizika</b> a možná <b>nedokáže zobrazit všechny prvky</b> této a dalších webových stránek. <a%s>Naučte se, jak aktualizovat svůj prohlížeč</a>';
 else if (ll=="he")
     t = 'הדפדפן שלך (%s) <b>אינו מעודכן</b>. יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
+else if (ll=="nb")
+    t='Nettleseren din (%s) er <b>utdatert</b>. Den har kjente <b>sikkerhetshull</b> og <b>kan ikke vise alle funksjonene</b> på denne og andre websider. <a%s>Lær hvordan du kan oppdatere din nettleser</a>';
+else if (ll=="zh")
+    t='您的浏览器(%s) 需要更新。该浏览器有诸多安全漏洞，无法显示本网站的所有功能。 <a%s>了解如何更新浏览器</a>';
 
 if (op.text)
     t = op.text;

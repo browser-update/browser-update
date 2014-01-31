@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-06 14:04+0100\n"
+"PO-Revision-Date: 2014-01-26 12:31+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: ru_RU <phg.azlk@gmail.com>\n"
 "Language: ru_RU\n"
@@ -55,6 +55,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"Ваш браузер устарел. Пожалуйста, скачайте один из предлагаемых актуальных, "
+"бесплатных и первоклассных браузеров: "
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -70,6 +72,8 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Для обеспечения наибольшей безопасности, скорости, комфорта и удовольствия."
+"<!-- %s %s %s %s-->"
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -88,7 +92,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Почему мне нужен новый браузер?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -99,8 +103,10 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Новые браузеры лучше защищены от мошенничества, вирусов, троянов, фишинга и "
-"других атак. В них исправлены уязвимости, которые есть в Вашем браузере!"
+"Современный браузер лучше защитит Вас от мошенничества, вирусов, \"троянских "
+"коней\", фишинговых атак и других угроз.  Он поможет закрыть дыры в Вашей "
+"безопасности, возможно имеющиеся в Вашем настоящем браузере, и обеспечит "
+"защиту Вашей личной жизни!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -108,7 +114,9 @@ msgstr "Скорость"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Каждое новое поколение браузеров работает быстрее"
+msgstr ""
+"Любое новое поколение браузеров способствует увеличению скорости и простоте "
+"в использовании."
 
 #: update-browser.php:185
 msgid "Compatibility"
@@ -154,7 +162,7 @@ msgstr ""
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
-msgstr ""
+msgstr " "
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
@@ -238,410 +246,3 @@ msgstr ""
 
 #~ msgid "The following CSS rules are applied by the script. "
 #~ msgstr "Скрипт применяет следующие правила CSS."
-
-#
-#~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some "
-#~ "more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}"
-#~ "</code>"
-#~ msgstr ""
-#~ "Вы можете изменить их в своем файле CSS. Для этого необходимо добавить "
-#~ "чуть больше специфики в правила CSS: например <code>body .buorg {font-"
-#~ "size:20px}</code>"
-
-#~ msgid "Browser-Update.org"
-#~ msgstr "Browser-Update.org"
-
-#~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Предложите Вашим посетителям обновить браузер"
-
-#~ msgid "Start"
-#~ msgstr "Начать"
-
-#~ msgid "Help"
-#~ msgstr "Помощь"
-
-#~ msgid "Supporters"
-#~ msgstr "поддержка"
-
-#~ msgid ""
-#~ "This service is an  opportunity to inform your visitors  unobtrusively to "
-#~ "switch to a newer browser."
-#~ msgstr ""
-#~ "Этот сервис предоставляет возможность уведомить Ваших посетителей о "
-#~ "необходимости обновить их браузер."
-
-#~ msgid ""
-#~ "Many internet users are still using very old, out-dated browsers – most "
-#~ "of them for no actual reason. Switching to an newer browser is better for "
-#~ "them and for you as a webdesigner."
-#~ msgstr ""
-#~ "Многие пользователи все ещё используют очень старые браузеры, чаще всего, "
-#~ "по незнанию. Переход на новый браузер принесет пользу и им, и Вам, как "
-#~ "веб-дизайнеру."
-
-#~ msgid "How it works"
-#~ msgstr "Как это работает"
-
-#~ msgid ""
-#~ "Include our small javascript <a href=\"%s\">notification</a> on your "
-#~ "website"
-#~ msgstr ""
-#~ "Включите небольшой javascript <a href=\"%s\">с уведомлением</a> на Вашем "
-#~ "веб-сайте"
-
-#~ msgid ""
-#~ "Visitors with out-dated browser will be informed by a little, "
-#~ "undisturbing bar, that his browser is not up-to-date and it is "
-#~ "recommended to update."
-#~ msgstr ""
-#~ "Посетители старых браузеров будут информированы с помощью маленькой, "
-#~ "ненавязчивой панели о том, что им рекомендуется обновить браузер."
-
-#~ msgid "Test the notification bar!"
-#~ msgstr "Проверить панель уведомления!"
-
-#~ msgid ""
-#~ "By clicking the bar, he will get to <a href=\"%s\">an info page with "
-#~ "arguments why to change/update and some browser choices</a>."
-#~ msgstr ""
-#~ "Нажав на панель, он попадёт на <a href=\"%s\">страницу с информацией о "
-#~ "том, почему стоит сменить/обновить браузер и сможет выбрать браузер</a>."
-
-#~ msgid ""
-#~ "If the visitor ignores the advice, it won't appear again for some time."
-#~ msgstr ""
-#~ "Если посетитель проигнорирует совет, он не будет показываться некоторое "
-#~ "время."
-
-#~ msgid "Advantages and features"
-#~ msgstr "Преимущества и возможности"
-
-#~ msgid "Subtle"
-#~ msgstr "Ненавязчивый"
-
-#~ msgid ""
-#~ "The user will be notified only once, and won't be bothered any more. The "
-#~ "notification bar is very small and won't affect the browsing experience "
-#~ "negatively."
-#~ msgstr ""
-#~ "Пользователь будет уведомлен только один раз. Панель уведомления занимает "
-#~ "очень мало места и не отразится негативно на внешнем виде страницы."
-
-#~ msgid "Informative"
-#~ msgstr "Информативный"
-
-#~ msgid ""
-#~ "Tell the users that they are using an out-dated browser and that your "
-#~ "website looks even better with a newer one."
-#~ msgstr ""
-#~ "Расскажите пользователям, что они используют устаревший браузер и что Ваш "
-#~ "веб-сайт выглядит намного привлекательнее в новом браузере."
-
-#~ msgid "Idealistic"
-#~ msgstr "Идеалистический"
-
-#~ msgid "Help evolve the web!"
-#~ msgstr "Помогите улучшить и развивать интернет!"
-
-#~ msgid "Support the standards-based web!"
-#~ msgstr "Поддерживайте сеть, основанную на стандартах!"
-
-#~ msgid "Support Open Source software projects!"
-#~ msgstr "Поддерживайте проекты с открытыми исходными кодами!"
-
-#~ msgid "Help your visitors!"
-#~ msgstr "Помогите Вашим посетителям!"
-
-#~ msgid "Help increase security awareness!"
-#~ msgstr "Помогите повысить осведомленность пользователей о безопасности!"
-
-#~ msgid "Support your favorite webbrowser!"
-#~ msgstr "Поддержите Ваш любимый браузер!"
-
-#~ msgid "Low maintenance and up-to-date"
-#~ msgstr "Легко обслуживаемый и актуальный"
-
-#~ msgid ""
-#~ "If there come more browser versions which won't be supported by the "
-#~ "vendor in the future, exhibit security gaps or have been very old for a "
-#~ "long time we are going to add them to our list automatically."
-#~ msgstr ""
-#~ "Если будут появляться браузеры, которые не будут поддерживаться "
-#~ "разработчиками, иметь уязвимости в безопасности или долгое время не будут "
-#~ "обновляться разработчиками, мы будем добавлять их в список автоматически."
-
-#~ msgid "Customizable"
-#~ msgstr "Изменяемое"
-
-#~ msgid ""
-#~ "You can customize the browsers and versions to notify.<br/> In future "
-#~ "releases you can also customize the text that should be shown, the "
-#~ "frequency of the bar to appear and many other things."
-#~ msgstr ""
-#~ "Вы можете изменить список браузеров и версий для оповещения.</br> В "
-#~ "будущих релизах Вы сможете также менять выводимый текст, частоту показа "
-#~ "панели и многие другие параметры."
-
-#~ msgid "Localized"
-#~ msgstr "Локализовано"
-
-#~ msgid "The message is automatically displayed in the user's language."
-#~ msgstr "Сообщение автоматически выводится на языке пользователя."
-
-#~ msgid "<span class=\"workingonit\">work in progress</span>"
-#~ msgstr "<span class=\"workingonit\">в стадии разработки</span>"
-
-#~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors "
-#~ "are using and how much users got proselyted: How many users updated or "
-#~ "changed their browser through your advice."
-#~ msgstr ""
-#~ "Вы получите <a href=\"%s\">статистику</a> о том, какие браузеры "
-#~ "используют Ваши посетители и сколько пользователей поменяли свои "
-#~ "браузеры, следуя Вашему совету."
-
-#~ msgid "Install notification on your site"
-#~ msgstr "Установите предупреждение на Вашем сайте"
-
-#~ msgid ""
-#~ "Here you can get the code to include in your website. Just include it "
-#~ "anywhere in the source of your page."
-#~ msgstr ""
-#~ "Здесь Вы можете получить код для Вашего веб-сайта. Просто поместите его в "
-#~ "любом месте исходного текста на Вашей странице."
-
-#~ msgid "You may also use third-party plugins for: "
-#~ msgstr "Вы можете также использовать плагины третих сторон для:"
-
-#~ msgid ""
-#~ "You can <a href=\"%s\">customize</a> the style of the message, the text "
-#~ "and other options."
-#~ msgstr ""
-#~ "Вы можете <a href=\"%s\">изменить</a> стиль сообщения, текста и других "
-#~ "параметров."
-
-#~ msgid "Following browsers will be notified:"
-#~ msgstr "Следующие браузеры включаются в список:"
-
-#~ msgid ""
-#~ "Google Chrome will automatically itself and is therefor always up to date"
-#~ msgstr ""
-#~ "Google Chrome обновляется автоматически, поэтому он всегда последней "
-#~ "версии."
-
-#~ msgid ""
-#~ "<b>Notify recommended set of browsers and adjust it automatically over "
-#~ "time:</b>If a browser is no longer supported by the vendor or has "
-#~ "security vulnerabilities, it will be added to the set."
-#~ msgstr ""
-#~ "<b>Выводить уведомление об устаревших браузерах и автоматически обновлять "
-#~ "его:</b> если браузер больше не поддерживается разработчиками или имеет "
-#~ "проблемы с безопасностью, он будет добавлен в список."
-
-#~ msgid "Your Code"
-#~ msgstr "Ваш код"
-
-#~ msgid "Why you should tell users to update"
-#~ msgstr "Почему Вам стоит предложить пользователям обновить их браузер"
-
-#~ msgid "Reduced development costs and time"
-#~ msgstr "Сокращение времени и снижение цен на развитие"
-
-#~ msgid ""
-#~ "Optimizing websites for old browsers is time consuming and thus expensive."
-#~ msgstr ""
-#~ "Оптимизация веб-сайтов под старые браузеры - это большие временные "
-#~ "затраты, поэтому является дорогостоящим занятием."
-
-#~ msgid "Webdesign technologies and features"
-#~ msgstr "Технологии веб-дизайна и возможности"
-
-#~ msgid ""
-#~ "There are all these great new web development standards and they are "
-#~ "supported by modern browsers... but you may not use them."
-#~ msgstr ""
-#~ "Появилось много новых стандартов в развитии сети и все они поддерживаются "
-#~ "современными  браузерами... но Вы не можете пользоваться их возможностями."
-
-#~ msgid ""
-#~ "Newer browsers let you use more features and new technologies (CSS3, SVG, "
-#~ "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-#~ "resulting in a better browsing experience for your users."
-#~ msgstr ""
-#~ "Новые браузеры позволяют Вам использовать новые возможности и технологии  "
-#~ "на Вашем сайте (CSS3, SVG, HTML5, RSS, контент, сгенерированный с помощью "
-#~ "CSS, гибкие настройки внешнего вида), обогащают внешний вид и читаемость, "
-#~ "тем самым давая пользователям лучший современный опыт."
-
-#~ msgid "Security and benefits for the user"
-#~ msgstr "Безопасность и преимущества для пользователя"
-
-#~ msgid ""
-#~ "Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-#~ "\">update page</a>. The security-threats of outdates browsers are listed "
-#~ "in this <a href=\"%s\">paper</a>."
-#~ msgstr ""
-#~ "Множественные улучшения: безопасность, скорость, новые возможности,  ... "
-#~ "Взгляните на <a href=\"%s\">страницу обновления</a>. Проблемы и "
-#~ "уязвимости устаревших браузеров описываются в этом <a href=\"%s"
-#~ "\">документе</a>."
-
-#~ msgid "The web has to evolve..."
-#~ msgstr "Сеть должна развиваться..."
-
-#~ msgid "But that's only possible if the browsers also evolve."
-#~ msgstr "Но это возможно только если браузеры тоже будут развиваться."
-
-#~ msgid ""
-#~ "The strong market share of a 8 years old webbrowser (Internet Explorer 6) "
-#~ "is something new in the history of the web. If we take no action now, we "
-#~ "will have to code websites like in 2001 even if it is 2011."
-#~ msgstr ""
-#~ "Большая доля рынка браузера, которому уже 8 лет, это что-то новое в "
-#~ "истории сети. Если мы сейчас не будем предпринимать меры, нам придётся "
-#~ "кодировать страницы как в 2001 году, хотя сейчас уже на носу 2011!"
-
-#~ msgid "Users don't oppose updating..."
-#~ msgstr "Пользователи не против обновления..."
-
-#~ msgid ""
-#~ "... they often just do not appreciate the need to update or the existence "
-#~ "of the \"webbrowser\" as a software at all."
-#~ msgstr ""
-#~ "... они часто не понимают необходимость обновления \"веб-браузера\" и "
-#~ "вообще его существование как отдельного программного пакета."
-
-#~ msgid "Help this project"
-#~ msgstr "Помогите этому проекту"
-
-#~ msgid "Participate!"
-#~ msgstr "Участвуйте!"
-
-#~ msgid ""
-#~ "Include the notification code in your page to inform users about browser "
-#~ "updates."
-#~ msgstr ""
-#~ "Включите код на Вашей странице или сайте, чтобы информировать "
-#~ "пользователей о необходимости обновления браузера."
-
-#~ msgid "Spread the word!"
-#~ msgstr "Расскажите другим!"
-
-#~ msgid ""
-#~ "Tell others about this initiative! In your blog, on your webpage, ..."
-#~ msgstr ""
-#~ "Расскажите другим пользователям об этой инициативе! На своём блоге, на "
-#~ "своей странице, ..."
-
-#~ msgid "Translate this page"
-#~ msgstr "Переведите эту страницу"
-
-#~ msgid "Translate this page into your language."
-#~ msgstr "Переведите эту страницу на Ваш язык."
-
-#~ msgid ""
-#~ "<strong class=\"number\">%d</strong> sites are using the Browser-Update."
-#~ "org script."
-#~ msgstr ""
-#~ "<strong class=\"number\">%d</strong> сайтов используют скрипт сайта "
-#~ "Browser-Update.org."
-
-#~ msgid "Browser updates"
-#~ msgstr "Обновления браузера"
-
-#~ msgid ""
-#~ "<strong class=\"number\">%d</strong> visitors have already upgraded their "
-#~ "browser."
-#~ msgstr ""
-#~ "<strong class=\"number\">%d</strong> посетителей уже обновили свой "
-#~ "браузер."
-
-#~ msgid "From"
-#~ msgstr "Из"
-
-#~ msgid "To"
-#~ msgstr "К"
-
-#~ msgid "Amount"
-#~ msgstr "Количество"
-
-#~ msgid "Free webbrowsers"
-#~ msgstr "Бесплатные веб-браузеры"
-
-#~ msgid ""
-#~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr "Эти самые последние версии наиболее используемых веб-браузеров."
-
-#~ msgid ""
-#~ "Just choose a browser to download from the original vendor's website:"
-#~ msgstr "Выберите браузер для установки с сайта производителя:"
-
-#~ msgid "Widely-used open-source browser, highly extendable and customizable"
-#~ msgstr ""
-#~ "Широко используемый браузер с открытыми исходными кодами, легко "
-#~ "расширяемый и настраиваемый"
-
-#~ msgid "Download"
-#~ msgstr "Загрузить"
-
-#~ msgid "Browser with many features"
-#~ msgstr "Браузер со многими возможностями"
-
-#~ msgid "Google's browser with compact interface."
-#~ msgstr "Браузер Google с компактным интерфесом."
-
-#~ msgid "Automatically always up to date!"
-#~ msgstr "обновить Автоматически всегда в курсе событий!"
-
-#~ msgid "Apple's fast browser"
-#~ msgstr "Быстрый браузер от Apple"
-
-#~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Только для Windows Vista или 7."
-
-#~ msgid "Windows built-in browser"
-#~ msgstr "Встроенный браузер windows"
-
-#~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr ""
-#~ "Все браузеры имеют сходный набор базовых возможностей и удобный интерфейс."
-
-#~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws "
-#~ "and disadvantages</b> and a <b>limited feature set</b>. You will not see "
-#~ "all the features of some websites."
-#~ msgstr ""
-#~ "Браузер, которым Вы пользуетесь устарел! У него есть проблемы с "
-#~ "<b>безопасностью</b> и у него <b>ограниченные возможности</b>. Вам будут "
-#~ "не доступны некоторые детали на многих сайтах."
-
-#~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "Переход на новый браузер даст Вам много преимуществ:"
-
-#~ msgid "Updating is easy, takes just a few minutes and is totally free."
-#~ msgstr "Обновление абсолютно бесплатно и занимает всего пару минут."
-
-#~ msgid "database connection problem"
-#~ msgstr "Не удалось соединиться с базой данных"
-
-#~ msgid "database not found"
-#~ msgstr "База данных не найдена"
-
-#~ msgid "translate..."
-#~ msgstr "перевести..."
-
-#~ msgid "Recent browser updates"
-#~ msgstr "Последние обновления браузера"
-
-#~ msgid "Site"
-#~ msgstr "Сайт"
-
-#~ msgid "New browser"
-#~ msgstr "Новый браузер"
-
-#~ msgid "Language"
-#~ msgstr "Язык"
-
-#~ msgid "Date"
-#~ msgstr "Дата"

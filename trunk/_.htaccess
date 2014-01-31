@@ -13,29 +13,24 @@ RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,
 
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
-RewriteEngine On
 
-#RewriteCond %{HTTP_HOST} !^browser-update\.org$
-#RewriteRule ^/?(.*)$ http://browser-update.org/$1 [L,QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^/?([a-zA-Z0-9_-]+)\.html$ $1.php [L,QSA]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,QSA]
-
-RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
 
 AddCharset utf-8 .js
 
-#4 Weeks cache for the files
+#4 days cache for the files
 
 <FilesMatch "update.js">
-  Header set Cache-Control "public, max-age=2419200"
-  ExpiresDefault "access plus 4 weeks"
+  Header set Cache-Control "public, max-age=345600"
+  ExpiresDefault "access plus 4 days"
+  SetOutputFilter DEFLATE
+</FilesMatch>
+
+#no cache
+<FilesMatch "updatex.js">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
   SetOutputFilter DEFLATE
 </FilesMatch>
 

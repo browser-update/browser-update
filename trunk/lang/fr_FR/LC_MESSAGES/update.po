@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-12 09:03+0100\n"
+"PO-Revision-Date: 2014-01-26 12:24+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_FR\n"
@@ -52,8 +52,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
-"Votre navigateur est périmé. Choisissez un navigateur à télécharger depuis "
-"le site Internet des développeurs:"
+"Votre navigateur n'est pas à jour. Veuillez télécharger la version "
+"actualisée de l'un de ces excellents navigateurs gratuits :"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -68,7 +68,9 @@ msgstr "Veuillez choisir un autre navigateur."
 msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr "<!--%s%s%s%s  PLEASE TRANSLATE!!!!!!!!!!-->"
+msgstr ""
+"Pour plus de <a href=\"%s\">sécurité</a>, <a href=\"%s\">rapidité</a>, <a "
+"href=\"%s\">confort</a> et <a href=\"%s\">plaisir</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -88,28 +90,31 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr " <!--PLEASE TRANSLATE!!!!!!!!!!-->"
+msgstr "Pourquoi ai-je besoin d'un navigateur à jour ?"
 
 #: update-browser.php:177
 msgid "Security"
-msgstr "Sécurité"
+msgstr "Pour la sécurité"
 
 #: update-browser.php:178
 msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Les navigateurs récents vous protègentmieux contre les virus, les chevaux de "
-"troie, le pishing, le scam, et autres menaces. Ils corrigent aussi des trous "
-"de sécurité de votre navigateur actuel!"
+"Tout navigateur actualisé vous protègera encore plus face aux arnaques, "
+"virus, chevaux de Troie, à l'hameçonnage et à toute autre menace. Il "
+"comblera toute faille de sécurité éventuelle du navigateur utilisé jusqu'ici "
+"et protègera votre vie privée !"
 
 #: update-browser.php:181
 msgid "Speed"
-msgstr "Rapidité"
+msgstr "Pour la rapidité"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr "Chaque nouvelle génération de navigateur augmente la rapidité"
+msgstr ""
+"La rapidité et le confort d'utilisation augmentent avec chaque nouvelle "
+"génération de navigateurs."
 
 #: update-browser.php:185
 msgid "Compatibility"

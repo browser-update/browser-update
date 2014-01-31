@@ -28,7 +28,9 @@ $lang_rewrite = array(
 	"fa"=>"fa_IR",
 	"gl"=>"gl_ES",
         "he"=>"he_IL",
-        "cs"=>"cs_CZ"
+        "cs"=>"cs_CZ",
+        "nb"=>"nb_NO",
+        "zh"=>"zh_CN"
 );
 
 /**
@@ -157,9 +159,9 @@ T_textdomain('update');
 
 
 
-$newtrans=false;    
-if ($ll=="en"||$ll=="de"||$ll=="es"||$ll=="fr"||$ll=="cs"||$ll=="nl"||$ll=="sq"||$ll=="he")
-    $newtrans=true;
+$newtrans=true;    
+if (strpos("xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl",$ll)>0)
+    $newtrans=false;
 //if (!$newtrans)
 //    T_textdomain('browser-update');
 
