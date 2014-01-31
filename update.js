@@ -194,7 +194,7 @@ var div = document.createElement("div");
 this.op.div = div;
 div.id="buorg";
 div.className="buorg";
-div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose">X</div></div>';
+div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose">&times;</div></div>';
 
 var sheet = document.createElement("style");
 //sheet.setAttribute("type", "text/css");
@@ -206,7 +206,7 @@ text-align:left; cursor:pointer; \
 font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
 .buorg div { padding:5px 36px 5px 40px; } \
 .buorg a,.buorg a:visited  {color:#E25600; text-decoration: underline;}\
-#buorgclose { position: absolute; right: .5em; top:.2em; height: 20px; width: 12px; font-weight: bold;font-size:14px; padding:0; }";
+#buorgclose { position: absolute; right: 6px; top:-2px; height: 20px; width: 12px; font-weight: bold;font-size:18px; padding:0; }";
 document.body.insertBefore(div,document.body.firstChild);
 document.getElementsByTagName("head")[0].appendChild(sheet);
 try {
