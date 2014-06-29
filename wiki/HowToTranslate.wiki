@@ -14,7 +14,7 @@ You can translate the following files:
 To translate the template(s) into your language, you need to load it in a .po file editor, like [http://www.poedit.net/ Poedit] or [http://gorm.po.dk/ Gorm]
 
 
-After you've created the .po file for your language, just send it to one of the [http://code.google.com/p/browser-update/people/list project owners]. Also send the name of your language that should appear in the menu on the site.
+After you've created the .po file for your language, just send it to one of the [http://code.google.com/p/browser-update/people/list project owners] or [https://code.google.com/p/browser-update/issues/entry add a new bug report]. Also send the *name of your language* that should appear in the menu on the site.
 
 
 The .po files for already started translations can be found [http://code.google.com/p/browser-update/source/browse/#svn/trunk/lang here].
