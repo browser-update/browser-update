@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-26 15:58+0100\n"
+"PO-Revision-Date: 2014-02-16 16:32+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: index.php:56
 msgid "Test the notification bar!"
-msgstr "Benachrichtigung testen!"
+msgstr "Benachrichtigung testen"
 
 #: index.php:58
 #, php-format
@@ -85,8 +85,8 @@ msgid ""
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
 "Durch Anklicken der Meldung gelangt der Besucher auf eine <a href=\"%s"
-"\">Seite mit Argumenten für ein Update und einer Auswahl aktueller Browser.</"
-"a>"
+"\">Seite mit Argumenten für ein Update und einer Auswahl aktueller Browser</"
+"a>."
 
 #: index.php:69
 msgid "If the visitor ignores the advice, it won't appear again for some time."

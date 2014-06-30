@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-03-29 11:28+0100\n"
+"Last-Translator: Wexi <veikko.skurnik@timergroup.fi>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "Päivitä Selaimesi"
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Websuunnittelijoiden hanke jonka tarkoituksena on informoida käyttäjiä "
+"selainpäivityksistä"
+
+#: header.php:30
+msgid "The Project"
+msgstr "Projekti"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "Päivitä selain"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Tilastot"
+
+#: header.php:35
+msgid "Blog"
+msgstr "Blogi"
+
+#: header.php:74
+msgid "Contact"
+msgstr "Yhteystiedot"
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr ""
+"Selaimesi on vanhentunut. Ole hyvä ja lataa jokin näistä ajan tasalla "
+"olevista selaimista:"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr "Uusinta versiota ei ole saatavilla järjestelmääsi."
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr "Ole hyvä ja valitse toinen selain."
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr ""
+"Parempi <a href=\"%s\">tietoturva</a>,    <a href=\"%s\">nopeus</a>,    <a "
+"href=\"%s\">käyttömukavuus</a> ja    <a href=\"%s\">viihdearvo</a>."
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "Mainos"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Selaimesi (%s) on <b>vanhentunut</b>. Siinä on tunnettuja tietoturvaongelmia "
+"eikä se välttämättä tue kaikkia ominaisuuksia tällä tai muilla sivustoilla. "
+"<a%s>Lue lisää siitä kuinka päivität selaimesi</a>."
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "Miksi tarvitsen ajan tasalla olevan selaimen?"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "Tietoturva"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"Uudemmat selaimet auttavat sinua suojautumaan huijauksilta, viruksilta, "
+"troijalaisilta, tietojen kalastelulta ja muilta uhilta. Nykyisessä "
+"selaimessasi saattaa olla tietoturva-aukkoja."
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "Nopeus"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "Jokainen uusi selainsukupolvi parantaa nopeutta."
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "Yhteensopivuus"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "Uusinta teknologiaa käyttävät sivustot näytetään oikein"
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "Parempi käyttökokemus"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"Uudet ominaisuudet ja paremmat mukauttamismahdollisuudet sekä lisäosat "
+"mahdollistavat paremman käyttökokemuksen."
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "Miksi tämä sivusto?"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"Tämä sivusto on websuunnittelijoiden, ylläpitäjien ja bloggaajien käynnistmä "
+"hanke webin kehittämiseksi ja sivustojen käyttäjien auttamiksei."
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"Vanhentuneet selaimet ovat <b>tietoturvauhka</b> ja <b>haittaavat webin "
+"kehitystä</b> rajoittuneiden toiminnallisuuksien ja ohjemointivirheiden "
+"takia."
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "Lisätietoja projektista Browser-Update.org"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "\"En pysty päivittämään selaintani\""
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"Mikäli tarvitset vanhaa selainta yhteensopivuuden takia, harkitse asentavasi "
+"toinen selain selailua varten ja säilytä vanha selain yhteensopivuutta "
+"vaativaan käyttöön."
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"Mikäli käytät konetta jota hallinnoi erillinen ylläpito etkä voi itse "
+"asentaa uutta selainta, kysy asiasta ylläpidolta."

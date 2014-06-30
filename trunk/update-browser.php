@@ -14,14 +14,28 @@ else {
 }
 
 
+
 $slimmed=true;
 $extratranslation=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
 
 
+//language for IE download link: Full locale form. e.g. en-GB
+$lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+$lll = explode (",", $lll);
+$lll = explode (";", $lll[0]);
+$lr=$lll[0];
+//echo $lr . "a" .$detected_lang . "xx";
+if(strlen($lr)!=5) {
+    $lr=$detected_lang;
+}
+$lr=str_replace("_","-",$lr);
+
+
+
 if (!$newtrans) {
-    header("Location: update.html");
+    header("Location: update-outdated.html");
     exit;
 }
 
@@ -38,22 +52,25 @@ function has($t) {
 //IE 10 is only available for win7 and win8 || has("windows nt 6.0")
 //IE 11 is only available for win7 and win8 || has("windows nt 6.0")
 // 5->2000/xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1
-$no_ie = has("mac os") || has("linux");
-$no_ie_system = has("windows nt 4") || has("windows nt 5") || has("windows nt 6 0")|| has("mac os") || has("linux");
-$no_sa = !has("mac os");
+$no_ie = has("os x") || has("linux");
+$no_ie_system = has("windows nt 4") || has("windows nt 5") || has("windows nt 6 0")|| has("os x") || has("linux");
+$no_sa = !has("os x");
 $no_sa_system =  has("os x 10 4") || has("os x 10 5") || has("os x 10 6") || has("os x 10 7");
 #echo $no_sa;
 #
 //$u_sa="http://www.apple.com/safari/";
 $sa_map=array("en"=>"","sv"=>"se","ja"=>"jp","sl"=>"si","uk"=>"ua","rm"=>"de","da"=>"dk","ca"=>"es");
-$u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$ll);
+$sal="https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4";
+if (in_array($ll, array("de","es","pl","pt","fr","nl"))) 
+    $sal="http://clkuk.tradedoubler.com/click?p=23761&a=2364610&url=https%%3A%%2F%%2Fitunes.apple.com%%2F%s%%2Fapp%%2Fos-x-mavericks%%2Fid675248567%%3Fmt%%3D12%%26uo%%3D4%%26partnerId%%3D2003";
+$u_sa=sprintf($sal,$ll);
 if (isset($sa_map[$ll]))
-    $u_sa=sprintf("https://itunes.apple.com/%s/app/os-x-mavericks/id675248567?mt=12&uo=4",$sa_map[$ll]);
+    $u_sa=sprintf($sal,$sa_map[$ll]);
 
 $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
 $u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
-$u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",str_replace("_","-",$detected_lang));
+$u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$lr);
 ?>
 
 
@@ -116,60 +133,28 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",s
 
 <?php
 $shown=0;
-if (($ll=="de" || $ll=="en") && mt_rand(0, 30)==0) {
+$noad=false;
+if (!$noad && mt_rand(0, 100)<97) {
     $shown=1;
 ?>
 <div class="adc">
     <?php echo T_("Advertisement");?>
-    <div class="ad">
-        <script async
-        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- BU-CAD1 -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-6685985339905097"
-             data-ad-slot="5009871584"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>        
-        
-    </div>
-</div>
-<?php }
-else if (($ll=="de" || $ll=="en") && mt_rand(0, 30)<25) {
-    $shown=1;
-?>
-<div class="adc">
-    <?php echo T_("Advertisement");?>
-    <div class="ad">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- BU-Image-CAD -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-6685985339905097"
-             data-ad-slot="7819966782"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>      
-    </div>
+    
+            <div class="ad" style="width:336px; height:280px">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- BU-Large rect Image -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:336px;height:280px"
+                 data-ad-client="ca-pub-6685985339905097"
+                 data-ad-slot="4807514388"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>    
+            </div>
+            
 </div>
 <?php }?>
 
-<?php 
-if ($shown==0 && $ll=="de") {
-?>
-<div style="position: absolute; top: 330px; left:760px">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- BU-Sky-Image -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:120px;height:600px"
-     data-ad-client="ca-pub-6685985339905097"
-     data-ad-slot="4726899589"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-<?php }?>
 
 <?php
 if (false) {
@@ -187,9 +172,12 @@ if (false) {
 ?>
 
 
+
+
+
 <div>
     <h2><?php echo T_('Why do I need an up-to-date browser?'); ?></h2>
-        <div>
+        <div id="advc">
                 <ul class="advantages">
                         <li class="security" id="security">
                                 <h3><?php echo T_('Security'); ?></h3>
@@ -209,9 +197,7 @@ if (false) {
                         </li>
                 </ul>
         </div>
-
-
-
+    
         <div>
                 <h2><?php echo T_('Why this website?'); ?></h2>
                 <p>
@@ -229,7 +215,25 @@ if (false) {
         <h2><?php echo T_('"I\'m not able to update my browser"'); ?></h2>
         <p><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility.'); ?></p>
         <p><?php echo T_('If you are on a computer that is maintained by an admin and you cannot install a new browser, ask your admin about it.'); ?></p>
-
+<?php
+if (!$shown && !$noad) {
+    ?>
+    </div>
+    <div id="sky2" style="position: absolute; right:-200px; top:-19px;"><div><?php echo T_("Advertisement");?></div>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- BU-Large-Image-Sky -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:160px;height:600px"
+                 data-ad-client="ca-pub-6685985339905097"
+                 data-ad-slot="6284247583"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>    
+    </div>
+    <div>
+<?php
+}
+?>        
 </div>
 
 
@@ -240,6 +244,26 @@ var second=false;
 
 countView();
 
+</script>
+
+<script>
+function getBrowserWidth(){
+    if (window.innerWidth){
+        return window.innerWidth;}  
+    else if (document.documentElement && document.documentElement.clientWidth != 0){
+        return document.documentElement.clientWidth;    }
+    else if (document.body){return document.body.clientWidth;}      
+        return 0;
+}
+if (getBrowserWidth()<1040) {
+    var sky=document.getElementById("sky2");
+    if (sky) {        
+        document.getElementById("advc").appendChild(sky);
+        sky.setAttribute("style","float: right; position: static; top:0;left:0;");
+    }
+    var co=document.getElementById("co");
+    co.setAttribute("style","margin-left: 30px");
+}
 </script>
 
 <?php include("footer.php");?>

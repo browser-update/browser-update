@@ -27,7 +27,7 @@ if (!isset($_GET["tv"]))
 else
     $tv = intval($_GET["tv"]);
 
-$q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, scriptversion=%d, textversion=%d, ua='%s'",
+$q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, scriptversion=%d, textversion=%d, ua='%s',more='%s'",
     mysql_real_escape_string($host),
     mysql_real_escape_string($_GET["n"]),
     mysql_real_escape_string($_GET["v"]),
@@ -35,7 +35,8 @@ $q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, la
     $time,
     $jsv,
     $tv,
-    mysql_real_escape_string($_SERVER['HTTP_USER_AGENT'])
+    mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),
+    mysql_real_escape_string($_GET["vs"])
 );
 
 mysql_query($q) 
