@@ -3,6 +3,33 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 ?>
+<h2>More translations</h2>
+<small>June 30th, 2014</small>
+<div class="entry">
+<p>
+    The <a href="update-browser.html">browser upgrade page</a> is now available in
+    <a href="/fi/update-browser.html">suomi (Finnish)</a>
+    <a href="/tr/update-browser.html">Türkçe (Turkish)</a>
+    <a href="/ro/update-browser.html">Română (Romanian)</a>
+    Also it was updated for
+    <a href="/es/update-browser.html">español (Spanish)</a>.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=trans4" onclick="SC('trans4'); return false;">Comments</a></div>
+
+
+<h2>Detection improvements</h2>
+<small>April 22th, 2014</small>
+<div class="entry">
+<p>
+    Several improvements were made to the browser detection code:
+    We improved the detection of Firefox ESR releases (which are supported by Mozilla for one year) and do not ask them to update.
+    Although almost all the chrome users use the latest version of chrome because of the built-in auto-update mechanism, it may not work on some of the users. 
+    To keep these users up to date (and safe) we now also notify users that use out of date versions of chrome.
+    Furthermore we improved the detection of other browsers we do not want to notify erroneously (e.g. Maxthon and Dolphin).
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=noti" onclick="SC('noti'); return false;">Comments</a></div>
 
 <h2>IE8 users will be notified</h2>
 <small>January 26th, 2014</small>
