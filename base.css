@@ -16,6 +16,21 @@ body,html {
 	position: relative;
 }
 
+ @media only screen and (max-width: 1130px){
+     #co {
+	width: 775px;
+	margin-left: 30px;
+     }
+ }
+@media only screen and (max-width: 970px){
+    body #co {
+	width: auto;
+	margin-left: 30px;
+        margin-right: 150px;
+        min-width: 620px;
+     }
+ }
+
 img {
 	border: none;
 }
@@ -225,7 +240,9 @@ ul.browsers li>a{
     display: block;
     font-size: 35px;
     color: #E97A00;
-    margin-bottom: -13px;
+    margin-bottom: -8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .generate {
@@ -373,12 +390,6 @@ table tr:hover td {
 	padding-right: 15em;
 	margin: 0;
 }
-
-strong.number {
-	font-size: 2em;
-	color: #666;
-}
-
 
 .developer {
     width: 46%;

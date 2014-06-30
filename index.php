@@ -162,21 +162,18 @@ window.onload=function(){
 		<span class="browser">
 			<label for="f-i">IE</label> 
 			<select id="f-i" onchange="code();">
-				<option value="6">&lt;= 6</option>
-				<option value="7" selected>&lt;= 7</option>
+				<option value="7">&lt;= 7</option>
 				<option value="8">&lt;= 8</option>
-				<option value="9">&lt;= 9</option>
+				<option value="9" selected>&lt;= 9</option>
                                 <option value="10">&lt;= 10</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-f">Firefox</label>  
 			<select id="f-f" onchange="code();">
-				<option value="3.6">&lt;= 3.6</option>
-				<option value="4">&lt;= 4</option>
-				<option value="5">&lt;= 5</option>
-				<option value="10" selected>&lt;= 10</option>
-				<option value="15">&lt;= 15</option>
+				<option value="6">&lt;= 6</option>
+				<option value="10">&lt;= 10</option>
+				<option value="15" selected>&lt;= 15</option>
 				<option value="20">&lt;= 20</option>
                                 <option value="25">&lt;= 25</option>
 			</select>
@@ -184,18 +181,18 @@ window.onload=function(){
 		<span class="browser">
 			<label for="f-o">Opera</label> 
 			<select id="f-o" onchange="code();">
-				<option value="10.6">&lt;= 10.6</option>
-				<option value="11">&lt;= 11</option>
-                                <option value="12" selected>&lt;= 12</option>
+                                <option value="12">&lt;= 12</option>
+                                <option value="12.1" selected>&lt;= 12.1</option>
                                 <option value="15">&lt;= 15</option>
+                                <option value="17">&lt;= 17</option>
 			</select>
 		</span>
 		<span class="browser">
 			<label for="f-s">Safari</label>  
 			<select id="f-s" onchange="code();">
-				<option value="4">&lt;= 4</option>
-				<option value="5" selected>&lt;= 5</option>
-                                <option value="5.1">&lt;= 5.1</option>
+				<option value="4.1">&lt;= 4.1</option>
+				<option value="5">&lt;= 5</option>
+                                <option value="5.1" selected>&lt;= 5.1</option>
                                 <option value="6">&lt;= 6</option>
 			</select>
 		</span>

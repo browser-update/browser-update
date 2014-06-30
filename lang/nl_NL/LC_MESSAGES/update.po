@@ -2,20 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2011-03-05 12:25+0100\n"
+"PO-Revision-Date: 2014-03-29 11:26+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #: header.php:5
 msgid "Update your Browser"
@@ -51,7 +52,9 @@ msgstr "Contact"
 msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
-msgstr "Uw browser is verouderd. Download aub één van deze recente, gratis en uitstekende browsers:"
+msgstr ""
+"Uw browser is verouderd. Download aub één van deze recente, gratis en "
+"uitstekende browsers:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -67,8 +70,8 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
-"Voor meer <a href=\"%s\">veiligheid</a>,    <a href=\"%s\">snelheid</a>,    <a "
-"href=\"%s\">comfort</a> en    <a href=\"%s\">plezier</a>."
+"Voor meer <a href=\"%s\">veiligheid</a>,    <a href=\"%s\">snelheid</a>,    "
+"<a href=\"%s\">comfort</a> en    <a href=\"%s\">plezier</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -81,13 +84,13 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Uw browser (%s) is <b>verouderd</b>. Hij heeft bekende <b>veiligheidsissues</b> en "
-"kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a"
-"%s>Lees meer over hoe uw browser te upgraden</a>"
+"Uw browser (%s) is <b>verouderd</b>. Hij heeft bekende <b>veiligheidsissues</"
+"b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere "
+"websites. <a%s>Lees meer over hoe uw browser te upgraden</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr "Waarom heb ik een recente browser nodig?"
+msgstr "Waarom heb ik een up-to-date browser nodig?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -157,7 +160,7 @@ msgstr "Meer informatie over het Project Brower-Update.org"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
-msgstr "\"Ik kan de browser niet updaten\""
+msgstr "\"Ik kan mijn browser niet updaten\""
 
 #: update-browser.php:212
 msgid ""
@@ -619,16 +622,3 @@ msgstr ""
 #~ msgstr ""
 #~ "Updaten is makkelijk, neemt slechts een paar minuten in beslag en kost "
 #~ "niets."
-Hide details
-Change log
-r157 by david.da...@team23.de on Today (14 hours ago)   Diff
-unfuzzy again
-Go to: 	
-Older revisions
- r155 by david.da...@team23.de on Today (15 hours ago)   Diff 
- r149 by david.da...@team23.de on Today (15 hours ago)   Diff 
- r148 by david.da...@team23.de on Today (15 hours ago)   Diff 
-All revisions of this file
-File info
-Size: 20584 bytes, 619 lines
-View raw file

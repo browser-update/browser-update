@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:23+0100\n"
+"PO-Revision-Date: 2014-03-29 11:35+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hu_HU\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: header.php:5
 msgid "Update your Browser"
-msgstr "Böngésző frissítése"
+msgstr "Frissítse böngészőjét"
 
 #: header.php:28
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
-"Webdizájnerek kezdeményezése a felhasználók böngésző-frissítésekről történő "
+"Webdizájnerek kezdeményezése a felhasználók böngésző-frissítésről történő "
 "tájékoztatásáról"
 
 #: header.php:30
 msgid "The Project"
-msgstr ""
+msgstr "A Projekt"
 
 #: header.php:33
 msgid "Update Browser"
@@ -52,10 +52,12 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"Az Ön által használt böngésző elavult. Kérjük töltse le valamelyik ingyenes, "
+"és nagyszerű böngészőt az alábbiak közül:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
-msgstr "Nem elérhető az Ön Rendszere számára."
+msgstr "A legfrissebb verzió nem elérhető az Ön Rendszere számára."
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
@@ -67,10 +69,12 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Nagyobb <a href=\"%s\">biztonság</a>,    <a href=\"%s\">sebesség</a>,    <a "
+"href=\"%s\">kényelem</a> és    <a href=\"%s\">élmény</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
-msgstr ""
+msgstr "Hirdetés"
 
 #: update-browser.php:162
 #, php-format
@@ -80,13 +84,13 @@ msgid ""
 "%s>Learn how to update your browser</a>"
 msgstr ""
 "Az Ön böngészője (%s) <b>elavult</b>. Ismert <b>biztonsági hiányosságai</b> "
-"vannakés esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy "
+"vannak és esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy "
 "más weboldalakon. <a%s>Itt talál bővebb információt a böngészőjének "
 "frissítésével kapcsolatban</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Miért van szükségem friss böngészőre?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -119,19 +123,19 @@ msgstr "Az új technológiákat használó weboldalak pontosabban jelennek meg"
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
-msgstr "Kényelem &amp; jobb élmény"
+msgstr "Kényelem és jobb élmény"
 
 #: update-browser.php:190
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
-"Az új funkciók, bővítések és a jobb testreszabhatóság kényelmesebb "
+"Az új funkciók, bővítmények és a jobb testreszabhatóság kényelmesebb "
 "internetes élményt nyújtanak"
 
 #: update-browser.php:198
 msgid "Why this website?"
-msgstr "Miért ezt az oldalt?"
+msgstr "Mi a célja ennek az oldalnak?"
 
 #: update-browser.php:200
 msgid ""
@@ -148,12 +152,12 @@ msgid ""
 "<b>bugs</b>."
 msgstr ""
 "Az elavult böngészők <b>biztonsági veszélyeket</b> rejtenek és "
-"<b>megakadályozzák azinternet fejlődését <b/> korlátozott funkcióik és "
-"számos <b>hibáik</b> miatt."
+"<b>megakadályozzák az internet fejlődését<b/> korlátozott funkcióik és "
+"számos <b>hibájuk</b> miatt."
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
-msgstr ""
+msgstr "További információ a Browser-Update.org projektről"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
@@ -167,7 +171,7 @@ msgid ""
 msgstr ""
 "Ha kompatibilitási okokból kifolyólag nem tudja böngészőjét frissíteni, "
 "telepítsen egy másik böngészőt böngészés céljára, a régit pedig tartsa meg a "
-"kompatibilitás végett"
+"kompatibilitás végett."
 
 #: update-browser.php:213
 msgid ""
@@ -204,10 +208,10 @@ msgstr ""
 #~ msgstr "Beállítások"
 
 #~ msgid "The following options can be passed to the script:"
-#~ msgstr "Az alábbi beállítások állíthatók be a programkódhoz"
+#~ msgstr "Az alábbi beállítások állíthatók be a programkódhoz:"
 
 #~ msgid "browser versions to notify"
-#~ msgstr "Értesítendő böngésző verziók"
+#~ msgstr "értesítendő böngésző verziók"
 
 #~ msgid "atfer how many hours should the message reappear"
 #~ msgstr "hány óra múlva jelenjen meg újra a szöveg"
@@ -216,10 +220,10 @@ msgstr ""
 #~ msgstr "0 = mindig mutassa"
 
 #~ msgid "callback function after the bar has appeared"
-#~ msgstr "visszahívás funkció a sáv megjelenése után"
+#~ msgstr "függvény meghívása (callback function) a sáv megjelenése után"
 
 #~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "üzenet nyelvének beállítása, pl.\"en\""
+#~ msgstr "üzenet nyelvének beállítása, pl.\"hu\""
 
 #~ msgid "overrides the default detection"
 #~ msgstr "alapértelmezett felismerés felülírása"
@@ -234,7 +238,7 @@ msgstr ""
 #~ msgstr "link megnyitása új ablakban/lapon"
 
 #~ msgid "Edit the CSS"
-#~ msgstr "Stíluslap szerkesztése"
+#~ msgstr "CSS szerkesztése"
 
 #~ msgid "The following CSS rules are applied by the script. "
 #~ msgstr "Az alábbi stíluslap szabályok érvényesek a programkódhoz."
@@ -268,7 +272,7 @@ msgstr ""
 #~ "switch to a newer browser."
 #~ msgstr ""
 #~ "Ez a szolgáltatás egy lehetőséget kínál arra, hogy diszkréten "
-#~ "tájékoztassa látogatóitfrissebb böngészőre történő átváltásról"
+#~ "tájékoztassa látogatóit frissebb böngészőre történő átváltásról."
 
 #~ msgid "How it works"
 #~ msgstr "Hogyan működik"
@@ -277,7 +281,7 @@ msgstr ""
 #~ "Include our small javascript <a href=\"%s\">notification</a> on your "
 #~ "website"
 #~ msgstr ""
-#~ "Építse be rövid javascript-ünket <a href=\"%s\">notification</a> "
+#~ "Építse be rövid javascript <a href=\"%s\">figyelmeztetésünket</a> "
 #~ "weboldalába"
 
 #~ msgid ""
@@ -303,8 +307,8 @@ msgstr ""
 #~ msgid ""
 #~ "If the visitor ignores the advice, it won't appear again for some time."
 #~ msgstr ""
-#~ "Ha a látogató figyelmen kívül hagyja a tanácsot, az a továbbiakban nem "
-#~ "jelenik."
+#~ "Ha a látogató figyelmen kívül hagyja a tanácsot, az egy ideig nem jelenik "
+#~ "meg újra."
 
 #~ msgid "Advantages and features"
 #~ msgstr "Előnyök és szolgáltatások"
@@ -361,7 +365,7 @@ msgstr ""
 #~ msgstr ""
 #~ "Ha újabb böngésző verziók jelennek meg, melyeket a fejlesztő nem támogat "
 #~ "a jövőben, ismert biztonsági résekkel bír, vagy régóta elavult, "
-#~ "automatikusan listánkhoz adjuk. "
+#~ "automatikusan listánkhoz adjuk."
 
 #~ msgid "Customizable"
 #~ msgstr "Testreszabható"
@@ -389,7 +393,7 @@ msgstr ""
 #~ "are using and how much users got proselyted: How many users updated or "
 #~ "changed their browser through your advice."
 #~ msgstr ""
-#~ "Ön <a href=\"%s\">statistics</a>-t kap arról, hogy látogatói mely "
+#~ "Ön <a href=\"%s\">statisztikát</a> kap arról, hogy látogatói mely "
 #~ "böngészőt használják és hány felhasználó váltott: Hány felhasználó "
 #~ "frissítette vagy váltotta le böngészőjét az Ön tanácsa hatására."
 
@@ -398,21 +402,22 @@ msgstr ""
 
 #~ msgid "You may also use third-party plugins for: "
 #~ msgstr ""
-#~ "Esetlegesen harmadik fél által készített bővítményeket is használhat:"
+#~ "Esetlegesen harmadik fél által készített bővítményeket is használhat: "
 
 #~ msgid ""
 #~ "You can <a href=\"%s\">customize</a> the style of the message, the text "
 #~ "and other options."
 #~ msgstr ""
-#~ "Testreszabhatja (<a href=\"%s\"> customize</a>) az üzenet stílusát, "
-#~ "szövegét és egyéb beállításait."
+#~ "<a href=\"%s\">Testreszabhatja</a> az üzenet stílusát, szövegét és egyéb "
+#~ "beállításait."
 
 #~ msgid "Following browsers will be notified:"
-#~ msgstr "A következő böngészők lesznek értesítve"
+#~ msgstr "A következő böngészők lesznek értesítve:"
 
 #~ msgid ""
 #~ "Google Chrome will automatically itself and is therefor always up to date"
-#~ msgstr "Google Chrome automatikusan frissíti önmagát, így mindig naprakész"
+#~ msgstr ""
+#~ "A Google Chrome automatikusan frissíti önmagát, így mindig naprakész"
 
 #~ msgid "Your Code"
 #~ msgstr "Az Ön Kódja"
@@ -430,7 +435,7 @@ msgstr ""
 #~ "emészt fel."
 
 #~ msgid "Webdesign technologies and features"
-#~ msgstr "Webdesign technológiák és szolgáltatások"
+#~ msgstr "Webdizájn technológiák és szolgáltatások"
 
 #~ msgid ""
 #~ "There are all these great new web development standards új webfejlesztési "
@@ -438,14 +443,14 @@ msgstr ""
 #~ "you may not use them."
 #~ msgstr ""
 #~ "Számos új, nagyszerű webfejlesztési szabvány létezik, melyeket a modern "
-#~ "böngészők támogatnak... de sokan mégsem használják őket."
+#~ "böngészők támogatnak... de Ön mégsem tudja használni őket."
 
 #~ msgid ""
 #~ "Newer browsers let you use more features and new technologies (CSS3, SVG, "
 #~ "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
 #~ "resulting in a better browsing experience for your users."
 #~ msgstr ""
-#~ "Frissebb böngészők több szolgáltatást és új technológiát engednek CSS3, "
+#~ "Frissebb böngészők több szolgáltatást és új technológiát engednek (CSS3, "
 #~ "SVG, HTML5, RSS, stíluslap által létrehozott tartalom, rugalmas "
 #~ "elrendezések) használni weboldalán, jobb internetes élményt nyújtva "
 #~ "felhasználóinak."
@@ -458,10 +463,9 @@ msgstr ""
 #~ "\">update page</a>. The security-threats of outdates browsers are listed "
 #~ "in this <a href=\"%s\">paper</a>."
 #~ msgstr ""
-#~ "Számos előny: biztonság, gyorsaság, különböző szolgáltatások,... Tekintse "
-#~ "meg a <a href=\"%s\">update page</a> oldalt. Az elavult böngészők "
-#~ "biztonsági veszélyei az alábbi helyen olvashatók: <a href=\"%s\">paper</"
-#~ "a>."
+#~ "Számos előny: biztonság, gyorsaság, különböző szolgáltatások, ... "
+#~ "Tekintse meg a <a href=\"%s\">frissítés</a> oldalt. Az elavult böngészők "
+#~ "biztonsági veszélyei <a href=\"%s\">itt</a> olvashatók."
 
 #~ msgid "The web has to evolve..."
 #~ msgstr "A világhálónak fejlődnie kell... "
@@ -475,7 +479,9 @@ msgstr ""
 #~ "will have to code websites like in 2001 even if it is 2011."
 #~ msgstr ""
 #~ "A régi böngészők még ma is nagy piaci részesedéssel bírnak és "
-#~ "határozottan jelen vannak. Ha most nem cselekszünk, "
+#~ "határozottan jelen vannak. Ha most nem cselekszünk, ugyanúgy kell "
+#~ "weboldalakat kódolnunk mint ahogyan 2001-ben tettük, még akkor is ha már "
+#~ "2011 is elmúlt."
 
 #~ msgid "Users don't oppose updating..."
 #~ msgstr "A felhasználók alapvetően nem ellenzik a frissítéseket..."
@@ -491,7 +497,7 @@ msgstr ""
 #~ msgstr "Segítse a projektet"
 
 #~ msgid "Participate!"
-#~ msgstr "Hozzájárulás!"
+#~ msgstr "Vegyen részt!"
 
 #~ msgid ""
 #~ "Include the notification code in your page to inform users about browser "
@@ -505,20 +511,20 @@ msgstr ""
 
 #~ msgid ""
 #~ "Tell others about this initiative! In your blog, on your webpage, ..."
-#~ msgstr "Meséljen másoknak is erről! Blogjában, weboldalán,..."
+#~ msgstr "Meséljen másoknak is erről! Blogjában, weboldalán, ..."
 
 #~ msgid "Translate this page"
-#~ msgstr "Oldal fordítása"
+#~ msgstr "Fordítsa le ezt az oldalt"
 
 #~ msgid "Translate this page into your language."
-#~ msgstr "Fordítsa le jelen oldalt az Ön nyelvére."
+#~ msgstr "Fordítsa le a jelen oldalt az Ön nyelvére."
 
 #~ msgid ""
 #~ "<strong class=\"number\">%d</strong> sites are using the Browser-Update."
 #~ "org script."
 #~ msgstr ""
 #~ "<strong class=\"number\">%d</strong> oldal használja a Browser-Update.org-"
-#~ "ot "
+#~ "ot"
 
 #~ msgid "Browser updates"
 #~ msgstr "Böngésző frissítések"
@@ -562,36 +568,36 @@ msgstr ""
 #~ msgstr "Böngésző számos szolgáltatással"
 
 #~ msgid "Google's browser with compact interface."
-#~ msgstr "Google kereső egységes érintkező felülettel."
+#~ msgstr "A Google böngészője kompakt felülettel."
 
 #~ msgid "Automatically always up to date!"
 #~ msgstr "Automatikusan frissül, mindig naprakész!"
 
 #~ msgid "Apple's fast browser"
-#~ msgstr "Apple gyors böngésző"
+#~ msgstr "Az Apple gyors böngészője"
 
 #~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Windows Vista or 7. esetén"
+#~ msgstr "Windows Vista or 7 esetén"
 
 #~ msgid "Windows built-in browser"
 #~ msgstr "A Windows beépített böngészője"
 
 #~ msgid "All browsers have the same basic features and easy interface."
 #~ msgstr ""
-#~ "Az összes böngésző ugyanazon fő funkciókkal és egyszerű érintkező "
-#~ "felülettel rendelkezik."
+#~ "Az összes böngésző ugyanazon fő funkciókkal és egyszerű felülettel "
+#~ "rendelkezik."
 
 #~ msgid ""
 #~ "The browser you are using is out of date. It has known <b>security flaws "
 #~ "and disadvantages</b> and a <b>limited feature set</b>. You will not see "
 #~ "all the features of some websites."
 #~ msgstr ""
-#~ "Az Ön által használt böngésző elavult. Ismert <b>biztonsági hiányosságai,"
+#~ "Az Ön által használt böngésző elavult. Ismert <b>biztonsági hiányosságai, "
 #~ "hátrányai</b> és <b>korlátozott szolgáltatás készletei</b> vannak. Ön nem "
-#~ "fogja látni néhány oldal esetében azösszes funkciót."
+#~ "fogja látni néhány oldal esetében az összes funkciót."
 
 #~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "Frissebb böngészőre való átváltás számos előnyöket kínál:"
+#~ msgstr "Frissebb böngészőre való váltás számos előnyt kínál:"
 
 #~ msgid "Updating is easy, takes just a few minutes and is totally free."
 #~ msgstr ""

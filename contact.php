@@ -10,7 +10,11 @@ include("header.php");
 <p>
     Updates on the project can be found in our <a href="blog.html">blog</a>.
 </p>
-<h2>Help Us</h2><!--Mithelfen-->
+<h2>Translations</h2>
+<p>
+New translations of this site are always appreciated. <a href="https://code.google.com/p/browser-update/wiki/HowToTranslate"> Learn how to translate this page</a>.
+</p>
+<h2>Help Us</h2>
 <p>
 	We are happy about every coder or translator that helps us with code, translations or ideas.
     We have a <a href="http://code.google.com/p/browser-update/">google-code project page</a>

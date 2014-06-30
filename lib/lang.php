@@ -30,7 +30,10 @@ $lang_rewrite = array(
         "he"=>"he_IL",
         "cs"=>"cs_CZ",
         "nb"=>"nb_NO",
-        "zh"=>"zh_CN"
+        "zh"=>"zh_CN",
+        "fi"=>"fi_FI",
+        "tr"=>"tr_TR",
+        "ro"=>"ro_RO"
 );
 
 /**
@@ -160,7 +163,7 @@ T_textdomain('update');
 
 
 $newtrans=true;    
-if (strpos("xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl",$ll)>0)
+if (strpos("xx,ja,sl,id,uk,rm,da,ca,sv,hu,fa,gl",$ll)>0)
     $newtrans=false;
 //if (!$newtrans)
 //    T_textdomain('browser-update');

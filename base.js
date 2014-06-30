@@ -6,13 +6,13 @@ function code() {
     if (autoupdate.checked) {
         var notify = "";
         setomatdefault('i',2);
-        setomatdefault('f',3);
-        setomatdefault('o',2);
-        setomatdefault('s',1);
+        setomatdefault('f',2);
+        setomatdefault('o',1);
+        setomatdefault('s',2);
         vc.className = "disabled";
     }
     else {
-        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',n:9}';
+        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'}';
         vc.className = "enabled";
     }
 	var code="";
@@ -54,14 +54,25 @@ function getlang() {
 
 function ignore(f) {
     return false;
-    return (f.n=="f" && f.v>=26) ||
+    return (f.n=="f" && f.v>=27) ||
             (f.n=="o" && f.v>=16) ||
             (f.n=="s" && f.v>=7) ||
-            (f.n=="i" && f.v>=11);
+            (f.n=="i" && f.v>=11)||
+            (f.n=="c" && f.v>=32);
 }
 
 var ref=escape((document.referrer||"").substring(0,50)||((window.location.hash||"").match(/.*@(.*)/i)||["",""])[1]||"");
 var tv=((window.location.hash||"").match(/#(\d*)/i)||["",""])[1]||"";
+
+//if (ref.search(/(^|:\/\/)([^\/]{0,8}\.|)(google|bing|yahoo|ask|duckduckgo|blekko|yandex|baidu)\./i)>-1) 
+//    tv=-4;
+
+if (!tv && ref.search(/(google|bing|yahoo|ask|duckduckgo|blekko|yandex|baidu)\./i)>-1) 
+    tv=-4;
+///update.html?Installer=browser_update_bc_965562_pid_adshore_brand_wins
+if (window.location.href.search(/Installer=/i)>-1) 
+    tv=-5;
+
 function countBrowser(to) {
         var f=getBrowser();
         if (ignore(f))
@@ -85,7 +96,7 @@ function countView() {
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|slurp|wii|silk|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
@@ -99,11 +110,21 @@ function getBrowser() {
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
     
-    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) n="x";
+    var v=new Number(RegExp.$1);
+    var donotnotify=false;
+    //do not notify ver old systems since their is no up-to-date browser available
+    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
     
-    if (n=="x") return {n:"x",v:0,t:names[n]};
+    //do not notify firefox ESR
+    if (n=="f" && Math.round(v)==24)
+        donotnotify="ESR";
+    //do not notify opera 12 on linux since it is the latest version
+    if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12) 
+        donotnotify="Opera12Linux";
     
-    v=new Number(RegExp.$1);
+    if (n=="x") return {n:"x",v:v||0,t:names[n]};
+    
+
     if (n=="so") {
         v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
         n="s";
@@ -120,5 +141,5 @@ function getBrowser() {
         else if (v>3) v=7;
         else v=9;
     }	
-    return {n:n,v:v,t:names[n]+" "+v}
+    return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify};
 }

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-26 12:25+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
+"PO-Revision-Date: 2014-06-29 22:21+0100\n"
+"Last-Translator: Álvaro G. Vicario <alvaro@demogracia.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 
 #: header.php:30
 msgid "The Project"
-msgstr "El Proyecto"
+msgstr "El proyecto"
 
 #: header.php:33
 msgid "Update Browser"
@@ -53,16 +53,16 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
-"Su navegador está desactualizado. Descargue uno de estos excelentes, "
-"gratuitos y actualizados navegadores:"
+"Su navegador no está actualizado. Descargue uno de estos excelentes "
+"navegadores, gratuitos y actualizados:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
-msgstr "No está disponible para su sistema operativo."
+msgstr "La versión más reciente no está disponible para su sistema."
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
-msgstr " "
+msgstr " Por favor elija otro navegador."
 
 #: update-browser.php:114
 #, php-format
@@ -84,9 +84,9 @@ msgid ""
 "and may <b>not display all features</b> of this and other websites. <a"
 "%s>Learn how to update your browser</a>"
 msgstr ""
-"Tu navegador (%s) <b>no está actualizado</b>. Tiene conocidas <b>fallos de "
-"seguridad</b> y podría <b>no mostrar todas las características</b> de este y "
-"otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>"
+"Su navegador (%s) <b>no está actualizado</b>. Tiene <b>fallos de seguridad</"
+"b> conocidos y podría <b>no mostrar todas las características</b> de este y "
+"otros sitios web. <a%s>Averigüe cómo actualizar su navegador.</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
@@ -101,9 +101,9 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"Un nuevo navegador le protege mejor contra estafas, virus, troyanos, fraudes "
-"por internet y otras amenazas. ¡Soluciona los problemas de seguridad que su "
-"navegador actual pueda tener y protege su privacidad!"
+"Los navegadores recientes le protegen mejor contra estafas, virus, troyanos, "
+"fraudes y otras amenazas. También solucionan problemas de seguridad de su "
+"navegador actual."
 
 #: update-browser.php:181
 msgid "Speed"
@@ -111,9 +111,7 @@ msgstr "Velocidad"
 
 #: update-browser.php:182
 msgid "Every new browser generation improves speed"
-msgstr ""
-"Cada nueva generación de navegadores mejora la velocidad y la facilidad del "
-"uso."
+msgstr "Cada nueva generación de navegadores mejora la velocidad"
 
 #: update-browser.php:185
 msgid "Compatibility"
@@ -127,15 +125,15 @@ msgstr ""
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
-msgstr "Confort &amp; una mejor experiencia"
+msgstr "Comodidad y mejor experiencia"
 
 #: update-browser.php:190
 msgid ""
 "With new features, extensions and better customisability, you will have a "
 "more comfortable web-experience"
 msgstr ""
-"Con nuevas características, extensiones y más personalizables, tendrás una "
-"más confortable experienca web"
+"Con nuevas características y extensiones y más personalizables, tendrá una "
+"mejor experiencia en la web"
 
 #: update-browser.php:198
 msgid "Why this website?"
@@ -146,8 +144,8 @@ msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Este sitio es una iniciativa de diseñadores web, webmasters y bloggers que "
-"desean llevar la internet a otro nivel y ayudar a sus visitantes."
+"Este sitio es una iniciativa de diseñadores, webmasters y bloggers que "
+"desean llevar internet a otro nivel y ayudar a sus visitantes."
 
 #: update-browser.php:203
 msgid ""
@@ -155,9 +153,9 @@ msgid ""
 "advancement of the web</b> because of their limited features and many "
 "<b>bugs</b>."
 msgstr ""
-"Los navegadores no actualizados son una <b>amenaza a la seguridad</b> y son "
-"<b>un obstáculo al avance de la internet</b> debido a lo limitado de sus "
-"características y muchos <b>errores</b>."
+"Los navegadores obsoletos son una <b>amenaza a la seguridad</b> y son <b>un "
+"obstáculo al avance de internet</b> debido a lo limitado de sus "
+"características y a sus muchos <b>errores</b>."
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
@@ -165,7 +163,7 @@ msgstr "Más información sobre el proyecto Browser-Update.org"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
-msgstr "\"No puedo actualizar mi navegador\""
+msgstr "«No puedo actualizar mi navegador»"
 
 #: update-browser.php:212
 msgid ""
@@ -173,8 +171,8 @@ msgid ""
 "about installing a second browser for browsing and keep the old one for the "
 "compatibility."
 msgstr ""
-"Si no puedes cambiar tu navegador por cuestiones de compatibilidad, piensa "
-"entonces en instalar un segundo navegador para navegar y conserva el antiguo "
+"Si no puede cambiar su navegador por cuestiones de compatibilidad, piense "
+"entonces en instalar un segundo navegador para navegar y conserve el antiguo "
 "para la compatibilidad."
 
 #: update-browser.php:213
@@ -182,9 +180,8 @@ msgid ""
 "If you are on a computer that is maintained by an admin and you cannot "
 "install a new browser, ask your admin about it."
 msgstr ""
-"Si utilizas un ordenador que recibe mantenimiento de un administrador y no "
-"puedes instalar un nuevo navegador, pregúntale a tu administrador al "
-"respecto."
+"Si utiliza un ordenador que recibe mantenimiento de un administrador y no "
+"puede instalar un nuevo navegador, consulte con su administrador."
 
 #~ msgid "Customize and test"
 #~ msgstr "Personalízalo y pónlo a prueba"

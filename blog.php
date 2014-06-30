@@ -19,7 +19,7 @@ Firefox 10 or older (released Jan 2012, ≈< 0.5%), Opera 12 or older (released 
 <small>January 26th, 2014</small>
 <div class="entry">
 <p>
-    The <a href="update-browser.html">update page</a> is now newly availabla in
+    The <a href="update-browser.html">update page</a> is now available in
     <a href="/nb/update-browser.html">Norsk bokmål (norwegian)</a> and 
     <a href="/zh/update-browser.html">中文 (simplified chinese)</a>. 
     Also it was updated for

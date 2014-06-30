@@ -26,11 +26,15 @@ include("header.php");
 <div class="noti">
     <p>User-Agent-String:<?php echo $_SERVER['HTTP_USER_AGENT'];?></p>
     <p id="det"></p>
+	<p>Lang: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];?></p>
 </div>
 
 <script type="text/javascript">
-br=getBrowser();
-document.getElementById('det').innerHTML=br.t;
+var br=getBrowser();
+var aaa="";
+if (br.donotnotify)
+    aaa="<br/>Not notified because: "+ br.donotnotify;
+document.getElementById('det').innerHTML=br.t+aaa;
 </script>
 
 <?php include("footer.php");?>
