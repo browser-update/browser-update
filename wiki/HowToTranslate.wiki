@@ -8,7 +8,7 @@ Browser-update.org can be translated using [http://en.wikipedia.org/wiki/Gettext
 
 You can translate the following files:
   * highest priority: [http://code.google.com/p/browser-update/source/browse/trunk/lang/update.pot update.pot] for the notification and the update page (so everything a normal user who needs to update its browser sees) [https://browser-update.org/update-browser.html page].
-  * medium priority: [http://code.google.com/p/browser-update/source/browse/trunk/lang/site.pot site.pot] for thre rest of the page, with explanations about the project browser-update and so on. [https://browser-update.org/index.html page].
+  * medium priority: [http://code.google.com/p/browser-update/source/browse/trunk/lang/site.pot site.pot] for the rest of the page, with explanations about the project browser-update and so on. [https://browser-update.org/index.html page].
   * optional: [http://code.google.com/p/browser-update/source/browse/trunk/lang/customize.pot customize.pot] the page explaining how to customize [https://browser-update.org/customize.html page]
 
 To translate the template(s) into your language, you need to load it in a .po file editor, like [http://www.poedit.net/ Poedit] or [http://gorm.po.dk/ Gorm]
