@@ -145,16 +145,15 @@ include("header.php");
 
 
 		<textarea id="f-code" rows="10" cols="80">
-&lt;script type="text/javascript">
+&lt;script>
 var $buoop = {};
-$buoop.ol = window.onload;
-window.onload=function(){
-     try {if ($buoop.ol) $buoop.ol();}catch (e) {}
-     var e = document.createElement("script");
-     e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "//browser-update.org/update.js");
-     document.body.appendChild(e);
-}
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
 &lt;/script>
 		</textarea>
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
@@ -289,16 +288,15 @@ window.onload=function(){
 		</ul>
 </div>
 
-<script type="text/javascript">
-var $buoop = {};
-$buoop.ol = window.onload;
-window.onload=function(){
-     var e = document.createElement("script");
-     e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "/update.js");
-     document.body.appendChild(e);
-     if ($buoop.ol) $buoop.ol();
-}
+<script>
+var $buoop = {c:2};
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "//browser-update.org/update.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
 code();
 </script>
 	

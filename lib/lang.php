@@ -16,7 +16,8 @@ $lang_rewrite = array(
 	"sl"=>"sl_SI",
 	"ru"=>"ru_RU",
 	"id"=>"id_ID",
-	"kr"=>"ko_KR",
+	"kr"=>"ko_KR",        #this was wrong
+	"ko"=>"ko_KR",
 	"uk"=>"uk_UA",
 	"rm"=>"rm_CH",
 	"fr"=>"fr_FR",
@@ -33,7 +34,10 @@ $lang_rewrite = array(
         "zh"=>"zh_CN",
         "fi"=>"fi_FI",
         "tr"=>"tr_TR",
-        "ro"=>"ro_RO"
+        "ro"=>"ro_RO",
+        "hr"=>"hr_HR",
+        "bg"=>"bg_BG",
+        "el"=>"el_GR"
 );
 
 /**
@@ -148,7 +152,7 @@ $ll=substr($detected_lang, 0, 2);
 //if (isset($lang_rewrite[$detected_lang]))
 //	$detected_lang=$lang_rewrite[$detected_lang];
 
-T_setlocale(LC_MESSAGES, $detected_lang);
+T_setlocale(LC_ALL, $detected_lang);
 
 T_bindtextdomain('site', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 T_bind_textdomain_codeset('site', 'UTF8');

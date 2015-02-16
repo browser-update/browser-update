@@ -31,6 +31,8 @@ body,html {
      }
  }
 
+
+ 
 img {
 	border: none;
 }
@@ -602,10 +604,29 @@ a.notavailable .bro {
     margin-top:0;
     margin-bottom: 10px;
 }
+
+
+#sky {
+    float: right;
+    text-align: right;
+    margin-left: 10px;
+}
+#sky .ad {
+    border: none;
+}
+@media only screen and (min-width: 1130px) {
+    #sky {
+        float:none;
+        position: absolute;
+        top: -19px;
+        right: -200px;
+    }
+} 
+
 .ad {
-    border: 1px solid #aaa;
-    width: 300px;
-    height: 250px;
+    border: 1px solid #ccc;
+    /*width: 300px;
+    height: 250px;*/
 }
 
 
@@ -641,21 +662,39 @@ h3 {
     margin:0;
     margin-top: 18px;    
     top:0;
-    left: 0;
     background-color: #ddd;
     display: none;
-    min-width: 100%;
+    width: 200px;
+    left: -60px;
 }
 
 #lang2:hover div{
     display: block;
     background-color: #ddd;
 }
-#lang2 a {
+#lang2 div a {
     display: block;
+    float:left;
+    min-width: 97px;
 }
 
 .men div:hover,
 #lang2 a:hover {
     background-color: #fff;
+}
+
+
+.adv > div > div {
+	float: left;
+	width: 30%;
+	padding-right: 3%;
+}
+.adv:after {
+	clear: both;
+	content: " ";
+    display: table;
+}
+.adv h3 {
+	font-size: 18px;
+	margin-bottom: 5px;
 }

@@ -12,21 +12,20 @@ function code() {
         vc.className = "disabled";
     }
     else {
-        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'}';
+        var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'},';
         vc.className = "enabled";
     }
 	var code="";
 	code = '\
-<script type="text/javascript"> \n\
-var $buoop = {'+notify+'}; \n\
-$buoop.ol = window.onload; \n\
-window.onload=function(){ \n\
- try {if ($buoop.ol) $buoop.ol();}catch (e) {} \n\
+<script> \n\
+var $buoop = {'+notify+'c:2}; \n\
+function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
- e.setAttribute("type", "text/javascript"); \n\
- e.setAttribute("src", "//browser-update.org/update.js"); \n\
- document.body.appendChild(e); \n\
-} \n\
+ e.src = "//browser-update.org/update.js"; \n\
+ document.body.appendChild(e);\n\
+};\n\
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}\n\
+catch(e){window.attachEvent("onload", $buo_f)}\n\
 </script> \n\
 	';
 	document.getElementById('f-code').value=code;

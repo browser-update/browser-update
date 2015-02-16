@@ -3,6 +3,41 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 ?>
+<h2>Better notification behaviour</h2>
+<small>February 11th, 2015</small>
+<div class="entry">
+<p>
+We improved the procedure when to show the notification to be even more user-friendly: 
+When the user closes or clicks the notification bar, we know that he noticed the notification.
+After this we do not show it again for a week, because this means the user has seen the bar 
+but has some reason not to update his browser right now. 
+Knowing this, we do not want to bother the users, but only remind them some longer time later.
+</p>
+<p>
+    The time interval to the next notification can be changed using the <code>reminderClosed</code> <a href="customize.html">option</a>. 
+    It defaults to about a week.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=imp3" onclick="SC('imp3'); return false;">Comments</a></div>
+
+<h2>IE9, Fixes</h2>
+<small>November 3rd, 2014</small>
+<div class="entry">
+<p>
+Internet Explorer 9 was released in March 2011, almost four ago. We will now start 
+to notify users of this browser (in the default configuration).
+</p>
+<p>
+We changed the code you have to include in your site. It is a little bit smaller and faster.
+</p>
+<p>
+    In our continouing quest to inform the majority of relevant browser and not to erroneously bother users of small
+    browsers we whitelisted a few small browsers (CoolNovo,Blackberry 10,PaleMoon, QupZilla), which will not get the notification.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=ie9" onclick="SC('ie9'); return false;">Comments</a></div>
+
+
 <h2>More translations</h2>
 <small>June 30th, 2014</small>
 <div class="entry">

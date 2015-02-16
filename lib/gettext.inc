@@ -151,6 +151,8 @@ function _bindtextdomain($domain, $path) {
 	// ensure $path ends with a slash
 	if ($path[strlen($path) - 1] != '/') $path .= '/';
 	elseif ($path[strlen($path) - 1] != '\\') $path .= '\\';
+        if(!isset($text_domains[$domain]))
+            $text_domains[$domain]= new stdClass;
 	$text_domains[$domain]->path = $path;
 }
 

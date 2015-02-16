@@ -50,8 +50,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
-"브라우저가 최신 상태입니다. 이러한 업데이트, 무료 및 우수한 브라우저 중 하나"
-"를 다운로드하십시오:"
+"지금 사용하고 계신 브라우저는 오래되었습니다. 최신 버전으로 업데이트하거나, 새로운 무료 브라우저"
+"를 다운로드해 보십시오:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -67,7 +67,7 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
-"이것은 더 많은 보안이, 더 빠른 속도, 더 편안하고  그리고 더 재미입니다. <!-- "
+"최신 브라우저는 더 안전하고, 더 빠르며, 더 편안하고 재미있습니다. <!-- "
 "%s %s %s %s -->"
 
 #: update-browser.php:122 update-browser.php:141
@@ -98,8 +98,8 @@ msgid ""
 "Newer browsers protect you better against scams, viruses, trojans, phishing "
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"새 브라우저는 사기, 바이러스, 트로이 목마, 피싱 및 기타 위협으로부터 더 나은 "
-"방법으로 당신을 보호합니다. 이것은 현재 브라우저에서 수리 보안 구멍을하고 사"
+"최신 브라우저는 사기, 바이러스, 트로이 목마, 피싱 및 기타 위협으로부터 더 나은 "
+"방법으로 당신을 보호합니다. 현재 브라우저의 보안 취약점을 보완하고 사"
 "용자의 개인 정보를 보호합니다!"
 
 #: update-browser.php:181
