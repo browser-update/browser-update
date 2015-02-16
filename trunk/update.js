@@ -1,18 +1,17 @@
 //browser-update.org notification script, <browser-update.org>
-//Copyright (c) 2007-2014, MIT Style License <browser-update.org/LICENSE.txt>
+//Copyright (c) 2007-2015, MIT Style License <browser-update.org/LICENSE.txt>
 //It is RECOMMEDED to directly link to this file and not to use a local copy
 //because we update and maintain the detection code
 var $buo = function(op,test) {
-var jsv=14;
+var jsv=17;
 var n = window.navigator,b;
 this.op=op||{};
-//options
-this.op.l = op.l||n["language"]||n["userLanguage"]||document.documentElement.getAttribute("lang")||"en";
+//options DerGer4etZ4elt!
+this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:11,f:28,o:12.1,s:7,n:20,c:32};
-//this.op.vsdefault = {i:8,f:10,o:12,s:5,n:10};
-this.op.vsdefault = {i:8,f:23,o:12,s:5.2,n:12,c:28};
-this.op.vsmin={i:7,f:5,o:12,s:5,n:10,c:28};
+this.op.vsakt = {i:11,f:35,o:12.1,s:8,n:20,c:40};
+this.op.vsdefault = {i:9,f:33,o:12,s:5.2,n:12,c:38};
+this.op.vsmin={i:7,f:5,o:12,s:5.1,n:12};
 var myvs=op.vs||{};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt) {
@@ -27,9 +26,10 @@ if (op.reminder<0.1 || op.reminder===0)
     this.op.reminder=0;
 else
     this.op.reminder=op.reminder||24;
-
+this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
+this.op.onclose = op.onclose||function(o){};
 this.op.url= op.url||"http://browser-update.org/update-browser.html#"+jsv+"@"+(location.hostname||"x");
 if (op.l)
 	this.op.url= op.url||"http://browser-update.org/"+ll+"/update-browser.html#"+jsv+"@"+(location.hostname||"x");
@@ -39,21 +39,17 @@ this.op.newwindow=(op.newwindow!==false);
 this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
-
-
-if (op.exp || (ll==="en" && !this.op.test && Math.round(Math.random()*200)<1)) { //test new script
-     var e = document.createElement("script");
-     e.setAttribute("type", "text/javascript");
-     e.setAttribute("src", "//browser-update.org/updatex.js");
-     document.body.appendChild(e);
-     return;
+/*
+if (op.exp && !this.op.test  && Math.round(Math.random()*100)<1) {
+    var ix = new Image();
+    ix.src="//browser-update.org/uas.php";
 }
-
+*/
 
 function getBrowser() {
     var n,v,t,ua = navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
@@ -102,17 +98,21 @@ function getBrowser() {
 }
 
 this.op.browser=getBrowser();
-if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.donotnotify!==false || document.cookie.indexOf("browserupdateorg=pause")>-1 || this.op.browser.v>this.op.vs[this.op.browser.n]))
+if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || this.op.browser.v>this.op.vs[this.op.browser.n]))
     return;
 
 
 if (!this.op.test  && Math.round(Math.random()*100)<1) {
     var i = new Image();
-    i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
+    i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
+}
+
+function setCookie(hours) {
+    var d = new Date(new Date().getTime() +1000*3600*hours);
+    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
 if (this.op.reminder>0) {
-    var d = new Date(new Date().getTime() +1000*3600*this.op.reminder);
-    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+    setCookie(this.op.reminder);
 }
 
 var languages = "xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl";
@@ -154,7 +154,7 @@ else if (ll=="sl")
 else if (ll=="ru")
     t = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
 else if (ll=="id")
-    t = 'Browser Anda (% s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>';
+    t = 'Browser Anda (%s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>';
 else if (ll=="uk")
     t = 'Ваш браузер (%s) <b>застарів</b>. Він <b>уразливий</b> й може <b>не відображати всі можливості</b> на цьому й інших сайтах. <a%s>Дізнайтесь, як оновити Ваш браузер</a>';
 else if (ll=="ko")
@@ -198,6 +198,13 @@ else if (ll=="tr")
     t='Tarayıcınız (%s) <b>güncel değil</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. <a%s>Tarayıcınızı nasıl güncelleyebileceğinizi öğrenin</a>';
 else if (ll=="ro")
     t='Browser-ul (%s) tau este <b>invechit</b>. Detine <b>probleme de securitate</b> cunoscute si poate <b>sa nu afiseze corect</b> toate elementele acestui si altor site-uri. <a%s>Invata cum sa-ti actualizezi browserul.</a>';
+else if (ll=="bg")
+    t='Вашият браузър (%s) <b>не е актуален</b>. Известно е, че има <b>пропуски в сигурността</b> и може <b>да не покаже правилно</b> този или други сайтове. <a%s>Научете как да актуализирате браузъра си</a>.';
+else if (ll=="el")
+	t = 'Αυτός ο ιστότοπος σας υπενθυμίζει: Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>.\
+	<a%s>Ενημερώστε το πρόγραμμα περιήγησής σας</a> για μεγαλύτερη ασφάλεια και άνεση σε αυτήν την ιστοσελίδα.';
+
+
 if (op.text)
     t = op.text;
 if (op["text_"+ll])
@@ -242,6 +249,7 @@ div.onclick=function(){
         window.open(me.op.url,"_blank");
     else
         window.location.href=me.op.url;
+    setCookie(this.op.reminderClosed);
     me.op.onclick(me.op);
     return false;
 };
@@ -259,14 +267,19 @@ catch(e) {}
 var hm=document.getElementsByTagName("html")[0]||document.body;
 this.op.bodymt = hm.style.marginTop;
 hm.style.marginTop = (div.clientHeight)+"px";
-document.getElementById("buorgclose").onclick = function(e) {
-    var e = e || window.event;
-    if (e.stopPropagation) e.stopPropagation();
-    else e.cancelBubble = true;
-    me.op.div.style.display="none";
-    hm.style.marginTop = me.op.bodymt;
-    return true;
-};
+(function(me) {
+            document.getElementById("buorgclose").onclick = function(e) {
+                var e = e || window.event;
+                if (e.stopPropagation) e.stopPropagation();
+                else e.cancelBubble = true;
+                me.op.div.style.display = "none";
+                hm.style.marginTop = me.op.bodymt;
+                me.op.onclose(me.op);
+                setCookie(this.op.reminderClosed);
+                return true;
+            };
+})(me);
+
 op.onshow(this.op);
 
 };

@@ -56,8 +56,8 @@
                 <a href="/ja/<?php echo $curfile?>">japanese</a>
                 <a href="/sl/<?php echo $curfile?>">slovenščina</a>
                 <a href="/ru/<?php echo $curfile?>">Русский</a>
-                <a href="/id/<?php echo $curfile?>">Bahasa Indonesia</a>
-                <a href="/kr/<?php echo $curfile?>">한국어</a>
+                <a href="/ko/<?php echo $curfile?>">한국어</a>
+                <a href="/id/<?php echo $curfile?>">Bahasa Indonesia</a>                
                 <a href="/uk/<?php echo $curfile?>">Українська</a>
                 <a href="/rm/<?php echo $curfile?>">rumantsch</a>
                 <a href="/da/<?php echo $curfile?>">dansk</a>
@@ -72,9 +72,12 @@
                 <a href="/nb/<?php echo $curfile?>">Norsk bokmål</a>
                 <a href="/zh/<?php echo $curfile?>">中文</a>
                 <a href="/fi/<?php echo $curfile?>">suomi</a>
-				<a href="/tr/<?php echo $curfile?>">Türkçe</a>
-				<a href="/ro/<?php echo $curfile?>">Română</a>
-                <a href="contact.html">translate...</a>
+                <a href="/tr/<?php echo $curfile?>">Türkçe</a>
+                <a href="/ro/<?php echo $curfile?>">Română</a>
+                <a href="/hr/<?php echo $curfile?>">hrvatski</a>
+                <a href="/bg/<?php echo $curfile?>">български</a>
+                <a href="/el/<?php echo $curfile?>">Ελληνικά</a>                
+                <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>
 
