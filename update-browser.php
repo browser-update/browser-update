@@ -132,47 +132,8 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$
 </div>
 
 <?php
-$shown=0;
-$noad=false;
-if (!$noad && mt_rand(0, 100)<70) {
-    $shown=1;
-?>
-    <div class="adc">
-        <div class="adt"><?php echo T_("Advertisement");?></div>  
-        <div class="ad" style="width:336px; height:280px">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- BU-Large rect Image -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:336px;height:280px"
-                 data-ad-client="ca-pub-6685985339905097"
-                 data-ad-slot="4807514388"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>    
-        </div>
-    </div>
-<?php }
-if (!$shown && !$noad) {
-    ?>
-    <div id="sky">
-        <div class="adt"><?php echo T_("Advertisement");?></div>
-        <div class="ad">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- BU-Large-Image-Sky -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:160px;height:600px"
-                 data-ad-client="ca-pub-6685985339905097"
-                 data-ad-slot="6284247583"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script> 
-        </div>
-    </div>
-<?php
-}
-?>       
-
-<?php
+include("ads.php");
+ 
 if (false) {
     //for translations
 ?>

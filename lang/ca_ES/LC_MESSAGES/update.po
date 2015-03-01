@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-05 15:22+0100\n"
+"PO-Revision-Date: 2015-02-16 11:24+0100\n"
 "Last-Translator: Pau Argelaguet <pau@paelladebits.cat>\n"
 "Language-Team: \n"
 "Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: header.php:5
 msgid "Update your Browser"
@@ -25,11 +25,11 @@ msgstr "Actualitza el Navegador"
 msgid "An initiative by web designers to inform users about browser-updates"
 msgstr ""
 "Una iniciativa de dissenyadors web per informar als usuaris sobre les "
-"actualitzacoins del navegador"
+"actualitzacions del navegador"
 
 #: header.php:30
 msgid "The Project"
-msgstr ""
+msgstr "El Projecte"
 
 #: header.php:33
 msgid "Update Browser"
@@ -52,6 +52,8 @@ msgid ""
 "Your browser is out-of-date. Please download one of these up-to-date, free "
 "and excellent browsers:"
 msgstr ""
+"El vostre navegador no està actualitzat. Descarregui un d'aquests "
+"excel·lents navegadors, gratuïts i actualitzats:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
@@ -59,7 +61,7 @@ msgstr "No disponible pel teu Sistema"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
-msgstr "Siusplau, tria un altre navegador"
+msgstr "Si us plau, tria un altre navegador"
 
 #: update-browser.php:114
 #, php-format
@@ -67,10 +69,12 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
+"Per a més <a href=\"%s\">seguretat</a>, <a href=\"%s\">velocitat</a>, <a "
+"href=\"\"\"%s\">comoditat</a> i <a href=\"%s\">diversió</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
-msgstr ""
+msgstr "Publicitat"
 
 #: update-browser.php:162
 #, php-format
@@ -85,7 +89,7 @@ msgstr ""
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Per què necessito un navegador actualitzat?"
 
 #: update-browser.php:177
 msgid "Security"
@@ -138,7 +142,7 @@ msgid ""
 "This website is an initiative by webdesigners, webmasters and bloggers who "
 "want to bring the web further and help their visitors."
 msgstr ""
-"Aquest lloc webés una iniciativa de dissenyadors web, webmasters i bloggers "
+"Aquest lloc web és una iniciativa de dissenyadors web, webmasters i bloggers "
 "que volen ajudar als seus visitants i tenir un web millor."
 
 #: update-browser.php:203
@@ -153,11 +157,11 @@ msgstr ""
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
-msgstr ""
+msgstr "Més informació sobre el projecte Browser-Update.org"
 
 #: update-browser.php:211
 msgid "\"I'm not able to update my browser\""
-msgstr "\"No poc actualitzar el meu navegador\""
+msgstr "\"No puc actualitzar el meu navegador\""
 
 #: update-browser.php:212
 msgid ""

@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-12-09 16:07+0100\n"
+"Last-Translator: thomas <jossele@gmx.de>\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "Ενημερώστε τον φυλλομετρητή σας"
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Μια πρωτοβουλία από σχεδιαστές ιστοσελίδων με στόχο την ενημέρωση των "
+"χρηστών σχετικά με αναβαθμίσεις προγραμμάτων περιήγησης"
+
+#: header.php:30
+msgid "The Project"
+msgstr "Το έργο"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "Ενημέρωση φυλλομετρητή"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+#: header.php:35
+msgid "Blog"
+msgstr "Ιστολόγιο"
+
+#: header.php:74
+msgid "Contact"
+msgstr "Επικοινωνία"
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr ""
+"Ο φυλλομετρητής σας είναι παρωχημένος. Παρακαλώ κατεβάστε δωρεάν έναν από "
+"τους παρακάτω σύγχρονους και εξαιρετικούς φυλλομετρητές."
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr "Δεν διατίθεται πιο πρόσφατη έκδοση για το σύστημά σας."
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr "Παρακαλώ επιλέξτε κάποιον άλλον φυλλομετρητή."
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr ""
+"Για μεγαλύτερη <a href=\"%s\">ασφάλεια</a>, <a href=\"%s\">ταχύτητα</a>, <a "
+"href=\"%s\">άνεση</a> and <a href=\"%s\">διασκέδαση</a>."
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "Διαφήμιση"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>. Έχει γνωστά <b>κενά "
+"ασφαλείας</b> και ενδεχομένως <b>δεν υποστηρίζει όλες τις λειτουργίες</b> "
+"αυτού του ιστότοπου ή και άλλων. <a%s>Μάθετε πώς να ενημερώσετε τον "
+"φυλλομετρητή σας</a>"
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "Γιατί χρειάζομαι έναν ενημερωμένο φυλλομετρητή;"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "Ασφάλεια"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"Οι νεότεροι φυλλομετρητές σας προστατεύουν από απάτες, ιούς, δούρειους "
+"ίππους, ηλεκτρονικό \"ψάρεμα\" και άλλες απειλές. Επιπλέον, επιδιορθώνουν "
+"κενά ασφαλείας στο πρόγραμμα περιήγησης που χρησιμοποιείτε αυτήν την στιγμή!"
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "Ταχύτητα"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "Κάθε νέα γενιά φυλλομετρητών βελτιώνει την ταχύτητα της πλοήγησης"
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "Συμβατότητα"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr ""
+"Ιστοσελίδες που χρησιμοποιούν νέες τεχνολογίες θα εμφανίζονται πιο σωστά"
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "Άνεση &amp; καλύτερη εμπειρία"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"Με νέα χαρακτηριστικά, προσθήκες και καλύτερη παραμετροποίηση, θα έχετε μια "
+"πιο άνετη εμπειρία κατά την πλοήγησή σας στο διαδίκτυο"
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "Γιατί αυτός ο ιστότοπος;"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"Αυτή η ιστοσελίδα είναι μια πρωτοβουλία από σχεδιαστές ιστοσελίδων, "
+"διαχειριστές ιστότοπων και συγγραφείς ιστολογίων που επιθυμούν την προώθηση "
+"του διαδικτύου και την υποστήριξη των επισκεπτών τους."
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"Οι παρωχημένοι φυλλομετρητές αποτελούν <b>απειλή για την ασφάλεια</b> και "
+"<b>παρεμποδίζουν την πρόοδο του διαδικτύου</b> λόγω των περιορισμένων "
+"δυνατοτήτων τους και των πολλών <b>σφαλμάτων λογισμικού</b> που "
+"παρουσιάζουν."
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "Περισσότερες πληροφορίες σχετικά με το έργο Browser-Update.org"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "\"Δεν μπορώ να ενημερώσω τον φυλλομετρητή μου\""
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"Σε περίπτωση που δεν μπορείτε να αντικαταστήσετε τον φυλλομετρητή σας λόγω "
+"ασυμβατότητας, εξετάστε το ενδεχόμενο να εγκαταστήσετε έναν δεύτερο "
+"φυλλομετρητή για την πλοήγηση στο διαδίκτυο και να διατηρήσετε τον "
+"προηγούμενο για λόγους συμβατότητας."
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"Αν βρίσκεστε σε έναν υπολογιστή για τον οποίο είναι υπεύθυνος ένας "
+"διαχειριστής και δεν μπορείτε να εγκαταστήσετε έναν καινούριο φυλλομετρητή, "
+"ζητήστε το από τον διαχειριστή σας."

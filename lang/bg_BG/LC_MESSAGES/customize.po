@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-customize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-10-12 18:21+0200\n"
+"Last-Translator: Iskren Ivanov <iivanov2@yahoo.com>\n"
+"Language-Team: BULGARIAN <iivanov2@yahoo.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: bg_BG\n"
+
+#: customize.php:11
+msgid "Customize and test"
+msgstr "Персонализиране и тестване"
+
+#: customize.php:14
+msgid "Test the script"
+msgstr "Тествай скрипта"
+
+#: customize.php:17
+msgid ""
+"If you open your website with <code>#test-bu</code> appended to the url, the "
+"bar will always show up."
+msgstr ""
+"Ако отворите вашия уеб сайт с <code>#test-bu</ code> добавен към URL-а, бара "
+"винаги ще се стои отгоре."
+
+#: customize.php:18
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Пример: <code>http://browser-update.org/#test-bu</code>."
+
+#: customize.php:19
+msgid ""
+"Make sure the page is properly reloaded by opening the url in an new browser "
+"tab."
+msgstr ""
+"Уверете се, че страницата се презарежда правилно като URL адреса се отваря в "
+"нов таб на браузъра."
+
+#: customize.php:22
+msgid "Options"
+msgstr "Опции"
+
+#: customize.php:25
+msgid "The following options can be passed to the script:"
+msgstr "Следните опции могат да бъдат подадени на скрипта:"
+
+#: customize.php:30
+msgid "browser versions to notify"
+msgstr "версии на браузъра, за които да се показва съобщение"
+
+#: customize.php:31
+msgid "atfer how many hours should the message reappear"
+msgstr "след колко часа би трябвало да се повтори съобщението отново"
+
+#: customize.php:32
+msgid "0 = show all the time"
+msgstr "0 = винаги се показва"
+
+#: customize.php:33
+msgid "callback function after the bar has appeared"
+msgstr ""
+"функция, която да се извиква след като лентата със съобщението (бара) се "
+"появи"
+
+#: customize.php:35
+msgid "set a language for the message, e.g. \"en\""
+msgstr "настройка за езика на съобщението, напр. \"bg\""
+
+#: customize.php:36
+msgid "overrides the default detection"
+msgstr "замяна на детекцията по подразбиране"
+
+#: customize.php:37
+msgid "true = always show the bar (for testing)"
+msgstr "true = бара се показва винаги отгоре (за тестове)"
+
+#: customize.php:38
+msgid "custom notification html text"
+msgstr "html текст за потребителско съобщение"
+
+#: customize.php:39
+msgid "open link in new window/tab"
+msgstr "отваряне на линка в нов прозорец/таб"
+
+#: customize.php:62
+msgid "Edit the CSS"
+msgstr "Редактиране на CSS"
+
+#: customize.php:65
+msgid "The following CSS rules are applied by the script. "
+msgstr "Следните CSS стилове се използват в скрипта."
+
+#: customize.php:66
+msgid ""
+"You can overwrite them in your own CSS. To do so you need to add some more "
+"specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgstr ""
+"Можете да ги презапише в свой собствен CSS. За да направите това, което "
+"трябва да добавите малко повече специфичност на CSS стиловете: например "
+"<code>body .buorg {font-size:20px}</code>"

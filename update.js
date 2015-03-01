@@ -46,8 +46,8 @@ if (op.exp && !this.op.test  && Math.round(Math.random()*100)<1) {
 }
 */
 
-function getBrowser() {
-    var n,v,t,ua = navigator.userAgent;
+function getBrowser(ua_str) {
+    var n,v,t,ua=ua_str||navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
     if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
@@ -69,7 +69,7 @@ function getBrowser() {
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
     
     //do not notify firefox ESR
-    if (n=="f" && Math.round(v)==24)
+    if (n=="f" && (Math.round(v)==24 || Math.round(v)==31))
         donotnotify="ESR";
     //do not notify opera 12 on linux since it is the latest version
     if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12) 
@@ -249,7 +249,7 @@ div.onclick=function(){
         window.open(me.op.url,"_blank");
     else
         window.location.href=me.op.url;
-    setCookie(this.op.reminderClosed);
+    setCookie(me.op.reminderClosed);
     me.op.onclick(me.op);
     return false;
 };
@@ -275,7 +275,7 @@ hm.style.marginTop = (div.clientHeight)+"px";
                 me.op.div.style.display = "none";
                 hm.style.marginTop = me.op.bodymt;
                 me.op.onclose(me.op);
-                setCookie(this.op.reminderClosed);
+                setCookie(me.op.reminderClosed);
                 return true;
             };
 })(me);

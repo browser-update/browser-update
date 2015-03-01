@@ -36,7 +36,7 @@ $q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, la
     $jsv,
     $tv,
     mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),
-    mysql_real_escape_string($_GET["vs"])
+    mysql_real_escape_string("inv:".$_GET["vs"].",vs:".$_GET["vs"])
 );
 
 mysql_query($q) 
