@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-customize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-09-26 23:05+0200\n"
+"Last-Translator: thomas <jossele@gmx.de>\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: customize.php:11
+msgid "Customize and test"
+msgstr "Προσαρμογή και έλεγχος"
+
+#: customize.php:14
+msgid "Test the script"
+msgstr "Δοκιμή του κώδικα"
+
+#: customize.php:17
+msgid ""
+"If you open your website with <code>#test-bu</code> appended to the url, the "
+"bar will always show up."
+msgstr ""
+"Αν μεταβείτε στην ιστοσελίδα σας και το URL τελειώνει σε <code>#test-bu</"
+"code>, τότε η μπάρα θα εμφανίζεται πάντα."
+
+#: customize.php:18
+msgid "Example: <code>http://browser-update.org/#test-bu</code>."
+msgstr "Παράδειγμα: <code>http://browser-update.org/#test-bu</code>."
+
+#: customize.php:19
+msgid ""
+"Make sure the page is properly reloaded by opening the url in an new browser "
+"tab."
+msgstr ""
+"Σιγουρευτείτε ότι η σελίδα έχει φορτωθεί κανονικά, ανοίγοντας το URL σε μια "
+"καινούρια καρτέλα."
+
+#: customize.php:22
+msgid "Options"
+msgstr "Παράμετροι"
+
+#: customize.php:25
+msgid "The following options can be passed to the script:"
+msgstr "Ο κώδικας μπορεί να δεχτεί τα παρακάτω ορίσματα:"
+
+#: customize.php:30
+msgid "browser versions to notify"
+msgstr "εκδόσεις φυλλομετρητών προς ενημέρωση"
+
+#: customize.php:31
+msgid "atfer how many hours should the message reappear"
+msgstr "μετά από πόσες ώρες θα ξαναεμφανιστεί το μήνυμα"
+
+#: customize.php:32
+msgid "0 = show all the time"
+msgstr "0 = συνεχής εμφάνιση"
+
+#: customize.php:33
+msgid "callback function after the bar has appeared"
+msgstr "συνάρτηση που καλείται μετά την εμφάνιση της μπάρας"
+
+msgid "callback function if bar was clicked"
+msgstr "συνάρτηση που καλείται αν η μπάρα πατηθεί"
+
+#: customize.php:35
+msgid "set a language for the message, e.g. \"en\""
+msgstr "καθορισμός γλώσσας για το μήνυμα, π.χ. \"el\""
+
+#: customize.php:36
+msgid "overrides the default detection"
+msgstr "υπερκαλύπτει τον προεπιλεγμένο εντοπισμό"
+
+#: customize.php:37
+msgid "true = always show the bar (for testing)"
+msgstr "true = συνεχής εμφάνιση (για δοκιμές)"
+
+#: customize.php:38
+msgid "custom notification html text"
+msgstr "προσαρμοσμένο HTML κείμενο ειδοποίησης"
+
+msgid "custom notification text for language \"xx\""
+msgstr "προσαρμοσμένο κείμενο ειδοποίησης για την γλώσσα \"xx\""
+
+msgid "e.g. text_de for german and text_it for italian"
+msgstr "π.χ. text_de (Γερμανικά) ή text_it (Ιταλικά)"
+
+#: customize.php:39
+msgid "open link in new window/tab"
+msgstr "άνοιγμα συνδέσμου σε νέο παράθυρο/καρτέλα"
+
+#: customize.php:62
+msgid "Edit the CSS"
+msgstr "Επεξεργασία του CSS"
+
+#: customize.php:65
+msgid "The following CSS rules are applied by the script. "
+msgstr "Οι παρακάτω κανόνες CSS εφαρμόζονται από τον κώδικα."
+
+#: customize.php:66
+msgid ""
+"You can overwrite them in your own CSS. To do so you need to add some more "
+"specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
+msgstr ""
+"Μπορείτε να τους υπερκαλύψετε στο δικό σας αρχείο CSS. Για τον σκοπό αυτό, "
+"χρειάζεται να εξειδικεύσετε περισσότερο τους κανόνες: π.χ. <code>body .buorg "
+"{font-size:20px}</code>"

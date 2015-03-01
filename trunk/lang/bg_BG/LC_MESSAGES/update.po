@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-10-12 18:21+0200\n"
+"Last-Translator: Iskren Ivanov <iivanov2@yahoo.com>\n"
+"Language-Team: BULGARIAN <iivanov2@yahoo.com>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "Актуализирай браузъра си"
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Инициатива на уеб дизайнери за информиране на потребителите за нуждата от "
+"актуализация на браузъра"
+
+#: header.php:30
+msgid "The Project"
+msgstr "Проектът"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "Обновяване на браузъра"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Статистика"
+
+#: header.php:35
+msgid "Blog"
+msgstr "Блог"
+
+#: header.php:74
+msgid "Contact"
+msgstr "За контакти"
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr ""
+"Вашият браузър не е актуален. Моля, изтеглете последната версия на един от "
+"следните актуални, безплатни и отлични браузъри:"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr "Най-новата  версия не е налична за Вашата система."
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr "Моля, изберете друг браузър."
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr ""
+"За повече <a href=\"%s\">сигурност</a>, <a href=\"%s\">бързина</a>, <a href="
+"\"%s\">комфорт</a> и <a href=\"%s\">забавление</a>."
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "Реклама"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Вашият браузър (%s) <b>не е актуален</b>. Известно е, че има <b>пропуски в "
+"сигурността</b> и може <b>да не покаже правилно</b> този или други сайтове. "
+"<a%s>Научете как да актуализирате браузъра си</a>."
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "Защо се нуждая от актуален браузър?"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "Сигурност"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"По-новите версии на браузърите Ви защитават по-добре срещу измами, вируси, "
+"троянци, фишинг и други заплахи. Те също нямат пропуските в сигурността, "
+"които има във Вашата версия на браузъра."
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "Бързина"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "Всяка нова версия на браузърите подобрява скоростта."
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "Съвместимост"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "Уебсайтове, които използват нови технологии, ще се показват коректно."
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "Комфорт и по-добро сърфиране"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"С нови възможности, добавки и по-добри възможности за персонализиране, Вие "
+"ще имате по-комфортно уеб-изживяване."
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "Защо този уеб сайт?"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"Този уебсайт е инициатива на уебдизайнери, собственици на сайтове и блогъри, "
+"които искат да подобряват Интернет и да помагат на потребителите."
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"Остарелите версии на браузърите са <b>заплаха за сигурността</b> и <b>спират "
+"напредъка на Интернет</b>, поради техните ограничени възможности и много "
+"<b>бъгове</b>."
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "Повече информация относно проекта Browser-Update.org"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "\"Не мога да си актуализирам браузъра\""
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"Ако не може да актуализирате браузъра си, поради това, че няма по-нова "
+"версия, за Вашата операционна система, може да инсталирате друг браузър и да "
+"имате два, като по-този начин ще може да ползвате новия и стария, когато се "
+"налага."
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"Ако ползвате компютър, който се управлява от администратор и не можете да "
+"актуализирате браузъра си, обърнете се към администратора, за да Ви помогне."

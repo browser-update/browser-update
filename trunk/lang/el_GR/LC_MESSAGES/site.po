@@ -1,0 +1,407 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-site\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"PO-Revision-Date: 2014-09-26 23:03+0200\n"
+"Last-Translator: thomas <jossele@gmx.de>\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: contact.php:8
+msgid "Contact"
+msgstr "Επικοινωνία"
+
+#: index.php:33
+msgid ""
+"This service is an  opportunity to inform your visitors  unobtrusively to "
+"switch to a newer browser."
+msgstr ""
+"Η υπηρεσία αυτή αποτελεί μια ευκαιρία να ενημερώσετε διακριτικά τους "
+"επισκέπτες σας προκειμένου να χρησιμοποιήσουν ένα πιο σύγχρονο πρόγραμμα "
+"περιήγησης."
+
+#: index.php:37
+msgid ""
+"Many internet users are still using very old, out-dated browsers – most of "
+"them for no actual reason. Switching to an newer browser is better for them "
+"and for you as a webdesigner."
+msgstr ""
+"Πολλοί χρήστες στο διαδίκτυο συνεχίζουν να χρησιμοποιούν πολύ παλιούς και "
+"ξεπερασμένους φυλλομετρητές - οι περισσότεροι από αυτούς χωρίς συγκεκριμένο "
+"λόγο. Η μετάβαση σε ένα πιο καινούριο πρόγραμμα περιήγησης έχει οφέλη τόσο "
+"για αυτούς όσο και για εσάς ως σχεδιαστή ιστοσελίδων."
+
+#: index.php:46
+msgid "How it works"
+msgstr "Πώς λειτουργεί"
+
+#: index.php:50
+#, php-format
+msgid ""
+"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr ""
+"Εισάγετε τον σύντομο κώδικα <a href=\"%s\">ειδοποίησης</a> σε JavaScript "
+"στην ιστοσελίδα σας"
+
+#: index.php:53
+msgid ""
+"Visitors with out-dated browser will be informed by a little, undisturbing "
+"bar, that his browser is not up-to-date and it is recommended to update."
+msgstr ""
+"Οι επισκέπτες που έχουν παλαιότερα προγράμματα περιήγησης θα ενημερωθούν με "
+"μια μικρή διακριτική μπάρα ότι ο φυλλομετρητής τους δεν είναι ενημερωμένος "
+"και ότι συνιστάται να τον αναβαθμίσουν."
+
+#: index.php:56
+msgid "Test the notification bar!"
+msgstr "Δοκιμάστε την μπάρα ειδοποίησης!"
+
+#: index.php:58
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>. Έχει γνωστά <b>κενά "
+"ασφαλείας</b> και ενδεχομένως <b>δεν υποστηρίζει όλες τις λειτουργίες</b> "
+"αυτού του ιστότοπου ή και άλλων. <a%s>Μάθετε πώς να ενημερώσετε τον "
+"φυλλομετρητή σας</a>"
+
+#: index.php:65
+#, php-format
+msgid ""
+"By clicking the bar, he will get to <a href=\"%s\">an info page with "
+"arguments why to change/update and some browser choices</a>."
+msgstr ""
+"Πατώντας την μπάρα, θα μεταβεί σε <a href=\"%s\">μια ενημερωτική σελίδα με "
+"επιχειρήματα υπέρ της αντικατάστασης/αναβάθμισης και μερικές εναλλακτικές "
+"για προγράμματα περιήγησης</a>."
+
+#: index.php:69
+msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgstr ""
+"Σε περίπτωση που ο επισκέπτης αγνοήσει την συμβουλή, η ειδοποίηση δεν θα "
+"ξαναεμφανιστεί για κάποιο χρονικό διάστημα."
+
+#: index.php:72
+msgid "Advantages and features"
+msgstr "Πλεονεκτήματα και χαρακτηριστικά"
+
+#: index.php:75
+msgid "Subtle"
+msgstr "Διακριτικό"
+
+#: index.php:76
+msgid ""
+"The user will be notified only once, and won't be bothered any more. The "
+"notification bar is very small and won't affect the browsing experience "
+"negatively."
+msgstr ""
+"Ο χρήστης θα ειδοποιηθεί μόνο μια φορά και δεν πρόκειται να ενοχληθεί "
+"περισσότερο. Η μπάρα ειδοποίησης είναι πολύ μικρή και δεν θα επηρεάσει "
+"αρνητικά την πλοήγηση."
+
+#: index.php:80
+msgid "Informative"
+msgstr "Ενημερωτικό"
+
+#: index.php:81
+msgid ""
+"Tell the users that they are using an out-dated browser and that your "
+"website looks even better with a newer one."
+msgstr ""
+"Ενημερώστε τους χρήστες ότι χρησιμοποιούν ένα παρωχημένο φυλλομετρητή και "
+"ότι η ιστοσελίδα σας εμφανίζεται πολύ καλύτερα με ένα σύγχρονο πρόγραμμα "
+"περιήγησης."
+
+#: index.php:85
+msgid "Idealistic"
+msgstr "Ιδεαλιστικό"
+
+#: index.php:86
+msgid "Help evolve the web!"
+msgstr "Βοηθήστε την ανάπτυξη του διαδικτύου!"
+
+#: index.php:87
+msgid "Support the standards-based web!"
+msgstr "Υποστηρίξτε το διαδίκτυο που βασίζεται σε πρότυπα!"
+
+#: index.php:88
+msgid "Support Open Source software projects!"
+msgstr "Υποστηρίξτε έργα λογισμικού ανοιχτού κώδικα!"
+
+#: index.php:89
+msgid "Help your visitors!"
+msgstr "Βοηθήστε τους επισκέπτες σας!"
+
+#: index.php:90
+msgid "Help increase security awareness!"
+msgstr "Ενισχύστε την ευαισθητοποίηση σε θέματα ασφαλείας!"
+
+#: index.php:91
+msgid "Support your favorite webbrowser!"
+msgstr "Προωθήστε τον αγαπημένο σας φυλλομετρητή!"
+
+#: index.php:94
+msgid "Low maintenance and up-to-date"
+msgstr "Ελάχιστης συντηρησιμότητας και πάντοτε ενημερωμένο"
+
+#: index.php:95
+msgid ""
+"If there come more browser versions which won't be supported by the vendor "
+"in the future, exhibit security gaps or have been very old for a long time "
+"we are going to add them to our list automatically."
+msgstr ""
+"Αν προκύψουν μελλοντικά και άλλες εκδόσεις φυλλομετρητή οι οποίες δεν θα "
+"υποστηρίζονται από τον προμηθευτή, παρουσιάζουν κενά ασφαλείας ή έχουν "
+"ξεπεραστεί με την πάροδο του χρόνου, τότε αυτόματα θα τις προσθέσουμε στην "
+"λίστα μας."
+
+#: index.php:100
+msgid "Customizable"
+msgstr "Με δυνατότητα προσαρμογής"
+
+#: index.php:101
+msgid ""
+"You can customize the browsers and versions to notify.<br/> In future "
+"releases you can also customize the text that should be shown, the frequency "
+"of the bar to appear and many other things."
+msgstr ""
+"Μπορείτε να καθορίσετε τους φυλλομετρητές και τις εκδόσεις για τις οποίες θα "
+"εμφανίζεται η ειδοποίηση.<br/> Σε μελλοντικές εκδόσεις, μπορείτε επίσης να "
+"προσαρμόσετε το κείμενο της ειδοποίησης, την συχνότητα εμφάνισης και πολλά "
+"άλλα."
+
+#: index.php:106
+msgid "Localized"
+msgstr "Μεταφρασμένο"
+
+#: index.php:107
+msgid "The message is automatically displayed in the user's language."
+msgstr "Το μήνυμα εμφανίζεται αυτόματα στην γλώσσα του χρήστη."
+
+#: index.php:112
+msgid "Install notification on your site"
+msgstr "Ενεργοποιήστε την δυνατότητα ειδοποίησης στην ιστοσελίδα σας"
+
+#: index.php:114
+msgid ""
+"Here you can get the code to include in your website. Just include it "
+"anywhere in the source of your page."
+msgstr ""
+"Από εδώ μπορείτε να αντιγράψετε τον κώδικα για να τον ενσωματώσετε στην "
+"ιστοσελίδα σας. Απλώς εισάγετέ τον οπουδήποτε στον πηγαίο κώδικα της σελίδα "
+"σας."
+
+#: index.php:119
+msgid "Following browsers will be notified:"
+msgstr "Οι παρακάτω φυλλομετρητές θα εμφανίσουν την ειδοποίηση:"
+
+#: index.php:166
+msgid ""
+"Google Chrome will automatically itself and is therefor always up to date"
+msgstr ""
+"Ο Google Chrome αναβαθμίζεται αυτόματα και επομένως παραμένει πάντα "
+"ενημερωμένος."
+
+#: index.php:172
+msgid ""
+"<b>Notify recommended set of browsers and adjust it automatically over time:"
+"</b>If a browser is no longer supported by the vendor or has security "
+"vulnerabilities, it will be added to the set."
+msgstr ""
+"<b>Ενημέρωση για το προτεινόμενο σύνολο φυλλομετρητών και αυτόματη "
+"προσαρμογή στην πορεία του χρόνου:</b> Αν κάποιο πρόγραμμα περιήγησης δεν "
+"υποστηρίζεται πλέον από τον προμηθευτή ή εμφανίσει κενά ασφαλείας, θα "
+"προστεθεί στην υπάρχουσα λίστα."
+
+#: index.php:177
+msgid "Your Code"
+msgstr "Ο κώδικάς σας"
+
+#: index.php:195
+#, php-format
+msgid ""
+"You can <a href=\"%s\">customize</a> the style of the message, the text and "
+"other options."
+msgstr ""
+"Μπορείτε να <a href=\"%s\">προσαρμόσετε</a> την εμφάνιση του μηνύματος, το "
+"κείμενο και άλλες παραμέτρους."
+
+#: index.php:201
+msgid "You may also use third-party plugins for: "
+msgstr ""
+"Προαιρετικά, μπορείτε να χρησιμοποιήσετε πρόσθετα εργαλεία από τρίτους για:"
+
+#: index.php:228
+msgid "Why you should tell users to update"
+msgstr "Γιατί θα πρέπει να προτρέψετε τους χρήστες σε αναβάθμιση"
+
+#: index.php:231
+msgid "Reduced development costs and time"
+msgstr "Περιορισμός κόστους και χρόνου ανάπτυξης "
+
+#: index.php:232
+msgid ""
+"Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr ""
+"Η βελτιστοποίηση ιστοσελίδων για παλιούς φυλλομετρητές είναι χρονοβόρα και "
+"συνεπώς κοστίζει."
+
+#: index.php:235
+msgid "Webdesign technologies and features"
+msgstr "Τεχνολογίες σχεδίασης ιστοσελίδων και λειτουργίες"
+
+#: index.php:236
+msgid ""
+"There are all these great new web development standards and they are "
+"supported by modern browsers... but you may not use them."
+msgstr ""
+"Είναι διαθέσιμα όλα αυτά τα καταπληκτικά πρότυπα ανάπτυξης ιστοσελίδων και "
+"υποστηρίζονται από τους σύγχρονους φυλλομετρητές... αλλά δεν μπορείτε να τα "
+"αξιοποιήσετε."
+
+#: index.php:238
+msgid ""
+"Newer browsers let you use more features and new technologies (CSS3, SVG, "
+"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
+"resulting in a better browsing experience for your users."
+msgstr ""
+"Οι νεότεροι φυλλομετρητές επιτρέπουν την χρήση περισσότερων δυνατοτήτων και "
+"νέων τεχνολογιών (CSS3, SVG, HTML5, RSS, αυτόματα στοιχεία CSS, προσαρμόσιμη "
+"διάταξη σελίδας) στην ιστοσελίδα σας, παρέχοντας μια καλύτερη εμπειρία στους "
+"χρήστες κατά την πλοήγησή τους."
+
+#: index.php:241
+msgid "Security and benefits for the user"
+msgstr "Ασφάλεια και οφέλη για τον χρήστη"
+
+#: index.php:242
+#, php-format
+msgid ""
+"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
+"\">update page</a>. The security-threats of outdates browsers are listed in "
+"this <a href=\"%s\">paper</a>."
+msgstr ""
+"Πλήθος πλεονεκτημάτων: ασφάλεια, ταχύτητα, δυνατότητες, ... Ανατρέξτε στην "
+"<a href=\"%s\">σελίδα αναβάθμισης</a>. Οι απειλές για την ασφάλεια που "
+"χαρακτηρίζουν τους παρωχημένους φυλλομετρητές παρατίθενται σε αυτό το <a "
+"href=\"%s\">έγγραφο</a>."
+
+#: index.php:245
+msgid "The web has to evolve..."
+msgstr "Το διαδίκτυο πρέπει να εξελιχθεί..."
+
+#: index.php:247
+msgid "But that's only possible if the browsers also evolve."
+msgstr ""
+"Ωστόσο, κάτι τέτοιο είναι εφικτό μόνο αν τα προγράμματα περιήγησης "
+"εξελιχθούν και αυτά."
+
+#: index.php:248
+msgid ""
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
+"something new in the history of the web. If we take no action now, we will "
+"have to code websites like in 2001 even if it is 2011."
+msgstr ""
+"Το μεγάλο μερίδιο αγοράς ενός φυλλομετρητή ηλικίας 8 ετών (Internet Explorer "
+"6) είναι κάτι το πρωτοφανές στην ιστορία του διαδικτύου. Αν δεν αναλάβουμε "
+"δράση τώρα, θα είμαστε αναγκασμένοι να σχεδιάζουμε ιστοσελίδες όπως το 2001 "
+"ακόμη και το έτος 2011."
+
+#: index.php:252
+msgid "Users don't oppose updating..."
+msgstr "Οι χρήστες δεν είναι αντίθετοι με την αναβάθμιση..."
+
+#: index.php:253
+msgid ""
+"... they often just do not appreciate the need to update or the existence of "
+"the \"webbrowser\" as a software at all."
+msgstr ""
+"... απλώς πολλές φορές δεν εκτιμούν την ανάγκη της αναβάθμισης ή την ύπαρξη "
+"του \"προγράμματος περιήγησης\" ως λογισμικό."
+
+#: index.php:256
+msgid "Help this project"
+msgstr "Βοηθήστε αυτό το έργο"
+
+#: index.php:259
+msgid "Participate!"
+msgstr "Λάβετε συμμετοχή!"
+
+#: index.php:260
+msgid ""
+"Include the notification code in your page to inform users about browser "
+"updates."
+msgstr ""
+"Εισάγετε τον κώδικα ειδοποίησης στην σελίδα σας για να ενημερώσετε τους "
+"χρήστες σχετικά με αναβαθμίσεις προγραμμάτων περιήγησης."
+
+#: index.php:263
+msgid "Spread the word!"
+msgstr "Διαδώστε το μήνυμα!"
+
+#: index.php:264
+msgid "Tell others about this initiative! In your blog, on your webpage, ..."
+msgstr ""
+"Ενημερώστε και άλλους για την πρωτοβουλία αυτή! Στο ιστολόγιό σας, στην "
+"ιστοσελίδα σας, ..."
+
+#: index.php:267
+msgid "Translate this page"
+msgstr "Μεταφράστε αυτήν την σελίδα"
+
+#: index.php:268
+msgid "Translate this page into your language."
+msgstr "Μεταφράστε αυτήν την σελίδα στην γλώσσα σας."
+
+#: stat.php:9
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+#: stat.php:18
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
+"script."
+msgstr ""
+"<strong class=\"number\">%d</strong> ιστότοποι χρησιμοποιούν τον κώδικα του "
+"Browser-Update.org."
+
+#: stat.php:22
+msgid "Browser updates"
+msgstr "Ενημερώσεις φυλλομετρητών"
+
+#: stat.php:60
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> visitors have already upgraded their "
+"browser."
+msgstr ""
+"<strong class=\"number\">%d</strong> επισκέπτες έχουν ήδη αναβαθμίσει τους "
+"φυλλομετρητές τους."
+
+#: stat.php:92
+msgid "From"
+msgstr "Από"
+
+#: stat.php:92
+msgid "To"
+msgstr "Προς"
+
+#: stat.php:92
+msgid "Amount"
+msgstr "Ποσό"
