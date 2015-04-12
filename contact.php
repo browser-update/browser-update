@@ -8,13 +8,13 @@ include("header.php");
 <h2>Translations</h2>
 <p>
 New translations of this site are always appreciated. 
-<a href="https://github.com/josselex/browser-update/wiki/How-to-Translate">Learn how to translate this page</a>.
+<a href="https://github.com/browser-update/browser-update/wiki/How-to-Translate">Learn how to translate this page</a>.
 </p>
 <h2>Development</h2>
 <p>
         This is an open-source project. The development takes place on the Github 
-        <a href="https://github.com/josselex/browser-update">browser-update project</a> where 
-	we also collect <a href="https://github.com/josselex/browser-update/issues">ideas and bugs</a>.
+        <a href="https://github.com/browser-update/browser-update">browser-update project</a> where 
+	we also collect <a href="https://github.com/browser-update/browser-update/issues">ideas and bugs</a>.
         The script is MIT-Licensed.
 </p>
 
