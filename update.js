@@ -53,7 +53,6 @@ function getBrowser(ua_str) {
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
-    else if (/Edge.(\d+\.\d+)/i.test(ua)) n="i";
     else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
