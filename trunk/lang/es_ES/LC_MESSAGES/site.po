@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-06 16:57+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
+"PO-Revision-Date: 2015-04-12 09:31+0100\n"
+"Last-Translator: Dennis Tobar <dennis.tobar@gmail.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.7.1\n"
 
 #: contact.php:8
 msgid "Contact"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: index.php:56
 msgid "Test the notification bar!"
-msgstr "¡Pruéba la barra de notificación!"
+msgstr "¡Prueba la barra de notificación!"
 
 #: index.php:58
 #, php-format
@@ -74,7 +74,7 @@ msgid ""
 msgstr ""
 "Tu navegador (%s) <b>no está actualizado</b>. Tiene conocidas <b>fallos de "
 "seguridad</b> y podría <b>no mostrar todas las características</b> de este y "
-"otros sitios web. <a%s>Aprénde cómo puedes actualizar tu navegador</a>"
+"otros sitios web. <a%s>Aprende cómo puedes actualizar tu navegador</a>"
 
 #: index.php:65
 #, php-format
@@ -89,7 +89,7 @@ msgstr ""
 #: index.php:69
 msgid "If the visitor ignores the advice, it won't appear again for some time."
 msgstr ""
-"Si el visitante ignora el aviso, no le volverá; a aparecer por algún tiempo."
+"Si el visitante ignora el aviso, no le volverá a aparecer por algún tiempo."
 
 #: index.php:72
 msgid "Advantages and features"
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 "El usuario será notificado una sola vez, y no se le volverá a molestar. La "
 "barra de notificación es muy pequeña y no afectará la experiencia de "
-"navegació de manera negativa."
+"navegación de manera negativa."
 
 #: index.php:80
 msgid "Informative"
@@ -118,7 +118,7 @@ msgid ""
 "Tell the users that they are using an out-dated browser and that your "
 "website looks even better with a newer one."
 msgstr ""
-"Díle a los usuarios que están usando un navegador desactualizado y que tu "
+"Dile a los usuarios que están usando un navegador desactualizado y que tu "
 "sitio se ve aún mejor con uno más reciente."
 
 #: index.php:85
@@ -127,27 +127,27 @@ msgstr "Idealista"
 
 #: index.php:86
 msgid "Help evolve the web!"
-msgstr "¡Ayúda a evolucionar la web!"
+msgstr "¡Ayuda a evolucionar la web!"
 
 #: index.php:87
 msgid "Support the standards-based web!"
-msgstr "¡Apóya una web basada en estándares!"
+msgstr "¡Apoya una web basada en estándares!"
 
 #: index.php:88
 msgid "Support Open Source software projects!"
-msgstr "¡Apóya los proyectos de software de Código Libre!"
+msgstr "¡Apoya los proyectos de software de Código Libre!"
 
 #: index.php:89
 msgid "Help your visitors!"
-msgstr "¡Ayúda a tus visitantes!"
+msgstr "¡Ayuda a tus visitantes!"
 
 #: index.php:90
 msgid "Help increase security awareness!"
-msgstr "¡Ayúda a aumentar la conciencia acerca de la seguridad!"
+msgstr "¡Ayuda a aumentar la conciencia acerca de la seguridad!"
 
 #: index.php:91
 msgid "Support your favorite webbrowser!"
-msgstr "¡Apóya a tu navegador favorito!"
+msgstr "¡Apoya a tu navegador favorito!"
 
 #: index.php:94
 msgid "Low maintenance and up-to-date"
@@ -159,7 +159,7 @@ msgid ""
 "in the future, exhibit security gaps or have been very old for a long time "
 "we are going to add them to our list automatically."
 msgstr ""
-"Si surgen más versiones de navegadore que no sean porcudaras por sus "
+"Si surgen más versiones de navegadores que no sean soportadas por sus "
 "fabricantes en el futuro, que exhiban fallas de seguridad o se hayan "
 "mantenido viejos durante mucho tiempo serán agregados a la lista "
 "automáticamente."
@@ -188,7 +188,7 @@ msgstr "El mensaje será desplegado automáticamente en el idioma del usuario."
 
 #: index.php:112
 msgid "Install notification on your site"
-msgstr "Instála la notificación en tu sitio"
+msgstr "Instala la notificación en tu sitio"
 
 #: index.php:114
 msgid ""
@@ -196,7 +196,7 @@ msgid ""
 "anywhere in the source of your page."
 msgstr ""
 "Aquí puedes obtener el código a incluir en tu sitio. Sólo colócalo en "
-"cualquier parte de la fuente de tu página."
+"cualquier parte del código fuente de tu página."
 
 #: index.php:119
 msgid "Following browsers will be notified:"
@@ -213,8 +213,8 @@ msgid ""
 "</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
-"<b>Notifíca a los navegadores recomendados y ajústalo automáticamente con el "
-"tiempo:</b>Si un navegador ya no es procurado por su fabricante o tiene "
+"<b>Notifica a los navegadores recomendados y ajústalo automáticamente con el "
+"tiempo:</b>Si un navegador ya no es soportado por su fabricante o tiene "
 "vulnerabilidades de seguridad, será agregado a la lista."
 
 #: index.php:177
@@ -236,7 +236,7 @@ msgstr "Plugins: "
 
 #: index.php:228
 msgid "Why you should tell users to update"
-msgstr "Porqué deberíaas decirle a los usuarios que actualicen"
+msgstr "Porqué deberías decirle a los usuarios que actualicen"
 
 #: index.php:231
 msgid "Reduced development costs and time"
@@ -283,9 +283,9 @@ msgid ""
 "\">update page</a>. The security-threats of outdates browsers are listed in "
 "this <a href=\"%s\">paper</a>."
 msgstr ""
-"Numerosos beneficios: seguridad, velocidad, características, ... Míra la <a "
+"Numerosos beneficios: seguridad, velocidad, características, ... Mira la <a "
 "href=\"%s\">página de actualizacionese</a>. Los hilos de seguridad de los "
-"nevageadores no actualizados se enlistan en este <a href=\"%s\">documento</"
+"navegeadores no actualizados se enlistan en este <a href=\"%s\">documento</"
 "a>."
 
 #: index.php:245
@@ -304,7 +304,7 @@ msgid ""
 msgstr ""
 "La fuerte porción de mercado que conserva un navegador antiguo (Internet "
 "Explorer 6) es algo inédito en la historia de la internet. Si no hacemos "
-"algo ahora, tendrémos que diseñar los sitio como si estuvieramos en 2001 aún "
+"algo ahora, tendremos que diseñar los sitio como si estuvieramos en 2001 aún "
 "estando en 2011."
 
 #: index.php:252
@@ -321,36 +321,36 @@ msgstr ""
 
 #: index.php:256
 msgid "Help this project"
-msgstr "Apóya este proyecto"
+msgstr "Apoya este proyecto"
 
 #: index.php:259
 msgid "Participate!"
-msgstr "¡Particípa!"
+msgstr "¡Participa!"
 
 #: index.php:260
 msgid ""
 "Include the notification code in your page to inform users about browser "
 "updates."
 msgstr ""
-"Inclúye el código de notificación en tu página para informar a los usuarios "
+"Incluye el código de notificación en tu página para informar a los usuarios "
 "acerca de las actualizaciones a los navegadores."
 
 #: index.php:263
 msgid "Spread the word!"
-msgstr "¡Córre la voz!"
+msgstr "¡Corre la voz!"
 
 #: index.php:264
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
-"¡Díle a otros acerca de esta iniciativa! En tu blog, en tu sitio web, ..."
+"¡Dile a otros acerca de esta iniciativa! En tu blog, en tu sitio web, ..."
 
 #: index.php:267
 msgid "Translate this page"
-msgstr "Tradúce esta página"
+msgstr "Traduce esta página"
 
 #: index.php:268
 msgid "Translate this page into your language."
-msgstr "Tradúce esta página a tu idioma."
+msgstr "Traduce esta página a tu idioma."
 
 #: stat.php:9
 msgid "Statistics"
@@ -375,7 +375,7 @@ msgid ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
 msgstr ""
-"<strong class=\"number\">%d</strong> visitantes ya hanactualizado su "
+"<strong class=\"number\">%d</strong> visitantes ya han actualizado su "
 "navegador."
 
 #: stat.php:92

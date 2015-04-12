@@ -9,9 +9,9 @@ this.op=op||{};
 //options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:11,f:35,o:12.1,s:8,n:20,c:40};
-this.op.vsdefault = {i:9,f:33,o:12,s:5.2,n:12,c:38};
-this.op.vsmin={i:7,f:5,o:12,s:5.1,n:12};
+this.op.vsakt = {i:11,f:36,o:28,s:8,n:20,c:41};
+this.op.vsdefault = {i:9,f:34,o:12.1,s:6.1,n:12,c:39};
+this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
 var myvs=op.vs||{};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt) {
@@ -49,7 +49,7 @@ if (op.exp && !this.op.test  && Math.round(Math.random()*100)<1) {
 function getBrowser(ua_str) {
     var n,v,t,ua=ua_str||navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla/i.test(ua)) n="x";
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
