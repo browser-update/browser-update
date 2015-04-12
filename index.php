@@ -36,11 +36,7 @@ include("header.php");
 		<p>
 			<?php echo T_('Many internet users are still using very old, out-dated browsers – most of them for no actual reason. ' . 
 				'Switching to an newer browser is better for them and for you as a webdesigner.'); ?>
-			<!--They just have to be told, that using an old browser gives them disadvantages.-->
 		</p>
-		<!--<p>
-			The more Websites Participate, the more the awareness to update will increase and old browser market share will drop faster!
-		</p>-->
 	</div>
         <?php
         #"it,sl,jp,nb,ch"
@@ -61,12 +57,12 @@ include("header.php");
         <div class="numbs">
         <p>
             <?php
-            echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), number_format(cache_output('countSites'),0,".", ""));
+            //echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), number_format(cache_output('countSites'),0,".", ""));
             ?>
         </p>
         <p>
             <?php
-            echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), number_format(cache_output('countUpdates'),0,".", ""));
+            //echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), number_format(cache_output('countUpdates'),0,".", ""));
             ?>
         </p>
         </div>
@@ -93,21 +89,22 @@ include("header.php");
             </div></li>
             <li><div>
                 <?php echo T_('If the visitor ignores the advice, it won\'t appear again for some time.'); ?>
-			</div></li>
+            </div></li>
 		</ol>
 		<h2><?php echo T_('Advantages and features'); ?></h2>
-		<ul class="advantages">
-			<li>
+		<div class="adv">
+                    <div class="adv1">
+			<div>
 				<h3><?php echo T_('Subtle'); ?><!--Unobtrusive / Non-Intrusive--></h3>
 				<?php echo T_('The user will be notified only once, and won\'t be bothered any more. ' . 
 					'The notification bar is very small and won\'t affect the browsing experience negatively.'); ?>
-			</li>
-			<li>
+			</div>
+			<div>
 				<h3><?php echo T_('Informative'); ?></h3>
 				<?php echo T_('Tell the users that they are using an out-dated browser ' . 
 					'and that your website looks even better with a newer one.'); ?>
-			</li>
-			<li>
+			</div>
+			<div>
 				<h3><?php echo T_('Idealistic'); ?></h3>
 				<?php echo T_('Help evolve the web!'); ?>
 				<?php echo T_('Support the standards-based web!'); ?>
@@ -115,26 +112,27 @@ include("header.php");
 				<?php echo T_('Help your visitors!'); ?>
 				<?php echo T_('Help increase security awareness!'); ?>
 				<?php echo T_('Support your favorite webbrowser!'); ?>
-			</li>
-			<li>
+			</div>
+                    </div>
+                    <div class="adv2">    
+			<div>
 				<h3><?php echo T_('Low maintenance and up-to-date'); ?></h3>
-                <?php echo T_('If there come more browser versions which won\'t be supported by the vendor ' . 
-                'in the future, exhibit security gaps or have been very old for a ' . 
-                'long time we are going to add them to our list automatically.'); ?>
-			</li>
-			<li>
+                                <?php echo T_('If there come more browser versions which won\'t be supported by the vendor ' . 
+                                'in the future, exhibit security gaps or have been very old for a ' . 
+                                'long time we are going to add them to our list automatically.'); ?>
+			</div>
+			<div>
 				<h3><?php echo T_('Customizable'); ?></h3>
 				<?php echo T_('You can customize the browsers and versions to notify.<br/> ' . 
 				'In future releases you can also customize the text that should be shown, ' . 
 				'the frequency of the bar to appear and many other things.'); ?>
-			</li>
-			<li>
+			</div>
+			<div>
 				<h3><?php echo T_('Localized'); ?></h3>
 				<?php echo T_('The message is automatically displayed in the user\'s language.'); ?>
-			</li>
-			<li>
-
-		</ul>
+			</div>
+                    </div>
+		</div>
 		<h2 id="install"><?php echo T_('Install notification on your site'); ?></h2>
 		<p>
 			<?php echo T_('Here you can get the code to include in your website. ' .
@@ -144,18 +142,19 @@ include("header.php");
 		<div class="generate">
 
 
-		<textarea id="f-code" rows="10" cols="80">
-&lt;script>
+		<pre id="f-code">
+&lt;script type="text/javascript">
 var $buoop = {};
-function $buo_f(){ 
- var e = document.createElement("script"); 
- e.src = "//browser-update.org/update.js"; 
- document.body.appendChild(e);
-};
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-catch(e){window.attachEvent("onload", $buo_f)}
+$buoop.ol = window.onload;
+window.onload=function(){
+     try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+     var e = document.createElement("script");
+     e.setAttribute("type", "text/javascript");
+     e.setAttribute("src", "//browser-update.org/update.js");
+     document.body.appendChild(e);
+}
 &lt;/script>
-		</textarea>
+		</pre>
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
 		<span class="browser">
@@ -203,12 +202,12 @@ catch(e){window.attachEvent("onload", $buo_f)}
         <div>
             <input type="checkbox" checked="checked" id="autoupdate" onchange="code();"/>
             <label for="autoupdate">
-				<?php echo T_('<b>Notify recommended set of browsers and adjust it automatically over time:</b>' .
-					'If a browser is no longer supported by the vendor or has security vulnerabilities, ' .
-					'it will be added to the set.'); ?>
-			</label>
+                <?php echo T_('<b>Notify recommended set of browsers and adjust it automatically over time:</b>' .
+                                'If a browser is no longer supported by the vendor or has security vulnerabilities, ' .
+                                'it will be added to the set.'); ?>
+            </label>
         </div>		
-		</div>
+        </div>
 		<p>
 			<?php echo sprintf(
 					T_('You can <a href="%s">customize</a> the style of the message, the text and other options.'),
@@ -216,7 +215,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 					);
 			?>
 		</p>
-<p>
+                <p>
 			<?php echo T_('You may also use third-party plugins for: ');
                                 echo sprintf(' '.
                                             '<a href="%s">WordPress</a>, ' .
@@ -288,15 +287,16 @@ catch(e){window.attachEvent("onload", $buo_f)}
 		</ul>
 </div>
 
-<script>
-var $buoop = {c:2};
-function $buo_f(){ 
- var e = document.createElement("script"); 
- e.src = "//browser-update.org/update.js"; 
- document.body.appendChild(e);
-};
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-catch(e){window.attachEvent("onload", $buo_f)}
+<script type="text/javascript">
+var $buoop = {};
+$buoop.ol = window.onload;
+window.onload=function(){
+     var e = document.createElement("script");
+     e.setAttribute("type", "text/javascript");
+     e.setAttribute("src", "/update.js");
+     document.body.appendChild(e);
+     if ($buoop.ol) $buoop.ol();
+}
 code();
 </script>
 	
