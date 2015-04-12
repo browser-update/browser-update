@@ -125,6 +125,24 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$
 
     </tr>
 </table>
+<?php
+/*
+function display_browser($name, $url,$logo="",$in_countries=False,min_systems=False) {
+	global $lr
+	return '<a href="'.$url.'">'.$name.'</a>'// sprintf("/?lang=de",$lr);
+	//<a href="<?php sprintf("/?lang=de",$lr);?>
+}
+display_browser("Yandex Browser", "https://browser.yandex.com")
+display_browser("Seamonkey", "http://www.seamonkey-project.org/releases/#2.33")
+display_browser("Maxthon", "http://maxthon.com")
+display_browser("Vivaldi", "https://vivaldi.com/")
+
+
+*/
+?>
+
+
+ </p>
     
 <h2 class="whatnow"> 
     <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'#security','#speed','#comfort','#fun');?>
