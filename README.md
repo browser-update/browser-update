@@ -33,5 +33,5 @@ The browsers which are currently [notified in the default configuration](https:/
 ##Translations
 The page currently translated into more than 30 languages.
 If you want to improve the translations or translate into a new language please
-see our [translation manual](https://github.com/josselex/browser-update/wiki/How-to-Translate).
+see our [translation manual](https://github.com/browser-update/browser-update/wiki/How-to-Translate).
 
