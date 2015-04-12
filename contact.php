@@ -7,13 +7,14 @@ include("header.php");
 <div class="left">
 <h2>Translations</h2>
 <p>
-New translations of this site are always appreciated. <a href="https://code.google.com/p/browser-update/wiki/HowToTranslate"> Learn how to translate this page</a>.
+New translations of this site are always appreciated. 
+<a href="https://github.com/josselex/browser-update/wiki/How-to-Translate">Learn how to translate this page</a>.
 </p>
 <h2>Development</h2>
 <p>
-        This is an open-source project .The development takes place on this 
-        <a href="http://code.google.com/p/browser-update/">google-code project page</a> where
-	we collect <a href="http://code.google.com/p/browser-update/issues/list">ideas and bugs</a>.
+        This is an open-source project. The development takes place on the Github 
+        <a href="https://github.com/josselex/browser-update">browser-update project</a> where 
+	we also collect <a href="https://github.com/josselex/browser-update/issues">ideas and bugs</a>.
         The script is MIT-Licensed.
 </p>
 
