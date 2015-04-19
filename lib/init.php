@@ -5,7 +5,7 @@ define('BU_LIB_PATH', BU_PATH . 'lib' . DIRECTORY_SEPARATOR);
 $default_lang = 'en';
 
 
-function cache_output($function,$hours=0.5) {
+function cache_output($function,$hours=0.1) {
 	$cachefile = "cache/" . md5($function) . '.cache.html';
 
 	if (!file_exists($cachefile) || filemtime($cachefile) < (time() - 3600*$hours)) {

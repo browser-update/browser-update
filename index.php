@@ -61,12 +61,12 @@ include("header.php");
         <div class="numbs">
         <p>
             <?php
-            echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), number_format(cache_output('countSites'),0,".", ""));
+            echo sprintf(T_('<strong class="number">%s</strong> sites are using the Browser-Update.org script.'), number_format(intval(cache_output('countSites')),0,".", " "));
             ?>
         </p>
         <p>
             <?php
-            echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), number_format(cache_output('countUpdates'),0,".", ""));
+            echo sprintf(T_('<strong class="number">%s</strong> visitors have already upgraded their browser.'), number_format(intval(cache_output('countUpdates')),0,".", " "));
             ?>
         </p>
         </div>
@@ -170,11 +170,13 @@ catch(e){window.attachEvent("onload", $buo_f)}
 		<span class="browser">
 			<label for="f-f">Firefox</label>  
 			<select id="f-f" onchange="code();">
-				<option value="6">&lt;= 6</option>
+				<option value="5">&lt;= 5</option>
 				<option value="10">&lt;= 10</option>
-				<option value="15" selected>&lt;= 15</option>
+				<option value="15">&lt;= 15</option>
 				<option value="20">&lt;= 20</option>
-                                <option value="25">&lt;= 25</option>
+                                <option value="25" selected>&lt;= 25</option>
+                                <option value="30">&lt;= 30</option>
+                                <option value="35">&lt;= 35</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -183,7 +185,8 @@ catch(e){window.attachEvent("onload", $buo_f)}
                                 <option value="12">&lt;= 12</option>
                                 <option value="12.1" selected>&lt;= 12.1</option>
                                 <option value="15">&lt;= 15</option>
-                                <option value="17">&lt;= 17</option>
+                                <option value="20">&lt;= 20</option>
+                                <option value="25">&lt;= 25</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -191,8 +194,9 @@ catch(e){window.attachEvent("onload", $buo_f)}
 			<select id="f-s" onchange="code();">
 				<option value="4.1">&lt;= 4.1</option>
 				<option value="5">&lt;= 5</option>
-                                <option value="5.1" selected>&lt;= 5.1</option>
-                                <option value="6">&lt;= 6</option>
+                                <option value="5.1">&lt;= 5.1</option>
+                                <option value="6" selected>&lt;= 6</option>
+                                <option value="7">&lt;= 7</option>
 			</select>
 		</span>
 		<span class="browser">
@@ -220,6 +224,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 			<?php echo T_('You may also use third-party plugins for: ');
                                 echo sprintf(' '.
                                             '<a href="%s">WordPress</a>, ' .
+                                            '<a href="%s">ember-cli</a>, ' .
                                             '<a href="%s">TYPO3</a>, ' .
                                             '<a href="%s">TYPOlight</a> (german), ' .
                                 '<a href="%s">vBulletin</a>, ' .
@@ -229,6 +234,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
 								'<a href="%s">Habari</a>, '.
 								'<a href="%s">Magento</a>, <a href="%s">WCF 2</a>, <a href="%s">CMS made simple</a>, <a href="%s">XenForo</a>.',
 				'http://wordpress.org/extend/plugins/wp-browser-update',
+                                'https://www.npmjs.com/package/ember-cli-browser-update',
                                 'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
 				'http://typolight.org/erweiterungsliste/view/browser_update.html',
                                 'http://www.vbulletin.org/forum/showthread.php?t=239559',
