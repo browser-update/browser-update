@@ -9,7 +9,7 @@ this.op=op||{};
 //options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:11,f:36,o:28,s:8,n:20,c:41};
+this.op.vsakt = {i:11,f:37,o:28,s:8,n:20,c:42};
 this.op.vsdefault = {i:9,f:34,o:12.1,s:6.1,n:12,c:39};
 this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
 var myvs=op.vs||{};
@@ -166,7 +166,7 @@ else if (ll=="ja")
 	t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 \
          <a%s>ブラウザを更新する方法を確認する</a>';
 else if (ll=="fr")
-	t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
+	t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionnalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
 else if (ll=="da")
         t = 'Din browser (%s) er <b>for&aelig;ldet</b>. Den har kendte <b>sikkerhedshuller</b> og kan m&aring;ske <b>ikke vise alle funktioner</b> p&aring; dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>';
 else if (ll=="sq")
