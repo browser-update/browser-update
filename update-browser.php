@@ -69,7 +69,8 @@ if (isset($sa_map[$ll]))
 
 $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
-$u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
+#$u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
+$u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$lr);
 ?>
 
