@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: browser-update-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2015-04-27 03:20+0300\n"
+"PO-Revision-Date: 2015-04-28 19:22+0100\n"
 "Last-Translator: Abdulmohsen Almansuor <admin@arabcoders.org>\n"
 "Language-Team: Arabic <admin@arabcoders.org>\n"
 "Language: ar_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #: header.php:5
 msgid "Update your Browser"
@@ -56,11 +56,11 @@ msgstr "نرجو منك إختيار متصفح آخر"
 #: update-browser.php:114
 #, php-format
 msgid ""
-"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href="
-"\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
-"لمزيد من المعلومات عن <a href=\"%s\">الحماية</a>، <a href=\"%s\">السرعة</a>،<a "
-"href=\"%s\">الراحة</a> و <a href=\"%s\">الاستمتاع</a>."
+"لمزيد من المعلومات عن <a href=\"%s\">الحماية</a>، <a href=\"%s\">السرعة</a>،"
+"<a href=\"%s\">الراحة</a> و <a href=\"%s\">الاستمتاع</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -69,13 +69,13 @@ msgstr "إعلانات"
 #: update-browser.php:162
 #, php-format
 msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and "
-"may <b>not display all features</b> of this and other websites. <a%s>Learn how "
-"to update your browser</a>"
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
 msgstr ""
-"متصفحك (%s) <b>منتهى الصلاحيه</b>. ويوجد به <b>ثغرات امنية</b> معروفة وقد <b>لا "
-"يُشغل كثير من الميزات</b> المتعلقه بهذه الموقع. <a%s>أضغط هنا</a>لتعرف كيف تقوم "
-"بتحديث متصفحك"
+"متصفحك (%s) <b>منتهى الصلاحيه</b>. ويوجد به <b>ثغرات امنية</b> معروفة وقد "
+"<b>لا يُشغل كثير من الميزات</b> المتعلقه بهذه الموقع. <a%s>أضغط هنا</a>لتعرف "
+"كيف تقوم بتحديث متصفحك"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
@@ -87,11 +87,11 @@ msgstr "الآمان"
 
 #: update-browser.php:178
 msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing and "
-"other threats. They also fix security holes in your current browser!"
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
 msgstr ""
-"المتصفحات المُحدثه الجديدة، تحميك من الاحتيال، الفيروسات، وكثير من الأمور الأخرى "
-"المتصفحات المُحدثة تقوم بإغلاق ثغرات قد تكون موجودة في متصفحك الحالي!"
+"المتصفحات المُحدثه الجديدة، تحميك من الاحتيال، الفيروسات، وكثير من الأمور "
+"الأخرى المتصفحات المُحدثة تقوم بإغلاق ثغرات قد تكون موجودة في متصفحك الحالي!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -115,9 +115,10 @@ msgstr "الراحة و تجربة أفضل "
 
 #: update-browser.php:190
 msgid ""
-"With new features, extensions and better customisability, you will have a more "
-"comfortable web-experience"
-msgstr "مع الميزات الجديدة و الإضافات و الخيارات ستحصل على راحة اكثر و تجربة أفضل"
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"مع الميزات الجديدة و الإضافات و الخيارات ستحصل على راحة اكثر و تجربة أفضل"
 
 #: update-browser.php:198
 msgid "Why this website?"
@@ -125,17 +126,17 @@ msgstr "لماذا هذه الموقع؟"
 
 #: update-browser.php:200
 msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who want "
-"to bring the web further and help their visitors."
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
 msgstr ""
-"هذه الموقع هو عباره عن مبادرة من قبل مصممين مواقع و اصحاب مواقع و مُدونين يُريدون "
-"الدفع قدماً لتطوير بشبكة الانترنت و مساعدة زوارهم"
+"هذه الموقع هو عباره عن مبادرة من قبل مصممين مواقع و اصحاب مواقع و مُدونين "
+"يُريدون الدفع قدماً لتطوير بشبكة الانترنت و مساعدة زوارهم"
 
 #: update-browser.php:203
 msgid ""
 "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement of the web</b> because of their limited features and many <b>bugs</"
-"b>."
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
 msgstr ""
 "المتصفح القديم هو <b>خطر آمني</b> و <b>يعطل تطور شبكة الانترنت</b> بسبب قلة "
 "الميزات الحديثة و يمكن ان يحتوى على <b>مشاكل</b>."
@@ -150,17 +151,17 @@ msgstr "\"انا غير قادر على تحديث متصفحي\""
 
 #: update-browser.php:212
 msgid ""
-"If you can't change your browser because of compatibility issues, think about "
-"installing a second browser for browsing and keep the old one for the "
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
 "compatibility."
 msgstr ""
-"اذا كنت لا تستطيع تحديث متصفحك بسبب مشاكل التوافق، فكر بتنزيل متصفح آخر لتصفح "
-"الانترنت و أجعل المتصفح القديم فقط للمواقع إلى تحتاج إلى توافق."
+"اذا كنت لا تستطيع تحديث متصفحك بسبب مشاكل التوافق، فكر بتنزيل متصفح آخر "
+"لتصفح الانترنت و أجعل المتصفح القديم فقط للمواقع إلى تحتاج إلى توافق."
 
 #: update-browser.php:213
 msgid ""
-"If you are on a computer that is maintained by an admin and you cannot install a "
-"new browser, ask your admin about it."
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
 msgstr ""
-"اذا كنت على حاسب يدار من قبل المشرف و لا تستطيع تنزيل متصفح جديدتواصل مع المشرف "
-"لتنزيل متصفح جديد."
+"اذا كنت على حاسب يدار من قبل المشرف و لا تستطيع تنزيل متصفح جديدتواصل مع "
+"المشرف لتنزيل متصفح جديد."

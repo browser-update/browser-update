@@ -37,7 +37,8 @@ $lang_rewrite = array(
         "ro"=>"ro_RO",
         "hr"=>"hr_HR",
         "bg"=>"bg_BG",
-        "el"=>"el_GR"
+        "el"=>"el_GR",
+        "ar"=>"ar_EG"
 );
 
 /**

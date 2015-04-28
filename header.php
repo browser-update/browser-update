@@ -76,7 +76,8 @@
                 <a href="/ro/<?php echo $curfile?>">Română</a>
                 <a href="/hr/<?php echo $curfile?>">hrvatski</a>
                 <a href="/bg/<?php echo $curfile?>">български</a>
-                <a href="/el/<?php echo $curfile?>">Ελληνικά</a>                
+                <a href="/el/<?php echo $curfile?>">Ελληνικά</a> 
+                <a href="/ar/<?php echo $curfile?>">العربية</a>
                 <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>
