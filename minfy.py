@@ -4,11 +4,11 @@ from slimit import minify
 
 
 def read_file(name):  
-    with open (name, "r") as f:
-        return "".join(f.read())#.replace('\n', '')
+    with open (name, "r", encoding="utf-8") as f:
+        return "".join(str(f.read()))#.replace('\n', '')
 
 def write_file(name,string):
-    with open(name, "w") as f:
+    with open(name, "w", encoding="utf-8") as f:
         f.write(string)
 
 add="""//(c)2015, MIT Style License <browser-update.org/LICENSE.txt>

@@ -3,14 +3,14 @@
 //It is RECOMMEDED to directly link to this file and not to use a local copy
 //because we update and maintain the detection code
 var $buo = function(op,test) {
-var jsv=17;
+var jsv=18;
 var n = window.navigator,b;
 this.op=op||{};
 //options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:11,f:37,o:28,s:8,n:20,c:42};
-this.op.vsdefault = {i:9,f:34,o:12.1,s:6.1,n:12,c:39};
+this.op.vsakt = {i:11,f:38,o:28,s:8,n:20,c:42};
+this.op.vsdefault = {i:9,f:35,o:12.1,s:6.1,n:12,c:40};
 this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
 var myvs=op.vs||{};
 this.op.vs =op.vs||this.op.vsdefault;
@@ -30,9 +30,9 @@ this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
 this.op.onclose = op.onclose||function(o){};
-this.op.url= op.url||"http://browser-update.org/update-browser.html#"+jsv+"@"+(location.hostname||"x");
+this.op.url= op.url||"http://browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
 if (op.l)
-	this.op.url= op.url||"http://browser-update.org/"+ll+"/update-browser.html#"+jsv+"@"+(location.hostname||"x");
+	this.op.url= op.url||"http://browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
 this.op.newwindow=(op.newwindow!==false);
 

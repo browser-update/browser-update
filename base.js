@@ -21,7 +21,7 @@ function code() {
 var $buoop = {'+notify+'c:2}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
- e.src = "//browser-update.org/update.js"; \n\
+ e.src = "//browser-update.org/update.min.js"; \n\
  document.body.appendChild(e);\n\
 };\n\
 try {document.addEventListener("DOMContentLoaded", $buo_f,false)}\n\
@@ -53,14 +53,15 @@ function getlang() {
 
 function ignore(f) {
     return false;
-    return (f.n=="f" && f.v>=27) ||
-            (f.n=="o" && f.v>=16) ||
-            (f.n=="s" && f.v>=7) ||
-            (f.n=="i" && f.v>=11)||
-            (f.n=="c" && f.v>=32);
+    return (f.n==="f" && f.v>=38) ||
+            (f.n==="o" && f.v>=28) ||
+            (f.n==="s" && f.v>=9) ||
+            (f.n==="i" && f.v>=12)||
+            (f.n==="c" && f.v>=42);
 }
-
-var ref=escape((document.referrer||"").substring(0,50)||((window.location.hash||"").match(/.*@(.*)/i)||["",""])[1]||"");
+var ref=(document.referrer||"").substring(0,50);
+ref=ref||((window.location.hash||"").match(/.*@(.*)/i)||(window.location.hash||"").match(/.*:(.*)/i)||["",""])[1]||"";
+ref=escape(ref);
 var tv=((window.location.hash||"").match(/#(\d*)/i)||["",""])[1]||"";
 
 //if (ref.search(/(^|:\/\/)([^\/]{0,8}\.|)(google|bing|yahoo|ask|duckduckgo|blekko|yandex|baidu)\./i)>-1) 
