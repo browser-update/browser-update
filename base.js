@@ -96,10 +96,11 @@ function countView() {
 function getBrowser(ua_str) {
     var n,v,t,ua=ua_str||navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|mediapartners|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|rekonq|symbian|webos/i.test(ua)) n="x";
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
+    else if (/Edge.(\d+\.\d+)/i.test(ua)) n="i";
     else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
@@ -110,19 +111,19 @@ function getBrowser(ua_str) {
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
     
-    var v=new Number(RegExp.$1);
+    var v= parseFloat(RegExp.$1);
     var donotnotify=false;
     //do not notify ver old systems since their is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
     
     //do not notify firefox ESR
-    if (n=="f" && Math.round(v)==24)
+    if (n=="f" && (Math.round(v)==24 || Math.round(v)==31))
         donotnotify="ESR";
     //do not notify opera 12 on linux since it is the latest version
     if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12) 
         donotnotify="Opera12Linux";
     
-    if (n=="x") return {n:"x",v:v||0,t:names[n]};
+    if (n=="x") return {n:"x",v:v||0,t:names[n],donotnotify:donotnotify};
     
 
     if (n=="so") {
