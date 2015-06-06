@@ -223,30 +223,35 @@ catch(e){window.attachEvent("onload", $buo_f)}
 <p>
 			<?php echo T_('You may also use third-party plugins for: ');
                                 echo sprintf(' '.
-                                            '<a href="%s">WordPress</a>, ' .
-                                            '<a href="%s">ember-cli</a>, ' .
-                                            '<a href="%s">TYPO3</a>, ' .
-                                            '<a href="%s">TYPOlight</a> (german), ' .
-                                '<a href="%s">vBulletin</a>, ' .
-                                '<a href="%s">concrete5</a>, ' .
-								'<a href="%s">MODx</a>, ' .
-                                '<a href="%s">Drupal</a>, ' .
-								'<a href="%s">Habari</a>, '.
-								'<a href="%s">Magento</a>, <a href="%s">WCF 2</a>, <a href="%s">CMS made simple</a>, <a href="%s">XenForo</a>.',
-				'http://wordpress.org/extend/plugins/wp-browser-update',
-                                'https://www.npmjs.com/package/ember-cli-browser-update',
-                                'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
-				'http://typolight.org/erweiterungsliste/view/browser_update.html',
-                                'http://www.vbulletin.org/forum/showthread.php?t=239559',
-                                'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
-								'http://modxcms.com/extras/package/737',
-                                        'https://drupal.org/project/bu',										
-										'http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate',
-                                        'http://www.rapidcommerce.eu/blog/2012/10/magento-browser-update-notice/',
-                                        'https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/',
-                                        'http://dev.cmsmadesimple.org/projects/browserupdate',
-                                        'http://xenforo.com/community/resources/customisable-browser-update-org-widget.764/'
-										);
+									'<a href="%s">WordPress</a>, ' .
+									'<a href="%s">ember-cli</a>, ' .
+									'<a href="%s">TYPO3</a>, ' .
+									'<a href="%s">Contao</a> (german), ' .
+									'<a href="%s">vBulletin</a>, ' .
+									'<a href="%s">concrete5</a>, ' .
+									'<a href="%s">MODx</a>, ' .
+									'<a href="%s">Drupal</a>, ' .
+									'<a href="%s">Habari</a>, '.
+									'<a href="%s">Magento</a>, '.
+									'<a href="%s">WCF 2</a>, '.
+									'<a href="%s">CMS made simple</a>, '.
+									'<a href="%s">XenForo</a>, '.
+									'<a href="%s">ProcessWire</a>.',
+									'http://wordpress.org/extend/plugins/wp-browser-update',
+									'https://www.npmjs.com/package/ember-cli-browser-update',
+									'http://typo3.org/extensions/repository/view/browserupdnotify/current/',
+									'https://contao.org/de/extension-list/view/browser_update.html',
+									'http://www.vbulletin.org/forum/showthread.php?t=239559',
+									'http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/',
+									'http://modxcms.com/extras/package/737',
+									'https://drupal.org/project/bu',
+									'http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate',
+									'http://www.rapidcommerce.eu/blog/2012/10/magento-browser-update-notice/',
+									'https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/',
+									'http://dev.cmsmadesimple.org/projects/browserupdate',
+									'http://xenforo.com/community/resources/customisable-browser-update-org-widget.764/',
+									'http://modules.processwire.com/modules/markup-browser-update/'
+								);
 								?>
 		</p>
 
