@@ -9,6 +9,7 @@ this.op=op||{};
 //options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
+this.op.url =op.url ||  "http://browser-update.org/update-browser.html";
 this.op.vsakt = {i:11,f:38,o:28,s:8,n:20,c:42};
 this.op.vsdefault = {i:9,f:35,o:12.1,s:6.1,n:12,c:40};
 this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
@@ -57,7 +58,7 @@ function getBrowser(ua_str) {
     else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
-    else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
+    else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))    n="s";
     else if (/Safari.(\d+)/i.test(ua)) n="so";
     else if (/Opera.*Version.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
@@ -94,7 +95,7 @@ function getBrowser(ua_str) {
         else if (v>3.1) v=8;
         else if (v>3) v=7;
         else v=9;
-    }	
+    }   
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify};
 }
 
@@ -162,11 +163,11 @@ else if (ll=="ko")
     t = '지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>';
 else if (ll=="rm")
     t = 'Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da segirezza</b> enconuschents e mussa eventualmain <b>betg tut las funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes navigatur</a>.';
-else if (ll=="ja")	
-	t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 \
+else if (ll=="ja")  
+    t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 \
          <a%s>ブラウザを更新する方法を確認する</a>';
 else if (ll=="fr")
-	t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionnalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
+    t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionnalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
 else if (ll=="da")
         t = 'Din browser (%s) er <b>for&aelig;ldet</b>. Den har kendte <b>sikkerhedshuller</b> og kan m&aring;ske <b>ikke vise alle funktioner</b> p&aring; dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>';
 else if (ll=="sq")
@@ -182,7 +183,7 @@ else if (ll=="fa")
 else if (ll=="sv")
     t = 'Din webbläsare (%s) är <b>föråldrad</b>. Den har kända <b>säkerhetshål</b> och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra webbsidor. <a%s>Uppdatera din webbläsare idag</a>';
 else if (ll=="hu")
-    t = 'Az Ön böngészője (%s) <b>elavult</b>. Ismert <b>biztonsági hiányosságai</b> vannak és esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy más weboldalakon. <a%s>Itt talál bővebb információt a böngészőjének frissítésével kapcsolatban</a>		 ';
+    t = 'Az Ön böngészője (%s) <b>elavult</b>. Ismert <b>biztonsági hiányosságai</b> vannak és esetlegesen <b>nem tud minden funkciót megjeleníteni</b> ezen vagy más weboldalakon. <a%s>Itt talál bővebb információt a böngészőjének frissítésével kapcsolatban</a>         ';
 else if (ll=="gl")
     t = 'O seu navegador (%s) está <b>desactualizado</b>. Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>';
 else if (ll=="cs")
@@ -202,8 +203,8 @@ else if (ll=="ro")
 else if (ll=="bg")
     t='Вашият браузър (%s) <b>не е актуален</b>. Известно е, че има <b>пропуски в сигурността</b> и може <b>да не покаже правилно</b> този или други сайтове. <a%s>Научете как да актуализирате браузъра си</a>.';
 else if (ll=="el")
-	t = 'Αυτός ο ιστότοπος σας υπενθυμίζει: Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>.\
-	<a%s>Ενημερώστε το πρόγραμμα περιήγησής σας</a> για μεγαλύτερη ασφάλεια και άνεση σε αυτήν την ιστοσελίδα.';
+    t = 'Αυτός ο ιστότοπος σας υπενθυμίζει: Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>.\
+    <a%s>Ενημερώστε το πρόγραμμα περιήγησής σας</a> για μεγαλύτερη ασφάλεια και άνεση σε αυτήν την ιστοσελίδα.';
 
 
 if (op.text)
