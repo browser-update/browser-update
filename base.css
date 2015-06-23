@@ -413,6 +413,7 @@ table tr:hover td {
 
 pre {
     color:maroon;
+    overflow-x: auto;
 }
 
 code {

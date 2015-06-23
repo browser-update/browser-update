@@ -39,9 +39,11 @@ var $buoop = {
                                     // <?php echo T_('overrides the default detection') . "\n"; ?>
     test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
     text: "",                       // <?php echo T_('custom notification html text') . "\n"; ?>
+                                    // <?php echo T_('Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;"'). "\n";?>
     text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
     newwindow: true                 // <?php echo T_('open link in new window/tab') . "\n"; ?>
+    url: null                       // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
 };
 </pre>
 <!--
