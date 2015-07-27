@@ -226,7 +226,7 @@ var sheet = document.createElement("style");
 var style = ".buorg {position:absolute;position:fixed;z-index:111111;\
 width:100%; top:0px; left:0px; \
 border-bottom:1px solid #A29330; \
-background:#FDF2AB no-repeat 13px center url(//browser-update.org/img/small/"+this.op.browser.n+".gif);\
+background:#3178B8 no-repeat 13px center url(//browser-update.org/img/small/"+this.op.browser.n+".png);\
 text-align:left; cursor:pointer; \
 font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
 .buorg div { padding:5px 36px 5px 40px; } \
