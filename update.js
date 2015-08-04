@@ -9,8 +9,8 @@ this.op=op||{};
 //options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:11,f:38,o:28,s:8,n:20,c:42};
-this.op.vsdefault = {i:9,f:35,o:12.1,s:6.1,n:12,c:40};
+this.op.vsakt = {i:11,f:39,o:30,s:8,n:20,c:43};
+this.op.vsdefault = {i:9,f:37,o:12.1,s:6.1,n:12,c:41};
 this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
 var myvs=op.vs||{};
 this.op.vs =op.vs||this.op.vsdefault;

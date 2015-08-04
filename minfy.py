@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 #%%
+#pip install ply==3.4
 from slimit import minify
 
 
