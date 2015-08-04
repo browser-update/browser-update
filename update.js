@@ -40,7 +40,7 @@ this.op.test=test||op.test||false;
 if (window.location.hash=="#test-bu")
     this.op.test=true;
 /*
-if (op.exp && !this.op.test  && Math.round(Math.random()*1000)<1) {
+if (op.exp && !this.op.test  && Math.round(Math.random()*5000)<1) {
     var ix = new Image();
     ix.src="//browser-update.org/uas.php";
 }
@@ -103,7 +103,7 @@ if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.
     return;
 
 
-if (!this.op.test  && Math.round(Math.random()*1000)<1) {
+if (!this.op.test  && Math.round(Math.random()*5000)<1) {
     var i = new Image();
     i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
 }
