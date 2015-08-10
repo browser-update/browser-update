@@ -3,7 +3,7 @@ Many internet users are still using very old, out-dated browsers – most of the
 We want to remind these unobtrusively to update their browser.
 
 ##Goals
-1. Provide webdesigners a unified way to tell the user that he needs a newer browser to use this website in all its beauty.
+1. Provide webdesigners a unified way to tell the user that they need a newer browser to use this website in all its beauty.
 2. Improve the security, comfort and overall experiance of users by convincing them to update
 3. But: do not annoy or lock out users
 

@@ -77,7 +77,7 @@ include("header.php");
             </div></li>
 			<li><div>
                 <?php echo T_('Visitors with out-dated browser will be informed by a little, ' . 
-					'undisturbing bar, that his browser is not up-to-date and it ' . 
+					'undisturbing bar, that their browser is not up-to-date and it ' . 
 					'is recommended to update.'); ?>
 				(<a href="#" onclick="$buo({},true);"><?php echo T_('Test the notification bar!'); ?></a>)<br/>
 				<div class="example">
@@ -88,7 +88,7 @@ include("header.php");
 				</div>
 			</div></li>
 			<li><div>
-                <?php echo sprintf(T_('By clicking the bar, he will get to <a href="%s">an info page ' . 
+                <?php echo sprintf(T_('By clicking the bar, they will get to <a href="%s">an info page ' . 
 					'with arguments why to change/update and some browser choices</a>.'), 'update.html'); ?>
             </div></li>
             <li><div>

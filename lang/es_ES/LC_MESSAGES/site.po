@@ -55,7 +55,7 @@ msgstr ""
 #: index.php:53
 msgid ""
 "Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that his browser is not up-to-date and it is recommended to update."
+"bar, that their browser is not up-to-date and it is recommended to update."
 msgstr ""
 "Los visitantes con navegadores no actualizados serán informados por una "
 "pequeña barra no molesta, que su navegador no está actualizado y que es "
@@ -79,7 +79,7 @@ msgstr ""
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, he will get to <a href=\"%s\">an info page with "
+"By clicking the bar, them will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
 "Al hacer clic en la barra, será enviado a <a href=\"%s\"> una página "
