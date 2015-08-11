@@ -52,7 +52,7 @@ msgstr "Integrescha la <a href=\"%s\">trav d'avis</a> en tia website"
 #: index.php:53
 msgid ""
 "Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that his browser is not up-to-date and it is recommended to update."
+"bar, that their browser is not up-to-date and it is recommended to update."
 msgstr ""
 "Visitaders cun in navigatur antiquà vegnan infurmads entras ina trav "
 "pitschna e decenta che infurmescha che lur navigatur n'è betg pli actual e "
@@ -76,7 +76,7 @@ msgstr ""
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, he will get to <a href=\"%s\">an info page with "
+"By clicking the bar, them will get to <a href=\"%s\">an info page with "
 "arguments why to change/update and some browser choices</a>."
 msgstr ""
 "Cun cliccar sin la trav vegn chargia ina <a href=\"%s\">pagina "

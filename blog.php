@@ -8,9 +8,9 @@ include("header.php");
 <div class="entry">
 <p>
 We improved the procedure when to show the notification to be even more user-friendly: 
-When the user closes or clicks the notification bar, we know that he noticed the notification.
+When the user closes or clicks the notification bar, we know that they noticed the notification.
 After this we do not show it again for a week, because this means the user has seen the bar 
-but has some reason not to update his browser right now. 
+but has some reason not to update their browser right now. 
 Knowing this, we do not want to bother the users, but only remind them some longer time later.
 </p>
 <p>
