@@ -219,5 +219,5 @@ var cv=3;
 var second=false;
 countView();
 </script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/cookie-bar/1/cookiebar-latest.min.js?tracking=1&thirdparty=1"></script> 
 <?php include("footer.php");?>

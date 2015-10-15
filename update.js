@@ -6,8 +6,8 @@ var $buo = function(op,test) {
 var jsv=18;
 var n = window.navigator,b;
 this.op=op||{};
-//options DerGer4etZ4elt!
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
+this.op.l=this.op.l.replace("_","-").toLowerCase()
 var ll=this.op.l.substr(0,2);
 this.op.vsakt = {i:12,f:39,o:30,s:8,n:20,c:43};
 this.op.vsdefault = {i:9,f:37,o:12.1,s:6.1,n:12,c:41};
@@ -53,7 +53,7 @@ function getBrowser(ua_str) {
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
     else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
     else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
-    else if (/Edge.(\d+\.\d+)/i.test(ua)) n="i";
+    else if (/Edge.(\d+)/i.test(ua)) n="i";
     else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
     else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
     else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
@@ -191,6 +191,8 @@ else if (ll=="he")
     t = 'הדפדפן שלך (%s) <b>אינו מעודכן</b>. יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
 else if (ll=="nb")
     t='Nettleseren din (%s) er <b>utdatert</b>. Den har kjente <b>sikkerhetshull</b> og <b>kan ikke vise alle funksjonene</b> på denne og andre websider. <a%s>Lær hvordan du kan oppdatere din nettleser</a>';
+else if (this.op.l=="zh-tw")
+	t='您的瀏覽器(%s) 需要更新。該瀏覽器有諸多安全漏洞，無法顯示本網站的所有功能。 <a%s>瞭解如何更新瀏覽器</a>';
 else if (ll=="zh")
     t='您的浏览器(%s) 需要更新。该浏览器有诸多安全漏洞，无法显示本网站的所有功能。 <a%s>了解如何更新浏览器</a>';
 else if (ll=="fi")

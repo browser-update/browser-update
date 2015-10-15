@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-02 07:15+0800\n"
+"PO-Revision-Date: 2015-10-15 12:31+0100\n"
+"Last-Translator: Sword Huang <sword.huang@gmail.com>\n"
+"Language-Team: Petar Vujic <pvujic@gmail.com>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "更新您的瀏覽器"
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr "網頁設計師的倡議：告知用戶更新瀏覽器"
+
+#: header.php:30
+msgid "The Project"
+msgstr "關於項目"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "更新瀏覽器"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "統計"
+
+#: header.php:35
+msgid "Blog"
+msgstr "博客"
+
+#: header.php:74
+msgid "Contact"
+msgstr "聯繫我們"
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr "您的瀏覽器需要更新。請下載一款免費而優秀的最新版瀏覽器。"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr "最新版本不適用於您的作業系統。"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr "請選擇其他瀏覽器。"
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr "帶來更安全、快速和樂趣。<!-- %s %s %s %s-->"
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "廣告"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"您的瀏覽器(%s) 需要更新。該瀏覽器有諸多安全漏洞，無法顯示本網站的所有功能。 "
+"<a%s>瞭解如何更新瀏覽器</a>"
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "為什麼需要最新版瀏覽器？"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "更安全"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"新瀏覽器能夠更好避免欺詐、病毒、木馬、釣魚攻擊和其它威脅。它能夠修復當前瀏覽"
+"器中的安全漏洞，保護個人隱私。"
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "更快"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "每款新瀏覽器都能夠提升網頁訪問速度。"
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "相容性"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr "使用最新科技、更易讀、三維和視頻的網頁，享受精彩內容。"
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "更舒適的體驗"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"經由全新功能、擴展和更強的相容性，帶來更舒適的網頁瀏覽體驗。新瀏覽器能夠自動"
+"更新，並且全方位保護。"
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "為什麼是這個網站？"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"該網站是網頁設計師、網管和博客的創新成果，他們希望提升網頁內容並幫助訪客。"
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"過時的瀏覽器具有安全威脅並因為有限的功能與錯誤而阻擋網頁的進步。點擊這裡瞭解"
+"更多有關Browser-Update.org項目的內容"
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "關於此項目"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "「我不能更新我的瀏覽器」"
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"如果由於兼容性問題，您不能更換您的瀏覽器，請考慮一下安裝另一個瀏覽器，然後使"
+"用新瀏覽器瀏覽網頁，同時保留您現在的瀏覽器用於解決兼容性問題。"
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"如果您所使用的瀏覽器並不是您管理的，並且因此您不能安裝新瀏覽器，請聯繫您的電"
+"腦管理員以協助您這樣做。"

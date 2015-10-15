@@ -71,6 +71,7 @@
                 <a href="/cs/<?php echo $curfile?>">Čeština</a>
                 <a href="/nb/<?php echo $curfile?>">Norsk bokmål</a>
                 <a href="/zh/<?php echo $curfile?>">中文</a>
+                <a href="/zh_TW/<?php echo $curfile?>">文言</a>
                 <a href="/fi/<?php echo $curfile?>">suomi</a>
                 <a href="/tr/<?php echo $curfile?>">Türkçe</a>
                 <a href="/ro/<?php echo $curfile?>">Română</a>
