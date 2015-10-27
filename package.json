@@ -1,0 +1,27 @@
+{
+  "name": "browser-update",
+  "version": "1.0.0",
+  "description": "Remind users to update their browser in an unobtrusive way.",
+  "main": "update.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/browser-update/browser-update.git"
+  },
+  "keywords": [
+    "browser",
+    "web"
+  ],
+  "files": [
+    "update.js",
+    "update.min.js"
+  ],
+  "author": "Thomas Hümmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/browser-update/browser-update/issues"
+  },
+  "homepage": "https://github.com/browser-update/browser-update#readme"
+}
