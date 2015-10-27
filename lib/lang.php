@@ -60,7 +60,7 @@ function lang_normalize($lang)
 	$lang = strtolower(str_replace('-', '_', $lang));
 	if (strlen($lang) >= 5)
 	{
-		$lang = substr($lang, 0, 3) . strtoupper(substr($lang, 4, 2));
+		$lang = substr($lang, 0, 3) . strtoupper(substr($lang, 3, 10));
 	}
 	return $lang;
 }
