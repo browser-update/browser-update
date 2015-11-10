@@ -29,10 +29,12 @@ else
 this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
-this.op.onclose = op.onclose||function(o){};
-this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
+this.op.onclose = op.onclose || function (o) { };
 if (op.l)
-	this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
+    this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
+else
+    this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
+
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
 this.op.newwindow=(op.newwindow!==false);
 
@@ -116,7 +118,7 @@ if (this.op.reminder>0) {
     setCookie(this.op.reminder);
 }
 
-var languages = "xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl";
+var languages = "xx,jp,sl,id,uk,rm,da,ca,hu,fa,gl";
 if (languages.indexOf(ll)>0)
     this.op.url="//browser-update.org/update.html#"+jsv+"@"+(location.hostname||"x");
 var tar="";
