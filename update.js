@@ -6,6 +6,7 @@ var $buo = function(op,test) {
 var jsv=18;
 var n = window.navigator,b;
 this.op=op||{};
+var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase()
 var ll=this.op.l.substr(0,2);
@@ -30,9 +31,10 @@ this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
 this.op.onclose = op.onclose||function(o){};
-this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
-if (op.l)
-	this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
+if (langset)
+    this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
+else
+    this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
 this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
 this.op.newwindow=(op.newwindow!==false);
 
@@ -70,7 +72,7 @@ function getBrowser(ua_str) {
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
     
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==24 || Math.round(v)==31))
+    if (n=="f" && (Math.round(v)==24 || Math.round(v)==31 || Math.round(v)==38))
         donotnotify="ESR";
     //do not notify opera 12 on linux since it is the latest version
     if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12) 
