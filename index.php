@@ -163,8 +163,8 @@ catch(e){window.attachEvent("onload", $buo_f)}
 			<select id="f-i" onchange="code();">
 				<option value="7">&lt;= 7</option>
 				<option value="8">&lt;= 8</option>
-				<option value="9" selected>&lt;= 9</option>
-                                <option value="10">&lt;= 10</option>
+				<option value="9">&lt;= 9</option>
+                                <option value="10" selected>&lt;= 10</option>
 			</select>
 		</span>
 		<span class="browser">
