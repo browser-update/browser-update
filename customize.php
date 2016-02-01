@@ -28,7 +28,7 @@ T_textdomain('customize');
 <pre>
 var $buoop = {
     vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
-    reminder: 24,                   // <?php echo T_('atfer how many hours should the message reappear') . "\n"; ?>
+    reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
     reminderClosed: 150             // <?php echo T_('if the user closes message it reappears after x hours') . "\n"; ?>
     onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
@@ -66,7 +66,7 @@ var $buoop = {
 
 <p>
     <?php echo T_('The following CSS rules are applied by the script. '); ?>
-    <?php echo T_('You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>'); ?>
+    <?php echo T_('You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>'); ?>
 </p>
 
 <pre>
