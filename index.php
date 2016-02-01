@@ -159,12 +159,14 @@ catch(e){window.attachEvent("onload", $buo_f)}
         <p><?php echo T_('Following browsers will be notified:'); ?></p>
         <div id="browserversionchooser">
 		<span class="browser">
-			<label for="f-i">IE</label> 
+			<label for="f-i">IE/Edge</label> 
 			<select id="f-i" onchange="code();">
+                                <option value="6">&lt;= 6</option>
 				<option value="7">&lt;= 7</option>
 				<option value="8">&lt;= 8</option>
-				<option value="9" selected>&lt;= 9</option>
-                                <option value="10">&lt;= 10</option>
+				<option value="9">&lt;= 9</option>
+                                <option value="10" selected>&lt;= 10</option>
+                                <option value="11">&lt;= 11</option>
 			</select>
 		</span>
 		<span class="browser">

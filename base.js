@@ -5,7 +5,7 @@ function code() {
     //getomat('i')=="6" && getomat('f')=="2" && getomat('o')=="9.2" && getomat('s')=="2"
     if (autoupdate.checked) {
         var notify = "";
-        setomatdefault('i',2);
+        setomatdefault('i',4);
         setomatdefault('f',4);
         setomatdefault('o',1);
         setomatdefault('s',4);
@@ -53,11 +53,11 @@ function getlang() {
 
 function ignore(f) {
     return false;
-    return (f.n==="f" && f.v>=38) ||
-            (f.n==="o" && f.v>=28) ||
+    return (f.n==="f" && f.v>=44) ||
+            (f.n==="o" && f.v>=33) ||
             (f.n==="s" && f.v>=9) ||
             (f.n==="i" && f.v>=12)||
-            (f.n==="c" && f.v>=42);
+            (f.n==="c" && f.v>=45);
 }
 var ref=(document.referrer||"").substring(0,50);
 ref=ref||((window.location.hash||"").match(/.*@(.*)/i)||(window.location.hash||"").match(/.*:(.*)/i)||["",""])[1]||"";
