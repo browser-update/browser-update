@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Browser-Update.org - <?php echo T_('Update your Browser'); ?></title>
+    <title><?php echo T_('Update your Browser'); ?> - Browser-Update.org</title>
     <meta name="description" content="" />
     <meta name="keywords" content="browser, webbrowser, choice, change browser, firefox, safari, opera, firefox 3, internet explorer 6, internet explorer update, ie, safari, konqueror" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-language" content="<?php echo request_lang(); ?>" />
     <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
     <link rel="icon" href="/img/favicon.png" type="image/png"/>
@@ -79,6 +80,7 @@
                 <a href="/bg/<?php echo $curfile?>">български</a>
                 <a href="/el/<?php echo $curfile?>">Ελληνικά</a> 
                 <a href="/ar/<?php echo $curfile?>">العربية</a>
+                <a href="/sr/<?php echo $curfile?>">Srpski</a>
                 <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>

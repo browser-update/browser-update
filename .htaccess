@@ -31,14 +31,14 @@ AddCharset utf-8 .js
 #4 days cache for the files
 
 <FilesMatch "update.js">
-  Header set Cache-Control "public, max-age=1296000"
-  ExpiresDefault "access plus 15 days"
+  Header set Cache-Control "public, max-age=259200"
+  ExpiresDefault "access plus 3 days"
   SetOutputFilter DEFLATE
 </FilesMatch>
 
 <FilesMatch "update.min.js">
-  Header set Cache-Control "public, max-age=1296000"
-  ExpiresDefault "access plus 15 days"
+  Header set Cache-Control "public, max-age=259200"
+  ExpiresDefault "access plus 3 days"
   SetOutputFilter DEFLATE
 </FilesMatch>
 
@@ -51,6 +51,6 @@ AddCharset utf-8 .js
 </FilesMatch>
 
 <FilesMatch "dialog-warning.gif">
-  Header set Cache-Control "public, max-age=2419200"
+  Header set Cache-Control "public, max-age=259200"
 </FilesMatch>
 

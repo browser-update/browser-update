@@ -16,12 +16,13 @@ body,html {
 	position: relative;
 }
 
- @media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1130px){
      #co {
 	width: 775px;
 	margin-left: 30px;
      }
- }
+}
+
 @media only screen and (max-width: 970px){
     body #co {
 	width: auto;
@@ -31,6 +32,53 @@ body,html {
      }
  }
 
+
+/* For mobile sites*/
+@media only screen and (max-width: 600px) {
+    body #co {
+        width:auto;
+        margin-left: 2px;
+        margin-right: 2px;
+        min-width: 200px;
+    }
+    body .adc {
+        float: none;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    body .ad {
+        margin: auto;
+    }
+
+    body #skylarge {
+        float: none;
+        margin: auto;
+        width: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    body .logos,body .logos td,body .logos tr {
+        display: block;
+        width: auto;
+        margin: 0;
+    }
+    body .logos td {
+        width: 48%;
+        display: inline-block;
+        padding: 0;
+    }    
+    body .men {
+        position:relative;
+        top: 10px;
+        right: auto;
+        margin: auto;
+        width: auto;
+    }
+}
 
  
 img {
@@ -615,6 +663,7 @@ a.notavailable .bro {
 #sky .ad {
     border: none;
 }
+
 @media only screen and (min-width: 1130px) {
     #sky {
         float:none;
