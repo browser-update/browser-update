@@ -8,11 +8,11 @@ var n = window.navigator,b;
 this.op=op||{};
 var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
-this.op.l=this.op.l.replace("_","-").toLowerCase()
+this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:12,f:42,o:30,s:8,n:20,c:46};
-this.op.vsdefault = {i:10,f:40,o:12.1,s:6.1,n:12,c:45};
-this.op.vsmin={i:8,f:5,o:12,s:5.1,n:12};
+this.op.vsakt = {i:12,f:45,o:33,s:9.1,n:20,c:49};
+this.op.vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47};
+this.op.vsmin={i:9,f:5,o:12.5,s:6.2,n:12};
 var myvs=op.vs||{};
 this.op.vs =op.vs||this.op.vsdefault;
 for (b in this.op.vsakt) {
@@ -21,7 +21,7 @@ for (b in this.op.vsakt) {
     if (!this.op.vs[b])
         this.op.vs[b]=this.op.vsdefault[b];
     if (this.op.vs[b]<this.op.vsmin[b])
-        this.op.vs[b]=this.op.vsmin[b];      
+        this.op.vs[b]=this.op.vsmin[b];
 }
 if (op.reminder<0.1 || op.reminder===0)
     this.op.reminder=0;
@@ -49,7 +49,7 @@ if (op.exp && !this.op.test  && Math.round(Math.random()*5000)<1) {
 */
 
 function getBrowser(ua_str) {
-    var n,v,t,ua=ua_str||navigator.userAgent;
+    var n,t,ua=ua_str||navigator.userAgent;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
     if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser|Otter|Midori|qutebrowser/i.test(ua)) n="x";
     else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
@@ -65,21 +65,21 @@ function getBrowser(ua_str) {
     else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
     else if (/Netscape.(\d+)/i.test(ua)) n="n";
     else return {n:"x",v:0,t:names[n]};
-    
+
     var v= parseFloat(RegExp.$1);
     var donotnotify=false;
     //do not notify ver old systems since their is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
-    
+
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==24 || Math.round(v)==31 || Math.round(v)==38))
+    if (n=="f" && (Math.round(v)==31 || Math.round(v)==38 || Math.round(v)==45))
         donotnotify="ESR";
     //do not notify opera 12 on linux since it is the latest version
-    if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12) 
+    if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12)
         donotnotify="Opera12Linux";
-    
+
     if (n=="x") return {n:"x",v:v||0,t:names[n],donotnotify:donotnotify};
-    
+
 
     if (n=="so") {
         v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
@@ -96,7 +96,7 @@ function getBrowser(ua_str) {
         else if (v>3.1) v=8;
         else if (v>3) v=7;
         else v=9;
-    }	
+    }
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify};
 }
 
@@ -134,15 +134,11 @@ function busprintf() {
     return data;
 }
 
-var t = 'This website would like to remind you: Your browser (%s) is <b>out of date</b>.\
-         <a%s>Update your browser</a> for more security, comfort and the best experience on this site.';
+var t = 'This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site.';
 if (ll=="de")
-    t = 'Sie verwenden einen <b>veralteten Browser</b> (%s) mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen</b>. \
-        <a%s>Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
+    t = 'Sie verwenden einen <b>veralteten Browser</b> (%s) mit <b>Sicherheitsschwachstellen</b> und <b>k&ouml;nnen nicht alle Funktionen dieser Webseite nutzen</b>. <a%s>Hier erfahren Sie, wie einfach Sie Ihren Browser aktualisieren k&ouml;nnen</a>.';
 else if (ll=="it")
-    t = 'Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le \
-        pagine di questo e altri siti. \
-        <a%s>Aggiorna il tuo browser</a>!';
+    t = 'Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le pagine di questo e altri siti. <a%s>Aggiorna il tuo browser</a>!';
 else if (ll=="pl")
     t = 'Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>.';
 else if (ll=="es")
@@ -152,8 +148,7 @@ else if (ll=="nl")
 else if (ll=="pt")
     t = 'Seu navegador (%s) está <b>desatualizado</b>. Ele possui <b>falhas de segurança</b> e pode <b>apresentar problemas</b> para exibir este e outros websites. <a%s>Veja como atualizar o seu navegador</a>';
 else if (ll=="sl")
-    t = 'Vaš brskalnik (%s) je <b>zastarel</b>. Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. \
-        <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
+    t = 'Vaš brskalnik (%s) je <b>zastarel</b>. Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
 else if (ll=="ru")
     t = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
 else if (ll=="id")
@@ -164,9 +159,8 @@ else if (ll=="ko")
     t = '지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>';
 else if (ll=="rm")
     t = 'Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da segirezza</b> enconuschents e mussa eventualmain <b>betg tut las funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes navigatur</a>.';
-else if (ll=="ja")	
-	t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 \
-         <a%s>ブラウザを更新する方法を確認する</a>';
+else if (ll=="ja")
+	t = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 <a%s>ブラウザを更新する方法を確認する</a>';
 else if (ll=="fr")
 	t = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionnalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
 else if (ll=="da")
@@ -176,11 +170,9 @@ else if (ll=="sq")
 else if (ll=="ca")
         t = 'El teu navegador (%s) està <b>desactualitzat</b>. Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a%s>Aprèn a actualitzar el navegador</a>';
 else if (ll=="tr")
-    t = 'Tarayıcınız (%s) <b>güncel değildir.</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. \
-         <a%s>Tarayıcınızı nasıl güncelleyeceğinizi öğrenin!</a>';
+    t = 'Tarayıcınız (%s) <b>güncel değildir.</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. <a%s>Tarayıcınızı nasıl güncelleyeceğinizi öğrenin!</a>';
 else if (ll=="fa")
-    t = 'مرورگر شما (%s) <b>از رده خارج شده</b> می باشد. این مرورگر دارای <b>مشکلات امنیتی شناخته شده</b> می باشد و <b>نمی تواند تمامی ویژگی های این</b> وب سایت و دیگر وب سایت ها را به خوبی نمایش دهد. \
-         <a%s>در خصوص گرفتن راهنمایی درخصوص نحوه ی به روز رسانی مرورگر خود اینجا کلیک کنید.</a>';
+    t = 'مرورگر شما (%s) <b>از رده خارج شده</b> می باشد. این مرورگر دارای <b>مشکلات امنیتی شناخته شده</b> می باشد و <b>نمی تواند تمامی ویژگی های این</b> وب سایت و دیگر وب سایت ها را به خوبی نمایش دهد. <a%s>در خصوص گرفتن راهنمایی درخصوص نحوه ی به روز رسانی مرورگر خود اینجا کلیک کنید.</a>';
 else if (ll=="sv")
     t = 'Din webbläsare (%s) är <b>föråldrad</b>. Den har kända <b>säkerhetshål</b> och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra webbsidor. <a%s>Uppdatera din webbläsare idag</a>';
 else if (ll=="hu")
@@ -206,11 +198,11 @@ else if (ll=="ro")
 else if (ll=="bg")
     t='Вашият браузър (%s) <b>не е актуален</b>. Известно е, че има <b>пропуски в сигурността</b> и може <b>да не покаже правилно</b> този или други сайтове. <a%s>Научете как да актуализирате браузъра си</a>.';
 else if (ll=="el")
-	t = 'Αυτός ο ιστότοπος σας υπενθυμίζει: Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>.\
-	<a%s>Ενημερώστε το πρόγραμμα περιήγησής σας</a> για μεγαλύτερη ασφάλεια και άνεση σε αυτήν την ιστοσελίδα.';
+	t = 'Αυτός ο ιστότοπος σας υπενθυμίζει: Ο φυλλομετρητής σας (%s) είναι <b>παρωχημένος</b>. <a%s>Ενημερώστε το πρόγραμμα περιήγησής σας</a> για μεγαλύτερη ασφάλεια και άνεση σε αυτήν την ιστοσελίδα.';
 else if (ll=="ar")
         t='متصفحك (%s) <b>منتهى الصلاحيه</b>. ويوجد به <b>ثغرات امنية</b> معروفة وقد <b>لا يُشغل كثير من الميزات</b> المتعلقه بهذه الموقع. <a%s>أضغط هنا</a>لتعرف كيف تقوم بتحديث متصفحك';
-
+else if (ll=="sr")
+    t='Vaš pretraživač (%s) je <b>zastareo</b>. Ima poznate <b>sigurnosne probleme</b> i najverovatnije <b>neće prikazati sve funkcionalnisti</b> ovog i drugih sajtova. <a%s>Nauči više o nadogradnji svog pretraživača</a>';
 
 if (op.text)
     t = op.text;
