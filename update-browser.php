@@ -69,6 +69,7 @@ if (isset($sa_map[$ll]))
 
 $u_ff="http://www.mozilla.com/firefox/";
 $u_op="http://www.opera.com/browser/";
+$u_op="http://www.opera.com/?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
 #$u_ch=sprintf("http://www.google.com/chrome?hl=%s",$ll);
 $u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$lr);
@@ -112,14 +113,14 @@ $u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$
     <?php } if ($no_ie) {?>
     <?php } else if ($no_ie_system) {?>
     <td class="b bi">
-        <a class="l notavailable"><span class="bro">Internet Explorer 11</span>   
+        <a class="l notavailable"><span class="bro">Edge</span>   
         <span class="vendor">Microsoft</span>   
         <span class="na"><?php echo T_('Most recent version not available for your system.');?> <?php echo T_('Please choose another browser.'); ?> </span>
         </a>
     </td>      
     <?php } else {?>
     <td class="b bi">
-        <a class="l" href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')"><span class="bro">Internet Explorer</span>   
+        <a class="l" href="<?php echo $u_ie;?>" target="_blank" onmousedown="countBrowser('i')"><span class="bro">Edge</span>   
         <span class="vendor">Microsoft</span>        </a>
     </td>
     <?php }?>
@@ -220,4 +221,17 @@ var second=false;
 countView();
 </script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/cookie-bar/1/cookiebar-latest.min.js?tracking=1&thirdparty=1"></script> 
+<style>
+    #cookie-bar {
+        background: #ddd;
+    }
+    #cookie-bar p {
+        color: #777;
+    }    
+#cookie-bar-button {
+    background-color: #999;
+    border-bottom: none;
+    text-shadow: none;
+}
+</style>
 <?php include("footer.php");?>
