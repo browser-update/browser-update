@@ -169,7 +169,7 @@ T_textdomain('update');
 
 
 $newtrans=true;    
-if (strpos("xx,ja,sl,id,uk,rm,da,sv,hu,fa,gl",$ll)>0)
+if (strpos("xx,ja,sl,id,rm,da,sv,hu,fa,gl",$ll)>0)
     $newtrans=false;
 //if (!$newtrans)
 //    T_textdomain('browser-update');

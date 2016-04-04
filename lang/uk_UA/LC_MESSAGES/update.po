@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2016-01-26 01:14+0200\n"
+"PO-Revision-Date: 2016-04-04 19:51+0100\n"
 "Last-Translator: Юлій В. Чирков (Juliy V. Chirkov) <juliyvchirkov@gmail.com>\n"
 "Language-Team: VIVAsg <info@vivasg.com>\n"
 "Language: uk_UA\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.7.1\n"
 
 #: header.php:5
 msgid "Update your Browser"
@@ -24,9 +24,7 @@ msgstr "Оновіть Ваш браузер"
 
 #: header.php:28
 msgid "An initiative by web designers to inform users about browser-updates"
-msgstr ""
-"Ініціатива веб-розробників з інформування пересічних користувачів мережі щодо "
-"оновлення браузерів"
+msgstr "Ініціатива веб-розробників з інформування пересічних користувачів мережі щодо оновлення браузерів"
 
 #: header.php:30
 msgid "The Project"
@@ -49,29 +47,20 @@ msgid "Contact"
 msgstr "Контакти"
 
 #: update-browser.php:82
-msgid ""
-"Your browser is out-of-date. Please download one of these up-to-date, free "
-"and excellent browsers:"
-msgstr ""
-"Ваш браузер, на жаль, є застарілим. Будь ласка, завантажте собі один з цих "
-"чудових сучасних безкоштовних браузерів на Ваш смак та розсуд:"
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Ваш браузер, на жаль, є застарілим. Будь ласка, завантажте собі один з цих чудових сучасних безкоштовних браузерів на Ваш смак та розсуд:"
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Most recent version not available for your system."
-msgstr ""
-"На жаль, найсвіжіша версія цього браузера для Вашої системи наразі "
-"відсутня."
+msgstr "На жаль, найсвіжіша версія цього браузера для Вашої системи наразі відсутня."
 
 #: update-browser.php:86 update-browser.php:100
 msgid "Please choose another browser."
 msgstr " Будь ласка, оберіть будь-який інший браузер."
 
 #: update-browser.php:114
-msgid ""
-"For more <a href=%s>security</a>, <a href=%s>speed</a>, <a href=%s">comfort</a> and    <a href=%s>fun</a>."
-msgstr ""
-"Заради зростання <a href=%s>безпеки</a>, <a href=%s>швидкості</a>, <a "
-"href=%s>комфорту</a> та <a href=%s>задоволення</a>."
+msgid "For more <a href=%s>security</a>, <a href=%s>speed</a>, <a href=%s>comfort</a> and    <a href=%s>fun</a>."
+msgstr "Заради зростання <a href=%s>безпеки</a>, <a href=%s>швидкості</a>, <a href=%s>комфорту</a> та <a href=%s>задоволення</a>."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -79,15 +68,8 @@ msgstr "Реклама"
 
 #: update-browser.php:162
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
-msgstr ""
-"Браузер (%s), яким ви користуєтесь, є <b>суттєво застарілим</b>. Він має "
-"<b>проблеми з безпекою</b> та може <b>не відображати чи некоректно "
-"відображати деякий вміст</b> на цьому та інших веб-сайтах. <a href="
-"%s>Дізнайтеся, як оновити Ваш браузер</a>"
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "Браузер (%s), яким ви користуєтесь, є <b>суттєво застарілим</b>. Він має <b>проблеми з безпекою</b> та може <b>не відображати чи некоректно відображати деякий вміст</b> на цьому та інших веб-сайтах. <a href=%s>Дізнайтеся, як оновити Ваш браузер</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
@@ -98,14 +80,8 @@ msgid "Security"
 msgstr "Безпека"
 
 #: update-browser.php:178
-msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing "
-"and other threats. They also fix security holes in your current browser!"
-msgstr ""
-"Останні версії сучасних браузерів набагато краще захистять Вашу систему та "
-"Ваше особисте життя від шахраїв, вірусів, троянів, фішингу та інших атак. "
-"Ці браузери вже давно мають захист від вразливостей, що наразі присутні у  "
-"Вашому застарілому браузері!"
+msgid "Newer browsers protect you better against scams, viruses, trojans, phishing and other threats. They also fix security holes in your current browser!"
+msgstr "Останні версії сучасних браузерів набагато краще захистять Вашу систему та Ваше особисте життя від шахраїв, вірусів, троянів, фішингу та інших атак. Ці браузери вже давно мають захист від вразливостей, що наразі присутні у  Вашому застарілому браузері!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -121,46 +97,27 @@ msgstr "Сумісність"
 
 #: update-browser.php:186
 msgid "Websites using new technology will be displayed more correctly"
-msgstr ""
-"Нові технології дозволяють сучасним браузерам коректніше відображати зміст "
-"веб-сайтів"
+msgstr "Нові технології дозволяють сучасним браузерам коректніше відображати зміст веб-сайтів"
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
 msgstr "Зручність та задоволення"
 
 #: update-browser.php:190
-msgid ""
-"With new features, extensions and better customisability, you will have a "
-"more comfortable web-experience"
-msgstr ""
-"Завдяки новим можливостям технологій та стандартів, безлічі різноманітних "
-"додатків та розширень, що наразі існують для сучасних браузерів, та "
-"неперевершеній гнучкості у налаштуваннях Вам буде набагато зручніше "
-"користуватися мережею, тож Ваше задоволення від процесу значно зросте"
+msgid "With new features, extensions and better customisability, you will have a more comfortable web-experience"
+msgstr "Завдяки новим можливостям технологій та стандартів, безлічі різноманітних додатків та розширень, що наразі існують для сучасних браузерів, та неперевершеній гнучкості у налаштуваннях Вам буде набагато зручніше користуватися мережею, тож Ваше задоволення від процесу значно зросте"
 
 #: update-browser.php:198
 msgid "Why this website?"
 msgstr "Чому з’явився цей веб-сайт?"
 
 #: update-browser.php:200
-msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who "
-"want to bring the web further and help their visitors."
-msgstr ""
-"Цей веб-сайт було створено за ініціативою веб-дизайнерів, веб-розробників та "
-"блогерів, які прагнуть зробити мережу якомога кращою та допомогти своїм "
-"відвідувачам та іншим користувачам відчути від мережі справжнє задоволення."
+msgid "This website is an initiative by webdesigners, webmasters and bloggers who want to bring the web further and help their visitors."
+msgstr "Цей веб-сайт було створено за ініціативою веб-дизайнерів, веб-розробників та блогерів, які прагнуть зробити мережу якомога кращою та допомогти своїм відвідувачам та іншим користувачам відчути від мережі справжнє задоволення."
 
 #: update-browser.php:203
-msgid ""
-"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement of the web</b> because of their limited features and many "
-"<b>bugs</b>."
-msgstr ""
-"Застарілі браузери через свої обмежені можливості та <b>численні помилки й "
-"дірки у захисті</b> створюють проблеми з <b>безпекою</b> для всього "
-"мережевого суспільства та <b>суттєво гальмують розвиток інтернету</b>."
+msgid "Outdated browsers are a <b>security threat</b> and are <b>blocking the advancement of the web</b> because of their limited features and many <b>bugs</b>."
+msgstr "Застарілі браузери через свої обмежені можливості та <b>численні помилки й дірки у захисті</b> створюють проблеми з <b>безпекою</b> для всього мережевого суспільства та <b>суттєво гальмують розвиток інтернету</b>."
 
 #: update-browser.php:206
 msgid "More information about the Project Browser-Update.org"
@@ -171,21 +128,9 @@ msgid "\"I'm not able to update my browser\""
 msgstr "«В мене не виходить оновити мій браузер»"
 
 #: update-browser.php:212
-msgid ""
-"If you can't change your browser because of compatibility issues, think about "
-"installing a second browser for browsing and keep the old one for the "
-"compatibility."
-msgstr ""
-"Якщо Ваші спроби оновити браузер є марними через проблеми з сумісністю, "
-"поміркуйте над варіантом встановити інший сучасний браузер з наведених на цій "
-"сторінці, і надали у мережі використовуйте лише цей новий, а свій наявний "
-"застарілий залиште у системі як є для сумісності."
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for the compatibility."
+msgstr "Якщо Ваші спроби оновити браузер є марними через проблеми з сумісністю, поміркуйте над варіантом встановити інший сучасний браузер з наведених на цій сторінці, і надали у мережі використовуйте лише цей новий, а свій наявний застарілий залиште у системі як є для сумісності."
 
 #: update-browser.php:213
-msgid ""
-"If you are on a computer that is maintained by an admin and you cannot "
-"install a new browser, ask your admin about it."
-msgstr ""
-"Якщо Ви не є адміністратором цього комп'ютера та не маєте можливості оновити "
-"браузер власноруч, зверніться з проханням щодо оновлення браузера до "
-"адміністратора Вашої локальної мережі."
+msgid "If you are on a computer that is maintained by an admin and you cannot install a new browser, ask your admin about it."
+msgstr "Якщо Ви не є адміністратором цього комп'ютера та не маєте можливості оновити браузер власноруч, зверніться з проханням щодо оновлення браузера до адміністратора Вашої локальної мережі."
