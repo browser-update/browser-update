@@ -86,7 +86,7 @@ Umsatzsteuer-Identifikationsnummer: DE 217 549 808
 <h3>This website</h3>
 <p>
     On this website third party vendors use cookies to serve ads based on a user's visits to this site and other sites on the Internet.
-    Users may opt out of the use of cookies for interest based advertising by visiting <a href=http://aboutads.info">aboutads.info</a>.
+    Users may opt out of the use of cookies for interest based advertising by visiting <a href="http://aboutads.info">aboutads.info</a>.
 </p>
 
 
