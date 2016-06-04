@@ -1,3 +1,5 @@
 dev/
 /config.php
 ads.php
+.spyderproject
+update.min.js
