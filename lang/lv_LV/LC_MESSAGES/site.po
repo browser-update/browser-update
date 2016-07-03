@@ -1,0 +1,376 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-site\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-14 12:36+0100\n"
+"PO-Revision-Date: 2016-04-14 13:20+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"Language: lv_LV\n"
+
+#: contact.php:8
+msgid "Contact"
+msgstr "Sazināties"
+
+#: index.php:33
+msgid ""
+"This service is an  opportunity to inform your visitors  unobtrusively to "
+"switch to a newer browser."
+msgstr ""
+"Šī ir iespēja neuzkrītoši informēt Jūsu apmeklētājis par pāreju uz jaunāku "
+"pārlūkprogrammu."
+
+#: index.php:37
+msgid ""
+"Many internet users are still using very old, out-dated browsers – most of "
+"them for no actual reason. Switching to an newer browser is better for them "
+"and for you as a webdesigner."
+msgstr ""
+"Daudzi interneta lietotāji joprojām izmanto ļoti vecas un neatbalsītas "
+"pārlūkprogrammas - vairums no tiem bez jebkāda iemesla. Pāreja uz jaunāku "
+"pārlūkprogrammu ir labāka gan viņiem, gan Tev kā tīmekļa izstrādātājam."
+
+#: index.php:46
+msgid "How it works"
+msgstr "Kā tas strādā"
+
+#: index.php:50
+#, php-format
+msgid ""
+"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr "Iekļauj nelielu javascript <a href=\"%s\">kodu</a> savā web lapā"
+
+#: index.php:53
+msgid ""
+"Visitors with out-dated browser will be informed by a little, undisturbing "
+"bar, that his browser is not up-to-date and it is recommended to update."
+msgstr ""
+"Apmeklētāji, kas izmanto novecojušas pārlūkprogrammas, tiks informāti ar "
+"nelielu, neuzkrītošu paziņojumu, ka viņu pārlūkprograma ir novecojusi un ir "
+"ieteicams to atjaunot."
+
+#: index.php:56
+msgid "Test the notification bar!"
+msgstr "Pārbaudi šo paziņojumu!"
+
+#: index.php:58
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Jūsu pārlūkprogramma (%s) ir <b>novecojusi</b>.  Tai ir zināmas <b>drošības "
+"problēmas</b>, un tā var attēlot šo un citas  tīmekļa lapas <b>nekorekti</"
+"b>. <a%s>Uzzini, kā atjaunot savu pārlūkprogrammu</a>"
+
+#: index.php:65
+#, php-format
+msgid ""
+"By clicking the bar, he will get to <a href=\"%s\">an info page with "
+"arguments why to change/update and some browser choices</a>."
+msgstr ""
+"Noklikšķinot uz paziņojuma, tiks atvērta <a href=\"%s\">info lapa ar "
+"paskaidrojumiem, kāpēc mainīt/atjaunot pālūkprogrammu</a>."
+
+#: index.php:69
+msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgstr ""
+"Ja apmeklētājs paziņojumu ignorē, tas vairs kādu laiku netiks parādīts."
+
+#: index.php:72
+msgid "Advantages and features"
+msgstr "Priekšrocības un iespējas"
+
+#: index.php:75
+msgid "Subtle"
+msgstr "Neuzbāzīgs"
+
+#: index.php:76
+msgid ""
+"The user will be notified only once, and won't be bothered any more. The "
+"notification bar is very small and won't affect the browsing experience "
+"negatively."
+msgstr ""
+"Apmeklētājs tiks brīdināts tikai vienreiz, un vairs netiks traucēts "
+"atkārtoti."
+
+#: index.php:80
+msgid "Informative"
+msgstr "Informatīvs"
+
+#: index.php:81
+msgid ""
+"Tell the users that they are using an out-dated browser and that your "
+"website looks even better with a newer one."
+msgstr ""
+"Paziņos apmeklētājam, ka tiek izmantota novecojusi pārlūkprogramma un ka šī "
+"mājas lapa izskatās vēl labāk, izmantojot jaunāku versiju."
+
+#: index.php:85
+msgid "Idealistic"
+msgstr ""
+
+#: index.php:86
+msgid "Help evolve the web!"
+msgstr "Palīdz attīstīties tīmeklim!"
+
+#: index.php:87
+msgid "Support the standards-based web!"
+msgstr "Atbalsta web standartu izmantošanu!"
+
+#: index.php:88
+msgid "Support Open Source software projects!"
+msgstr "Atbalsta atvērtā koda projejektus!"
+
+#: index.php:89
+msgid "Help your visitors!"
+msgstr "Palīdz Taviem apmeklētājiem!"
+
+#: index.php:90
+msgid "Help increase security awareness!"
+msgstr "Palīdz uzlabot drošību!"
+
+#: index.php:91
+msgid "Support your favorite webbrowser!"
+msgstr "Atbalsta Tavu mīļako pārlūkprogramu!"
+
+#: index.php:94
+msgid "Low maintenance and up-to-date"
+msgstr "Nav vajadzīga uzturēšana un vienmēr atjaunots"
+
+#: index.php:95
+msgid ""
+"If there come more browser versions which won't be supported by the vendor "
+"in the future, exhibit security gaps or have been very old for a long time "
+"we are going to add them to our list automatically."
+msgstr ""
+"Iznākot jaunākām pārlūka versijām, mēs veco versiju pievienosim sarakstam "
+"automātiski."
+
+#: index.php:100
+msgid "Customizable"
+msgstr "Pārveidojams"
+
+#: index.php:101
+msgid ""
+"You can customize the browsers and versions to notify.<br/> In future "
+"releases you can also customize the text that should be shown, the frequency "
+"of the bar to appear and many other things."
+msgstr ""
+"Tu vari pielāgot, par kuriem pārlūkiem un versijām tiks parādīts paziņojums."
+"<br/> Drīzumā būs iespējams arī pielāgot tekstu, kas tiek parādīts, "
+"paziņojuma parādīšanas biežumu un citas iespējas."
+
+#: index.php:106
+msgid "Localized"
+msgstr "Tavā valodā"
+
+#: index.php:107
+msgid "The message is automatically displayed in the user's language."
+msgstr "Paziņojumi automātiski tiek parādīti lietotāja izvēlētajā valodā."
+
+#: index.php:112
+msgid "Install notification on your site"
+msgstr "Uzstādīt paziņojumu web lapā"
+
+#: index.php:114
+msgid ""
+"Here you can get the code to include in your website. Just include it "
+"anywhere in the source of your page."
+msgstr ""
+"Šeit pieejams kods, kuru iekļaut savā web lapā. Vienkāršī iekopē to jebkurā "
+"vietā savas web lapas kodā."
+
+#: index.php:119
+msgid "Following browsers will be notified:"
+msgstr "Šādas pārlūkprogrammas saņems paziņojumu:"
+
+#: index.php:166
+msgid ""
+"Google Chrome will automatically itself and is therefor always up to date"
+msgstr "Google Chrome tiek atjaunināts automātiski"
+
+#: index.php:172
+msgid ""
+"<b>Notify recommended set of browsers and adjust it automatically over time:"
+"</b>If a browser is no longer supported by the vendor or has security "
+"vulnerabilities, it will be added to the set."
+msgstr ""
+"<b>Parādīt paziņojumu visām nocojušām pārlūkprogrammām:</b> ja pārlūks vairs "
+"netiek atbalstīts, tas tiks pievienots sarakstam."
+
+#: index.php:177
+msgid "Your Code"
+msgstr "Tavs Kods"
+
+#: index.php:195
+#, php-format
+msgid ""
+"You can <a href=\"%s\">customize</a> the style of the message, the text and "
+"other options."
+msgstr ""
+"Tu vari <a href=\"%s\">pielāgot</a> paziņojuma stilu, tekstu un citas "
+"iespējas."
+
+#: index.php:201
+msgid "You may also use third-party plugins for: "
+msgstr "Ir pieejami arī spraudņi:"
+
+#: index.php:228
+msgid "Why you should tell users to update"
+msgstr "Kāpēc vajadzētu informēt lietotājus par atjauninājumiem"
+
+#: index.php:231
+msgid "Reduced development costs and time"
+msgstr "Samazināts izstrādes laiks un izmaksas"
+
+#: index.php:232
+msgid ""
+"Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr "Lapu optimizēšana vecām pārlūku versijām aizņem laiku, tāpēc ir dārga."
+
+#: index.php:235
+msgid "Webdesign technologies and features"
+msgstr "Web dizaina tehnoloģijas un iespējas"
+
+#: index.php:236
+msgid ""
+"There are all these great new web development standards and they are "
+"supported by modern browsers... but you may not use them."
+msgstr ""
+"Visu laiku tiek izstrādāti jauni web standarti un tos atbalsta tikai "
+"jaunākās pārlūkprogrammas… bet tev tie nav pieejami."
+
+#: index.php:238
+msgid ""
+"Newer browsers let you use more features and new technologies (CSS3, SVG, "
+"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
+"resulting in a better browsing experience for your users."
+msgstr ""
+"Jaunākas pārlūkprogrammas ļauj izmantot vairāk iespēju un tehnoloģiju (CSS3, "
+"SVG, HTML5, RSS, CSS Generated Content, flexible Layouts), tas ļauj "
+"lietotājiem ērtāk pārlūkot web lapas."
+
+#: index.php:241
+msgid "Security and benefits for the user"
+msgstr "Lietotāja drošība"
+
+#: index.php:242
+#, php-format
+msgid ""
+"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
+"\">update page</a>. The security-threats of outdates browsers are listed in "
+"this <a href=\"%s\">paper</a>."
+msgstr ""
+"Vairāki ieguvumi: drošība, ātrums, iespējas, … <a href=\"%s\">Atjauninājumu "
+"sadaļa</a>. Novecojušu pārlūku drošības problēmas var uzzināt <a href=\"%s"
+"\">šeit</a>."
+
+#: index.php:245
+msgid "The web has to evolve..."
+msgstr "Tīmeklim ir jāattīstās"
+
+#: index.php:247
+msgid "But that's only possible if the browsers also evolve."
+msgstr "Bet tas ir iespējams tikai tad, ja pārlūkprogrammas attīstās."
+
+#: index.php:248
+msgid ""
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
+"something new in the history of the web. If we take no action now, we will "
+"have to code websites like in 2001 even if it is 2011."
+msgstr ""
+
+#: index.php:252
+msgid "Users don't oppose updating..."
+msgstr "Lietotājiem nav iebildumu pret atjaunināšanu…"
+
+#: index.php:253
+msgid ""
+"... they often just do not appreciate the need to update or the existence of "
+"the \"webbrowser\" as a software at all."
+msgstr ""
+"… biežāk tie vienkārši nezina, kāds no tā ir ieguvums un kāpēc tas vispār ir "
+"nepieciešams."
+
+#: index.php:256
+msgid "Help this project"
+msgstr "Palīdzi šim projektam"
+
+#: index.php:259
+msgid "Participate!"
+msgstr "Piedalies!"
+
+#: index.php:260
+msgid ""
+"Include the notification code in your page to inform users about browser "
+"updates."
+msgstr ""
+"Iekļauj paziņojuma kodu savā web lapā, lai informētu lietotājus par "
+"atjauninājumiem."
+
+#: index.php:263
+msgid "Spread the word!"
+msgstr "Palīdzi izplatīt!"
+
+#: index.php:264
+msgid "Tell others about this initiative! In your blog, on your webpage, ..."
+msgstr "Pastāsti citiem par šo projektu! Savā blogā, savā web lapā, …"
+
+#: index.php:267
+msgid "Translate this page"
+msgstr "Iztulko šo lapu"
+
+#: index.php:268
+msgid "Translate this page into your language."
+msgstr "Iztulko savā valodā."
+
+#: stat.php:9
+msgid "Statistics"
+msgstr "Statistika"
+
+#: stat.php:18
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
+"script."
+msgstr ""
+"<strong class=\"number\">%d</strong> web lapas izmanto Browser-Update.org "
+"skriptu."
+
+#: stat.php:22
+msgid "Browser updates"
+msgstr "Pārlūku atjauninājumi"
+
+#: stat.php:60
+#, php-format
+msgid ""
+"<strong class=\"number\">%d</strong> visitors have already upgraded their "
+"browser."
+msgstr ""
+"<strong class=\"number\">%d</strong> apmeklētāji jau ir jatjauninājuši savu "
+"pārlūku."
+
+#: stat.php:92
+msgid "From"
+msgstr "No"
+
+#: stat.php:92
+msgid "To"
+msgstr "Uz"
+
+#: stat.php:92
+msgid "Amount"
+msgstr "Skaits"

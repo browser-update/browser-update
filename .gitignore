@@ -3,3 +3,5 @@ dev/
 ads.php
 .spyderproject
 update.min.js
+crowdin.yaml
+*.mo

@@ -10,7 +10,7 @@ var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:12,f:45,o:33,s:9.1,n:20,c:49};
+this.op.vsakt = {i:12,f:45,o:36,s:9.1,n:20,c:49};
 this.op.vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47};
 this.op.vsmin={i:9,f:5,o:12.5,s:6.2,n:12};
 var myvs=op.vs||{};
@@ -74,12 +74,8 @@ function getBrowser(ua_str) {
     //do not notify firefox ESR
     if (n=="f" && (Math.round(v)==31 || Math.round(v)==38 || Math.round(v)==45))
         donotnotify="ESR";
-    //do not notify opera 12 on linux since it is the latest version
-    if (/linux|x11|unix|bsd/.test(ua) && n=="o" && v>12)
-        donotnotify="Opera12Linux";
-
+    
     if (n=="x") return {n:"x",v:v||0,t:names[n],donotnotify:donotnotify};
-
 
     if (n=="so") {
         v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
@@ -203,6 +199,10 @@ else if (ll=="ar")
         t='متصفحك (%s) <b>منتهى الصلاحيه</b>. ويوجد به <b>ثغرات امنية</b> معروفة وقد <b>لا يُشغل كثير من الميزات</b> المتعلقه بهذه الموقع. <a%s>أضغط هنا</a>لتعرف كيف تقوم بتحديث متصفحك';
 else if (ll=="sr")
     t='Vaš pretraživač (%s) je <b>zastareo</b>. Ima poznate <b>sigurnosne probleme</b> i najverovatnije <b>neće prikazati sve funkcionalnisti</b> ovog i drugih sajtova. <a%s>Nauči više o nadogradnji svog pretraživača</a>';
+else if (ll=="la")
+    t='Mēs vēlamies Jums atgādināt: Jūsu pārlūkprogramma (%s) ir novecojusi. <a>Atjauniniet savu pārlūkprogrammu</a>, lai uzlabotu drošību, ātrumu un pārlūkošanas ērtības šajā un citās lapās.';
+else if (ll=="ga")
+    t='Tá an líonléitheoir agat (%s) <b>as dáta</b>. Tá <b>laigeachtaí slándála</b> a bhfuil ar eolas ann agus b\'fhéidir <b>nach taispeánfaidh sé gach gné</b> den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a nuashonrú</a>';
 
 if (op.text)
     t = op.text;
@@ -254,7 +254,7 @@ div.onclick=function(){
 };
 try {
 div.getElementsByTagName("a")[0].onclick = function(e) {
-    var e = e || window.event;
+    e = e || window.event;
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
     me.op.onclick(me.op);
@@ -268,7 +268,7 @@ this.op.bodymt = hm.style.marginTop;
 hm.style.marginTop = (div.clientHeight)+"px";
 (function(me) {
             document.getElementById("buorgclose").onclick = function(e) {
-                var e = e || window.event;
+                e = e || window.event;
                 if (e.stopPropagation) e.stopPropagation();
                 else e.cancelBubble = true;
                 me.op.div.style.display = "none";

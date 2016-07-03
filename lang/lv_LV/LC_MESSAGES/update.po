@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-14 11:58+0100\n"
+"PO-Revision-Date: 2016-04-14 12:30+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"Language: lv_LV\n"
+
+#: header.php:5
+msgid "Update your Browser"
+msgstr "Atjauniniet savu pārlūkprogrammu."
+
+#: header.php:28
+msgid "An initiative by web designers to inform users about browser-updates"
+msgstr ""
+"Šo mājas lapu veidojuši web izstrādātāji, lai informētu lietotājus par "
+"pārlūkprogrammu atjauninājumiem"
+
+#: header.php:30
+msgid "The Project"
+msgstr "Projekts"
+
+#: header.php:33
+msgid "Update Browser"
+msgstr "Atjaunināt pārlūku"
+
+#: header.php:34
+msgid "Statistics"
+msgstr "Statistika"
+
+#: header.php:35
+msgid "Blog"
+msgstr "Blogs"
+
+#: header.php:74
+msgid "Contact"
+msgstr "Sazināties"
+
+#: update-browser.php:65
+msgid ""
+"Your browser is out-of-date. Please download one of these up-to-date, free "
+"and excellent browsers:"
+msgstr ""
+"Jūsu pārlūkprogramma ir novecojusi. Lūdzu lejupielādējiet kādu no šīm "
+"bezmaksas pārlūkprogrammām:"
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Most recent version not available for your system."
+msgstr "Jaunākās versijas nav piemērotas Jūsu sistēmai."
+
+#: update-browser.php:86 update-browser.php:100
+msgid "Please choose another browser."
+msgstr "Lūdzu izvēlieties citu pārlūku."
+
+#: update-browser.php:114
+#, php-format
+msgid ""
+"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
+"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr ""
+"Lielākai <a href=\"%s\">drošībai</a>,    <a href=\"%s\">ātrumam</a>,    <a "
+"href=\"%s\">komfortam</a> un    <a href=\"%s\">izklaidei</a>."
+
+#: update-browser.php:122 update-browser.php:141
+msgid "Advertisement"
+msgstr "Reklāma"
+
+#: update-browser.php:162
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a"
+"%s>Learn how to update your browser</a>"
+msgstr ""
+"Jūsu pārlūkprogramma (%s) ir <b>novecojusi</b>.  Tai ir zināmas <b>drošības "
+"problēmas</b>, un tā var attēlot šo un citas  tīmekļa lapas <b>nekorekti</"
+"b>. <a%s>Uzzini, kā atjaunot savu pārlūkprogrammu</a>"
+
+#: update-browser.php:173
+msgid "Why do I need an up-to-date browser?"
+msgstr "Kāpēc man vajadzētu atjaunināt savu pārlūkprogrammu?"
+
+#: update-browser.php:177
+msgid "Security"
+msgstr "Drošība"
+
+#: update-browser.php:178
+msgid ""
+"Newer browsers protect you better against scams, viruses, trojans, phishing "
+"and other threats. They also fix security holes in your current browser!"
+msgstr ""
+"Jaunākas pārlūkprogrammas labāk pasargā Jūs pret krāpniekiem, vīrusiem, "
+"spiegu programmām un citām briesmām. Atjaunināšana palīdz novērst drošības "
+"problēmas!"
+
+#: update-browser.php:181
+msgid "Speed"
+msgstr "Ātrums"
+
+#: update-browser.php:182
+msgid "Every new browser generation improves speed"
+msgstr "Katra jaunākā pārlūkprogrammu paaudz uzlabo ātrdarbību."
+
+#: update-browser.php:185
+msgid "Compatibility"
+msgstr "Saderība"
+
+#: update-browser.php:186
+msgid "Websites using new technology will be displayed more correctly"
+msgstr ""
+"Mājaslapas tiks attēlotas daudz korektāk, ja tajās būs izmantotas jaunākās "
+"tehnoloģijas"
+
+#: update-browser.php:189
+msgid "Comfort &amp; better experience"
+msgstr "Komforts un ērtības"
+
+#: update-browser.php:190
+msgid ""
+"With new features, extensions and better customisability, you will have a "
+"more comfortable web-experience"
+msgstr ""
+"Ar jaunām iespējām, paplašinājumiem un labāku pielāgojamību tīmekļa lapas "
+"pārlūkot būs patīkamāk."
+
+#: update-browser.php:198
+msgid "Why this website?"
+msgstr "Kāpēc šī mājas lapa?"
+
+#: update-browser.php:200
+msgid ""
+"This website is an initiative by webdesigners, webmasters and bloggers who "
+"want to bring the web further and help their visitors."
+msgstr ""
+"Šo mājas lapu veidojuši web izstrādātāji un blogeri, kuri vēlas attīstīt "
+"globālo tīmekli un palīdzēt saviem apmeklētājiem."
+
+#: update-browser.php:203
+msgid ""
+"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
+"advancement of the web</b> because of their limited features and many "
+"<b>bugs</b>."
+msgstr ""
+"Novecojušas pārlūkprogrammas ir <b>drošības apdraudējums</b> un <b>tās kavē "
+"tīmekļa attīstību</b>, jo tām ir ierobežotas iespējas un daudz <b>problēmu</"
+"b>."
+
+#: update-browser.php:206
+msgid "More information about the Project Browser-Update.org"
+msgstr "Vairāk informācijas par projektu Browser-Update.org"
+
+#: update-browser.php:211
+msgid "\"I'm not able to update my browser\""
+msgstr "“Man neizdodas atjaunināt savu pārlūkprogrammu”"
+
+#: update-browser.php:212
+msgid ""
+"If you can't change your browser because of compatibility issues, think "
+"about installing a second browser for browsing and keep the old one for the "
+"compatibility."
+msgstr ""
+"Ja Jums neizdodas atjaunināt savu pārlūkprogrammu, apsveriet iespēju "
+"uzinstalēt citu pārlūku tīmekļa pārlūkošanai un paturēt veco savienojamībai."
+
+#: update-browser.php:213
+msgid ""
+"If you are on a computer that is maintained by an admin and you cannot "
+"install a new browser, ask your admin about it."
+msgstr ""
+"Ja Jūs imantojat datoru, kuru pārvalda administrators un Jūs nevarat "
+"uzintalēt jaunu pārlūku, pajautājiet par to savam administratoram."
