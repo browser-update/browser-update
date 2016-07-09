@@ -3,7 +3,7 @@
 //It is RECOMMEDED to directly link to this file and not to use a local copy
 //because we update and maintain the detection code
 var $buo = function(op,test) {
-var jsv=18;
+var jsv=19;
 var n = window.navigator,b;
 this.op=op||{};
 var langset=this.op.l;
@@ -78,7 +78,7 @@ function getBrowser(ua_str) {
     if (n=="x") return {n:"x",v:v||0,t:names[n],donotnotify:donotnotify};
 
     if (n=="so") {
-        v=((v<100) && 1.0) || ((v<130) && 1.2) || ((v<320) && 1.3) || ((v<520) && 2.0) || ((v<524) && 3.0) || ((v<526) && 3.2) ||4.0;
+        v=4.0;
         n="s";
     }
     if (n=="i" && v==7 && window.XDomainRequest) {
@@ -113,13 +113,6 @@ function setCookie(hours) {
 if (this.op.reminder>0) {
     setCookie(this.op.reminder);
 }
-
-var languages = "xx,jp,sl,id,uk,rm,da,ca,sv,hu,fa,gl";
-if (languages.indexOf(ll)>0)
-    this.op.url="//browser-update.org/update.html#"+jsv+"@"+(location.hostname||"x");
-var tar="";
-if (this.op.newwindow)
-    tar=' target="_blank"';
 
 function busprintf() {
     var args=arguments;
@@ -209,39 +202,31 @@ if (op.text)
 if (op["text_"+ll])
     t = op["text_"+ll];
 
+var tar="";
+if (this.op.newwindow)
+    tar=' target="_blank"';
 this.op.text=busprintf(t,this.op.browser.t,' href="'+this.op.url+'"'+tar);
 
 var div = document.createElement("div");
 this.op.div = div;
 div.id="buorg";
 div.className="buorg";
-div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose">&times;</div></div>';
 
-var sheet = document.createElement("style");
-//sheet.setAttribute("type", "text/css");
-var style = ".buorg {position:absolute;position:fixed;z-index:111111;\
+
+var style = "<style>.buorg {position:absolute;position:fixed;z-index:111111;\
 width:100%; top:0px; left:0px; \
 border-bottom:1px solid #A29330; \
 background:#FDF2AB no-repeat 13px center url(//browser-update.org/img/small/"+this.op.browser.n+".png);\
 text-align:left; cursor:pointer; \
-font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}\
+font: 13px #000 Arial,sans-serif;\
 .buorg div { padding:5px 36px 5px 40px; } \
 .buorg a,.buorg a:visited  {color:#E25600; text-decoration: underline;}\
-#buorgclose { position: absolute; right: 6px; top:-2px; height: 20px; width: 12px; font-weight: bold;font-size:18px; padding:0; }";
+#buorgclose { position: absolute; right: 6px; top:-2px; height: 20px; width: 12px; font: 18px bold;padding:0; }\\n\
+#burogcc{display:block;position:absolute; top:-99999px;}</style>";
+
+div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose"><button><span id="burogcc">Close</span><span aria-hiden="true">&times;</span></button></div></div>'+style;
 document.body.insertBefore(div,document.body.firstChild);
-document.getElementsByTagName("head")[0].appendChild(sheet);
-try {
-    sheet.innerText=style;
-    sheet.innerHTML=style;
-}
-catch(e) {
-    try {
-        sheet.styleSheet.cssText=style;
-    }
-    catch(e) {
-        return;
-    }
-}
+
 var me=this;
 div.onclick=function(){
     if (me.op.newwindow)
