@@ -8,53 +8,58 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-site\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:23+0100\n"
+"POT-Creation-Date: 2016-07-03 18:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: contact.php:8
-msgid "Contact"
-msgstr ""
-
-#: index.php:33
+#: index.php:24
 msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
 msgstr ""
 
-#: index.php:37
+#: index.php:27
 msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
-"them for no actual reason. Switching to an newer browser is better for them "
-"and for you as a webdesigner."
+"This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
 
-#: index.php:46
+#: index.php:33 stat.php:17
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr ""
+
+#: index.php:36 stat.php:20
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr ""
+
+#: index.php:40
 msgid "How it works"
 msgstr ""
 
-#: index.php:50
+#: index.php:43
 #, php-format
 msgid ""
 "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr ""
 
-#: index.php:53
+#: index.php:46
 msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that his browser is not up-to-date and it is recommended to update."
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
 msgstr ""
 
-#: index.php:56
-msgid "Test the notification bar!"
+#: index.php:47
+msgid "Try it out!"
 msgstr ""
 
-#: index.php:58
+#: index.php:49
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
@@ -62,268 +67,161 @@ msgid ""
 "%s>Learn how to update your browser</a>"
 msgstr ""
 
-#: index.php:65
+#: index.php:53
 #, php-format
 msgid ""
-"By clicking the bar, he will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
 msgstr ""
 
-#: index.php:69
-msgid "If the visitor ignores the advice, it won't appear again for some time."
+#: index.php:56
+msgid "If the visitor ignores the advice, it won't reappear for some time."
 msgstr ""
 
-#: index.php:72
+#: index.php:60
 msgid "Advantages and features"
 msgstr ""
 
-#: index.php:75
-msgid "Subtle"
+#: index.php:63
+msgid "Unobtrusive"
 msgstr ""
 
-#: index.php:76
+#: index.php:64
 msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
 msgstr ""
 
-#: index.php:80
-msgid "Informative"
-msgstr ""
-
-#: index.php:81
-msgid ""
-"Tell the users that they are using an out-dated browser and that your "
-"website looks even better with a newer one."
-msgstr ""
-
-#: index.php:85
-msgid "Idealistic"
-msgstr ""
-
-#: index.php:86
-msgid "Help evolve the web!"
-msgstr ""
-
-#: index.php:87
-msgid "Support the standards-based web!"
-msgstr ""
-
-#: index.php:88
-msgid "Support Open Source software projects!"
-msgstr ""
-
-#: index.php:89
-msgid "Help your visitors!"
-msgstr ""
-
-#: index.php:90
-msgid "Help increase security awareness!"
-msgstr ""
-
-#: index.php:91
-msgid "Support your favorite webbrowser!"
-msgstr ""
-
-#: index.php:94
+#: index.php:67
 msgid "Low maintenance and up-to-date"
 msgstr ""
 
-#: index.php:95
+#: index.php:68
 msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of "
+"browsers that are available for their system."
 msgstr ""
 
-#: index.php:100
+#: index.php:71
 msgid "Customizable"
 msgstr ""
 
-#: index.php:101
-msgid ""
-"You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
-msgstr ""
-
-#: index.php:106
-msgid "Localized"
-msgstr ""
-
-#: index.php:107
-msgid "The message is automatically displayed in the user's language."
-msgstr ""
-
-#: index.php:112
-msgid "Install notification on your site"
-msgstr ""
-
-#: index.php:114
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
-msgstr ""
-
-#: index.php:119
-msgid "Following browsers will be notified:"
-msgstr ""
-
-#: index.php:166
-msgid ""
-"Google Chrome will automatically itself and is therefor always up to date"
-msgstr ""
-
-#: index.php:172
-msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
-"vulnerabilities, it will be added to the set."
-msgstr ""
-
-#: index.php:177
-msgid "Your Code"
-msgstr ""
-
-#: index.php:195
+#: index.php:72 index.php:185
 #, php-format
 msgid ""
 "You can <a href=\"%s\">customize</a> the style of the message, the text and "
 "other options."
 msgstr ""
 
-#: index.php:201
-msgid "You may also use third-party plugins for: "
+#: index.php:75
+msgid "Localized"
 msgstr ""
 
-#: index.php:228
+#: index.php:76
+msgid "The message is automatically displayed in the user's language."
+msgstr ""
+
+#: index.php:80
+msgid "Install the browser update notification on your site"
+msgstr ""
+
+#: index.php:82
+msgid "Just include this code anywhere in the source of your page."
+msgstr ""
+
+#: index.php:98
+msgid "The following browsers will be notified:"
+msgstr ""
+
+#: index.php:101
+#, php-format
+msgid "older than %d months (currently %s)"
+msgstr ""
+
+#: index.php:159
+msgid "Also notify all browser versions with security vulnerabilities."
+msgstr ""
+
+#: index.php:165
+msgid ""
+"Also notify all browsers versions which are not supported by the vendor "
+"anymore."
+msgstr ""
+
+#: index.php:171
+msgid ""
+"Only notify users that can install a new browser without having to update "
+"their operating system."
+msgstr ""
+
+#: index.php:177
+msgid "Notify mobile browsers versions as well."
+msgstr ""
+
+#: index.php:181
+#, php-format
+msgid "The script is open source under the <a%s>MIT License</a>."
+msgstr ""
+
+#: index.php:189
+msgid "There are plugins for:"
+msgstr ""
+
+#: index.php:207
 msgid "Why you should tell users to update"
 msgstr ""
 
-#: index.php:231
+#: index.php:209
 msgid "Reduced development costs and time"
 msgstr ""
 
-#: index.php:232
+#: index.php:210
 msgid ""
-"Optimizing websites for old browsers is time consuming and thus expensive."
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
 msgstr ""
 
-#: index.php:235
-msgid "Webdesign technologies and features"
-msgstr ""
-
-#: index.php:236
-msgid ""
-"There are all these great new web development standards and they are "
-"supported by modern browsers... but you may not use them."
-msgstr ""
-
-#: index.php:238
-msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
-msgstr ""
-
-#: index.php:241
-msgid "Security and benefits for the user"
-msgstr ""
-
-#: index.php:242
+#: index.php:211
 #, php-format
 msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threats of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+"Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
 
-#: index.php:245
-msgid "The web has to evolve..."
-msgstr ""
-
-#: index.php:247
-msgid "But that's only possible if the browsers also evolve."
-msgstr ""
-
-#: index.php:248
+#: index.php:214
+#, php-format
 msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
-"have to code websites like in 2001 even if it is 2011."
+"Help this project by <a%s>using the update-notification</a> on your site, <a"
+"%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""
 
-#: index.php:252
-msgid "Users don't oppose updating..."
-msgstr ""
-
-#: index.php:253
-msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
-msgstr ""
-
-#: index.php:256
-msgid "Help this project"
-msgstr ""
-
-#: index.php:259
-msgid "Participate!"
-msgstr ""
-
-#: index.php:260
-msgid ""
-"Include the notification code in your page to inform users about browser "
-"updates."
-msgstr ""
-
-#: index.php:263
-msgid "Spread the word!"
-msgstr ""
-
-#: index.php:264
-msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr ""
-
-#: index.php:267
-msgid "Translate this page"
-msgstr ""
-
-#: index.php:268
-msgid "Translate this page into your language."
-msgstr ""
-
-#: stat.php:9
+#: stat.php:7 statx.php:14
 msgid "Statistics"
 msgstr ""
 
-#: stat.php:18
+#: stat.php:25 statx.php:52
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:207 statx.php:239
+msgid "From"
+msgstr ""
+
+#: stat.php:207 statx.php:239
+msgid "To"
+msgstr ""
+
+#: statx.php:41
 #, php-format
 msgid ""
 "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
 "script."
 msgstr ""
 
-#: stat.php:22
-msgid "Browser updates"
-msgstr ""
-
-#: stat.php:60
+#: statx.php:46
 #, php-format
 msgid ""
 "<strong class=\"number\">%d</strong> visitors have already upgraded their "
 "browser."
-msgstr ""
-
-#: stat.php:92
-msgid "From"
-msgstr ""
-
-#: stat.php:92
-msgid "To"
-msgstr ""
-
-#: stat.php:92
-msgid "Amount"
 msgstr ""

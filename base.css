@@ -286,7 +286,7 @@ ul.browsers li>a{
          display: inline-block;
          text-align: center;
 }
-.numbs strong {
+.numbs strong,.numbs b {
     display: block;
     font-size: 35px;
     color: #E97A00;
