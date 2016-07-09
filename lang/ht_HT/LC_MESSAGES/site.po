@@ -1,0 +1,219 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-03 16:16+0200\n"
+"PO-Revision-Date: 2016-07-03 10:37-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Haitian Creole\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ht_HT\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-File: site.pot\n"
+"X-Crowdin-Language: ht\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Generator: crowdin.com\n"
+
+#: index.php:24
+msgid ""
+"This service is a simple and standardized way to notify visitors with outdated browsers that they need to update their browser in order to use your website in all its beauty.\n"
+"This is done with care not to annoy, lock out or erroneously notify users!\n"
+"Use this unobtrusive tool to improve the security and comfort of your visitors."
+msgstr "crwdns286:0crwdne286:0"
+
+#: index.php:30 stat.php:17
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "crwdns250:0%scrwdne250:0"
+
+#: index.php:33 stat.php:20
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "crwdns251:0%scrwdne251:0"
+
+#: index.php:37
+msgid "How it works"
+msgstr "crwdns23:0crwdne23:0"
+
+#: index.php:40
+#, php-format
+msgid ""
+"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr "crwdns24:0%scrwdne24:0"
+
+#: index.php:43
+msgid ""
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
+msgstr "crwdns252:0crwdne252:0"
+
+#: index.php:44
+msgid "Try it out!"
+msgstr "crwdns253:0crwdne253:0"
+
+#: index.php:46
+#, php-format
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
+msgstr "crwdns27:0%scrwdnd27:0%scrwdne27:0"
+
+#: index.php:50
+#, php-format
+msgid ""
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
+msgstr "crwdns254:0%scrwdne254:0"
+
+#: index.php:53
+msgid "If the visitor ignores the advice, it won't reappear for some time."
+msgstr "crwdns255:0crwdne255:0"
+
+#: index.php:57
+msgid "Advantages and features"
+msgstr "crwdns30:0crwdne30:0"
+
+#: index.php:60
+msgid "Unobtrusive"
+msgstr "crwdns31:0crwdne31:0"
+
+#: index.php:61
+msgid ""
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
+msgstr "crwdns256:0crwdne256:0"
+
+#: index.php:64
+msgid "Low maintenance and up-to-date"
+msgstr "crwdns42:0crwdne42:0"
+
+#: index.php:65
+msgid ""
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
+msgstr "crwdns257:0crwdne257:0"
+
+#: index.php:68
+msgid "Customizable"
+msgstr "crwdns44:0crwdne44:0"
+
+#: index.php:69 index.php:182
+#, php-format
+msgid ""
+"You can <a href=\"%s\">customize</a> the style of the message, the text and "
+"other options."
+msgstr "crwdns54:0%scrwdne54:0"
+
+#: index.php:72
+msgid "Localized"
+msgstr "crwdns46:0crwdne46:0"
+
+#: index.php:73
+msgid "The message is automatically displayed in the user's language."
+msgstr "crwdns47:0crwdne47:0"
+
+#: index.php:77
+msgid "Install the browser update notification on your site"
+msgstr "crwdns258:0crwdne258:0"
+
+#: index.php:79
+msgid "Just include this code anywhere in the source of your page."
+msgstr "crwdns259:0crwdne259:0"
+
+#: index.php:95
+msgid "The following browsers will be notified:"
+msgstr "crwdns260:0crwdne260:0"
+
+#: index.php:98
+#, php-format
+msgid "older than %d months (currently %s)"
+msgstr "crwdns282:0%dcrwdnd282:0%scrwdne282:0"
+
+#: index.php:156
+msgid "Also notify all browser versions with security vulnerabilities."
+msgstr "crwdns262:0crwdne262:0"
+
+#: index.php:162
+msgid ""
+"Also notify all browsers versions which are not supported by the vendor "
+"anymore."
+msgstr "crwdns263:0crwdne263:0"
+
+#: index.php:168
+msgid ""
+"Only notify users that can install a new browser without having to update "
+"their operating system."
+msgstr "crwdns264:0crwdne264:0"
+
+#: index.php:174
+msgid "Notify mobile browsers versions as well."
+msgstr "crwdns265:0crwdne265:0"
+
+#: index.php:178
+#, php-format
+msgid "The script is open source under the <a%s>MIT License</a>."
+msgstr "crwdns266:0%scrwdne266:0"
+
+#: index.php:186
+msgid "There are plugins for:"
+msgstr "crwdns267:0crwdne267:0"
+
+#: index.php:204
+msgid "Why you should tell users to update"
+msgstr "crwdns56:0crwdne56:0"
+
+#: index.php:206
+msgid "Reduced development costs and time"
+msgstr "crwdns57:0crwdne57:0"
+
+#: index.php:207
+msgid ""
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
+msgstr "crwdns268:0crwdne268:0"
+
+#: index.php:208
+#, php-format
+msgid ""
+"Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
+msgstr "crwdns284:0%scrwdne284:0"
+
+#: index.php:211
+#, php-format
+msgid ""
+"Help this project by <a%s>using the update-notification</a> on your site, "
+"<a%s>sharing</a> or <a%s>translating</a> this page."
+msgstr "crwdns285:0%scrwdnd285:0%scrwdnd285:0%scrwdne285:0"
+
+#: stat.php:7 statx.php:14
+msgid "Statistics"
+msgstr "crwdns76:0crwdne76:0"
+
+#: stat.php:25 statx.php:52
+msgid "Browser updates"
+msgstr "crwdns78:0crwdne78:0"
+
+#: stat.php:207 statx.php:239
+msgid "From"
+msgstr "crwdns80:0crwdne80:0"
+
+#: stat.php:207 statx.php:239
+msgid "To"
+msgstr "crwdns81:0crwdne81:0"
+
+#: statx.php:41
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "crwdns77:0%dcrwdne77:0"
+
+#: statx.php:46
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "crwdns79:0%dcrwdne79:0"

@@ -11,12 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2011-09-13 03:25+0330\n"
 "Last-Translator: Persian Prince <persianprince@persianpros.com>\n"
 "Language-Team: Persian Professionals <persianpros@yahoo.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Persian\n"
+"Language: \n"
 "X-Poedit-Country: IRAN, ISLAMIC REPUBLIC OF\n"
+"X-Poedit-Language: Persian\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: contact.php:8
@@ -25,8 +25,8 @@ msgstr "ارتباط"
 
 #: index.php:33
 msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
 msgstr ""
 
 #: index.php:37
@@ -48,20 +48,21 @@ msgstr ""
 
 #: index.php:53
 msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that their browser is not up-to-date and it is recommended to update."
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
 msgstr ""
 
 #: index.php:56
-msgid "Test the notification bar!"
+msgid "Try it out!"
 msgstr "تست نوار اطلاع رسانی !"
 
 #: index.php:58
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
 msgstr ""
 "مرورگر شما (%s) <b>تاریخ گذشته است</b>. تعدادی <b>معایب امنیتی</b> و مشکلات "
 "<b>عدم نمایش همه امکانات</b> شناسایی شده است که باعث میشود این سایت و دیگر "
@@ -71,12 +72,13 @@ msgstr ""
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, them will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
 msgstr ""
 
 #: index.php:69
-msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgid "If the visitor ignores the advice, it won't reappear for some time."
 msgstr ""
 "اگر بازدید کننده پند را نادیده بگیرد ، برای مدتی دوباره نمایان نخواهد شد"
 
@@ -85,14 +87,13 @@ msgid "Advantages and features"
 msgstr "مزایا و امکانات"
 
 #: index.php:75
-msgid "Subtle"
+msgid "Unobtrusive"
 msgstr "دقیق"
 
 #: index.php:76
 msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
 msgstr ""
 
 #: index.php:80
@@ -139,9 +140,9 @@ msgstr "نگهداری کم و به روز"
 
 #: index.php:95
 msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
 msgstr ""
 
 #: index.php:100
@@ -151,12 +152,12 @@ msgstr "قابل سفارشی کردن"
 #: index.php:101
 msgid ""
 "You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
+"releases you can also customize the text that should be shown, the frequency"
+" of the bar to appear and many other things."
 msgstr ""
 "شما میتوانید مرورگر ها و نسخه ها را برای اطلاع رسانی سفارشی کنید.<br/> در "
-"انتشارات آینده شما همچنین میتوانید متنی که باید نشان داده شود را سفارشی "
-"کنید ، فرکانس نوار برای نمایان شدن و بسیاری از موارد دیگر."
+"انتشارات آینده شما همچنین میتوانید متنی که باید نشان داده شود را سفارشی کنید"
+" ، فرکانس نوار برای نمایان شدن و بسیاری از موارد دیگر."
 
 #: index.php:106
 msgid "Localized"
@@ -167,19 +168,17 @@ msgid "The message is automatically displayed in the user's language."
 msgstr "پیام به صورت خودکار به زبان کاربر نمایش داده خواهد شد"
 
 #: index.php:112
-msgid "Install notification on your site"
+msgid "Install the browser update notification on your site"
 msgstr "نصب اطلاع رسانی روی سایت شما"
 
 #: index.php:114
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
+msgid "Just include this code anywhere in the source of your page."
 msgstr ""
 "اینجا شما میتوانید کد را دریافت کنید تا در سایت خود قرار دهید. آن را "
 "میتوانید در هر محلی از کد صفحه خود قرار دهید"
 
 #: index.php:119
-msgid "Following browsers will be notified:"
+msgid "The following browsers will be notified:"
 msgstr "در مرورگر های ذیل اطلاع رسانی خواهد شد :"
 
 #: index.php:166
@@ -189,8 +188,8 @@ msgstr "گوگل کروم به صورت خوکار به روز رسانی میش
 
 #: index.php:172
 msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
+"<b>Notify recommended set of browsers and adjust it automatically over "
+"time:</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
 
@@ -208,7 +207,7 @@ msgstr ""
 "کنید"
 
 #: index.php:201
-msgid "You may also use third-party plugins for: "
+msgid "There are plugins for:"
 msgstr ""
 
 #: index.php:228
@@ -236,9 +235,8 @@ msgstr ""
 
 #: index.php:238
 msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
 msgstr ""
 "مرورگر های جدید اجازه استفاده از امکانات بیشتر و تکنولوژی های جدید (CSS3, "
 "SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) را به شما و در "
@@ -251,9 +249,9 @@ msgstr "امنیت و مزایا برای کاربر"
 #: index.php:242
 #, php-format
 msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threats of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+"Numerous benefits: security, speed, features, ... Look at the <a "
+"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
+"listed in this <a href=\"%s\">paper</a>."
 msgstr ""
 
 #: index.php:245
@@ -266,8 +264,8 @@ msgstr "اما فقط زمانی امکان پذیر است که مرورگر ه
 
 #: index.php:248
 msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
+" something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
 
@@ -277,8 +275,8 @@ msgstr "کاربران با به روز رسانی کردن مخالفت نخو�
 
 #: index.php:253
 msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
+"... they often just do not appreciate the need to update or the existence of"
+" the \"webbrowser\" as a software at all."
 msgstr ""
 
 #: index.php:256
@@ -320,9 +318,7 @@ msgstr "آمار"
 
 #: stat.php:18
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
+msgid "<b>%s</b> sites are using this notification"
 msgstr ""
 "<strong class=\"number\">%d</strong> سایت از اسکریپت Browser-Update.org "
 "استفاده میکنند."
@@ -333,9 +329,7 @@ msgstr "به روز رسانی های مرورگر"
 
 #: stat.php:60
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
+msgid "<b>%s</b> visitors have already updated their browser"
 msgstr ""
 "<strong class=\"number\">%d</strong> بازدید کنندگان مرورگر خود را به روز "
 "رسانی کرده اند."
@@ -481,8 +475,8 @@ msgstr "میزان"
 
 #~ msgid "Websites using new technology will be displayed more correctly"
 #~ msgstr ""
-#~ "سایت هایی که از تکنولوژی های جدید استفاده میکنند به درستی نمایش داده "
-#~ "خواهند شد"
+#~ "سایت هایی که از تکنولوژی های جدید استفاده میکنند به درستی نمایش داده خواهند "
+#~ "شد"
 
 #~ msgid "Comfort &amp; better experience"
 #~ msgstr "آسایش &amp; تجربه ای بهتر"
@@ -495,8 +489,8 @@ msgstr "میزان"
 #~ msgstr "چرا این سایت ؟"
 
 #~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers "
-#~ "who want to bring the web further and help their visitors."
+#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
+#~ "want to bring the web further and help their visitors."
 #~ msgstr ""
 #~ "این سایت یک ابتکار توسط طراحان و صاحبان وب ، بلاگ نویسان و کسانی است که "
 #~ "میخواهند وب را پیش ببرند و به بازدید کنندگان خود کمک کنند"

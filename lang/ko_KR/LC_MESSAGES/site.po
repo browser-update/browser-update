@@ -10,12 +10,12 @@ msgstr ""
 "PO-Revision-Date: 2014-01-05 15:24+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
-"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.3\n"
+"Language: ko_KR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.3\n"
 
 #: contact.php:8
 msgid "Contact"
@@ -23,11 +23,9 @@ msgstr "정보"
 
 #: index.php:33
 msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
-msgstr ""
-"이 서비스는 웹 사이트 방문자들을 크게 방해하지 않으면서 새로운 브라우저로 전"
-"환하라는 알림을 표시합니다."
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
+msgstr "이 서비스는 웹 사이트 방문자들을 크게 방해하지 않으면서 새로운 브라우저로 전환하라는 알림을 표시합니다."
 
 #: index.php:37
 msgid ""
@@ -35,9 +33,8 @@ msgid ""
 "them for no actual reason. Switching to an newer browser is better for them "
 "and for you as a webdesigner."
 msgstr ""
-"많은 인터넷 사용자들은 오래된 브라우저를 사용하고 있으며, 대부분은 큰 이유가 "
-"없습니다. 새로운 브라우저로 전환하면 사용자와 웹 디자이너 모두에게 도움이 됩"
-"니다."
+"많은 인터넷 사용자들은 오래된 브라우저를 사용하고 있으며, 대부분은 큰 이유가 없습니다. 새로운 브라우저로 전환하면 사용자와 웹 디자이너"
+" 모두에게 도움이 됩니다."
 
 #: index.php:46
 msgid "How it works"
@@ -51,38 +48,39 @@ msgstr "웹 사이트에 작은 자바스크립트 <a href=\"%s\">알림</a>을 
 
 #: index.php:53
 msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that their browser is not up-to-date and it is recommended to update."
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
 msgstr ""
-"오래된 브라우저로 웹 사이트를 방문하면 사이트 맨 위에 현재 브라우저는 오래되"
-"었으며 업데이트를 추천하는 조그마한 알림 표시줄이 나타납니다."
+"오래된 브라우저로 웹 사이트를 방문하면 사이트 맨 위에 현재 브라우저는 오래되었으며 업데이트를 추천하는 조그마한 알림 표시줄이 "
+"나타납니다."
 
 #: index.php:56
-msgid "Test the notification bar!"
+msgid "Try it out!"
 msgstr "지금 확인해 보세요!"
 
 #: index.php:58
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
 msgstr ""
-"지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약"
-"점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브"
-"라우저를 어떻게 업데이트하나요?</a>"
+"지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 "
+"<b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>"
 
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, them will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
 msgstr ""
-"표시줄을 누르면 방문자는 <a href=\"%s\">왜 웹 브라우저를 업데이트해야 하는지"
-"에 대한 이유와 최신 브라우저 목록을 소개하는 페이지</a>로 이동합니다."
+"표시줄을 누르면 방문자는 <a href=\"%s\">왜 웹 브라우저를 업데이트해야 하는지에 대한 이유와 최신 브라우저 목록을 소개하는 "
+"페이지</a>로 이동합니다."
 
 #: index.php:69
-msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgid "If the visitor ignores the advice, it won't reappear for some time."
 msgstr "이 알림을 닫으면 당분간 표시되지 않습니다."
 
 #: index.php:72
@@ -90,17 +88,14 @@ msgid "Advantages and features"
 msgstr "장점과 기능"
 
 #: index.php:75
-msgid "Subtle"
+msgid "Unobtrusive"
 msgstr "아담함"
 
 #: index.php:76
 msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
-msgstr ""
-"사용자에게는 알림이 한 번만 표시됩니다. 알림 표시줄은 매우 작으며, 웹 사이트 "
-"탐색을 해치지 않습니다."
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
+msgstr "사용자에게는 알림이 한 번만 표시됩니다. 알림 표시줄은 매우 작으며, 웹 사이트 탐색을 해치지 않습니다."
 
 #: index.php:80
 msgid "Informative"
@@ -110,9 +105,7 @@ msgstr "정보성"
 msgid ""
 "Tell the users that they are using an out-dated browser and that your "
 "website looks even better with a newer one."
-msgstr ""
-"사용자가 오래된 브라우저를 사용함을 알려 주고, 새 브라우저를 설치하면 더 예쁘"
-"게 보인다는 점을 알려 줍니다."
+msgstr "사용자가 오래된 브라우저를 사용함을 알려 주고, 새 브라우저를 설치하면 더 예쁘게 보인다는 점을 알려 줍니다."
 
 #: index.php:85
 msgid "Idealistic"
@@ -148,12 +141,12 @@ msgstr "항상 새로움"
 
 #: index.php:95
 msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
 msgstr ""
-"만약 웹 브라우저 제작사에서 지원을 중단하거나, 보안 취약점이 발견되었거나, 업"
-"데이트한 지 너무 오래 되었다면 자동으로 목록에 추가됩니다."
+"만약 웹 브라우저 제작사에서 지원을 중단하거나, 보안 취약점이 발견되었거나, 업데이트한 지 너무 오래 되었다면 자동으로 목록에 "
+"추가됩니다."
 
 #: index.php:100
 msgid "Customizable"
@@ -162,11 +155,11 @@ msgstr "수정 가능함"
 #: index.php:101
 msgid ""
 "You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
+"releases you can also customize the text that should be shown, the frequency"
+" of the bar to appear and many other things."
 msgstr ""
-"알려 줄 브라우저 종류와 버전을 선택할 수 있습니다.<br/>이후 버전에서는 보여 "
-"줄 텍스트나, 알림 표시줄이 나타날 주기 등을 설정할 수 있습니다."
+"알려 줄 브라우저 종류와 버전을 선택할 수 있습니다.<br/>이후 버전에서는 보여 줄 텍스트나, 알림 표시줄이 나타날 주기 등을 설정할 "
+"수 있습니다."
 
 #: index.php:106
 msgid "Localized"
@@ -177,17 +170,15 @@ msgid "The message is automatically displayed in the user's language."
 msgstr "사용자의 언어로 메시지가 표시됩니다."
 
 #: index.php:112
-msgid "Install notification on your site"
+msgid "Install the browser update notification on your site"
 msgstr "여러분의 웹 사이트에 알림 달기"
 
 #: index.php:114
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
+msgid "Just include this code anywhere in the source of your page."
 msgstr "웹 사이트에 추가할 코드입니다. 웹 페이지에 아래 코드를 추가하십시오."
 
 #: index.php:119
-msgid "Following browsers will be notified:"
+msgid "The following browsers will be notified:"
 msgstr "다음 브라우저로 접속하면 알림 표시:"
 
 #: index.php:166
@@ -197,12 +188,12 @@ msgstr "구글 Chrome은 자동으로 업데이트됩니다"
 
 #: index.php:172
 msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
+"<b>Notify recommended set of browsers and adjust it automatically over "
+"time:</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
-"<b>추천하는 브라우저 목록으로 자동으로 갱신하기</b>: 제작사에서 브라우저를 지"
-"원하지 않거나 보안 취약점이 있는 경우 자동으로 목록에 추가됩니다."
+"<b>추천하는 브라우저 목록으로 자동으로 갱신하기</b>: 제작사에서 브라우저를 지원하지 않거나 보안 취약점이 있는 경우 자동으로 목록에"
+" 추가됩니다."
 
 #: index.php:177
 msgid "Your Code"
@@ -213,11 +204,10 @@ msgstr "추가할 코드"
 msgid ""
 "You can <a href=\"%s\">customize</a> the style of the message, the text and "
 "other options."
-msgstr ""
-"메시지의 스타일, 텍스트, 기타 옵션을 <a href=\"%s\">수정할 수</a>도 있습니다."
+msgstr "메시지의 스타일, 텍스트, 기타 옵션을 <a href=\"%s\">수정할 수</a>도 있습니다."
 
 #: index.php:201
-msgid "You may also use third-party plugins for: "
+msgid "There are plugins for:"
 msgstr "플러그인을 사용할 수도 있습니다: "
 
 #: index.php:228
@@ -231,9 +221,7 @@ msgstr "개발 시간과 비용 감소"
 #: index.php:232
 msgid ""
 "Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr ""
-"오래 된 웹 브라우저에서도 동작하도록 최적화하려면 시간이 오래 걸리고 비용도 "
-"비싸집니다."
+msgstr "오래 된 웹 브라우저에서도 동작하도록 최적화하려면 시간이 오래 걸리고 비용도 비싸집니다."
 
 #: index.php:235
 msgid "Webdesign technologies and features"
@@ -244,18 +232,15 @@ msgid ""
 "There are all these great new web development standards and they are "
 "supported by modern browsers... but you may not use them."
 msgstr ""
-"최신 웹 브라우저는 옛날보다 더 많은 웹 디자인 기술이나 웹 표준을 지원하지"
-"만... 한 번도 사용해 보지 못했을 수도 있습니다."
+"최신 웹 브라우저는 옛날보다 더 많은 웹 디자인 기술이나 웹 표준을 지원하지만... 한 번도 사용해 보지 못했을 수도 있습니다."
 
 #: index.php:238
 msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
 msgstr ""
-"새로운 브라우저는 더 많은 기능이나 신기술(CSS3, SVG, HTML5, RSS, CSS로 내용 "
-"생성, 유연한 레이아웃)을 지원합니다. 웹 사이트에 적용하면 더 좋은 모습을 더 "
-"쉽게 만들 수 있습니다."
+"새로운 브라우저는 더 많은 기능이나 신기술(CSS3, SVG, HTML5, RSS, CSS로 내용 생성, 유연한 레이아웃)을 지원합니다."
+" 웹 사이트에 적용하면 더 좋은 모습을 더 쉽게 만들 수 있습니다."
 
 #: index.php:241
 msgid "Security and benefits for the user"
@@ -264,13 +249,12 @@ msgstr "보안과 새로운 기능"
 #: index.php:242
 #, php-format
 msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threats of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+"Numerous benefits: security, speed, features, ... Look at the <a "
+"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
+"listed in this <a href=\"%s\">paper</a>."
 msgstr ""
-"보안, 속도, 기능 등 여러 이점이 있습니다. <a href=\"%s\">업데이트 페이지</a>"
-"를 참고하십시오. 오래된 브라우저의 보안 취약점에 대한 분석은 <a href=\"%s\">"
-"이 논문</a>에 실려 있습니다."
+"보안, 속도, 기능 등 여러 이점이 있습니다. <a href=\"%s\">업데이트 페이지</a>를 참고하십시오. 오래된 브라우저의 보안 "
+"취약점에 대한 분석은 <a href=\"%s\">이 논문</a>에 실려 있습니다."
 
 #: index.php:245
 msgid "The web has to evolve..."
@@ -282,13 +266,12 @@ msgstr "단 혼자서는 진화하지 못하고, 브라우저도 같이 진화�
 
 #: index.php:248
 msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
+" something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
-"8년 전에 개발된 웹 브라우저(인터넷 익스플로러 6)가 아직까지도 사용되고 있다"
-"는 사실은 웹의 역사에서 드문 경우입니다. 지금 시작하지 않으면, 2011년에도 "
-"2001년처럼 웹 사이트를 디자인해야 합니다."
+"8년 전에 개발된 웹 브라우저(인터넷 익스플로러 6)가 아직까지도 사용되고 있다는 사실은 웹의 역사에서 드문 경우입니다. 지금 시작하지 "
+"않으면, 2011년에도 2001년처럼 웹 사이트를 디자인해야 합니다."
 
 #: index.php:252
 msgid "Users don't oppose updating..."
@@ -296,11 +279,9 @@ msgstr "사용자는 업데이트를 싫어하지 않습니다..."
 
 #: index.php:253
 msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
-msgstr ""
-"... 단지 업데이트할 이유를 모르거나 \"웹 브라우저\"가 존재한다는 것 자체도 모"
-"를 수도 있습니다."
+"... they often just do not appreciate the need to update or the existence of"
+" the \"webbrowser\" as a software at all."
+msgstr "... 단지 업데이트할 이유를 모르거나 \"웹 브라우저\"가 존재한다는 것 자체도 모를 수도 있습니다."
 
 #: index.php:256
 msgid "Help this project"
@@ -338,12 +319,10 @@ msgstr "통계"
 
 #: stat.php:18
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
+msgid "<b>%s</b> sites are using this notification"
 msgstr ""
-"<strong class=\"number\">%d</strong>개의 웹 사이트에서 Browser-Update.org 스"
-"크립트를 사용하고 있습니다."
+"<strong class=\"number\">%d</strong>개의 웹 사이트에서 Browser-Update.org 스크립트를 사용하고"
+" 있습니다."
 
 #: stat.php:22
 msgid "Browser updates"
@@ -351,12 +330,8 @@ msgstr "브라우저 업데이트"
 
 #: stat.php:60
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
-msgstr ""
-"<strong class=\"number\">%d</strong>명의 사용자가 웹 브라우저를 업그레이드했"
-"습니다."
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong>명의 사용자가 웹 브라우저를 업그레이드했습니다."
 
 #: stat.php:92
 msgid "From"
@@ -377,21 +352,17 @@ msgstr "사용자 수"
 #~ msgstr "스크립트 테스트"
 
 #~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, "
-#~ "the bar will always show up."
-#~ msgstr ""
-#~ "웹 사이트 URL 맨 끝에 <code>#test-bu</code>를 붙이면 알림 표시줄을 항상 표"
-#~ "시합니다."
+#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
+#~ " bar will always show up."
+#~ msgstr "웹 사이트 URL 맨 끝에 <code>#test-bu</code>를 붙이면 알림 표시줄을 항상 표시합니다."
 
 #~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
 #~ msgstr "예제: <code>http://browser-update.org/#test-bu</code>."
 
 #~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new "
-#~ "browser tab."
-#~ msgstr ""
-#~ "새로운 창이나 탭으로 페이지를 열어서 페이지가 올바르게 새로 고쳐졌는지 확"
-#~ "인하십시오."
+#~ "Make sure the page is properly reloaded by opening the url in an new browser"
+#~ " tab."
+#~ msgstr "새로운 창이나 탭으로 페이지를 열어서 페이지가 올바르게 새로 고쳐졌는지 확인하십시오."
 
 #~ msgid "Options"
 #~ msgstr "옵션"
@@ -433,12 +404,11 @@ msgstr "사용자 수"
 #~ msgstr "스크립트를 실행하면 다음 CSS 규칙이 적용됩니다. "
 
 #~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some "
-#~ "more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}"
-#~ "</code>"
+#~ "You can overwrite them in your own CSS. To do so you need to add some more "
+#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 #~ msgstr ""
-#~ "CSS 규칙은 수정할 수 있습니다. CSS 규칙에 새로운 항목을 추가하시면 됩니"
-#~ "다. 예: <code>body.buorg {font-size:20px}</code>"
+#~ "CSS 규칙은 수정할 수 있습니다. CSS 규칙에 새로운 항목을 추가하시면 됩니다. 예: <code>body.buorg {font-"
+#~ "size:20px}</code>"
 
 #~ msgid "Browser-Update.org"
 #~ msgstr "Browser-Update.org"
@@ -465,13 +435,12 @@ msgstr "사용자 수"
 #~ msgstr "<span class=\"workingonit\">작업 중</span>"
 
 #~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors "
-#~ "are using and how much users got proselyted: How many users updated or "
-#~ "changed their browser through your advice."
+#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors are"
+#~ " using and how much users got proselyted: How many users updated or changed "
+#~ "their browser through your advice."
 #~ msgstr ""
-#~ "방문자들이 사용하는 브라우저 <a href=\"%s\">통계</a>를 알 수 있으며, 이 메"
-#~ "시지를 보고 얼마나 많은 사용자들이 웹 브라우저를 업데이트했는지 알 수 있습"
-#~ "니다."
+#~ "방문자들이 사용하는 브라우저 <a href=\"%s\">통계</a>를 알 수 있으며, 이 메시지를 보고 얼마나 많은 사용자들이 웹 "
+#~ "브라우저를 업데이트했는지 알 수 있습니다."
 
 #~ msgid "Free webbrowsers"
 #~ msgstr "무료 웹 브라우저"
@@ -480,8 +449,7 @@ msgstr "사용자 수"
 #~ "These browsers are the newest versions of the most used free web browsers."
 #~ msgstr "많이 사용되는 무료 웹 브라우저의 최신 버전입니다."
 
-#~ msgid ""
-#~ "Just choose a browser to download from the original vendor's website:"
+#~ msgid "Just choose a browser to download from the original vendor's website:"
 #~ msgstr "웹 브라우저 개발사의 웹 사이트에서 다운로드하십시오."
 
 #~ msgid "Widely-used open-source browser, highly extendable and customizable"
@@ -515,18 +483,15 @@ msgstr "사용자 수"
 #~ msgstr "윈도에 내장된 웹 브라우저"
 
 #~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr ""
-#~ "모든 웹 브라우저의 기본 기능은 큰 차이가 없으며 인터페이스도 어렵지 않습니"
-#~ "다."
+#~ msgstr "모든 웹 브라우저의 기본 기능은 큰 차이가 없으며 인터페이스도 어렵지 않습니다."
 
 #~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws "
-#~ "and disadvantages</b> and a <b>limited feature set</b>. You will not see "
-#~ "all the features of some websites."
+#~ "The browser you are using is out of date. It has known <b>security flaws and"
+#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
+#~ "the features of some websites."
 #~ msgstr ""
-#~ "현재 사용하고 계신 웹 브라우저는 오래되었습니다. <b>알려진 보안 취약점</b>"
-#~ "이 있으며, <b>새로운 기능</b>을 지원하지 않습니다. 일부 웹 사이트가 깨져 "
-#~ "보일 수도 있습니다."
+#~ "현재 사용하고 계신 웹 브라우저는 오래되었습니다. <b>알려진 보안 취약점</b>이 있으며, <b>새로운 기능</b>을 지원하지 "
+#~ "않습니다. 일부 웹 사이트가 깨져 보일 수도 있습니다."
 
 #~ msgid "Switching to a newer browser could give you a lot of advantages:"
 #~ msgstr "새로운 브라우저로 업데이트하면 여러 이점이 있습니다."
@@ -535,12 +500,11 @@ msgstr "사용자 수"
 #~ msgstr "보안"
 
 #~ msgid ""
-#~ "Newer browsers protect you better against scams, viruses, trojans, "
-#~ "phishing and other threats. They also fix security holes in your current "
-#~ "browser!"
+#~ "Newer browsers protect you better against scams, viruses, trojans, phishing "
+#~ "and other threats. They also fix security holes in your current browser!"
 #~ msgstr ""
-#~ "새로운 웹 브라우저는 사기, 바이러스, 악성 코드, 피싱 등 여러 위협에서 여러"
-#~ "분을 지켜 줍니다. 현재 웹 브라우저의 보안 취약점도 수정되었습니다!"
+#~ "새로운 웹 브라우저는 사기, 바이러스, 악성 코드, 피싱 등 여러 위협에서 여러분을 지켜 줍니다. 현재 웹 브라우저의 보안 취약점도 "
+#~ "수정되었습니다!"
 
 #~ msgid "Speed"
 #~ msgstr "속도"
@@ -560,8 +524,7 @@ msgstr "사용자 수"
 #~ msgid ""
 #~ "With new features, extensions and better customisability, you will have a "
 #~ "more comfortable web-experience"
-#~ msgstr ""
-#~ "새로운 기능, 확장, 옵션이 추가되어 더 나은 웹 브라우징을 즐길 수 있습니다"
+#~ msgstr "새로운 기능, 확장, 옵션이 추가되어 더 나은 웹 브라우징을 즐길 수 있습니다"
 
 #~ msgid "Updating is easy, takes just a few minutes and is totally free."
 #~ msgstr "업데이트는 쉽습니다. 시간도 얼마 걸리지 않으며 무료입니다."
@@ -570,19 +533,16 @@ msgstr "사용자 수"
 #~ msgstr "왜 이 사이트인가요?"
 
 #~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers "
-#~ "who want to bring the web further and help their visitors."
-#~ msgstr ""
-#~ "이 웹 사이트는 웹 디자이너, 운영자, 블로거들이 힘을 모아서 방문자들을 돕"
-#~ "기 위한 운동입니다."
+#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
+#~ "want to bring the web further and help their visitors."
+#~ msgstr "이 웹 사이트는 웹 디자이너, 운영자, 블로거들이 힘을 모아서 방문자들을 돕기 위한 운동입니다."
 
 #~ msgid ""
 #~ "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
 #~ "advancement of the web</b> because of their limited features and many "
 #~ "<b>bugs</b>."
 #~ msgstr ""
-#~ "오래된 브라우저는 <b>보안 취약점</b>이며, 제한된 기능과 <b>버그</b> 때문"
-#~ "에 <b>웹의 발전을 가로막고 있습니다</b>."
+#~ "오래된 브라우저는 <b>보안 취약점</b>이며, 제한된 기능과 <b>버그</b> 때문에 <b>웹의 발전을 가로막고 있습니다</b>."
 
 #~ msgid "\"I'm not able to update my browser\""
 #~ msgstr "\"저는 브라우저를 업데이트할 수 없어요\" "
@@ -594,8 +554,6 @@ msgstr "사용자 수"
 
 #~ msgid ""
 #~ "If you can't change your browser because of compatibility issues, think "
-#~ "about installing a second browser for browsing and keep the old one for "
-#~ "the compatibility."
-#~ msgstr ""
-#~ "호환성 문제 때문에 브라우저를 바꿀 수 없으면 새로운 브라우저를 따로 설치하"
-#~ "는 것도 고려해 보십시오."
+#~ "about installing a second browser for browsing and keep the old one for the "
+#~ "compatibility."
+#~ msgstr "호환성 문제 때문에 브라우저를 바꿀 수 없으면 새로운 브라우저를 따로 설치하는 것도 고려해 보십시오."

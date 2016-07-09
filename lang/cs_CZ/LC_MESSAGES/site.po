@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2014-01-06 16:28+0100\n"
 "Last-Translator: Petr Mrazek <mrazek.petr@gmail.com>\n"
 "Language-Team: Petr Mrazek <mrazek.petr@gmail.com>\n"
-"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
 "X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -24,8 +24,8 @@ msgstr "Kontakt"
 
 #: index.php:33
 msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
 msgstr ""
 "Tato služba je příležitostí decentně informovat Vaše návštěvníky o přechodu "
 "na novější prohlížeč."
@@ -53,38 +53,40 @@ msgstr ""
 
 #: index.php:53
 msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that their browser is not up-to-date and it is recommended to update."
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
 msgstr ""
 "Návštěvníci se zastaralým prohlížečem budou informováni malou, neobtěžující "
 "lištou, že jejich prohlížeč není aktuální a je doporučeno jej aktualizovat."
 
 #: index.php:56
-msgid "Test the notification bar!"
+msgid "Try it out!"
 msgstr "Otestujte notifikační lištu!"
 
 #: index.php:58
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
 msgstr ""
-"Váš prohlížeč(%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnostní rizika</b> "
-"a možná <b>nedokáže zobrazit všechny prvky</b> této a dalších webových "
+"Váš prohlížeč(%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnostní rizika</b>"
+" a možná <b>nedokáže zobrazit všechny prvky</b> této a dalších webových "
 "stránek. <a%s>Naučte se, jak aktualizovat svůj prohlížeč</a>"
 
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, them will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
 msgstr ""
 "Kliknutím na lištu se dostanete na <a href=\"%s\">info stránku s argumenty "
 "proč změnit/aktualizovat prohlížeč a s výběrem možných prohlížečů</a>."
 
 #: index.php:69
-msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgid "If the visitor ignores the advice, it won't reappear for some time."
 msgstr "Pokud návštěvník radu ignoruje, rada se skryje na nějakou dobu."
 
 #: index.php:72
@@ -92,14 +94,13 @@ msgid "Advantages and features"
 msgstr "Výhody a funkce"
 
 #: index.php:75
-msgid "Subtle"
+msgid "Unobtrusive"
 msgstr "Jemně"
 
 #: index.php:76
 msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
 msgstr ""
 "Uživatel bude upozorněn pouze jednou a nebude více obtěžován. Notifikační "
 "lišta je velmi malá a nebude mít negativní vliv na prohlížení webu."
@@ -150,13 +151,13 @@ msgstr "Minimální údržba a aktualizace"
 
 #: index.php:95
 msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
 msgstr ""
 "Pokud přijde více verzí prohlížeče, které nebudou v budoucnu podporovány "
-"výrobcem, budou obsahovat bezpečnostní chyby nebo budou velmi staré, přidáme "
-"je do našeho seznamu automaticky."
+"výrobcem, budou obsahovat bezpečnostní chyby nebo budou velmi staré, přidáme"
+" je do našeho seznamu automaticky."
 
 #: index.php:100
 msgid "Customizable"
@@ -165,8 +166,8 @@ msgstr "Přizpůsobitelné"
 #: index.php:101
 msgid ""
 "You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
+"releases you can also customize the text that should be shown, the frequency"
+" of the bar to appear and many other things."
 msgstr ""
 "Můžete přizpůsobit prohlížeče a jeich verze, které chcete informovat. <br/> "
 "V budoucích verzích můžete také upravit text, který se má zobrazit, "
@@ -181,19 +182,17 @@ msgid "The message is automatically displayed in the user's language."
 msgstr "Zpráva se automaticky zobrazí v jazyce uživatele."
 
 #: index.php:112
-msgid "Install notification on your site"
+msgid "Install the browser update notification on your site"
 msgstr "Instalovat oznámení na Vaše stránky"
 
 #: index.php:114
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
+msgid "Just include this code anywhere in the source of your page."
 msgstr ""
 "Zde můžete získat kód pro své webové stránky. Vložte jej kamkoliv do "
 "zdrojového kódu Vaší stránky."
 
 #: index.php:119
-msgid "Following browsers will be notified:"
+msgid "The following browsers will be notified:"
 msgstr "Následující prohlížeče budou informovány:"
 
 #: index.php:166
@@ -204,8 +203,8 @@ msgstr ""
 
 #: index.php:172
 msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
+"<b>Notify recommended set of browsers and adjust it automatically over "
+"time:</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
 "<b>Informujte o doporučené sadé prohlížečů a automaticky ji upravujte v "
@@ -224,7 +223,7 @@ msgid ""
 msgstr "Můžete <a href=\"%s\">upravit</a> styl zprávy, text a další možnosti."
 
 #: index.php:201
-msgid "You may also use third-party plugins for: "
+msgid "There are plugins for:"
 msgstr "Můžete také použít pluginy třetích stran pro:"
 
 #: index.php:228
@@ -256,13 +255,12 @@ msgstr ""
 
 #: index.php:238
 msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
 msgstr ""
-"Novější prohlížeče Vám umožní používat více funkcí a nové technologie (CSS3, "
-"SVG, HTML5, RSS, CSS generovaný obsah, flexibilní Layout) na svých webových "
-"stránkách, což má za následek lepší procházení webu pro Vaše uživatele."
+"Novější prohlížeče Vám umožní používat více funkcí a nové technologie (CSS3,"
+" SVG, HTML5, RSS, CSS generovaný obsah, flexibilní Layout) na svých webových"
+" stránkách, což má za následek lepší procházení webu pro Vaše uživatele."
 
 #: index.php:241
 msgid "Security and benefits for the user"
@@ -271,13 +269,13 @@ msgstr "Bezpečnost a výhody pro uživatele"
 #: index.php:242
 #, php-format
 msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threats of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+"Numerous benefits: security, speed, features, ... Look at the <a "
+"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
+"listed in this <a href=\"%s\">paper</a>."
 msgstr ""
-"Množství výhod: bezpečnost, rychlost, funkce, ... Koukněte na <a href=\"%s"
-"\">stránku aktualizací</a>. Bezpečnostní hrozby zastaralých prohlížečů jsou "
-"uvedeny v tomto <a href=\"%s\">dokumentu</a>."
+"Množství výhod: bezpečnost, rychlost, funkce, ... Koukněte na <a "
+"href=\"%s\">stránku aktualizací</a>. Bezpečnostní hrozby zastaralých "
+"prohlížečů jsou uvedeny v tomto <a href=\"%s\">dokumentu</a>."
 
 #: index.php:245
 msgid "The web has to evolve..."
@@ -289,13 +287,13 @@ msgstr "Ale to je možné pouze v případě, že se prohlížeče také vyvíj�
 
 #: index.php:248
 msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
+" something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
 "Silný podíl na trhu 8 let starého prohlížeče (Internet Explorer 6) je něco "
-"nového v historii webu. Neučiníme-li žádné kroky nyní, budeme muset psát kód "
-"webových stránek stejný jako v roce 2001, i když je rok 2011."
+"nového v historii webu. Neučiníme-li žádné kroky nyní, budeme muset psát kód"
+" webových stránek stejný jako v roce 2001, i když je rok 2011."
 
 #: index.php:252
 msgid "Users don't oppose updating..."
@@ -303,8 +301,8 @@ msgstr "Uživatelé nejsou proti aktualizacím..."
 
 #: index.php:253
 msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
+"... they often just do not appreciate the need to update or the existence of"
+" the \"webbrowser\" as a software at all."
 msgstr ""
 "... často prostě nevědí, že je třeba aktualizovat, nebo netuší o existenci "
 "\"prohlížeče \" jako softwaru."
@@ -332,7 +330,8 @@ msgstr "Šiřte slovo!"
 #: index.php:264
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
 msgstr ""
-"Řekněte ostatním o této iniciativě! Na svém blogu, na své webové stránce, ..."
+"Řekněte ostatním o této iniciativě! Na svém blogu, na své webové stránce, "
+"..."
 
 #: index.php:267
 msgid "Translate this page"
@@ -348,12 +347,10 @@ msgstr "Statistiky"
 
 #: stat.php:18
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
+msgid "<b>%s</b> sites are using this notification"
 msgstr ""
-"<strong class=\"number\">%d</strong> stránek používá skript Browser-Update."
-"org."
+"<strong class=\"number\">%d</strong> stránek používá skript Browser-"
+"Update.org."
 
 #: stat.php:22
 msgid "Browser updates"
@@ -361,9 +358,7 @@ msgstr "Aktualizace prohlížeče"
 
 #: stat.php:60
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
+msgid "<b>%s</b> visitors have already updated their browser"
 msgstr ""
 "<strong class=\"number\">%d</strong> návštěvníků již upgradovalo svůj "
 "prohlížeč."
@@ -387,18 +382,17 @@ msgstr "Množství"
 #~ msgstr "Otestovat skript"
 
 #~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, "
-#~ "the bar will always show up."
+#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
+#~ " bar will always show up."
 #~ msgstr ""
-#~ "Pokud otevřete vaše stránky s <code>#test-bu</code> v url, lišta se "
-#~ "zobrazí."
+#~ "Pokud otevřete vaše stránky s <code>#test-bu</code> v url, lišta se zobrazí."
 
 #~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
 #~ msgstr "Příklad: <code>http://browser-update.org/#test-bu</code>."
 
 #~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new "
-#~ "browser tab."
+#~ "Make sure the page is properly reloaded by opening the url in an new browser"
+#~ " tab."
 #~ msgstr ""
 #~ "Ujistěte se, že se stránka řádně načetla po otevření URL v novém panelu "
 #~ "prohlížeče."
@@ -443,9 +437,8 @@ msgstr "Množství"
 #~ msgstr "Následující CSS pravidla se aplikují pomocí skriptu."
 
 #~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some "
-#~ "more specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}"
-#~ "</code>"
+#~ "You can overwrite them in your own CSS. To do so you need to add some more "
+#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
 #~ msgstr ""
-#~ "Můžete je přepsat do svého vlastního CSS. Budete muset přidat nějaké "
-#~ "další CSS specifikace, např. <code>body .buorg {font-size:20px}</ code>"
+#~ "Můžete je přepsat do svého vlastního CSS. Budete muset přidat nějaké další "
+#~ "CSS specifikace, např. <code>body .buorg {font-size:20px}</ code>"

@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
 "Language: Gaeilge\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: header.php:5
 msgid "Update your Browser"
@@ -69,9 +69,9 @@ msgid ""
 "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
 "href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr ""
-"Le haghaidh <a href=\"%s\">cosaint níos fearr</a>,  agus <a href=\"%s"
-"\">luas</a>,    <a href=\"%s\">suaimhneas</a> agus    <a href=\"%s\">spraoi</"
-"a> breise."
+"Le haghaidh <a href=\"%s\">cosaint níos fearr</a>,  agus <a "
+"href=\"%s\">luas</a>,    <a href=\"%s\">suaimhneas</a> agus    <a "
+"href=\"%s\">spraoi</a> breise."
 
 #: update-browser.php:122 update-browser.php:141
 msgid "Advertisement"
@@ -81,13 +81,13 @@ msgstr "Fógra"
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
 msgstr ""
-"Tá an líonléitheoir agat (%s) <b>as dáta</b>. Tá <b>laigeachtaí slándála</b> "
-"a bhfuil ar eolas ann agus b'fhéidir <b>nach taispeánfaidh sé gach gné</b> "
-"den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a "
-"nuashonrú</a>"
+"Tá an líonléitheoir agat (%s) <b>as dáta</b>. Tá <b>laigeachtaí slándála</b>"
+" a bhfuil ar eolas ann agus b'fhéidir <b>nach taispeánfaidh sé gach gné</b> "
+"den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a"
+" nuashonrú</a>"
 
 #: update-browser.php:173
 msgid "Why do I need an up-to-date browser?"
@@ -103,8 +103,8 @@ msgid ""
 "and other threats. They also fix security holes in your current browser!"
 msgstr ""
 "Cosnaíonn líonléitheoirí nua níos fearr thú ó chamscéimeanna, aicídí, "
-"Traígh, fioscaireacht agus ó bhagairtí eile. Deisíonn siad freisin éalanga i "
-"do líonléitheoir reatha!"
+"Traígh, fioscaireacht agus ó bhagairtí eile. Deisíonn siad freisin éalanga i"
+" do líonléitheoir reatha!"
 
 #: update-browser.php:181
 msgid "Speed"
@@ -120,7 +120,8 @@ msgstr "Comhoiriúnacht"
 
 #: update-browser.php:186
 msgid "Websites using new technology will be displayed more correctly"
-msgstr "Taispeánfar níos fearr suímh ghréasáin a bhaineann feidhm as nithe nua"
+msgstr ""
+"Taispeánfar níos fearr suímh ghréasáin a bhaineann feidhm as nithe nua"
 
 #: update-browser.php:189
 msgid "Comfort &amp; better experience"
@@ -144,8 +145,8 @@ msgid ""
 "want to bring the web further and help their visitors."
 msgstr ""
 "Is togra de chuid dearthóirí gréasáin, stiúrthóirí gréasáin agus "
-"scríbhneoirí blaganna é an suíomh gréasáin seo ar mhaithe leis an ngréasán a "
-"chur chun cinn agus chun cabhrú le daoine a thugann cuairt ar a suímh "
+"scríbhneoirí blaganna é an suíomh gréasáin seo ar mhaithe leis an ngréasán a"
+" chur chun cinn agus chun cabhrú le daoine a thugann cuairt ar a suímh "
 "ghréasáin."
 
 #: update-browser.php:203

@@ -11,32 +11,50 @@ msgstr ""
 "PO-Revision-Date: 2016-04-04 19:34+0100\n"
 "Last-Translator: Юлій В. Чирков (Juliy V. Chirkov) <juliyvchirkov@gmail.com>\n"
 "Language-Team: VIVAsg <info@vivasg.com>\n"
-"Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Language: uk_UA\n"
 "X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: contact.php:8
 msgid "Contact"
 msgstr "Контакти"
 
 #: index.php:33
-msgid "This service is an  opportunity to inform your visitors  unobtrusively to switch to a newer browser."
-msgstr "Цей сервіс надає можливість повідомляти та нагадувати Вашим відвідувачам про необхідність оновити їх браузери."
+msgid ""
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
+msgstr ""
+"Цей сервіс надає можливість повідомляти та нагадувати Вашим відвідувачам про"
+" необхідність оновити їх браузери."
 
 #: index.php:37
-msgid "Many internet users are still using very old, out-dated browsers – most of them for no actual reason. Switching to an newer browser is better for them and for you as a webdesigner."
-msgstr "Більшість користувачів все ще використовують старі версії браузерів, найчастіше, через незнання. Перехід на новий браузер піде на користь як їм, так і Вам як веб-дизайнеру."
+msgid ""
+"Many internet users are still using very old, out-dated browsers – most of "
+"them for no actual reason. Switching to an newer browser is better for them "
+"and for you as a webdesigner."
+msgstr ""
+"Більшість користувачів все ще використовують старі версії браузерів, "
+"найчастіше, через незнання. Перехід на новий браузер піде на користь як їм, "
+"так і Вам як веб-дизайнеру."
 
 #: index.php:64
-msgid "<strong class=\"number\">%s</strong> sites are using the Browser-Update.org script."
-msgstr "<strong class=\"number\">%s</strong> сайтів використовують скрипт з нашого Browser-Update.org."
+msgid ""
+"<strong class=\"number\">%s</strong> sites are using the Browser-Update.org "
+"script."
+msgstr ""
+"<strong class=\"number\">%s</strong> сайтів використовують скрипт з нашого "
+"Browser-Update.org."
 
 #: index.php:69
-msgid "<strong class=\"number\">%s</strong> visitors have already upgraded their browser."
-msgstr "<strong class=\"number\">%s</strong> відвідувачів завдяки цьому вже оновили чи замінили свої браузери."
+msgid ""
+"<strong class=\"number\">%s</strong> visitors have already upgraded their "
+"browser."
+msgstr ""
+"<strong class=\"number\">%s</strong> відвідувачів завдяки цьому вже оновили "
+"чи замінили свої браузери."
 
 #: index.php:73
 msgid "How it works"
@@ -44,48 +62,84 @@ msgstr "Як це працює"
 
 #: index.php:76
 #, php-format
-msgid "Include our small javascript <a href=%s>notification</a> on your website"
-msgstr "Все, що Вам треба зробити — це додати до коду сторінок Вашого веб-сайтіу манюсінький блок коду нашого яваскрипту, <a href=%s>який нагадуватиме</a> відвідувачам про необхідність оновлення браузера."
+msgid ""
+"Include our small javascript <a href=%s>notification</a> on your website"
+msgstr ""
+"Все, що Вам треба зробити — це додати до коду сторінок Вашого веб-сайтіу "
+"манюсінький блок коду нашого яваскрипту, <a href=%s>який нагадуватиме</a> "
+"відвідувачам про необхідність оновлення браузера."
 
 #: index.php:79
-msgid "Visitors with out-dated browser will be informed by a little, undisturbing bar, that their browser is not up-to-date and it is recommended to update."
-msgstr "І ваші відвідувачі з браузерами, що потребують оновлення, отримуватимуть попередження за допомогою невеличкої та ненав'язливої панелі."
+msgid ""
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
+msgstr ""
+"І ваші відвідувачі з браузерами, що потребують оновлення, отримуватимуть "
+"попередження за допомогою невеличкої та ненав'язливої панелі."
 
 #: index.php:82
-msgid "Test the notification bar!"
+msgid "Try it out!"
 msgstr "Дивіться, як це працює наживо!"
 
 #: index.php:84
-msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a href=%s>Learn how to update your browser</a>"
-msgstr "Ваш браузер (%s) є <b>суттєво застарілим</b>. Він має <b>проблеми з безпекою</b> та може <b>не відображати чи некоректно відображати деякий вміст</b> на цьому та інших веб-сайтах. <a href=%s>Дізнайтеся, як оновити Ваш браузер</a>"
+msgid ""
+"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
+"and may <b>not display all features</b> of this and other websites. <a "
+"href=%s>Learn how to update your browser</a>"
+msgstr ""
+"Ваш браузер (%s) є <b>суттєво застарілим</b>. Він має <b>проблеми з "
+"безпекою</b> та може <b>не відображати чи некоректно відображати деякий "
+"вміст</b> на цьому та інших веб-сайтах. <a href=%s>Дізнайтеся, як оновити "
+"Ваш браузер</a>"
 
 #: index.php:91
-msgid "By clicking the bar, them will get to <a href=%s>an info page with arguments why to change/update and some browser choices</a>."
-msgstr "Клікаючи на посилання, відвідувач потрапляє до <a href=%s>сторінки, де наведено зрозумілі будь-кому аргументи та пояснення, чому оновити чи замінити застарілий браузер насправді так важливо, та згадано декілька сучасних, з яких відвідувач може обрати для себе той чи інший на свій власний смак та розсуд."
+msgid ""
+"By clicking the bar, them will get to <a href=%s>an info page with arguments"
+" why to change/update and some browser choices</a>."
+msgstr ""
+"Клікаючи на посилання, відвідувач потрапляє до <a href=%s>сторінки, де "
+"наведено зрозумілі будь-кому аргументи та пояснення, чому оновити чи "
+"замінити застарілий браузер насправді так важливо, та згадано декілька "
+"сучасних, з яких відвідувач може обрати для себе той чи інший на свій "
+"власний смак та розсуд."
 
 #: index.php:95
-msgid "If the visitor ignores the advice, it won't appear again for some time."
-msgstr "А якщо відвідувач проігнорує попередження та пораду оновитися, панель  щезне сама собою, і протягом деякого часу вже не з’являтиметься."
+msgid "If the visitor ignores the advice, it won't reappear for some time."
+msgstr ""
+"А якщо відвідувач проігнорує попередження та пораду оновитися, панель  щезне"
+" сама собою, і протягом деякого часу вже не з’являтиметься."
 
 #: index.php:98
 msgid "Advantages and features"
 msgstr "Переваги та можливості"
 
 #: index.php:101
-msgid "Subtle"
+msgid "Unobtrusive"
 msgstr "Ввічливість та ненав’язливість"
 
 #: index.php:102
-msgid "The user will be notified only once, and won't be bothered any more. The notification bar is very small and won't affect the browsing experience negatively."
-msgstr "Користувач отримає попередження лише один раз, і незалежно від його реакції надалі протягом візиту скрипт відвідувача вже не турбуватиме. Панель займає дуже невеличку ділянку на екрані, і через це на вигляд сторінки негативно не впливає."
+msgid ""
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
+msgstr ""
+"Користувач отримає попередження лише один раз, і незалежно від його реакції "
+"надалі протягом візиту скрипт відвідувача вже не турбуватиме. Панель займає "
+"дуже невеличку ділянку на екрані, і через це на вигляд сторінки негативно не"
+" впливає."
 
 #: index.php:106
 msgid "Informative"
 msgstr "Інформативність"
 
 #: index.php:107
-msgid "Tell the users that they are using an out-dated browser and that your website looks even better with a newer one."
-msgstr "Доведіть до користувачів, що їм немає ніякого сенсу користуватися застарілими браузерами в той час, як Ваш сайт виглядає та працює у сучасних набагато краще."
+msgid ""
+"Tell the users that they are using an out-dated browser and that your "
+"website looks even better with a newer one."
+msgstr ""
+"Доведіть до користувачів, що їм немає ніякого сенсу користуватися "
+"застарілими браузерами в той час, як Ваш сайт виглядає та працює у сучасних "
+"набагато краще."
 
 #: index.php:111
 msgid "Idealistic"
@@ -101,11 +155,15 @@ msgstr "Підтримайте мережу, що грунтується на с
 
 #: index.php:114
 msgid "Support Open Source software projects!"
-msgstr "Підтримайте проекти розробників, що принципово є безкоштовними та мають відкритий код!"
+msgstr ""
+"Підтримайте проекти розробників, що принципово є безкоштовними та мають "
+"відкритий код!"
 
 #: index.php:115
 msgid "Help your visitors!"
-msgstr "Допоможіть Вашим відвідувачам змінити їх жаливі застарілі незручні браузери на краще!"
+msgstr ""
+"Допоможіть Вашим відвідувачам змінити їх жаливі застарілі незручні браузери "
+"на краще!"
 
 #: index.php:116
 msgid "Help increase security awareness!"
@@ -117,19 +175,33 @@ msgstr "Підтримайте свій улюблений браузер!"
 
 #: index.php:120
 msgid "Low maintenance and up-to-date"
-msgstr "Наш скрипт майже не потребує обслуговування, проте завжди є актуальним"
+msgstr ""
+"Наш скрипт майже не потребує обслуговування, проте завжди є актуальним"
 
 #: index.php:121
-msgid "If there come more browser versions which won't be supported by the vendor in the future, exhibit security gaps or have been very old for a long time we are going to add them to our list automatically."
-msgstr "Якщо з’являються браузери, від подальшої підтримки яких розробники відмовились, які мають наявні дірки у безпеці чи тривалий час не оновлюються — ми додаємо їх до переліку застарілих автоматично."
+msgid ""
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
+msgstr ""
+"Якщо з’являються браузери, від подальшої підтримки яких розробники "
+"відмовились, які мають наявні дірки у безпеці чи тривалий час не оновлюються"
+" — ми додаємо їх до переліку застарілих автоматично."
 
 #: index.php:126
 msgid "Customizable"
 msgstr "Гнучкі налаштування згідно до будь-яких Ваших вимог"
 
 #: index.php:127
-msgid "You can customize the browsers and versions to notify.<br/> In future releases you can also customize the text that should be shown, the frequency of the bar to appear and many other things."
-msgstr "Перелік версій браузерів, які на Вашому сайті вважатимуться застарілими, Ви можете налаштовувати на власний смак та розсуд.<br> Також додано можливість змінювати текст нагадування, частоту відображення панелі попередження та багато інших параметрів."
+msgid ""
+"You can customize the browsers and versions to notify.<br/> In future "
+"releases you can also customize the text that should be shown, the frequency"
+" of the bar to appear and many other things."
+msgstr ""
+"Перелік версій браузерів, які на Вашому сайті вважатимуться застарілими, Ви "
+"можете налаштовувати на власний смак та розсуд.<br> Також додано можливість "
+"змінювати текст нагадування, частоту відображення панелі попередження та "
+"багато інших параметрів."
 
 #: index.php:132
 msgid "Localized"
@@ -137,67 +209,120 @@ msgstr "Локалізація"
 
 #: index.php:133
 msgid "The message is automatically displayed in the user's language."
-msgstr "За замовчанням попередження автоматично демонструється мовою відвідувача."
+msgstr ""
+"За замовчанням попередження автоматично демонструється мовою відвідувача."
 
 #: index.php:138
-msgid "Install notification on your site"
+msgid "Install the browser update notification on your site"
 msgstr "Підключення нашого скрипта до Вашого сайту"
 
 #: index.php:140
-msgid "Here you can get the code to include in your website. Just include it anywhere in the source of your page."
-msgstr "Для підключення скрипта до власного сайту Вам достатньо лише скопіювати з  текстового блоку наведений код та розташувати його будь-де у коді Ваших сторінок."
+msgid "Just include this code anywhere in the source of your page."
+msgstr ""
+"Для підключення скрипта до власного сайту Вам достатньо лише скопіювати з  "
+"текстового блоку наведений код та розташувати його будь-де у коді Ваших "
+"сторінок."
 
 #: index.php:159
-msgid "Following browsers will be notified:"
+msgid "The following browsers will be notified:"
 msgstr "Попередження отримуватимуть користувачі наступних браузерів:"
 
 #: index.php:204
-msgid "Google Chrome will automatically itself and is therefor always up to date"
-msgstr "Google Chrome регулярно оновлює себе автоматично, тому Ви завжди маєте найсвіжішу версію сучасного браузера"
+msgid ""
+"Google Chrome will automatically itself and is therefor always up to date"
+msgstr ""
+"Google Chrome регулярно оновлює себе автоматично, тому Ви завжди маєте "
+"найсвіжішу версію сучасного браузера"
 
 #: index.php:210
-msgid "<b>Notify recommended set of browsers and adjust it automatically over time:</b>If a browser is no longer supported by the vendor or has security vulnerabilities, it will be added to the set."
-msgstr "<b>Робити попередження, грунтуючись на переліку браузерів, що наведено рядком вище, та час від часу автоматично цей перелік оновлювати</b>: якщо якийсь браузер вже не підтримується розробниками, чи має наявні вразливості, через які ставить користувачів у небезпеку, такий браузер буде додано до переліку ненадійних автоматично."
+msgid ""
+"<b>Notify recommended set of browsers and adjust it automatically over "
+"time:</b>If a browser is no longer supported by the vendor or has security "
+"vulnerabilities, it will be added to the set."
+msgstr ""
+"<b>Робити попередження, грунтуючись на переліку браузерів, що наведено "
+"рядком вище, та час від часу автоматично цей перелік оновлювати</b>: якщо "
+"якийсь браузер вже не підтримується розробниками, чи має наявні вразливості,"
+" через які ставить користувачів у небезпеку, такий браузер буде додано до "
+"переліку ненадійних автоматично."
 
 #: index.php:218
-msgid "You can <a href=%s>customize</a> the style of the message, the text and other options."
-msgstr "Крім нестандартного переліку ненадійних застарілих браузерів (скласти який для свого сайту можна власноруч — треба лише деактивувати чекбокс, розташований трохи вище), Ви також маєте можливість за своім бажанням <a href=%s>корегувати та змінювати</a> стилі панели повідомлення, додавати власні будь-якими мовами власні варіанти тексту повідомлення, та переналаштовувати деякі інші параметри, теж цілком на свій розсуд."
+msgid ""
+"You can <a href=%s>customize</a> the style of the message, the text and "
+"other options."
+msgstr ""
+"Крім нестандартного переліку ненадійних застарілих браузерів (скласти який "
+"для свого сайту можна власноруч — треба лише деактивувати чекбокс, "
+"розташований трохи вище), Ви також маєте можливість за своім бажанням <a "
+"href=%s>корегувати та змінювати</a> стилі панели повідомлення, додавати "
+"власні будь-якими мовами власні варіанти тексту повідомлення, та "
+"переналаштовувати деякі інші параметри, теж цілком на свій розсуд."
 
 #: index.php:224
-msgid "You may also use third-party plugins for: "
-msgstr "А якщо Ваш сайт побудовано на якомусь з відомих та розповсюджених у світі фреймворків на кшталт Wordpress, для підключення нашого скрипту ми радимо скористатися плагінами (модулями) інших розробників, посилання на які наведено нижче:"
+msgid "There are plugins for:"
+msgstr ""
+"А якщо Ваш сайт побудовано на якомусь з відомих та розповсюджених у світі "
+"фреймворків на кшталт Wordpress, для підключення нашого скрипту ми радимо "
+"скористатися плагінами (модулями) інших розробників, посилання на які "
+"наведено нижче:"
 
 #: index.php:258
 msgid "Why you should tell users to update"
-msgstr "Чому варто пропонувати користувачам оновлювати застарілі ненадійні браузери"
+msgstr ""
+"Чому варто пропонувати користувачам оновлювати застарілі ненадійні браузери"
 
 #: index.php:261
 msgid "Reduced development costs and time"
 msgstr "Тому що це зрештою суттєво скорочує час та вартість розробки проектів"
 
 #: index.php:262
-msgid "Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr "Оптимізація веб-сайтів з урахуванням застарілих браузерів зазвичай виявляється  довготривалою, отже й доволі коштовною справою"
+msgid ""
+"Optimizing websites for old browsers is time consuming and thus expensive."
+msgstr ""
+"Оптимізація веб-сайтів з урахуванням застарілих браузерів зазвичай "
+"виявляється  довготривалою, отже й доволі коштовною справою"
 
 #: index.php:265
 msgid "Webdesign technologies and features"
-msgstr "Тому що це зрештою на повну вмикає зелене світло сучасним технологіям та можливостям веб-розробки"
+msgstr ""
+"Тому що це зрештою на повну вмикає зелене світло сучасним технологіям та "
+"можливостям веб-розробки"
 
 #: index.php:266
-msgid "There are all these great new web development standards and they are supported by modern browsers... but you may not use them."
-msgstr "Наразі у веб-розробці з'явилася величезна кількість нових стандартів, технологій та зручностей, що підтримуються сучасними браузерами... але через застарілі Ви не маєтє можливості скористатися майже жодним з них."
+msgid ""
+"There are all these great new web development standards and they are "
+"supported by modern browsers... but you may not use them."
+msgstr ""
+"Наразі у веб-розробці з'явилася величезна кількість нових стандартів, "
+"технологій та зручностей, що підтримуються сучасними браузерами... але через"
+" застарілі Ви не маєтє можливості скористатися майже жодним з них."
 
 #: index.php:268
-msgid "Newer browsers let you use more features and new technologies (CSS3, SVG, HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, resulting in a better browsing experience for your users."
-msgstr "Сучасні браузери дозволять Вам задіяти на сайті на повну зручність останніх стандартів та технологій (CSS3; SVG; HTML5; вміст, що генерується CSS; адаптивне верстання тощо), з якими Ви та Ваши відвідувачи щодня матимете зростаюче задоволення від користування мережею."
+msgid ""
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
+msgstr ""
+"Сучасні браузери дозволять Вам задіяти на сайті на повну зручність останніх "
+"стандартів та технологій (CSS3; SVG; HTML5; вміст, що генерується CSS; "
+"адаптивне верстання тощо), з якими Ви та Ваши відвідувачи щодня матимете "
+"зростаюче задоволення від користування мережею."
 
 #: index.php:271
 msgid "Security and benefits for the user"
-msgstr "Суттєве підвищення рівня особистої безпеки та інші відчутні переваги для пересічних користувачів мережі"
+msgstr ""
+"Суттєве підвищення рівня особистої безпеки та інші відчутні переваги для "
+"пересічних користувачів мережі"
 
 #: index.php:272
-msgid "Numerous benefits: security, speed, features, ... Look at the <a href=%s>update page</a>. The security-threats of outdates browsers are listed in this <a href=%s>paper</a>."
-msgstr "Численні покращення та переваги сучасних браузерів: безпека, швидкість, безліч нових можливостей ... Достатньо переглянути хоча б <a href=%s>сторінку оновлення</a>. А цей <a href=%s>документі</a> у свою чергу висвітлює проблеми та вразливості застарілих й ненадійних."
+msgid ""
+"Numerous benefits: security, speed, features, ... Look at the <a "
+"href=%s>update page</a>. The security-threats of outdates browsers are "
+"listed in this <a href=%s>paper</a>."
+msgstr ""
+"Численні покращення та переваги сучасних браузерів: безпека, швидкість, "
+"безліч нових можливостей ... Достатньо переглянути хоча б <a "
+"href=%s>сторінку оновлення</a>. А цей <a href=%s>документі</a> у свою чергу "
+"висвітлює проблеми та вразливості застарілих й ненадійних."
 
 #: index.php:275
 msgid "The web has to evolve..."
@@ -212,8 +337,15 @@ msgid "Users don't oppose updating..."
 msgstr "Користувачі зазвичай не мають нічого проти оновлення..."
 
 #: index.php:282
-msgid "... they often just do not appreciate the need to update or the existence of the \"webbrowser\" as a software at all."
-msgstr "... загалом вони просто не розуміють, чому оновлення «веб-браузеру» є таким важливим та необхідним, найчастіше, на жаль, левова частка навіть гадки не має, що сучасні файних браузери існують лише як окремі незалежні додатки — повна протилежність уявленням пересічного користувача, що вважає браузер лише частиною комплексу, яка міцно та глибоко вбудована до системи."
+msgid ""
+"... they often just do not appreciate the need to update or the existence of"
+" the \"webbrowser\" as a software at all."
+msgstr ""
+"... загалом вони просто не розуміють, чому оновлення «веб-браузеру» є таким "
+"важливим та необхідним, найчастіше, на жаль, левова частка навіть гадки не "
+"має, що сучасні файних браузери існують лише як окремі незалежні додатки — "
+"повна протилежність уявленням пересічного користувача, що вважає браузер "
+"лише частиною комплексу, яка міцно та глибоко вбудована до системи."
 
 #: index.php:285
 msgid "Help this project"
@@ -224,16 +356,26 @@ msgid "Participate!"
 msgstr "Приймате участь у справах!"
 
 #: index.php:289
-msgid "Include the notification code in your page to inform users about browser updates."
-msgstr "Додайте код попередження до Вашої сторінки або сайту, щоб інформувати користувачів про існування файних сучасних браузерів та необхідність оновлення застарілих."
+msgid ""
+"Include the notification code in your page to inform users about browser "
+"updates."
+msgstr ""
+"Додайте код попередження до Вашої сторінки або сайту, щоб інформувати "
+"користувачів про існування файних сучасних браузерів та необхідність "
+"оновлення застарілих."
 
 #: index.php:292
 msgid "Spread the word!"
-msgstr "Розповсюджуйте інформацію про переваги сучасних браузерів, розповідайте іншим про ситуацію, що склалася через застарілі!"
+msgstr ""
+"Розповсюджуйте інформацію про переваги сучасних браузерів, розповідайте "
+"іншим про ситуацію, що склалася через застарілі!"
 
 #: index.php:293
 msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr "Інформуйте користувачів мережі про втрати, які вони змушені нести разом з усією мережей через застарілі браузери, що неймовірно гальмують прогрес! Розповідайте у своєму блозі, на своїх сторінках, ..."
+msgstr ""
+"Інформуйте користувачів мережі про втрати, які вони змушені нести разом з "
+"усією мережей через застарілі браузери, що неймовірно гальмують прогрес! "
+"Розповідайте у своєму блозі, на своїх сторінках, ..."
 
 #: index.php:296
 msgid "Translate this page"
@@ -248,12 +390,20 @@ msgid "Statistics"
 msgstr "Статистика"
 
 #: stat.php:32
-msgid "<strong class=number>%s</strong> sites are using the Browser-Update.org script."
-msgstr "<strong class=\"number>%s</strong> сайтів використовують скрипт з нашого Browser-Update.org."
+msgid ""
+"<strong class=number>%s</strong> sites are using the Browser-Update.org "
+"script."
+msgstr ""
+"<strong class=\"number>%s</strong> сайтів використовують скрипт з нашого "
+"Browser-Update.org."
 
 #: stat.php:37
-msgid "<strong class=number>%s</strong> visitors have already upgraded their browser."
-msgstr "<strong class=number>%s</strong> відвідувачів завдяки цьому вже оновили чи замінили свої браузери."
+msgid ""
+"<strong class=number>%s</strong> visitors have already upgraded their "
+"browser."
+msgstr ""
+"<strong class=number>%s</strong> відвідувачів завдяки цьому вже оновили чи "
+"замінили свої браузери."
 
 #: stat.php:43
 msgid "Browser updates"

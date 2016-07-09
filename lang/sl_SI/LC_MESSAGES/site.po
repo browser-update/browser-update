@@ -11,12 +11,11 @@ msgstr ""
 "PO-Revision-Date: 2014-01-05 15:25+0100\n"
 "Last-Translator: thomas <jossele@gmx.de>\n"
 "Language-Team: \n"
-"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Language: sl_SI\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 "X-Generator: Poedit 1.6.3\n"
 
 #: contact.php:8
@@ -25,8 +24,8 @@ msgstr ""
 
 #: index.php:33
 msgid ""
-"This service is an  opportunity to inform your visitors  unobtrusively to "
-"switch to a newer browser."
+"Browser-update.org is a tool to unobtrusively notify visitors that they "
+"should update their web browser in order to use your website."
 msgstr ""
 
 #: index.php:37
@@ -48,31 +47,33 @@ msgstr ""
 
 #: index.php:53
 msgid ""
-"Visitors with out-dated browser will be informed by a little, undisturbing "
-"bar, that their browser is not up-to-date and it is recommended to update."
+"Visitors with out-dated browser will be informed by a small, undisturbing "
+"message box, that their browser is not up-to-date and it is recommended to "
+"update."
 msgstr ""
 
 #: index.php:56
-msgid "Test the notification bar!"
+msgid "Try it out!"
 msgstr ""
 
 #: index.php:58
 #, php-format
 msgid ""
 "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. <a"
-"%s>Learn how to update your browser</a>"
+"and may <b>not display all features</b> of this and other websites. "
+"<a%s>Learn how to update your browser</a>"
 msgstr ""
 
 #: index.php:65
 #, php-format
 msgid ""
-"By clicking the bar, them will get to <a href=\"%s\">an info page with "
-"arguments why to change/update and some browser choices</a>."
+"By clicking the message, they will get to an <a href=\"%s\">info page with "
+"reasons why to update (or change) and a list of browsers</a> available for "
+"their system."
 msgstr ""
 
 #: index.php:69
-msgid "If the visitor ignores the advice, it won't appear again for some time."
+msgid "If the visitor ignores the advice, it won't reappear for some time."
 msgstr ""
 
 #: index.php:72
@@ -80,14 +81,13 @@ msgid "Advantages and features"
 msgstr ""
 
 #: index.php:75
-msgid "Subtle"
+msgid "Unobtrusive"
 msgstr ""
 
 #: index.php:76
 msgid ""
-"The user will be notified only once, and won't be bothered any more. The "
-"notification bar is very small and won't affect the browsing experience "
-"negatively."
+"The user will be notified only once a day by default. The notification is "
+"small and does not block the user from using the site."
 msgstr ""
 
 #: index.php:80
@@ -134,9 +134,9 @@ msgstr ""
 
 #: index.php:95
 msgid ""
-"If there come more browser versions which won't be supported by the vendor "
-"in the future, exhibit security gaps or have been very old for a long time "
-"we are going to add them to our list automatically."
+"We take care not to erroneously notify users by constantly tweaking and "
+"improving the detection code. Users are presented with an up-to-date list of"
+" browsers that are available for their system."
 msgstr ""
 
 #: index.php:100
@@ -146,8 +146,8 @@ msgstr ""
 #: index.php:101
 msgid ""
 "You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency "
-"of the bar to appear and many other things."
+"releases you can also customize the text that should be shown, the frequency"
+" of the bar to appear and many other things."
 msgstr ""
 
 #: index.php:106
@@ -159,17 +159,15 @@ msgid "The message is automatically displayed in the user's language."
 msgstr ""
 
 #: index.php:112
-msgid "Install notification on your site"
+msgid "Install the browser update notification on your site"
 msgstr ""
 
 #: index.php:114
-msgid ""
-"Here you can get the code to include in your website. Just include it "
-"anywhere in the source of your page."
+msgid "Just include this code anywhere in the source of your page."
 msgstr ""
 
 #: index.php:119
-msgid "Following browsers will be notified:"
+msgid "The following browsers will be notified:"
 msgstr ""
 
 #: index.php:166
@@ -179,8 +177,8 @@ msgstr ""
 
 #: index.php:172
 msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over time:"
-"</b>If a browser is no longer supported by the vendor or has security "
+"<b>Notify recommended set of browsers and adjust it automatically over "
+"time:</b>If a browser is no longer supported by the vendor or has security "
 "vulnerabilities, it will be added to the set."
 msgstr ""
 
@@ -196,7 +194,7 @@ msgid ""
 msgstr ""
 
 #: index.php:201
-msgid "You may also use third-party plugins for: "
+msgid "There are plugins for:"
 msgstr ""
 
 #: index.php:228
@@ -224,9 +222,8 @@ msgstr ""
 
 #: index.php:238
 msgid ""
-"Newer browsers let you use more features and new technologies (CSS3, SVG, "
-"HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-"resulting in a better browsing experience for your users."
+"Newer browsers let you use more features and new technologies on your "
+"website, resulting in a better browsing experience for your users."
 msgstr ""
 
 #: index.php:241
@@ -236,9 +233,9 @@ msgstr ""
 #: index.php:242
 #, php-format
 msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a href=\"%s"
-"\">update page</a>. The security-threats of outdates browsers are listed in "
-"this <a href=\"%s\">paper</a>."
+"Numerous benefits: security, speed, features, ... Look at the <a "
+"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
+"listed in this <a href=\"%s\">paper</a>."
 msgstr ""
 
 #: index.php:245
@@ -251,8 +248,8 @@ msgstr ""
 
 #: index.php:248
 msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is "
-"something new in the history of the web. If we take no action now, we will "
+"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
+" something new in the history of the web. If we take no action now, we will "
 "have to code websites like in 2001 even if it is 2011."
 msgstr ""
 
@@ -262,8 +259,8 @@ msgstr ""
 
 #: index.php:253
 msgid ""
-"... they often just do not appreciate the need to update or the existence of "
-"the \"webbrowser\" as a software at all."
+"... they often just do not appreciate the need to update or the existence of"
+" the \"webbrowser\" as a software at all."
 msgstr ""
 
 #: index.php:256
@@ -302,9 +299,7 @@ msgstr ""
 
 #: stat.php:18
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
+msgid "<b>%s</b> sites are using this notification"
 msgstr ""
 
 #: stat.php:22
@@ -313,9 +308,7 @@ msgstr ""
 
 #: stat.php:60
 #, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
+msgid "<b>%s</b> visitors have already updated their browser"
 msgstr ""
 
 #: stat.php:92
@@ -332,8 +325,8 @@ msgstr ""
 
 #~ msgid "An initiative by web designers to inform users about browser-updates"
 #~ msgstr ""
-#~ "Iniciativa med spletnimi oblikovalci, da obvestijo uporabnike o "
-#~ "posodobitvah za brskalnike"
+#~ "Iniciativa med spletnimi oblikovalci, da obvestijo uporabnike o posodobitvah"
+#~ " za brskalnike"
 
 #~ msgid "Start"
 #~ msgstr "Začetek"
@@ -346,11 +339,9 @@ msgstr ""
 
 #~ msgid ""
 #~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr ""
-#~ "Nekaj najnovejših verzij najbolj popularnih brezplačnih brskalnikov."
+#~ msgstr "Nekaj najnovejših verzij najbolj popularnih brezplačnih brskalnikov."
 
-#~ msgid ""
-#~ "Just choose a browser to download from the original vendor's website:"
+#~ msgid "Just choose a browser to download from the original vendor's website:"
 #~ msgstr "Le izberite brskalnik za prenos iz uradne strani:"
 
 #~ msgid "Widely-used open-source browser, highly extendable and customizable"
@@ -388,28 +379,26 @@ msgstr ""
 #~ "Vsi brskalniki imajo enake osnovne funkcije in so enostavni za uporabo. "
 
 #~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws "
-#~ "and disadvantages</b> and a <b>limited feature set</b>. You will not see "
-#~ "all the features of some websites."
+#~ "The browser you are using is out of date. It has known <b>security flaws and"
+#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
+#~ "the features of some websites."
 #~ msgstr ""
-#~ "Vaš brskalnik je zastarel. Ima več varnostnih pomankljivosti in morda ne "
-#~ "bo pravilno prikazal te ali drugih strani."
+#~ "Vaš brskalnik je zastarel. Ima več varnostnih pomankljivosti in morda ne bo "
+#~ "pravilno prikazal te ali drugih strani."
 
 #~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr ""
-#~ "Posodobitev na novejši brskalnik vam lahko prinese veliko prednosti:"
+#~ msgstr "Posodobitev na novejši brskalnik vam lahko prinese veliko prednosti:"
 
 #~ msgid "Security"
 #~ msgstr "Varnost"
 
 #~ msgid ""
-#~ "Newer browsers protect you better against scams, viruses, trojans, "
-#~ "phishing and other threats. They also fix security holes in your current "
-#~ "browser!"
+#~ "Newer browsers protect you better against scams, viruses, trojans, phishing "
+#~ "and other threats. They also fix security holes in your current browser!"
 #~ msgstr ""
-#~ "Novejši brskalniki vas bolje zaščitijo pred prevarami, virusi, "
-#~ "trojanskimi konji in drugimi napadi. Prav tako popravijo varnostne luknje "
-#~ "v vašem trenutnem brskalniku!"
+#~ "Novejši brskalniki vas bolje zaščitijo pred prevarami, virusi, trojanskimi "
+#~ "konji in drugimi napadi. Prav tako popravijo varnostne luknje v vašem "
+#~ "trenutnem brskalniku!"
 
 #~ msgid "Speed"
 #~ msgstr "Hitrost"
@@ -437,19 +426,18 @@ msgstr ""
 
 #~ msgid "Updating is easy, takes just a few minutes and is totally free."
 #~ msgstr ""
-#~ "Posodobitev je enostavna in traja le nekaj minut, poleg tega pa je "
-#~ "popolnoma brezplačna."
+#~ "Posodobitev je enostavna in traja le nekaj minut, poleg tega pa je popolnoma"
+#~ " brezplačna."
 
 #~ msgid "Why this website?"
 #~ msgstr "Zakaj ta spletna stran?"
 
 #~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers "
-#~ "who want to bring the web further and help their visitors."
+#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
+#~ "want to bring the web further and help their visitors."
 #~ msgstr ""
-#~ "Ta spletna stran je iniciativa spletnih oblikovalcev, spletnih mojstrov "
-#~ "in bloggerjev, ki želijo izboljšati splet in pomagati njegovim "
-#~ "uporabnikom."
+#~ "Ta spletna stran je iniciativa spletnih oblikovalcev, spletnih mojstrov in "
+#~ "bloggerjev, ki želijo izboljšati splet in pomagati njegovim uporabnikom."
 
 #~ msgid ""
 #~ "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
@@ -471,8 +459,8 @@ msgstr ""
 
 #~ msgid ""
 #~ "If you can't change your browser because of compatibility issues, think "
-#~ "about installing a second browser for browsing and keep the old one for "
-#~ "the compatibility."
+#~ "about installing a second browser for browsing and keep the old one for the "
+#~ "compatibility."
 #~ msgstr ""
 #~ "Če ne morete zamenjati vašega brskalnika zaradi kompatibilnostnih težav, "
 #~ "razmislite o namestitvi dodatnega brskalnika za običajno brskanje in "
