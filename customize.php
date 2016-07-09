@@ -14,9 +14,7 @@ T_textdomain('customize');
 <h3><?php echo T_('Test the script'); ?></h3>
 
 <p>
-    <?php echo T_('If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up.'); ?>
-    <?php echo T_('Example: <code>http://browser-update.org/#test-bu</code>.'); ?>
-    <?php echo T_('Make sure the page is properly reloaded by opening the url in an new browser tab.'); ?>
+    <?php echo T_('If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab.'); ?>
 </p>
 
 <h3><?php echo T_('Options'); ?></h3>
@@ -27,10 +25,10 @@ T_textdomain('customize');
 
 <pre>
 var $buoop = {
-    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('browser versions to notify') . "\n"; ?>
+    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('specify minimum browser versions to notify') . "\n"; ?>
     reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
-    reminderClosed: 150             // <?php echo T_('if the user closes message it reappears after x hours') . "\n"; ?>
+    reminderClosed: 150             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
     onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
     onclick: function(infos){},     // <?php echo T_('callback function if bar was clicked') . "\n"; ?>
     onclose: function(infos){},     //
@@ -46,27 +44,11 @@ var $buoop = {
     url: null                       // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
 };
 </pre>
-<!--
-<p>
-    The following options can be passed to the Javascript.
-</p>
-
-<table>
-<thead>
-<th>Name</th><th>Description</th><th>Type</th><th>Default value</th>
-</thead>
-<tbody>
-<tr><td>username</td><td>Your AddThis username. Always global to a page.</td><td>string</td><td>none</td></tr>
-<tr><td>services_exclude</td><td>Services to exclude from all menus. For example, setting this to <code>'facebook,myspace'</code> would hide Facebook and MySpace on all our menus. Always global.</td><td>string (csv)</td><td>none</td></tr>
-<tr><td>services_compact</td><td>Services to use in the compact menu. For example, setting this to <code>'print,email,favorites'</code> would result in only those three services appearing. Always global.</td><td>string (csv)</td><td>We regularly optimize the default list based on our data.</td></tr>
-</tbody>
-</table>
--->
-<h3><?php echo T_('Edit the CSS'); ?></h3>
+<h3><?php echo T_('Change the style'); ?></h3>
 
 <p>
-    <?php echo T_('The following CSS rules are applied by the script. '); ?>
-    <?php echo T_('You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>'); ?>
+    <?php echo T_('The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. '); ?>
+    <code>body .buorg {font-size:20px}</code> 
 </p>
 
 <pre>

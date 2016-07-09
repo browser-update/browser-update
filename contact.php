@@ -7,13 +7,14 @@ include("header.php");
 <div class="left">
 <h2>Translations</h2>
 <p>
-New translations of this site are always appreciated. 
-<a href="https://github.com/browser-update/browser-update/wiki/How-to-Translate">Learn how to translate this page</a>.
+New translations  of this site or corrections to existing translations are always appreciated.
+Sart translating using <a href="https://crowdin.com/project/browser-update">this online translation tool</a>.
+<a href="https://crowdin.com/page/quick-start">Learn how to translate</a>.
 </p>
 <h2>Development</h2>
 <p>
-        This is an open-source project. The development takes place on the Github 
-        <a href="https://github.com/browser-update/browser-update">browser-update project</a> where 
+        This is an open-source project. The development takes place on the Github
+        <a href="https://github.com/browser-update/browser-update">browser-update project</a> where
 	we also collect <a href="https://github.com/browser-update/browser-update/issues">ideas and bugs</a>.
         The script is MIT-Licensed.
 </p>
@@ -29,11 +30,11 @@ New translations of this site are always appreciated.
     <li>
             David Danier ( david.danier <var>æ</var> team23.de )
     </li>
-</ul>        
-<p>Translators: 
-Tomasz Olędzki (polish), 
-Giacomo (italian), 
-Patrick Wever (dutch), 
+</ul>
+<p>Translators:
+Tomasz Olędzki (polish),
+Giacomo (italian),
+Patrick Wever (dutch),
 Francisco Chacón (spanish),
 Rob Schneider (japanese translation), and many more ...
 </p>
@@ -41,7 +42,7 @@ Rob Schneider (japanese translation), and many more ...
 <p>
     Browser-Update.org is an intiative started by
     <a href="http://www.webmasterpro.de/">Webmasterpro.de</a>.<br/>
-    <a href="http://www.webmasterpro.de/"><img src="/img/wmp_logo.png" alt="" /></a>    
+    <a href="http://www.webmasterpro.de/"><img src="/img/wmp_logo.png" alt="" /></a>
 </p>
 
 <h2>Impressum/Imprint</h2>
@@ -63,7 +64,7 @@ E-Mail: ziegler@team23.de<br/>
 Eintragung im Handelsregister.<br/>
 Registergericht: Augsburg<br/>
 Registernummer: HRA 17483<br/>
-Umsatzsteuer-Identifikationsnummer: DE 217 549 808 
+Umsatzsteuer-Identifikationsnummer: DE 217 549 808
 </p>
 
 <h2>Copyright</h2>
@@ -79,8 +80,8 @@ Umsatzsteuer-Identifikationsnummer: DE 217 549 808
 <h2>Privacy policy</h2>
 <h3>Using the script on your site</h3>
 <p>
-    Installing the script on your website does not track users in any way. 
-    We do not set identification cookies or record IP-adresses. 
+    Installing the script on your website does not track users in any way.
+    We do not set identification cookies or record IP-adresses.
     No information about the user except anonymous browser statistics and language is recorded.
 </p>
 <h3>This website</h3>
