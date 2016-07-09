@@ -10,4 +10,4 @@ chdir($dir);
 exec('msgfmt '.escapeshellarg($lang_dir.'update.po').' -o '.escapeshellarg($lang_dir.'update.mo'));
 exec('msgfmt '.escapeshellarg($lang_dir.'site.po').' -o '.escapeshellarg($lang_dir.'site.mo'));
 exec('msgfmt '.escapeshellarg($lang_dir.'customize.po').' -o '.escapeshellarg($lang_dir.'customize.mo'));
-exec('msgfmt '.escapeshellarg($lang_dir.'update-legacy.po').' -o '.escapeshellarg($lang_dir.'update-legacy.mo'));
+#exec('msgfmt '.escapeshellarg($lang_dir.'update-legacy.po').' -o '.escapeshellarg($lang_dir.'update-legacy.mo'));

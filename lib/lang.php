@@ -168,15 +168,6 @@ T_bindtextdomain('customize', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 T_bind_textdomain_codeset('customize', 'UTF8');
 T_textdomain('update');
 
-
-
-$newtrans=true;    
-if (strpos("xx,ja,sl,id,rm,da,sv,hu,fa,gl",$ll)>0)
-    $newtrans=false;
-//if (!$newtrans)
-//    T_textdomain('browser-update');
-
-
 //var_dump($CURRENTLOCALE);
 //var_dump($EMULATEGETTEXT);
 //var_dump(request_lang());

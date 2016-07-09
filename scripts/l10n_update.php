@@ -10,4 +10,4 @@ chdir($dir);
 exec('msgmerge -U '.escapeshellarg($lang_dir.'update.po').' '.escapeshellarg($dir.DIRECTORY_SEPARATOR.'lang'.DIRECTORY_SEPARATOR.'update.pot'));
 exec('msgmerge -U '.escapeshellarg($lang_dir.'site.po').' '.escapeshellarg($dir.DIRECTORY_SEPARATOR.'lang'.DIRECTORY_SEPARATOR.'site.pot'));
 exec('msgmerge -U '.escapeshellarg($lang_dir.'customize.po').' '.escapeshellarg($dir.DIRECTORY_SEPARATOR.'lang'.DIRECTORY_SEPARATOR.'customize.pot'));
-exec('msgmerge -U '.escapeshellarg($lang_dir.'update-legacy.po').' '.escapeshellarg($dir.DIRECTORY_SEPARATOR.'lang'.DIRECTORY_SEPARATOR.'update-legacy.pot'));
+#exec('msgmerge -U '.escapeshellarg($lang_dir.'update-legacy.po').' '.escapeshellarg($dir.DIRECTORY_SEPARATOR.'lang'.DIRECTORY_SEPARATOR.'update-legacy.pot'));

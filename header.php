@@ -26,12 +26,12 @@
 <body><div class="header">
     <div class="innerhead">
         <h1><a href="./">Browser-Update.org</a></h1>
-        <div class="tagline"><?php echo T_('An initiative by web designers to inform users about browser-updates'); ?></div>
+        <div class="tagline"><?php echo T_('An initiative by websites to inform users to update their web browser'); ?></div>
         <div class="men">
-        <div><a href="./"><?php echo T_('The Project'); ?></a></div>
+        <div><a href="./"><?php echo T_('About the Project'); ?></a></div>
         <?php if (!isset($slimmed)) {?>
             
-            <div><a href="update.html#3"><?php echo T_('Update Browser'); ?></a></div>
+            <div><a href="update.html#3"><?php echo T_('Update your Browser'); ?></a></div>
             <div><a href="stat.html"><?php echo T_('Statistics'); ?></a></div>
             <div><a href="blog.html"><?php echo T_('Blog'); ?></a></div>
         <?php }?>
@@ -81,6 +81,8 @@
                 <a href="/el/<?php echo $curfile?>">Ελληνικά</a> 
                 <a href="/ar/<?php echo $curfile?>">العربية</a>
                 <a href="/sr/<?php echo $curfile?>">Srpski</a>
+                <a href="/lv/<?php echo $curfile?>">Latviešu</a>   
+                <a href="/ga/<?php echo $curfile?>">Gaeilge</a>                 
                 <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>
