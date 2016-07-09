@@ -10,18 +10,20 @@ var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
-this.op.vsakt = {i:12,f:45,o:36,s:9.1,n:20,c:49};
-this.op.vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47};
-this.op.vsmin={i:9,f:5,o:12.5,s:6.2,n:12};
+var vsakt = {i:12,f:45,o:36,s:9.1,n:20,c:49};
+var vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47};
+var vsmin={i:9,f:5,o:12.5,s:6.2,n:12};
 var myvs=op.vs||{};
-this.op.vs =op.vs||this.op.vsdefault;
-for (b in this.op.vsakt) {
-    if (this.op.vs[b]>=this.op.vsakt[b])
-        this.op.vs[b]=this.op.vsakt[b]-0.2;
-    if (!this.op.vs[b])
-        this.op.vs[b]=this.op.vsdefault[b];
-    if (this.op.vs[b]<this.op.vsmin[b])
-        this.op.vs[b]=this.op.vsmin[b];
+var vs =op.vs||vsdefault;
+for (b in vsakt) {
+    if (vs[b]>=vsakt[b])
+        vs[b]=vsakt[b]-0.2;
+    if (!vs[b])
+        vs[b]=vsdefault[b];
+    if (vs[b]<0)
+        vs[b]=vsakt[b]-vs[b];
+    if (vs[b]<vsmin[b])
+        vs[b]=vsmin[b];    
 }
 if (op.reminder<0.1 || op.reminder===0)
     this.op.reminder=0;
@@ -31,51 +33,52 @@ this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
 this.op.onclose = op.onclose||function(o){};
+var pageurl = op.pageurl || location.hostname || "x";
 if (langset)
-    this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+(location.hostname||"x");
+    this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+pageurl;
 else
-    this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+(location.hostname||"x");
-this.op.pageurl = op.pageurl || window.location.hostname || "unknown";
+    this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+pageurl;
 this.op.newwindow=(op.newwindow!==false);
 
-this.op.test=test||op.test||false;
-if (window.location.hash=="#test-bu")
-    this.op.test=true;
-/*
-if (op.exp && !this.op.test  && Math.round(Math.random()*5000)<1) {
-    var ix = new Image();
-    ix.src="//browser-update.org/uas.php";
-}
-*/
+this.op.test=test||op.test||(location.hash=="#test-bu")||false;
 
 function getBrowser(ua_str) {
-    var n,t,ua=ua_str||navigator.userAgent;
+    var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser|Otter|Midori|qutebrowser/i.test(ua)) n="x";
-    else if (/Trident.*rv:(\d+\.\d+)/i.test(ua)) n="i";
-    else if (/Trident.(\d+\.\d+)/i.test(ua)) n="io";
-    else if (/MSIE.(\d+\.\d+)/i.test(ua)) n="i";
-    else if (/Edge.(\d+)/i.test(ua)) n="i";
-    else if (/OPR.(\d+\.\d+)/i.test(ua)) n="o";
-    else if (/Chrome.(\d+\.\d+)/i.test(ua)) n="c";
-    else if (/Firefox.(\d+\.\d+)/i.test(ua)) n="f";
-    else if (/Version.(\d+.\d+).{0,10}Safari/i.test(ua))	n="s";
-    else if (/Safari.(\d+)/i.test(ua)) n="so";
-    else if (/Opera.*Version.(\d+\.\d+)/i.test(ua)) n="o";
-    else if (/Opera.(\d+\.?\d+)/i.test(ua)) n="o";
-    else if (/Netscape.(\d+)/i.test(ua)) n="n";
-    else return {n:"x",v:0,t:names[n]};
+    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser|Otter|Midori|qutebrowser/i.test(ua)) 
+        return {n:"x",v:0,t:ua,donotnotify:"smallbrowser"};
+    
+    var pats=[
+        ["Trident.*rv:VV","i"],
+        ["Trident.VV","io"],
+        ["MSIE.VV","i"],
+        ["Edge.(\d+)","i"],
+        ["OPR.VV","o"],
+        ["Chrome.VV","c"],
+        ["Firefox.VV","f"],
+        ["Version.VV.{0,10}Safari","s"],
+        ["Safari.VV","so"],
+        ["Opera.*Version.VV","o"],
+        ["Opera.VV","o"],
+        ["Netscape.VV","n"]
+    ];
+    for (var i = 0; i < pats.length; i++) {
+        if (ua.match(new RegExp(pats[i][0].replace("VV","(\d+\.?\d+)")), "i")) {
+            n=pats[i][1];
+            break;
+        }        
+    }    
+    if (!n)
+        return {n:"x",v:0,t:names[n]};
 
-    var v= parseFloat(RegExp.$1);
-    var donotnotify=false;
+    var v=parseFloat(RegExp.$1);
     //do not notify ver old systems since their is no up-to-date browser available
-    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) donotnotify="oldOS";
+    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) 
+        donotnotify="oldOS";
 
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==31 || Math.round(v)==38 || Math.round(v)==45))
+    if (n=="f" && (Math.round(v)==38 || Math.round(v)==45))
         donotnotify="ESR";
-    
-    if (n=="x") return {n:"x",v:v||0,t:names[n],donotnotify:donotnotify};
 
     if (n=="so") {
         v=4.0;
@@ -97,17 +100,17 @@ function getBrowser(ua_str) {
 }
 
 this.op.browser=getBrowser();
-if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || this.op.browser.v>this.op.vs[this.op.browser.n]))
+if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || this.op.browser.v>vs[this.op.browser.n]))
     return;
 
 
-if (!this.op.test  && Math.round(Math.random()*5000)<1) {
+if (!this.op.test  && Math.random()*5000<1) {
     var i = new Image();
-    i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(this.op.pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
+    i.src="//browser-update.org/viewcount.php?n="+this.op.browser.n+"&v="+this.op.browser.v + "&p="+ escape(pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
 }
 
 function setCookie(hours) {
-    var d = new Date(new Date().getTime() +1000*3600*hours);
+    var d = new Date(new Date().getTime()+3600000*hours);
     document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
 if (this.op.reminder>0) {
@@ -211,7 +214,6 @@ var div = document.createElement("div");
 this.op.div = div;
 div.id="buorg";
 div.className="buorg";
-
 
 var style = "<style>.buorg {position:absolute;position:fixed;z-index:111111;\
 width:100%; top:0px; left:0px; \
