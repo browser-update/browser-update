@@ -5,20 +5,6 @@ require_once("lib/lang.php");
 include("header.php");
 ?>
 <h2 class="top"><?php echo T_('Statistics'); ?></h2>
-<?php
-#"it,sl,jp,nb,ch"
-function countSites() {
-    $r = mysql_query("SELECT COUNT(DISTINCT referer) FROM updates") or die(mysql_error(). $q);
-    list($num) = mysql_fetch_row($r);
-    return $num;
-}
-function countUpdates() {
-    $r = mysql_query("SELECT COUNT(*) FROM updates") or die(mysql_error(). $q);
-    list($num) = mysql_fetch_row($r);
-    return $num;
-}
-
-?>
 <style>
     .numbs p {width: 360px;display: inline-block;text-align: center;}
     .numbs strong {display: block;
@@ -27,16 +13,12 @@ color: #E97A00;
 margin-bottom: -13px;}
 </style>
 <div class="numbs">
-<p>
-    <?php
-    echo sprintf(T_('<strong class="number">%d</strong> sites are using the Browser-Update.org script.'), number_format(floor(cache_output('countSites')),0,".", ""));
-    ?>
-</p>
-<p>
-    <?php
-    echo sprintf(T_('<strong class="number">%d</strong> visitors have already upgraded their browser.'), number_format(floor(cache_output('countUpdates')),0,".", ""));
-    ?>
-</p>
+    <p>
+        <?php echo sprintf(str_replace('%d','%s',T_('<b>%s</b> sites are using this notification')), number_format(intval(cache_output('countSites')),0,".", " ")) ?>
+    </p>
+    <p>
+        <?php echo sprintf(str_replace('%d','%s',T_('<b>%s</b> visitors have already updated their browser')), number_format(intval(cache_output('countUpdates')),0,".", " ")) ?>
+    </p>
 </div>
 
 
@@ -47,7 +29,7 @@ function getUpdatesJs() {
     $namesFrom = array("i"=>1,"f"=>2,"o"=>3,"s"=>4,"c"=>5,""=>0);
     $namesTo = array("i"=>1+6,"f"=>2+6,"o"=>3+6,"s"=>4+6,"c"=>5+6,""=>0+6);
 
-    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE fromv<22 AND fromn!="n" AND ton!="n" AND time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC');
+    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE fromn!="n" AND ton!="n" AND time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC');
     $f=0;
     while ($a = mysql_fetch_assoc($q)) {
          if ($namesFrom[$a['fromn']]==0||$namesFrom[$a['fromn']]==0 || $a['num']<1000)
@@ -235,7 +217,7 @@ function browserMigration() {
             "c"=>'Chrome',
             ""=>'?'
     );
-    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE fromv<22 GROUP BY fromn, ton HAVING num>1000 ORDER BY num DESC');
+    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton HAVING num>1000 ORDER BY num DESC');
      while ($a = mysql_fetch_assoc($q)) {
          if ($names[$a['fromn']]==""||$names[$a['fromn']]=="?")
              continue;
