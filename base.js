@@ -1,28 +1,3 @@
-function _get(name,defaultval) {
-    if (document.getElementById("op"+name).checked!=defaultval)
-        return "_"+name+":"+"true,";
-    else
-        return "";
-}
-function code() {
-    var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'},';
-    var code = '<script> \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("newos",true)+_get("mobile",true)+'c:2}; \n\
-function $buo_f(){ \n\
- var e = document.createElement("script"); \n\
- e.src = "//browser-update.org/update.min.js"; \n\
- document.body.appendChild(e);\n\
-};\n\
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}\n\
-catch(e){window.attachEvent("onload", $buo_f)}\n\
-</script>';
-	document.getElementById('f-code').value=code;
-}
-
-function getomat(id) {
-    return document.getElementById('f-'+ id).value;
-}
-
 function getlang() {
 	var n = window.navigator;
 	var l =(n["language"])?n["language"]:n["userLanguage"];
