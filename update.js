@@ -5,24 +5,24 @@
 var $buo = function(op,test) {
 var jsv=19;
 var n = window.navigator,b;
-this.op=op||{};
+window._buorgres=this.op=op||{};
 var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
 var vsakt = {i:12,f:45,o:36,s:9.1,n:20,c:49};
-var vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47};
+var vsdefault = {i:10,f:42,o:30,s:7.1,n:12,c:47,a:535,y:40};
 var vsmin={i:9,f:5,o:12.5,s:6.2,n:12};
 var myvs=op.vs||{};
 var vs =op.vs||vsdefault;
-for (b in vsakt) {
-    if (vs[b]>=vsakt[b])
-        vs[b]=vsakt[b]-0.2;
+for (b in vsdefault) {
     if (!vs[b])
-        vs[b]=vsdefault[b];
-    if (vs[b]<0)
+        vs[b]=vsdefault[b];    
+    if (vsakt[b] && vs[b]>=vsakt[b])
+        vs[b]=vsakt[b]-0.2;
+    if (vsakt[b] && vs[b]<0)
         vs[b]=vsakt[b]-vs[b];
-    if (vs[b]<vsmin[b])
+    if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
 }
 if (op.reminder<0.1 || op.reminder===0)
@@ -44,16 +44,18 @@ this.op.test=test||op.test||(location.hash=="#test-bu")||false;
 
 function getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
-    var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Apple Safari',n:'Netscape Navigator', c:"Chrome", x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|blackberry|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|android|phone|bingbot|google web preview|like firefox|chromeframe|seamonkey|opera mini|min|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|android|mobile|iphone|ipod|ipad|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|YaBrowser|Otter|Midori|qutebrowser/i.test(ua)) 
-        return {n:"x",v:0,t:ua,donotnotify:"smallbrowser"};
-    
+    var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",x:"Other"};
+    if (/bot|googlebot|facebook|slurp|wii|silk|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|phone|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
+        return {n:"x",v:0,t:"unknown",donotnotify:"niche browser"};
+    if (/iphone|ipod|ipad/i.test(ua)) //android|mobile
+        return {n:"x",v:0,t:"mobile browser",donotnotify:"mobile"};
     var pats=[
         ["Trident.*rv:VV","i"],
         ["Trident.VV","io"],
         ["MSIE.VV","i"],
-        ["Edge.(\d+)","i"],
+        ["Edge.VV","i"],
         ["OPR.VV","o"],
+        ["YaBrowser.*Chrome.VV","y"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
         ["Version.VV.{0,10}Safari","s"],
@@ -62,16 +64,23 @@ function getBrowser(ua_str) {
         ["Opera.VV","o"],
         ["Netscape.VV","n"]
     ];
-    for (var i = 0; i < pats.length; i++) {
-        if (ua.match(new RegExp(pats[i][0].replace("VV","(\d+\.?\d+)")), "i")) {
+    for (var i=0; i < pats.length; i++) {
+        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d*)")),"i")) {            
             n=pats[i][1];
             break;
         }        
-    }    
+    }
+    var v=parseFloat(RegExp.$1); 
+    
     if (!n)
         return {n:"x",v:0,t:names[n]};
+ 
+    //http://stackoverflow.com/questions/14403766/how-to-detect-the-stock-android-browser
+    //check for android stock browser
+    var ver = parseInt((/WebKit\/([0-9]+)/.exec(navigator.appVersion) || 0)[1],10) || 2000;
+    if (ua.indexOf('Android') && ver <= 534)
+        return {n:"a",v:0,t:names[n],mob:true};
 
-    var v=parseFloat(RegExp.$1);
     //do not notify ver old systems since their is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) 
         donotnotify="oldOS";
@@ -99,8 +108,8 @@ function getBrowser(ua_str) {
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify};
 }
 
-this.op.browser=getBrowser();
-if (!this.op.test && (!this.op.browser || !this.op.browser.n || this.op.browser.n=="x" || this.op.browser.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || this.op.browser.v>vs[this.op.browser.n]))
+var bb=this.op.browser=getBrowser();
+if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n]))
     return;
 
 
@@ -208,7 +217,7 @@ if (op["text_"+ll])
 var tar="";
 if (this.op.newwindow)
     tar=' target="_blank"';
-this.op.text=busprintf(t,this.op.browser.t,' href="'+this.op.url+'"'+tar);
+this.op.text=busprintf(t,this.op.browser.t,' id="buorgul" href="'+this.op.url+'"'+tar);
 
 var div = document.createElement("div");
 this.op.div = div;
@@ -216,17 +225,17 @@ div.id="buorg";
 div.className="buorg";
 
 var style = "<style>.buorg {position:absolute;position:fixed;z-index:111111;\
-width:100%; top:0px; left:0px; \
-border-bottom:1px solid #A29330; \
-background:#FDF2AB no-repeat 13px center url(//browser-update.org/img/small/"+this.op.browser.n+".png);\
-text-align:left; cursor:pointer; \
-font: 13px #000 Arial,sans-serif;\
-.buorg div { padding:5px 36px 5px 40px; } \
-.buorg a,.buorg a:visited  {color:#E25600; text-decoration: underline;}\
-#buorgclose { position: absolute; right: 6px; top:-2px; height: 20px; width: 12px; font: 18px bold;padding:0; }\\n\
-#burogcc{display:block;position:absolute; top:-99999px;}</style>";
-
-div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose"><button><span id="burogcc">Close</span><span aria-hiden="true">&times;</span></button></div></div>'+style;
+width:100%; top:0px; left:0px;\
+border-bottom:1px solid #A29330;\
+background:#FDF2AB no-repeat 13px center url(//browser-update.org/img/small/"+bb.n+".png);\
+text-align:left; cursor:pointer;\
+font: 13px Arial,sans-serif;color:#000;}\
+.buorg div { padding:5px 36px 5px 40px; }\
+.buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}\
+#buorgclose{position:absolute;right:6px;top:-2px;height:20px;width:12px;font:18px bold;padding:0;}\
+#buorga{display:block;}\
+#buorgcc{display:block;position:absolute; top:-99999px;}</style>";
+div.innerHTML= '<div>' + this.op.text + '<div id="buorgclose"><a id="buorga"><span id="buorgcc">Close</span><span aria-hiden="true">&times;</span></a></div></div>'+style;
 document.body.insertBefore(div,document.body.firstChild);
 
 var me=this;
@@ -240,7 +249,7 @@ div.onclick=function(){
     return false;
 };
 try {
-div.getElementsByTagName("a")[0].onclick = function(e) {
+document.getElementById("buorgul").onclick = function(e) {
     e = e || window.event;
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
@@ -254,7 +263,7 @@ var hm=document.getElementsByTagName("html")[0]||document.body;
 this.op.bodymt = hm.style.marginTop;
 hm.style.marginTop = (div.clientHeight)+"px";
 (function(me) {
-            document.getElementById("buorgclose").onclick = function(e) {
+            document.getElementById("buorga").onclick = function(e) {
                 e = e || window.event;
                 if (e.stopPropagation) e.stopPropagation();
                 else e.cancelBubble = true;
