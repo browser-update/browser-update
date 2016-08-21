@@ -14,6 +14,7 @@ body,html {
 	margin: auto;
 	text-align: left;
 	position: relative;
+        clear: both;
 }
 
 @media only screen and (max-width: 1130px){
@@ -28,8 +29,17 @@ body,html {
 	width: auto;
 	margin-left: 30px;
         margin-right: 150px;
-        min-width: 620px;
+        min-width: 620px;        
+        padding-top: 20px;
      }
+    body .men {
+        position:relative;
+        top: 10px;
+        right: auto;
+        margin: auto;
+        width: auto;
+    }
+         
  }
 
 
@@ -65,18 +75,20 @@ body,html {
         display: block;
         width: auto;
         margin: 0;
+        text-align:center;
+    }
+    body .logos tbody {
+        display: inline-block;
     }
     body .logos td {
         width: 48%;
         display: inline-block;
         padding: 0;
     }    
-    body .men {
-        position:relative;
-        top: 10px;
-        right: auto;
-        margin: auto;
+
+    body .numbs p {
         width: auto;
+        display: block;
     }
 }
 
@@ -122,24 +134,6 @@ h2.top  {
 h2  {
 	margin-top: 1.8em;
 	font-family:'Trebuchet MS','Lucida Grande',Verdana,Arial,Sans-Serif;
-}
-
-.right {
-	float: right;
-	width: 260px;
-	/*border: 1px solid #eee;*/
-	padding: .2em .4em;
-	padding-left: 1em;
-	margin-left: 1em;
-	background-color: #FFF3DF;
-    border: 1px solid  rgb(228, 86, 0);
-	overflow: hidden;
-	/*background: rgb(208, 227, 255);*/
-}
-
-.right h2 {
-	margin: 0;
-	font-size: 18px;
 }
 
 .left {
@@ -219,46 +213,6 @@ h2  {
 	background: transparent url('./img/comfort.png') no-repeat 0 0;
 }
 
-ul.browsers {
-	margin: 0;
-	padding: 0;
-	margin-top: 1em;
-}
-ul.browsers li {
-	list-style-type: none;
-	padding: .2em;
-	padding-left: 35px;
-	margin: 0;
-	margin-bottom: .5em;
-	background-repeat: no-repeat;
-	background-position: left 3px;
-}
-
-ul.browsers li>a{
-	text-align: right;
-	display: block;
-}
-
-.ff {
-	background-image: url('img/medium/firefox.png');
-}
-
-.ie {
-	background-image: url('img/medium/ie8.png');
-}
-
-.op {
-	background-image: url('img/medium/opera.png');
-}
-
-.ch {
-	background-image: url('img/medium/chrome.png');
-}
-
-.sa {
-	background-image: url('img/medium/safari.png');
-}
-
 .notavailable {
 	zoom: 1;
 	opacity: .7; /* Standard: FF gt 1.5, Opera, Safari */
@@ -274,11 +228,6 @@ ul.browsers li>a{
 }
 
 
-#bookmark {
-	position: absolute;
-	top: 20px;
-	right: 0;
-}
 
 .numbs {margin: -24px 0;}
 .numbs p {
@@ -303,12 +252,12 @@ ul.browsers li>a{
 }
 
 .generate #browserversionchooser {
-	margin: .4em 1em;
+	margin: 0;
+        padding-left: 25px;
 }
-.generate #browserversionchooser.disabled  {
-	opacity: .4;
+.generate #browserversionchooser label {
+    width: 55px;
 }
-
 .generate label {
 	display: inline-block;
 	max-width: 90%;
@@ -329,26 +278,7 @@ ul.browsers li>a{
 	position:relative;
 }
 
-.generate #browserversionchooser label {
-	padding-left: 2em;
-}
-.popupinfo {
-	position: relative;
-}
-.popupinfo .popup {
-	display: none;
-}
-.popupinfo:hover .popup {
-	display: block;
-	position: absolute;
-	max-width: 50em;
-	left: 0;
-	bottom: 1em;
-	z-index: 100;
-	background-color: #fff;
-	border: 1px solid;
-	padding: .2em;
-}
+
 select, textarea, input {
 	background-color:#FAFAFF;
 	border:1px solid #ddd;
@@ -378,20 +308,6 @@ ol.steps div.example {
 	color:#000;
 	font-size: 12px;
 }
-
-.infoplus {
-	cursor: help;
-	text-decoration: none;
-	border-bottom: 1px dotted #777;
-}
-
-.workingonit {
-	vertical-align: top;
-	color: #68BFEF;
-	font-size: .7em;
-	font-weight: normal;
-}
-
 
 /*Table*/
 table {
@@ -428,35 +344,6 @@ th
 	padding: 0.2em;
 	padding-right: 1em;
 	vertical-align: top;
-}
-
-table tr:hover td {
-	/*background-color: #f5f5f5;*/
-}
-
-
-.statleft {
-	float: left;
-	padding-right: 15em;
-	margin: 0;
-}
-
-.developer {
-    width: 46%;
-    border: 1px solid #ccc;
-    margin-bottom: .5em;
-    margin-left: 1%;
-    padding: 1%;
-    float: left;
-    height: 7em;
-}
-
-.developer h4 {
-   margin: .3em 0;
-}
-
-.developer p {
-   margin: .3em 0;
 }
 
 pre {
@@ -580,11 +467,12 @@ body, p {
 
 .men div {
     float: left;
-margin-left: 10px;
-background: none repeat scroll 0% 0% #ddd;
-padding: 4px 6px 2px;
-border-radius: 5px;
-color: #777;
+    margin-left: 10px;
+    background: none repeat scroll 0% 0% #ddd;
+    padding: 4px 6px 2px;
+    border-radius: 5px;
+    color: #777;
+    margin-bottom: 5px;
 }
 
 
