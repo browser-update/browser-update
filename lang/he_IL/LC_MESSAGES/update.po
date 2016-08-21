@@ -1,588 +1,128 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-12 09:07+0100\n"
-"Last-Translator: Shahar Or <mightyiampresence@gmail.com>\n"
-"Language-Team: Shahar Or <mightyiampresence@gmail.com>\n"
+"POT-Creation-Date: 2016-07-03 17:31+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Hebrew\n"
+"Language: he_IL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: he\n"
-"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: he\n"
+"X-Crowdin-File: update.pot\n"
 
-#: header.php:5
+#: header.php:5 header.php:34
 msgid "Update your Browser"
 msgstr "עדכן את הדפדפן שלך"
 
-#: header.php:28
-msgid "An initiative by web designers to inform users about browser-updates"
+#: header.php:29
+msgid "An initiative by websites to inform users to update their web browser"
 msgstr "יוזמה של מעצבי רשת להתריע למשתמשים אודות עדכוני דפדפן"
 
-#: header.php:30
-msgid "The Project"
+#: header.php:31 update-browser.php:192
+msgid "About the Project"
 msgstr "הפרויקט"
 
-#: header.php:33
-msgid "Update Browser"
-msgstr "עדכן דפדפן"
-
-#: header.php:34
+#: header.php:35
 msgid "Statistics"
 msgstr "סטטיסטיקות"
 
-#: header.php:35
+#: header.php:36
 msgid "Blog"
 msgstr "בלוג"
 
-#: header.php:74
+#: header.php:88
 msgid "Contact"
 msgstr "צור קשר"
 
-#: update-browser.php:65
-msgid ""
-"Your browser is out-of-date. Please download one of these up-to-date, free "
-"and excellent browsers:"
+#: update-browser.php:73
+msgid "Your browser is up-to-date."
 msgstr ""
-"הדפדפן שלך מיושן. אנא הורד את אחד הדפדפנים העדכניים, חינמיים ומצויינים הללו:"
 
-#: update-browser.php:86 update-browser.php:100
+#: update-browser.php:83
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "הדפדפן שלך מיושן. אנא הורד את אחד הדפדפנים העדכניים, חינמיים ומצויינים הללו:"
+
+#: update-browser.php:104 update-browser.php:118
 msgid "Most recent version not available for your system."
 msgstr "לא זמין למערכת שלך."
 
-#: update-browser.php:86 update-browser.php:100
+#: update-browser.php:104 update-browser.php:118
 msgid "Please choose another browser."
 msgstr "אנא בחר דפדפן אחר."
 
-#: update-browser.php:114
+#: update-browser.php:146
 #, php-format
-msgid ""
-"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
-"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
-"בשביל חוויה יותר <a href=\"%s\">מאובטחת</a>,    <a href=\"%s\">מהירה</a>,"
-"    <a href=\"%s\">נוחה</a> ו<a href=\"%s\">כיפית</a>."
+msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr "בשביל חוויה יותר <a href=\"%s\">מאובטחת</a>,    <a href=\"%s\">מהירה</a>,    <a href=\"%s\">נוחה</a> ו<a href=\"%s\">כיפית</a>."
 
-#: update-browser.php:122 update-browser.php:141
-msgid "Advertisement"
-msgstr "פרסומת"
-
-#: update-browser.php:162
+#: update-browser.php:156
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
-msgstr ""
-"הדפדפן שלך (%s) <b>אינו מעודכן</b>. יש לו <b>בעיות אבטחה ידועות</b> ועשוי "
-"<b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את"
-" הדפדפן שלך</a>"
+msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
+msgstr "הדפדפן שלך (%s) <b>אינו מעודכן</b>. יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>"
 
-#: update-browser.php:173
+#: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
 msgstr "מדוע אני זקוק לדפדפן עדכני?"
 
-#: update-browser.php:177
+#: update-browser.php:170
 msgid "Security"
 msgstr "אבטחה"
 
-#: update-browser.php:178
-msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing "
-"and other threats. They also fix security holes in your current browser!"
-msgstr ""
-"דפדפנים חדישים מגנים עליך טוב יותר מפני תרמיות, וירוסים, סוסים טרויאנים "
-"פישינג ואיומים אחרים. הם גם מתקנים חורי אבטחה בדפדפן הנוכחי שלך!"
+#: update-browser.php:171
+msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
+msgstr "דפדפנים חדישים מגנים עליך טוב יותר מפני תרמיות, וירוסים, סוסים טרויאנים פישינג ואיומים אחרים. הם גם מתקנים חורי אבטחה בדפדפן הנוכחי שלך!"
 
-#: update-browser.php:181
+#: update-browser.php:174
 msgid "Speed"
 msgstr "מהירות"
 
-#: update-browser.php:182
+#: update-browser.php:175
 msgid "Every new browser generation improves speed"
 msgstr "כל דור דפדפנים חדש מציג עמו שיפורי מהירות"
 
-#: update-browser.php:185
-msgid "Compatibility"
+#: update-browser.php:178
+msgid "Compatibility & new Technology"
 msgstr "תאימות"
 
-#: update-browser.php:186
-msgid "Websites using new technology will be displayed more correctly"
+#: update-browser.php:179
+msgid "You can view sites that are using the latest technology"
 msgstr "אתרים אשר מציגים טכנולוגיות חדישות יוצגו באופן תקין יותר."
 
-#: update-browser.php:189
-msgid "Comfort &amp; better experience"
+#: update-browser.php:182
+msgid "Comfort & better experience"
 msgstr "נוחות וחוויה טובה יותר."
 
-#: update-browser.php:190
-msgid ""
-"With new features, extensions and better customisability, you will have a "
-"more comfortable web-experience"
-msgstr ""
-"עם פיצ'רים, תוספים ויכולת התאמה אישית טובה יותר, תהיה לך חווית גלישה נוחה "
-"יותר"
+#: update-browser.php:183
+msgid "Have a more comfortable experience with new features, extensions and better customisability."
+msgstr "עם פיצ'רים, תוספים ויכולת התאמה אישית טובה יותר, תהיה לך חווית גלישה נוחה יותר"
 
-#: update-browser.php:198
+#: update-browser.php:189
 msgid "Why this website?"
 msgstr "לשם מה אתר זה?"
 
-#: update-browser.php:200
-msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who "
-"want to bring the web further and help their visitors."
-msgstr ""
-"אתר זה הוא יוזמה של מעצבי ומתחזקי אתרים ובלוגרים אשר שואפים לדחוף את הרשת "
-"קדימה ולעזור למבקרים האתרים שלהם."
+#: update-browser.php:191
+msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
+msgstr "אתר זה הוא יוזמה של מעצבי ומתחזקי אתרים ובלוגרים אשר שואפים לדחוף את הרשת קדימה ולעזור למבקרים האתרים שלהם."
 
-#: update-browser.php:203
-msgid ""
-"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement of the web</b> because of their limited features and many "
-"<b>bugs</b>."
-msgstr ""
-"דפדפנים מיושנים הינם <b>סיכון אבטחה</b> והם <b>חוסמים את ההתפתחות של "
-"הרשת</b> בגלל הפיצ'רים המוגבלים שלהם <b>ובאגים רבים</b>."
-
-#: update-browser.php:206
-msgid "More information about the Project Browser-Update.org"
-msgstr "עוד אודות הפרויקט Browser-Update.org"
-
-#: update-browser.php:211
-msgid "\"I'm not able to update my browser\""
+#: update-browser.php:197
+msgid "I can't update my browser"
 msgstr "\"אני לא מצליח לעדכן את הדפדפן שלי\""
 
-#: update-browser.php:212
-msgid ""
-"If you can't change your browser because of compatibility issues, think "
-"about installing a second browser for browsing and keep the old one for the "
-"compatibility."
+#: update-browser.php:198
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
+msgstr "אם אינך יכול לעבור לדפדפן חדיש בגלל בעיות תאימות, שקול להתקין דפדפן נוסף עבור גלישה ושמור את הישן לאתרים אשר עבורם אתה זקוק לו."
+
+#: update-browser.php:199
+msgid "Ask your admin to update your browser if you cannot install updates yourself."
+msgstr "אם אתה על מחשב אשר מתוחזק על ידי מנהל מערכות, ולכן אין ביכולתך לעדכן דפדפן, אנא פנה אל מנהל המערכת בעניין."
+
+#: update-browser.php:209
+msgid "This website uses cookies"
 msgstr ""
-"אם אינך יכול לעבור לדפדפן חדיש בגלל בעיות תאימות, שקול להתקין דפדפן נוסף "
-"עבור גלישה ושמור את הישן לאתרים אשר עבורם אתה זקוק לו."
 
-#: update-browser.php:213
-msgid ""
-"If you are on a computer that is maintained by an admin and you cannot "
-"install a new browser, ask your admin about it."
-msgstr ""
-"אם אתה על מחשב אשר מתוחזק על ידי מנהל מערכות, ולכן אין ביכולתך לעדכן דפדפן, "
-"אנא פנה אל מנהל המערכת בעניין."
-
-#~ msgid "Customize and test"
-#~ msgstr "התאם אישית ובדוק"
-
-#~ msgid "Test the script"
-#~ msgstr "בדוק את ה- script"
-
-#~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
-#~ " bar will always show up."
-#~ msgstr ""
-#~ "אם תפתח את הדפדפן שלך עם <code>#test-bu</code> בסוף הכתובת, ה- bar תמיד "
-#~ "יופיע."
-
-#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-#~ msgstr "דוגמה: <code>http://browser-update.org/#test-bu</code>."
-
-#~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new browser"
-#~ " tab."
-#~ msgstr "וודא שהדף תמיד נטען מחדש על ידי פתיחת הכתובת בלשונית דפדפן חדשה."
-
-#~ msgid "Options"
-#~ msgstr "אפשרויות"
-
-#~ msgid "The following options can be passed to the script:"
-#~ msgstr "ניתן למסור את האפשרויות הבאות ל- script:"
-
-#~ msgid "browser versions to notify"
-#~ msgstr "גרסאות דפדפן עליהן להתריע"
-
-#~ msgid "atfer how many hours should the message reappear"
-#~ msgstr "לאחר כמה שעות ההודעה תופיע מחדש"
-
-#~ msgid "0 = show all the time"
-#~ msgstr "0 = הצג כל הזמן"
-
-#~ msgid "callback function after the bar has appeared"
-#~ msgstr "פונקצית callback לאחר שה- bar הופיע"
-
-#~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "קבע את השפה להודעה, למשל \"en\""
-
-#~ msgid "overrides the default detection"
-#~ msgstr "דורס את זיהוי ברירת המחדל"
-
-#~ msgid "true = always show the bar (for testing)"
-#~ msgstr "true = תמיד הצג את ה- bar (בשביל לבדוק)"
-
-#~ msgid "custom notification html text"
-#~ msgstr "טקסט התרעה html מותאם אישית"
-
-#~ msgid "open link in new window/tab"
-#~ msgstr "פתח קישור בחלון/לשונית חדשה"
-
-#~ msgid "Edit the CSS"
-#~ msgstr "ערוך את ה- CSS"
-
-#~ msgid "The following CSS rules are applied by the script. "
-#~ msgstr "חוקי ה- CSS הבאים מוספים ל- script"
-
-#~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some more "
-#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-#~ msgstr ""
-#~ "ניתן לדרוס אותם ב- CSS שלך. על מנת לעשות כן עליך להוסיף חוקים ל- css-rules, "
-#~ "לדוגמה <code>body .buorg {font-size:20px}</code>"
-
-#~ msgid "Browser-Update.org"
-#~ msgstr "Browser-Update.org"
-
-#~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "התרע למבקריך אודות עדכוני דפדפן"
-
-#~ msgid "Start"
-#~ msgstr "התחל"
-
-#~ msgid "Help"
-#~ msgstr "עזרה"
-
-#~ msgid "Supporters"
-#~ msgstr "תומכים"
-
-#~ msgid ""
-#~ "This service is an  opportunity to inform your visitors  unobtrusively to "
-#~ "switch to a newer browser."
-#~ msgstr ""
-#~ "השירות הזה הינו הזדמנות להתריע למבקרים שלך באופן בלתי מפריע לעבור לדפדפן "
-#~ "עדכני יותר."
-
-#~ msgid ""
-#~ "Many internet users are still using very old, out-dated browsers – most of "
-#~ "them for no actual reason. Switching to an newer browser is better for them "
-#~ "and for you as a webdesigner."
-#~ msgstr ""
-#~ "משתמשי רשת רבים עודם משתמשים בדפדפים מאוד ישנים - רבים מהם ללא סיבה מוצדקת. "
-#~ "מעבר לדפדפן עדכני יותר טטיב עמם ואיתך כמעצב רשת."
-
-#~ msgid "How it works"
-#~ msgstr "כיצד זה עובד"
-
-#~ msgid ""
-#~ "Include our small javascript <a href=\"%s\">notification</a> on your website"
-#~ msgstr "כלול את ה- javascript הקטן שלנו <a href=\"%s\">notification</a> באתר שלך"
-
-#~ msgid ""
-#~ "Visitors with out-dated browser will be informed by a little, undisturbing "
-#~ "bar, that their browser is not up-to-date and it is recommended to update."
-#~ msgstr ""
-#~ "משתמשים עם דפדפן בלתי מעודכן יעודכנו על-ידי התרעה קטנה ובלתי מפריעה, שהדפדפן"
-#~ " שלהם אינו מעודכן ומומלץ שיעדכן אותו."
-
-#~ msgid "Test the notification bar!"
-#~ msgstr "בדוק את bar ההתרעה!"
-
-#~ msgid ""
-#~ "By clicking the bar, them will get to <a href=\"%s\">an info page with "
-#~ "arguments why to change/update and some browser choices</a>."
-#~ msgstr ""
-#~ "על ידי לחיצה ה- bar, הוא יגיע ל<a href=\"%s\">דף מידע עם טענות מדוע "
-#~ "להחליף/לעדכן דפדפן ומספר הצעות לדפדפנים</a>."
-
-#~ msgid ""
-#~ "If the visitor ignores the advice, it won't appear again for some time."
-#~ msgstr "אם מבקר יתעלם מהעצה, היא לא תופיע שוב במשך זמן מה."
-
-#~ msgid "Advantages and features"
-#~ msgstr "יתרונות ופיצ'רים"
-
-#~ msgid "Subtle"
-#~ msgstr "עדין"
-
-#~ msgid ""
-#~ "The user will be notified only once, and won't be bothered any more. The "
-#~ "notification bar is very small and won't affect the browsing experience "
-#~ "negatively."
-#~ msgstr ""
-#~ "המשתמש יותרע רק פעם אחת ולא יוטרד שוב. bar ההתרעה מאוד קטן ולא ישפיע על "
-#~ "חווית הגלישה באופן שלילי."
-
-#~ msgid "Informative"
-#~ msgstr "אינפורמטיבי"
-
-#~ msgid ""
-#~ "Tell the users that they are using an out-dated browser and that your "
-#~ "website looks even better with a newer one."
-#~ msgstr ""
-#~ "התרע למשתמשך שהם משתמשים בדפדפן לא מעודכן ושהאתר שלך נראה אפילו טוב יותר עם "
-#~ "דפדפן מעודכן."
-
-#~ msgid "Idealistic"
-#~ msgstr "אידאליסטי"
-
-#~ msgid "Help evolve the web!"
-#~ msgstr "עזור להמשך התפתחות הרשת!"
-
-#~ msgid "Support the standards-based web!"
-#~ msgstr "תמוך ברשת מבוססת הסטנדרטים!"
-
-#~ msgid "Support Open Source software projects!"
-#~ msgstr "תמוך בפרוייקטים בקוד פתוח!"
-
-#~ msgid "Help your visitors!"
-#~ msgstr "עזור למבקרי האתר שלך!"
-
-#~ msgid "Help increase security awareness!"
-#~ msgstr "עודד מודעות לאבטחה!"
-
-#~ msgid "Support your favorite webbrowser!"
-#~ msgstr "תמוך בדפדפן האהוב עליך!"
-
-#~ msgid "Low maintenance and up-to-date"
-#~ msgstr "תחזוקה נמוכה ומעודכן"
-
-#~ msgid ""
-#~ "If there come more browser versions which won't be supported by the vendor "
-#~ "in the future, exhibit security gaps or have been very old for a long time "
-#~ "we are going to add them to our list automatically."
-#~ msgstr ""
-#~ "כאשר גרסאות דפדפן נוספות יצאו מתמיכת היצרן שלהן בעתיד, יתגלו בהן בעיות אבטחה"
-#~ " או יהיו ישנות לאורך זמן רב, נוסיף אותן לרשימה שלנו אוטומטית."
-
-#~ msgid "Customizable"
-#~ msgstr "ניתן להתאמה אישית"
-
-#~ msgid ""
-#~ "You can customize the browsers and versions to notify.<br/> In future "
-#~ "releases you can also customize the text that should be shown, the frequency"
-#~ " of the bar to appear and many other things."
-#~ msgstr ""
-#~ "ניתן להתאים אישית את הדפדפנים והגרסאות להתריע.<br/> בגרסאות עתידיות תוכל "
-#~ "להתאים אישית את הטקסט אשר יופיע, את התדירות שבה ה- bar מופיע ודברים רבים "
-#~ "אחרים."
-
-#~ msgid "Localized"
-#~ msgstr "Localized"
-
-#~ msgid "The message is automatically displayed in the user's language."
-#~ msgstr "ההתרעה מוצגת אוטומטית בשפה של המשתמש."
-
-#~ msgid "<span class=\"workingonit\">work in progress</span>"
-#~ msgstr "<span class=\"workingonit\">עובדים על זה</span>"
-
-#~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors are"
-#~ " using and how much users got proselyted: How many users updated or changed "
-#~ "their browser through your advice."
-#~ msgstr ""
-#~ "מקבלים <a href=\"%s\">סטטיסטיקות</a> באילו דפדפנים משתמשים המבקרים שלך וכמה "
-#~ "מהמשתמשים שלך עדכנו את הדפדפן שלהם באמצעות עצתך."
-
-#~ msgid "Install notification on your site"
-#~ msgstr "התקן התרעה באתרך"
-
-#~ msgid ""
-#~ "Here you can get the code to include in your website. Just include it "
-#~ "anywhere in the source of your page."
-#~ msgstr ""
-#~ "כאן תקבל את הקוד להוסיף לאתרך. פשוט כלול אותו במקום כלשהו בקוד המקור של הדף "
-#~ "שלך."
-
-#~ msgid "You may also use third-party plugins for: "
-#~ msgstr "ניתן גם להשתמש ב- plugins צד שלישי כדי:"
-
-#~ msgid ""
-#~ "You can <a href=\"%s\">customize</a> the style of the message, the text and "
-#~ "other options."
-#~ msgstr ""
-#~ "ניתן <a href=\"%s\">להתאים אישית</a> את הסגנון של ההתרעה, הטקסט ואפשרויות "
-#~ "אחרות."
-
-#~ msgid "Following browsers will be notified:"
-#~ msgstr "תינתן התרעה עבור הדפדפנים הבאים:"
-
-#~ msgid ""
-#~ "Google Chrome will automatically itself and is therefor always up to date"
-#~ msgstr "Google Chrome יעדכן את עצמו באופן אוטומטי ולכן תמיד מעודכן."
-
-#~ msgid ""
-#~ "<b>Notify recommended set of browsers and adjust it automatically over "
-#~ "time:</b>If a browser is no longer supported by the vendor or has security "
-#~ "vulnerabilities, it will be added to the set."
-#~ msgstr ""
-#~ "<b>התרע לגבי סט מומלץ של דפדפנים והתאם אותו באופן אוטומטי עם הזמן:</b> אם "
-#~ "דפדפן אינו נתמך עוד על ידי היצרן שלו או שיש לו בעיות אבטחה, הוא יתווסף "
-#~ "לרשימה."
-
-#~ msgid "Your Code"
-#~ msgstr "הקוד שלך"
-
-#~ msgid "Why you should tell users to update"
-#~ msgstr "מדוע כדאי לך להתריע למשתמשים לעדכן"
-
-#~ msgid "Reduced development costs and time"
-#~ msgstr "זמן ועלות פיתוח מופחתים"
-
-#~ msgid ""
-#~ "Optimizing websites for old browsers is time consuming and thus expensive."
-#~ msgstr "התאמת אתרים לדפדפנים ישנים דורשת זמן רב ולכן עולה ביוקר."
-
-#~ msgid "Webdesign technologies and features"
-#~ msgstr "טכנולוגיות ופיצ'רים של עיצוב רשת"
-
-#~ msgid ""
-#~ "There are all these great new web development standards and they are "
-#~ "supported by modern browsers... but you may not use them."
-#~ msgstr ""
-#~ "ישנם את כל הפיתוחים, הטכנולוגיות והסטנדרטים האדירים האלו והם נתמכים על-ידי "
-#~ "דפדפנים מודרניים... אך לא תוכל להשתמש בהם."
-
-#~ msgid ""
-#~ "Newer browsers let you use more features and new technologies (CSS3, SVG, "
-#~ "HTML5, RSS, CSS Generated Content, flexible Layouts) on your website, "
-#~ "resulting in a better browsing experience for your users."
-#~ msgstr ""
-#~ "דפדפנים חדישים מאפשרים להתשמש ביותר פיצ'רים וטכנולוגיות חדשות (CSS3, SVG, "
-#~ "HTML5, RSS, CSS Generated Content, flexible Layouts) באתר שלך, וכך ליצור "
-#~ "חווית גלישה טובה יותר למשתמשים שלך."
-
-#~ msgid "Security and benefits for the user"
-#~ msgstr "אבטחה ותועלות למשתמש"
-
-#~ msgid ""
-#~ "Numerous benefits: security, speed, features, ... Look at the <a "
-#~ "href=\"%s\">update page</a>. The security-threats of outdates browsers are "
-#~ "listed in this <a href=\"%s\">paper</a>."
-#~ msgstr ""
-#~ "תועלות רבות: אבטחה, מהירות, פיצ'רים, ... ראה את <a href=\"%s\">דף "
-#~ "העדכונים</a>. איומי האבטחה של דפדפנים מיושנים רשומים <a href=\"%s\">בדף "
-#~ "הזה</a>."
-
-#~ msgid "The web has to evolve..."
-#~ msgstr "הרשת חייבת להתפתח..."
-
-#~ msgid "But that's only possible if the browsers also evolve."
-#~ msgstr "אך זה ייתכן רק אם הדפדפנים יתפתחו."
-
-#~ msgid ""
-#~ "The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
-#~ " something new in the history of the web. If we take no action now, we will "
-#~ "have to code websites like in 2001 even if it is 2011."
-#~ msgstr ""
-#~ "נתח השוק החזק של דפדפן בן 8 שנים (Internet Explorer 6) הינה דבר חדש "
-#~ "בהיסטוריה של הרשת. אם לא נפעל כעת, יהיה עלינו לפתח אתרים כמו ב- 2001 אפילו "
-#~ "אם כעת 2011."
-
-#~ msgid "Users don't oppose updating..."
-#~ msgstr "משתמשים לא מתנגדים לשדרוגים."
-
-#~ msgid ""
-#~ "... they often just do not appreciate the need to update or the existence of"
-#~ " the \"webbrowser\" as a software at all."
-#~ msgstr ""
-#~ "... הם לרוב פשוט לא מעריכים את הצורך לשדרג או את הקיום של ה- \"דפדפן\" בתור "
-#~ "תכנה כלל."
-
-#~ msgid "Help this project"
-#~ msgstr "עזור לפרויקט זה"
-
-#~ msgid "Participate!"
-#~ msgstr "השתתף!"
-
-#~ msgid ""
-#~ "Include the notification code in your page to inform users about browser "
-#~ "updates."
-#~ msgstr "הוסף את קוד ההתרעה לדף שלך כדי להתריע למשתמשים אודות עדכוני דפדפנים."
-
-#~ msgid "Spread the word!"
-#~ msgstr "הפץ את השמועה!"
-
-#~ msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-#~ msgstr "ספר לאחרים אודות היוזמה הזו! בבלוג שלך, בדף הרשת, ..."
-
-#~ msgid "Translate this page"
-#~ msgstr "תרגם דף זה"
-
-#~ msgid "Translate this page into your language."
-#~ msgstr "תרגם דף זה לשפתך."
-
-#~ msgid ""
-#~ "<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-#~ "script."
-#~ msgstr ""
-#~ "<strong class=\"number\">%d</strong> אתרים משתמשים ב- Browser-Update.org "
-#~ "script."
-
-#~ msgid "Browser updates"
-#~ msgstr "עדכוני דפדפן"
-
-#~ msgid ""
-#~ "<strong class=\"number\">%d</strong> visitors have already upgraded their "
-#~ "browser."
-#~ msgstr "<strong class=\"number\">%d</strong> מבקרים כבר עדכנו את הדפדפן שלהם."
-
-#~ msgid "From"
-#~ msgstr "מאת"
-
-#~ msgid "To"
-#~ msgstr "אל"
-
-#~ msgid "Amount"
-#~ msgstr "כמות"
-
-#~ msgid "Free webbrowsers"
-#~ msgstr "דפדפנים חינמיים"
-
-#~ msgid ""
-#~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr "דפדפנים אלו הם הגרסאות החדישות ביותר של הדפדפנים הפופולריים ביותר."
-
-#~ msgid "Just choose a browser to download from the original vendor's website:"
-#~ msgstr "פשוט בחר דפדפן כדי להורידו מאתר היצרן:"
-
-#~ msgid "Widely-used open-source browser, highly extendable and customizable"
-#~ msgstr "דפדפן קוד-פתוח פופולרי, ניתן להתאמה אישית מאוד"
-
-#~ msgid "Download"
-#~ msgstr "הורד"
-
-#~ msgid "Browser with many features"
-#~ msgstr "דפדפן עם הרבה פיצ'רים"
-
-#~ msgid "Google's browser with compact interface."
-#~ msgstr "הדפדפן של Google עם ממשק משתמש מינימליסטי."
-
-#~ msgid "Automatically always up to date!"
-#~ msgstr "תמיד מעודכן אוטומטית!"
-
-#~ msgid "Apple's fast browser"
-#~ msgstr "הדפדפן המהיר של Apple"
-
-#~ msgid "Only for Windows Vista or 7."
-#~ msgstr "רק ל- Windows Vista או 7."
-
-#~ msgid "Windows built-in browser"
-#~ msgstr "הדפדפן האינטגראלי של Windows"
-
-#~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr "לכל הדפדפנים את אותם הפיצ'רים הבסיסיים וממשק משתמש קל לשימוש."
-
-#~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws and"
-#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
-#~ "the features of some websites."
-#~ msgstr ""
-#~ "הדפדפן שאתה משתמש בו מיושן. יש לו <b>בעיות אבטחה ידועות וחסרונות וסט פיצ'רים"
-#~ " מוגבל</b>. באמצעותו לא תחווה את הרשת על מלוא אפשרויותיה."
-
-#~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "עדכון לדפדפן חדיש יותר יכולה לתת לך יתרונות רבים:"
-
-#~ msgid "Updating is easy, takes just a few minutes and is totally free."
-#~ msgstr "העדכון קל, לוקח רק כמה דקות והוא לגמרי חינם."

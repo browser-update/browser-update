@@ -1,22 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2016-04-04 19:34+0100\n"
-"Last-Translator: Юлій В. Чирков (Juliy V. Chirkov) <juliyvchirkov@gmail.com>\n"
-"Language-Team: VIVAsg <info@vivasg.com>\n"
+"POT-Creation-Date: 2016-07-03 15:03+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: customize.pot\n"
 
 #: customize.php:11
 msgid "Customize and test"
@@ -27,89 +25,83 @@ msgid "Test the script"
 msgstr "Тестування скрипта"
 
 #: customize.php:17
-msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up."
-msgstr "Для тестування додавайте до посилань на Вашому сайті <code>#test-bu</code>, тоді панель відображатиметься щосторінки."
+msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab."
+msgstr ""
 
-#: customize.php:18
-msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-msgstr "Наприклад: <code>http://browser-update.org/#test-bu</code>."
-
-#: customize.php:19
-msgid "Make sure the page is properly reloaded by opening the url in an new browser tab."
-msgstr "Відкривайте посилання у новій вкладці браузера задня впевненості, що сторінку належним чином перезавантажено."
-
-#: customize.php:22
+#: customize.php:20
 msgid "Options"
 msgstr "Параметри"
 
-#: customize.php:25
+#: customize.php:23
 msgid "The following options can be passed to the script:"
 msgstr "Скрипту може бути передано низку параметрів, які наведено та розтлумачено нижче:"
 
+#: customize.php:28
+msgid "specify minimum browser versions to notify"
+msgstr ""
+
+#: customize.php:29
+msgid "after how many hours should the message reappear"
+msgstr ""
+
 #: customize.php:30
-msgid "browser versions to notify"
-msgstr "перелік застарілих версій браузерів для перевірки"
-
-#: customize.php:31
-msgid "atfer how many hours should the message reappear"
-msgstr "термін у годинах, що має сплити між попередженнями"
-
-#: customize.php:32
 msgid "0 = show all the time"
 msgstr "якщо вказано 0, попередження з’являтиметься щосторінки"
 
-#: customize.php:34
+#: customize.php:31
+msgid "if the user explicitly closes message it reappears after x hours"
+msgstr ""
+
+#: customize.php:32
 msgid "callback function after the bar has appeared"
 msgstr "колбек-функція, яку буде активовано щойно з’явиться панель попередження"
 
-#: customize.php:34
+#: customize.php:33
 msgid "callback function if bar was clicked"
 msgstr "колбек-функція, яку буде активовано за появи кліку в межах панелі попередження"
 
-#: customize.php:38
+#: customize.php:36
 msgid "set a language for the message, e.g. \"en\""
 msgstr "налаштування мови повідомлення, наприклад «ua»"
 
-#: customize.php:39
+#: customize.php:37
 msgid "overrides the default detection"
 msgstr "якщо вказано цей параметр, мову відвідувача, що визначається скриптом автоматично, буде ігноровано"
 
-#: customize.php:40
+#: customize.php:38
 msgid "true = always show the bar (for testing)"
 msgstr "true = панель попередження завжди присутня (задля тестування)"
 
-#: customize.php:41
+#: customize.php:39
 msgid "custom notification html text"
 msgstr "текст Вашого власного попередження (можна задіяти html-теги)"
 
-#: customize.php:42
-msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please <a href=%s</a>update</a>\""
-msgstr "за бажанням додайте до тексту власного попередження до 2-х макропозначок «%s», одну з яких буде замінено назвою та версією застарілого браузера, а іншу посиланням на сторінку з розтлумаченням необхідності оновлення. Наприклад: «На жаль, Ваш браузер (%s) є застарілим. Будь ласка, <a href=%s>оновіть його</a>.»"
+#: customize.php:40
+#, php-format
+msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;\""
+msgstr ""
 
-#: customize.php:43
+#: customize.php:41
 msgid "custom notification text for language \"xx\""
 msgstr "текст Вашого власного попередження мовою «хх»"
 
-#: customize.php:44
+#: customize.php:42
 msgid "e.g. text_de for german and text_it for italian"
 msgstr "на кшталт українською — lang_uk, польською — lang_pl тощо"
 
-#: customize.php:45
+#: customize.php:43
 msgid "open link in new window/tab"
 msgstr "відкривати посилання у окремому вікні чи вкладці"
 
-#: customize.php:46
+#: customize.php:44
 msgid "the url to go to after clicking the notification"
 msgstr "посилання для переходу за кліком на панелі попередження"
 
-#: customize.php:65
-msgid "Edit the CSS"
-msgstr "Редагування CSS"
+#: customize.php:47
+msgid "Change the style"
+msgstr ""
 
-#: customize.php:68
-msgid "The following CSS rules are applied by the script."
-msgstr "У скрипті застосовано стилі CSS, надані нижче."
+#: customize.php:50
+msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
+msgstr ""
 
-#: customize.php:69
-msgid "You can overwrite them in your own CSS. To do so you need to add some more specifity to the css-rules: e.g. <code>body .buorg {font-size: 20px}</code>"
-msgstr "Їх можна перепризначити за допомогою власних; але для цього Ваші стилі у порівнянні з наведеними базовими мають бути більш вузькоспрямованими, наприклад: <code>body .buorg {font-size: 20px}</code>"

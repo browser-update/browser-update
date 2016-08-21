@@ -1,21 +1,20 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 15:03+0200\n"
-"PO-Revision-Date: 2016-07-03 10:37-0400\n"
+"POT-Creation-Date: 2016-07-03 17:31+0200\n"
+"PO-Revision-Date: 2016-08-21 13:56-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Haitian Creole\n"
+"Language: ht_HT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ht_HT\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Crowdin-File: update.pot\n"
-"X-Crowdin-Language: ht\n"
-"X-Crowdin-Project: browser-update\n"
 "X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: ht\n"
+"X-Crowdin-File: update.pot\n"
 
 #: header.php:5 header.php:34
 msgid "Update your Browser"
@@ -25,7 +24,7 @@ msgstr "crwdns112:0crwdne112:0"
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "crwdns242:0crwdne242:0"
 
-#: header.php:31 update-browser.php:199
+#: header.php:31 update-browser.php:192
 msgid "About the Project"
 msgstr "crwdns148:0crwdne148:0"
 
@@ -41,102 +40,89 @@ msgstr "crwdns117:0crwdne117:0"
 msgid "Contact"
 msgstr "crwdns118:0crwdne118:0"
 
-#: update-browser.php:90
-msgid ""
-"Your browser is out-of-date. Please download one of these up-to-date, free "
-"and excellent browsers:"
+#: update-browser.php:73
+msgid "Your browser is up-to-date."
+msgstr "crwdns289:0crwdne289:0"
+
+#: update-browser.php:83
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
 msgstr "crwdns119:0crwdne119:0"
 
-#: update-browser.php:111 update-browser.php:125
+#: update-browser.php:104 update-browser.php:118
 msgid "Most recent version not available for your system."
 msgstr "crwdns120:0crwdne120:0"
 
-#: update-browser.php:111 update-browser.php:125
+#: update-browser.php:104 update-browser.php:118
 msgid "Please choose another browser."
 msgstr "crwdns121:0crwdne121:0"
 
-#: update-browser.php:153
+#: update-browser.php:146
 #, php-format
-msgid ""
-"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
-"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "crwdns122:0%scrwdnd122:0%scrwdnd122:0%scrwdnd122:0%scrwdne122:0"
 
-#: update-browser.php:163
+#: update-browser.php:156
 #, php-format
-msgid ""
-"This website would like to remind you: Your browser (%s) is <b>out of "
-"date</b>. <a%s>Update your browser</a> for more security, comfort and the "
-"best experience on this site."
+msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "crwdns141:0%scrwdnd141:0%scrwdne141:0"
 
-#: update-browser.php:173
+#: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
 msgstr "crwdns125:0crwdne125:0"
 
-#: update-browser.php:177
+#: update-browser.php:170
 msgid "Security"
 msgstr "crwdns126:0crwdne126:0"
 
-#: update-browser.php:178
-msgid ""
-"Newer browsers protect you better against viruses, scams and other threats. "
-"Outdated browsers have security holes which are fixed in updates."
+#: update-browser.php:171
+msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "crwdns142:0crwdne142:0"
 
-#: update-browser.php:181
+#: update-browser.php:174
 msgid "Speed"
 msgstr "crwdns128:0crwdne128:0"
 
-#: update-browser.php:182
+#: update-browser.php:175
 msgid "Every new browser generation improves speed"
 msgstr "crwdns129:0crwdne129:0"
 
-#: update-browser.php:185
+#: update-browser.php:178
 msgid "Compatibility & new Technology"
 msgstr "crwdns243:0crwdne243:0"
 
-#: update-browser.php:186
+#: update-browser.php:179
 msgid "You can view sites that are using the latest technology"
 msgstr "crwdns244:0crwdne244:0"
 
-#: update-browser.php:189
+#: update-browser.php:182
 msgid "Comfort & better experience"
 msgstr "crwdns145:0crwdne145:0"
 
-#: update-browser.php:190
-msgid ""
-"Have a more comfortable experience with new features, extensions and better "
-"customisability."
+#: update-browser.php:183
+msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "crwdns245:0crwdne245:0"
 
-#: update-browser.php:196
+#: update-browser.php:189
 msgid "Why this website?"
 msgstr "crwdns134:0crwdne134:0"
 
-#: update-browser.php:198
-msgid ""
-"This is an initiative by websites and blogs to raise security awareness and "
-"bring forward the web."
+#: update-browser.php:191
+msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "crwdns147:0crwdne147:0"
 
-#: update-browser.php:204
+#: update-browser.php:197
 msgid "I can't update my browser"
 msgstr "crwdns246:0crwdne246:0"
 
-#: update-browser.php:205
-msgid ""
-"If you can't change your browser because of compatibility issues, think "
-"about installing a second browser for browsing and keep the old one for "
-"compatibility."
+#: update-browser.php:198
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "crwdns150:0crwdne150:0"
 
-#: update-browser.php:206
-msgid ""
-"Ask your admin to update your browser if you cannot install updates "
-"yourself."
+#: update-browser.php:199
+msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "crwdns247:0crwdne247:0"
 
-#: update-browser.php:216
+#: update-browser.php:209
 msgid "This website uses cookies"
 msgstr "crwdns152:0crwdne152:0"
+

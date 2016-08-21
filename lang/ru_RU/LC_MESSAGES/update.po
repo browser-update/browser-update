@@ -1,247 +1,128 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:23+0100\n"
-"PO-Revision-Date: 2014-01-26 12:31+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
-"Language-Team: ru_RU <phg.azlk@gmail.com>\n"
+"POT-Creation-Date: 2016-07-03 17:31+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 1.6.3\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: update.pot\n"
 
-#: header.php:5
+#: header.php:5 header.php:34
 msgid "Update your Browser"
 msgstr "Обновление браузера"
 
-#: header.php:28
-msgid "An initiative by web designers to inform users about browser-updates"
-msgstr ""
-"Инициатива веб-дизайнеров по информированию пользователей о необходимости "
-"обновить браузер"
+#: header.php:29
+msgid "An initiative by websites to inform users to update their web browser"
+msgstr "Инициатива веб-дизайнеров по информированию пользователей о необходимости обновить браузер"
 
-#: header.php:30
-msgid "The Project"
+#: header.php:31 update-browser.php:192
+msgid "About the Project"
 msgstr ""
 
-#: header.php:33
-msgid "Update Browser"
-msgstr "Обновление браузера"
-
-#: header.php:34
+#: header.php:35
 msgid "Statistics"
 msgstr "статистика"
 
-#: header.php:35
+#: header.php:36
 msgid "Blog"
 msgstr "блог"
 
-#: header.php:74
+#: header.php:88
 msgid "Contact"
 msgstr "Контакты"
 
-#: update-browser.php:65
-msgid ""
-"Your browser is out-of-date. Please download one of these up-to-date, free "
-"and excellent browsers:"
+#: update-browser.php:73
+msgid "Your browser is up-to-date."
 msgstr ""
-"Ваш браузер устарел. Пожалуйста, скачайте один из предлагаемых актуальных, "
-"бесплатных и первоклассных браузеров: "
 
-#: update-browser.php:86 update-browser.php:100
+#: update-browser.php:83
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Ваш браузер устарел. Пожалуйста, скачайте один из предлагаемых актуальных, бесплатных и первоклассных браузеров: "
+
+#: update-browser.php:104 update-browser.php:118
 msgid "Most recent version not available for your system."
 msgstr "Не предназначенный для вашей операционной системы."
 
-#: update-browser.php:86 update-browser.php:100
+#: update-browser.php:104 update-browser.php:118
 msgid "Please choose another browser."
 msgstr "Пожалуйста, выберите другой браузер."
 
-#: update-browser.php:114
+#: update-browser.php:146
 #, php-format
-msgid ""
-"For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a "
-"href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
-"Для обеспечения наибольшей безопасности, скорости, комфорта и "
-"удовольствия.<!-- %s %s %s %s-->"
+msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
+msgstr "Для обеспечения наибольшей безопасности, скорости, комфорта и удовольствия.<!-- %s %s %s %s-->"
 
-#: update-browser.php:122 update-browser.php:141
-msgid "Advertisement"
-msgstr ""
-
-#: update-browser.php:162
+#: update-browser.php:156
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
-msgstr ""
-"Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и"
-" может <b>не показывать все возможности</b> на этом и других сайтах. "
-"<a%s>Узнайте, как обновить Ваш браузер</a>"
+msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
+msgstr "Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>"
 
-#: update-browser.php:173
+#: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
 msgstr "Почему мне нужен новый браузер?"
 
-#: update-browser.php:177
+#: update-browser.php:170
 msgid "Security"
 msgstr "Безопасность"
 
-#: update-browser.php:178
-msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing "
-"and other threats. They also fix security holes in your current browser!"
-msgstr ""
-"Современный браузер лучше защитит Вас от мошенничества, вирусов, \"троянских"
-" коней\", фишинговых атак и других угроз.  Он поможет закрыть дыры в Вашей "
-"безопасности, возможно имеющиеся в Вашем настоящем браузере, и обеспечит "
-"защиту Вашей личной жизни!"
+#: update-browser.php:171
+msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
+msgstr "Современный браузер лучше защитит Вас от мошенничества, вирусов, \"троянских коней\", фишинговых атак и других угроз.  Он поможет закрыть дыры в Вашей безопасности, возможно имеющиеся в Вашем настоящем браузере, и обеспечит защиту Вашей личной жизни!"
 
-#: update-browser.php:181
+#: update-browser.php:174
 msgid "Speed"
 msgstr "Скорость"
 
-#: update-browser.php:182
+#: update-browser.php:175
 msgid "Every new browser generation improves speed"
-msgstr ""
-"Любое новое поколение браузеров способствует увеличению скорости и простоте "
-"в использовании."
+msgstr "Любое новое поколение браузеров способствует увеличению скорости и простоте в использовании."
 
-#: update-browser.php:185
-msgid "Compatibility"
+#: update-browser.php:178
+msgid "Compatibility & new Technology"
 msgstr "Совместимость"
 
-#: update-browser.php:186
-msgid "Websites using new technology will be displayed more correctly"
+#: update-browser.php:179
+msgid "You can view sites that are using the latest technology"
 msgstr "Новые технологи позволяют более точно отображать веб сайты"
 
-#: update-browser.php:189
-msgid "Comfort &amp; better experience"
+#: update-browser.php:182
+msgid "Comfort & better experience"
 msgstr "Удобство и эффективность"
 
-#: update-browser.php:190
-msgid ""
-"With new features, extensions and better customisability, you will have a "
-"more comfortable web-experience"
-msgstr ""
-"Новые возможности, расширения и большая гибкость позволит Вам более "
-"эффективно пользоваться сетью интернет."
+#: update-browser.php:183
+msgid "Have a more comfortable experience with new features, extensions and better customisability."
+msgstr "Новые возможности, расширения и большая гибкость позволит Вам более эффективно пользоваться сетью интернет."
 
-#: update-browser.php:198
+#: update-browser.php:189
 msgid "Why this website?"
 msgstr "Почему этот веб-сайт?"
 
-#: update-browser.php:200
-msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who "
-"want to bring the web further and help their visitors."
-msgstr ""
-"Этот веб сайт является инициативой веб-дизайнеров, веб-мастеров и блоггеров,"
-" которые хотят сделать сеть лучше и помочь своим посетителям."
+#: update-browser.php:191
+msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
+msgstr "Этот веб сайт является инициативой веб-дизайнеров, веб-мастеров и блоггеров, которые хотят сделать сеть лучше и помочь своим посетителям."
 
-#: update-browser.php:203
-msgid ""
-"Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-"advancement of the web</b> because of their limited features and many "
-"<b>bugs</b>."
-msgstr ""
-"Устаревшие браузеры создают проблемы с безопасностью и <b>тормозят развитие "
-"интернета</b> из-за своих ограниченных возможностей и множественных "
-"<b>багов</b>."
-
-#: update-browser.php:206
-msgid "More information about the Project Browser-Update.org"
-msgstr " "
-
-#: update-browser.php:211
-msgid "\"I'm not able to update my browser\""
+#: update-browser.php:197
+msgid "I can't update my browser"
 msgstr "\"Мне не удается обновить браузер\""
 
-#: update-browser.php:212
-msgid ""
-"If you can't change your browser because of compatibility issues, think "
-"about installing a second browser for browsing and keep the old one for the "
-"compatibility."
+#: update-browser.php:198
+msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
+msgstr "Если Вам не удаётся сменить браузер из-за проблем с совместимостью, можно установить второй и оставить старый для обеспечения совместимости."
+
+#: update-browser.php:199
+msgid "Ask your admin to update your browser if you cannot install updates yourself."
+msgstr "Если Вы не администратор этого компьютера и не можете сами установить новый браузер, обратитесь с этой просьбой к администратору."
+
+#: update-browser.php:209
+msgid "This website uses cookies"
 msgstr ""
-"Если Вам не удаётся сменить браузер из-за проблем с совместимостью, можно "
-"установить второй и оставить старый для обеспечения совместимости."
 
-#: update-browser.php:213
-msgid ""
-"If you are on a computer that is maintained by an admin and you cannot "
-"install a new browser, ask your admin about it."
-msgstr ""
-"Если Вы не администратор этого компьютера и не можете сами установить новый "
-"браузер, обратитесь с этой просьбой к администратору."
-
-#~ msgid "Customize and test"
-#~ msgstr "Изменить и проверить"
-
-#~ msgid "Test the script"
-#~ msgstr "Проверить скрипт"
-
-#~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
-#~ " bar will always show up."
-#~ msgstr ""
-#~ "Если при открытии сайта Вы добавите <code>#test-bu</code> к URL, панель "
-#~ "будет всегда видна."
-
-#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-#~ msgstr "Пример: <code>http://browser-update.org/#test-bu</code>."
-
-#~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new browser"
-#~ " tab."
-#~ msgstr ""
-#~ "Убедитесь, что страница перезагружена, открыв ссылку в новой закладке "
-#~ "браузера."
-
-#~ msgid "Options"
-#~ msgstr "Параметры"
-
-#~ msgid "The following options can be passed to the script:"
-#~ msgstr "Скурипту могут переданы следующие параметры:"
-
-#~ msgid "browser versions to notify"
-#~ msgstr "предупреждать о версиях браузеров"
-
-#~ msgid "atfer how many hours should the message reappear"
-#~ msgstr "через сколько часов сообщение должно снова появиться"
-
-#~ msgid "0 = show all the time"
-#~ msgstr "0=показывать всегда"
-
-#~ msgid "callback function after the bar has appeared"
-#~ msgstr "функция обратного вызова после того, как панель появилась"
-
-#~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "установить язык сообщения, например \"ru\""
-
-#~ msgid "overrides the default detection"
-#~ msgstr "переопределяет обнаружение по умолчанию"
-
-#~ msgid "true = always show the bar (for testing)"
-#~ msgstr "true = всегда показывать панель (для тестирования)"
-
-#~ msgid "custom notification html text"
-#~ msgstr "Ваш собственный текст уведомления в html"
-
-#~ msgid "open link in new window/tab"
-#~ msgstr "открыть ссылку в новом окне/вкладке"
-
-#~ msgid "Edit the CSS"
-#~ msgstr "Редактировать CSS"
-
-#~ msgid "The following CSS rules are applied by the script. "
-#~ msgstr "Скрипт применяет следующие правила CSS."

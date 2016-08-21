@@ -22,11 +22,11 @@ msgid "Update your Browser"
 msgstr "قم بتحديث متصفحك"
 
 #: header.php:28
-msgid "An initiative by web designers to inform users about browser-updates"
+msgid "An initiative by websites to inform users to update their web browser"
 msgstr "مبادرة من قبل مصممين مواقع لإخبار الزوار عن تحديث المتصفح"
 
 #: header.php:30
-msgid "The Project"
+msgid "About the Project"
 msgstr "المشروع"
 
 #: header.php:33
@@ -78,9 +78,9 @@ msgstr "إعلانات"
 #: update-browser.php:162
 #, php-format
 msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
+"This website would like to remind you: Your browser (%s) is <b>out of "
+"date</b>. <a%s>Update your browser</a> for more security, comfort and the "
+"best experience on this site."
 msgstr ""
 "متصفحك (%s) <b>منتهى الصلاحيه</b>. ويوجد به <b>ثغرات امنية</b> معروفة وقد "
 "<b>لا يُشغل كثير من الميزات</b> المتعلقه بهذه الموقع. <a%s>أضغط هنا</a>لتعرف"
@@ -96,8 +96,8 @@ msgstr "الآمان"
 
 #: update-browser.php:178
 msgid ""
-"Newer browsers protect you better against scams, viruses, trojans, phishing "
-"and other threats. They also fix security holes in your current browser!"
+"Newer browsers protect you better against viruses, scams and other threats. "
+"Outdated browsers have security holes which are fixed in updates."
 msgstr ""
 "المتصفحات المُحدثه الجديدة، تحميك من الاحتيال، الفيروسات، وكثير من الأمور "
 "الأخرى المتصفحات المُحدثة تقوم بإغلاق ثغرات قد تكون موجودة في متصفحك الحالي!"
@@ -111,21 +111,21 @@ msgid "Every new browser generation improves speed"
 msgstr "كل جيل جديد من المتصفحات يطور السرعة"
 
 #: update-browser.php:185
-msgid "Compatibility"
+msgid "Compatibility & new Technology"
 msgstr "التوافق"
 
 #: update-browser.php:186
-msgid "Websites using new technology will be displayed more correctly"
+msgid "You can view sites that are using the latest technology"
 msgstr "المواقع التى تستخدم تقنيات جديدة ستعمل بشكل صحيح"
 
 #: update-browser.php:189
-msgid "Comfort &amp; better experience"
+msgid "Comfort & better experience"
 msgstr "الراحة و تجربة أفضل "
 
 #: update-browser.php:190
 msgid ""
-"With new features, extensions and better customisability, you will have a "
-"more comfortable web-experience"
+"Have a more comfortable experience with new features, extensions and better "
+"customisability."
 msgstr ""
 "مع الميزات الجديدة و الإضافات و الخيارات ستحصل على راحة اكثر و تجربة أفضل"
 
@@ -135,8 +135,8 @@ msgstr "لماذا هذه الموقع؟"
 
 #: update-browser.php:200
 msgid ""
-"This website is an initiative by webdesigners, webmasters and bloggers who "
-"want to bring the web further and help their visitors."
+"This is an initiative by websites and blogs to raise security awareness and "
+"bring forward the web."
 msgstr ""
 "هذه الموقع هو عباره عن مبادرة من قبل مصممين مواقع و اصحاب مواقع و مُدونين "
 "يُريدون الدفع قدماً لتطوير بشبكة الانترنت و مساعدة زوارهم"
@@ -155,13 +155,13 @@ msgid "More information about the Project Browser-Update.org"
 msgstr "مزيد من المعلومات حول مشروع Browser-Update.org"
 
 #: update-browser.php:211
-msgid "\"I'm not able to update my browser\""
+msgid "I can't update my browser"
 msgstr "\"انا غير قادر على تحديث متصفحي\""
 
 #: update-browser.php:212
 msgid ""
 "If you can't change your browser because of compatibility issues, think "
-"about installing a second browser for browsing and keep the old one for the "
+"about installing a second browser for browsing and keep the old one for "
 "compatibility."
 msgstr ""
 "اذا كنت لا تستطيع تحديث متصفحك بسبب مشاكل التوافق، فكر بتنزيل متصفح آخر "
@@ -169,8 +169,8 @@ msgstr ""
 
 #: update-browser.php:213
 msgid ""
-"If you are on a computer that is maintained by an admin and you cannot "
-"install a new browser, ask your admin about it."
+"Ask your admin to update your browser if you cannot install updates "
+"yourself."
 msgstr ""
 "اذا كنت على حاسب يدار من قبل المشرف و لا تستطيع تنزيل متصفح جديدتواصل مع "
 "المشرف لتنزيل متصفح جديد."

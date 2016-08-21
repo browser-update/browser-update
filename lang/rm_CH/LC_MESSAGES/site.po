@@ -1,614 +1,164 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-05 15:25+0100\n"
-"Last-Translator: thomas <jossele@gmx.de>\n"
-"Language-Team: RM <gion-andri@gmx.ch>\n"
+"POT-Creation-Date: 2016-07-03 18:15+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Romansh\n"
+"Language: rm_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: rm_CH\n"
-"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: rm-CH\n"
+"X-Crowdin-File: site.pot\n"
 
-#: contact.php:8
-msgid "Contact"
-msgstr "Contact"
+#: index.php:24
+msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
+msgstr "Quest servetsch è ina pussaivladad decenta per recumandar a tes visitaders da midar ad in navigatur pli nov."
 
-#: index.php:33
-msgid ""
-"Browser-update.org is a tool to unobtrusively notify visitors that they "
-"should update their web browser in order to use your website."
+#: index.php:27
+msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
-"Quest servetsch è ina pussaivladad decenta per recumandar a tes visitaders "
-"da midar ad in navigatur pli nov."
 
-#: index.php:37
-msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
-"them for no actual reason. Switching to an newer browser is better for them "
-"and for you as a webdesigner."
-msgstr ""
-"Blers utilisaders da l'internet navigheschan cun in navigatur vegl ed "
-"antiquà — savens senza motiv. Midar ad in navigatur pli nov è meglier per "
-"els e per tai sco designer da web. "
+#: index.php:33 stat.php:17
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong> paginas utiliseschan il script da Browser-Update.org."
 
-#: index.php:46
+#: index.php:36 stat.php:20
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong> visitaders han gia actualisà lur navigatur."
+
+#: index.php:40
 msgid "How it works"
 msgstr "Sco ch'i funcziuna"
 
-#: index.php:50
+#: index.php:43
 #, php-format
-msgid ""
-"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr "Integrescha la <a href=\"%s\">trav d'avis</a> en tia website"
 
-#: index.php:53
-msgid ""
-"Visitors with out-dated browser will be informed by a small, undisturbing "
-"message box, that their browser is not up-to-date and it is recommended to "
-"update."
-msgstr ""
-"Visitaders cun in navigatur antiquà vegnan infurmads entras ina trav "
-"pitschna e decenta che infurmescha che lur navigatur n'è betg pli actual e "
-"recumonda da l'actualisar."
+#: index.php:46
+msgid "Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update."
+msgstr "Visitaders cun in navigatur antiquà vegnan infurmads entras ina trav pitschna e decenta che infurmescha che lur navigatur n'è betg pli actual e recumonda da l'actualisar."
 
-#: index.php:56
+#: index.php:47
 msgid "Try it out!"
 msgstr "Testar la trav d'avis!"
 
-#: index.php:58
+#: index.php:49
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
-msgstr ""
-"Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da "
-"segirezza</b> enconuschents e mussa eventualmain <b>betg tut las "
-"funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes"
-" navigatur</a>."
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da segirezza</b> enconuschents e mussa eventualmain <b>betg tut las funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes navigatur</a>."
 
-#: index.php:65
+#: index.php:53
 #, php-format
-msgid ""
-"By clicking the message, they will get to an <a href=\"%s\">info page with "
-"reasons why to update (or change) and a list of browsers</a> available for "
-"their system."
-msgstr ""
-"Cun cliccar sin la trav vegn chargia ina <a href=\"%s\">pagina "
-"d'infurmaziuns cun arguments per actualisar il navigatur ed ina glista dad "
-"navigaturs alternativs</a>."
+msgid "By clicking the message, they will get to an <a href=\"%s\">info page with reasons why to update (or change) and a list of browsers</a> available for their system."
+msgstr "Cun cliccar sin la trav vegn chargia ina <a href=\"%s\">pagina d'infurmaziuns cun arguments per actualisar il navigatur ed ina glista dad navigaturs alternativs</a>."
 
-#: index.php:69
+#: index.php:56
 msgid "If the visitor ignores the advice, it won't reappear for some time."
-msgstr ""
-"Sch'igl visitader ignorescha igl avis na cumpara el betg pli per in temps."
+msgstr "Sch'igl visitader ignorescha igl avis na cumpara el betg pli per in temps."
 
-#: index.php:72
+#: index.php:60
 msgid "Advantages and features"
 msgstr "Avantatgs e funcziuns"
 
-#: index.php:75
+#: index.php:63
 msgid "Unobtrusive"
 msgstr "Decent"
 
-#: index.php:76
-msgid ""
-"The user will be notified only once a day by default. The notification is "
-"small and does not block the user from using the site."
-msgstr ""
-"Igl utilisader vegn be avisà ina giada e suenter betg pli disturbà. La trav "
-"d'infurmaziun è pitschna e disturba betg durant il navigar."
+#: index.php:64
+msgid "The user will be notified only once a day by default. The notification is small and does not block the user from using the site."
+msgstr "Igl utilisader vegn be avisà ina giada e suenter betg pli disturbà. La trav d'infurmaziun è pitschna e disturba betg durant il navigar."
 
-#: index.php:80
-msgid "Informative"
-msgstr "Infurmativ"
-
-#: index.php:81
-msgid ""
-"Tell the users that they are using an out-dated browser and that your "
-"website looks even better with a newer one."
-msgstr ""
-"Di a tes utilisaders ch'els han in navigatur antiquà e che tia pagina "
-"d'internet vesa ora anc meglier cun in pli nov."
-
-#: index.php:85
-msgid "Idealistic"
-msgstr "Idealistic"
-
-#: index.php:86
-msgid "Help evolve the web!"
-msgstr "Gida il web da far progress!"
-
-#: index.php:87
-msgid "Support the standards-based web!"
-msgstr "Sustegna il web che sa basa sin standards!"
-
-#: index.php:88
-msgid "Support Open Source software projects!"
-msgstr "Sustegna projects da software dad Open Source!"
-
-#: index.php:89
-msgid "Help your visitors!"
-msgstr "Gida tes visitaders!"
-
-#: index.php:90
-msgid "Help increase security awareness!"
-msgstr "Renda attent sin problems da segirezza!"
-
-#: index.php:91
-msgid "Support your favorite webbrowser!"
-msgstr "Sustegna tes navigatur favurisà!"
-
-#: index.php:94
+#: index.php:67
 msgid "Low maintenance and up-to-date"
 msgstr "Pauca lavur da mantegniment e tuttina actual"
 
-#: index.php:95
-msgid ""
-"We take care not to erroneously notify users by constantly tweaking and "
-"improving the detection code. Users are presented with an up-to-date list of"
-" browsers that are available for their system."
-msgstr ""
-"Nus actualisain regularmain nossa glista da navigaturs per che tes "
-"utilisaders vegnan era infurmads en futur davart problems da segirezza u "
-"navigaturs antiquads."
+#: index.php:68
+msgid "We take care not to erroneously notify users by constantly tweaking and improving the detection code. Users are presented with an up-to-date list of browsers that are available for their system."
+msgstr "Nus actualisain regularmain nossa glista da navigaturs per che tes utilisaders vegnan era infurmads en futur davart problems da segirezza u navigaturs antiquads."
 
-#: index.php:100
+#: index.php:71
 msgid "Customizable"
 msgstr "Persunalisar"
 
-#: index.php:101
-msgid ""
-"You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency"
-" of the bar to appear and many other things."
-msgstr ""
-"Ti pos persunalisar las versiuns da navigaturs che duain vegnir infurmadas. "
-"<br />En versiuns futuras pos ti era persunalisar il text che duai vegnir "
-"mussà, la frequenza en la quala la trav duai cumparair e bleras autras "
-"chaussas."
+#: index.php:72 index.php:185
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "Ti pos <a href=\"%s\">persunalisar</a> il design, il text ed autras opziuns dal messadi."
 
-#: index.php:106
+#: index.php:75
 msgid "Localized"
 msgstr "Translatà"
 
-#: index.php:107
+#: index.php:76
 msgid "The message is automatically displayed in the user's language."
 msgstr "Il messadi vegn mussà automaticamain en la lingua da l'utilisader."
 
-#: index.php:112
+#: index.php:80
 msgid "Install the browser update notification on your site"
 msgstr "Installar la trav sin tia pagina"
 
-#: index.php:114
+#: index.php:82
 msgid "Just include this code anywhere in the source of your page."
-msgstr ""
-"Qua retschaivas ti il code per integrar en tia website. Al integrescha "
-"simplamain insanua en il code da funtauna da tia pagina."
+msgstr "Qua retschaivas ti il code per integrar en tia website. Al integrescha simplamain insanua en il code da funtauna da tia pagina."
 
-#: index.php:119
+#: index.php:98
 msgid "The following browsers will be notified:"
 msgstr "Suandants navigaturs duain retschaiver in avis:"
 
-#: index.php:166
-msgid ""
-"Google Chrome will automatically itself and is therefor always up to date"
-msgstr "Google Chrome vegn actualisà automaticamain ed è perquai adina actual"
-
-#: index.php:172
-msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over "
-"time:</b>If a browser is no longer supported by the vendor or has security "
-"vulnerabilities, it will be added to the set."
+#: index.php:101
+#, php-format
+msgid "older than %d months (currently %s)"
 msgstr ""
-"<b>Infurmar ils navigaturs recumandads ed actualisar questa glista "
-"automaticamain:</b> Sche in navigatur na vegn betg pli sustegnì dad in "
-"producent u ha gronds problems da segirezza vegn el agiuntà a la glista."
+
+#: index.php:159
+msgid "Also notify all browser versions with security vulnerabilities."
+msgstr ""
+
+#: index.php:165
+msgid "Also notify all browsers that are not supported by the vendor anymore."
+msgstr ""
 
 #: index.php:177
-msgid "Your Code"
-msgstr "Tes code:"
-
-#: index.php:195
-#, php-format
-msgid ""
-"You can <a href=\"%s\">customize</a> the style of the message, the text and "
-"other options."
+msgid "Notify mobile browsers."
 msgstr ""
-"Ti pos <a href=\"%s\">persunalisar</a> il design, il text ed autras opziuns "
-"dal messadi."
 
-#: index.php:201
+#: index.php:181
+#, php-format
+msgid "The script and service is open source under the <a%s>MIT License</a>."
+msgstr ""
+
+#: index.php:189
 msgid "There are plugins for:"
 msgstr "Nus avain era plug-ins per suandanta software: "
 
-#: index.php:228
+#: index.php:207
 msgid "Why you should tell users to update"
 msgstr "Pertge che ti duessas infurmar tes visitaders"
 
-#: index.php:231
+#: index.php:209
 msgid "Reduced development costs and time"
 msgstr "Reducziun da custs e temp da svilup"
 
-#: index.php:232
-msgid ""
-"Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr "Optimar websites per navigaturs vegls è char e dovra ina massa temp."
+#: index.php:210
+msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
+msgstr "Navigaturs novs ta laschan utilisar dapli da questas novas tecnologias (CSS3, SVG, HTML5, RSS, cuntegn generà da CSS, layouts flexibels) sin tia website tge che resulta èn meglras paginas d'internet."
 
-#: index.php:235
-msgid "Webdesign technologies and features"
-msgstr "Tecnologias e funcziuns per il design da web"
-
-#: index.php:236
-msgid ""
-"There are all these great new web development standards and they are "
-"supported by modern browsers... but you may not use them."
-msgstr ""
-"I existan ina massa novs standards per sviluppar websites che vegnan "
-"sustegnids da navigaturs novs… bleras na pudain nus dentant betg utilisar."
-
-#: index.php:238
-msgid ""
-"Newer browsers let you use more features and new technologies on your "
-"website, resulting in a better browsing experience for your users."
-msgstr ""
-"Navigaturs novs ta laschan utilisar dapli da questas novas tecnologias "
-"(CSS3, SVG, HTML5, RSS, cuntegn generà da CSS, layouts flexibels) sin tia "
-"website tge che resulta èn meglras paginas d'internet."
-
-#: index.php:241
-msgid "Security and benefits for the user"
-msgstr "Segirezza ed avantatgs per l'utilisader"
-
-#: index.php:242
-#, fuzzy, php-format
-msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a "
-"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
-"listed in this <a href=\"%s\">paper</a>."
-msgstr ""
-"Segirezza, spertadad, dapli funcziuns,… Tut vegn descrit sin la <a "
-"href=\"%s\">pagina d'actualisaziun</a>. Ils problems da segirezza da "
-"navigaturs antiquads vegnan explitgads en <a href=\"%s\">questa "
-"publicaziun</a>."
-
-#: index.php:245
-msgid "The web has to evolve..."
-msgstr "Il web sa sviluppa…"
-
-#: index.php:247
-msgid "But that's only possible if the browsers also evolve."
-msgstr "Quai è dentant be pussaivel sche ils navigaturs da sviluppan era."
-
-#: index.php:248
-msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
-" something new in the history of the web. If we take no action now, we will "
-"have to code websites like in 2001 even if it is 2011."
-msgstr ""
-"Che in navigatur ch'è 8 onns vegls (Internet Explorer 6) è anc uschè derasà "
-"è problematic. Senza agir da nus stuain nus anc programmar paginas "
-"d'internet sco en l'onn 2001, era sch'igl è 2011!"
-
-#: index.php:252
-msgid "Users don't oppose updating..."
-msgstr "Utilisaders n'èn betg encunter actualisaziuns…"
-
-#: index.php:253
-msgid ""
-"... they often just do not appreciate the need to update or the existence of"
-" the \"webbrowser\" as a software at all."
-msgstr ""
-"…els san simplamain savens betg che era il navigatur è ina software che sto "
-"vegnir actualisada."
-
-#: index.php:256
-msgid "Help this project"
-msgstr "Gida quest project"
-
-#: index.php:259
-msgid "Participate!"
-msgstr "Ta participescha!"
-
-#: index.php:260
-msgid ""
-"Include the notification code in your page to inform users about browser "
-"updates."
-msgstr ""
-"Integrescha il code d'avis en tia pagina d'internet per infurmar utilisaders"
-" davart actualisaziuns da navigaturs."
-
-#: index.php:263
-msgid "Spread the word!"
-msgstr "Raquintar!"
-
-#: index.php:264
-msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr ""
-"Raquinta ad auters davart questa iniziativa! Sin tes blog, sin tia pagina "
-"d'internet, sin Twitter,…"
-
-#: index.php:267
-msgid "Translate this page"
-msgstr "Translatar questa pagina"
-
-#: index.php:268
-msgid "Translate this page into your language."
-msgstr "Translatescha questa pagina en tia lingua."
-
-#: stat.php:9
-msgid "Statistics"
-msgstr "Statisticas"
-
-#: stat.php:18
+#: index.php:211
 #, php-format
-msgid "<b>%s</b> sites are using this notification"
+msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
-"<strong class=\"number\">%d</strong> paginas utiliseschan il script da "
-"Browser-Update.org."
 
-#: stat.php:22
-msgid "Browser updates"
-msgstr "Actualisaziuns da navigaturs"
-
-#: stat.php:60
+#: index.php:214
 #, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
+msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""
-"<strong class=\"number\">%d</strong> visitaders han gia actualisà lur "
-"navigatur."
 
-#: stat.php:92
-msgid "From"
-msgstr "Da"
-
-#: stat.php:92
-msgid "To"
-msgstr "A"
-
-#: stat.php:92
-msgid "Amount"
-msgstr "Dumber"
-
-#~ msgid "Customize and test"
-#~ msgstr "Modifitgar e testar"
-
-#~ msgid "Test the script"
-#~ msgstr "Testar il script"
-
-#~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
-#~ " bar will always show up."
-#~ msgstr ""
-#~ "Sche ti avras tia website cun agiuntà <code>#test-bu</code> a l'URL cumpara "
-#~ "la trav adina."
-
-#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-#~ msgstr "Exempel: <code>http://browser-update.org/#test-bu</code>."
-
-#~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new browser"
-#~ " tab."
-#~ msgstr ""
-#~ "Controllescha che la pagina vegn rechargiada correctamain entras avrir la "
-#~ "URL en in nov tab da tes navigatur."
-
-#~ msgid "Options"
-#~ msgstr "Opziuns"
-
-#~ msgid "The following options can be passed to the script:"
-#~ msgstr "Suandants parameters pon vegnir surdads al script:"
-
-#~ msgid "browser versions to notify"
-#~ msgstr "las versiuns da navigaturs che duain vegnir avisadas"
-
-#~ msgid "atfer how many hours should the message reappear"
-#~ msgstr "suenter quantas uras duai il messadi puspè cumparair"
-
-#~ msgid "0 = show all the time"
-#~ msgstr "0 = mussar adina"
-
-#~ msgid "callback function after the bar has appeared"
-#~ msgstr "funcziun da callback suenter che la trav è cumparida"
-
-#~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "definir ina lingua per il messadi, p.ex. \"rm\""
-
-#~ msgid "overrides the default detection"
-#~ msgstr "remplazza l'eruir automaticamain"
-
-#~ msgid "true = always show the bar (for testing)"
-#~ msgstr "true = adina mussar la trav (per testar)"
-
-#~ msgid "custom notification html text"
-#~ msgstr "text da HTML sco avis persunalisà"
-
-#~ msgid "open link in new window/tab"
-#~ msgstr "avrir la colliaziun en ina nova fanestra/tab"
-
-#~ msgid "Edit the CSS"
-#~ msgstr "Modifitgar il CSS"
-
-#~ msgid "The following CSS rules are applied by the script. "
-#~ msgstr "Suandantas reglas da CSS vegnan applitgadas dal script."
-
-#~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some more "
-#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-#~ msgstr ""
-#~ "Ti las pos remplazzar cun tes agen CSS. Per cuntanscher quai stos ti "
-#~ "agiuntar reglas da CSS pli specificas: p.ex.  <code>body .buorg {font-"
-#~ "size:20px}</code>"
-
-#~ msgid "Browser-Update.org"
-#~ msgstr "Browser-Update.org"
-
-#~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Infurmescha tes visitaders davart actualisaziuns da lur navigaturs"
-
-#~ msgid "An initiative by web designers to inform users about browser-updates"
-#~ msgstr ""
-#~ "Ina iniziativa da designers da web per infurmar lur utilisaders davart "
-#~ "actualisaziuns da navigaturs"
-
-#~ msgid "Start"
-#~ msgstr "Cumenzament"
-
-#~ msgid "Help"
-#~ msgstr "Agid"
-
-#~ msgid "Supporters"
-#~ msgstr "Gidanters"
-
-#~ msgid "Blog"
-#~ msgstr "Blog"
-
-#~ msgid "<span class=\"workingonit\">work in progress</span>"
-#~ msgstr "<span class=\"workingonit\">en elavuraziun…</span>"
-
-#~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors are"
-#~ " using and how much users got proselyted: How many users updated or changed "
-#~ "their browser through your advice."
-#~ msgstr ""
-#~ "Ti retschaivas <a href=\"%s\">statisticas</a> cun infurmaziuns davart ils "
-#~ "navigaturs che tes visitaders utiliseschan e cifras che inditgeschan cons "
-#~ "utilisaders che han actualisà u midà lur navigaturs entras tes cussegl. "
-
-#~ msgid "Free webbrowsers"
-#~ msgstr "Navigaturs gratuits"
-
-#~ msgid ""
-#~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr ""
-#~ "Sutvart chattas ti las versiuns las pli novas dals navigaturs gratuits ils "
-#~ "pli frequents. "
-
-#~ msgid "Just choose a browser to download from the original vendor's website:"
-#~ msgstr ""
-#~ "Tscherna simplamain in navigatur per al telechargiar da la website dal "
-#~ "producent:"
-
-#~ msgid "Widely-used open-source browser, highly extendable and customizable"
-#~ msgstr ""
-#~ "Navigatur dad Open Source fitg derasà, simpel per extender e persunalisar"
-
-#~ msgid "Download"
-#~ msgstr "Telechargiar"
-
-#~ msgid "Browser with many features"
-#~ msgstr "Navigatur cun ina massa funcziuns"
-
-#~ msgid "Apple's fast browser"
-#~ msgstr "Il navigatur spert dad Apple"
-
-#~ msgid "Google's browser with compact interface"
-#~ msgstr "Il navigatur da Google cun ina interfatscha cumpacta"
-
-#~ msgid "Windows built-in browser"
-#~ msgstr "Il navigatur da standard da Windows"
-
-#~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr ""
-#~ "Tut ils navigaturs han las medemas funcziuns da basa ed ina interfatscha "
-#~ "simpla."
-
-#~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws and"
-#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
-#~ "the features of some websites."
-#~ msgstr ""
-#~ "Il navigatur che ti utiliseschas è antiquà. El ha <b>problems da segirezza e"
-#~ " dischavantatgs</b> e <b>funcziuns limitadas</b>. Ti na vegns betg a vesair "
-#~ "tut las funcziuns sin tschertas websites."
-
-#~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "Midar ad in navigatur pli nov ta porscha ina massa avantatgs:"
-
-#~ msgid "Security"
-#~ msgstr "Segirezza"
-
-#~ msgid ""
-#~ "Newer browsers protect you better against scams, viruses, trojans, phishing "
-#~ "and other threats. They also fix security holes in your current browser!"
-#~ msgstr ""
-#~ "Novs navigaturs ta protegian encunter scams, virus, trojans, phishing ed "
-#~ "auters privels. Navigaturs actuals serran rusnas da segirezza entras las "
-#~ "qualas attatgaders pon acceder tes computer!"
-
-#~ msgid "Speed"
-#~ msgstr "Spertadad"
-
-#~ msgid "Every new browser generation improves speed"
-#~ msgstr ""
-#~ "Mintga nova generaziun da navigaturs visualisescha pli spert las paginas "
-#~ "d'internet."
-
-#~ msgid "Compatibility"
-#~ msgstr "Cumpatibilitad"
-
-#~ msgid "Websites using new technology will be displayed more correctly"
-#~ msgstr ""
-#~ "Paginas web che utiliseschan tecnologias novas vegnan visualisadas "
-#~ "correctamain."
-
-#~ msgid "Comfort &amp; better experience"
-#~ msgstr "Confort &amp; prestaziun"
-
-#~ msgid ""
-#~ "With new features, extensions and better customisability, you will have a "
-#~ "more comfortable web-experience"
-#~ msgstr ""
-#~ "Cun novas funcziuns, cun supplements e la pussaivladad da persunalisar vegn "
-#~ "il navigar en la rait pli confortabel."
-
-#~ msgid "Updating is easy, takes just a few minutes and is totally free."
-#~ msgstr ""
-#~ "Actualisar è simpel, cuzza be in per minutas ed è cumplettamain gratuit."
-
-#~ msgid "Why this website?"
-#~ msgstr "Pertge questa website?"
-
-#~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
-#~ "want to bring the web further and help their visitors."
-#~ msgstr ""
-#~ "Questa website è ina iniziativa da designers da web, administraturs e "
-#~ "bloggers che vulan purtar enavant la rait e gidar a lur visitaders."
-
-#~ msgid ""
-#~ "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-#~ "advancement of the web</b> because of their limited features and many "
-#~ "<b>bugs</b>."
-#~ msgstr ""
-#~ "Navigaturs antiquads èn in <b>problem da segirezza</b> ed <b>impedeschan il "
-#~ "svilup dal web</b> perquai ch'els han be funcziuns fitg limitadas e "
-#~ "cuntegnan ina massa <b>sbagls</b>."
-
-#~ msgid "\"I'm not able to update my browser\""
-#~ msgstr "\"Jau na poss betg actualisar mes navigatur\""
-
-#~ msgid ""
-#~ "If you are on a computer, that is maintained by a admin and you cannot "
-#~ "install a new browser, ask your admin about it."
-#~ msgstr ""
-#~ "Sche ti lavuras sin in computer che vegn mantegnì dad in administratur e ti "
-#~ "na pos betg installar in nov navigatur, contactescha tes administratur per "
-#~ "far quai."
-
-#~ msgid ""
-#~ "If you can't change your browser because of compatibility issues, think "
-#~ "about installing a second browser for browsing and keep the old one for the "
-#~ "compatibility."
-#~ msgstr ""
-#~ "Sche ti na pos betg midar il navigatur ord motivs da cumpatibilitad, "
-#~ "ponderescha dad installar in segund navigatur per navigar e tegniar il vegl "
-#~ "per la cumpatibilitad."

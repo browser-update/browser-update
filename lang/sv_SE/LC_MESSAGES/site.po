@@ -1,618 +1,164 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-05 15:25+0100\n"
-"Last-Translator: Johan R <johan1321@gmail.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2016-07-03 18:15+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Swedish\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv_SE\n"
-"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: sv-SE\n"
+"X-Crowdin-File: site.pot\n"
 
-#: contact.php:8
-msgid "Contact"
-msgstr "Ta kontakt"
+#: index.php:24
+msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
+msgstr "Denna tjänst erbjuder en möjlighet att på ett diskret sätt uppmana dina besökare att byta till en nyare webbläsare."
 
-#: index.php:33
-msgid ""
-"Browser-update.org is a tool to unobtrusively notify visitors that they "
-"should update their web browser in order to use your website."
+#: index.php:27
+msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
-"Denna tjänst erbjuder en möjlighet att på ett diskret sätt uppmana dina "
-"besökare att byta till en nyare webbläsare."
 
-#: index.php:37
-msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
-"them for no actual reason. Switching to an newer browser is better for them "
-"and for you as a webdesigner."
-msgstr ""
-"Många internetanvändare använder fortfarande väldigt gamla och föråldrade "
-"webbläsare - de flesta utan orsak. Ett byte till en nyare webbläsare gynnar "
-"både dem samt dig som webbutvecklare."
+#: index.php:33 stat.php:17
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong> webbsidor använder scriptet från Browser-Update.org."
 
-#: index.php:46
+#: index.php:36 stat.php:20
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong> besökare har uppdaterat sin webbläsare."
+
+#: index.php:40
 msgid "How it works"
 msgstr "Hur fungerar det?"
 
-#: index.php:50
+#: index.php:43
 #, php-format
-msgid ""
-"Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
 msgstr "Infoga vår <a href=\"%s\">javascript-kod</a> på din webbsida."
 
-#: index.php:53
-msgid ""
-"Visitors with out-dated browser will be informed by a small, undisturbing "
-"message box, that their browser is not up-to-date and it is recommended to "
-"update."
-msgstr ""
-"Besökare med en föråldrad webbläsare presenteras för en diskret "
-"meddelandebalk som informerar om att deras webbläsare är föråldrad, samt "
-"rekommenderar att uppdatera den."
+#: index.php:46
+msgid "Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update."
+msgstr "Besökare med en föråldrad webbläsare presenteras för en diskret meddelandebalk som informerar om att deras webbläsare är föråldrad, samt rekommenderar att uppdatera den."
 
-#: index.php:56
+#: index.php:47
 msgid "Try it out!"
 msgstr "Testa meddelandebalken!"
 
-#: index.php:58
+#: index.php:49
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
-msgstr ""
-"Din webbläsare (%s) är <b>föråldrad</b>. Den har kända <b>säkerhetshål</b> "
-"och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra "
-"webbsidor. <a%s>Uppdatera din webbläsare idag</a>"
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "Din webbläsare (%s) är <b>föråldrad</b>. Den har kända <b>säkerhetshål</b> och <b>kan inte visa alla funktioner korrekt</b> på denna och på andra webbsidor. <a%s>Uppdatera din webbläsare idag</a>"
 
-#: index.php:65
+#: index.php:53
 #, php-format
-msgid ""
-"By clicking the message, they will get to an <a href=\"%s\">info page with "
-"reasons why to update (or change) and a list of browsers</a> available for "
-"their system."
-msgstr ""
-"Genom att klicka på meddelandebalken tas användaren till <a href=\"%s\">en "
-"informationssida med information om varför och hur gå till väga för att "
-"uppdatera sin webbläsare</a>."
+msgid "By clicking the message, they will get to an <a href=\"%s\">info page with reasons why to update (or change) and a list of browsers</a> available for their system."
+msgstr "Genom att klicka på meddelandebalken tas användaren till <a href=\"%s\">en informationssida med information om varför och hur gå till väga för att uppdatera sin webbläsare</a>."
 
-#: index.php:69
+#: index.php:56
 msgid "If the visitor ignores the advice, it won't reappear for some time."
-msgstr ""
-"Om besökaren väljer att avvisa meddelandet, kommer det inte att synas på ett"
-" tag."
+msgstr "Om besökaren väljer att avvisa meddelandet, kommer det inte att synas på ett tag."
 
-#: index.php:72
+#: index.php:60
 msgid "Advantages and features"
 msgstr "Fördelar och funktioner"
 
-#: index.php:75
+#: index.php:63
 msgid "Unobtrusive"
 msgstr "Diskret"
 
-#: index.php:76
-msgid ""
-"The user will be notified only once a day by default. The notification is "
-"small and does not block the user from using the site."
-msgstr ""
-"Användaren blir endast meddelad en gång, och blir inte besvärad mer. "
-"Meddelandebalken är diskret och försämrar inte upplevelsen på din sida."
+#: index.php:64
+msgid "The user will be notified only once a day by default. The notification is small and does not block the user from using the site."
+msgstr "Användaren blir endast meddelad en gång, och blir inte besvärad mer. Meddelandebalken är diskret och försämrar inte upplevelsen på din sida."
 
-#: index.php:80
-msgid "Informative"
-msgstr "Informativ"
-
-#: index.php:81
-msgid ""
-"Tell the users that they are using an out-dated browser and that your "
-"website looks even better with a newer one."
-msgstr ""
-"Berätta för användarna att de använder en föråldrar webbläsare och att din "
-"webbsida ser mycket bättre ut i en nyare webbläsare."
-
-#: index.php:85
-msgid "Idealistic"
-msgstr "Ideal"
-
-#: index.php:86
-msgid "Help evolve the web!"
-msgstr "Hjälp till att utveckla webben!"
-
-#: index.php:87
-msgid "Support the standards-based web!"
-msgstr "Stöd en webb baserad på standarder!"
-
-#: index.php:88
-msgid "Support Open Source software projects!"
-msgstr "Stöd programvara med öppen källkod!"
-
-#: index.php:89
-msgid "Help your visitors!"
-msgstr "Hjälp dina besökare!"
-
-#: index.php:90
-msgid "Help increase security awareness!"
-msgstr "Hjälp till att öka säkerhetsmedvetandet!"
-
-#: index.php:91
-msgid "Support your favorite webbrowser!"
-msgstr "Stöd din favoritwebbläsare!"
-
-#: index.php:94
+#: index.php:67
 msgid "Low maintenance and up-to-date"
 msgstr "Litet underhåll och alltid aktuell"
 
-#: index.php:95
-msgid ""
-"We take care not to erroneously notify users by constantly tweaking and "
-"improving the detection code. Users are presented with an up-to-date list of"
-" browsers that are available for their system."
-msgstr ""
-"Webbläsarversioner som i framtiden inte längre stöds, som har säkerhetshål "
-"eller som är väldigt föråldrade kommer automatiskt att läggas till i vår "
-"lista över föråldrade webbläsare."
+#: index.php:68
+msgid "We take care not to erroneously notify users by constantly tweaking and improving the detection code. Users are presented with an up-to-date list of browsers that are available for their system."
+msgstr "Webbläsarversioner som i framtiden inte längre stöds, som har säkerhetshål eller som är väldigt föråldrade kommer automatiskt att läggas till i vår lista över föråldrade webbläsare."
 
-#: index.php:100
+#: index.php:71
 msgid "Customizable"
 msgstr "Anpassningsbar"
 
-#: index.php:101
-msgid ""
-"You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency"
-" of the bar to appear and many other things."
-msgstr ""
-"Du kan anpassa vilka webbläsarversioner som ska meddelas.<br/> Du kan "
-"dessutom anpassa texten som visas, med vilket tidsintervall meddelandebalken"
-" ska visas och flera andra saker."
+#: index.php:72 index.php:185
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "Du kan <a href=\"%s\">anpassa</a> utseendet på meddelandebalken, texten som visas samt andra inställningar."
 
-#: index.php:106
+#: index.php:75
 msgid "Localized"
 msgstr "Internationell"
 
-#: index.php:107
+#: index.php:76
 msgid "The message is automatically displayed in the user's language."
 msgstr "Meddelanden visas automatiskt på besökarens språk."
 
-#: index.php:112
+#: index.php:80
 msgid "Install the browser update notification on your site"
 msgstr "Placera meddelandet på din webbsida"
 
-#: index.php:114
+#: index.php:82
 msgid "Just include this code anywhere in the source of your page."
-msgstr ""
-"Här finns koden som du ska sätta in på din webbsida. Du kan placera den var "
-"som helst i källkoden på sidan."
+msgstr "Här finns koden som du ska sätta in på din webbsida. Du kan placera den var som helst i källkoden på sidan."
 
-#: index.php:119
+#: index.php:98
 msgid "The following browsers will be notified:"
 msgstr "Dessa webbläsare kommer att visa meddelandebalken:"
 
-#: index.php:166
-msgid ""
-"Google Chrome will automatically itself and is therefor always up to date"
+#: index.php:101
+#, php-format
+msgid "older than %d months (currently %s)"
 msgstr ""
-"För Google Chrome kommer versionsnumret att uppdateras automatiskt, och är "
-"alltid aktuellt"
 
-#: index.php:172
-msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over "
-"time:</b>If a browser is no longer supported by the vendor or has security "
-"vulnerabilities, it will be added to the set."
+#: index.php:159
+msgid "Also notify all browser versions with security vulnerabilities."
 msgstr ""
-"<b>Använd den rekommenderade listan över vilka webbläsare som ska visa "
-"meddelandebalken, och uppdatera listan automatiskt:</b> Om en webbläsare "
-"inte längre stöds av leverantören kommer den att läggas till listan."
+
+#: index.php:165
+msgid "Also notify all browsers that are not supported by the vendor anymore."
+msgstr ""
 
 #: index.php:177
-msgid "Your Code"
-msgstr "Koden"
-
-#: index.php:195
-#, php-format
-msgid ""
-"You can <a href=\"%s\">customize</a> the style of the message, the text and "
-"other options."
+msgid "Notify mobile browsers."
 msgstr ""
-"Du kan <a href=\"%s\">anpassa</a> utseendet på meddelandebalken, texten som "
-"visas samt andra inställningar."
 
-#: index.php:201
+#: index.php:181
+#, php-format
+msgid "The script and service is open source under the <a%s>MIT License</a>."
+msgstr ""
+
+#: index.php:189
 msgid "There are plugins for:"
 msgstr "Dessutom finns tredjepartsplugin för"
 
-#: index.php:228
+#: index.php:207
 msgid "Why you should tell users to update"
 msgstr "Varför uppmana användare att uppdatera webbläsare"
 
-#: index.php:231
+#: index.php:209
 msgid "Reduced development costs and time"
 msgstr "Minskade utvecklingskostnader"
 
-#: index.php:232
-msgid ""
-"Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr ""
-"Att anpassa webbsidor till föråldrade webbläsare är tidskrävande och dyrt."
+#: index.php:210
+msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
+msgstr "Moderna webbläsare låter dig använda nya webbtekniker såsom CSS3, SVG, HTML5, RSS, CSS-genererat innehåll samt responsiv design. Dessa tekniker ger dina besökare en bättre upplevelse på din webbsida."
 
-#: index.php:235
-msgid "Webdesign technologies and features"
-msgstr "Webbtekniker och funktioner"
-
-#: index.php:236
-msgid ""
-"There are all these great new web development standards and they are "
-"supported by modern browsers... but you may not use them."
-msgstr ""
-"Det finns många nya fantastiska webbstandarder som endast stöds av moderna "
-"webbläsare. Men du kan inte använda dem."
-
-#: index.php:238
-msgid ""
-"Newer browsers let you use more features and new technologies on your "
-"website, resulting in a better browsing experience for your users."
-msgstr ""
-"Moderna webbläsare låter dig använda nya webbtekniker såsom CSS3, SVG, "
-"HTML5, RSS, CSS-genererat innehåll samt responsiv design. Dessa tekniker ger"
-" dina besökare en bättre upplevelse på din webbsida."
-
-#: index.php:241
-msgid "Security and benefits for the user"
-msgstr "Säkerhet och fördelar för användaren"
-
-#: index.php:242
+#: index.php:211
 #, php-format
-msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a "
-"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
-"listed in this <a href=\"%s\">paper</a>."
+msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
-"En modern webbläsare medför otaliga fördelar: har högre säkerhet, är "
-"snabbare, har fler funktioner... Ta en titt på <a "
-"href=\"%s\">uppdateringssidan</a>. Säkerhetsrisken med en föråldrad "
-"webbläsare tas upp i <a href=\"%s\">detta dokument</a>."
 
-#: index.php:245
-msgid "The web has to evolve..."
-msgstr "Webben måste kunna utvecklas..."
-
-#: index.php:247
-msgid "But that's only possible if the browsers also evolve."
-msgstr "Men det är endast möjligt om även webbläsarna utvecklas."
-
-#: index.php:248
-msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
-" something new in the history of the web. If we take no action now, we will "
-"have to code websites like in 2001 even if it is 2011."
-msgstr ""
-"En stor marknadsandel hos en 8 år gammal webbläsare (Internet Explorer 6) är"
-" något nytt i internets historia. Om vi inte agerar nu, är vi tvungna att "
-"idag koda webbsidor på samma sätt som vi gjorde 2001."
-
-#: index.php:252
-msgid "Users don't oppose updating..."
-msgstr "Användare har inget emot att uppdatera..."
-
-#: index.php:253
-msgid ""
-"... they often just do not appreciate the need to update or the existence of"
-" the \"webbrowser\" as a software at all."
-msgstr ""
-"... det är bara det att de inte ser något behov av att uppdatera, de kanske "
-"inte ens ser webbläsaren som en programvara."
-
-#: index.php:256
-msgid "Help this project"
-msgstr "Hjälp detta projekt"
-
-#: index.php:259
-msgid "Participate!"
-msgstr "Delta!"
-
-#: index.php:260
-msgid ""
-"Include the notification code in your page to inform users about browser "
-"updates."
-msgstr ""
-"Infoga koden för meddelandebalken på din webbsida så du kan uppmana dina "
-"besökare att uppdatera sina webbläsare."
-
-#: index.php:263
-msgid "Spread the word!"
-msgstr "Sprid ordet!"
-
-#: index.php:264
-msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr ""
-"Berätta om denna webbsida för andra! På din blogg, på din webbsida, ..."
-
-#: index.php:267
-msgid "Translate this page"
-msgstr "Översätt denna sida"
-
-#: index.php:268
-msgid "Translate this page into your language."
-msgstr "Översätt denna sida till ditt språk."
-
-#: stat.php:9
-msgid "Statistics"
-msgstr "Statistik"
-
-#: stat.php:18
+#: index.php:214
 #, php-format
-msgid "<b>%s</b> sites are using this notification"
+msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""
-"<strong class=\"number\">%d</strong> webbsidor använder scriptet från "
-"Browser-Update.org."
 
-#: stat.php:22
-msgid "Browser updates"
-msgstr "Webbläsaruppdateringar"
-
-#: stat.php:60
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr ""
-"<strong class=\"number\">%d</strong> besökare har uppdaterat sin webbläsare."
-
-#: stat.php:92
-msgid "From"
-msgstr "Från"
-
-#: stat.php:92
-msgid "To"
-msgstr "Till"
-
-#: stat.php:92
-msgid "Amount"
-msgstr "Antal"
-
-#~ msgid "Customize and test"
-#~ msgstr "Anpassa och testa"
-
-#~ msgid "Test the script"
-#~ msgstr "Testa skriptet"
-
-#~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
-#~ " bar will always show up."
-#~ msgstr ""
-#~ "Om du öppnar din webbsida med <code>#test-bu</code> tillfogat i "
-#~ "adressfältet, kommer meddelandebalken att synas."
-
-#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-#~ msgstr "T.ex. code>http://browser-update.org/#test-bu</code>."
-
-#~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new browser"
-#~ " tab."
-#~ msgstr ""
-#~ "Försäkra dig om att sidan är laddad korrekt genom att öppna adressen i en ny"
-#~ " flik."
-
-#~ msgid "Options"
-#~ msgstr "Inställningar"
-
-#~ msgid "The following options can be passed to the script:"
-#~ msgstr "Följande inställningar kan skickas till skriptet:"
-
-#~ msgid "browser versions to notify"
-#~ msgstr "webbläsarversioner som ska notifieras"
-
-#~ msgid "atfer how many hours should the message reappear"
-#~ msgstr "antalet timmar efter vilka meddelandebalken åter ska dyka upp"
-
-#~ msgid "0 = show all the time"
-#~ msgstr "0 = alltid synlig"
-
-#~ msgid "callback function after the bar has appeared"
-#~ msgstr "callback-funktion efter att meddelandebalken dykt upp"
-
-#~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "ange språk för meddelandet, t.ex. \"sv\""
-
-#~ msgid "overrides the default detection"
-#~ msgstr "åsidosätter den automatiska detekteringen"
-
-#~ msgid "true = always show the bar (for testing)"
-#~ msgstr "true = meddelandebalken alltid synlig (för test)"
-
-#~ msgid "custom notification html text"
-#~ msgstr "html-text för ett anpassat meddelande"
-
-#~ msgid "open link in new window/tab"
-#~ msgstr "öppna länken i ett nytt fönster eller flik"
-
-#~ msgid "Edit the CSS"
-#~ msgstr "Ändringar i CSS-koden"
-
-#~ msgid "The following CSS rules are applied by the script. "
-#~ msgstr "Dessa CSS-regler tillämpas av skriptet"
-
-#~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some more "
-#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-#~ msgstr ""
-#~ "Du kan åsidosätta dem i din egen CSS-kod. För att göra det måste du "
-#~ "specificera dina CSS-regler: t.ex. <code>body .buorg {font-size:20px}</code>"
-
-#~ msgid "Browser-Update.org"
-#~ msgstr "Browser-Update.org"
-
-#~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Upplys dina besökare om webbläsaruppdateringar"
-
-#~ msgid "An initiative by web designers to inform users about browser-updates"
-#~ msgstr ""
-#~ "Ett initiativ av webbutvecklare för att informera om webbläsaruppdateringar"
-
-#~ msgid "Start"
-#~ msgstr "Förstasida"
-
-#~ msgid "Update Browser"
-#~ msgstr "Uppdatera din webbläsare"
-
-#~ msgid "Help"
-#~ msgstr "Hjälp"
-
-#~ msgid "Blog"
-#~ msgstr "Blogg"
-
-#~ msgid "<span class=\"workingonit\">work in progress</span>"
-#~ msgstr "<span class=\"workingonit\">under konstruktion</span>"
-
-#~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors are"
-#~ " using and how much users got proselyted: How many users updated or changed "
-#~ "their browser through your advice."
-#~ msgstr ""
-#~ "Du får tillgång till <a href=\"%s\">statistik</a> över vilka webbläsare dina"
-#~ " besökare använder samt andelen användare som bytt eller uppdaterat "
-#~ "webbläsare efter ditt råd."
-
-#~ msgid "Free webbrowsers"
-#~ msgstr "Gratis webbläsare"
-
-#~ msgid ""
-#~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr ""
-#~ "Dessa webbläsare är de senaste versionerna av de populäraste webbläsarna."
-
-#~ msgid "Just choose a browser to download from the original vendor's website:"
-#~ msgstr ""
-#~ "Vänligen välj en webbläsare att ladda ner från respektive utvecklares "
-#~ "webbsida:"
-
-#~ msgid "Widely-used open-source browser, highly extendable and customizable"
-#~ msgstr "Mycket populär öppen webbläsare som är snabb och anpassningsbar"
-
-#~ msgid "Download"
-#~ msgstr "Ladda ner"
-
-#~ msgid "Browser with many features"
-#~ msgstr "Webbläsare med många funktioner"
-
-#~ msgid "Google's browser with compact interface."
-#~ msgstr "Googles webbläsare med ett kompakt gränssnitt."
-
-#~ msgid "Automatically always up to date!"
-#~ msgstr "Uppdateras automatiskt"
-
-#~ msgid "Not available for your System."
-#~ msgstr "Inte tillgänglig för ditt system."
-
-#~ msgid "Please choose another browser."
-#~ msgstr "Vänligen välj en annan webbläsare."
-
-#~ msgid "Apple's fast browser"
-#~ msgstr "Apples snabba webbläsare"
-
-#~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Endast för Windows 7/Vista"
-
-#~ msgid "Windows built-in browser"
-#~ msgstr "Windows inbyggda webbläsare"
-
-#~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr ""
-#~ "Alla webbläsare har samma grundläggande funktioner och ett enkelt "
-#~ "gränssnitt."
-
-#~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws and"
-#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
-#~ "the features of some websites."
-#~ msgstr ""
-#~ "Den webbläsare som du använder är föråldrad. Den har kända <b>säkerhetshål "
-#~ "samt nackdelar</b> och <b>begränsad funktionalitet</b>. Du kommer inte att "
-#~ "kunna se alla funktioner på vissa webbsidor."
-
-#~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "Ett byte till en modern webbläsare ger dig flera fördelar:"
-
-#~ msgid "Security"
-#~ msgstr "Säkerhet"
-
-#~ msgid ""
-#~ "Newer browsers protect you better against scams, viruses, trojans, phishing "
-#~ "and other threats. They also fix security holes in your current browser!"
-#~ msgstr ""
-#~ "En modern webbläsare skyddar dig mot virus, bedragare, lösenordsfiske samt "
-#~ "mot andra hot. Dessutom avlägsnar den säkerhetshål från din nuvarande "
-#~ "webbläsare."
-
-#~ msgid "Speed"
-#~ msgstr "Hastighet"
-
-#~ msgid "Every new browser generation improves speed"
-#~ msgstr "Varje ny webbläsargeneration är snabbare än en äldre."
-
-#~ msgid "Compatibility"
-#~ msgstr "Kompatibilitet"
-
-#~ msgid "Websites using new technology will be displayed more correctly"
-#~ msgstr "Webbsidor som använder nya webbtekniker kommer att fungera korrekt."
-
-#~ msgid "Comfort &amp; better experience"
-#~ msgstr "En bättre upplevelse"
-
-#~ msgid ""
-#~ "With new features, extensions and better customisability, you will have a "
-#~ "more comfortable web-experience"
-#~ msgstr ""
-#~ "Med nya funktioner, tillägg samt bättre anpassningsbarhet kommer du att få "
-#~ "en mycket mer komfortabel upplevelse på webben"
-
-#~ msgid "Updating is easy, takes just a few minutes and is totally free."
-#~ msgstr ""
-#~ "Att uppdatera är lätt! Det tar endast några få minuter och är givetvis helt "
-#~ "gratis."
-
-#~ msgid "Why this website?"
-#~ msgstr "Varför en sådan här webbsida?"
-
-#~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
-#~ "want to bring the web further and help their visitors."
-#~ msgstr ""
-#~ "Denna webbsida är skapad av webbdesigners, webbutvecklare samt bloggare som "
-#~ "vill ta webben ett steg längre samt hjälpa sina besökare."
-
-#~ msgid ""
-#~ "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-#~ "advancement of the web</b> because of their limited features and many "
-#~ "<b>bugs</b>."
-#~ msgstr ""
-#~ "Föråldrade webbläsare är <b>ett säkerhetshot</b> och <b>förhindrar "
-#~ "utvecklingen av webben</b> på grund av deras begränsade funktionalitet samt "
-#~ "<b>buggar</b>."
-
-#~ msgid "\"I'm not able to update my browser\""
-#~ msgstr "\"Jag kan inte uppdatera min webbläsare\""
-
-#~ msgid ""
-#~ "If you are on a computer, that is maintained by a admin and you cannot "
-#~ "install a new browser, ask your admin about it."
-#~ msgstr ""
-#~ "Om du använder en dator som underhålls av en administratör, och du inte "
-#~ "själv kan installera en webbläsare: fråga din administratör om saken."
-
-#~ msgid ""
-#~ "If you can't change your browser because of compatibility issues, think "
-#~ "about installing a second browser for browsing and keep the old one for the "
-#~ "compatibility."
-#~ msgstr ""
-#~ "Om du inte kan byta webbläsare på grund av kompatibilitetsproblem, överväg "
-#~ "att installera en ny webbläsare för alldagligt surfande och behåll din gamla"
-#~ " för kompatibilitetens skull."

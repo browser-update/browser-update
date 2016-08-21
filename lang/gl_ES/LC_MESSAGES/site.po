@@ -1,634 +1,164 @@
-# Galician translations for browser-update package.
-# Copyright (C) 2012 THE browser-update'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the browser-update package.
-# Fran Dieguez <frandieguez@gnome.org>, 2012.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-06 17:09+0100\n"
-"PO-Revision-Date: 2014-01-06 14:50+0100\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
+"POT-Creation-Date: 2016-07-03 18:15+0200\n"
+"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: Galician\n"
+"Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: gl_ES\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: gl\n"
+"X-Crowdin-File: site.pot\n"
 
-#: contact.php:8
-msgid "Contact"
-msgstr "Contacto"
+#: index.php:24
+msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
+msgstr "Este servizo é unha oportunidade para informar aos seus visitantes dunha forma non intrusiva para que cambien a un navegador máis actualizado."
 
-#: index.php:33
-msgid ""
-"Browser-update.org is a tool to unobtrusively notify visitors that they "
-"should update their web browser in order to use your website."
+#: index.php:27
+msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
-"Este servizo é unha oportunidade para informar aos seus visitantes dunha "
-"forma non intrusiva para que cambien a un navegador máis actualizado."
 
-#: index.php:37
-msgid ""
-"Many internet users are still using very old, out-dated browsers – most of "
-"them for no actual reason. Switching to an newer browser is better for them "
-"and for you as a webdesigner."
-msgstr ""
-"Algúns usuarios de internet aínda usan navegadores web antigos e sen "
-"actualizar – a maioría deles sen unha razón de peso. Cambiar a un navegador "
-"máis actualizado é unha gran ventaxa para vostede como deseñador web."
+#: index.php:33 stat.php:17
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong> sitios web están usando o script de Browser-Update.org."
 
-#: index.php:46
+#: index.php:36 stat.php:20
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong> visitantes xa actualizaron o seu navegador web."
+
+#: index.php:40
 msgid "How it works"
 msgstr "Como funciona?"
 
-#: index.php:50
+#: index.php:43
 #, php-format
-msgid ""
-"Include our small javascript <a href=\"%s\">notification</a> on your website"
-msgstr ""
-"Inclúa a nosa pequena <a href=\"%s\">notificación</a> en javascript no seu "
-"sitio web"
+msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
+msgstr "Inclúa a nosa pequena <a href=\"%s\">notificación</a> en javascript no seu sitio web"
 
-#: index.php:53
-msgid ""
-"Visitors with out-dated browser will be informed by a small, undisturbing "
-"message box, that their browser is not up-to-date and it is recommended to "
-"update."
-msgstr ""
-"Informaráselle aos seus visitantes que usan un navegador sen actualizar "
-"mediante unha pequena e non intrusiva barra que o seu navegador non está "
-"actualizado e é recomendábel facelo."
+#: index.php:46
+msgid "Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update."
+msgstr "Informaráselle aos seus visitantes que usan un navegador sen actualizar mediante unha pequena e non intrusiva barra que o seu navegador non está actualizado e é recomendábel facelo."
 
-#: index.php:56
+#: index.php:47
 msgid "Try it out!"
 msgstr "Probar a barra de notificación!"
 
-#: index.php:58
+#: index.php:49
 #, php-format
-msgid ""
-"Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> "
-"and may <b>not display all features</b> of this and other websites. "
-"<a%s>Learn how to update your browser</a>"
-msgstr ""
-"O seu navegador (%s) está <b>desactualizado</b>. Ten coñecidos <b>fallos de "
-"seguranza</b> e podería <b>non mostrar tódalas características</b> deste e "
-"outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>"
+msgid "Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>"
+msgstr "O seu navegador (%s) está <b>desactualizado</b>. Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>"
 
-#: index.php:65
+#: index.php:53
 #, php-format
-msgid ""
-"By clicking the message, they will get to an <a href=\"%s\">info page with "
-"reasons why to update (or change) and a list of browsers</a> available for "
-"their system."
-msgstr ""
-"Ao premer na barra redirixiráselle a unha <a href=\"%s\">páxina de "
-"información con argumentos de porqué cambiar/actualizar e algunhas escollas "
-"de navegadores</a>."
+msgid "By clicking the message, they will get to an <a href=\"%s\">info page with reasons why to update (or change) and a list of browsers</a> available for their system."
+msgstr "Ao premer na barra redirixiráselle a unha <a href=\"%s\">páxina de información con argumentos de porqué cambiar/actualizar e algunhas escollas de navegadores</a>."
 
-#: index.php:69
+#: index.php:56
 msgid "If the visitor ignores the advice, it won't reappear for some time."
-msgstr ""
-"Se o visitante ignora a advertencia, a mensaxe non aparecerá de novo durante"
-" certo tempo."
+msgstr "Se o visitante ignora a advertencia, a mensaxe non aparecerá de novo durante certo tempo."
 
-#: index.php:72
+#: index.php:60
 msgid "Advantages and features"
 msgstr "Ventaxas e características"
 
-#: index.php:75
+#: index.php:63
 msgid "Unobtrusive"
 msgstr "Sutíl"
 
-#: index.php:76
-msgid ""
-"The user will be notified only once a day by default. The notification is "
-"small and does not block the user from using the site."
-msgstr ""
-"Informaráselle só unha vez ao usuario e non se lle voltará molestar de novo."
-" A barra de notificación é moi pequena e non afectará negativamente á "
-"experiencia de navegación."
+#: index.php:64
+msgid "The user will be notified only once a day by default. The notification is small and does not block the user from using the site."
+msgstr "Informaráselle só unha vez ao usuario e non se lle voltará molestar de novo. A barra de notificación é moi pequena e non afectará negativamente á experiencia de navegación."
 
-#: index.php:80
-msgid "Informative"
-msgstr "Informativa"
-
-#: index.php:81
-msgid ""
-"Tell the users that they are using an out-dated browser and that your "
-"website looks even better with a newer one."
-msgstr ""
-"Dille aos usuarios que están usando un navegador web desactualizado e que o "
-"seu sitio web verase mellor con un máis actual."
-
-#: index.php:85
-msgid "Idealistic"
-msgstr "Idealista"
-
-#: index.php:86
-msgid "Help evolve the web!"
-msgstr "Axuda a evolucionar o web!"
-
-#: index.php:87
-msgid "Support the standards-based web!"
-msgstr "Axuda a crear un web baseado en estándares!"
-
-#: index.php:88
-msgid "Support Open Source software projects!"
-msgstr "Axuda a proxectos de software de Fontes Abertas!"
-
-#: index.php:89
-msgid "Help your visitors!"
-msgstr "Axuda aos seus visitantes!"
-
-#: index.php:90
-msgid "Help increase security awareness!"
-msgstr "Axuda a incrementar a conciencia sobre a seguranza!"
-
-#: index.php:91
-msgid "Support your favorite webbrowser!"
-msgstr "Apoio o seu navegador favorito!"
-
-#: index.php:94
+#: index.php:67
 msgid "Low maintenance and up-to-date"
 msgstr "De baixo mantemento e actualizado"
 
-#: index.php:95
-msgid ""
-"We take care not to erroneously notify users by constantly tweaking and "
-"improving the detection code. Users are presented with an up-to-date list of"
-" browsers that are available for their system."
-msgstr ""
-"Se xurden novas versións de navegadores que non teñen asistencia polo seu "
-"fabricante no futuro, que teñan fallas de seguranza ou se mantiveran moi "
-"vellas durante moito tempo engadirémolas á lista automaticamente."
+#: index.php:68
+msgid "We take care not to erroneously notify users by constantly tweaking and improving the detection code. Users are presented with an up-to-date list of browsers that are available for their system."
+msgstr "Se xurden novas versións de navegadores que non teñen asistencia polo seu fabricante no futuro, que teñan fallas de seguranza ou se mantiveran moi vellas durante moito tempo engadirémolas á lista automaticamente."
 
-#: index.php:100
+#: index.php:71
 msgid "Customizable"
 msgstr "Personalizábel"
 
-#: index.php:101
-msgid ""
-"You can customize the browsers and versions to notify.<br/> In future "
-"releases you can also customize the text that should be shown, the frequency"
-" of the bar to appear and many other things."
-msgstr ""
-"Pode personalizar que navegadores e versións notificar.<br/>En futuras "
-"versións tamén poderá personalizar o texto que debería aparecer, a "
-"frecuencia na que aparece a barra e moitas máis cousas."
+#: index.php:72 index.php:185
+#, php-format
+msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
+msgstr "<a href=\"%s\">Personalizar</a> o estilo da mensaxe, o texto e outras opcións."
 
-#: index.php:106
+#: index.php:75
 msgid "Localized"
 msgstr "Internacionalizado"
 
-#: index.php:107
+#: index.php:76
 msgid "The message is automatically displayed in the user's language."
 msgstr "A mensaxe mostrarase automaticamente no idioma do usuario."
 
-#: index.php:112
+#: index.php:80
 msgid "Install the browser update notification on your site"
 msgstr "Instale a notificación no seu sitio web"
 
-#: index.php:114
+#: index.php:82
 msgid "Just include this code anywhere in the source of your page."
-msgstr ""
-"Aquí pode obter o código a incluír no seu sitio web. Simplemente escríbao en"
-" calquera lugar do código fonte da súa páxina."
+msgstr "Aquí pode obter o código a incluír no seu sitio web. Simplemente escríbao en calquera lugar do código fonte da súa páxina."
 
-#: index.php:119
+#: index.php:98
 msgid "The following browsers will be notified:"
 msgstr "Os seguintes navegadores web serán informados:"
 
-#: index.php:166
-msgid ""
-"Google Chrome will automatically itself and is therefor always up to date"
+#: index.php:101
+#, php-format
+msgid "older than %d months (currently %s)"
 msgstr ""
-"Google Chrome actualízase a si mesmo automaticamente polo que sempre está "
-"actualizado"
 
-#: index.php:172
-msgid ""
-"<b>Notify recommended set of browsers and adjust it automatically over "
-"time:</b>If a browser is no longer supported by the vendor or has security "
-"vulnerabilities, it will be added to the set."
+#: index.php:159
+msgid "Also notify all browser versions with security vulnerabilities."
 msgstr ""
-"<b>Notifica aos navegadores recomendados e axústao automaticamente no "
-"tempo:</b> Se un navegador non ten asistencia polo fabricante ou ten "
-"vulnerabilidades de seguranza, engadirase á lista."
+
+#: index.php:165
+msgid "Also notify all browsers that are not supported by the vendor anymore."
+msgstr ""
 
 #: index.php:177
-msgid "Your Code"
-msgstr "O seu código"
-
-#: index.php:195
-#, php-format
-msgid ""
-"You can <a href=\"%s\">customize</a> the style of the message, the text and "
-"other options."
+msgid "Notify mobile browsers."
 msgstr ""
-"<a href=\"%s\">Personalizar</a> o estilo da mensaxe, o texto e outras "
-"opcións."
 
-#: index.php:201
+#: index.php:181
+#, php-format
+msgid "The script and service is open source under the <a%s>MIT License</a>."
+msgstr ""
+
+#: index.php:189
 msgid "There are plugins for:"
 msgstr "Tamén pode empregar engadidos de terceiros para:"
 
-#: index.php:228
+#: index.php:207
 msgid "Why you should tell users to update"
 msgstr "Porque debería dicirlle aos usuarios que se actualicen?"
 
-#: index.php:231
+#: index.php:209
 msgid "Reduced development costs and time"
 msgstr "Reducción de custos e tempo de desenvolvemento"
 
-#: index.php:232
-msgid ""
-"Optimizing websites for old browsers is time consuming and thus expensive."
-msgstr ""
-"A optimización de sitios web para navegadores antigos é unha perda de tempo "
-"e polo tanto moi caro."
+#: index.php:210
+msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
+msgstr "Só os navegadores actualizados permitiranlle usar máis características e tecnoloxías novas (CSS3, SVG, HTML5, RSS, Contido xerado por CSS, deseños flexíbeis), o que resulta nunha mellor experiencia de navegación para os seus usuarios."
 
-#: index.php:235
-msgid "Webdesign technologies and features"
-msgstr "Tecnoloxías e características de deseño web"
-
-#: index.php:236
-msgid ""
-"There are all these great new web development standards and they are "
-"supported by modern browsers... but you may not use them."
-msgstr ""
-"Hai incríbeis estándares de desenvolvemento web novos e que só se admiten en"
-" navegadores modernos pero se non están actualizados non poderá usalos."
-
-#: index.php:238
-msgid ""
-"Newer browsers let you use more features and new technologies on your "
-"website, resulting in a better browsing experience for your users."
-msgstr ""
-"Só os navegadores actualizados permitiranlle usar máis características e "
-"tecnoloxías novas (CSS3, SVG, HTML5, RSS, Contido xerado por CSS, deseños "
-"flexíbeis), o que resulta nunha mellor experiencia de navegación para os "
-"seus usuarios."
-
-#: index.php:241
-msgid "Security and benefits for the user"
-msgstr "Seguranza e beneficios para os usuarios"
-
-#: index.php:242
+#: index.php:211
 #, php-format
-msgid ""
-"Numerous benefits: security, speed, features, ... Look at the <a "
-"href=\"%s\">update page</a>. The security-threats of outdates browsers are "
-"listed in this <a href=\"%s\">paper</a>."
+msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
-"Existen numerosos beneficios: seguranza, velocidade, características, ... "
-"Bote unha ollada á <a href=\"%s\">páxina de actualización</a>. Os problemas "
-"de seguranza dos navegadores antigos móstranse neste <a "
-"href=\"%s\">«paper»</a>."
 
-#: index.php:245
-msgid "The web has to evolve..."
-msgstr "O web ten que evolucionar..."
-
-#: index.php:247
-msgid "But that's only possible if the browsers also evolve."
-msgstr "Pero isto non é posíbel se os navegadores non o fan tamén."
-
-#: index.php:248
-msgid ""
-"The strong market share of a 8 years old webbrowser (Internet Explorer 6) is"
-" something new in the history of the web. If we take no action now, we will "
-"have to code websites like in 2001 even if it is 2011."
-msgstr ""
-"A forte cota de mercado dun antigo navegador web de 8 anos (Internet "
-"Explorer 6) é algo novo na historia do web. Se non facemos nada, terá que "
-"programar sitios web como en 20011 incluso estando no 2011."
-
-#: index.php:252
-msgid "Users don't oppose updating..."
-msgstr "Os usuarios non se opoñen ás actualizacións..."
-
-#: index.php:253
-msgid ""
-"... they often just do not appreciate the need to update or the existence of"
-" the \"webbrowser\" as a software at all."
-msgstr ""
-"... simplemente non saben que teñen que actualizar ou mesmo non saben da "
-"existencia do «navegador web» como un software de seu."
-
-#: index.php:256
-msgid "Help this project"
-msgstr "Axude a este proxecto"
-
-#: index.php:259
-msgid "Participate!"
-msgstr "Participe!"
-
-#: index.php:260
-msgid ""
-"Include the notification code in your page to inform users about browser "
-"updates."
-msgstr ""
-"Inclúa o código de notificación na súa páxina web para informarlle aos seus "
-"usuarios das actualizacións de software."
-
-#: index.php:263
-msgid "Spread the word!"
-msgstr "Difúndao!"
-
-#: index.php:264
-msgid "Tell others about this initiative! In your blog, on your webpage, ..."
-msgstr ""
-"Comente a outros usuarios esta iniciativa! No seu blogue, na súa páxina web,"
-" ..."
-
-#: index.php:267
-msgid "Translate this page"
-msgstr "Axude a traducir esta páxina"
-
-#: index.php:268
-msgid "Translate this page into your language."
-msgstr "Traduza esta páxina ao seu idioma."
-
-#: stat.php:9
-msgid "Statistics"
-msgstr "Estatísticas"
-
-#: stat.php:18
+#: index.php:214
 #, php-format
-msgid "<b>%s</b> sites are using this notification"
+msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""
-"<strong class=\"number\">%d</strong> sitios web están usando o script de "
-"Browser-Update.org."
 
-#: stat.php:22
-msgid "Browser updates"
-msgstr "Actualizacións de navegador web"
-
-#: stat.php:60
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr ""
-"<strong class=\"number\">%d</strong> visitantes xa actualizaron o seu "
-"navegador web."
-
-#: stat.php:92
-msgid "From"
-msgstr "Desde"
-
-#: stat.php:92
-msgid "To"
-msgstr "A"
-
-#: stat.php:92
-msgid "Amount"
-msgstr "Cantidade"
-
-#~ msgid "Customize and test"
-#~ msgstr "Personalizar e probar"
-
-#~ msgid "Test the script"
-#~ msgstr "Probar o script"
-
-#~ msgid ""
-#~ "If you open your website with <code>#test-bu</code> appended to the url, the"
-#~ " bar will always show up."
-#~ msgstr ""
-#~ "Se abre o seu sitio web con <code>#test-bu<code> ao final do enderezo, a "
-#~ "barra sempre aparecerá."
-
-#~ msgid "Example: <code>http://browser-update.org/#test-bu</code>."
-#~ msgstr "Exemplo: <code>http://browser-update.org/#test-bu</code>."
-
-#~ msgid ""
-#~ "Make sure the page is properly reloaded by opening the url in an new browser"
-#~ " tab."
-#~ msgstr ""
-#~ "Asegúrese qeu a páxina recargouse correctamente abrindo a url nunha nova "
-#~ "lapela do navegador."
-
-#~ msgid "Options"
-#~ msgstr "Opcións"
-
-#~ msgid "The following options can be passed to the script:"
-#~ msgstr "Pode pasarlle as seguintes opcións ao script:"
-
-#~ msgid "browser versions to notify"
-#~ msgstr "versións do navegador nas que mostrar a mensaxe"
-
-#~ msgid "atfer how many hours should the message reappear"
-#~ msgstr "horas despois das que a mensaxe debería aparecer de novo"
-
-#~ msgid "0 = show all the time"
-#~ msgstr "0 = mostrar sempre"
-
-#~ msgid "callback function after the bar has appeared"
-#~ msgstr "función de «callback» á que invocar logo de que abarra apareza"
-
-#~ msgid "set a language for the message, e.g. \"en\""
-#~ msgstr "estabelece o idioma para a mensaxe, p.ex. «gl»"
-
-#~ msgid "overrides the default detection"
-#~ msgstr "omite a detección por omisión"
-
-#~ msgid "true = always show the bar (for testing)"
-#~ msgstr "true = mostrar sempre a barra (para realizar probas)"
-
-#~ msgid "custom notification html text"
-#~ msgstr "texto personalizado en html para a notificación"
-
-#~ msgid "open link in new window/tab"
-#~ msgstr "abrir ligazón nunha nova xanela/lapela"
-
-#~ msgid "Edit the CSS"
-#~ msgstr "Editar o CSS"
-
-#~ msgid "The following CSS rules are applied by the script. "
-#~ msgstr "O script aplicará as seguintes regras CSS."
-
-#~ msgid ""
-#~ "You can overwrite them in your own CSS. To do so you need to add some more "
-#~ "specifity to the css-rules: e.g.  <code>body .buorg {font-size:20px}</code>"
-#~ msgstr ""
-#~ "Pode sobrescribilas no seu propio CSS. Para facelo debe engadir algo máis de"
-#~ " especificidade ás regras CSS: p.ex.  <code>body .buorg {font-"
-#~ "size:20px}</code>"
-
-#~ msgid "Browser-Update.org"
-#~ msgstr "Browser-Update.org"
-
-#~ msgid "Inform your visitors about browser-updates"
-#~ msgstr "Informe aos seus visitantes sobre as actualizacións do navegador"
-
-#~ msgid "An initiative by webdesigners to inform users about browser-updates"
-#~ msgstr ""
-#~ "Unha iniciativa de deseñadores web para informar aos usuarios sobre "
-#~ "actualizacións dos navegadores"
-
-#~ msgid "Start"
-#~ msgstr "Comezar"
-
-#~ msgid "Update Browser"
-#~ msgstr "Actualizar navegador web"
-
-#~ msgid "Help"
-#~ msgstr "Axuda"
-
-#~ msgid "Supporters"
-#~ msgstr "Apoios"
-
-#~ msgid "Blog"
-#~ msgstr "Blog"
-
-#~ msgid "<span class=\"workingonit\">work in progress</span>"
-#~ msgstr "<span class=\"workingonit\">traballo en progreso</span>"
-
-#~ msgid ""
-#~ "You get <a href=\"%s\">statistics</a> about which browsers your visitors are"
-#~ " using and how much users got proselyted: How many users updated or changed "
-#~ "their browser through your advice."
-#~ msgstr ""
-#~ "Obterá <a href=\"%s\">estatísticas</a> sobre que navegadores usan os seus "
-#~ "visitantes e cantos usuarios foron proselitizados: cantos usuarios anovaron "
-#~ "ou cambiar o seu navegador mediante esta advertencia."
-
-#~ msgid "Free webbrowsers"
-#~ msgstr "Navegadores web libres"
-
-#~ msgid ""
-#~ "These browsers are the newest versions of the most used free web browsers."
-#~ msgstr ""
-#~ "Estes navegadores son as versións máis actualizadas dos navegadores web "
-#~ "libres máis usados."
-
-#~ msgid "Just choose a browser to download from the original vendor's website:"
-#~ msgstr ""
-#~ "Simplemente escolla un navegador web para descargar desde a páxina orixinal:"
-
-#~ msgid "Widely-used open-source browser, highly extendable and customizable"
-#~ msgstr ""
-#~ "Navegadores web de fontes abertas amplamente usados, incribelmente "
-#~ "extensíbeis e personalizábeis."
-
-#~ msgid "Download"
-#~ msgstr "Descargar"
-
-#~ msgid "Browser with many features"
-#~ msgstr "Navegador con moitas características"
-
-#~ msgid "Google's browser with compact interface."
-#~ msgstr "O navegador web de Google cunha interface compacta."
-
-#~ msgid "Automatically always up to date!"
-#~ msgstr "Actualízase automaticamente!"
-
-#~ msgid "Not available for your System."
-#~ msgstr "Non dispoñíbel para o seu sistema operativo."
-
-#~ msgid "Please choose another browser."
-#~ msgstr "Seleccione outro navegador web."
-
-#~ msgid "Apple's fast browser"
-#~ msgstr "O navegador web rápido de Apple"
-
-#~ msgid "Only for Windows Vista or 7."
-#~ msgstr "Só dispoñíbel para Windows Vista ou 7."
-
-#~ msgid "Windows built-in browser"
-#~ msgstr "O navegador integrado de Windows"
-
-#~ msgid "All browsers have the same basic features and easy interface."
-#~ msgstr ""
-#~ "Tódolos navegadores web teñen unhas características básicas semellantes e "
-#~ "unha interface doada de usar."
-
-#~ msgid ""
-#~ "The browser you are using is out of date. It has known <b>security flaws and"
-#~ " disadvantages</b> and a <b>limited feature set</b>. You will not see all "
-#~ "the features of some websites."
-#~ msgstr ""
-#~ "O navegador que está usando está desactualizado. Ten coñecidas <b>fallas de "
-#~ "seguranza e desvantaxas</b> e un <b>conxunto de características "
-#~ "limitado</b>. Pode que non poida desfrutar de tódalas características "
-#~ "dalgúns sitios web."
-
-#~ msgid "Switching to a newer browser could give you a lot of advantages:"
-#~ msgstr "Se cambia a un navegador web máis actualizado obterá moitas vantaxas:"
-
-#~ msgid "Security"
-#~ msgstr "Seguranza"
-
-#~ msgid ""
-#~ "Newer browsers protect you better against scams, viruses, trojans, phishing "
-#~ "and other threats. They also fix security holes in your current browser!"
-#~ msgstr ""
-#~ "Os navegadores web actualizados protéxenlle mellor fronte a suplantacións, "
-#~ "virus, troianos, ataques de suplantación de identidade e outros engados. "
-#~ "Tamén arranxan ocos de seguranza no seu navegador web!"
-
-#~ msgid "Speed"
-#~ msgstr "Velocidade"
-
-#~ msgid "Every new browser generation improves speed"
-#~ msgstr "Cada nova xeración dos navegadores web mellora a velocidade"
-
-#~ msgid "Compatibility"
-#~ msgstr "Compatibilidade"
-
-#~ msgid "Websites using new technology will be displayed more correctly"
-#~ msgstr "Os sitios web que usan novas tecnoloxías mostraranse mellor"
-
-#~ msgid "Comfort &amp; better experience"
-#~ msgstr "Confort e mellor experiencia"
-
-#~ msgid ""
-#~ "With new features, extensions and better customisability, you will have a "
-#~ "more comfortable web-experience"
-#~ msgstr ""
-#~ "Con novas características, extensións e mellor personalización, terá unha "
-#~ "máis confortábel experiencia web."
-
-#~ msgid "Updating is easy, takes just a few minutes and is totally free."
-#~ msgstr ""
-#~ "Actualizar o seu navegador é moi doado, lévalle só uns poucos minutos e é "
-#~ "totalmente de balde."
-
-#~ msgid "Why this website?"
-#~ msgstr "Porque existe este sitio web?"
-
-#~ msgid ""
-#~ "This website is an initiative by webdesigners, webmasters and bloggers who "
-#~ "want to bring the web further and help their visitors."
-#~ msgstr ""
-#~ "Este sitio é unha iniciativa de deseñadores web, administradores e bloggers "
-#~ "que queren facer evolucionar o web e axudar aos seus visitantes."
-
-#~ msgid ""
-#~ "Outdated browsers are a <b>security threat</b> and are <b>blocking the "
-#~ "advancement of the web</b> because of their limited features and many "
-#~ "<b>bugs</b>."
-#~ msgstr ""
-#~ "Os navegadores web desactualizacións son un <b>fío de seguranza</b> e "
-#~ "<b>bloquean a evolución do web</b> debido ás súas características limitadas "
-#~ "e numerosos <b>erros</b>."
-
-#~ msgid "\"I'm not able to update my browser\""
-#~ msgstr "\"Non son capaz a actualizar o meu navegador\""
-
-#~ msgid ""
-#~ "If you are on a computer, that is maintained by a admin and you cannot "
-#~ "install a new browser, ask your admin about it."
-#~ msgstr ""
-#~ "Se o seu computador está xestioando por un administrador e non pode instar "
-#~ "un novo navegador web, pregúntelle ao seu administrador para facelo."
-
-#~ msgid ""
-#~ "If you can't change your browser because of compatibility issues, think "
-#~ "about installing a second browser for browsing and keep the old one for the "
-#~ "compatibility."
-#~ msgstr ""
-#~ "Se non pode cambiar o seu navegador por problemas de compatibilidade, probe "
-#~ "a instalar un segundo navegador web para navegar de cotío e manteña o antigo"
-#~ " para compatibilidade."
