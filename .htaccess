@@ -1,11 +1,21 @@
 RewriteEngine On
 
-#RewriteCond %{HTTP_HOST} !^browser-update\.org$
-#RewriteRule ^/?(.*)$ http://browser-update.org/$1 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/new/?([a-zA-Z0-9_-]+)\.html$ $1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/new/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,QSA]
+
+RewriteRule ^/new/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
+
+
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/update\.html$ update-browser.php?lang=$1 [L,QSA]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?update\.html$ update-browser.php [L,QSA]
@@ -18,9 +28,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/([a-zA-Z0-9_-]+)\.html$ $3.php?lang=$1 [L,QSA]
 
-
-
-
 RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
 
@@ -31,14 +38,14 @@ AddCharset utf-8 .js
 #4 days cache for the files
 
 <FilesMatch "update.js">
-  Header set Cache-Control "public, max-age=259200"
-  ExpiresDefault "access plus 3 days"
+  Header set Cache-Control "public, max-age=86400"
+  ExpiresDefault "access plus 1 day"
   SetOutputFilter DEFLATE
 </FilesMatch>
 
 <FilesMatch "update.min.js">
-  Header set Cache-Control "public, max-age=259200"
-  ExpiresDefault "access plus 3 days"
+  Header set Cache-Control "public, max-age=86400"
+  ExpiresDefault "access plus 1 day"
   SetOutputFilter DEFLATE
 </FilesMatch>
 
@@ -50,7 +57,13 @@ AddCharset utf-8 .js
   SetOutputFilter DEFLATE
 </FilesMatch>
 
-<FilesMatch "dialog-warning.gif">
-  Header set Cache-Control "public, max-age=259200"
+<FilesMatch ".png">
+  Header set Cache-Control "public, max-age=864000"
 </FilesMatch>
 
+
+<FilesMatch "/new/">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</FilesMatch>
