@@ -115,7 +115,8 @@ function printolder($months,$version) {
         <label for="f-f">Firefox</label>  
         <select id="f-f" onchange="code()">
             <option value="-2" selected><?php printolder(3, currentv("f")-2)?></option>
-            <option value="-4" selected><?php printolder(6, currentv("f")-4)?></option>            
+            <option value="-4" selected><?php printolder(6, currentv("f")-4)?></option>
+            <option value="-6" selected><?php printolder(9, currentv("f")-6)?></option>
             <option value="40">&lt;= 40</option>
             <option value="35">&lt;= 35</option>
             <option value="30">&lt;= 30</option>
@@ -126,7 +127,8 @@ function printolder($months,$version) {
         <label for="f-o">Opera</label> 
         <select id="f-o" onchange="code()">
             <option value="-2" selected><?php printolder(3, currentv("o")-2)?></option>
-            <option value="-4" selected><?php printolder(6, currentv("o")-4)?></option>            
+            <option value="-4" selected><?php printolder(6, currentv("o")-4)?></option>
+            <option value="-6" selected><?php printolder(9, currentv("o")-6)?></option>
             <option value="30">&lt;= 30</option>
             <option value="25">&lt;= 25</option>
             <option value="20">&lt;= 20</option>
@@ -147,6 +149,7 @@ function printolder($months,$version) {
         <select id="f-c" onchange="code()">
             <option value="-2" selected><?php printolder(3, currentv("c")-2)?></option>
             <option value="-4" selected><?php printolder(6, currentv("c")-4)?></option>            
+            <option value="-6" selected><?php printolder(9, currentv("c")-6)?></option>   
             <option value="50">&lt;= 50</option>
             <option value="40">&lt;= 40</option>
             <option value="30">&lt;= 30</option>
@@ -162,23 +165,26 @@ function printolder($months,$version) {
 <div>
     <input type="checkbox" checked="checked" id="opunsupported" onchange="code();"/>
     <label for="unsupported">
-    <?php echo T_('Also notify all browsers versions which are not supported by the vendor anymore.')?>
+    <?php echo T_('Also notify all browsers that are not supported by the vendor anymore.')?>
     </label>
 </div>
+<!--
 <div>
+    
     <input type="checkbox" checked="checked" id="opnewos" onchange="code();"/>
     <label for="opnewos">
-    <?php echo T_('Only notify users that can install a new browser without having to update their operating system.')?>
+    <?php /*echo T_('Only notify users that can install a new browser without having to update their operating system.')*/?>
     </label>
 </div>
+-->
 <div>
     <input type="checkbox" checked="checked" id="opmobile" onchange="code();"/>
     <label for="opmobile">
-    <?php echo T_('Notify mobile browsers versions as well.')?>
+    <?php echo T_('Notify mobile browsers.')?>
     </label>
 </div>
 <p>
-    <?php echo sprintf(T_('The script is open source under the <a%s>MIT License</a>.'),' href="https://github.com/browser-update/browser-update/blob/master/LICENSE.txt"')?>
+    <?php echo sprintf(T_('The script and service is open source under the <a%s>MIT License</a>.'),' href="https://github.com/browser-update/browser-update/blob/master/LICENSE.txt"')?>
 </div>
 
 <p>
@@ -223,7 +229,6 @@ function $buo_f(){
 };
 try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
 catch(e){window.attachEvent("onload", $buo_f)}
-code();
 </script>
 	
 <style>
@@ -244,10 +249,14 @@ function _get(name,defaultval) {
     else
         return "";
 }
+function getomat(id) {
+    return document.getElementById('f-'+ id).value;
+}
+//+_get("newos",true)
 function code() {
     var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'},';
     var code = 'script \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("newos",true)+_get("mobile",true)+'c:2}; \n\
+var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'c:3}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\
