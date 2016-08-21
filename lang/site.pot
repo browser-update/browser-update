@@ -146,23 +146,17 @@ msgstr ""
 
 #: index.php:165
 msgid ""
-"Also notify all browsers versions which are not supported by the vendor "
+"Also notify all browsers that are not supported by the vendor "
 "anymore."
 msgstr ""
 
-#: index.php:171
-msgid ""
-"Only notify users that can install a new browser without having to update "
-"their operating system."
-msgstr ""
-
 #: index.php:177
-msgid "Notify mobile browsers versions as well."
+msgid "Notify mobile browsers."
 msgstr ""
 
 #: index.php:181
 #, php-format
-msgid "The script is open source under the <a%s>MIT License</a>."
+msgid "The script and service is open source under the <a%s>MIT License</a>."
 msgstr ""
 
 #: index.php:189
@@ -194,34 +188,4 @@ msgstr ""
 msgid ""
 "Help this project by <a%s>using the update-notification</a> on your site, <a"
 "%s>sharing</a> or <a%s>translating</a> this page."
-msgstr ""
-
-#: stat.php:7 statx.php:14
-msgid "Statistics"
-msgstr ""
-
-#: stat.php:25 statx.php:52
-msgid "Browser updates"
-msgstr ""
-
-#: stat.php:207 statx.php:239
-msgid "From"
-msgstr ""
-
-#: stat.php:207 statx.php:239
-msgid "To"
-msgstr ""
-
-#: statx.php:41
-#, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> sites are using the Browser-Update.org "
-"script."
-msgstr ""
-
-#: statx.php:46
-#, php-format
-msgid ""
-"<strong class=\"number\">%d</strong> visitors have already upgraded their "
-"browser."
 msgstr ""
