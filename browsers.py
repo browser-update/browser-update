@@ -23,9 +23,9 @@ def get_version(wikiname, regex):
     return version
 #%%
 browsers_d={
-    "c":51,
-    "f":46,
-    "o":37,
+    "c":52,
+    "f":48,
+    "o":38,
     "i":11,
     "s":9.1
 }
@@ -37,6 +37,7 @@ browsers_d["s"]=get_version("Safari_(web_browser)",r"Stable release[^\d]{0,20}(\
 browsers_d["pale"]=get_version("Pale_Moon_(web_browser)",r"Stable release[^\d]{0,20}(\d*\.*\d*)")
 browsers_d["yandex"]=get_version("Yandex_Browser",r"Stable release.{0,50}Windows[^\d]{0,20}(\d*\.*\d*)")
 browsers_d["vivaldi"]=get_version("Vivaldi_(web_browser)",r"Stable release[^\d]{0,20}(\d*\.*\d*)")
+browsers_d
 #%%
 
 browsers_m={
