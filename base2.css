@@ -50,6 +50,7 @@ body,html {
         margin-left: 10px;
         margin-right: 10px;
         min-width: 200px;
+        padding-top: 0;
     }
     body .adc {
         float: none;
@@ -95,6 +96,20 @@ body,html {
         margin-left: -36px;
         margin-top: 8px;
     }
+    
+    html body .men {
+        position: absolute;
+        top: auto;
+        bottom: -40px;
+        right: auto;
+    }
+    .header, .innerhead {
+        position: static;
+    }
+    body {
+        position: relative;
+        margin-bottom: 45px;
+    }    
 }
 
  
