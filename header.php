@@ -12,15 +12,13 @@
 
     <meta name="robots" content="index,follow" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="/basenew.css" type="text/css" />
+    <link rel="stylesheet" href="/base2.css" type="text/css" />
     <!--[if lte IE 7]>
     <link rel="stylesheet" href="/drecksie.css" type="text/css" />
     <![endif]-->
     <!--[if lte IE 6]>
     <link rel="stylesheet" href="/drecksie6.css" type="text/css" />
-    <![endif]-->    
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/png"/>
-    <link rel="icon" href="/img/favicon.png" type="image/png"/>
+    <![endif]-->
     <script type="text/javascript" src="/base.js">	</script>
 </head>
 <body><div class="header">

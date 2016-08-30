@@ -114,9 +114,10 @@ function printolder($months,$version) {
     <li>
         <label for="f-f">Firefox</label>  
         <select id="f-f" onchange="code()">
-            <option value="-2" selected><?php printolder(3, currentv("f")-2)?></option>
+            <option value="-2"><?php printolder(3, currentv("f")-2)?></option>
             <option value="-4" selected><?php printolder(6, currentv("f")-4)?></option>
-            <option value="-6" selected><?php printolder(9, currentv("f")-6)?></option>
+            <option value="-6" ><?php printolder(9, currentv("f")-6)?></option>
+            <option value="-8" ><?php printolder(12, currentv("f")-8)?></option>
             <option value="40">&lt;= 40</option>
             <option value="35">&lt;= 35</option>
             <option value="30">&lt;= 30</option>
@@ -126,9 +127,10 @@ function printolder($months,$version) {
     <li>
         <label for="f-o">Opera</label> 
         <select id="f-o" onchange="code()">
-            <option value="-2" selected><?php printolder(3, currentv("o")-2)?></option>
+            <option value="-2"><?php printolder(3, currentv("o")-2)?></option>
             <option value="-4" selected><?php printolder(6, currentv("o")-4)?></option>
-            <option value="-6" selected><?php printolder(9, currentv("o")-6)?></option>
+            <option value="-6"><?php printolder(9, currentv("o")-6)?></option>
+            <option value="-8"><?php printolder(12, currentv("o")-8)?></option>
             <option value="30">&lt;= 30</option>
             <option value="25">&lt;= 25</option>
             <option value="20">&lt;= 20</option>
@@ -147,9 +149,10 @@ function printolder($months,$version) {
     <li class="browser">
         <label for="f-c">Chrome</label>
         <select id="f-c" onchange="code()">
-            <option value="-2" selected><?php printolder(3, currentv("c")-2)?></option>
+            <option value="-2"><?php printolder(3, currentv("c")-2)?></option>
             <option value="-4" selected><?php printolder(6, currentv("c")-4)?></option>            
-            <option value="-6" selected><?php printolder(9, currentv("c")-6)?></option>   
+            <option value="-6"><?php printolder(9, currentv("c")-6)?></option>
+            <option value="-8"><?php printolder(12, currentv("c")-8)?></option>  
             <option value="50">&lt;= 50</option>
             <option value="40">&lt;= 40</option>
             <option value="30">&lt;= 30</option>
@@ -221,7 +224,7 @@ function printolder($months,$version) {
 </div>
 
 <script>
-var $buoop = {c:2};
+var $buoop = {c:4};
 function $buo_f(){ 
  var e = document.createElement("script"); 
  e.src = "//browser-update.org/update.min.js"; 
@@ -256,7 +259,7 @@ function getomat(id) {
 function code() {
     var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'},';
     var code = 'script \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'c:3}; \n\
+var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'c:4}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\

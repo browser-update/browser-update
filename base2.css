@@ -47,8 +47,8 @@ body,html {
 @media only screen and (max-width: 600px) {
     body #co {
         width:auto;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin-left: 10px;
+        margin-right: 10px;
         min-width: 200px;
     }
     body .adc {
@@ -89,6 +89,11 @@ body,html {
     body .numbs p {
         width: auto;
         display: block;
+    }
+    
+    .advantages li div {
+        margin-left: -36px;
+        margin-top: 8px;
     }
 }
 
