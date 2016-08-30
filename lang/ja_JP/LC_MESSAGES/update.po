@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"PO-Revision-Date: 2016-08-21 14:06-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: header.php:5 header.php:34
 msgid "Update your Browser"
-msgstr ""
+msgstr "ブラウザを更新"
 
 #: header.php:29
 msgid "An initiative by websites to inform users to update their web browser"
@@ -26,7 +26,7 @@ msgstr "ブラウザーアップデート利用者へお知らせするための
 
 #: header.php:31 update-browser.php:192
 msgid "About the Project"
-msgstr ""
+msgstr "プロジェクトについて"
 
 #: header.php:35
 msgid "Statistics"
@@ -42,24 +42,24 @@ msgstr "コンタクト"
 
 #: update-browser.php:73
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "ブラウザが最新バージョンへ更新されています。"
 
 #: update-browser.php:83
 msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr ""
+msgstr "ブラウザが最新バージョンでありません。以下の最新バージョンで、無料で、素晴らしいブラウザをダウンロードしてください。"
 
 #: update-browser.php:104 update-browser.php:118
 msgid "Most recent version not available for your system."
-msgstr ""
+msgstr "お客様のシステムでは最新バージョンは実装不可能です。"
 
 #: update-browser.php:104 update-browser.php:118
 msgid "Please choose another browser."
-msgstr ""
+msgstr "別なブラウザを選択してください。"
 
 #: update-browser.php:146
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
+msgstr "<a href=\"%s\">セキュリティ</a>、<a href=\"%s\">スピード</a>、<a href=\"%s\">使いやすさ</a>、<a href=\"%s\">楽しさ</a>を増すために。"
 
 #: update-browser.php:156
 #, php-format
@@ -68,7 +68,7 @@ msgstr "お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョ
 
 #: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "なぜ最新バージョンのブラウザが必要なのか？"
 
 #: update-browser.php:170
 msgid "Security"
@@ -104,7 +104,7 @@ msgstr "新しい機能とより良い拡張機能を備えたブラウザーを
 
 #: update-browser.php:189
 msgid "Why this website?"
-msgstr ""
+msgstr "なぜこのウェブサイトを？"
 
 #: update-browser.php:191
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
@@ -125,5 +125,5 @@ msgstr "新しいブラウザーを右のページから選んで下さい。"
 
 #: update-browser.php:209
 msgid "This website uses cookies"
-msgstr ""
+msgstr "このウェブサイトはクッキーを使用します"
 
