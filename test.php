@@ -22,15 +22,17 @@ include("header.php");
 
 
 
+<script src="update.js"></script>
 
 <div class="noti">
     <p>User-Agent-String:<?php echo $_SERVER['HTTP_USER_AGENT'];?></p>
-    <p id="det"></p>
-	<p>Lang: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];?></p>
+    <p>Lang: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];?></p>
+    Detected Browser as:
+    <p id="det"></p>        
 </div>
 
 <script type="text/javascript">
-var br=getBrowser();
+var br=$bu_getBrowser();
 var aaa="";
 if (br.donotnotify)
     aaa="<br/>Not notified because: "+ br.donotnotify;

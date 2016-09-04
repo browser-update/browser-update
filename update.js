@@ -8,10 +8,11 @@
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",x:"Other"};
-    if (/bot|googlebot|facebook|slurp|wii|silk|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|phone|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
+    if (/bot|googlebot|facebook|slurp|wii|silk|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
         return {n:"x",v:0,t:"unknown",donotnotify:"niche browser"};
-    if (/iphone|ipod|ipad/i.test(ua)) //android|mobile
+    if (/iphone|ipod|ipad|kindle/i.test(ua)) //without upgrade path or no landing page
         return {n:"x",v:0,t:"mobile browser",donotnotify:"mobile"};
+    var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     var pats=[
         ["Trident.*rv:VV","i"],
         ["Trident.VV","io"],
@@ -36,14 +37,14 @@ function $bu_getBrowser(ua_str) {
     var v=parseFloat(RegExp.$1); 
     
     if (!n)
-        return {n:"x",v:0,t:names[n]};
+        return {n:"x",v:0,t:names[n],mobile:mobile};
  
     //http://stackoverflow.com/questions/14403766/how-to-detect-the-stock-android-browser
     //check for android stock browser
     if (ua.indexOf('Android')) {
         var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
         if (ver <= 534)
-            return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify};
+            return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify,mobile:mobile};
     }
     
     //do not notify ver old systems since their is no up-to-date browser available
@@ -70,7 +71,7 @@ function $bu_getBrowser(ua_str) {
         else if (v>3) v=7;
         else v=9;
     }
-    return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify};
+    return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
 }
 
 var $buo = function(op,test) {
@@ -95,7 +96,7 @@ for (b in vsdefault) {
     if (vsakt[b] && vs[b]>=vsakt[b])
         vs[b]=vsakt[b]-0.2;
     if (vsakt[b] && vs[b]<0)
-        vs[b]=vsakt[b]-vs[b];
+        vs[b]=vsakt[b]+vs[b];
     if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
 }

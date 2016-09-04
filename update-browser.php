@@ -69,6 +69,7 @@ if (has("android")) {
     $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
     $u_op="www.opera.com/mobile/operabrowser";
     $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
+    $no_ie=True;
 }
     
 function brow($name, $url, $vendor, $char, $na=False) {
