@@ -100,15 +100,20 @@ body,html {
     html body .men {
         position: absolute;
         top: auto;
-        bottom: -40px;
+        bottom: 0px;
         right: auto;
+        left: 0;
+        
+        background: no-repeat 0% 0% rgb(238,238,238);
+        padding: 7px;  
+        border-top: 1px dashed rgb(170,170,170);
     }
-    .header, .innerhead {
+    body .header, body .innerhead {
         position: static;
     }
     body {
         position: relative;
-        margin-bottom: 45px;
+        padding-bottom: 60px;
     }    
 }
 

@@ -1,3 +1,10 @@
+<!DOCTYPE html >
+<html>
+<head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Comments</title>
+</head>
+<body>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'browserupdateorg'; // required: replace example with your forum shortname
