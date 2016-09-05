@@ -40,9 +40,6 @@ function has($t) {
 	return !(strpos($ua,$t)===false);
 }
 
-//not complete list but 99% of systems share where ie10 is not available
-//IE 09 is available for vista and up
-//IE 10 is only available for win7 and win8 || has("windows nt 6.0")
 //IE 11 is only available for win7 and win8 || has("windows nt 6.0")
 // 5->2000/xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1
 $no_ie = has("os x") || has("linux") || has("android");
@@ -191,9 +188,11 @@ if (false) {
     <p><?php echo T_('Ask your admin to update your browser if you cannot install updates yourself.')?></p>
 
 </div>
-
-
-<script type="text/javascript">
+<script>
+var $buoop = {nomessage:true};    
+</script>
+<script src="update.js"></script>
+<script>
 var cv=3;
 var second=false;
 countView();

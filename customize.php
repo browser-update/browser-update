@@ -40,8 +40,9 @@ var $buoop = {
                                     // <?php echo T_('Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;"'). "\n";?>
     text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
-    newwindow: true                 // <?php echo T_('open link in new window/tab') . "\n"; ?>
-    url: null                       // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
+    newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
+    url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
+    nomessage: false                // Do not show a message if the browser is out of date, just call the onshow callback function
 };
 </pre>
 <h3><?php echo T_('Change the style'); ?></h3>

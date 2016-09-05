@@ -7,7 +7,7 @@
 
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
-    var names={i:'Internet Explorer',f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",x:"Other"};
+    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
     if (/bot|googlebot|facebook|slurp|wii|silk|maxthon|maxton|mediapartners|dolfin|dolphin|adsbot|silk|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
         return {n:"x",v:0,t:"unknown",donotnotify:"niche browser"};
     if (/iphone|ipod|ipad|kindle/i.test(ua)) //without upgrade path or no landing page
@@ -17,7 +17,8 @@ function $bu_getBrowser(ua_str) {
         ["Trident.*rv:VV","i"],
         ["Trident.VV","io"],
         ["MSIE.VV","i"],
-        ["Edge.VV","i"],
+        ["Edge.VV","e"],
+        ["Vivaldi.VV","v"],
         ["OPR.VV","o"],
         ["YaBrowser.*Chrome.VV","y"],
         ["Chrome.VV","c"],
@@ -29,7 +30,7 @@ function $bu_getBrowser(ua_str) {
         ["Netscape.VV","n"]
     ];
     for (var i=0; i < pats.length; i++) {
-        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d*)")),"i")) {            
+        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d?)")),"i")) {            
             n=pats[i][1];
             break;
         }        
@@ -41,10 +42,12 @@ function $bu_getBrowser(ua_str) {
  
     //http://stackoverflow.com/questions/14403766/how-to-detect-the-stock-android-browser
     //check for android stock browser
-    if (ua.indexOf('Android')) {
+    if (ua.indexOf('Android')>-1) {
         var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
         if (ver <= 534)
             return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify,mobile:mobile};
+        else
+            return {n:n,v:v,t:names[n]+" "+v,donotnotify:"mobile on android",mobile:mobile};
     }
     
     //do not notify ver old systems since their is no up-to-date browser available
@@ -71,6 +74,9 @@ function $bu_getBrowser(ua_str) {
         else if (v>3) v=7;
         else v=9;
     }
+    if (n=="e") {
+        return {n:"i",v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
+    }
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
 }
 
@@ -82,8 +88,8 @@ var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
-var vsakt = {i:12,f:48,o:39,s:9.1,n:20,c:52,yandex: 16.4,vivaldi:1.3};
-var vsdefault = {i:10,f:-2,o:-2,s:7.1,n:12,c:-2,a:534,y:40};
+var vsakt = {i:12,f:48,o:39,s:9.1,n:20,c:52,y:16.4,v:1.3};
+var vsdefault = {i:10,f:-2,o:-2,s:7.1,n:12,c:-2,a:534,y:-0.1,v:-0.1};
 if (this.op.c && this.op.c<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
@@ -121,7 +127,10 @@ this.op.test=test||op.test||(location.hash=="#test-bu")||false;
 var bb=$bu_getBrowser();
 if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
     return;
-
+if (this.op.nomessage) {
+    op.onshow(this.op);
+    return;
+}
 
 if (!this.op.test  && Math.random()*5000<1) {
     var i = new Image();
