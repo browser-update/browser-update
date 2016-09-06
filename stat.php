@@ -89,7 +89,7 @@ var data={
 <div id="chart"></div>
 
 <script src="http://d3js.org/d3.v2.min.js?2.9.1"></script>
-<script src="sankey.js"></script>
+<script src="/js/sankey.js"></script>
 
 
 <script>
