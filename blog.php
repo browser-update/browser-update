@@ -3,7 +3,96 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 ?>
-<h2>Better notification behaviour</h2>
+
+<h2>Improved notification and more options</h2>
+<small>September 6th, 2016</small>
+<div class="entry">
+    <p>
+    We now check for more browsers if they are up-to-date: Yandex Browser, Pale Moon Browser, and Vivaldi Browser. 
+    </p>
+    <p>
+    The detection script was slimmed down more and we improved detection of Microsoft Edge.
+    </p>
+    <p>
+        When creating your update-notification code for your site you have now a few new options:
+    </p>
+    <ul>
+        <li>
+        You can choose to notifiy browsers that have been outdated for e.g. 3 months instead of specifying a certain browsers versions. This is now the default for Chrome, Firefox and Opera.
+        </li>
+        <li>
+        You can choose wheather to notify users with outdated mobile browsers.
+        </li>
+        <li>
+        You can choose to generally notify all browsers versions which are not supported by the vendor anymore.
+        </li>    
+        <li>
+        You can choose to notify all browsers with security vulnerabilities.
+        </li>    
+    </ul>   
+
+</div>
+<div class="com"><a href="blog-entry.html?n=detectionx" onclick="SC('detectionx'); return false;">Comments</a></div>
+
+<h2>Testing update notification for mobile Browsers: Stock Android Browser</h2>
+<small>September 4th, 2016</small>
+<div class="entry">
+    <p>
+    For a long time we have ignored mobile Browsers here at browser-update.org on purpose. 
+    They are in particular complicated to detect and on many platforms there is no way to 
+    update the browser without updating the system or even an operating system update is not possible at all. 
+    </p>
+    <p>
+    Now we started to notify users that are using the outdated stock Android browser if they have an upgrade path to another newer browser on their system.
+    We offer a selection of up-to-date browsers for Android to them, currently consisting of Chrome, Firefox and Opera.
+    </p>
+    <p>
+        We investigate including more browsers as choices to update and to notify other mobile platforms like Windows Phone and maybe iOS in the future.
+    </p>
+
+</div>
+<div class="com"><a href="blog-entry.html?n=mobilean" onclick="SC('mobilean'); return false;">Comments</a></div>
+
+
+
+<h2>New translation tool</h2>
+<small>August 26th, 2016</small>
+<div class="entry">
+<p>
+    This site can now be translated using a <a href="https://crowdin.com/project/browser-update">convenient online tool</a>. 
+    Now it should be much easier to create, update and review translations.
+</p>
+<p>
+    Over the last weeks we added new translations for <a href="/no/update-browser.html">norwegian</a>, <a href="/lv/update-browser.html">latvian</a>, <a href="/sr/update-browser.html">serbian</a> and <a href="/ga/update-browser.html">irish</a>.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=transx" onclick="SC('transx'); return false;">Comments</a></div>
+
+
+<h2>We passed 10 000 000 browser updates</h2>
+<small>March 3rd, 2016</small>
+<div class="entry">
+<p>
+    As of today we convinced a total of 10 million people to update their browser.
+    With this we may have protected tens of thousands of people from attacks through security holes in their old outdated browser. 
+    And we have improved the browsing experience of all of them with a new, speedy, more functional browser.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=tenmil" onclick="SC('tenmil'); return false;">Comments</a></div>
+
+<h2>Minified browser update notification script</h2>
+<small>May 17th, 2015</small>
+<div class="entry">
+<p>
+    We minified the update notification script and tweaked it more to make it smaller and load faster.
+</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=minified" onclick="SC('minified'); return false;">Comments</a></div>
+
+
+
+
+<h2>More user-friendly notifications</h2>
 <small>February 11th, 2015</small>
 <div class="entry">
 <p>

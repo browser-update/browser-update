@@ -80,7 +80,8 @@
                 <a href="/ar/<?php echo $curfile?>">العربية</a>
                 <a href="/sr/<?php echo $curfile?>">Srpski</a>
                 <a href="/lv/<?php echo $curfile?>">Latviešu</a>   
-                <a href="/ga/<?php echo $curfile?>">Gaeilge</a>                 
+                <a href="/ga/<?php echo $curfile?>">Gaeilge</a>
+                <a href="/no/<?php echo $curfile?>">Norsk</a>
                 <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>

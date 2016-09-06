@@ -147,10 +147,6 @@ if (false) {
 }
 ?>
 
-
-
-
-
 <div>
     <h2><?php echo T_('Why do I need an up-to-date browser?'); ?></h2>
     <div id="advc">

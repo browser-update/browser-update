@@ -41,7 +41,8 @@ $lang_rewrite = array(
         "ar"=>"ar_EG",
         "sr"=>"sr_RS",
         "lv"=>"lv_LV",
-        "ga"=>"ga_IE"
+        "ga"=>"ga_IE",
+        "no"=>"no_NO"
 );
 
 /**
