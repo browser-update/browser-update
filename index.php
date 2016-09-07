@@ -257,7 +257,7 @@ function getomat(id) {
 }
 //+_get("newos",true)
 function code() {
-    var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +'},';
+    var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = 'script \n\
 var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'c:4}; \n\
 function $buo_f(){ \n\
