@@ -100,8 +100,8 @@ body,html {
     html body .men {
         position: absolute;
         top: auto;
-        bottom: 0px;
-        right: auto;
+        bottom: 0;
+        right: 0;
         left: 0;
         
         background: no-repeat 0% 0% rgb(238,238,238);
@@ -594,7 +594,7 @@ a.notavailable .bro {
 
 
 .noti {
-    margin: 47px 0;
+    margin: 35px 0;
     border: 1px solid #777;
     box-shadow: 0 0 8px #888;
     background: #FFF4F4;
