@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-08-21 13:56-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -22,17 +22,17 @@ msgstr "Questo servizio è un'opportunità per informare i tuoi visitatori e con
 
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
-msgstr ""
+msgstr "This is done with care not to annoy, lock out or erroneously notify visitors!"
 
 #: index.php:33 stat.php:17
 #, php-format
 msgid "<b>%s</b> sites are using this notification"
-msgstr ""
+msgstr "<b>%s</b> sites are using this notification"
 
 #: index.php:36 stat.php:20
 #, php-format
 msgid "<b>%s</b> visitors have already updated their browser"
-msgstr ""
+msgstr "<b>%s</b> visitors have already updated their browser"
 
 #: index.php:40
 msgid "How it works"
@@ -92,7 +92,7 @@ msgstr "Personalizzabile"
 #: index.php:72 index.php:185
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
-msgstr ""
+msgstr "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 
 #: index.php:75
 msgid "Localized"

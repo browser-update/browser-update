@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: index.php:46
 msgid "Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update."
-msgstr ""
+msgstr "آخرین بازدید مرورگر منسوخ خواهد شد توسط یک، undisturbing جعبه پیام کوچک مطلع، که مرورگر خود را است تا به تاریخ و توصیه می شود برای به روز رسانی نمی شود."
 
 #: index.php:47
 msgid "Try it out!"

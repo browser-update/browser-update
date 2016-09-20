@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 15:03+0200\n"
-"PO-Revision-Date: 2016-08-21 13:56-0400\n"
+"POT-Creation-Date: 2016-07-03 18:01+0200\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -18,72 +18,72 @@ msgstr ""
 
 #: customize.php:11
 msgid "Customize and test"
-msgstr ""
+msgstr "Customize and test"
 
 #: customize.php:14
 msgid "Test the script"
-msgstr ""
+msgstr "Test the script"
 
 #: customize.php:17
 msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab."
-msgstr ""
+msgstr "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab."
 
 #: customize.php:20
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #: customize.php:23
 msgid "The following options can be passed to the script:"
-msgstr ""
+msgstr "The following options can be passed to the script:"
 
 #: customize.php:28
 msgid "specify minimum browser versions to notify"
-msgstr ""
+msgstr "specify minimum browser versions to notify"
 
 #: customize.php:29
 msgid "after how many hours should the message reappear"
-msgstr ""
+msgstr "after how many hours should the message reappear"
 
 #: customize.php:30
 msgid "0 = show all the time"
-msgstr ""
+msgstr "0 = show all the time"
 
 #: customize.php:31
 msgid "if the user explicitly closes message it reappears after x hours"
-msgstr ""
+msgstr "if the user explicitly closes message it reappears after x hours"
 
 #: customize.php:32
 msgid "callback function after the bar has appeared"
-msgstr ""
+msgstr "callback function after the bar has appeared"
 
 #: customize.php:33
 msgid "callback function if bar was clicked"
-msgstr ""
+msgstr "callback function if bar was clicked"
 
 #: customize.php:36
 msgid "set a language for the message, e.g. \"en\""
-msgstr ""
+msgstr "set a language for the message, e.g. \"en\""
 
 #: customize.php:37
 msgid "overrides the default detection"
-msgstr ""
+msgstr "overrides the default detection"
 
 #: customize.php:38
 msgid "true = always show the bar (for testing)"
-msgstr ""
+msgstr "true = always show the bar (for testing)"
 
 #: customize.php:39
 msgid "custom notification html text"
-msgstr ""
+msgstr "custom notification html text"
 
 #: customize.php:40
 #, php-format
-msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;\""
+msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
 msgstr ""
 
 #: customize.php:41
 msgid "custom notification text for language \"xx\""
-msgstr ""
+msgstr "custom notification text for language \"xx\""
 
 #: customize.php:42
 msgid "e.g. text_de for german and text_it for italian"

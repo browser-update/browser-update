@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-08-21 13:56-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
@@ -42,7 +42,7 @@ msgstr "الاتصال"
 
 #: update-browser.php:73
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "متصفحك هو الأحدث."
 
 #: update-browser.php:83
 msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
@@ -64,7 +64,7 @@ msgstr "لمزيد من المعلومات عن <a href=\"%s\">الحماية</a
 #: update-browser.php:156
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
-msgstr ""
+msgstr "يود هذا الموقع أن يذكرك بأن متصفحك (%s) <b>متقادم</b>. <a%s>حدث متصفحك</a> من أجل مزيد من الأمان، والراحة، ومن أجل أفضل تجربة للموقع."
 
 #: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
@@ -124,5 +124,5 @@ msgstr "اذا كنت على حاسب يدار من قبل المشرف و لا 
 
 #: update-browser.php:209
 msgid "This website uses cookies"
-msgstr ""
+msgstr "موقع الإنترنت هذا يستخدم ملفات تعريف الارتباط"
 

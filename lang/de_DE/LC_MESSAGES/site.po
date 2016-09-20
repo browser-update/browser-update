@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -125,16 +125,16 @@ msgstr "Benachrichtige auch alle Browserversionen mit Sicherheitslücken."
 
 #: index.php:165
 msgid "Also notify all browsers that are not supported by the vendor anymore."
-msgstr ""
+msgstr "Benachrichtige auch alle Browser die vom Hersteller nicht mehr unterstützt werden."
 
 #: index.php:177
 msgid "Notify mobile browsers."
-msgstr ""
+msgstr "Benachrichtige mobile Browser."
 
 #: index.php:181
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
-msgstr ""
+msgstr "Das Skript und der Service sind Open Source unter der <a%s>MIT Lizenz</a>."
 
 #: index.php:189
 msgid "There are plugins for:"

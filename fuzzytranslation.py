@@ -6,6 +6,7 @@ Created on Sun Jun 12 14:21:31 2016
 """
 #%%
 import polib
+#%%
 
 #old (translated) string
 #new renamed string
@@ -198,6 +199,65 @@ for p in paths:
 
 #%%
 
+pairs="""aaa
+bbb
+
+Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;"
+Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;"
+
+bla
+fasel"""
+pairs=pairs.replace("\r","")[1:-1].split("\n\n")
+mappings={s.split("\n")[0]:s.split("\n")[1] for s in pairs}
+#%%
+
+from glob import glob
+paths = glob('lang/*/LC_MESSAGES/')
+paths=[p[5:10] for p in paths]
+paths
+
+#%% updating all site.po
+for p in paths:
+    print("customize %s"%p)
+    try:
+        po = polib.pofile('lang/%s/LC_MESSAGES/customize.po'%p)
+    except OSError:
+        print("no file found")
+        continue
+    valid_entries = [e for e in po if not e.obsolete]
+    for entry in valid_entries:
+        #print(entry.msgid)
+        if entry.msgid in mappings:
+            print("  ", entry.msgid[:10], "-->",mappings[entry.msgid][:10])
+            entry.msgid=mappings[entry.msgid]
+    po.save()
+    
+    po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
+
+
+#%% build!
+
+for p in paths:
+    print("build %s"%p)
+    try:
+        po = polib.pofile('lang/%s/LC_MESSAGES/customize.po'%p)
+    except OSError:
+        po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
+        print("no file found")
+        
+    try:
+        po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
+    except OSError:
+        po.save_as_mofile('lang/%s/LC_MESSAGES/update.mo'%p)
+        print("no update.po found")
+        
+    try:
+        po = polib.pofile('lang/%s/LC_MESSAGES/site.po'%p)
+    except OSError:
+        po.save_as_mofile('lang/%s/LC_MESSAGES/site.mo'%p)
+        print("no site.po found")
+                
+    
 
 
 #%% API

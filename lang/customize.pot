@@ -86,7 +86,7 @@ msgstr ""
 msgid ""
 "Optionally include up to two placeholders \"%s\" which will be replaced with "
 "the browser version and contents of the link tag. Example: \"Your browser "
-"(%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;\""
+"(%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
 msgstr ""
 
 #: customize.php:41

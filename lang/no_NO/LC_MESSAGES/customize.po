@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 15:03+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"POT-Creation-Date: 2016-07-03 18:01+0200\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Norwegian\n"
 "Language: no_NO\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: customize.php:11
 msgid "Customize and test"
-msgstr ""
+msgstr "Customize and test"
 
 #: customize.php:14
 msgid "Test the script"
@@ -78,7 +78,7 @@ msgstr ""
 
 #: customize.php:40
 #, php-format
-msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gtupdate&lt;/a&gt;\""
+msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
 msgstr ""
 
 #: customize.php:41

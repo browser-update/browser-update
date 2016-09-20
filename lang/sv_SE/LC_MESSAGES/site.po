@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -22,7 +22,7 @@ msgstr "Denna tjänst erbjuder en möjlighet att på ett diskret sätt uppmana d
 
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
-msgstr ""
+msgstr "Detta görs med omsorg inte irritera, utelåsa eller felaktigt meddela besökare!"
 
 #: index.php:33 stat.php:17
 #, php-format
@@ -117,24 +117,24 @@ msgstr "Dessa webbläsare kommer att visa meddelandebalken:"
 #: index.php:101
 #, php-format
 msgid "older than %d months (currently %s)"
-msgstr ""
+msgstr "äldre än %d månader (för närvarande %s)"
 
 #: index.php:159
 msgid "Also notify all browser versions with security vulnerabilities."
-msgstr ""
+msgstr "Meddela också alla webbläsarversioner med säkerhetsproblem."
 
 #: index.php:165
 msgid "Also notify all browsers that are not supported by the vendor anymore."
-msgstr ""
+msgstr "Meddela också alla webbläsare som inte stöds av säljaren längre."
 
 #: index.php:177
 msgid "Notify mobile browsers."
-msgstr ""
+msgstr "Meddela mobila webbläsare."
 
 #: index.php:181
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
-msgstr ""
+msgstr "Skriptet och tjänsten är öppen källkod under <a%s>MIT Licens</a>."
 
 #: index.php:189
 msgid "There are plugins for:"
@@ -155,10 +155,10 @@ msgstr "Moderna webbläsare låter dig använda nya webbtekniker såsom CSS3, SV
 #: index.php:211
 #, php-format
 msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
-msgstr ""
+msgstr "Många <a%s>fördelar för dina besökare</a>: säkerhet, hastighet, funktioner, ..."
 
 #: index.php:214
 #, php-format
 msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
-msgstr ""
+msgstr "Hjälp projektet genom att <a%s>använda uppdateringsnotifieringen</a> på din webbplats, <a%s>dela</a> eller <a%s>översätta</a> den här sidan."
 

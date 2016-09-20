@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-08-21 13:16-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -42,7 +42,7 @@ msgstr "Контакти"
 
 #: update-browser.php:73
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "У вас встановлена остання версія браузера."
 
 #: update-browser.php:83
 msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
@@ -59,7 +59,7 @@ msgstr " Будь ласка, оберіть будь-який інший бра
 #: update-browser.php:146
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
+msgstr "Для кращого <a href=\"%s\">захисту</a>,    <a href=\"%s\">швидкості</a>,    <a href=\"%s\">комфорту</a> та    <a href=\"%s\">розваг</a>."
 
 #: update-browser.php:156
 #, php-format
@@ -124,5 +124,5 @@ msgstr "Якщо Ви не є адміністратором цього комп
 
 #: update-browser.php:209
 msgid "This website uses cookies"
-msgstr ""
+msgstr "Цей сайт використовує файли cookie"
 
