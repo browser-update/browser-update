@@ -194,12 +194,12 @@ t.ga='Tá an líonléitheoir agat (%s) <b>as dáta</b>. Tá <b>laigeachtaí slá
 t.lv='Jūsu pārlūkprogramma (%s) ir <b>novecojusi</b>.  Tai ir zināmas <b>drošības problēmas</b>, un tā var attēlot šo un citas  tīmekļa lapas <b>nekorekti</b>. <a%s>Uzzini, kā atjaunot savu pārlūkprogrammu</a>';
 t.no='Dette nettstedet ønsker å minne deg på: Din nettleser (%s) er <b>utdatert</b>. <a%s>Oppdater nettleseren din </a> for mer sikkerhet, komfort og den beste opplevelsen på denne siden.';
 
-if (t[ll])
-    t=t[ll];
-else if (op.text)
+if (op.text)
     t = op.text;
 else if (op["text_"+ll])
     t = op["text_"+ll];
+else if (t[ll])
+    t=t[ll];
 else 
     t=t.en;
 
