@@ -78,8 +78,8 @@ function getUpdatesJs() {
 <script>
 var data={
 "nodes":[
-{"name":" "},{"name":"IE"},{"name":"Firefox"},{"name":"Opera"},{"name":"Safari"},{"name":"Chrome"},
-{"name":" "},{"name":"IE"},{"name":"Firefox"},{"name":"Opera"},{"name":"Safari"},{"name":"Chrome"}
+{"name":"Other"},{"name":"IE"},{"name":"Firefox"},{"name":"Opera"},{"name":"Safari"},{"name":"Chrome"},
+{"name":"Other"},{"name":"IE"},{"name":"Firefox"},{"name":"Opera"},{"name":"Safari"},{"name":"Chrome"}
 ],
 "links": [
     <?php echo cache_output('getUpdatesJs')?>
@@ -215,7 +215,8 @@ function browserMigration() {
             "s"=>'Safari',
             "n"=>'Netscape',
             "c"=>'Chrome',
-            ""=>'?'
+            ""=>'?',
+            "x"=>'Other'
     );
     $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton HAVING num>1000 ORDER BY num DESC');
      while ($a = mysql_fetch_assoc($q)) {
