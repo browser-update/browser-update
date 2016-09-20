@@ -3,8 +3,6 @@
 //It is RECOMMEDED to directly link to this file and not to use a local copy
 //because we update and maintain the detection code
 
-
-
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
@@ -89,7 +87,7 @@ this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.brows
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var ll=this.op.l.substr(0,2);
 var vsakt = {i:12,f:48,o:39,s:9.1,n:20,c:52,y:16.4,v:1.3};
-var vsdefault = {i:10,f:-2,o:-2,s:7.1,n:12,c:-2,a:534,y:-0.1,v:-0.1};
+var vsdefault = {i:10,f:-3,o:-3,s:7.1,n:12,c:-3,a:534,y:-0.1,v:-0.1};
 if (this.op.c && this.op.c<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
@@ -132,7 +130,7 @@ if (this.op.nomessage) {
     return;
 }
 
-if (!this.op.test  && Math.random()*5000<1) {
+if (!this.op.test  && Math.random()*10000<1) {
     var i = new Image();
     i.src="//browser-update.org/viewcount.php?n="+bb.n+"&v="+bb.v + "&p="+ escape(pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
 }
