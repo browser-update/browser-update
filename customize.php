@@ -28,7 +28,7 @@ var $buoop = {
     vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('specify minimum browser versions to notify') . "\n"; ?>
     reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
-    reminderClosed: 150             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
+    reminderClosed: 150,             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
     onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
     onclick: function(infos){},     // <?php echo T_('callback function if bar was clicked') . "\n"; ?>
     onclose: function(infos){},     //
