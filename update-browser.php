@@ -57,14 +57,14 @@ $u_sa=sprintf($sal,$ll);
 if (isset($sa_map[$ll]))
     $u_sa=sprintf($sal,$sa_map[$ll]);
 
-$u_ff="http://www.mozilla.com/firefox/";
-$u_op="http://www.opera.com/?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
+$u_ff="https://www.mozilla.com/firefox/";
+$u_op="https://www.opera.com/?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
 $u_ch="https://www.google.com/chrome/browser/desktop/";
-$u_ie=sprintf("http://windows.microsoft.com/%s/internet-explorer/downloads/ie",$lr);
+$u_ie=sprintf("https://www.microsoft.com/%s/windows/microsoft-edge",$lr);
 
 if (has("android")) {
     $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
-    $u_op="www.opera.com/mobile/operabrowser";
+    $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
     $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
     $no_ie=True;
 }
@@ -72,7 +72,7 @@ if (has("android")) {
 function brow($name, $url, $vendor, $char, $na=False) {
     echo '<td class="b b'.$char.'">';
     if (!$na) {
-        echo '<a class="l" href="'.$url.'" target="_blank" onmousedown="countBrowser(\''.$char.'\')">';
+        echo '<a class="l" href="'.$url.'" target="_blank" title="update to '.$name.' web browser" onmousedown="countBrowser(\''.$char.'\')">';
     }
     else {
         echo' <a class="l notavailable">';
@@ -180,14 +180,32 @@ if (false) {
 
 
     <h2><?php echo T_('I can\'t update my browser')?></h2>
-    <p><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility.'); ?></p>
-    <p><?php echo T_('Ask your admin to update your browser if you cannot install updates yourself.')?></p>
+    <ul>
+    <li><?php echo T_('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility.'); ?></li>
+    <li><?php echo T_('Ask your admin to update your browser if you cannot install updates yourself.')?></li>
+    <?php
+    if ($ll=="en") {
+        if (isset($_POST) && isset($_POST['feedback'])) {
+            $arr=$_POST;
+            $arr['ua']=$_SERVER['HTTP_USER_AGENT'];
+            $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
+            $arr['ref']=$_SERVER['HTTP_REFERER'];
+            $text=json_encode($arr,$options=JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+            $mailSent = @mail("jossele@gmx.de", "Bup Feedback", $text, "From: noreply@browser-update.org");
+            echo '<li>Thank you for your Feedback.</li>';
+        }
+        else 
+            echo '<form method="post" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot update because... <input name="feedback" value=""/><input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
+    }
+    ?>
+    </ul>
+    
 
 </div>
 <script>
 var $buoop = {nomessage:true};    
 </script>
-<script src="update.js"></script>
+<script src="/update.min.js"></script>
 <script>
 var cv=3;
 var second=false;
