@@ -236,25 +236,25 @@ for p in paths:
 
 
 #%% build!
-
+import polib
 for p in paths:
     print("build %s"%p)
     try:
         po = polib.pofile('lang/%s/LC_MESSAGES/customize.po'%p)
-    except OSError:
         po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
+    except OSError:        
         print("no file found")
         
     try:
         po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
-    except OSError:
         po.save_as_mofile('lang/%s/LC_MESSAGES/update.mo'%p)
+    except OSError:        
         print("no update.po found")
         
     try:
         po = polib.pofile('lang/%s/LC_MESSAGES/site.po'%p)
-    except OSError:
         po.save_as_mofile('lang/%s/LC_MESSAGES/site.mo'%p)
+    except OSError:        
         print("no site.po found")
                 
     
