@@ -42,7 +42,9 @@ $lang_rewrite = array(
         "sr"=>"sr_RS",
         "lv"=>"lv_LV",
         "ga"=>"ga_IE",
-        "no"=>"no_NO"
+        "no"=>"no_NO",
+        "th"=>"th_TH",
+        "xx"=>"xx_XX"
 );
 
 /**
@@ -157,16 +159,14 @@ $ll=substr($detected_lang, 0, 2);
 //if (isset($lang_rewrite[$detected_lang]))
 //	$detected_lang=$lang_rewrite[$detected_lang];
 
-T_setlocale(LC_ALL, $detected_lang);
+T_setlocale(LC_MESSAGES, $detected_lang);
 
 T_bindtextdomain('site', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('site', 'UTF8');
+T_bind_textdomain_codeset('site', 'UTF-8');
 T_bindtextdomain('update', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('update', 'UTF8');
-T_bindtextdomain('update-legacy', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('update-legacy', 'UTF8');
+T_bind_textdomain_codeset('update', 'UTF-8');
 T_bindtextdomain('customize', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
-T_bind_textdomain_codeset('customize', 'UTF8');
+T_bind_textdomain_codeset('customize', 'UTF-8');
 T_textdomain('update');
 
 //var_dump($CURRENTLOCALE);
@@ -175,7 +175,7 @@ T_textdomain('update');
 //var_dump(setlocale(LC_ALL, 'de_DE'));
 //$EMULATEGETTEXT=0;
 //var_dump(setlocale(LC_MESSAGES, 'deutsch'));
-
+//var_dump([$detected_lang,locale_emulation()]);
 
 
 ?>
