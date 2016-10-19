@@ -4,6 +4,23 @@ require_once("lib/lang.php");
 include("header.php");
 ?>
 
+<h2>Collecting Feedback on Browser-Updates</h2>
+<small>October 19th, 2016</small>
+<div class="entry">
+    <p>
+        We implemented a small <a href="/en/update-browser.html">feedback form on the browser update page</a> 
+        where people can report why they can't or don't want to update.
+        We are collecting now some data and already got some valuable feedback. 
+        With this we can improve our notification and the selection of browsers we offer.
+    </p>
+    <img src="/img/blog/feedback.png"/>
+    <p>
+        For now this only on the english language version of the browser update page.
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=feedback" onclick="SC('feedback'); return false;">Comments</a></div>
+
+
 <h2>Improved notification and more options</h2>
 <small>September 6th, 2016</small>
 <div class="entry">
@@ -65,6 +82,10 @@ include("header.php");
 <p>
     Over the last weeks we added new translations for <a href="/no/update-browser.html">norwegian</a>, <a href="/lv/update-browser.html">latvian</a>, <a href="/sr/update-browser.html">serbian</a> and <a href="/ga/update-browser.html">irish</a>.
 </p>
+<p>
+Also, we now added a <a href="/th/update-browser.html">thai translation of browser-update</a>.
+</p>
+
 </div>
 <div class="com"><a href="blog-entry.html?n=transx" onclick="SC('transx'); return false;">Comments</a></div>
 
