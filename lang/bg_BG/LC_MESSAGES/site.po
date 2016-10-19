@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"PO-Revision-Date: 2016-10-18 05:12-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -41,11 +41,11 @@ msgstr "Как работи"
 #: index.php:43
 #, php-format
 msgid "Include our small javascript <a href=\"%s\">notification</a> on your website"
-msgstr "Включете нашия малък javascript <a href=\"%s\">script</a> на вашия уебсайт"
+msgstr "Включете нашия малък javascript <a href=\"%s\">script</a> в уебсайта си"
 
 #: index.php:46
 msgid "Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update."
-msgstr "Посетителите с неактуални браузъри ще бъдат информирани с малка, ненатрапчива лента (бар), че версията на браузърът им не е актуална и е препоръчително да го актуализират."
+msgstr "Посетителите с неосъвременени браузъри ще бъдат уведомени с малко, ненатрапчиво съобщение в табло, че версията на браузъра им е остаряла и е препоръчително да го осъвременят."
 
 #: index.php:47
 msgid "Try it out!"
@@ -134,11 +134,11 @@ msgstr ""
 #: index.php:181
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
-msgstr ""
+msgstr "Скриптът и устройството са с отворен код, които са лицензирани под <a%s>MIT License</a>."
 
 #: index.php:189
 msgid "There are plugins for:"
-msgstr "Може да използвате и добавки от трети страни за:"
+msgstr "Може да използвате и приставки от трети страни за:"
 
 #: index.php:207
 msgid "Why you should tell users to update"

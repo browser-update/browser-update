@@ -82,6 +82,7 @@
                 <a href="/lv/<?php echo $curfile?>">Latviešu</a>   
                 <a href="/ga/<?php echo $curfile?>">Gaeilge</a>
                 <a href="/no/<?php echo $curfile?>">Norsk</a>
+                <a href="/th/<?php echo $curfile?>">ภาษาไทย</a>                
                 <a href="contact.html"><b>translate...</b></a>
                 </div>
             </div>

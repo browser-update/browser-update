@@ -3,126 +3,126 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-10-18 05:12-0400\n"
+"PO-Revision-Date: 2016-09-20 04:37-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
-"Language-Team: Italian\n"
-"Language: it_IT\n"
+"Language-Team: Galician\n"
+"Language: gl_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: browser-update\n"
-"X-Crowdin-Language: it\n"
+"X-Crowdin-Language: gl\n"
 "X-Crowdin-File: update.pot\n"
 
 #: header.php:5 header.php:34
 msgid "Update your Browser"
-msgstr "Aggiorna il tuo Browser"
+msgstr "Actualizar navegador web"
 
 #: header.php:29
 msgid "An initiative by websites to inform users to update their web browser"
-msgstr "Un'iniziativa sostenuta da diversi web-designer per informare gli utenti sugli aggiornamenti del browser"
+msgstr "Unha iniciativa de deseñadores web para informar aos usuarios sobre actualizacións dos navegadores"
 
 #: header.php:31 update-browser.php:192
 msgid "About the Project"
-msgstr "Informazioni sul progetto"
+msgstr ""
 
 #: header.php:35
 msgid "Statistics"
-msgstr "Statistiche"
+msgstr "Estatísticas"
 
 #: header.php:36
 msgid "Blog"
-msgstr "Blog"
+msgstr ""
 
 #: header.php:88
 msgid "Contact"
-msgstr "Contatti"
+msgstr "Contacto"
 
 #: update-browser.php:73
 msgid "Your browser is up-to-date."
-msgstr "Il tuo browser è aggiornato."
+msgstr ""
 
 #: update-browser.php:83
 msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "Il tuo browser non è aggiornato. Scarica ora gratuitamente uno dei seguenti browser aggiornati ed efficienti:"
+msgstr ""
 
 #: update-browser.php:104 update-browser.php:118
 msgid "Most recent version not available for your system."
-msgstr "Non disponibile per il sistema operativo."
+msgstr "Non dispoñíbel para o seu sistema operativo."
 
 #: update-browser.php:104 update-browser.php:118
 msgid "Please choose another browser."
-msgstr "Scegliere un altro browser."
+msgstr "Seleccione outro navegador web."
 
 #: update-browser.php:146
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr "per maggiore <a href=\"%s\">sicurezza</a>, <a href=\"%s\">velocità</a>, <a href=\"%s\">comfort</a> e <a href=\"%s\">divertimento</a>."
+msgstr ""
 
 #: update-browser.php:156
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
-msgstr "Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le pagine di questo e altri siti. <a%s>Aggiorna il tuo browser!</a>"
+msgstr "O seu navegador (%s) está <b>desactualizado</b>. Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>"
 
 #: update-browser.php:166
 msgid "Why do I need an up-to-date browser?"
-msgstr "Perché ho bisogno di un browser aggiornato?"
+msgstr ""
 
 #: update-browser.php:170
 msgid "Security"
-msgstr "Sicurezza"
+msgstr "Seguranza"
 
 #: update-browser.php:171
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
-msgstr "Un nuovo browser protegge con maggior efficacia da scam, virus, trojan, phishing e altre insidie. Rimuove le falle di sicurezza che potrebbero essere presenti nel tuo browser attuale e protegge la tua privacy."
+msgstr "Os navegadores web actualizados protéxenlle mellor fronte a suplantacións, virus, troianos, ataques de suplantación de identidade e outros engados. Tamén arranxan ocos de seguranza no seu navegador web!"
 
 #: update-browser.php:174
 msgid "Speed"
-msgstr "Velocità"
+msgstr "Velocidade"
 
 #: update-browser.php:175
 msgid "Every new browser generation improves speed"
-msgstr "Un browser di nuova generazione è più veloce e facile da usare."
+msgstr "Cada nova xeración dos navegadores web mellora a velocidade"
 
 #: update-browser.php:178
 msgid "Compatibility & new Technology"
-msgstr "Tecnologia e compatibilità"
+msgstr "Compatibilidade"
 
 #: update-browser.php:179
 msgid "You can view sites that are using the latest technology"
-msgstr "Cogli il meglio dei siti web usando tecnologie di nuova generazione per una maggiore leggibilità, 3D e video."
+msgstr "Os sitios web que usan novas tecnoloxías mostraranse mellor"
 
 #: update-browser.php:182
 msgid "Comfort & better experience"
-msgstr "Grazie alle nuove funzioni, estensioni e maggiore personalizzabilità, potrai godere di un comfort elevato durante la navigazione. I nuovi browser si aggiornano automaticamente offrendo maggiore protezione."
+msgstr "Confort e mellor experiencia"
 
 #: update-browser.php:183
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
-msgstr "Con le nuovi funzioni, le estensioni e la facilità di personalizzazione, avrai un'esperienza di navigazione molto più confortevole"
+msgstr "Con novas características, extensións e mellor personalización, terá unha máis confortábel experiencia web."
 
 #: update-browser.php:189
 msgid "Why this website?"
-msgstr "Perché questo sito?"
+msgstr "Porque existe este sitio web?"
 
 #: update-browser.php:191
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
-msgstr "Questo sito web nasce da un'iniziativa di web designer, amministratori di siti e blogger con la volontà di far progredire il web e aiutare gli utenti."
+msgstr "Este sitio é unha iniciativa de deseñadores web, administradores e bloggers que queren facer evolucionar o web e axudar aos seus visitantes."
 
 #: update-browser.php:197
 msgid "I can't update my browser"
-msgstr "\"Non posso aggiornare il mio browser\""
+msgstr "\"Non son capaz a actualizar o meu navegador\""
 
 #: update-browser.php:198
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
-msgstr "Se non puoi cambiare il tuo browser per motivi di compatibilità, una delle possibilità è quella di installare un secondo browser da dedicare alla navigazione e tenere il vecchio per la compatibilità."
+msgstr "Se non pode cambiar o seu navegador por problemas de compatibilidade, probe a instalar un segundo navegador web para navegar de cotío e manteña o antigo para compatibilidade."
 
 #: update-browser.php:199
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
-msgstr "Se non puoi installare un nuovo browser sul computer che stai usando, chiedi all'amministratore di sistema di farlo per te."
+msgstr "Se o seu computador está xestioando por un administrador e non pode instar un novo navegador web, pregúntelle ao seu administrador para facelo."
 
 #: update-browser.php:209
 msgid "This website uses cookies"
-msgstr "Questo sito web usa cookie"
+msgstr ""
 
