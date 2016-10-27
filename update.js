@@ -85,10 +85,11 @@ window._buorgres=this.op=op||{};
 var langset=this.op.l;
 this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.l=this.op.l.replace("_","-").toLowerCase();
+var apiver=this.op.api||this.op.c||-1;
 var ll=this.op.l.substr(0,2);
 var vsakt = {i:12,f:49,o:39,s:9.1,n:20,c:53,y:16.4,v:1.4};
 var vsdefault = {i:10,f:-3,o:-3,s:7.1,n:12,c:-3,a:534,y:-0.1,v:-0.1};
-if (!this.op.c || (this.op.c && this.op.c<4))
+if (apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
     var vsmin={i:8,f:5,o:12.5,s:6.2,n:12};

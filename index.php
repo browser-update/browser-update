@@ -86,7 +86,7 @@ include("header.php");
 
 
 <textarea id="f-code" rows="9">&lt;script>
-var $buoop = {};
+var $buoop = {api:4};
 function $buo_f(){ 
  var e = document.createElement("script"); 
  e.src = "//browser-update.org/update.min.js"; 
@@ -259,7 +259,7 @@ function getomat(id) {
 function code() {
     var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = 'script \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'c:4}; \n\
+var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'api:4}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\

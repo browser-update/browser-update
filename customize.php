@@ -43,6 +43,7 @@ var $buoop = {
     newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
     url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
     nomessage: false                // Do not show a message if the browser is out of date, just call the onshow callback function
+    api: xxx                        // This is the version of the browser-update api to use. Please do not remove.
 };
 </pre>
 <h3><?php echo T_('Change the style'); ?></h3>
