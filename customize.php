@@ -25,7 +25,7 @@ T_textdomain('customize');
 
 <pre>
 var $buoop = {
-    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('specify minimum browser versions to notify') . "\n"; ?>
+    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('specify minimum browser versions to notify. Negative values specify how much versions behind current version to notify.') . "\n"; ?> 
     reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
     reminderClosed: 150,             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
@@ -42,7 +42,7 @@ var $buoop = {
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
     newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
     url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
-    nomessage: false                // Do not show a message if the browser is out of date, just call the onshow callback function
+    nomessage: false,               // Do not show a message if the browser is out of date, just call the onshow callback function
     api: xxx                        // This is the version of the browser-update api to use. Please do not remove.
 };
 </pre>
