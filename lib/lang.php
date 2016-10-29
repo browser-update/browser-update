@@ -44,7 +44,8 @@ $lang_rewrite = array(
         "ga"=>"ga_IE",
         "no"=>"no_NO",
         "th"=>"th_TH",
-        "xx"=>"xx_XX"
+        "xx"=>"xx_XX",#test
+        "yy"=>"en_SE"#for crowdin inline translation tool. "Gothic"
 );
 
 /**

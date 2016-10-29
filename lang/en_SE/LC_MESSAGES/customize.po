@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: browser-update\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-29 20:04+0200\n"
+"PO-Revision-Date: 2016-10-29 14:21-0400\n"
+"Last-Translator: josselex <huemmer.th@gmail.com>\n"
+"Language-Team: English, Sweden\n"
+"Language: en_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: browser-update\n"
+"X-Crowdin-Language: en-SE\n"
+"X-Crowdin-File: customize.pot\n"
+
+#: customize.php:11
+msgid "Customize and test"
+msgstr "crwdns1:0crwdne1:0"
+
+#: customize.php:14
+msgid "Test the script"
+msgstr "crwdns2:0crwdne2:0"
+
+#: customize.php:17
+msgid "If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab."
+msgstr "crwdns271:0crwdne271:0"
+
+#: customize.php:20
+msgid "Options"
+msgstr "crwdns6:0crwdne6:0"
+
+#: customize.php:23
+msgid "The following options can be passed to the script:"
+msgstr "crwdns7:0crwdne7:0"
+
+#: customize.php:28
+msgid "Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify."
+msgstr "crwdns332:0crwdne332:0"
+
+#: customize.php:31
+msgid "after how many hours should the message reappear"
+msgstr "crwdns273:0crwdne273:0"
+
+#: customize.php:32
+msgid "0 = show all the time"
+msgstr "crwdns10:0crwdne10:0"
+
+#: customize.php:33
+msgid "if the user explicitly closes message it reappears after x hours"
+msgstr "crwdns274:0crwdne274:0"
+
+#: customize.php:34
+msgid "callback functions after notification has appeared / was clicked / closed"
+msgstr "crwdns333:0crwdne333:0"
+
+#: customize.php:38
+msgid "set a fixed language for the message, e.g. \"en\". This overrides the default detection."
+msgstr "crwdns334:0crwdne334:0"
+
+#: customize.php:39
+msgid "true = always show the bar (for testing)"
+msgstr "crwdns14:0crwdne14:0"
+
+#: customize.php:40
+msgid "custom notification text (html)"
+msgstr "crwdns335:0crwdne335:0"
+
+#: customize.php:41
+#, php-format
+msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
+msgstr "crwdns323:0%scrwdnd323:0%scrwdnd323:0%scrwdne323:0"
+
+#: customize.php:42
+msgid "custom notification text for language \"xx\""
+msgstr "crwdns277:0crwdne277:0"
+
+#: customize.php:43
+msgid "e.g. text_de for german and text_it for italian"
+msgstr "crwdns278:0crwdne278:0"
+
+#: customize.php:44
+msgid "open link in new window/tab"
+msgstr "crwdns16:0crwdne16:0"
+
+#: customize.php:45
+msgid "the url to go to after clicking the notification"
+msgstr "crwdns279:0crwdne279:0"
+
+#: customize.php:50
+msgid "Change the style"
+msgstr "crwdns280:0crwdne280:0"
+
+#: customize.php:53
+msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
+msgstr "crwdns281:0crwdne281:0"
+

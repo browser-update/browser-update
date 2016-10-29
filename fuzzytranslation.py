@@ -260,8 +260,8 @@ for p in paths:
     
 
 
-#%% API
+#%% crowdin API
+import subprocess
 
-#crowdin-cli-py upload sources
-#crowdin-cli-py upload translations
-#crowdin-cli-py download
+#subprocess.call(['crowdin-cli-py', 'upload'])
+subprocess.call(['crowdin-cli-py', 'download'])

@@ -13,6 +13,17 @@
     <meta name="robots" content="index,follow" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="/base2.css" type="text/css" />
+    <?php
+    if ($detected_lang=="en_SE") {
+        ?>
+        <script type="text/javascript">
+            var _jipt = [];
+            _jipt.push(['project', 'browser-update']);
+        </script>
+        <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
+        <?php
+    }
+    ?>
     <!--[if lte IE 7]>
     <link rel="stylesheet" href="/drecksie.css" type="text/css" />
     <![endif]-->
