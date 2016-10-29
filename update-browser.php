@@ -72,7 +72,7 @@ if (has("android")) {
 function brow($name, $url, $vendor, $char, $na=False) {
     echo '<td class="b b'.$char.'">';
     if (!$na) {
-        echo '<a class="l" href="'.$url.'" target="_blank" title="update to '.$name.' web browser" onmousedown="countBrowser(\''.$char.'\')">';
+        echo '<a class="l" href="'.$url.'" target="_blank" title="'.sprintf(T_("Download updated %s web browser from %s website!"),$name,$vendor).'" onmousedown="countBrowser(\''.$char.'\')">';
     }
     else {
         echo' <a class="l notavailable">';
@@ -88,6 +88,10 @@ function brow($name, $url, $vendor, $char, $na=False) {
         </a>
     </td> 
     ';
+}
+
+if (False) {
+    echo T_("Checking if your browser is up-to-date ..."); //Just for the translation right now
 }
 
 if (!is_outdated() and !(isset($_GET['force_outdated']) and $_GET['force_outdated'])) {
@@ -142,6 +146,7 @@ include("ads.php");
 
 if (false) {
     //for translations
+    T_("Advertisement");
     sprintf(T_('This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site.'),'Internet Explorer 6',' href="update.html"');
     //sprintf(T_('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html"');
 }

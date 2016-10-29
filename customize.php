@@ -25,18 +25,19 @@ T_textdomain('customize');
 
 <pre>
 var $buoop = {
-    vs: {i:6,f:2,o:9.63,s:2,c:10},  // <?php echo T_('specify minimum browser versions to notify. Negative values specify how much versions behind current version to notify.') . "\n"; ?> 
+    vs: {i:8,f:25,o:17,s:9,c:22},  // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
+                                   // f:22 ---> Firefox <= 22
+                                   // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
     reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
                                     // <?php echo T_('0 = show all the time') . "\n"; ?>
     reminderClosed: 150,             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
-    onshow: function(infos){},      // <?php echo T_('callback function after the bar has appeared') . "\n"; ?>
-    onclick: function(infos){},     // <?php echo T_('callback function if bar was clicked') . "\n"; ?>
-    onclose: function(infos){},     //
+    onshow: function(infos){},      // <?php echo T_('callback functions after notification has appeared / was clicked / closed') . "\n"; ?>
+    onclick: function(infos){},
+    onclose: function(infos){},
 
-    l: false,                       // <?php echo T_('set a language for the message, e.g. "en"') . "\n"; ?>
-                                    // <?php echo T_('overrides the default detection') . "\n"; ?>
+    l: false,                       // <?php echo T_('set a fixed language for the message, e.g. "en". This overrides the default detection.') . "\n"; ?>
     test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
-    text: "",                       // <?php echo T_('custom notification html text') . "\n"; ?>
+    text: "",                       // <?php echo T_('custom notification text (html)') . "\n"; ?>
                                     // <?php echo T_('Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;"'). "\n";?>
     text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
