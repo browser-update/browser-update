@@ -39,15 +39,25 @@ AddCharset utf-8 .js
 #4 days cache for the files
 
 <FilesMatch "update.js">
-  Header set Cache-Control "public, max-age=86400"
-  ExpiresDefault "access plus 1 day"
+  Header set Cache-Control "public, max-age=172800"
+  ExpiresDefault "access plus 2 days"
   SetOutputFilter DEFLATE
+
+  #BEGIN Disable ETag
+  Header unset ETag
+  FileETag None
+  #END Disable ETag
 </FilesMatch>
 
 <FilesMatch "update.min.js">
-  Header set Cache-Control "public, max-age=86400"
-  ExpiresDefault "access plus 1 day"
+  Header set Cache-Control "public, max-age=172800"
+  ExpiresDefault "access plus 2 days"
   SetOutputFilter DEFLATE
+
+  #BEGIN Disable ETag
+  Header unset ETag
+  FileETag None
+  #END Disable ETag
 </FilesMatch>
 
 #no cache
