@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 19:52+0200\n"
+"PO-Revision-Date: 2016-10-29 14:06-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
@@ -16,113 +16,126 @@ msgstr ""
 "X-Crowdin-Language: ar\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:34
+#: header.php:5 header.php:32
 msgid "Update your Browser"
 msgstr "قم بتحديث متصفحك"
 
-#: header.php:29
+#: header.php:27
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "مبادرة من قبل مصممين مواقع لإخبار الزوار عن تحديث المتصفح"
 
-#: header.php:31 update-browser.php:192
+#: header.php:29 update-browser.php:182
 msgid "About the Project"
 msgstr "المشروع"
 
-#: header.php:35
+#: header.php:33
 msgid "Statistics"
 msgstr "الإحصائيات"
 
-#: header.php:36
+#: header.php:34
 msgid "Blog"
 msgstr "المدونة"
 
-#: header.php:88
+#: header.php:90
 msgid "Contact"
 msgstr "الاتصال"
 
-#: update-browser.php:73
-msgid "Your browser is up-to-date."
-msgstr "متصفحك هو الأحدث."
+#: update-browser.php:75
+#, php-format
+msgid "Download updated %s web browser from %s website!"
+msgstr ""
 
-#: update-browser.php:83
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "المتصفح الخاص قديم. يرجى تنزيل أحد هذه المتصفحات الحديثة والمجانية والممتازة:"
-
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:84
 msgid "Most recent version not available for your system."
 msgstr "أحدث إصدار غير متوفر للنظام الخاص بك."
 
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:85
 msgid "Please choose another browser."
 msgstr "نرجو منك إختيار متصفح آخر"
 
-#: update-browser.php:146
+#: update-browser.php:94
+msgid "Checking if your browser is up-to-date ..."
+msgstr ""
+
+#: update-browser.php:101
+msgid "Your browser is up-to-date."
+msgstr "متصفحك هو الأحدث."
+
+#: update-browser.php:111
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "المتصفح الخاص قديم. يرجى تنزيل أحد هذه المتصفحات الحديثة والمجانية والممتازة:"
+
+#: update-browser.php:139
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "لمزيد من المعلومات عن <a href=\"%s\">الحماية</a>، <a href=\"%s\">السرعة</a>،<a href=\"%s\">الراحة</a> و <a href=\"%s\">الاستمتاع</a>."
 
-#: update-browser.php:156
+#: update-browser.php:149
+msgid "Advertisement"
+msgstr ""
+
+#: update-browser.php:150
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "يود هذا الموقع أن يذكرك بأن متصفحك (%s) <b>متقادم</b>. <a%s>حدث متصفحك</a> من أجل مزيد من الأمان، والراحة، ومن أجل أفضل تجربة للموقع."
 
-#: update-browser.php:166
+#: update-browser.php:156
 msgid "Why do I need an up-to-date browser?"
 msgstr "لماذا احتجاح متصفح حديث؟"
 
-#: update-browser.php:170
+#: update-browser.php:160
 msgid "Security"
 msgstr "الآمان"
 
-#: update-browser.php:171
+#: update-browser.php:161
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "المتصفحات المُحدثه الجديدة، تحميك من الاحتيال، الفيروسات، وكثير من الأمور الأخرى المتصفحات المُحدثة تقوم بإغلاق ثغرات قد تكون موجودة في متصفحك الحالي."
 
-#: update-browser.php:174
+#: update-browser.php:164
 msgid "Speed"
 msgstr "السرعة"
 
-#: update-browser.php:175
+#: update-browser.php:165
 msgid "Every new browser generation improves speed"
 msgstr "كل جيل جديد من المتصفحات يطور السرعة"
 
-#: update-browser.php:178
+#: update-browser.php:168
 msgid "Compatibility & new Technology"
 msgstr "التوافق"
 
-#: update-browser.php:179
+#: update-browser.php:169
 msgid "You can view sites that are using the latest technology"
 msgstr "المواقع التى تستخدم تقنيات جديدة ستعمل بشكل صحيح"
 
-#: update-browser.php:182
+#: update-browser.php:172
 msgid "Comfort & better experience"
 msgstr "الراحة و تجربة أفضل"
 
-#: update-browser.php:183
+#: update-browser.php:173
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "مع الميزات الجديدة و الإضافات و الخيارات ستحصل على راحة اكثر و تجربة أفضل."
 
-#: update-browser.php:189
+#: update-browser.php:179
 msgid "Why this website?"
 msgstr "لماذا هذه الموقع؟"
 
-#: update-browser.php:191
+#: update-browser.php:181
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "هذه الموقع هو عباره عن مبادرة من قبل مصممين مواقع و اصحاب مواقع و مُدونين يُريدون الدفع قدماً لتطوير بشبكة الانترنت و مساعدة زوارهم."
 
-#: update-browser.php:197
+#: update-browser.php:187
 msgid "I can't update my browser"
 msgstr "انا غير قادر على تحديث متصفحي"
 
-#: update-browser.php:198
+#: update-browser.php:189
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "اذا كنت لا تستطيع تحديث متصفحك بسبب مشاكل التوافق، فكر بتنزيل متصفح آخر لتصفح الانترنت و أجعل المتصفح القديم فقط للمواقع إلى تحتاج إلى توافق."
 
-#: update-browser.php:199
+#: update-browser.php:190
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "اذا كنت على حاسب يدار من قبل المشرف و لا تستطيع تنزيل متصفح جديدتواصل مع المشرف لتنزيل متصفح جديد."
 
-#: update-browser.php:209
+#: update-browser.php:219
 msgid "This website uses cookies"
 msgstr "موقع الإنترنت هذا يستخدم ملفات تعريف الارتباط"
 

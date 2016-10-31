@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 19:52+0200\n"
+"PO-Revision-Date: 2016-10-29 14:06-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Serbian (Latin)\n"
 "Language: sr_CS\n"
@@ -16,113 +16,126 @@ msgstr ""
 "X-Crowdin-Language: sr-CS\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:34
+#: header.php:5 header.php:32
 msgid "Update your Browser"
 msgstr "Nadogradite vaš pretraživač"
 
-#: header.php:29
+#: header.php:27
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "Inicijativa web dizajnera da informišu korisnike o nadogradnji pretraživača"
 
-#: header.php:31 update-browser.php:192
+#: header.php:29 update-browser.php:182
 msgid "About the Project"
 msgstr "Projekat"
 
-#: header.php:35
+#: header.php:33
 msgid "Statistics"
 msgstr "Statistike"
 
-#: header.php:36
+#: header.php:34
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:88
+#: header.php:90
 msgid "Contact"
 msgstr "Kontakt"
 
-#: update-browser.php:73
-msgid "Your browser is up-to-date."
+#: update-browser.php:75
+#, php-format
+msgid "Download updated %s web browser from %s website!"
 msgstr ""
 
-#: update-browser.php:83
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "Vaš pretraživač je zastareo. Molim vas da preuzmete jedan od ovih ažurnih, besplatnih i odličnih pretraživača:"
-
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:84
 msgid "Most recent version not available for your system."
 msgstr "Poslednja verzija nije raspoloživa za vaš sistem."
 
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:85
 msgid "Please choose another browser."
 msgstr "Molim vas da odaberete drugi pretraživač."
 
-#: update-browser.php:146
+#: update-browser.php:94
+msgid "Checking if your browser is up-to-date ..."
+msgstr ""
+
+#: update-browser.php:101
+msgid "Your browser is up-to-date."
+msgstr ""
+
+#: update-browser.php:111
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Vaš pretraživač je zastareo. Molim vas da preuzmete jedan od ovih ažurnih, besplatnih i odličnih pretraživača:"
+
+#: update-browser.php:139
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "Za više <a href=\"%s\">sigurnosti</a>,    <a href=\"%s\">brzine</a>,    <a href=\"%s\">ugođaja</a> i    <a href=\"%s\">zabave</a>."
 
-#: update-browser.php:156
+#: update-browser.php:149
+msgid "Advertisement"
+msgstr ""
+
+#: update-browser.php:150
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "Vaš pretraživač (%s) je <b>zastareo</b>. Ima poznate <b>sigurnosne probleme</b> i najverovatnije <b>neće prikazati sve funkcionalnisti</b> ovog i drugih sajtova. <a%s>Nauči više o nadogradnji svog pretraživača</a>"
 
-#: update-browser.php:166
+#: update-browser.php:156
 msgid "Why do I need an up-to-date browser?"
 msgstr "Zašto mi treba moderan pretraživač ?"
 
-#: update-browser.php:170
+#: update-browser.php:160
 msgid "Security"
 msgstr "Sigurnost"
 
-#: update-browser.php:171
+#: update-browser.php:161
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "Noviji pretraživači vas bolje štiti od prevara, virusa, trojanaca, phishing i drugih pretnji. Oni takođe popravljaju sigurnosne rupe u vašem trenutnom pretraživaču."
 
-#: update-browser.php:174
+#: update-browser.php:164
 msgid "Speed"
 msgstr "Brzina"
 
-#: update-browser.php:175
+#: update-browser.php:165
 msgid "Every new browser generation improves speed"
 msgstr "Svaka nova generacija pretraživača poboljšava brzinu."
 
-#: update-browser.php:178
+#: update-browser.php:168
 msgid "Compatibility & new Technology"
 msgstr "Kompatibilnost"
 
-#: update-browser.php:179
+#: update-browser.php:169
 msgid "You can view sites that are using the latest technology"
 msgstr "Sajtovi koji koriste nove tehnologije biće prikazani tačnije i bolje."
 
-#: update-browser.php:182
+#: update-browser.php:172
 msgid "Comfort & better experience"
 msgstr "Lagodno i bolje iskustvo"
 
-#: update-browser.php:183
+#: update-browser.php:173
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "Sa novim karakteristikama, ekstenzijama i boljom prilagodljivošću, imaćete udobnije veb-iskustvo."
 
-#: update-browser.php:189
+#: update-browser.php:179
 msgid "Why this website?"
 msgstr "Zašto ovaj web sajt? "
 
-#: update-browser.php:191
+#: update-browser.php:181
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "Ovaj sajt je inicijativa veb dizajnera, vebmastera i blogera koji žele da unpared internet i pomognu svojim posetiocima."
 
-#: update-browser.php:197
+#: update-browser.php:187
 msgid "I can't update my browser"
 msgstr "\"Nisam u mogućnosti da unapredeim pretraživač\""
 
-#: update-browser.php:198
+#: update-browser.php:189
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "Ako ne možete da promenite brovser zbog problema kompatibilnosti, razmislite o instaliranju drugog pretraživača i zadržavanju starog zbog kompatibilnosti."
 
-#: update-browser.php:199
+#: update-browser.php:190
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "Ako ste na računaru koji se održava od strane administratora i ne možete da instalirate novi pretraživa, pitajte svog administratora o tome."
 
-#: update-browser.php:209
+#: update-browser.php:219
 msgid "This website uses cookies"
 msgstr ""
 

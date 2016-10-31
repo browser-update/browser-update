@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-10-18 05:12-0400\n"
+"POT-Creation-Date: 2016-10-29 19:04+0200\n"
+"PO-Revision-Date: 2016-10-29 13:24-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -16,6 +16,32 @@ msgstr ""
 "X-Crowdin-Language: bg\n"
 "X-Crowdin-File: site.pot\n"
 
+#: stat.php:7
+msgid "Statistics"
+msgstr ""
+
+#: stat.php:17 index.php:33
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong> сайта използват скрипта на Browser-Update.org."
+
+#: stat.php:20 index.php:36
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong> посетители вече са актуализирали своя браузър."
+
+#: stat.php:25
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:207
+msgid "From"
+msgstr ""
+
+#: stat.php:207
+msgid "To"
+msgstr ""
+
 #: index.php:24
 msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
 msgstr "Тази услуга е възможност да информирате ненатрапчиво вашите посетители да актуализират браузъра си."
@@ -23,16 +49,6 @@ msgstr "Тази услуга е възможност да информират�
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
-
-#: index.php:33 stat.php:17
-#, php-format
-msgid "<b>%s</b> sites are using this notification"
-msgstr "<strong class=\"number\">%d</strong> сайта използват скрипта на Browser-Update.org."
-
-#: index.php:36 stat.php:20
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr "<strong class=\"number\">%d</strong> посетители вече са актуализирали своя браузър."
 
 #: index.php:40
 msgid "How it works"
@@ -89,7 +105,7 @@ msgstr "Ако в бъдеще се появят други версии на б
 msgid "Customizable"
 msgstr "Персонализация"
 
-#: index.php:72 index.php:185
+#: index.php:72 index.php:194
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 msgstr "Можете да <a href=\"%s\">персонализирате</a> стила на съобщението, текста и други опции."
@@ -119,45 +135,45 @@ msgstr "За следните браузъри и версии ще се пок�
 msgid "older than %d months (currently %s)"
 msgstr ""
 
-#: index.php:159
+#: index.php:165
 msgid "Also notify all browser versions with security vulnerabilities."
 msgstr ""
 
-#: index.php:165
+#: index.php:171
 msgid "Also notify all browsers that are not supported by the vendor anymore."
 msgstr ""
 
-#: index.php:177
+#: index.php:186
 msgid "Notify mobile browsers."
 msgstr ""
 
-#: index.php:181
+#: index.php:190
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
 msgstr "Скриптът и устройството са с отворен код, които са лицензирани под <a%s>MIT License</a>."
 
-#: index.php:189
+#: index.php:198
 msgid "There are plugins for:"
 msgstr "Може да използвате и приставки от трети страни за:"
 
-#: index.php:207
+#: index.php:216
 msgid "Why you should tell users to update"
 msgstr "Защо трябва да уведомявате посетителите си да актуализират браузъра си"
 
-#: index.php:209
+#: index.php:218
 msgid "Reduced development costs and time"
 msgstr "Намалени разходи за разработка и време"
 
-#: index.php:210
+#: index.php:219
 msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
 msgstr "По-новите браузъри ви позволяват да използвате повече функции и нови технологии (CSS3, SVG, HTML5, RSS, CSS генерирано съдържание, адаптивен дизайн) на вашия сайт, което води до по-добро сърфиране и изживяване за вашите потребители."
 
-#: index.php:211
+#: index.php:220
 #, php-format
 msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
 
-#: index.php:214
+#: index.php:223
 #, php-format
 msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""

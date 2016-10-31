@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 17:31+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 19:52+0200\n"
+"PO-Revision-Date: 2016-10-29 14:06-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -16,114 +16,127 @@ msgstr ""
 "X-Crowdin-Language: ja\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:34
+#: header.php:5 header.php:32
 msgid "Update your Browser"
 msgstr "ブラウザを更新"
 
-#: header.php:29
+#: header.php:27
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "ブラウザーアップデート利用者へお知らせするためのウェブデザイナーによる第一歩"
 
-#: header.php:31 update-browser.php:192
+#: header.php:29 update-browser.php:182
 msgid "About the Project"
 msgstr "プロジェクトについて"
 
-#: header.php:35
+#: header.php:33
 msgid "Statistics"
 msgstr "統計"
 
-#: header.php:36
+#: header.php:34
 msgid "Blog"
 msgstr "ブログ"
 
-#: header.php:88
+#: header.php:90
 msgid "Contact"
 msgstr "コンタクト"
 
-#: update-browser.php:73
-msgid "Your browser is up-to-date."
-msgstr "ブラウザが最新バージョンへ更新されています。"
+#: update-browser.php:75
+#, php-format
+msgid "Download updated %s web browser from %s website!"
+msgstr ""
 
-#: update-browser.php:83
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "ブラウザが最新バージョンでありません。以下の最新バージョンで、無料で、素晴らしいブラウザをダウンロードしてください。"
-
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:84
 msgid "Most recent version not available for your system."
 msgstr "お客様のシステムでは最新バージョンは実装不可能です。"
 
-#: update-browser.php:104 update-browser.php:118
+#: update-browser.php:85
 msgid "Please choose another browser."
 msgstr "別なブラウザを選択してください。"
 
-#: update-browser.php:146
+#: update-browser.php:94
+msgid "Checking if your browser is up-to-date ..."
+msgstr ""
+
+#: update-browser.php:101
+msgid "Your browser is up-to-date."
+msgstr "ブラウザが最新バージョンへ更新されています。"
+
+#: update-browser.php:111
+msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
+msgstr "ブラウザが最新バージョンでありません。以下の最新バージョンで、無料で、素晴らしいブラウザをダウンロードしてください。"
+
+#: update-browser.php:139
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "<a href=\"%s\">セキュリティ</a>、<a href=\"%s\">スピード</a>、<a href=\"%s\">使いやすさ</a>、<a href=\"%s\">楽しさ</a>を増すために。"
 
-#: update-browser.php:156
+#: update-browser.php:149
+msgid "Advertisement"
+msgstr ""
+
+#: update-browser.php:150
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 <a%s>ブラウザを更新する方法を確認する</a>"
 
-#: update-browser.php:166
+#: update-browser.php:156
 msgid "Why do I need an up-to-date browser?"
 msgstr "なぜ最新バージョンのブラウザが必要なのか？"
 
-#: update-browser.php:170
+#: update-browser.php:160
 msgid "Security"
 msgstr "安全保障"
 
-#: update-browser.php:171
+#: update-browser.php:161
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "新しいブラウザーはより<a href=\"http://en.wikipedia.org/wiki/Internet_fraud\" title=\"Internet fraud\">詐欺</a>、ウイルス、<a href=\"http://ja.wikipedia.org/wiki/フィッシング_(詐欺)\" title=\"フィッシング\">フィッシングサイト</a>や他の脅威からあなたの個人データを守ることが可能です。更新されたブラウザーはウイルスなどがあなたのコンピューターに侵略すると言ったセキュリティーホールを補修します。。"
 
-#: update-browser.php:174
+#: update-browser.php:164
 msgid "Speed"
 msgstr "速度"
 
-#: update-browser.php:175
+#: update-browser.php:165
 msgid "Every new browser generation improves speed"
 msgstr "新バージョンのブラウザーはそれぞれインターネット表示速度が早くなっています。インターネットサーフィンをまた楽しむことができます。"
 
-#: update-browser.php:178
+#: update-browser.php:168
 msgid "Compatibility & new Technology"
 msgstr "互換性"
 
-#: update-browser.php:179
+#: update-browser.php:169
 msgid "You can view sites that are using the latest technology"
 msgstr "どんどん出てきている新しい技術を使ったウェブサイトは、更新された新バージョンのブラウザーを使うことによってより良く利用可能です。こうして表示も圧倒的によくなると言ったことも実現可能になります。"
 
-#: update-browser.php:182
+#: update-browser.php:172
 msgid "Comfort & better experience"
 msgstr "快適さとその実績"
 
-#: update-browser.php:183
+#: update-browser.php:173
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "新しい機能とより良い拡張機能を備えたブラウザーを使うことによって、より早く簡単にインターネットサーフィンをすることが出来ます。"
 
-#: update-browser.php:189
+#: update-browser.php:179
 msgid "Why this website?"
 msgstr "なぜこのウェブサイトを？"
 
-#: update-browser.php:191
+#: update-browser.php:181
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "このサイトはウェブデザイナー、ウェブマスターとブロガー、そして彼らのサイトの訪問者を援助し、ウェブを更に向上させるための計画の第一歩となるためのものです：\n"
 "\t\t\t\t古いバージョンのブラウザーは<strong>安全上にリスク</strong>をもたらし、インターネットの機能向上を妨げることになります。"
 
-#: update-browser.php:197
+#: update-browser.php:187
 msgid "I can't update my browser"
 msgstr "私はアップデートが出来ません。"
 
-#: update-browser.php:198
+#: update-browser.php:189
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "もしお使いのパソコンが社内ネットワークでご利用なので、ご自身で新しいバージョンのブラウザーをインストールは出来ないと言う場合は、会社のネットワーク管理者にブラウザーのアップデートが可能かどうかお尋ね下さい。"
 
-#: update-browser.php:199
+#: update-browser.php:190
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "新しいブラウザーを右のページから選んで下さい。"
 
-#: update-browser.php:209
+#: update-browser.php:219
 msgid "This website uses cookies"
 msgstr "このウェブサイトはクッキーを使用します"
 

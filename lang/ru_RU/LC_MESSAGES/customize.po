@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 18:01+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 20:04+0200\n"
+"PO-Revision-Date: 2016-10-29 14:06-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -37,71 +37,63 @@ msgid "The following options can be passed to the script:"
 msgstr "Скурипту могут переданы следующие параметры:"
 
 #: customize.php:28
-msgid "specify minimum browser versions to notify"
+msgid "Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify."
 msgstr ""
 
-#: customize.php:29
+#: customize.php:31
 msgid "after how many hours should the message reappear"
 msgstr ""
 
-#: customize.php:30
+#: customize.php:32
 msgid "0 = show all the time"
 msgstr "0=показывать всегда"
 
-#: customize.php:31
+#: customize.php:33
 msgid "if the user explicitly closes message it reappears after x hours"
 msgstr ""
 
-#: customize.php:32
-msgid "callback function after the bar has appeared"
-msgstr "функция обратного вызова после того, как панель появилась"
-
-#: customize.php:33
-msgid "callback function if bar was clicked"
+#: customize.php:34
+msgid "callback functions after notification has appeared / was clicked / closed"
 msgstr ""
 
-#: customize.php:36
-msgid "set a language for the message, e.g. \"en\""
-msgstr "установить язык сообщения, например \"ru\""
-
-#: customize.php:37
-msgid "overrides the default detection"
-msgstr "переопределяет обнаружение по умолчанию"
-
 #: customize.php:38
+msgid "set a fixed language for the message, e.g. \"en\". This overrides the default detection."
+msgstr ""
+
+#: customize.php:39
 msgid "true = always show the bar (for testing)"
 msgstr "true = всегда показывать панель (для тестирования)"
 
-#: customize.php:39
-msgid "custom notification html text"
-msgstr "Ваш собственный текст уведомления в html"
-
 #: customize.php:40
+msgid "custom notification text (html)"
+msgstr ""
+
+#: customize.php:41
 #, php-format
 msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
 msgstr ""
 
-#: customize.php:41
+#: customize.php:42
 msgid "custom notification text for language \"xx\""
 msgstr ""
 
-#: customize.php:42
+#: customize.php:43
 msgid "e.g. text_de for german and text_it for italian"
 msgstr ""
 
-#: customize.php:43
+#: customize.php:44
 msgid "open link in new window/tab"
 msgstr "открыть ссылку в новом окне/вкладке"
 
-#: customize.php:44
+#: customize.php:45
 msgid "the url to go to after clicking the notification"
 msgstr ""
 
-#: customize.php:47
+#: customize.php:50
 msgid "Change the style"
 msgstr ""
 
-#: customize.php:50
+#: customize.php:53
 msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
 msgstr ""
 

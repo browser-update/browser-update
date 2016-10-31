@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 19:04+0200\n"
+"PO-Revision-Date: 2016-10-29 13:25-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -16,6 +16,32 @@ msgstr ""
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: site.pot\n"
 
+#: stat.php:7
+msgid "Statistics"
+msgstr ""
+
+#: stat.php:17 index.php:33
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong>개의 웹 사이트에서 Browser-Update.org 스크립트를 사용하고 있습니다."
+
+#: stat.php:20 index.php:36
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong>명의 사용자가 웹 브라우저를 업그레이드했습니다."
+
+#: stat.php:25
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:207
+msgid "From"
+msgstr ""
+
+#: stat.php:207
+msgid "To"
+msgstr ""
+
 #: index.php:24
 msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
 msgstr "이 서비스는 웹 사이트 방문자들을 크게 방해하지 않으면서 새로운 브라우저로 전환하라는 알림을 표시합니다."
@@ -23,16 +49,6 @@ msgstr "이 서비스는 웹 사이트 방문자들을 크게 방해하지 않�
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr ""
-
-#: index.php:33 stat.php:17
-#, php-format
-msgid "<b>%s</b> sites are using this notification"
-msgstr "<strong class=\"number\">%d</strong>개의 웹 사이트에서 Browser-Update.org 스크립트를 사용하고 있습니다."
-
-#: index.php:36 stat.php:20
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr "<strong class=\"number\">%d</strong>명의 사용자가 웹 브라우저를 업그레이드했습니다."
 
 #: index.php:40
 msgid "How it works"
@@ -89,7 +105,7 @@ msgstr "만약 웹 브라우저 제작사에서 지원을 중단하거나, 보�
 msgid "Customizable"
 msgstr "수정 가능함"
 
-#: index.php:72 index.php:185
+#: index.php:72 index.php:194
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 msgstr "메시지의 스타일, 텍스트, 기타 옵션을 <a href=\"%s\">수정할 수</a>도 있습니다."
@@ -119,45 +135,45 @@ msgstr "다음 브라우저로 접속하면 알림 표시:"
 msgid "older than %d months (currently %s)"
 msgstr ""
 
-#: index.php:159
+#: index.php:165
 msgid "Also notify all browser versions with security vulnerabilities."
 msgstr ""
 
-#: index.php:165
+#: index.php:171
 msgid "Also notify all browsers that are not supported by the vendor anymore."
 msgstr ""
 
-#: index.php:177
+#: index.php:186
 msgid "Notify mobile browsers."
 msgstr ""
 
-#: index.php:181
+#: index.php:190
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
 msgstr ""
 
-#: index.php:189
+#: index.php:198
 msgid "There are plugins for:"
 msgstr "플러그인을 사용할 수도 있습니다: "
 
-#: index.php:207
+#: index.php:216
 msgid "Why you should tell users to update"
 msgstr "업데이트해야 한다고 말해야 하는 이유"
 
-#: index.php:209
+#: index.php:218
 msgid "Reduced development costs and time"
 msgstr "개발 시간과 비용 감소"
 
-#: index.php:210
+#: index.php:219
 msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
 msgstr "새로운 브라우저는 더 많은 기능이나 신기술(CSS3, SVG, HTML5, RSS, CSS로 내용 생성, 유연한 레이아웃)을 지원합니다. 웹 사이트에 적용하면 더 좋은 모습을 더 쉽게 만들 수 있습니다."
 
-#: index.php:211
+#: index.php:220
 #, php-format
 msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr ""
 
-#: index.php:214
+#: index.php:223
 #, php-format
 msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr ""

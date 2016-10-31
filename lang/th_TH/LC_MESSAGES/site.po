@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-10-18 05:13-0400\n"
+"POT-Creation-Date: 2016-10-29 19:04+0200\n"
+"PO-Revision-Date: 2016-10-29 13:25-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
@@ -16,6 +16,32 @@ msgstr ""
 "X-Crowdin-Language: th\n"
 "X-Crowdin-File: site.pot\n"
 
+#: stat.php:7
+msgid "Statistics"
+msgstr ""
+
+#: stat.php:17 index.php:33
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<b>%s</b> เว็บไซต์กำลังใช้งานการแจ้งเตือนนี้"
+
+#: stat.php:20 index.php:36
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<b>%s</b> ผู้เข้าชมได้ทำการปรับปรุงเบราว์เซอร์ของพวกเขาแล้ว"
+
+#: stat.php:25
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:207
+msgid "From"
+msgstr ""
+
+#: stat.php:207
+msgid "To"
+msgstr ""
+
 #: index.php:24
 msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
 msgstr "Browser-update.org เป็นเครื่องมือในการแจ้งเตือนที่ไม่ก่อความรำคาญแก่ผู้เข้าชมว่าพวกเขาควรจะปรับปรุงเว็บเบราว์เซอร์ของพวกเขาในการจะใช้เว็บไซต์ของคุณ"
@@ -23,16 +49,6 @@ msgstr "Browser-update.org เป็นเครื่องมือในก�
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr "นี่เป็นกระทำด้วยความระมัดระวังที่จะไม่รบกวน บีบบังคับ หรือแจ้งเตือนอย่างไม่สมควรให้ผู้เข้าชม!"
-
-#: index.php:33 stat.php:17
-#, php-format
-msgid "<b>%s</b> sites are using this notification"
-msgstr "<b>%s</b> เว็บไซต์กำลังใช้งานการแจ้งเตือนนี้"
-
-#: index.php:36 stat.php:20
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr "<b>%s</b> ผู้เข้าชมได้ทำการปรับปรุงเบราว์เซอร์ของพวกเขาแล้ว"
 
 #: index.php:40
 msgid "How it works"
@@ -89,7 +105,7 @@ msgstr "เราระวังไม่ให้แจ้งเตือนผ
 msgid "Customizable"
 msgstr "ปรับแต่งได้"
 
-#: index.php:72 index.php:185
+#: index.php:72 index.php:194
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 msgstr "คุณสามารถ <a href=\"%s\">ปรับแต่ง</a> รูปแบบของข้อความ ข้อความและตัวเลือกอื่น ๆ"
@@ -119,45 +135,45 @@ msgstr "เบราว์เซอร์ดังต่อไปนี้จะ
 msgid "older than %d months (currently %s)"
 msgstr "เก่ากว่า %d เดือน (ปัจจุบัน %s)"
 
-#: index.php:159
+#: index.php:165
 msgid "Also notify all browser versions with security vulnerabilities."
 msgstr "รวมถึงแจ้งเตือนเบราว์เซอร์ทุกรุ่นที่มีช่องโหว่ความปลอดภัย"
 
-#: index.php:165
+#: index.php:171
 msgid "Also notify all browsers that are not supported by the vendor anymore."
 msgstr "รวมถึงแจ้งเตือนเบราว์เซอร์ทั้งหมดที่ไม่ได้รับการสนับสนุนจากผู้เผยแพร่อีกต่อไป"
 
-#: index.php:177
+#: index.php:186
 msgid "Notify mobile browsers."
 msgstr "แจ้งเตือนเบราว์เซอร์บนมือถือ"
 
-#: index.php:181
+#: index.php:190
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
 msgstr "สคริปต์และการบริการเป็นโอเพนซอร์สภายใต้ <a%s>ข้อตกลง MIT</a>"
 
-#: index.php:189
+#: index.php:198
 msgid "There are plugins for:"
 msgstr "มีปลั๊กอินสำหรับ:"
 
-#: index.php:207
+#: index.php:216
 msgid "Why you should tell users to update"
 msgstr "ทำไมคุณถึงควรจะบอกให้ผู้ใช้ทำการปรับปรุง"
 
-#: index.php:209
+#: index.php:218
 msgid "Reduced development costs and time"
 msgstr "ลดค่าใช้จ่ายและระยะเวลาในการพัฒนา"
 
-#: index.php:210
+#: index.php:219
 msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
 msgstr "เบราว์เซอร์ใหม่กว่าจะช่วยให้คุณใช้คุณลักษณะและเทคโนโลยีใหม่ ๆ บนเว็บไซต์ของคุณ ส่งผลให้ผู้ใช้ของคุณได้รับประสบการณ์การท่องเว็บที่ดีขึ้น"
 
-#: index.php:211
+#: index.php:220
 #, php-format
 msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr "หลากหลาย <a%s>ผลประโยชน์สำหรับผู้เข้าชมของคุณ</a>: ความปลอดภัย, ความเร็ว, คุณสมบัติต่าง ๆ ..."
 
-#: index.php:214
+#: index.php:223
 #, php-format
 msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr "ช่วยเหลือโครงการนี้โดยการ <a%s>ใช้งานการแจ้งเตือนให้ปรับปรุง</a> บนเว็บของคุณ <a%s>แบ่งปัน</a> หรือ <a%s>แปล</a> หน้าเว็บนี้"

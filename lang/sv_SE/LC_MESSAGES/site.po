@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-03 18:15+0200\n"
-"PO-Revision-Date: 2016-09-20 04:37-0400\n"
+"POT-Creation-Date: 2016-10-29 19:04+0200\n"
+"PO-Revision-Date: 2016-10-29 13:25-0400\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -16,6 +16,32 @@ msgstr ""
 "X-Crowdin-Language: sv-SE\n"
 "X-Crowdin-File: site.pot\n"
 
+#: stat.php:7
+msgid "Statistics"
+msgstr ""
+
+#: stat.php:17 index.php:33
+#, php-format
+msgid "<b>%s</b> sites are using this notification"
+msgstr "<strong class=\"number\">%d</strong> webbsidor använder scriptet från Browser-Update.org."
+
+#: stat.php:20 index.php:36
+#, php-format
+msgid "<b>%s</b> visitors have already updated their browser"
+msgstr "<strong class=\"number\">%d</strong> besökare har uppdaterat sin webbläsare."
+
+#: stat.php:25
+msgid "Browser updates"
+msgstr ""
+
+#: stat.php:207
+msgid "From"
+msgstr ""
+
+#: stat.php:207
+msgid "To"
+msgstr ""
+
 #: index.php:24
 msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."
 msgstr "Denna tjänst erbjuder en möjlighet att på ett diskret sätt uppmana dina besökare att byta till en nyare webbläsare."
@@ -23,16 +49,6 @@ msgstr "Denna tjänst erbjuder en möjlighet att på ett diskret sätt uppmana d
 #: index.php:27
 msgid "This is done with care not to annoy, lock out or erroneously notify visitors!"
 msgstr "Detta görs med omsorg inte irritera, utelåsa eller felaktigt meddela besökare!"
-
-#: index.php:33 stat.php:17
-#, php-format
-msgid "<b>%s</b> sites are using this notification"
-msgstr "<strong class=\"number\">%d</strong> webbsidor använder scriptet från Browser-Update.org."
-
-#: index.php:36 stat.php:20
-#, php-format
-msgid "<b>%s</b> visitors have already updated their browser"
-msgstr "<strong class=\"number\">%d</strong> besökare har uppdaterat sin webbläsare."
 
 #: index.php:40
 msgid "How it works"
@@ -89,7 +105,7 @@ msgstr "Webbläsarversioner som i framtiden inte längre stöds, som har säkerh
 msgid "Customizable"
 msgstr "Anpassningsbar"
 
-#: index.php:72 index.php:185
+#: index.php:72 index.php:194
 #, php-format
 msgid "You can <a href=\"%s\">customize</a> the style of the message, the text and other options."
 msgstr "Du kan <a href=\"%s\">anpassa</a> utseendet på meddelandebalken, texten som visas samt andra inställningar."
@@ -119,45 +135,45 @@ msgstr "Dessa webbläsare kommer att visa meddelandebalken:"
 msgid "older than %d months (currently %s)"
 msgstr "äldre än %d månader (för närvarande %s)"
 
-#: index.php:159
+#: index.php:165
 msgid "Also notify all browser versions with security vulnerabilities."
 msgstr "Meddela också alla webbläsarversioner med säkerhetsproblem."
 
-#: index.php:165
+#: index.php:171
 msgid "Also notify all browsers that are not supported by the vendor anymore."
 msgstr "Meddela också alla webbläsare som inte stöds av säljaren längre."
 
-#: index.php:177
+#: index.php:186
 msgid "Notify mobile browsers."
 msgstr "Meddela mobila webbläsare."
 
-#: index.php:181
+#: index.php:190
 #, php-format
 msgid "The script and service is open source under the <a%s>MIT License</a>."
 msgstr "Skriptet och tjänsten är öppen källkod under <a%s>MIT Licens</a>."
 
-#: index.php:189
+#: index.php:198
 msgid "There are plugins for:"
 msgstr "Dessutom finns tredjepartsplugin för"
 
-#: index.php:207
+#: index.php:216
 msgid "Why you should tell users to update"
 msgstr "Varför uppmana användare att uppdatera webbläsare"
 
-#: index.php:209
+#: index.php:218
 msgid "Reduced development costs and time"
 msgstr "Minskade utvecklingskostnader"
 
-#: index.php:210
+#: index.php:219
 msgid "Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users."
 msgstr "Moderna webbläsare låter dig använda nya webbtekniker såsom CSS3, SVG, HTML5, RSS, CSS-genererat innehåll samt responsiv design. Dessa tekniker ger dina besökare en bättre upplevelse på din webbsida."
 
-#: index.php:211
+#: index.php:220
 #, php-format
 msgid "Numerous <a%s>benefits for your visitors</a>: security, speed, features, ..."
 msgstr "Många <a%s>fördelar för dina besökare</a>: säkerhet, hastighet, funktioner, ..."
 
-#: index.php:214
+#: index.php:223
 #, php-format
 msgid "Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page."
 msgstr "Hjälp projektet genom att <a%s>använda uppdateringsnotifieringen</a> på din webbplats, <a%s>dela</a> eller <a%s>översätta</a> den här sidan."
