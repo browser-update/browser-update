@@ -44,7 +44,7 @@ include("header.php");
     </li>
     <li>
         <?php echo T_('Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update.')?>
-        (<a href="#" onclick="$buo({},true);"><?php echo T_('Try it out!')?></a>)
+        (<a href="#test-bu" onclick="$buo({},true);"><?php echo T_('Try it out!')?></a>)
         <div class="example">
                 <?php echo sprintf(T_('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html?force_outdated=true"')?>
         </div>
@@ -220,7 +220,8 @@ function printolder($months,$version) {
     <li><?php echo sprintf(T_('Numerous <a%s>benefits for your visitors</a>: security, speed, features, ...'), ' href="update.html"')?></li>
 </ul>
 
-<h2><?php echo sprintf(T_('Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page.'),' href="#install"','',' href="https://crowdin.com/project/browser-update"')?></h2>
+<h2><?php echo sprintf(T_('Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page.'),' href="#install"',' href="#sharebuttons" onclick="document.getElementById(\'sharebuttons\').style.display=\'block\';"',' href="https://crowdin.com/project/browser-update"')?></h2>
+<div id="sharebuttons"> <div class="addthis_inline_share_toolbox"></div></div>
 </div>
 
 <script>
@@ -241,6 +242,15 @@ catch(e){window.attachEvent("onload", $buo_f)}
     }
     .generate textarea {
         height: auto;
+    }
+    
+    #sharebuttons {
+        display:none;
+        min-height: 60px;
+        text-align: center;
+    }
+    #sharebuttons:target {
+        display: block;
     }
 </style>
 
@@ -272,5 +282,6 @@ catch(e){window.attachEvent("onload", $buo_f)}\n\
 }    
 code();
 </script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
     
 <?php include("footer.php");?>
