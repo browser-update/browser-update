@@ -102,7 +102,7 @@ function printolder($months,$version) {
 }
 ?>
 <ul id="browserversionchooser">
-    <li>
+    <li class="bi">
         <label for="f-i">IE/Edge</label> 
         <select id="f-i" onchange="code()">    
             <option value="11">&lt;= 11</option>
@@ -111,7 +111,7 @@ function printolder($months,$version) {
             <option value="8">&lt;= 8</option>
         </select>
     </li>
-    <li>
+    <li class="bf">
         <label for="f-f">Firefox</label>  
         <select id="f-f" onchange="code()">
             <option value="-2"><?php printolder(3, currentv("f")-2)?></option>
@@ -124,7 +124,7 @@ function printolder($months,$version) {
             <option value="25">&lt;= 25</option>
         </select>
     </li>
-    <li>
+    <li class="bo">
         <label for="f-o">Opera</label> 
         <select id="f-o" onchange="code()">
             <option value="-2"><?php printolder(3, currentv("o")-2)?></option>
@@ -137,7 +137,7 @@ function printolder($months,$version) {
             <option value="15">&lt;= 15</option>
         </select>
     </li>
-    <li>
+    <li class="bs">
         <label for="f-s">Safari</label>  
         <select id="f-s" onchange="code()">
             <option value="9">&lt;= 9</option>
@@ -146,7 +146,7 @@ function printolder($months,$version) {
             <option value="6">&lt;= 6</option>            
         </select>
     </li>
-    <li class="browser">
+    <li class="bc">
         <label for="f-c">Chrome</label>
         <select id="f-c" onchange="code()">
             <option value="-2"><?php printolder(3, currentv("c")-2)?></option>
@@ -252,6 +252,18 @@ catch(e){window.attachEvent("onload", $buo_f)}
     #sharebuttons:target {
         display: block;
     }
+    
+    #browserversionchooser li {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        padding-left: 28px;
+        display: block;
+    }
+    .bf {	background-image: url('/img/big/ff.png');}
+    .bi {	background-image: url('/img/big/ie.png');}
+    .bo {	background-image: url('/img/big/op.png');}
+    .bc {	background-image: url('/img/big/ch.png');}
+    .bs {	background-image: url('/img/big/sa.png');}
 </style>
 
 <script>
