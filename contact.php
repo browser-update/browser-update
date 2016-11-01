@@ -45,6 +45,11 @@ Rob Schneider (japanese translation), and many more ...
     <a href="http://www.webmasterpro.de/"><img src="/img/wmp_logo.png" alt="" /></a>
 </p>
 
+<p>
+    Proudly hosted by<br />
+    <a href="https://www.df.eu/" rel="nofollow"><img src="/img/df_logo.svg" width="180" alt="domain factory"></a>
+</p>
+
 <h2>Impressum/Imprint</h2>
 
 <p>browser-update.org ist ein Projekt der <a href="http://www.team23.de/">Team23 Internetagentur</a>. Inhaltlicher Verantwortlicher gemäß TMG ist die GmbH & Co. KG. Vertretungsberechtigte Gesellschafter sind Fabian Ziegler, David Danier.</p>
