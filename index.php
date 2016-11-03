@@ -20,9 +20,9 @@ include("header.php");
 <div class="left">
     
 <div class="message">
-    <p><b>
+    <p id="mainmessage">
     <?php echo (T_("Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."))?>
-    </b></p>
+    </p>
     <p>
     <?php echo (T_("This is done with care not to annoy, lock out or erroneously notify visitors!"))?>
     </p>    
@@ -280,7 +280,7 @@ function getomat(id) {
 //+_get("newos",true)
 function code() {
     var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
-    var code = 'script \n\
+    var code = '<'+'script> \n\
 var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'api:4}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
@@ -289,7 +289,7 @@ function $buo_f(){ \n\
 };\n\
 try {document.addEventListener("DOMContentLoaded", $buo_f,false)}\n\
 catch(e){window.attachEvent("onload", $buo_f)}\n\
-/script';
+<'+'/script>';
 	document.getElementById('f-code').value=code;
 }    
 code();
