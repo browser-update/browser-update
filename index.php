@@ -51,6 +51,7 @@ include("header.php");
     </li>
     <li>
         <?php echo sprintf(T_('By clicking the message, they will get to an <a href="%s">info page with reasons why to update (or change) and a list of browsers</a> available for their system.'), 'update.html?force_outdated=true')?>
+        <div style="text-align: center"><a href="update.html?force_outdated=true" title="<?php echo T_('update browser'); ?>"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/img/shot update.png" style="width:300px"/></a></div>
     </li>
     <li>
         <?php echo T_('If the visitor ignores the advice, it won\'t reappear for some time.')?>
