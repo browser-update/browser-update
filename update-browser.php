@@ -19,7 +19,7 @@ $slimmed=true;
 $extratranslation=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
-
+$choiceversion="base";
 
 //language for IE download link: Full locale form. e.g. en-GB
 $lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -147,6 +147,7 @@ include("ads.php");
 if (false) {
     //for translations
     T_("Advertisement");
+    T_("Sponsored");
     sprintf(T_('This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site.'),'Internet Explorer 6',' href="update.html"');
     //sprintf(T_('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html"');
 }
@@ -190,17 +191,23 @@ if (false) {
     <li><?php echo T_('Ask your admin to update your browser if you cannot install updates yourself.')?></li>
     <?php
     if ($ll=="en") {
+        ?>
+            <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>
+        <?php        
         if (isset($_POST) && isset($_POST['feedback'])) {
             $arr=$_POST;
             $arr['ua']=$_SERVER['HTTP_USER_AGENT'];
             $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $arr['ref']=$_SERVER['HTTP_REFERER'];
+            $fi = fopen("adm/raw/feedback.txt", "a") or die("Unable to open file!");
             $text=json_encode($arr,$options=JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
-            $mailSent = @mail("jossele@gmx.de", "Bup Feedback", $text, "From: noreply@browser-update.org");
+            fwrite($fi, ",\n".$text);
+            fclose($fi);
             echo '<li>Thank you for your Feedback.</li>';
         }
-        else 
+        else  {
             echo '<form method="post" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot update because... <input name="feedback" value=""/><input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
+        }
     }
     ?>
     </ul>
@@ -212,11 +219,11 @@ var $buoop = {nomessage:true};
 </script>
 <script src="/update.min.js"></script>
 <script>
-var cv=3;
+var cv="<?php echo $choiceversion;?>";
 var second=false;
 countView();
 </script>
-<div class="cookiebar"><?php echo T_('This website uses cookies')?></div>
+<div class="cookiebar" id="cookiebar"><?php echo T_('This website uses cookies')?> <a onclick="document.getElementById('cookiebar').style.display='none'"><?php echo T_('Close'); ?></a></div>
 <?php 
 include("footer.php");
 ?>
