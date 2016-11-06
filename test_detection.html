@@ -35,7 +35,7 @@
     
 </table>
 
-<div>Current default config:<span id ="dc"></span></div>
+<div>Current browsers:<span id ="dc"></span></div>
 
 
 <script type="text/javascript">
@@ -63,6 +63,7 @@ var uas=[
     ["Opera 15","Opera 15","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.52 Safari/537.36 OPR/15.0.1147.100"],
     ["Opera 36","Opera 36","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36 OPR/36.0.2130.59"],
     ["Chrome 53","Chrome 53","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"],
+    ["IE 7","Internet Explorer 7","Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; WOW64; SLCC2; .NET CLR 2.0.50727; InfoPath.3; .NET4.0C; .NET4.0E; .NET CLR 3.5.30729; .NET CLR 3.0.30729; MS-RTC LM 8)", "winxp"],
     ["",false,""]
     
     
@@ -93,7 +94,7 @@ for (i in uas) {
         var notify="<td>"+"</td>";
     else
         var notify="<td class='green'>NOTIFY</td>";
-    $("table").append($("<tr><td>"+ua[0]+"</td>"+da+nn+notify+"<td>"+ua[2]+"</td></tr>"));
+    $("table").append($("<tr><td>"+ua[0]+"</td>"+da+nn+notify+"<td>"+ua[2]+"</td><td>"+(ua[3]||"")+"</td></tr>"));
 }
 
 $("#dc").html(JSON.stringify(vs));

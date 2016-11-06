@@ -74,4 +74,9 @@ function countUpdates() {
     list($num) = mysql_fetch_row($r);
     return $num;
 }
+
+function dice($percentage) {
+    //
+    return mt_rand(0, 100)<$percentage;
+}
 ?>
