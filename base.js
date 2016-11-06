@@ -50,5 +50,5 @@ function countView() {
         if (ignore(f))
             return;
         var i=new Image();
-        i.src="/countchoice.php?cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&rnd="+Math.random();
+        i.src="/count.php?what=view&cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&rnd="+Math.random();
 }

@@ -99,13 +99,16 @@ function get_domain($domain, $debug = false)
 require("config.php");
 
 
-$ip 	= 0;//crc32(ip2long($_SERVER['REMOTE_ADDR']));
 $time	= time();
 
+try {
+    $ref = parse_url(urldecode($_GET["ref"]));
+    $host = strtolower($ref['host']);
+    $host = get_domain($host);
+} catch (Exception $e) {
+    $host="decodeerror";
+}
 
-$ref	= parse_url(urldecode($_GET["ref"]));
-$host	= strtolower($ref['host']);
-$host=get_domain($host);
 
 //preg_match('@^([^/])*(/|$)@i', urldecode($_GET["ref"]), $matches);
 //$host=get_domain($matches[1]);
@@ -120,34 +123,43 @@ if(strlen($ll)==5) {
 if (!isset($_GET["tv"]))
     $tv=0;
 else
-    $tv = intval($_GET["tv"]);
+    $tv = $_GET["tv"];
 
 if (!isset($_GET["cv"]))
     $cv=0;
 else
-    $cv = intval($_GET["cv"]);
+    $cv = $_GET["cv"];
 
 $s=0;
 if (isset($_GET["second"]))
     $s=1;
 
-$inbar=0;
-if (isset($_GET["inbar"]))
-    $inbar=1;
 
-$q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', ip=%d, time=%d, textversion=%d, choiceversion=%d, second=%d, inbar=%d",
+if (isset($_GET["what"]) && $_GET['what']=="view"){
+    $q=sprintf("INSERT DELAYED INTO viewschoice SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d",
+	mysql_real_escape_string($host),
+	mysql_real_escape_string($_GET["from"]),
+	mysql_real_escape_string($_GET["fromv"]),
+	mysql_real_escape_string($ll),
+	$time,
+        mysql_real_escape_string($tv),
+        mysql_real_escape_string($cv),
+        $s
+	);
+}
+else {
+$q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d",
 	mysql_real_escape_string($host),
 	mysql_real_escape_string($_GET["from"]),
 	mysql_real_escape_string($_GET["fromv"]),
 	mysql_real_escape_string($_GET["to"]),
 	mysql_real_escape_string($ll),
-	$ip,
 	$time,
-        $tv,
-        $cv,
-        $s,
-        $inbar
+        mysql_real_escape_string($tv),
+        mysql_real_escape_string($cv),
+        $s
 	);
+}
 
 mysql_query($q) 
 	or die (mysql_error(). $q);
