@@ -18,7 +18,7 @@ body,html {
         margin-bottom: 25px;
 }
 
-@media only screen and (max-width: 1130px){
+@media only screen and (max-width: 1200px){
      #co {
 	width: 775px;
 	margin-left: 30px;
@@ -529,15 +529,16 @@ a.l {
 
     padding-top: 110px;    
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center 4px;
     text-decoration: none;
     text-align: center;
+    
+    border: 2px solid transparent;
+    position: relative;
 }
 
 a.l:hover {
-    padding:3px;
-    padding-top: 109px;
-    border: 1px dashed rgb(170, 170, 170);
+    border: 2px dotted rgb(170, 170, 170);
 }
 
 
