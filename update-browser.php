@@ -68,8 +68,8 @@ if (has("android")) {
     $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
     $no_ie=True;
 }
-    
-function brow($name, $url, $vendor, $char, $na=False) {
+  
+function brow($name, $url, $vendor, $char, $na=False,$add="") {
     echo '<td class="b b'.$char.'">';
     if (!$na) {
         echo '<a class="l" href="'.$url.'" target="_blank" title="'.sprintf(T_("Download updated %s web browser from %s website!"),$name,$vendor).'" onmousedown="countBrowser(\''.$char.'\')">';
@@ -84,6 +84,7 @@ function brow($name, $url, $vendor, $char, $na=False) {
         <span class="na">'. T_('Most recent version not available for your system.').' '.
         T_('Please choose another browser.').'</span>';
     }
+    echo $add;
     echo '
         </a>
     </td> 
