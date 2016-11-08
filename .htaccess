@@ -23,6 +23,15 @@ RewriteRule ^/?update\.html$ update-browser.php [L,QSA]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/update-outdated\.html$ update-browser.php?lang=$1 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^/?update-outdated\.html$ update-browser.php [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^/?([a-zA-Z0-9_-]+)\.html$ $1.php [L,QSA]
 
 RewriteCond %{REQUEST_FILENAME} !-f
