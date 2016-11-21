@@ -272,5 +272,5 @@ op.onshow(this.op);
 
 };
 
-var $buoop = $buoop||{};
+var $buoop = window.$buoop || {};
 $buo($buoop);
