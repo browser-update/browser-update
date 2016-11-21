@@ -32,6 +32,7 @@ if (window.location.href.search(/Installer=/i)>-1)
 
 var tried=[];
 
+var dice=Math.round(Math.random()*100);
 function countBrowser(to) {
         var f=$bu_getBrowser();
         if (ignore(f))
@@ -40,7 +41,7 @@ function countBrowser(to) {
         if (second)
             s="&second=1";
         var i=new Image();
-        i.src="/count.php?cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+"&to="+to + s + "&rnd="+Math.random();
+        i.src="/count.php?cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+"&to="+to + s + "&dice="+dice+"rnd="+Math.random();
         second=true;
         tried.push(to);
 }
@@ -50,5 +51,5 @@ function countView() {
         if (ignore(f))
             return;
         var i=new Image();
-        i.src="/count.php?what=view&cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&rnd="+Math.random();
+        i.src="/count.php?what=view&cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&dice="+dice+"rnd="+Math.random();
 }

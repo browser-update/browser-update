@@ -41,14 +41,14 @@ function is_outdated() {
     }
 
     $vs="?(\d+[.]\d+)";
-    if(det("opr.$vs",39)||
-            det("opera.*version $vs",39)||
+    if(det("opr.$vs",41)||
+            det("opera.*version $vs",41)||
             det("trident.$vs",9)||
-            det("trident.*rv:$vs",10)||
-            det("msie $vs",11)||
-            det("firefox $vs",49)||
+            det("trident.*rv:$vs",11)||
+            det("msie $vs",12)||
+            det("firefox $vs",50)||
             det("version $vs.*safari",10)||
-            det("chrome.$vs",53))
+            det("chrome.$vs",54))
         return true;
 }
 
