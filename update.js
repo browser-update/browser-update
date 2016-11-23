@@ -6,7 +6,7 @@
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
-    if (/bot|googlebot|facebook|slurp|SMART-TV|Dorado|AOLBuild|MIDP|wii|UCBrowser|Puffin|Opera Mini|silk|maxthon|SmartTV|maxton|mediapartners|dolfin|dolphin|adsbot|silk|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
+    if (/bot|googlebot|facebook|slurp|SMART-TV|Dorado|AOLBuild|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|silk|maxthon|SmartTV|maxton|mediapartners|dolfin|dolphin|adsbot|silk|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
         return {n:"x",v:0,t:"unknown",donotnotify:"niche browser"};
     if (/iphone|ipod|ipad|kindle/i.test(ua)) //without upgrade path or no landing page
         return {n:"x",v:0,t:"mobile browser",donotnotify:"mobile"};
@@ -196,6 +196,9 @@ t.ga='Tá an líonléitheoir agat (%s) <b>as dáta</b>. Tá <b>laigeachtaí slá
 t.lv='Jūsu pārlūkprogramma (%s) ir <b>novecojusi</b>.  Tai ir zināmas <b>drošības problēmas</b>, un tā var attēlot šo un citas  tīmekļa lapas <b>nekorekti</b>. <a%s>Uzzini, kā atjaunot savu pārlūkprogrammu</a>';
 t.no='Dette nettstedet ønsker å minne deg på: Din nettleser (%s) er <b>utdatert</b>. <a%s>Oppdater nettleseren din </a> for mer sikkerhet, komfort og den beste opplevelsen på denne siden.';
 t.th='เว็บไซต์นี้อยากจะเตือนคุณ: เบราว์เซอร์ (%s) ของคุณนั้น <b>ล้าสมัยแล้ว</b> <a%s>ปรับปรุงเบราว์เซอร์ของคุณ</a> เพื่อเพิ่ม ความปลอดภัย ความสะดวกสบายและประสบการณ์ที่ดีที่สุดในเว็บไซต์นี้';
+t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </ b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
+t.sk='Chceli by sme Vám pripomenúť: Váš prehliadač (%s) je <b>zastaralý</b>. <a%s>Aktualizujte si ho</a> pre viac bezpečnosti, pohodlia a pre ten najlepší zážitok na tejto stránke.';
+t.vi='Website này xin nhắc bạn rằng: Trình duyệt (%s) của bạn hiện đã <b>lỗi thời</b>. <a%s>Hãy cập nhật trình duyệt của bạn</a> để tăng thêm tính bảo mật, sự tiện lợi và trải nghiệm tuyệt nhất trên trang web này.';
 
 if (op.text)
     t = op.text;
