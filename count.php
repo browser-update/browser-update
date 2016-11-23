@@ -123,12 +123,17 @@ if(strlen($ll)==5) {
 if (!isset($_GET["tv"]))
     $tv=0;
 else
-    $tv = $_GET["tv"];
+    $tv = mysql_real_escape_string($_GET["tv"]);
 
 if (!isset($_GET["cv"]))
     $cv=0;
 else
     $cv = $_GET["cv"];
+
+if (!isset($_GET["jsv"]))
+    $jsv=0;
+else
+    $jsv = intval($_GET["jsv"]);
 
 $s=0;
 if (isset($_GET["second"]))
@@ -146,6 +151,19 @@ if (isset($_GET["what"]) && $_GET['what']=="view"){
         mysql_real_escape_string($cv),
         $s
 	);
+}
+else if (isset($_GET["what"]) && $_GET['what']=="noti"){
+    $q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, scriptversion=%d, textversion='%d', ua='%s',more='%s'",
+        mysql_real_escape_string($host),
+        mysql_real_escape_string($_GET["from"]),
+        mysql_real_escape_string($_GET["fromv"]),
+        mysql_real_escape_string($ll),
+        $time,
+        $jsv,
+        mysql_real_escape_string($tv),
+        "",//mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),        
+        ""
+    );    
 }
 else {
 $q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d",
