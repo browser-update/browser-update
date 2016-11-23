@@ -195,11 +195,12 @@ if (false) {
         ?>
             <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>
         <?php        
-        if (isset($_POST) && isset($_POST['feedback'])) {
+        if (isset($_POST) && isset($_POST['feedback']) && trim($_POST['feedback'])!="") {
             $arr=$_POST;
             $arr['ua']=$_SERVER['HTTP_USER_AGENT'];
             $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $arr['ref']=$_SERVER['HTTP_REFERER'];
+            $arr['date']=date('c');
             $fi = fopen("adm/raw/feedback.txt", "a") or die("Unable to open file!");
             $text=json_encode($arr,$options=JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
             fwrite($fi, ",\n".$text);
@@ -207,7 +208,17 @@ if (false) {
             echo '<li>Thank you for your Feedback.</li>';
         }
         else  {
-            echo '<form method="post" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot update because... <input name="feedback" value=""/><input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
+            echo '<form id="feedbackform" method="post" action="#feedbackform" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot/won\'t update because... ';
+            if (isset($_POST) && isset($_POST['feedback'])) {
+                if  (trim($_POST['feedback'])!="")
+                    echo'<input name="feedback" value="'.$_POST['feedback'].'"/>';
+                else
+                    echo'<input name="feedback" value=""/> <span style="color:#ff0000">Please enter a reason</span>';
+            }
+            else {
+                echo'<input name="feedback" value=""/>';
+            }
+            echo'<input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
         }
     }
     ?>
