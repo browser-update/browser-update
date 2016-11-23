@@ -45,7 +45,10 @@ $lang_rewrite = array(
         "no"=>"no_NO",
         "th"=>"th_TH",
         "xx"=>"xx_XX",#test
-        "yy"=>"en_SE"#for crowdin inline translation tool. "Gothic"
+        "yy"=>"en_SE",#for crowdin inline translation tool. "Gothic"
+        "sk"=>"sk_SK",
+        "hi"=>"hi_IN",
+        "vi"=>"vi_VN"
 );
 
 /**

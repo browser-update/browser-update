@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-10-29 14:06-0400\n"
+"PO-Revision-Date: 2016-11-21 11:45-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
@@ -43,7 +43,7 @@ msgstr "Contato"
 #: update-browser.php:75
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "Baixe o navegador de internet %s atualizado no site %s!"
 
 #: update-browser.php:84
 msgid "Most recent version not available for your system."
@@ -55,7 +55,7 @@ msgstr "Por favor, escolha outro navegador."
 
 #: update-browser.php:94
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "Checando se o seu navegador está atualizado..."
 
 #: update-browser.php:101
 msgid "Your browser is up-to-date."
@@ -72,7 +72,7 @@ msgstr "Para maior <a href=\"%s\">segurança</a>, <a href=\"%s\">velocidade</a>,
 
 #: update-browser.php:149
 msgid "Advertisement"
-msgstr ""
+msgstr "Anúncio"
 
 #: update-browser.php:150
 #, php-format

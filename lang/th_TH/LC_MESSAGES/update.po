@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-10-29 14:06-0400\n"
+"PO-Revision-Date: 2016-11-21 11:45-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
@@ -43,7 +43,7 @@ msgstr "ติดต่อ"
 #: update-browser.php:75
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "ดาวน์โหลดเว็บเบราว์เซอร์ %s ที่อัพเดตแล้วจากเว็บไซต์ %s!"
 
 #: update-browser.php:84
 msgid "Most recent version not available for your system."
@@ -55,7 +55,7 @@ msgstr "กรุณาเลือกเบราเซอร์อื่น"
 
 #: update-browser.php:94
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "กำลังตรวจสอบว่าเบราว์เซอร์ของคุณอัพเดตแล้วหรือไม่..."
 
 #: update-browser.php:101
 msgid "Your browser is up-to-date."
@@ -72,7 +72,7 @@ msgstr "เพื่อเพิ่ม <a href=\"%s\">ความปลอด�
 
 #: update-browser.php:149
 msgid "Advertisement"
-msgstr ""
+msgstr "โฆษณา"
 
 #: update-browser.php:150
 #, php-format

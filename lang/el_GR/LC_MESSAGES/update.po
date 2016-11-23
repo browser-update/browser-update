@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-10-29 14:06-0400\n"
+"PO-Revision-Date: 2016-11-21 11:45-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
@@ -43,7 +43,7 @@ msgstr "Επικοινωνία"
 #: update-browser.php:75
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "Κατεβάστε τον ενημερωμένο %s περιηγητή διαδικτύου από την %s ιστοσελίδα!"
 
 #: update-browser.php:84
 msgid "Most recent version not available for your system."
@@ -55,7 +55,7 @@ msgstr "Παρακαλώ επιλέξτε κάποιον άλλον φυλλομ
 
 #: update-browser.php:94
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "Έλεγχος αν ο περιηγητής σας είναι ενημερωμένος ..."
 
 #: update-browser.php:101
 msgid "Your browser is up-to-date."
@@ -72,7 +72,7 @@ msgstr "Για μεγαλύτερη <a href=\"%s\">ασφάλεια</a>, <a href
 
 #: update-browser.php:149
 msgid "Advertisement"
-msgstr ""
+msgstr "Διαφήμιση"
 
 #: update-browser.php:150
 #, php-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-10-29 14:06-0400\n"
+"PO-Revision-Date: 2016-11-21 11:45-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
@@ -26,7 +26,7 @@ msgstr "یک ابتکار توسط طراحان وب برای مطلع کردن 
 
 #: header.php:29 update-browser.php:182
 msgid "About the Project"
-msgstr ""
+msgstr "درباره پروژه"
 
 #: header.php:33
 msgid "Statistics"
@@ -43,7 +43,7 @@ msgstr "ارتباط"
 #: update-browser.php:75
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "دانلود به روز رسانی مرورگر وب %s از %s وب سایت!"
 
 #: update-browser.php:84
 msgid "Most recent version not available for your system."
@@ -55,24 +55,24 @@ msgstr "لطفا مرورگر دیگری را انتخاب کنید."
 
 #: update-browser.php:94
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "بررسی کنید مرورگر شما به روز باشد ..."
 
 #: update-browser.php:101
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "مرورگر شما به روز است."
 
 #: update-browser.php:111
 msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr ""
+msgstr "مرورگر شما به روز نیست. لطفا یکی از این مرورگرهای رایگان و عالی را دانلود کنید:"
 
 #: update-browser.php:139
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
+msgstr "جهت <a href=\"%s\">امنیت</a>،<a href=\"%s\">سرعت</a>، <a href=\"%s\">راحتی</a> و <a href=\"%s\">سرگرمی</a> بیشتر."
 
 #: update-browser.php:149
 msgid "Advertisement"
-msgstr ""
+msgstr "تبلیغات"
 
 #: update-browser.php:150
 #, php-format
@@ -81,7 +81,7 @@ msgstr "مرورگر شما (%s) <b>تاریخ گذشته است</b>. تعداد
 
 #: update-browser.php:156
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "چرا مرورگر من باید به روز باشد؟"
 
 #: update-browser.php:160
 msgid "Security"
@@ -89,7 +89,7 @@ msgstr "امنیت"
 
 #: update-browser.php:161
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
-msgstr ""
+msgstr "مرورگرهای جدیدتر در برابر ویروسها، کلاهبرداری‌ها و تهدیدات دیگر بهتر از شما محافظت می‌کنند. مرورگرهایی که قدیمی شده‌اند شامل حفره های امنیتی‌ای هستند که در نسخه‌های به روز رسانی شده اصلاح شده‌اند."
 
 #: update-browser.php:164
 msgid "Speed"
@@ -113,7 +113,7 @@ msgstr "آسایش &amp; تجربه ای بهتر"
 
 #: update-browser.php:173
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
-msgstr ""
+msgstr "تجربه‌ای راحت تر با قابلیت‌های جدیدتر و بیشتر و امکانات بهتر برای سفارشی کردن مرورگر."
 
 #: update-browser.php:179
 msgid "Why this website?"
@@ -129,13 +129,13 @@ msgstr "\"من نمیتوانم مرورگر خود را به روز رسانی 
 
 #: update-browser.php:189
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
-msgstr ""
+msgstr "اگر به دلیل عدم سازگاری سیستم خود قادر به تغییر مرورگر نیستید، به فکر مرورگر دیگری برای جستجو باشید و مرور قدیمی را برای مواردی که نیاز به سازگاری سیستم دارد نگه دارید."
 
 #: update-browser.php:190
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
-msgstr ""
+msgstr "اگر خودتان نمی‌توانید نسخه‌های به روز شده را نصب کنید، از مدیر سیستم بخواهید مرورگر شما را به روز کند."
 
 #: update-browser.php:219
 msgid "This website uses cookies"
-msgstr ""
+msgstr "این وب سایت از فایل‌های کوکی استفاده می‌کند"
 

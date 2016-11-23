@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 20:04+0200\n"
-"PO-Revision-Date: 2016-10-29 14:06-0400\n"
+"PO-Revision-Date: 2016-11-21 11:45-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -38,11 +38,11 @@ msgstr "Die folgenden Einstellungen können an das Script übergeben werden:"
 
 #: customize.php:28
 msgid "Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify."
-msgstr ""
+msgstr "Gebe die Browser-Versionen an die benachrichtigt werden sollen. Negative zahlen geben wie viele Versionen hinter der aktuellen benachrichtigt werden sollen."
 
 #: customize.php:31
 msgid "after how many hours should the message reappear"
-msgstr ""
+msgstr "nach wie vielen Stunden soll die Nachricht erscheinen"
 
 #: customize.php:32
 msgid "0 = show all the time"
@@ -54,11 +54,11 @@ msgstr "wenn der Nutzer die Nachricht schließt erscheint sie nach x Stunden wie
 
 #: customize.php:34
 msgid "callback functions after notification has appeared / was clicked / closed"
-msgstr ""
+msgstr "Callback-Funktionen die Aufgerufen werden wenn die Nachricht erscheint / geklickt wurde / geschlossen wurde"
 
 #: customize.php:38
 msgid "set a fixed language for the message, e.g. \"en\". This overrides the default detection."
-msgstr ""
+msgstr "setzte eine feste Sprache für die Nachricht, z.B. \"en\". Dies hebelt die automatische Erkennung der Sprache aus."
 
 #: customize.php:39
 msgid "true = always show the bar (for testing)"
@@ -66,16 +66,16 @@ msgstr "wahr = zeigt Leiste immer an (für Testzwecke)"
 
 #: customize.php:40
 msgid "custom notification text (html)"
-msgstr ""
+msgstr "eigener Banchrichtigungstext (html)"
 
 #: customize.php:41
 #, php-format
 msgid "Optionally include up to two placeholders \"%s\" which will be replaced with the browser version and contents of the link tag. Example: \"Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
-msgstr ""
+msgstr "Optional bis zu zwei Platzhalter \"%s\" verwenden, die mit der Browserversion und dem inhalt des Link tags gefüllt werden. Beispiel \" Ihr Browser, %s, ist veraltet. Bitte  &lt;a%s&gt;aktualisieren&lt;/a&gt;\""
 
 #: customize.php:42
 msgid "custom notification text for language \"xx\""
-msgstr ""
+msgstr "eigener Benachrichtigungstext für die Sprache \"xx\""
 
 #: customize.php:43
 msgid "e.g. text_de for german and text_it for italian"
@@ -83,11 +83,11 @@ msgstr "z. B. Text_de für Deutsch und Text_en für Englisch"
 
 #: customize.php:44
 msgid "open link in new window/tab"
-msgstr ""
+msgstr "den Link in einem neuen Tab öffnen"
 
 #: customize.php:45
 msgid "the url to go to after clicking the notification"
-msgstr ""
+msgstr "die URL die beim klick auf die Webseite aufgerufen werden soll"
 
 #: customize.php:50
 msgid "Change the style"
@@ -95,5 +95,5 @@ msgstr "Stil ändern"
 
 #: customize.php:53
 msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
-msgstr ""
+msgstr "Die Folgende CSS-Regeln werden auf die Benachrichtigung angewandt. Man kann sie im eigenen CSS überschreiben. Um das zu tun müssen die eigenen regeln aber spezifischer sein, d.h. z.B. "
 
