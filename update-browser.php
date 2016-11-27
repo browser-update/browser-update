@@ -34,42 +34,106 @@ $lr=str_replace("_","-",$lr);
 
 include("header.php");
 
-$ua=str_replace(array("/","+","_","\n","\t",".")," ", strtolower($_SERVER['HTTP_USER_AGENT']));
+$ua=str_replace("_",".",str_replace(array("/","+","\n","\t")," ", strtolower($_SERVER['HTTP_USER_AGENT'])));
 function has($t) {
 	global $ua;
 	return !(strpos($ua,$t)===false);
 }
 
-//IE 11 is only available for win7 and win8 || has("windows nt 6.0")
-// 5->2000/xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1
-$no_ie = has("os x") || has("linux") || has("android");
-$no_ie_system = has("windows nt 4") || has("windows nt 5") || has("windows nt 6 0")|| has("os x") || has("linux");
-$no_sa = !has("os x");
-$no_sa_system =  has("os x 10 4") || has("os x 10 5") || has("os x 10 6") || has("os x 10 7");
 
+function get_system($ua) {
+    $vs="?(\d+[.]?\d*)";
+    $pats=[
+        "windows phone os $vs"=>"Windows Phone",
+        "windows nt $vs"=>"Windows",
+        "windows $vs"=>"Windows",
+        "mac os x $vs"=>"Mac OS",
+        "android $vs"=>"Android",
+        "os $vs like mac OS X"=>"iOS",
+        "BlackBerry $vs"=>"BlackBerry",
+        "Ubuntu"=>"Ubuntu",
+        "Linux"=>"Linux"
+    ];
+    $names=["4.0"=>"NT 4.0","5.0"=>"2000","5.1"=>"XP","5.2"=>"Server 2003","6.0"=>"Vista","6.1"=>"7","6.2"=>"8","6.3"=>"8.1"];
+    foreach($pats as $k =>$v) {
+        if(preg_match("#".$k."#i", $ua, $regs)) {
+            if (isset($names[$regs[1]])) 
+                return array($v,$regs[1],$v." ".$names[$regs[1]]);
+            return array($v,$regs[1],$v." ".$regs[1]);
+        }
+    }
+    return array("other system","?","other system");
+}
 
-//$u_sa="http://www.apple.com/safari/";
-$sa_map=array("en"=>"","sv"=>"se","ja"=>"jp","sl"=>"si","uk"=>"ua","rm"=>"de","da"=>"dk","ca"=>"es");
-$sal="https://itunes.apple.com/%s/app/os-x-yosemite/id915041082?mt=12";
-//if (in_array($ll, array("de","es","pl","pt","fr","nl")))
-//    $sal="http://clkuk.tradedoubler.com/click?p=23761&a=2364610&url=https%%3A%%2F%%2Fitunes.apple.com%%2F%s%%2Fapp%%2Fos-x-mavericks%%2Fid675248567%%3Fmt%%3D12%%26uo%%3D4%%26partnerId%%3D2003";
-$u_sa=sprintf($sal,$ll);
-if (isset($sa_map[$ll]))
-    $u_sa=sprintf($sal,$sa_map[$ll]);
+function get_browser($ua) {
+    $pats=[
+        ["Trident.*rv:VV","i"],
+        ["Trident.VV","io"],
+        ["MSIE.VV","i"],
+        ["Edge.VV","e"],
+        ["Vivaldi.VV","v"],
+        ["OPR.VV","o"],
+        ["YaBrowser.*Chrome.VV","y"],
+        ["Chrome.VV","c"],
+        ["Firefox.VV","f"],
+        ["Version.VV.{0,10}Safari","s"],
+        ["Safari.VV","so"],
+        ["Opera.*Version.VV","o"],
+        ["Opera.VV","o"],
+        ["Netscape.VV","n"]
+    ];
+    $names=[
+        'i'=>'Internet Explorer',
+        'e'=>"Edge",
+        'f'=>'Firefox',
+        'o'=>'Opera',
+        's'=>'Safari',
+        'n'=>'Netscape',
+        'c'=>"Chrome",
+        'a'=>"Android Browser",
+        'y'=>"Yandex Browser",
+        'v'=>"Vivaldi",
+        'x'=>"Other"];
+    $name="";
+    foreach($pats as $el) {
+        $na=$el[1];
+        $pa=str_replace("VV","?(\d+[.]?\d*)",$el[0]);
+        if(preg_match("#".$pa."#i", $ua, $regs)) {
+            $ver=$regs[1];
+            $name=$na;
+            break;
+        }        
+    }
+    if ($name=="")
+        return "other";
+    if ($name=="io")
+        $name="i";
+    if ($name=="so")
+        $name="s";
+    return $names[$name];
+}
+
+$brown=get_browser($ua);
+function is($name) {
+    global $brown;
+    if ($brown==$name);
+        return True;
+    return False;
+}
+
+$sysx=get_system($ua);
+$sys=$sysx[0];
+$ver=$sysx[1];
+$sysn=$sysx[2];
 
 $u_ff="https://www.mozilla.com/firefox/";
 $u_op="https://www.opera.com/?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
 $u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("https://www.microsoft.com/%s/windows/microsoft-edge",$lr);
 
-if (has("android")) {
-    $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
-    $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
-    $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
-    $no_ie=True;
-}
-  
+ 
 function brow($name, $url, $vendor, $char, $na=False,$add="") {
+    global $choiceversion,$ll;
     echo '<td class="b b'.$char.'">';
     if (!$na) {
         echo '<a class="l" href="'.$url.'" target="_blank" title="'.sprintf(T_("Download updated %s web browser from %s website!"),$name,$vendor).'" onmousedown="countBrowser(\''.$char.'\')">';
@@ -85,6 +149,13 @@ function brow($name, $url, $vendor, $char, $na=False,$add="") {
         T_('Please choose another browser.').'</span>';
     }
     echo $add;
+    /*
+    if (!$na && $ll="en" && dice(10)) {
+        $choiceversion="down"; 
+        echo '<span class="download" style="border-radius: 2px;        background-color: rgb(69,190,98);        padding: 4px;        color: #fff;        text-decoration: none;        font-size: 13px;">Download</span><style>a .vendor {margin-bottom: 6px;}</style>';
+    }
+    */
+    
     echo '
         </a>
     </td> 
@@ -93,35 +164,127 @@ function brow($name, $url, $vendor, $char, $na=False,$add="") {
 
 if (False) {
     echo T_("Checking if your browser is up-to-date ..."); //Just for the translation right now
+    
+    //How can I update?
 }
 
-if (!is_outdated() and !(isset($_GET['force_outdated']) and $_GET['force_outdated'])) {
+function m_ancient_os() {
+    echo '<h2 class="whatnow"><b>';
+    echo T_('Your browser is out-of-date.');
+    echo sprintf(T_('On top your operating system (%s) is so old and unsecure that there is no up-to date browser available.'),$sysn);
+    echo T_('Please update your operating system');
+    echo '</b></h2>';
+}
+function m_discontinued() {
+    global $sysn,$brown;
+    echo '<h2 class="whatnow"><b>';
+    echo sprintf(T_('Your browser, %s, is out-of-date and it is discontinued by the vendor for %s.'),
+            '<span class="curb">'.$brown.'</span>',
+            $sysn
+    );
+    echo T_('Please download one of these up-to-date, free and excellent browsers:');
+    //echo T_('Please download one of these alternative up-to-date, free and excellent browsers, which are even better:');
+    echo '</b></h2>';
+}
+function m_uptodate() {
+    echo '<h2 class="whatnow"><b>';
+    echo T_('Your browser is up-to-date.');
+    echo '</b></h2>';
+}
+function m_outofdate() {
+    echo '<h2 class="whatnow"><b>';
+    echo T_('Your browser is out-of-date.');
+    echo T_('Please download one of these up-to-date, free and excellent browsers:'); 
+    echo '</b></h2>';
+}
 ?>
 <div class="noti">
-<h2 class="whatnow">
-    <b><?php echo (T_('Your browser is up-to-date.'))?></b>
-</h2>
-</div>
 <?php
-}
-else {
+if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
+    m_uptodate();
+} else {
 ?>
-
-<div class="noti">
-<h2 class="whatnow">
-    <b><?php echo T_('Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:'); ?></b>
-</h2>
-
 <table class="logos">
     <tr>
         <?php
-        brow("Firefox",$u_ff,"Mozilla Foundation","f");
-        brow("Opera",$u_op,"Opera Software","o");
-        brow("Chrome",$u_ch,"Google","c");
-        if (!$no_sa)
-            brow("Safari",$u_sa,"Apple","s",$no_sa_system);
-        if (!$no_ie)
-            brow("Edge",$u_ie,"Microsoft","i",$no_ie_system);        
+        if ($sys=="Windows") {
+            // 5->2000/5.x=>xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1            
+            if ($ver<5.1) {#before xp
+                m_ancient_os();
+            }
+            else if ($ver<=6) {#xp,vista
+                if (is("Chrome")|| is("Internet Explorer")||is("Opera"))
+                    m_discontinued();
+                else
+                    m_outofdate();
+                brow("Cliqz Browser","https://cliqz.com/","Cliqz","cl");
+                brow("Firefox",$u_ff,"Mozilla Foundation","f");                
+                if (is("Chrome"))
+                    brow("Chrome",$u_ch,"Google","c",True);
+                if (is("Internet Explorer"))
+                    brow("Edge",$u_ie,"Microsoft","i",True);
+                if (is("Opera"))                
+                    brow("Opera",$u_op,"Opera Software","o",True);
+            }
+            else {
+                if (is("Internet Explorer") && $ver<10)
+                    m_discontinued();
+                else
+                    m_outofdate();
+                brow("Firefox",$u_ff,"Mozilla Foundation","f");
+                brow("Opera",$u_op,"Opera Software","o",True);
+                brow("Chrome",$u_ch,"Google","c");
+                if (is("Internet Explorer"))
+                    brow("Edge",$u_ie,"Microsoft","i",$ver<10);                
+            }
+        }
+        if ($sys=="Mac OS") {
+            $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($lr));           
+            brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<=10.9);
+            brow("Opera",$u_op,"Opera Software","o",$ver<=10.9);
+            brow("Chrome",$u_ch,"Google","c",$ver<=10.9);            
+            brow("Safari",$u_sa,"Apple","s",$ver<=10.10);
+        }
+        if ($sys=="Android") {
+            $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
+            $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
+            $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";            
+            if ($ver<4.0) {
+                m_ancient_os();
+            }
+            else {
+                if (is("Android Browser"))
+                    m_discontinued();
+                else 
+                    m_outofdate();
+                brow("Firefox",$u_ff,"Mozilla Foundation","f");
+                brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
+                brow("Chrome",$u_ch,"Google","c",$ver<4.1);
+            }
+        }
+        if ($sys=="Windows Phone") {
+            $url=sprintf("https://support.microsoft.com/de-de/help/12662/windows-phone-update-your-windows-phone",strtolower($lr));
+            echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"Windows Phone");
+            echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
+            echo T_("Or download this alternative browser:");
+            brow("Opera Mini","http://www.opera.com/mobile/mini/windows","Opera Software","o");            
+        }
+        if ($sys=="Ubuntu"||$sys=="Linux") {            
+            m_outofdate();
+            brow("Firefox",$u_ff,"Mozilla Foundation","f");
+            brow("Chrome",$u_ch,"Google","c");
+            brow("Opera",$u_op,"Opera Software","o");
+            //brow("Chromium",,"Open Source","cm");
+            brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");           
+        }
+        if ($sys=="iOS") {
+            $url=sprintf("https://support.apple.com/%s/HT204204",strtolower($lr));
+            echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones");
+            if ($ver<=6)
+                echo T_("Unfortunately, Apple has stopped supporting your device with updates.");
+            else
+                echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"iOS",$url);
+        }
         ?>
     </tr>
 </table>
@@ -133,7 +296,7 @@ display_browser("Seamonkey", "http://www.seamonkey-project.org/releases/#2.33")
 display_browser("Maxthon", "http://maxthon.com")
 display_browser("Vivaldi", "https://vivaldi.com/")
 */
-
+}
 
 ?>
 <h2 class="whatnow">
@@ -142,7 +305,6 @@ display_browser("Vivaldi", "https://vivaldi.com/")
 </div>
 
 <?php
-}
 include("ads.php");
 
 if (false) {
