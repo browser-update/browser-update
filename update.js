@@ -6,12 +6,15 @@
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
-    if (/bot|googlebot|facebook|slurp|SMART-TV|Dorado|AOLBuild|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|silk|maxthon|SmartTV|maxton|mediapartners|dolfin|dolphin|adsbot|silk|bingbot|google web preview|chromeframe|seamonkey|opera mini|meego|netfront|moblin|maemo|arora|camino|flot|k-meleon|fennec|kazehakase|galeon|epiphany|konqueror|rekonq|symbian|webos|coolnovo|blackberry|bb10|RIM|PlayBook|PaleMoon|QupZilla|Otter|Midori|qutebrowser/i.test(ua)) 
-        return {n:"x",v:0,t:"unknown",donotnotify:"niche browser"};
-    if (/iphone|ipod|ipad|kindle/i.test(ua)) //without upgrade path or no landing page
-        return {n:"x",v:0,t:"mobile browser",donotnotify:"mobile"};
-    if (/; wv/i.test(ua))
-        return {n:"x",v:0,t:"android web view",donotnotify:"chrome web view"};    
+    function ignore(reason,pattern){if (RegExp(pattern,"i").test(ua)) return reason;}
+    var ig=ignore("bot","bot|spider|googlebot|facebook|slurp|bingbot|google web preview|mediapartnersadsbot|AOLBuild|Baiduspider|DuckDuckBot|Teoma")||
+        ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
+        ignore("complicated device browser","SMART-TV|SmartTV") ||
+        ignore("niche browser","Dorado|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobilew without upgrade path or landing page","iphone|ipod|ipad|kindle|silk|blackberry|bb10|RIM|PlayBook|meego") ||
+        ignore("android(chrome) web view","; wv");
+    if (ig) 
+        return {n:"x",v:0,t:"other browser",donotnotify:ig};    
 
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     var pats=[
@@ -21,7 +24,7 @@ function $bu_getBrowser(ua_str) {
         ["Edge.VV","e"],
         ["Vivaldi.VV","v"],
         ["OPR.VV","o"],
-        ["YaBrowser.*Chrome.VV","y"],
+        ["YaBrowser.VV","y"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
         ["Version.VV.{0,10}Safari","s"],
@@ -52,7 +55,7 @@ function $bu_getBrowser(ua_str) {
     }
     
     //do not notify ver old systems since their is no up-to-date browser available
-    if (/windows.nt.5.0|windows.nt.4.0|windows.98|os x 10.4|os x 10.5|os x 10.3|os x 10.2/.test(ua)) 
+    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7|os x 10.8|os x 10.2/.test(ua)) 
         donotnotify="oldOS";
 
     //do not notify firefox ESR
@@ -82,7 +85,7 @@ function $bu_getBrowser(ua_str) {
 }
 
 var $buo = function(op,test) {
-var jsv=20;
+var jsv=22;
 var n = window.navigator,b;
 window._buorgres=this.op=op||{};
 var langset=this.op.l;
@@ -91,7 +94,7 @@ this.op.l=this.op.l.replace("_","-").toLowerCase();
 var apiver=this.op.api||this.op.c||-1;
 var ll=this.op.l.substr(0,2);
 var vsakt = {i:12,f:50,o:41,s:10,n:20,c:54,y:16.9,v:1.4};
-var vsdefault = {i:10,f:-3,o:-3,s:-2,n:12,c:-3,a:534,y:-0.1,v:-0.1};
+var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-5,a:534,y:-1,v:-0.1};
 if (apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
