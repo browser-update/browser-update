@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"POT-Creation-Date: 2016-11-29 18:09+0100\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -16,126 +16,163 @@ msgstr ""
 "X-Crowdin-Language: vi\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:32
+#: header.php:5 header.php:43
 msgid "Update your Browser"
 msgstr "Cập nhật Trình duyệt của bạn"
 
-#: header.php:27
+#: header.php:38
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "Một sáng kiến của các website nhằm báo cho người dùng nên cập nhật trình duyệt web của họ"
 
-#: header.php:29 update-browser.php:182
+#: header.php:40 update-browser.php:362
 msgid "About the Project"
 msgstr "Giới thiệu Dự án"
 
-#: header.php:33
+#: header.php:44
 msgid "Statistics"
 msgstr "Thống kê"
 
-#: header.php:34
+#: header.php:45
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:90
+#: header.php:104
 msgid "Contact"
 msgstr "Liên hệ"
 
-#: update-browser.php:75
+#: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
 msgstr "Hãy tải xuống trình duyệt web %s cập nhật từ website %s!"
 
-#: update-browser.php:84
+#: update-browser.php:154
 msgid "Most recent version not available for your system."
 msgstr "Phiên bản mới nhất hiện không khả dụng cho hệ thống của bạn."
 
-#: update-browser.php:85
+#: update-browser.php:155
 msgid "Please choose another browser."
 msgstr "Vui lòng chọn trình duyệt khác."
 
-#: update-browser.php:94
+#: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
 msgstr "Đang kiểm tra xem trình duyệt của bạn có cập nhật không..."
 
-#: update-browser.php:101
+#: update-browser.php:180 update-browser.php:206
+msgid "Your browser is out-of-date."
+msgstr "Trình duyệt của bạn đã lỗi thời."
+
+#: update-browser.php:182
+#, php-format
+msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgstr "Ở trên cùng hệ điều hành của bạn (%s) quá cũ và không an toàn đến nỗi mà không còn có sẵn trình duyệt cập nhật nữa."
+
+#: update-browser.php:184 update-browser.php:284 update-browser.php:302
+#, php-format
+msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
+msgstr "Vui lòng thử <a href=\"%s\">cập nhật %s</a> để có được phiên bản trình duyệt mới nhất của bạn."
+
+#: update-browser.php:190
+#, php-format
+msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
+msgstr "Trình duyệt của bạn, %s, đã lỗi thời và không được cập nhật nữa cho %s."
+
+#: update-browser.php:195 update-browser.php:208
+msgid "Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Vui lòng tải xuống một trong các trình duyệt cập nhật, miễn phí và tuyệt vời sau:"
+
+#: update-browser.php:201
 msgid "Your browser is up-to-date."
 msgstr "Trình duyệt của bạn là bản đã cập nhật."
 
-#: update-browser.php:111
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "Trình duyệt của bạn đã lỗi thời. Vui lòng tải xuống một trong các trình duyệt cập nhật, miễn phí và tuyệt vời sau:"
+#: update-browser.php:283 update-browser.php:298
+#, php-format
+msgid "On %s the built-in browser can only be updated together with the operating system."
+msgstr "Trên %s, trình duyệt cài sẵn chỉ có thể được cập nhật cùng với hệ điều hành."
 
-#: update-browser.php:139
+#: update-browser.php:300
+#, php-format
+msgid "Unfortunately, %s has stopped supporting your device with updates."
+msgstr "Thật không may, %s đã ngừng hỗ trợ cập nhật thiết bị của bạn."
+
+#: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "Để tăng thêm <a href=\"%s\">tính bảo mật</a>,    <a href=\"%s\">tốc độ</a>,    <a href=\"%s\">sự tiện lợi</a> và    <a href=\"%s\">vui vẻ</a>."
 
-#: update-browser.php:149
+#: update-browser.php:328
 msgid "Advertisement"
 msgstr "Quảng cáo"
 
-#: update-browser.php:150
+#: update-browser.php:329
+msgid "Sponsored"
+msgstr "Được tài trợ"
+
+#: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "Website này xin nhắc bạn rằng: Trình duyệt (%s) của bạn hiện đã <b>lỗi thời</b>. <a%s>Hãy cập nhật trình duyệt của bạn</a> để tăng thêm tính bảo mật, sự tiện lợi và trải nghiệm tuyệt nhất trên trang web này."
 
-#: update-browser.php:156
+#: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
 msgstr "Lý do tôi cần một trình duyệt cập nhật?"
 
-#: update-browser.php:160
+#: update-browser.php:340
 msgid "Security"
 msgstr "Tính bảo mật"
 
-#: update-browser.php:161
+#: update-browser.php:341
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "Trình duyệt mới hơn giúp bảo vệ bạn tốt hơn trước các loại virus, các dạng lừa đảo và các nguy cơ khác. Những trình duyệt lỗi thời tồn tại những lỗ hổng bảo mật mà các bản cập nhật đều khắc phục được."
 
-#: update-browser.php:164
+#: update-browser.php:344
 msgid "Speed"
 msgstr "Tốc độ"
 
-#: update-browser.php:165
+#: update-browser.php:345
 msgid "Every new browser generation improves speed"
 msgstr "Mỗi thế hệ trình duyệt mới đều giúp cải thiện tốc độ"
 
-#: update-browser.php:168
+#: update-browser.php:348
 msgid "Compatibility & new Technology"
 msgstr "Tính tương thích & Công nghệ mới"
 
-#: update-browser.php:169
+#: update-browser.php:349
 msgid "You can view sites that are using the latest technology"
 msgstr "Bạn có thể xem các trang web hiện dùng công nghệ mới nhất"
 
-#: update-browser.php:172
+#: update-browser.php:352
 msgid "Comfort & better experience"
 msgstr "Sự tiện lợi & trải nghiệm tốt hơn"
 
-#: update-browser.php:173
+#: update-browser.php:353
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "Có được một trải nghiệm tiện lợi hơn với các tính năng mới, các phần mở rộng và khả năng tùy biến."
 
-#: update-browser.php:179
+#: update-browser.php:359
 msgid "Why this website?"
 msgstr "Tại sao lại là website này?"
 
-#: update-browser.php:181
+#: update-browser.php:361
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "Đây là một sáng kiến của các website và trang blog giúp tăng cường nhận thức về bảo mật và giới thiệu trang web."
 
-#: update-browser.php:187
+#: update-browser.php:367
 msgid "I can't update my browser"
 msgstr "Tôi không thể cập nhật trình duyệt của mình"
 
-#: update-browser.php:189
+#: update-browser.php:369
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "Nếu bạn không thể thay đổi trình duyệt của mình do các vấn đề về tính tương thích, hãy cân nhắc việc cài đặt một trình duyệt thứ hai phục vụ việc tìm duyệt, đồng thời giữ cả trình duyệt cũ để đảm bảo tính tương thích."
 
-#: update-browser.php:190
+#: update-browser.php:370
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "Nếu bạn không thể tự cài đặt các bản cập nhật, hãy đề nghị quản trị viên mạng của bạn cập nhật trình duyệt của bạn."
 
-#: update-browser.php:219
+#: update-browser.php:416
 msgid "This website uses cookies"
 msgstr "Website này có sử dụng cookie"
+
+#: update-browser.php:416
+msgid "Close"
+msgstr "Đóng"
 

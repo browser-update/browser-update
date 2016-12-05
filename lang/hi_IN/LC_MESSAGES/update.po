@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"POT-Creation-Date: 2016-11-29 18:09+0100\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -16,126 +16,163 @@ msgstr ""
 "X-Crowdin-Language: hi\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:32
+#: header.php:5 header.php:43
 msgid "Update your Browser"
 msgstr "अपने ब्राउज़र को अपडेट करें"
 
-#: header.php:27
+#: header.php:38
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "वेबसाइटों द्वारा उपयोगकर्ताओं को अपने वेब ब्राउज़र को अपडेट करने की सूचना देने के लिए एक पहल"
 
-#: header.php:29 update-browser.php:182
+#: header.php:40 update-browser.php:362
 msgid "About the Project"
 msgstr "परियोजना के बारे में"
 
-#: header.php:33
+#: header.php:44
 msgid "Statistics"
 msgstr "आंकड़े"
 
-#: header.php:34
+#: header.php:45
 msgid "Blog"
 msgstr "ब्लॉग"
 
-#: header.php:90
+#: header.php:104
 msgid "Contact"
 msgstr "संपर्क"
 
-#: update-browser.php:75
+#: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
 msgstr "%s वेबसाइट से %s वेब ब्राउज़र में अपडेट डाउनलोड की गयी!"
 
-#: update-browser.php:84
+#: update-browser.php:154
 msgid "Most recent version not available for your system."
 msgstr "सबसे नवीन संस्करण आपके सिस्टम के लिए उपलब्ध नहीं है।"
 
-#: update-browser.php:85
+#: update-browser.php:155
 msgid "Please choose another browser."
 msgstr "कृपया किसी अन्य ब्राउज़र को चुनें।"
 
-#: update-browser.php:94
+#: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
 msgstr "जांच की जा रही है यह देकने के लिए यदि आपका ब्राउज़र अप-टू-डेट हैं ..."
 
-#: update-browser.php:101
+#: update-browser.php:180 update-browser.php:206
+msgid "Your browser is out-of-date."
+msgstr ""
+
+#: update-browser.php:182
+#, php-format
+msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgstr ""
+
+#: update-browser.php:184 update-browser.php:284 update-browser.php:302
+#, php-format
+msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
+msgstr ""
+
+#: update-browser.php:190
+#, php-format
+msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
+msgstr ""
+
+#: update-browser.php:195 update-browser.php:208
+msgid "Please download one of these up-to-date, free and excellent browsers:"
+msgstr ""
+
+#: update-browser.php:201
 msgid "Your browser is up-to-date."
 msgstr "आपका ब्राउज़र को अप-टू-डेट है।"
 
-#: update-browser.php:111
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "आपका ब्राउज़र आउट-ऑफ़-डेट हो चुका है। कृपया इन में से एक अप-टू-डेट, मुफ्त व उत्कृष्ट ब्राउज़र चुने:"
+#: update-browser.php:283 update-browser.php:298
+#, php-format
+msgid "On %s the built-in browser can only be updated together with the operating system."
+msgstr ""
 
-#: update-browser.php:139
+#: update-browser.php:300
+#, php-format
+msgid "Unfortunately, %s has stopped supporting your device with updates."
+msgstr ""
+
+#: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "अधिक <a href=\"%s\"> सुरक्षा </a>, <a href=\"%s\"> गति </a>, <a href=\"%s\"> आराम </a> और <एक href = \"%s के लिए \"> आनंद </a>।"
 
-#: update-browser.php:149
+#: update-browser.php:328
 msgid "Advertisement"
 msgstr "विज्ञापन"
 
-#: update-browser.php:150
+#: update-browser.php:329
+msgid "Sponsored"
+msgstr ""
+
+#: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </ b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।"
 
-#: update-browser.php:156
+#: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
 msgstr "मुझे एक अप-टू-डेट ब्राउज़र की आवश्यकता क्यों है?"
 
-#: update-browser.php:160
+#: update-browser.php:340
 msgid "Security"
 msgstr "सुरक्षा"
 
-#: update-browser.php:161
+#: update-browser.php:341
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "नए ब्राउज़र वायरस, घोटालों और अन्य खतरों के खिलाफ बेहतर सुरक्षा प्रदान करते हैं। पुराने ब्राउज़रों में सुरक्षा कमियां होती हैं जो अपडेटस में ठीक होती हैं।"
 
-#: update-browser.php:164
+#: update-browser.php:344
 msgid "Speed"
 msgstr "गति"
 
-#: update-browser.php:165
+#: update-browser.php:345
 msgid "Every new browser generation improves speed"
 msgstr "हर नई ब्राउज़र पीढ़ी गति में सुधार लाती हैं"
 
-#: update-browser.php:168
+#: update-browser.php:348
 msgid "Compatibility & new Technology"
 msgstr "संगतता और नई प्रौद्योगिकी"
 
-#: update-browser.php:169
+#: update-browser.php:349
 msgid "You can view sites that are using the latest technology"
 msgstr "आप उन साइटों को देख सकते हैं जो नवीनतम तकनीक का उपयोग करती हैं"
 
-#: update-browser.php:172
+#: update-browser.php:352
 msgid "Comfort & better experience"
 msgstr "आराम और बेहतर अनुभव"
 
-#: update-browser.php:173
+#: update-browser.php:353
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "नई सुविधाओं, एक्सटेंशनो और बेहतर कस्टमाइजेशन के साथ और अधिक आरामदायक अनुभव करें।"
 
-#: update-browser.php:179
+#: update-browser.php:359
 msgid "Why this website?"
 msgstr "यह वेबसाइट क्यों?"
 
-#: update-browser.php:181
+#: update-browser.php:361
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "इस वेबसाइटों और ब्लॉगों द्वारा सुरक्षा के प्रति जागरूकता बढ़ाने व वेब के आगे लाने के लिए और एक पहल हैं।"
 
-#: update-browser.php:187
+#: update-browser.php:367
 msgid "I can't update my browser"
 msgstr "मैं अपने ब्राउज़र को अपडेट नहीं कर सका"
 
-#: update-browser.php:189
+#: update-browser.php:369
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "यदि आप संगतता मुद्दों की वजह से अपने ब्राउज़र को बदल नहीं सकते हैं, तो ब्राउज़िंग के लिए एक दूसरे ब्राउज़र इनस्टॉल करने के बारे में सोचे और अनुकूलता के पुराना वाला रखे।"
 
-#: update-browser.php:190
+#: update-browser.php:370
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "यदि आप अपडेट स्वयं से इनस्टॉल नहीं कर पा रहे हैं तो अपने ब्राउज़र को अपडेट करने के लिए अपने व्यवस्थापक से पूछें।"
 
-#: update-browser.php:219
+#: update-browser.php:416
 msgid "This website uses cookies"
 msgstr "यह वेबसाइट कुकीज़ का उपयोग करती हैं"
+
+#: update-browser.php:416
+msgid "Close"
+msgstr ""
 

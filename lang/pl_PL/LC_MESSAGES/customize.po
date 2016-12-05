@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 20:04+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -66,7 +66,7 @@ msgstr "true = zawsze pokazuje pasek z komunikatem (na potrzeby testowania)"
 
 #: customize.php:40
 msgid "custom notification text (html)"
-msgstr ""
+msgstr "zmodyfikowane powiadomienie (html)"
 
 #: customize.php:41
 #, php-format
@@ -75,11 +75,11 @@ msgstr ""
 
 #: customize.php:42
 msgid "custom notification text for language \"xx\""
-msgstr ""
+msgstr "własne powiadomienie dla języka \"xx\""
 
 #: customize.php:43
 msgid "e.g. text_de for german and text_it for italian"
-msgstr ""
+msgstr "np. text_de dla niemieckiego i text_it dla włoskiego"
 
 #: customize.php:44
 msgid "open link in new window/tab"
@@ -87,13 +87,13 @@ msgstr "otwórz link w nowym oknie lub w nowej karcie"
 
 #: customize.php:45
 msgid "the url to go to after clicking the notification"
-msgstr ""
+msgstr "URL do przekierowania po kliknięciu notifikacji"
 
 #: customize.php:50
 msgid "Change the style"
-msgstr ""
+msgstr "Zmień styl"
 
 #: customize.php:53
 msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
-msgstr ""
+msgstr "Podane reguły CSS zastosowane są przez to powiadomienie. Możesz nadpisać je w swoim własnym CSS. Żeby to zrobić musisz dodać więcej szczegółów do reguł CSS: np. "
 

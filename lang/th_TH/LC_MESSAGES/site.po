@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 19:04+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
@@ -32,15 +32,15 @@ msgstr "<b>%s</b> ผู้เข้าชมได้ทำการปรั�
 
 #: stat.php:25
 msgid "Browser updates"
-msgstr ""
+msgstr "Browser updates"
 
 #: stat.php:207
 msgid "From"
-msgstr ""
+msgstr "จาก"
 
 #: stat.php:207
 msgid "To"
-msgstr ""
+msgstr "ถึง"
 
 #: index.php:24
 msgid "Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website."

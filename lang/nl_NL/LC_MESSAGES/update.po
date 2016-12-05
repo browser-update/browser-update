@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"POT-Creation-Date: 2016-11-29 18:09+0100\n"
+"PO-Revision-Date: 2016-12-05 10:52-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
@@ -16,126 +16,163 @@ msgstr ""
 "X-Crowdin-Language: nl\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:32
+#: header.php:5 header.php:43
 msgid "Update your Browser"
 msgstr "Update uw browser"
 
-#: header.php:27
+#: header.php:38
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "Een initiatief van webdesigners om bezoekers te informeren over browser-updates"
 
-#: header.php:29 update-browser.php:182
+#: header.php:40 update-browser.php:362
 msgid "About the Project"
 msgstr "Het Project"
 
-#: header.php:33
+#: header.php:44
 msgid "Statistics"
 msgstr "Statistieken"
 
-#: header.php:34
+#: header.php:45
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:90
+#: header.php:104
 msgid "Contact"
 msgstr "Contact"
 
-#: update-browser.php:75
+#: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
 msgstr "Download geüpdatete %s webbrowser van %s website!"
 
-#: update-browser.php:84
+#: update-browser.php:154
 msgid "Most recent version not available for your system."
 msgstr "Niet beschikbaar voor uw besturingssysteem."
 
-#: update-browser.php:85
+#: update-browser.php:155
 msgid "Please choose another browser."
 msgstr "Kies dan een andere browser."
 
-#: update-browser.php:94
+#: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
 msgstr "Controleren of je browser up to date is..."
 
-#: update-browser.php:101
+#: update-browser.php:180 update-browser.php:206
+msgid "Your browser is out-of-date."
+msgstr "Uw browser is verouderd."
+
+#: update-browser.php:182
+#, php-format
+msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgstr "Uw besturingssysteem (%s) is zo oud en onveilig dat er geen recente browser versies beschikbaar zijn."
+
+#: update-browser.php:184 update-browser.php:284 update-browser.php:302
+#, php-format
+msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
+msgstr "Probeer <a href=\"%s\">%s te updaten</a> om de meest recente versie van je browser te verkrijgen."
+
+#: update-browser.php:190
+#, php-format
+msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
+msgstr "Uw browser, %s, is niet meer actueel en is al %s niet meer geüpdatet."
+
+#: update-browser.php:195 update-browser.php:208
+msgid "Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Download aub één van deze recente, gratis en uitstekende browsers:"
+
+#: update-browser.php:201
 msgid "Your browser is up-to-date."
-msgstr "Uw browser is actueel"
+msgstr "Uw browser is actueel."
 
-#: update-browser.php:111
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "Uw browser is verouderd. Download aub één van deze recente, gratis en uitstekende browsers:"
+#: update-browser.php:283 update-browser.php:298
+#, php-format
+msgid "On %s the built-in browser can only be updated together with the operating system."
+msgstr "Op %s kan de ingebouwde browser alleen gelijk met het besturingssysteem worden geüpdatet."
 
-#: update-browser.php:139
+#: update-browser.php:300
+#, php-format
+msgid "Unfortunately, %s has stopped supporting your device with updates."
+msgstr "%s is helaas gestopt met het ondersteunen van uw apparaat met updates."
+
+#: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "Voor meer <a href=\"%s\">veiligheid</a>,    <a href=\"%s\">snelheid</a>,    <a href=\"%s\">comfort</a> en    <a href=\"%s\">plezier</a>."
 
-#: update-browser.php:149
+#: update-browser.php:328
 msgid "Advertisement"
 msgstr "Advertentie"
 
-#: update-browser.php:150
+#: update-browser.php:329
+msgid "Sponsored"
+msgstr "Gesponserd"
+
+#: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
-msgstr "Uw browser (%s) is <b>verouderd</b>. Hij heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>"
+msgstr "Uw browser (%s) is <b>verouderd</b>. Hij heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>."
 
-#: update-browser.php:156
+#: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
 msgstr "Waarom heb ik een up-to-date browser nodig?"
 
-#: update-browser.php:160
+#: update-browser.php:340
 msgid "Security"
 msgstr "Veiligheid"
 
-#: update-browser.php:161
+#: update-browser.php:341
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "Nieuwere browsers kunnen beter beschermen tegen scams, virussen, trojans, phishing en andere bedreigingen."
 
-#: update-browser.php:164
+#: update-browser.php:344
 msgid "Speed"
 msgstr "Snelheid"
 
-#: update-browser.php:165
+#: update-browser.php:345
 msgid "Every new browser generation improves speed"
 msgstr "Nieuwere browsers werken veel sneller"
 
-#: update-browser.php:168
+#: update-browser.php:348
 msgid "Compatibility & new Technology"
 msgstr "Betere werking"
 
-#: update-browser.php:169
+#: update-browser.php:349
 msgid "You can view sites that are using the latest technology"
 msgstr "Websites die gebruik maken van nieuwe technieken werken (beter)"
 
-#: update-browser.php:172
+#: update-browser.php:352
 msgid "Comfort & better experience"
 msgstr "Comfort &amp; betere beleving"
 
-#: update-browser.php:173
+#: update-browser.php:353
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "Met nieuwe mogelijkheden, uitbreidingen, etc. gaat het internetten een stuk aangenamer"
 
-#: update-browser.php:179
+#: update-browser.php:359
 msgid "Why this website?"
 msgstr "Waarom deze website?"
 
-#: update-browser.php:181
+#: update-browser.php:361
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "Deze website is een initiatief van webdesigners, webmasters en bloggers die het internet verder willen brengen en hun bezoekers willen helpen."
 
-#: update-browser.php:187
+#: update-browser.php:367
 msgid "I can't update my browser"
 msgstr "\"Ik kan mijn browser niet updaten\""
 
-#: update-browser.php:189
+#: update-browser.php:369
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "Als je niet van browser kunt wisselen in verband met de nodige ondersteuning, waarom dan niet een tweede browser installeren?"
 
-#: update-browser.php:190
+#: update-browser.php:370
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "Als uw computer wordt beheerd door een systeembeheerder en u kunt geen nieuwe browser installeren, vraag dan om hulp."
 
-#: update-browser.php:219
+#: update-browser.php:416
 msgid "This website uses cookies"
 msgstr "Deze website gebruikt cookies"
+
+#: update-browser.php:416
+msgid "Close"
+msgstr "Sluiten"
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 20:04+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -91,9 +91,9 @@ msgstr ""
 
 #: customize.php:50
 msgid "Change the style"
-msgstr ""
+msgstr "Cambia el estilo"
 
 #: customize.php:53
 msgid "The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. "
-msgstr ""
+msgstr "La notificación aplica las reglas CSS siguientes. Las puedes sobreescribir en tu propio CSS. Para hacerlo necesitas añadir un poco más de especificidad a las reglas CSS: por ejemplo "
 

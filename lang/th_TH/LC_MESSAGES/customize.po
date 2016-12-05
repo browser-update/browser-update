@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-29 20:04+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Thai\n"
 "Language: th_TH\n"
@@ -38,7 +38,7 @@ msgstr "ตัวเลือกต่อไปนี้สามารถส่
 
 #: customize.php:28
 msgid "Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify."
-msgstr ""
+msgstr "ระบุเวอร์ชั่นของ browser ที่จะให้แจ้งเตือน ตัวเลขที่ต่ำจะระบุว่าเวอร์ชั่นก่อนจากเวอร์ชั่นปัจจุบันที่จะต้องแจ้งเตือน"
 
 #: customize.php:31
 msgid "after how many hours should the message reappear"
@@ -54,11 +54,11 @@ msgstr "ถ้าผู้ใช้ตั้งใจปิดข้อควา
 
 #: customize.php:34
 msgid "callback functions after notification has appeared / was clicked / closed"
-msgstr ""
+msgstr "ฟังก์ชั่น Callback จะปรากฎหลังจากการเเจ้งเตือนถูกปิด"
 
 #: customize.php:38
 msgid "set a fixed language for the message, e.g. \"en\". This overrides the default detection."
-msgstr ""
+msgstr "ตั้งแก้ไขการแปลสำหรับข้อความ e.g \"en\". การแทนที่นี้จะถูกตรวจสอบ"
 
 #: customize.php:39
 msgid "true = always show the bar (for testing)"
@@ -66,7 +66,7 @@ msgstr "true = แสดงแถบแจ้งเตือนตลอดเ�
 
 #: customize.php:40
 msgid "custom notification text (html)"
-msgstr ""
+msgstr "ตั้งค่าการแจ้งเตือนเอง (html)"
 
 #: customize.php:41
 #, php-format

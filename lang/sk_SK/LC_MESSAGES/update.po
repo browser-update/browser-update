@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"POT-Creation-Date: 2016-11-29 18:09+0100\n"
+"PO-Revision-Date: 2016-12-05 10:53-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
@@ -16,126 +16,163 @@ msgstr ""
 "X-Crowdin-Language: sk\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:32
+#: header.php:5 header.php:43
 msgid "Update your Browser"
 msgstr "Aktualizujte si prehliadač"
 
-#: header.php:27
+#: header.php:38
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "Iniciatíva webstránok na informovanie používateľov o aktuálnosti ich prehliadačov"
 
-#: header.php:29 update-browser.php:182
+#: header.php:40 update-browser.php:362
 msgid "About the Project"
 msgstr "O projekte"
 
-#: header.php:33
+#: header.php:44
 msgid "Statistics"
 msgstr "Štatistiky"
 
-#: header.php:34
+#: header.php:45
 msgid "Blog"
 msgstr "Blog"
 
-#: header.php:90
+#: header.php:104
 msgid "Contact"
 msgstr "Kontakt"
 
-#: update-browser.php:75
+#: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
 msgstr "Stiahnite si aktualizovaný prehliadač %s z webstránky %s!"
 
-#: update-browser.php:84
+#: update-browser.php:154
 msgid "Most recent version not available for your system."
 msgstr "Najnovšia verzia nie je dostupná pre Váš systém."
 
-#: update-browser.php:85
+#: update-browser.php:155
 msgid "Please choose another browser."
 msgstr "Prosím, vyberte si iný prehliadač."
 
-#: update-browser.php:94
+#: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
 msgstr "Kontrolujeme, či je Váš prehliadať aktualizovaný..."
 
-#: update-browser.php:101
+#: update-browser.php:180 update-browser.php:206
+msgid "Your browser is out-of-date."
+msgstr "Váš prehliadač je zastaralý."
+
+#: update-browser.php:182
+#, php-format
+msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgstr "Váš operačný systém (%s) je navyše natoľko zastaralý a nezabezpečený, že už nie je k dispozícii žiadny nový prehliadač."
+
+#: update-browser.php:184 update-browser.php:284 update-browser.php:302
+#, php-format
+msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
+msgstr "Pre získanie najnovšej aktualizácie Vášho prehliadača skúste <a href=\"%s\">aktualizáciu %s</a>, prosím."
+
+#: update-browser.php:190
+#, php-format
+msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
+msgstr "Váš prehliadač %s, je zastaralý a pre %s už nie je podporovaný."
+
+#: update-browser.php:195 update-browser.php:208
+msgid "Please download one of these up-to-date, free and excellent browsers:"
+msgstr "Prosím, stiahnite si jeden z týchto aktuálnych, bezplatných a vynikajúcich prehliadačov:"
+
+#: update-browser.php:201
 msgid "Your browser is up-to-date."
 msgstr "Máte najnovšiu verziu prehliadača."
 
-#: update-browser.php:111
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "Váš prehliadač je zastaralý. Prosím, stiahnite si jeden z týchto aktuálnych, bezplatných a vynikajúcich prehliadačov:"
+#: update-browser.php:283 update-browser.php:298
+#, php-format
+msgid "On %s the built-in browser can only be updated together with the operating system."
+msgstr "Na %s sa zabudovaný prehliadač môže aktualizovať len spolu s operačným systémom."
 
-#: update-browser.php:139
+#: update-browser.php:300
+#, php-format
+msgid "Unfortunately, %s has stopped supporting your device with updates."
+msgstr "Žiaľ, %s zrušil podporu pre aktualizáciu Vášho zariadenia."
+
+#: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "Pre viac <a href=\"%s\">bezpečnosti</a>,    <a href=\"%s\">rýchlosti</a>,    <a href=\"%s\">pohodlia</a> a    <a href=\"%s\">zábavy</a>."
 
-#: update-browser.php:149
+#: update-browser.php:328
 msgid "Advertisement"
-msgstr ""
+msgstr "Reklama"
 
-#: update-browser.php:150
+#: update-browser.php:329
+msgid "Sponsored"
+msgstr "Sponzorované"
+
+#: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "Chceli by sme Vám pripomenúť: Váš prehliadač (%s) je <b>zastaralý</b>. <a%s>Aktualizujte si ho</a> pre viac bezpečnosti, pohodlia a pre ten najlepší zážitok na tejto stránke."
 
-#: update-browser.php:156
+#: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
 msgstr "Prečo potrebujem aktualizovaný prehliadač?"
 
-#: update-browser.php:160
+#: update-browser.php:340
 msgid "Security"
 msgstr "Bezpečnosť"
 
-#: update-browser.php:161
+#: update-browser.php:341
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "Novšie prehliadače Vás lepšie ochránia pred vírusmi, podvodmi a inými hrozbami. Zastaralé prehliadače majú bezpečnostné diere, ktoré sú opravované cez aktualizácie."
 
-#: update-browser.php:164
+#: update-browser.php:344
 msgid "Speed"
 msgstr "Rýchlosť"
 
-#: update-browser.php:165
+#: update-browser.php:345
 msgid "Every new browser generation improves speed"
 msgstr "Každá ďalšia generácia prehliadačov zlepšuje rýchlosť"
 
-#: update-browser.php:168
+#: update-browser.php:348
 msgid "Compatibility & new Technology"
 msgstr "Kompatibilita a nové technológie"
 
-#: update-browser.php:169
+#: update-browser.php:349
 msgid "You can view sites that are using the latest technology"
 msgstr "Môžete si prezerať stránky, ktoré používajú tie najnovšie technológie"
 
-#: update-browser.php:172
+#: update-browser.php:352
 msgid "Comfort & better experience"
 msgstr "Pohodlie a lepší zážitok"
 
-#: update-browser.php:173
+#: update-browser.php:353
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "Urobte svoje prehliadanie pohodlnejšie novými funkciami, rozšíreniami a lepšími možnosťami prispôsobenia."
 
-#: update-browser.php:179
+#: update-browser.php:359
 msgid "Why this website?"
 msgstr "Prečo táto webstránka?"
 
-#: update-browser.php:181
+#: update-browser.php:361
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "Toto je iniciatíva webstránok so snahou zvýšiť informovanosť o bezpečnosti a posúvať web vpred."
 
-#: update-browser.php:187
+#: update-browser.php:367
 msgid "I can't update my browser"
 msgstr "Nemôžem aktualizovať svoj prehliadač"
 
-#: update-browser.php:189
+#: update-browser.php:369
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "Ak nemôžete zmeniť prehliadač kvôli problémom s kompatibilitou, porozmýšľajte nad nainštalovaním ďalšieho prehliadača na prehliadanie, kým starý si necháte kvôli kompatibilite."
 
-#: update-browser.php:190
+#: update-browser.php:370
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "Požiadajte Vašeho správcu o aktualizáciu ak ju nemôžete vykonať samy."
 
-#: update-browser.php:219
+#: update-browser.php:416
 msgid "This website uses cookies"
 msgstr "Táto stránka používa cookies"
+
+#: update-browser.php:416
+msgid "Close"
+msgstr "Zatvoriť"
 

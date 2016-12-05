@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 19:52+0200\n"
-"PO-Revision-Date: 2016-11-21 11:45-0500\n"
+"POT-Creation-Date: 2016-11-29 18:09+0100\n"
+"PO-Revision-Date: 2016-12-05 10:52-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Chinese Traditional\n"
 "Language: zh_TW\n"
@@ -16,126 +16,163 @@ msgstr ""
 "X-Crowdin-Language: zh-TW\n"
 "X-Crowdin-File: update.pot\n"
 
-#: header.php:5 header.php:32
+#: header.php:5 header.php:43
 msgid "Update your Browser"
 msgstr "更新您的瀏覽器"
 
-#: header.php:27
+#: header.php:38
 msgid "An initiative by websites to inform users to update their web browser"
 msgstr "網頁設計師的倡議：告知用戶更新瀏覽器"
 
-#: header.php:29 update-browser.php:182
+#: header.php:40 update-browser.php:362
 msgid "About the Project"
 msgstr "關於項目"
 
-#: header.php:33
+#: header.php:44
 msgid "Statistics"
 msgstr "統計"
 
-#: header.php:34
+#: header.php:45
 msgid "Blog"
 msgstr "博客"
 
-#: header.php:90
+#: header.php:104
 msgid "Contact"
 msgstr "聯繫我們"
 
-#: update-browser.php:75
+#: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
 msgstr "從 %s 網站下載最新的 %s 網頁瀏覽器！"
 
-#: update-browser.php:84
+#: update-browser.php:154
 msgid "Most recent version not available for your system."
 msgstr "最新版本不適用於您的作業系統。"
 
-#: update-browser.php:85
+#: update-browser.php:155
 msgid "Please choose another browser."
 msgstr "請選擇其他瀏覽器。"
 
-#: update-browser.php:94
+#: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
 msgstr "檢查您的瀏覽器是否為最新版本..."
 
-#: update-browser.php:101
+#: update-browser.php:180 update-browser.php:206
+msgid "Your browser is out-of-date."
+msgstr "您的瀏覽器需要更新。"
+
+#: update-browser.php:182
+#, php-format
+msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgstr "您的作業系統 (%s) 過於老舊且缺乏安全性，因此已無任何最新的瀏覽器可供支援。"
+
+#: update-browser.php:184 update-browser.php:284 update-browser.php:302
+#, php-format
+msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
+msgstr "請嘗試<a href=\"%s\">更新 %s</a>，以取得您瀏覽器的最新版本。"
+
+#: update-browser.php:190
+#, php-format
+msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
+msgstr "您的瀏覽器 %s 為舊版，且已不再為 %s 推出更新。"
+
+#: update-browser.php:195 update-browser.php:208
+msgid "Please download one of these up-to-date, free and excellent browsers:"
+msgstr "請下載一款免費而優秀的最新版瀏覽器。"
+
+#: update-browser.php:201
 msgid "Your browser is up-to-date."
 msgstr "您的瀏覽器是最新版本。"
 
-#: update-browser.php:111
-msgid "Your browser is out-of-date. Please download one of these up-to-date, free and excellent browsers:"
-msgstr "您的瀏覽器需要更新。請下載一款免費而優秀的最新版瀏覽器。"
+#: update-browser.php:283 update-browser.php:298
+#, php-format
+msgid "On %s the built-in browser can only be updated together with the operating system."
+msgstr "在 %s 上，內建瀏覽器只能與作業系統一起更新。"
 
-#: update-browser.php:139
+#: update-browser.php:300
+#, php-format
+msgid "Unfortunately, %s has stopped supporting your device with updates."
+msgstr "很抱歉，%s 已停止為您的裝置推出更新。"
+
+#: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
 msgstr "帶來更安全、快速和樂趣。<!-- %s %s %s %s-->"
 
-#: update-browser.php:149
+#: update-browser.php:328
 msgid "Advertisement"
 msgstr "廣告"
 
-#: update-browser.php:150
+#: update-browser.php:329
+msgid "Sponsored"
+msgstr "贊助商"
+
+#: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
 msgstr "您的瀏覽器(%s) 需要更新。該瀏覽器有諸多安全漏洞，無法顯示本網站的所有功能。 <a%s>瞭解如何更新瀏覽器</a>"
 
-#: update-browser.php:156
+#: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
 msgstr "為什麼需要最新版瀏覽器？"
 
-#: update-browser.php:160
+#: update-browser.php:340
 msgid "Security"
 msgstr "更安全"
 
-#: update-browser.php:161
+#: update-browser.php:341
 msgid "Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates."
 msgstr "新瀏覽器能夠更好避免欺詐、病毒、木馬、釣魚攻擊和其它威脅。它能夠修復當前瀏覽器中的安全漏洞，保護個人隱私。"
 
-#: update-browser.php:164
+#: update-browser.php:344
 msgid "Speed"
 msgstr "更快"
 
-#: update-browser.php:165
+#: update-browser.php:345
 msgid "Every new browser generation improves speed"
 msgstr "每款新瀏覽器都能夠提升網頁訪問速度。"
 
-#: update-browser.php:168
+#: update-browser.php:348
 msgid "Compatibility & new Technology"
 msgstr "相容性"
 
-#: update-browser.php:169
+#: update-browser.php:349
 msgid "You can view sites that are using the latest technology"
 msgstr "使用最新科技、更易讀、三維和視頻的網頁，享受精彩內容。"
 
-#: update-browser.php:172
+#: update-browser.php:352
 msgid "Comfort & better experience"
 msgstr "更舒適的體驗"
 
-#: update-browser.php:173
+#: update-browser.php:353
 msgid "Have a more comfortable experience with new features, extensions and better customisability."
 msgstr "經由全新功能、擴展和更強的相容性，帶來更舒適的網頁瀏覽體驗。新瀏覽器能夠自動更新，並且全方位保護。"
 
-#: update-browser.php:179
+#: update-browser.php:359
 msgid "Why this website?"
 msgstr "為什麼是這個網站？"
 
-#: update-browser.php:181
+#: update-browser.php:361
 msgid "This is an initiative by websites and blogs to raise security awareness and bring forward the web."
 msgstr "該網站是網頁設計師、網管和博客的創新成果，他們希望提升網頁內容並幫助訪客。"
 
-#: update-browser.php:187
+#: update-browser.php:367
 msgid "I can't update my browser"
 msgstr "「我不能更新我的瀏覽器」"
 
-#: update-browser.php:189
+#: update-browser.php:369
 msgid "If you can't change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility."
 msgstr "如果由於兼容性問題，您不能更換您的瀏覽器，請考慮一下安裝另一個瀏覽器，然後使用新瀏覽器瀏覽網頁，同時保留您現在的瀏覽器用於解決兼容性問題。"
 
-#: update-browser.php:190
+#: update-browser.php:370
 msgid "Ask your admin to update your browser if you cannot install updates yourself."
 msgstr "如果您所使用的瀏覽器並不是您管理的，並且因此您不能安裝新瀏覽器，請聯繫您的電腦管理員以協助您這樣做。"
 
-#: update-browser.php:219
+#: update-browser.php:416
 msgid "This website uses cookies"
 msgstr "此網站使用 cookies。"
+
+#: update-browser.php:416
+msgid "Close"
+msgstr "關閉"
 
