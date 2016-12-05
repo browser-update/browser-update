@@ -24,7 +24,12 @@ function cache_output($function,$hours=0.1) {
 	 return $data;
 }
 
-$ua_=str_replace("_",".",str_replace(array("/","+","\n","\t")," ", strtolower($_SERVER['HTTP_USER_AGENT'])));
+$ua_=$_SERVER['HTTP_USER_AGENT'];
+
+if (isset($_GET['emulate']))
+    $ua_=$_GET['emulate'];
+$ua_=str_replace("_",".",str_replace(array("/","+","\n","\t")," ", strtolower($ua_)));
+
 function det($str, $version) {
     global $ua_;
     if(!preg_match("#".$str."#", $ua_, $regs))
@@ -41,15 +46,17 @@ function is_outdated() {
     }
 
     $vs="?(\d+[.]\d+)";
-    if(det("opr.$vs",41)||
-            det("opera.*version $vs",41)||
-            det("trident.$vs",9)||
-            det("trident.*rv:$vs",11)||
-            det("msie.$vs",12)||
-            det("edge.$vs",14)||
-            det("firefox.$vs",50)||
-            det("version.$vs.*safari",10)||
-            det("chrome.$vs",54))
+    if(
+        det("opr.$vs",41)||
+        det("opera.*version $vs",41)||
+        det("trident.$vs",9)||
+        det("trident.*rv:$vs",11)||
+        det("msie.$vs",12)||
+        det("edge.$vs",14)||
+        det("firefox.$vs",50)||
+        det("version.$vs.*safari",10)||
+        det("chrome.$vs",54)
+    )
         return true;
 }
 
