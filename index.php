@@ -106,6 +106,8 @@ function printolder($months,$version) {
     <li class="bi">
         <label for="f-i">IE/Edge</label> 
         <select id="f-i" onchange="code()">    
+            <option value="13">&lt;= 13</option>
+            <option value="12">&lt;= 12</option>
             <option value="11">&lt;= 11</option>
             <option value="10" selected>&lt;= 10</option>
             <option value="9">&lt;= 9</option>
@@ -142,8 +144,8 @@ function printolder($months,$version) {
         <label for="f-s">Safari</label>  
         <select id="f-s" onchange="code()">
             <option value="9">&lt;= 9</option>
-            <option value="8">&lt;= 8</option>
-            <option value="7" selected>&lt;= 7</option>
+            <option value="8" selected>&lt;= 8</option>
+            <option value="7">&lt;= 7</option>
             <option value="6">&lt;= 6</option>            
         </select>
     </li>
@@ -221,7 +223,7 @@ function printolder($months,$version) {
     <li><?php echo sprintf(T_('Numerous <a%s>benefits for your visitors</a>: security, speed, features, ...'), ' href="update.html"')?></li>
 </ul>
 
-<h2><?php echo sprintf(T_('Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page.'),' href="#install"',' href="#sharebuttons" onclick="document.getElementById(\'sharebuttons\').style.display=\'block\';"',' href="https://crowdin.com/project/browser-update"')?></h2>
+<h2><?php echo sprintf(T_('Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page.'),' href="#install"',' href="#sharebuttons" onclick="document.getElementById(\'sharebuttons\').style.display=\'block\';"',' href="contact.html"')?></h2>
 <div id="sharebuttons"> <div class="addthis_inline_share_toolbox"></div></div>
 </div>
 
@@ -296,5 +298,10 @@ catch(e){window.attachEvent("onload", $buo_f)}\n\
 code();
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
-    
-<?php include("footer.php");?>
+<?php
+if (!in_array($ll,['en','de'])) {       
+?>
+<div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
+<?php
+}
+include("footer.php");
