@@ -49,4 +49,28 @@ text=read_file("update.js")
 minned=minify(text, mangle=False, mangle_toplevel=False)
 write_file("update.min.js",add+minned)
 
+text=read_file("update.show.js")
+minned=minify(text, mangle=False, mangle_toplevel=False)
+write_file("update.show.min.js",minned)
 
+
+#%% Convert strings to javascript format
+st="This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
+import polib
+paths = glob('lang/*/LC_MESSAGES/')
+paths=[p[5:10] for p in paths]
+for p in paths:
+    #print("build %s"%p)
+    if p[:2] not in ["vi","hi","sk"]:
+        continue
+    
+    try:
+        po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
+    except OSError:        
+        print("no update.po found")
+
+    for i in po:
+        if i.msgid==st:
+            print("t.%s='%s';"%(p[:2],i.msgstr))
+            break
+    
