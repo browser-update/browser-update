@@ -97,7 +97,7 @@ function get_domain($domain, $debug = false)
 	return join('.', $arr);
 }
 require("config.php");
-
+require("lib/init.php");
 
 $time	= time();
 
@@ -109,21 +109,12 @@ try {
     $host="decodeerror";
 }
 
+$ll=get_country();
 
-//preg_match('@^([^/])*(/|$)@i', urldecode($_GET["ref"]), $matches);
-//$host=get_domain($matches[1]);
-
-$lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-$lang = explode (",", $lang);
-$lang = explode (";", $lang[0]);
-$ll = trim(strtolower(substr($lang[0],0,5)));
-if(strlen($ll)==5) {
-	$ll = substr($ll, 3, 2);
-}
 if (!isset($_GET["tv"]))
     $tv=0;
 else
-    $tv = mysql_real_escape_string($_GET["tv"]);
+    $tv = $_GET["tv"];
 
 if (!isset($_GET["cv"]))
     $cv=0;
@@ -139,46 +130,61 @@ $s=0;
 if (isset($_GET["second"]))
     $s=1;
 
+$what=filter_input(INPUT_GET, 'what');
+$sys=get_system($ua_);
 
-if (isset($_GET["what"]) && $_GET['what']=="view"){
-    $q=sprintf("INSERT DELAYED INTO viewschoice SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d",
+if ($what=="brow"){
+    $q=sprintf("INSERT DELAYED INTO browsers SET ua='%s', info='%s', country='%s', lang='%s', time=NOW(),sysn='%s', sysv=%f",
+        mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),
+        mysql_real_escape_string($_SERVER['HTTP_ACCEPT_LANGUAGE']),
+        mysql_real_escape_string(get_country()),
+        mysql_real_escape_string(get_lang()),
+        mysql_real_escape_string($sys[3]),
+        mysql_real_escape_string($sys[1])
+    );
+}
+else if ($what=="view"){
+    $q=sprintf("INSERT DELAYED INTO viewschoice SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
 	mysql_real_escape_string($host),
 	mysql_real_escape_string($_GET["from"]),
-	mysql_real_escape_string($_GET["fromv"]),
-	mysql_real_escape_string($ll),
+	mysql_real_escape_string(floatval($_GET["fromv"])),
+	mysql_real_escape_string(get_lang()),
 	$time,
         mysql_real_escape_string($tv),
         mysql_real_escape_string($cv),
-        $s
+        $s,
+        mysql_real_escape_string($sys[3]),
+        mysql_real_escape_string($sys[1])
 	);
 }
-else if (isset($_GET["what"]) && $_GET['what']=="noti"){
-    $q=sprintf("INSERT DELAYED INTO views SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, scriptversion=%d, textversion='%d', ua='%s',more='%s'",
-        mysql_real_escape_string($host),
+else if ($what=="noti"){
+    $q=sprintf("INSERT DELAYED INTO noti SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=NOW(), scriptversion=%d, textversion='%s', ua='%s',more='%s'",
+        mysql_real_escape_string(filter_input(INPUT_GET, 'ref')),
         mysql_real_escape_string($_GET["from"]),
-        mysql_real_escape_string($_GET["fromv"]),
-        mysql_real_escape_string($ll),
-        $time,
+        mysql_real_escape_string(floatval($_GET["fromv"])),
+        mysql_real_escape_string(get_lang()),
         $jsv,
         mysql_real_escape_string($tv),
         "",//mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),        
-        ""
+        mysql_real_escape_string("frac=".filter_input(INPUT_GET, 'frac'))
     );    
 }
-else {
-$q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d",
+else {//updates
+    $q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
 	mysql_real_escape_string($host),
 	mysql_real_escape_string($_GET["from"]),
-	mysql_real_escape_string($_GET["fromv"]),
+	mysql_real_escape_string(floatval($_GET["fromv"])),
 	mysql_real_escape_string($_GET["to"]),
-	mysql_real_escape_string($ll),
+	mysql_real_escape_string(get_lang()),
 	$time,
         mysql_real_escape_string($tv),
         mysql_real_escape_string($cv),
-        $s
+        $s,
+        mysql_real_escape_string($sys[3]),
+        mysql_real_escape_string($sys[1])
 	);
 }
-
+echo $q;
 mysql_query($q) 
 	or die (mysql_error(). $q);
 ?>

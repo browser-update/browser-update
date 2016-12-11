@@ -1,4 +1,10 @@
 <?php
+$slimmed=true;
+$extratranslation=true;
+require_once("lib/init.php");
+require_once("lib/lang.php");
+$choiceversion="base";
+
 $full_locale=get_full_locale();
 if (isset($_GET['lang'])) {
     $ll = $_GET['lang'];
@@ -6,12 +12,6 @@ if (isset($_GET['lang'])) {
 else {
     $ll = get_lang();
 }
-
-$slimmed=true;
-$extratranslation=true;
-require_once("lib/init.php");
-require_once("lib/lang.php");
-$choiceversion="base";
 
 //language for IE/Safari download link: Full locale form. e.g. en-GB
 if(strlen($full_locale)!=5) {
@@ -26,7 +26,7 @@ function has($t) {
 	return !(strpos($ua_,$t)===false);
 }
 
-$brown=get_browserx($ua);
+$brown=get_browserx($ua_);
 function is($name) {
     global $brown;
     if ($brown==$name)
@@ -34,7 +34,7 @@ function is($name) {
     return False;
 }
 
-$sysx=get_system($ua);
+$sysx=get_system($ua_);
 $sys=$sysx[0];
 $ver=$sysx[1];
 $sysn=$sysx[2];
@@ -45,7 +45,7 @@ $u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("https://www.microsoft.com/%s/windows/microsoft-edge",$full_locale_minus);
 
  
-function brow($name, $url, $vendor, $char, $na=False,$add="") {
+function brow($name, $url, $vendor, $char, $na=False,$add="",$add2="") {
     global $choiceversion,$ll;
     echo '<td class="b b'.$char.'">';
     if (!$na) {
@@ -70,7 +70,7 @@ function brow($name, $url, $vendor, $char, $na=False,$add="") {
     */
     
     echo '
-        </a>
+        </a>'.$add2.'
     </td> 
     ';
 }
@@ -81,14 +81,16 @@ if (False) {
     //How can I update?
 }
 
-function m_ancient_os() {
-    global $sysn;
+function m_ancient_os($system_name, $os_update_url="") {
     echo '<h2 class="whatnow"><b>';
     echo T_('Your browser is out-of-date.');
     echo '<br/>';
-    echo sprintf(T_('On top of that your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$sysn);
+    if ($ll=="en")
+        echo sprintf(T_('On top of that your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$system_name);
+    else 
+        echo sprintf(T_('On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$system_name);
     echo '<br/>';
-    echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
+    echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$os_update_url,$system_name);
     echo '</b></h2>';
 }
 function m_discontinued() {
@@ -129,7 +131,8 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
         if ($sys=="Windows") {
             // 5->2000/5.x=>xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1            
             if ($ver<5.1 || $ver>90) {#before xp
-                m_ancient_os();
+                $u_upwin=sprintf("https://support.microsoft.com/%s/help/14223/windows-xp-end-of-support",$full_locale_minus);
+                m_ancient_os("Windows",$u_upwin);
             }
             else if ($ver<=6) {#xp,vista
                 if (is("Chrome")|| is("Internet Explorer")||is("Opera"))
@@ -287,7 +290,7 @@ if (false) {
             $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
             $arr['ref']=$_SERVER['HTTP_REFERER'];
             $arr['date']=date('c');
-            $fi = fopen("adm/raw/feedback.txt", "a") or die("Unable to open file!");
+            $fi = fopen("adm/raw/feedback.txt", "a") or die("Unable to send feedback!");
             $text=json_encode($arr,$options=JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
             fwrite($fi, ",\n".$text);
             fclose($fi);

@@ -19,7 +19,7 @@ function ignore(f) {
 var ref=(document.referrer||"").substring(0,50);
 ref=ref||((window.location.hash||"").match(/.*@(.*)/i)||(window.location.hash||"").match(/.*:(.*)/i)||["",""])[1]||"";
 ref=escape(ref);
-var tv=((window.location.hash||"").match(/#(\d*)/i)||["",""])[1]||"";
+var tv=((window.location.hash||"").match(/#(.*):/i)||["",""])[1]||"";
 
 //if (ref.search(/(^|:\/\/)([^\/]{0,8}\.|)(google|bing|yahoo|ask|duckduckgo|blekko|yandex|baidu)\./i)>-1) 
 //    tv=-4;
@@ -41,7 +41,7 @@ function countBrowser(to) {
         if (second)
             s="&second=1";
         var i=new Image();
-        i.src="/count.php?cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+"&to="+to + s + "&dice="+dice+"rnd="+Math.random();
+        i.src="/count.php?cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+"&to="+to + s + "&dice="+dice+"&rnd="+Math.random();
         second=true;
         tried.push(to);
 }
@@ -51,5 +51,5 @@ function countView() {
         if (ignore(f))
             return;
         var i=new Image();
-        i.src="/count.php?what=view&cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&dice="+dice+"rnd="+Math.random();
+        i.src="/count.php?what=view&cv="+cv+"&tv="+tv+"&ref="+ref+"&from="+f.n+"&fromv="+f.v+ "&dice="+dice+"&rnd="+Math.random();
 }
