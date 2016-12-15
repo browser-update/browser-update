@@ -31,6 +31,8 @@ for p in paths:
                 
     
 #%% Build minified version
+#pip install ply==3.4
+#pip install slimit
 from slimit import minify
 
 def read_file(name):
