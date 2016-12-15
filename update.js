@@ -11,7 +11,7 @@ function $bu_getBrowser(ua_str) {
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobilew without upgrade path or landing page","iphone|ipod|ipad|kindle|silk|blackberry|bb10|RIM|PlayBook|meego") ||
+        ignore("mobilew without upgrade path or landing page","iphone|ipod|ipad|kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia") ||
         ignore("android(chrome) web view","; wv");
     if (ig) 
         return {n:"x",v:0,t:"other browser",donotnotify:ig};    
@@ -55,7 +55,7 @@ function $bu_getBrowser(ua_str) {
     }
     
     //do not notify ver old systems since their is no up-to-date browser available
-    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7|os x 10.8|os x 10.2/.test(ua)) 
+    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/.test(ua)) 
         donotnotify="oldOS";
 
     //do not notify firefox ESR
@@ -93,8 +93,8 @@ this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.brows
 this.op.l=this.op.l.replace("_","-").toLowerCase();
 var apiver=this.op.api||this.op.c||-1;
 var ll=this.op.l.substr(0,2);
-var vsakt = {i:12,f:50,o:41,s:10,n:20,c:54,y:16.9,v:1.4};
-var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-5,a:534,y:-1,v:-0.1};
+var vsakt = {i:12,f:50.1,o:42,s:10,n:20,c:55,y:16.9,v:1.5};
+var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.1};
 if (apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
@@ -120,7 +120,7 @@ this.op.reminderClosed=op.reminderClosed||(24*7);
 this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
 this.op.onclose = op.onclose||function(o){};
-var pageurl = op.pageurl || location.hostname || "x";
+var pageurl = this.op.pageurl = op.pageurl || location.hostname || "x";
 if (langset)
     this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+pageurl;
 else
@@ -137,9 +137,10 @@ if (this.op.nomessage) {
     return;
 }
 
-if (!this.op.test  && Math.random()*100000<1) {
-    var i = new Image();
-    i.src="//browser-update.org/viewcount.php?n="+bb.n+"&v="+bb.v + "&p="+ escape(pageurl) + "&jsv="+jsv+ "&inv="+this.op.v+"&vs="+myvs.i+","+myvs.f+","+myvs.o+","+myvs.s;
+if (this.op.betatest || (!this.op.test && ll==="en" && this.op.reminder>1 && Math.random()*50<1)) {
+    var e=document.createElement("script");
+    e.src=(/file:/.test(location.href)) ? "update.showx.js":"//browser-update.org/update.showx.js"; 
+    return document.body.appendChild(e);
 }
 
 function setCookie(hours) {
@@ -203,14 +204,8 @@ t.hi='यह वेबसाइट आपको याद दिलाना च
 t.sk='Chceli by sme Vám pripomenúť: Váš prehliadač (%s) je <b>zastaralý</b>. <a%s>Aktualizujte si ho</a> pre viac bezpečnosti, pohodlia a pre ten najlepší zážitok na tejto stránke.';
 t.vi='Website này xin nhắc bạn rằng: Trình duyệt (%s) của bạn hiện đã <b>lỗi thời</b>. <a%s>Hãy cập nhật trình duyệt của bạn</a> để tăng thêm tính bảo mật, sự tiện lợi và trải nghiệm tuyệt nhất trên trang web này.';
 
-if (op.text)
-    t = op.text;
-else if (op["text_"+ll])
-    t = op["text_"+ll];
-else if (t[ll])
-    t=t[ll];
-else 
-    t=t.en;
+
+t=op["text_"+ll]||op.text||t[ll]||t.en;
 
 var tar="";
 if (this.op.newwindow)
