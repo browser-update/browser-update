@@ -90,7 +90,7 @@ function m_ancient_os($system_name, $os_update_url="") {
     else 
         echo sprintf(T_('On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$system_name);
     echo '<br/>';
-    echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$os_update_url,$system_name);
+    echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$os_update_url.'" onmousedown="countBrowser(\'os\')',$system_name);
     echo '</b></h2>';
 }
 function m_discontinued() {
