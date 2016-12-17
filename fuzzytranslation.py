@@ -235,33 +235,23 @@ for p in paths:
     po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
 
 
-#%% build!
-import polib
-for p in paths:
-    print("build %s"%p)
-    try:
-        po = polib.pofile('lang/%s/LC_MESSAGES/customize.po'%p)
-        po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
-    except OSError:        
-        print("no file found")
-        
-    try:
-        po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
-        po.save_as_mofile('lang/%s/LC_MESSAGES/update.mo'%p)
-    except OSError:        
-        print("no update.po found")
-        
-    try:
-        po = polib.pofile('lang/%s/LC_MESSAGES/site.po'%p)
-        po.save_as_mofile('lang/%s/LC_MESSAGES/site.mo'%p)
-    except OSError:        
-        print("no site.po found")
-                
-    
-
-
-#%% crowdin API
+#%% extract strings
 import subprocess
+subprocess.call(['xgettext',
+                 "header.php", 
+                 "footer.php", 
+                 "update-browser.php",
+                 "--keyword=T_gettext", 
+                 "--keyword=T_", 
+                 "--keyword=T_ngettext:1,2", 
+                 "--from-code=utf-8", 
+                 "--package-name=browser-update-update", 
+                 "--language=PHP",
+                 "--output=lang/update.pot"])
 
-#subprocess.call(['crowdin-cli-py', 'upload'])
-subprocess.call(['crowdin-cli-py', 'download'])
+#%% upload new sources for translations
+import subprocess
+subprocess.call(['crowdin-cli-py', 'upload', 'sources'])
+
+#subprocess.call(['java', '-jar', 'manage\crowdin-cli.jar', 'upload', 'sources','--config','manage\crowdin.yaml'])
+#subprocess.call(['java', '-jar', 'manage\crowdin-cli.jar', 'upload', 'sources'])

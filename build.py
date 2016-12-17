@@ -3,8 +3,12 @@
 
 """
 
+
+#%% download latest translations from crowdin
+import subprocess
+subprocess.call(['crowdin-cli-py', 'download'])
+
 #%% Build translations
-#crowdin-cli-py download
 import polib
 from glob import glob
 paths = glob('lang/*/LC_MESSAGES/')
@@ -15,7 +19,7 @@ for p in paths:
         po = polib.pofile('lang/%s/LC_MESSAGES/customize.po'%p)
         po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
     except OSError:        
-        print("no file found")
+        print("no customize.po found")
         
     try:
         po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
