@@ -47,15 +47,15 @@ function is_outdated() {
 
     $vs="?(\d+[.]\d+)";
     if(
-        det("opr.$vs",41)||
-        det("opera.*version $vs",41)||
+        det("opr.$vs",42)||
+        det("opera.*version $vs",42)||
         det("trident.$vs",9)||
         det("trident.*rv:$vs",11)||
         det("msie.$vs",12)||
         det("edge.$vs",14)||
         det("firefox.$vs",50)||
         det("version.$vs.*safari",10)||
-        det("chrome.$vs",54)
+        det("chrome.$vs",55)
     )
         return true;
 }
@@ -98,7 +98,7 @@ function get_system($ua) {
         "mac os x 10.(\d*)"=>"MacOS",
         "android $vs"=>"Android",
         "android"=>"Android",
-        "os $vs like mac OS X"=>"iOS",
+        "os $vs.*like mac OS X"=>"iOS",
         "BlackBerry $vs"=>"BlackBerry",
         "Ubuntu"=>"Ubuntu",
         "Linux"=>"Linux"

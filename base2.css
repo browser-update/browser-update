@@ -461,6 +461,7 @@ body, p {
 
 .bs a {
 	background-image: url('/img/big/sa.png');
+        background-size: 110px 110px;
 }
 
 #co {
@@ -620,8 +621,14 @@ a.notavailable .bro {
     border: 1px solid #777;
     box-shadow: 0 0 8px #888;
     background: #FFF4F4;
+    text-align: center;
 }
 
+.noti h2,
+.noti p {
+    margin: 13px 25px;
+    font-size: 19px;
+}
 /*
 body .advantages li {
     display: inline-block;

@@ -85,10 +85,7 @@ function m_ancient_os($system_name, $os_update_url="") {
     echo '<h2 class="whatnow"><b>';
     echo T_('Your browser is out-of-date.');
     echo '<br/>';
-    if ($ll=="en")
-        echo sprintf(T_('On top of that your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$system_name);
-    else 
-        echo sprintf(T_('On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore.'),$system_name);
+    echo sprintf(T_('On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore.'),$system_name);
     echo '<br/>';
     echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$os_update_url.'" onmousedown="countBrowser(\'os\')',$system_name);
     echo '</b></h2>';
@@ -130,7 +127,8 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
         <?php
         if ($sys=="Windows") {
             // 5->2000/5.x=>xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1            
-            if ($ver<5.1 || $ver>90) {#before xp
+            if ($ver<5.1 || $ver>90) {#before xp                
+                $choiceversion="osup";
                 $u_upwin=sprintf("https://support.microsoft.com/%s/help/14223/windows-xp-end-of-support",$full_locale_minus);
                 m_ancient_os("Windows",$u_upwin);
             }
@@ -177,6 +175,7 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
                 $ver="4.1";
             
             if ($ver<4.0) {
+                $choiceversion="osup";
                 m_ancient_os("Android");
             }
             else {
@@ -190,6 +189,7 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
             }
         }
         if ($sys=="Windows Phone") {
+            $choiceversion="osup";
             $url=sprintf("https://support.microsoft.com/de-de/help/12662/windows-phone-update-your-windows-phone",strtolower($full_locale_minus));
             echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"Windows Phone");
             echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
@@ -202,16 +202,23 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
             brow("Chrome",$u_ch,"Google","c");
             brow("Opera",$u_op,"Opera Software","o");
             //brow("Chromium",,"Open Source","cm");
-            brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");           
+            //brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");           
         }
         if ($sys=="iOS") {
             $url=sprintf("https://support.apple.com/%s/HT204204",strtolower($full_locale_minus));
-            echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones");
-            if ($ver<=6)
-                echo sprintf(T_("Unfortunately, %s has stopped supporting your device with updates."),"Apple");
-            else
-                echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"iOS",$url);
-        }
+            echo '<h2 class="whatnow"><b>'.T_('Your browser is out-of-date.')."</b></h2>";
+           
+            echo '<h2>'.sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones").'</h2>';
+            echo '<h2>';
+            if ($ver<=6) {
+                $choiceversion="osna";
+                echo sprintf(T_("Unfortunately, %s has stopped supporting your device with updates."),"Apple");                
+            }
+            else {
+                $choiceversion="osup";
+                echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$url.'" onmousedown="countBrowser(\'os\')',"iOS");
+            }
+        }   echo '</h2>';  
         ?>
     </tr>
 </table>
@@ -284,7 +291,7 @@ if (false) {
         ?>
             <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>
         <?php        
-        if (isset($_POST) && isset($_POST['feedback']) && trim($_POST['feedback'])!="") {
+        if (isset($_POST) && isset($_POST['feedback']) && trim($_POST['feedback'])!="" && strlen($_POST['feedback'])<301) {
             $arr=$_POST;
             $arr['ua']=$_SERVER['HTTP_USER_AGENT'];
             $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
@@ -299,13 +306,12 @@ if (false) {
         else  {
             echo '<form id="feedbackform" method="post" action="#feedbackform" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot/won\'t update because... ';
             if (isset($_POST) && isset($_POST['feedback'])) {
-                if  (trim($_POST['feedback'])!="")
-                    echo'<input name="feedback" value="'.$_POST['feedback'].'"/>';
-                else
-                    echo'<input name="feedback" value=""/> <span style="color:#ff0000">Please enter a reason</span>';
+                echo'<input name="feedback" value="" maxlength="300"/>';
+                if  (trim($_POST['feedback'])=="")
+                    echo'<span style="color:#ff0000">Please enter a reason</span>';
             }
             else {
-                echo'<input name="feedback" value=""/>';
+                echo'<input name="feedback" value="" maxlength="300"/>';
             }
             echo'<input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
         }
