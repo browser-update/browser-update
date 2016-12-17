@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:53-0500\n"
+"PO-Revision-Date: 2016-12-16 13:29-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa_IR\n"
@@ -59,26 +59,26 @@ msgstr "بررسی کنید مرورگر شما به روز باشد ..."
 
 #: update-browser.php:180 update-browser.php:206
 msgid "Your browser is out-of-date."
-msgstr ""
+msgstr "مرورگر شما قدیمی است."
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
-msgstr ""
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
+msgstr "علاوه بر این، (%s) سیستم عامل شما، آنقدر قدیمی و ناامن است که دیگر هیچ مرورگر به روزی برای آن در دسترس نیست."
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302
 #, php-format
 msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
-msgstr ""
+msgstr "لطفا برای دریافت آخرین نسخه مرورگر خود، سعی کنید آن را <a href=\"%s\">update %s</a> کنید."
 
 #: update-browser.php:190
 #, php-format
 msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
-msgstr ""
+msgstr "مرورگر شما، %s، قدیمی است و دیگر برای %s، به روز رسانی نمی شود."
 
 #: update-browser.php:195 update-browser.php:208
 msgid "Please download one of these up-to-date, free and excellent browsers:"
-msgstr ""
+msgstr "لطفا یکی از این مرورگرهای به روز، رایگان و عالی را دانلود کنید:"
 
 #: update-browser.php:201
 msgid "Your browser is up-to-date."
@@ -87,12 +87,12 @@ msgstr "مرورگر شما به روز است."
 #: update-browser.php:283 update-browser.php:298
 #, php-format
 msgid "On %s the built-in browser can only be updated together with the operating system."
-msgstr ""
+msgstr "در %s، مرورگر داخلی تنها می تواند همراه با سیستم عامل به روز رسانی شود."
 
 #: update-browser.php:300
 #, php-format
 msgid "Unfortunately, %s has stopped supporting your device with updates."
-msgstr ""
+msgstr "متاسفانه، %s، پشتیبانی از دستگاه شما و ارائه به روز رسانی برای آن را متوقف کرده است."
 
 #: update-browser.php:319
 #, php-format
@@ -105,7 +105,7 @@ msgstr "تبلیغات"
 
 #: update-browser.php:329
 msgid "Sponsored"
-msgstr ""
+msgstr "حمایت شده"
 
 #: update-browser.php:330
 #, php-format
@@ -174,5 +174,5 @@ msgstr "این وب سایت از فایل‌های کوکی استفاده می
 
 #: update-browser.php:416
 msgid "Close"
-msgstr ""
+msgstr "بستن"
 

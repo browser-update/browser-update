@@ -65,8 +65,8 @@ msgstr ""
 #: update-browser.php:182
 #, php-format
 msgid ""
-"On top your operating system (%s) is so old and unsecure that there is no up-"
-"to date browser available anymore."
+"On top of that your operating system (%s) is so old and unsecure that there is no up-"
+"to-date browser available anymore."
 msgstr ""
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302

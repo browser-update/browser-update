@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:53-0500\n"
+"PO-Revision-Date: 2016-12-16 13:29-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Slovenian\n"
 "Language: sl_SI\n"
@@ -26,24 +26,24 @@ msgstr "Iniciativa med spletnimi oblikovalci, da obvestijo uporabnike o posodobi
 
 #: header.php:40 update-browser.php:362
 msgid "About the Project"
-msgstr ""
+msgstr "O projektu"
 
 #: header.php:44
 msgid "Statistics"
-msgstr ""
+msgstr "Statistike"
 
 #: header.php:45
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: header.php:104
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "Prenesi zadnjo različico %s spletnega brskalnika %s spletne strani!"
 
 #: update-browser.php:154
 msgid "Most recent version not available for your system."
@@ -55,66 +55,66 @@ msgstr "Prosimo, da izberete drug brskalnik."
 
 #: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "Preverjamo, ali imate zadnjo različico brskalnika ..."
 
 #: update-browser.php:180 update-browser.php:206
 msgid "Your browser is out-of-date."
-msgstr ""
+msgstr "Vaš brskalnik je zastarel."
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
-msgstr ""
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
+msgstr "Poleg tega je vaš operacijski sistem (%s) tako star in nezaščiten, da zanj ni več na voljo posodobljene verzije brskalnika."
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302
 #, php-format
 msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
-msgstr ""
+msgstr "Prosimo poskusite <a href=\"%s\"> posodobiti %s </a>, da bi dobili najnovejšo različico brskalnika."
 
 #: update-browser.php:190
 #, php-format
 msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
-msgstr ""
+msgstr "Vaš brskalnik %s je zastarel in se več ne posodablja za %s."
 
 #: update-browser.php:195 update-browser.php:208
 msgid "Please download one of these up-to-date, free and excellent browsers:"
-msgstr ""
+msgstr "Prosimo, da prenesete enega od teh posodobljenih, brezplačnih in odličnih brskalnikov:"
 
 #: update-browser.php:201
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "Imate zadnjo različico brskalnika."
 
 #: update-browser.php:283 update-browser.php:298
 #, php-format
 msgid "On %s the built-in browser can only be updated together with the operating system."
-msgstr ""
+msgstr "Na %s, je mogoče vgrajeni brskalnik posodobiti le skupaj z operacijskim sistemom."
 
 #: update-browser.php:300
 #, php-format
 msgid "Unfortunately, %s has stopped supporting your device with updates."
-msgstr ""
+msgstr "Na žalost je %s nehal podpirati vašo napravo s posodobitvami."
 
 #: update-browser.php:319
 #, php-format
 msgid "For more <a href=\"%s\">security</a>,    <a href=\"%s\">speed</a>,    <a href=\"%s\">comfort</a> and    <a href=\"%s\">fun</a>."
-msgstr ""
+msgstr "Za več <a href=\"%s\"> varnosti </a>, <a href=\"%s\"> hitrosti </a>, <a href=\"%s\"> udobja </a> in <a href = \"%s \"> zabave </a>."
 
 #: update-browser.php:328
 msgid "Advertisement"
-msgstr ""
+msgstr "Oglas"
 
 #: update-browser.php:329
 msgid "Sponsored"
-msgstr ""
+msgstr "Sponzoriran"
 
 #: update-browser.php:330
 #, php-format
 msgid "This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
-msgstr ""
+msgstr "Ta spletna stran vas želi opomniti: Vaš brskalnik (%s) je <b> zastarel </b>. <a%s> Posodobite brskalnik </a> za več varnosti, udobja in najboljšo izkušnjo na tem spletnem mestu."
 
 #: update-browser.php:336
 msgid "Why do I need an up-to-date browser?"
-msgstr ""
+msgstr "Zakaj moram posodobiti brskalnik?"
 
 #: update-browser.php:340
 msgid "Security"
@@ -170,9 +170,9 @@ msgstr "Če vaš računalnik nadzira administrator in sami ne morete posodobiti 
 
 #: update-browser.php:416
 msgid "This website uses cookies"
-msgstr ""
+msgstr "Ta spletna stran uporablja piškotke"
 
 #: update-browser.php:416
 msgid "Close"
-msgstr ""
+msgstr "Zapri"
 

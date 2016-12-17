@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:52-0500\n"
+"PO-Revision-Date: 2016-12-16 13:29-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Albanian\n"
 "Language: sq_AL\n"
@@ -34,7 +34,7 @@ msgstr "Statistika"
 
 #: header.php:45
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: header.php:104
 msgid "Contact"
@@ -43,7 +43,7 @@ msgstr "Kontakt"
 #: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "Shkarko web browserin e përditësuar %s nga faqja e internetit %s!"
 
 #: update-browser.php:154
 msgid "Most recent version not available for your system."
@@ -55,7 +55,7 @@ msgstr "Ju lutem zgjidhni një shfletues tjeter."
 
 #: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "Kontrollo nëse browseri juaj është i përditësuar ..."
 
 #: update-browser.php:180 update-browser.php:206
 msgid "Your browser is out-of-date."
@@ -63,18 +63,18 @@ msgstr "Shfletuesi juaj është i vjetër."
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
-msgstr ""
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
+msgstr "Përveç faktit që sistemi juaj operativ (%s) është aq i vjetër dhe pasigurtë, nuk ka më browser të përditësuar në dispozicion."
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302
 #, php-format
 msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
-msgstr ""
+msgstr "Ju lutemi provoni të <a href=\"%s\"> përditësoni %s </a> për të marrë versionin e fundit të browserit tuaj."
 
 #: update-browser.php:190
 #, php-format
 msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
-msgstr ""
+msgstr "Browseri juaj, %s, është i papërditësuar dhe nuk përditësohet më për %s."
 
 #: update-browser.php:195 update-browser.php:208
 msgid "Please download one of these up-to-date, free and excellent browsers:"
@@ -82,17 +82,17 @@ msgstr "Ju lutem shkarkoni një nga këtashfletues të kohës:"
 
 #: update-browser.php:201
 msgid "Your browser is up-to-date."
-msgstr ""
+msgstr "Browseri juaj është i përditësuar."
 
 #: update-browser.php:283 update-browser.php:298
 #, php-format
 msgid "On %s the built-in browser can only be updated together with the operating system."
-msgstr ""
+msgstr "Në %s browseri i brendshëm mund të përditësohet vetëm së bashku me sistemin operativ."
 
 #: update-browser.php:300
 #, php-format
 msgid "Unfortunately, %s has stopped supporting your device with updates."
-msgstr ""
+msgstr "Për fat të keq, %s nuk suporton më pajisjen tuaj me përditësimet më të reja."
 
 #: update-browser.php:319
 #, php-format
@@ -101,11 +101,11 @@ msgstr "Për më shumë <a href=\"%s\">siguri</a>,    <a href=\"%s\">shpejtësi<
 
 #: update-browser.php:328
 msgid "Advertisement"
-msgstr ""
+msgstr "Reklama"
 
 #: update-browser.php:329
 msgid "Sponsored"
-msgstr ""
+msgstr "Sponsorizuar"
 
 #: update-browser.php:330
 #, php-format
@@ -170,9 +170,9 @@ msgstr "Nëse ju po përdorni një kompjuter, i cili mirëmbahet nga një admini
 
 #: update-browser.php:416
 msgid "This website uses cookies"
-msgstr ""
+msgstr "Kjo faqe e interneti përdor cookies"
 
 #: update-browser.php:416
 msgid "Close"
-msgstr ""
+msgstr "Mbyll"
 

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:53-0500\n"
+"PO-Revision-Date: 2016-12-16 13:29-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -59,26 +59,26 @@ msgstr "जांच की जा रही है यह देकने क�
 
 #: update-browser.php:180 update-browser.php:206
 msgid "Your browser is out-of-date."
-msgstr ""
+msgstr "आपका ब्राउज़र अप्रचलित हो चुका है."
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
-msgstr ""
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
+msgstr "इसके साथ ही आपका ऑपरेटिंग सिस्टम (%s) इतना पुराना और असुरक्षित हो गया है कि अब कोई नवीनतम ब्राउज़र उसके लिए उपलब्ध नहीं है."
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302
 #, php-format
 msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
-msgstr ""
+msgstr "कृपया अपने ब्राउज़र आधुनिकतम संस्करण पाने के लिए <a href=\"%s\">update %s</a> आजमायें."
 
 #: update-browser.php:190
 #, php-format
 msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
-msgstr ""
+msgstr "आपका ब्राउज़र, %s, पुराना है और यह %s के लिए अब और अपडेटेड नहीं नहीं क्या जा सकता."
 
 #: update-browser.php:195 update-browser.php:208
 msgid "Please download one of these up-to-date, free and excellent browsers:"
-msgstr ""
+msgstr "कृपया इनमें से कोई एक, मुफ्त और उत्कृष्ट, आधुनिकतम ब्राउज़र डाउनलोड करें."
 
 #: update-browser.php:201
 msgid "Your browser is up-to-date."
@@ -87,12 +87,12 @@ msgstr "आपका ब्राउज़र को अप-टू-डेट ह
 #: update-browser.php:283 update-browser.php:298
 #, php-format
 msgid "On %s the built-in browser can only be updated together with the operating system."
-msgstr ""
+msgstr "%s पर पूर्वनिर्मित ब्राउज़र केवल एक साथ अपडेटेड किया जा सकता है ऑपरेटिंग सिस्टम के साथ."
 
 #: update-browser.php:300
 #, php-format
 msgid "Unfortunately, %s has stopped supporting your device with updates."
-msgstr ""
+msgstr "दुर्भाग्य से, %s ने आपके डिवाइस (उपकरण) को अपडेट्स में समर्थन देना बंद कर दिया है."
 
 #: update-browser.php:319
 #, php-format
@@ -105,7 +105,7 @@ msgstr "विज्ञापन"
 
 #: update-browser.php:329
 msgid "Sponsored"
-msgstr ""
+msgstr "प्रायोजित"
 
 #: update-browser.php:330
 #, php-format
@@ -174,5 +174,5 @@ msgstr "यह वेबसाइट कुकीज़ का उपयोग �
 
 #: update-browser.php:416
 msgid "Close"
-msgstr ""
+msgstr "समाप्त"
 

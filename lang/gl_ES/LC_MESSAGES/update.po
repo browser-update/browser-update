@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:53-0500\n"
+"PO-Revision-Date: 2016-12-15 09:14-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Galician\n"
 "Language: gl_ES\n"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
 msgstr ""
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302

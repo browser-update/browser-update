@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: browser-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 18:09+0100\n"
-"PO-Revision-Date: 2016-12-05 10:52-0500\n"
+"PO-Revision-Date: 2016-12-16 13:29-0500\n"
 "Last-Translator: josselex <huemmer.th@gmail.com>\n"
 "Language-Team: Catalan\n"
 "Language: ca_ES\n"
@@ -43,7 +43,7 @@ msgstr "Contacte"
 #: update-browser.php:145
 #, php-format
 msgid "Download updated %s web browser from %s website!"
-msgstr ""
+msgstr "Descarregui el navegador web %s actualitzat des del lloc web de %s!"
 
 #: update-browser.php:154
 msgid "Most recent version not available for your system."
@@ -55,26 +55,26 @@ msgstr "Si us plau, tria un altre navegador"
 
 #: update-browser.php:172
 msgid "Checking if your browser is up-to-date ..."
-msgstr ""
+msgstr "Comprovant si el seu navegador està actualitzat..."
 
 #: update-browser.php:180 update-browser.php:206
 msgid "Your browser is out-of-date."
-msgstr ""
+msgstr "El seu navegador està obsolet."
 
 #: update-browser.php:182
 #, php-format
-msgid "On top your operating system (%s) is so old and unsecure that there is no up-to date browser available anymore."
-msgstr ""
+msgid "On top of that your operating system (%s) is so old and unsecure that there is no up-to-date browser available anymore."
+msgstr "A més a més, el seu sistema operatiu (%s) és tan vell i insegur que ja no hi ha disponible cap navegador actualitzat."
 
 #: update-browser.php:184 update-browser.php:284 update-browser.php:302
 #, php-format
 msgid "Please try to <a href=\"%s\">update %s</a> to get the latest version of your browser."
-msgstr ""
+msgstr "Si us plau, intenti <a href=\"%s\">actualitzar %s</a> per aconseguir la versió més recent del seu navegador."
 
 #: update-browser.php:190
 #, php-format
 msgid "Your browser, %s, is out-of-date and it is not updated anymore for %s."
-msgstr ""
+msgstr "El seu navegador, %s, està obsolet i no ja hi ha actualitzacions disponibles per %s."
 
 #: update-browser.php:195 update-browser.php:208
 msgid "Please download one of these up-to-date, free and excellent browsers:"
@@ -87,12 +87,12 @@ msgstr "El vostre navegador no està actualitzat."
 #: update-browser.php:283 update-browser.php:298
 #, php-format
 msgid "On %s the built-in browser can only be updated together with the operating system."
-msgstr ""
+msgstr "En %s el navegador incorporat només pot ser actualitzat juntament amb el sistema operatiu."
 
 #: update-browser.php:300
 #, php-format
 msgid "Unfortunately, %s has stopped supporting your device with updates."
-msgstr ""
+msgstr "Malauradament, %s ha deixat de donar suport al seu dispositiu amb actualitzacions."
 
 #: update-browser.php:319
 #, php-format
@@ -101,11 +101,11 @@ msgstr "Per a més <a href=\"%s\">seguretat</a>, <a href=\"%s\">velocitat</a>, <
 
 #: update-browser.php:328
 msgid "Advertisement"
-msgstr ""
+msgstr "Publicitat"
 
 #: update-browser.php:329
 msgid "Sponsored"
-msgstr ""
+msgstr "Patrocinat"
 
 #: update-browser.php:330
 #, php-format
@@ -170,9 +170,9 @@ msgstr "Si ets en un ordinador mantingut per un administrador i no pots instal·
 
 #: update-browser.php:416
 msgid "This website uses cookies"
-msgstr ""
+msgstr "Aquest lloc web utilitza cookies"
 
 #: update-browser.php:416
 msgid "Close"
-msgstr ""
+msgstr "Tancar"
 
