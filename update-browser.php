@@ -26,7 +26,11 @@ function has($t) {
 	return !(strpos($ua_,$t)===false);
 }
 
-$brown=get_browserx($ua_);
+$bx_=get_browserx($ua_);
+$browid=$bx_[0];
+$brown=$bx_[1];
+$browver=$bx_[2];
+
 function is($name) {
     global $brown;
     if ($brown==$name)
@@ -120,9 +124,10 @@ function m_outofdate() {
 <?php
 if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
     m_uptodate();
+    $choiceversion="uptod";
 } else {
 ?>
-<table class="logos">
+<table class="logos" id="browserlist">
     <tr>
         <?php
         if ($sys=="Windows") {
@@ -136,35 +141,73 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
                 if (is("Chrome")|| is("Internet Explorer")||is("Opera"))
                     m_discontinued();
                 else
-                    m_outofdate();
-                //brow("Cliqz Browser","https://cliqz.com/","Cliqz","cl");
-                brow("Firefox",$u_ff,"Mozilla Foundation","f");                
-                if (is("Chrome"))
-                    brow("Chrome",$u_ch,"Google","c",True);
-                if (is("Internet Explorer"))
-                    brow("Edge",$u_ie,"Microsoft","i",True);
-                if (is("Opera"))                
-                    brow("Opera",$u_op,"Opera Software","o",True);
+                    m_outofdate();                
+                if ($ll=="de" && !is("Opera")) {
+                    $choiceversion="docl";
+                    include('cltest.php');
+
+                    brow("Firefox",$u_ff,"Mozilla Foundation","f",False,"",$addf);
+                    brow("Cliqz Browser",$u_cl,"Cliqz","cl",False,"",$addcl); 
+                    if (is("Chrome"))
+                        brow("Chrome",$u_ch,"Google","c",True);
+                    if (is("Internet Explorer"))
+                        brow("Edge",$u_ie,"Microsoft","i",True);
+                    if (is("Opera"))                
+                        brow("Opera",$u_op,"Opera Software","o",True);   
+                    
+                }
+                else {                    
+                    brow("Firefox",$u_ff,"Mozilla Foundation","f");
+                    if (is("Chrome"))
+                        brow("Chrome",$u_ch,"Google","c",True);
+                    if (is("Internet Explorer"))
+                        brow("Edge",$u_ie,"Microsoft","i",True);
+                    if (is("Opera"))                
+                        brow("Opera",$u_op,"Opera Software","o",True);
+                }
             }
             else {# 7 and above
                 if (is("Internet Explorer") && $ver<10)
                     m_discontinued();
                 else
                     m_outofdate();
-                brow("Firefox",$u_ff,"Mozilla Foundation","f");
-                brow("Opera",$u_op,"Opera Software","o");
-                brow("Chrome",$u_ch,"Google","c");
-                if (is("Internet Explorer"))
-                    brow("Edge",$u_ie,"Microsoft","i",$ver<10);                
+                
+                if ($ll=="de" && !is("Opera")) {
+                    $choiceversion="docl";
+                    include('cltest.php');
+                    
+                    brow("Firefox",$u_ff,"Mozilla Foundation","f",False,"",$addf);
+                    brow("Cliqz Browser",$u_cl,"Cliqz","cl",False,"",$addcl);
+                    brow("Chrome",$u_ch,"Google","c",False,"",$addch);
+                    if (is("Internet Explorer"))
+                        brow("Edge",$u_ie,"Microsoft","i",$ver<10);                     
+                }
+                else {
+                    brow("Firefox",$u_ff,"Mozilla Foundation","f");
+                    brow("Opera",$u_op,"Opera Software","o");                
+                    brow("Chrome",$u_ch,"Google","c");
+                    if (is("Internet Explorer"))
+                        brow("Edge",$u_ie,"Microsoft","i",$ver<10);  
+                }
             }
         }
         if ($sys=="MacOS") {
-            m_outofdate();
-            $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($full_locale_minus));           
+            if ($ver<9) {
+                if ($ll=="en")
+                    $u_mac="http://www.apple.com/macos/how-to-upgrade/";
+                else
+                    $u_mac=sprintf("http://www.apple.com/%s/macos/how-to-upgrade/",$county);
+                $choiceversion="osup";
+                m_ancient_os("Mac OS", $u_mac);               
+            }
+            else {
+                m_outofdate();
+            }
+            $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($full_locale_minus));                       
             brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
             brow("Opera",$u_op,"Opera Software","o",$ver<9);
             brow("Chrome",$u_ch,"Google","c",$ver<9);            
-            brow("Safari",$u_sa,"Apple","s",$ver<10);
+            brow("Safari",$u_sa,"Apple","s",$ver<10);             
         }
         if ($sys=="Android") {
             $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
@@ -222,6 +265,10 @@ if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
         ?>
     </tr>
 </table>
+
+<h2 class="whatnow">
+    <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'#security','#speed','#comfort','#fun');?>
+</h2>    
 <?php
 
 /*
@@ -233,9 +280,6 @@ display_browser("Vivaldi", "https://vivaldi.com/")
 }
 
 ?>
-<h2 class="whatnow">
-    <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'#security','#speed','#comfort','#fun');?>
-</h2>
 </div>
 
 <?php
@@ -289,37 +333,18 @@ if (false) {
     <?php
     if ($ll=="en") {
         ?>
-            <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>
-        <?php        
-        if (isset($_POST) && isset($_POST['feedback']) && trim($_POST['feedback'])!="" && strlen($_POST['feedback'])<301) {
-            $arr=$_POST;
-            $arr['ua']=$_SERVER['HTTP_USER_AGENT'];
-            $arr['lang']=$_SERVER['HTTP_ACCEPT_LANGUAGE'];
-            $arr['ref']=$_SERVER['HTTP_REFERER'];
-            $arr['date']=date('c');
-            $fi = fopen("adm/raw/feedback.txt", "a") or die("Unable to send feedback!");
-            $text=json_encode($arr,$options=JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
-            fwrite($fi, ",\n".$text);
-            fclose($fi);
-            echo '<li>Thank you for your Feedback.</li>';
-        }
-        else  {
-            echo '<form id="feedbackform" method="post" action="#feedbackform" onsubmit="document.getElementById(\'triedfield\').value=window.tried.join(\',\');f=$bu_getBrowser();document.getElementById(\'detectedfield\').value=f.n+f.v;"><li>Give us Feedback: I cannot/won\'t update because... ';
-            if (isset($_POST) && isset($_POST['feedback'])) {
-                echo'<input name="feedback" value="" maxlength="300"/>';
-                if  (trim($_POST['feedback'])=="")
-                    echo'<span style="color:#ff0000">Please enter a reason</span>';
-            }
-            else {
-                echo'<input name="feedback" value="" maxlength="300"/>';
-            }
-            echo'<input type="hidden" name="tried" id="triedfield" value=""> <input type="hidden" name="detected" id="detectedfield" value=""><input type="hidden" name="site" value="'.$_SERVER['HTTP_REFERER'].'">&nbsp;<input type="submit" value="Send Feedback"/></li></form>';
-        }
+        <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>        
+        <?php
+        include("update.feedback.php");
     }
     ?>
     </ul>
     
-
+    <?php
+    if ($ll=="en") {
+        include("update.moreinfo.php");
+    }
+    ?>
 </div>
 <script>
 var $buoop = {nomessage:true};    
