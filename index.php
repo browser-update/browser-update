@@ -209,7 +209,7 @@ function printolder($months,$version) {
     <a href="http://modxcms.com/extras/package/737">MODx</a>, 
     <a href="https://drupal.org/project/bu">Drupal</a>, 
     <a href="http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate">Habari</a>,
-    <a href="http://www.rapidcommerce.eu/blog/2012/10/magento-browser-update-notice/">Magento</a>,
+    <a href="http://www.rapidcommerce.eu/en/blog/2012/10/magento-browser-update-notice/">Magento</a>,
     <a href="https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/">WCF2</a>,
     <a href="http://dev.cmsmadesimple.org/projects/browserupdate">CMS made simple</a>,
     <a href="http://xenforo.com/community/resources/customisable-browser-update-org-widget.764/">XenForo</a>,
