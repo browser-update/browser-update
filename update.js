@@ -59,7 +59,7 @@ function $bu_getBrowser(ua_str) {
         donotnotify="oldOS";
 
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==38 || Math.round(v)==45))
+    if (n=="f" && (Math.round(v)==38 || Math.round(v)==45 || Math.round(v)==52))
         donotnotify="ESR";
 
     if (n=="so") {
