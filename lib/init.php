@@ -153,24 +153,24 @@ function get_browserx($ua) {
         'a'=>"Android Browser",
         'y'=>"Yandex Browser",
         'v'=>"Vivaldi",
-        'x'=>"Other"];
-    $name="";
+        'x'=>"other"];
+    $id="x";
     foreach($pats as $el) {
         $na=$el[1];
         $pa=str_replace("VV","?(\d+[.]?\d*)",$el[0]);
         if(preg_match("#".$pa."#i", $ua, $regs)) {
             $ver=$regs[1];
-            $name=$na;
+            $id=$na;
             break;
         }        
     }
-    if ($name=="")
-        return "other";
-    if ($name=="io")
-        $name="i";
-    if ($name=="so")
-        $name="s";
-    return $names[$name];
+    if ($id=="x")
+        $ver=0;
+    if ($id=="io")
+        $id="i";
+    if ($id=="so")
+        $id="s";
+    return [$id,$names[$id],$ver];
 }
 
 function get_full_locale() {
