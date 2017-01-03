@@ -45,20 +45,7 @@ RewriteRule ^/?([a-z]{2}(-[a-z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
 AddCharset utf-8 .js
 
-#4 days cache for the files
-
-<FilesMatch "update.js">
-  Header set Cache-Control "public, max-age=172800"
-  ExpiresDefault "access plus 2 days"
-  SetOutputFilter DEFLATE
-
-  #BEGIN Disable ETag
-  Header unset ETag
-  FileETag None
-  #END Disable ETag
-</FilesMatch>
-
-<FilesMatch "update.min.js">
+<FilesMatch "update.?.js">
   Header set Cache-Control "public, max-age=172800"
   ExpiresDefault "access plus 2 days"
   SetOutputFilter DEFLATE
@@ -70,7 +57,7 @@ AddCharset utf-8 .js
 </FilesMatch>
 
 #no cache
-<FilesMatch "updatex.js">
+<FilesMatch "update.showx.js">
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
