@@ -166,7 +166,7 @@ else if ($what=="noti"){
         $jsv,
         mysql_real_escape_string($tv),
         "",//mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),        
-        mysql_real_escape_string("frac=".filter_input(INPUT_GET, 'frac'))
+        mysql_real_escape_string(urldecode(filter_input(INPUT_GET, 'extra')))
     );    
 }
 else {//updates
