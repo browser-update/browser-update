@@ -53,7 +53,7 @@ function brow($name, $url, $vendor, $char, $na=False,$add="",$add2="") {
     global $choiceversion,$ll;
     echo '<td class="b b'.$char.'">';
     if (!$na) {
-        echo '<a class="l" href="'.$url.'" target="_blank" title="'.sprintf(T_("Download updated %s web browser from %s website!"),$name,$vendor).'" onmousedown="countBrowser(\''.$char.'\')">';
+        echo '<a class="l" href="'.$url.'" target="_blank" rel="noopener" title="'.sprintf(T_("Download updated %s web browser from %s website!"),$name,$vendor).'" onmousedown="countBrowser(\''.$char.'\')">';
     }
     else {
         echo' <a class="l notavailable">';
@@ -118,6 +118,14 @@ function m_outofdate() {
     echo '<br/>';
     echo T_('Please download one of these up-to-date, free and excellent browsers:'); 
     echo '</b></h2>';
+}
+
+function start_browserlist() {
+    echo '<table class="logos" id="browserlist">    <tr>';
+}
+
+function end_browserlist() {
+    echo '</tr></table>';
 }
 ?>
 <div class="noti">
