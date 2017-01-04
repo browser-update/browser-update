@@ -26,14 +26,6 @@ if (Math.random()*frac<1 && !this.op.betatest) {//TODO: !this.op.test &&
     i.src=burl+"count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(pageurl) + "&jsv="+jsv+"&tv="+tv+"&extra="+extra;
 }
 
-function setCookie(hours) {
-    var d = new Date(new Date().getTime()+3600000*hours);
-    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
-}
-if (this.op.reminder>0) {
-    setCookie(this.op.reminder);
-}
-
 function busprintf() {
     var args=arguments;
     var data = args[ 0 ];
@@ -45,8 +37,8 @@ function busprintf() {
 
 
 var t={};
-t.en='<b>Your web browser ({brow}) is out of date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>';
-t.de = '<b>Ihr Browser ({brow}) ist veraltet</b>. Aktualisieren sie ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite. <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
+t.en='<b>Your web browser ({brow_name}) is out of date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>';
+t.de = '<b>Ihr Browser ({brow_name}) ist veraltet</b>. Aktualisieren sie ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite. <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
 t.it = 'Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le pagine di questo e altri siti. <a%s>Aggiorna il tuo browser</a>!';
 t.pl = 'Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>.';
 t.es = 'Su navegador (%s) <b>no está actualizado</b>. Tiene <b>fallos de seguridad</b> conocidos y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Averigüe cómo actualizar su navegador.</a>';
@@ -103,7 +95,7 @@ div.className="buorg";// + " var" +tv;
 
 var style = '<style>.buorg {background: #FDF2AB no-repeat 14px center url('+burl+'img/small/'+bb.n+'.png);}</style>';
 
-if (tv.indexOf("{brow}")===-1) {//old style, legacy
+if (t.indexOf("{brow_name}")===-1) {//old style, legacy
     this.op.text=busprintf(t,bb.t,' id="buorgul" href="'+this.op.url+'"'+tar);
 
     style += "<style>.buorg {position:absolute;position:fixed;z-index:111111;    width:100%; top:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;    font: 13px Arial,sans-serif;color:#000;}\
@@ -111,13 +103,16 @@ if (tv.indexOf("{brow}")===-1) {//old style, legacy
     .buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}\
     #buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
     #buorga{display:block;}\
-    #buorgcc{display:block;position:absolute; top:-99999px;}\
     @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";    
-    div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorgig"><span id="buorgcc">Close</span><span aria-hiden="true">&times;</span></a></div></div>'+style;    
+    div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorgig">&times;</a></div></div>'+style;    
 }
 else {
-    style += "";
-    t=t.replace("{brow}",bb.t).replace("{up_but}",' id="buorgul" href="'+this.op.url+'"'+tar).replace("{ignore_but}",' id="buorgig"');
+    style += "<style>.buorg {position:absolute;position:fixed;z-index:111111;    width:100%; top:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
+    .buorg div { padding: 12px 36px 12px 40px;  line-height: 1.5em; }\
+    .buorg div a,.buorg div a:visited{   text-indent: 0; color: #fff;    text-decoration: none;    box-shadow: 0 0 2px rgba(0,0,0,0.4);    padding: 2px 10px;    border-radius: 4px;    font-weight: normal;    background: #5ab400;    white-space: nowrap;    margin: 5px 2px; display: inline-block;}\
+    #buorgig{ background-color: #edbc68;}\
+    @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; text-indent: 22px;line-height: initial;}.buorg {background-position: 9px 8px;}}</style>";  
+    t=t.replace("{brow_name}",bb.t).replace("{up_but}",' id="buorgul" href="'+this.op.url+'"'+tar).replace("{ignore_but}",' id="buorgig" href=""');
 
     div.innerHTML= '<div>'+t+'</div>'+style;
 }
@@ -139,7 +134,9 @@ document.getElementById("buorgul").onclick = function(e) {
     e = e || window.event;
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
-    me.op.onclick(me.op);
+    me.op.div.style.display = "none";
+    hm.style.marginTop = me.op.bodymt;    
+    me.op.onclick(me.op);    
     return true;
 };
 }
@@ -157,7 +154,7 @@ hm.style.marginTop = (div.clientHeight)+"px";
                 hm.style.marginTop = me.op.bodymt;
                 me.op.onclose(me.op);
                 setCookie(me.op.reminderClosed);
-                return true;
+                return false;
             };
 })(me);
 
