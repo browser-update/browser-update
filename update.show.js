@@ -1,25 +1,18 @@
 var $buo_show = function() {
 var op=this.op=window._buorgres;    
-var jsv=23;
-var tv=jsv;//"base";//TODO
-if(Math.random()*100<40)
-    var tv="but2";
-else if(Math.random()*100<40)
-    var tv="but2 vaweb";
-else
-    var tv="base";
-var ll=this.op.l.substr(0,2);
+var jsv=24;
+var tv=jsv;//"base";
+var ll=op.ll;
 var pageurl = op.pageurl || location.hostname || "x";
-var langset=false;//TODO
 var bb=$bu_getBrowser();
 var burl=(/file:/.test(location.href)) ? "":"//browser-update.org/";
-if (langset)
+if (op.l)
     this.op.url= burl+ll+"/update-browser.html#"+tv+":"+pageurl;
 else
     this.op.url= burl+"update-browser.html#"+tv+":"+pageurl;
 
-var frac=100;
-if (Math.random()*frac<1 && !this.op.betatest) {//TODO: !this.op.test && 
+var frac=1000;
+if (Math.random()*frac<1 && !this.op.test && !this.op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
@@ -39,11 +32,11 @@ function busprintf() {
 var t={};
 t.en='<b>Your web browser ({brow_name}) is out of date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>';
 t.de = '<b>Ihr Browser ({brow_name}) ist veraltet</b>. Aktualisieren sie ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite. <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
-t.it = 'Il tuo browser (%s) <b>non è aggiornato</b>. Ha delle <b>falle di sicurezza</b> e potrebbe <b>non visualizzare correttamente</b> le pagine di questo e altri siti. <a%s>Aggiorna il tuo browser</a>!';
+t.it = '<b>Il tuo browser ({brow_name}) non è aggiornato</b>. Ha delle falle di sicurezza e potrebbe non visualizzare correttamente le pagine di questo e altri siti. <a{up_but}>Actualice su navegador</a> <a{ignore_but}>Chiudi</a>';
 t.pl = 'Przeglądarka (%s), której używasz, jest przestarzała. Posiada ona udokumentowane <b>luki bezpieczeństwa, inne wady</b> oraz <b>ograniczoną funkcjonalność</b>. Tracisz możliwość skorzystania z pełni możliwości oferowanych przez niektóre strony internetowe. <a%s>Dowiedz się jak zaktualizować swoją przeglądarkę</a>.';
-t.es = 'Su navegador (%s) <b>no está actualizado</b>. Tiene <b>fallos de seguridad</b> conocidos y podría <b>no mostrar todas las características</b> de este y otros sitios web. <a%s>Averigüe cómo actualizar su navegador.</a>';
+t.es = '<b>Su navegador ({brow_name}) no está actualizado</b>. Tiene fallos de seguridad conocidos y podría no mostrar todas las características de este y otros sitios web. <a{up_but}>Averigüe cómo actualizar su navegador.</a> <a{ignore_but}>Cerrar</a>';
 t.nl = 'Uw browser (%s) is <b>oud</b>. Het heeft bekende <b>veiligheidsissues</b> en kan <b>niet alle mogelijkheden</b> weergeven van deze of andere websites. <a%s>Lees meer over hoe uw browser te upgraden</a>';
-t.pt = 'Seu navegador (%s) está <b>desatualizado</b>. Ele possui <b>falhas de segurança</b> e pode <b>apresentar problemas</b> para exibir este e outros websites. <a%s>Veja como atualizar o seu navegador</a>';
+t.pt = '<b>Seu navegador ({brow_name}) está desatualizado</b>. Ele possui falhas de segurança e pode apresentar problemas para exibir este e outros websites. <a{up_but}>Veja como atualizar o seu navegador</a> <a{ignore_but}>Fechar</a>';
 t.sl = 'Vaš brskalnik (%s) je <b>zastarel</b>. Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
 t.ru = 'Ваш браузер (%s) <b>устарел</b>. Он имеет <b>уязвимости в безопасности</b> и может <b>не показывать все возможности</b> на этом и других сайтах. <a%s>Узнайте, как обновить Ваш браузер</a>';
 t.id = 'Browser Anda (%s) sudah <b>kedaluarsa</b>. Browser yang Anda pakai memiliki <b>kelemahan keamanan</b> dan mungkin <b>tidak dapat menampilkan semua fitur</b> dari situs Web ini dan lainnya. <a%s> Pelajari cara memperbarui browser Anda</a>';
@@ -51,7 +44,7 @@ t.uk = 'Ваш браузер (%s) <b>застарів</b>. Він <b>уразл
 t.ko = '지금 사용하고 계신 브라우저(%s)는 <b>오래되었습니다.</b> 알려진 <b>보안 취약점</b>이 존재하며, 새로운 웹 사이트가 <b>깨져 보일 수도</b> 있습니다. <a%s>브라우저를 어떻게 업데이트하나요?</a>';
 t.rm = 'Tes navigatur (%s) è <b>antiquà</b>. El cuntegna <b>problems da segirezza</b> enconuschents e mussa eventualmain <b>betg tut las funcziuns</b> da questa ed autras websites. <a%s>Emprenda sco actualisar tes navigatur</a>.';
 t.jp = 'お使いのブラウザ「%s」は、<b>時代遅れ</b>のバージョンです。既知の<b>脆弱性</b>が存在するばかりか、<b>機能不足</b>によって、サイトが正常に表示できない可能性があります。 <a%s>ブラウザを更新する方法を確認する</a>';
-t.fr = 'Votre navigateur (%s) est <b>périmé</b>. Il contient des <b>failles de sécurité</b> et pourrait <b>ne pas afficher certaines fonctionnalités</b> des sites internet récents. <a%s>Découvrez comment mettre votre navigateur à jour</a>';
+t.fr = '<b>Votre navigateur ({brow_name}) est périmé</b>. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a{up_but}>Mettre le navigateur à jour</a> <a{ignore_but}>Fermer</a>';
 t.da = 'Din browser (%s) er <b>for&aelig;ldet</b>. Den har kendte <b>sikkerhedshuller</b> og kan m&aring;ske <b>ikke vise alle funktioner</b> p&aring; dette og andre websteder. <a%s>Se hvordan du opdaterer din browser</a>';
 t.sq = 'Shfletuesi juaj (%s) është <b>ca i vjetër</b>. Ai ka <b>të meta sigurie</b> të njohura dhe mundet të <b>mos i shfaqë të gjitha karakteristikat</b> e kësaj dhe shumë faqeve web të tjera. <a%s>Mësoni se si të përditësoni shfletuesin tuaj</a>';
 t.ca = 'El teu navegador (%s) està <b>desactualitzat</b>. Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a%s>Aprèn a actualitzar el navegador</a>';
@@ -85,18 +78,17 @@ t.vi='Website này xin nhắc bạn rằng: Trình duyệt (%s) của bạn hi�
 t=op["text_"+ll]||op.text||t[ll]||t.en;
 
 var tar="";
-if (this.op.newwindow)
-    tar=' target="_blank"';
+if (op.newwindow)
+    tar=' target="_blank" rel="noopener"';
 
-var div = document.createElement("div");
-this.op.div = div;
+var div = this.op.div = document.createElement("div");
 div.id="buorg";
-div.className="buorg";// + " var" +tv;
+div.className="buorg";
 
 var style = '<style>.buorg {background: #FDF2AB no-repeat 14px center url('+burl+'img/small/'+bb.n+'.png);}</style>';
 
-if (t.indexOf("{brow_name}")===-1) {//old style, legacy
-    this.op.text=busprintf(t,bb.t,' id="buorgul" href="'+this.op.url+'"'+tar);
+if (t.indexOf("{brow_name}")===-1) {//legacy style
+    t=busprintf(t,bb.t,' id="buorgul" href="'+this.op.url+'"'+tar);
 
     style += "<style>.buorg {position:absolute;position:fixed;z-index:111111;    width:100%; top:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;    font: 13px Arial,sans-serif;color:#000;}\
     .buorg div { padding:5px 36px 5px 40px; }\
@@ -104,14 +96,14 @@ if (t.indexOf("{brow_name}")===-1) {//old style, legacy
     #buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
     #buorga{display:block;}\
     @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";    
-    div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorgig">&times;</a></div></div>'+style;    
+    div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorga">&times;</a></div></div>'+style;    
 }
 else {
-    style += "<style>.buorg {position:absolute;position:fixed;z-index:111111;    width:100%; top:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
-    .buorg div { padding: 12px 36px 12px 40px;  line-height: 1.5em; }\
-    .buorg div a,.buorg div a:visited{   text-indent: 0; color: #fff;    text-decoration: none;    box-shadow: 0 0 2px rgba(0,0,0,0.4);    padding: 2px 10px;    border-radius: 4px;    font-weight: normal;    background: #5ab400;    white-space: nowrap;    margin: 5px 2px; display: inline-block;}\
+    style += "<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111;    width:100%; top:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
+    .buorg div { padding: 12px 12px 12px 30px;  line-height: 1.3em; }\
+    .buorg div a,.buorg div a:visited{   text-indent: 0; color: #fff;    text-decoration: none;    box-shadow: 0 0 2px rgba(0,0,0,0.4);    padding: 1px 10px;    border-radius: 4px;    font-weight: normal;    background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
     #buorgig{ background-color: #edbc68;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; text-indent: 22px;line-height: initial;}.buorg {background-position: 9px 8px;}}</style>";  
+    @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: initial;}.buorg {background-position: 9px 8px;}}</style>";  
     t=t.replace("{brow_name}",bb.t).replace("{up_but}",' id="buorgul" href="'+this.op.url+'"'+tar).replace("{ignore_but}",' id="buorgig" href=""');
 
     div.innerHTML= '<div>'+t+'</div>'+style;
@@ -125,7 +117,7 @@ div.onclick=function(){
         window.open(me.op.url,"_blank");
     else
         window.location.href=me.op.url;
-    setCookie(me.op.reminderClosed);
+    me.op.setCookie(me.op.reminderClosed);
     me.op.onclick(me.op);
     return false;
 };
@@ -146,16 +138,16 @@ var hm=document.getElementsByTagName("html")[0]||document.body;
 this.op.bodymt = hm.style.marginTop;
 hm.style.marginTop = (div.clientHeight)+"px";
 (function(me) {
-            (document.getElementById("buorga")||document.getElementById("buorgig")).onclick = function(e) {
-                e = e || window.event;
-                if (e.stopPropagation) e.stopPropagation();
-                else e.cancelBubble = true;
-                me.op.div.style.display = "none";
-                hm.style.marginTop = me.op.bodymt;
-                me.op.onclose(me.op);
-                setCookie(me.op.reminderClosed);
-                return false;
-            };
+    (document.getElementById("buorga")||document.getElementById("buorgig")).onclick = function(e) {
+        e = e || window.event;
+        if (e.stopPropagation) e.stopPropagation();
+        else e.cancelBubble = true;
+        me.op.div.style.display = "none";
+        hm.style.marginTop = me.op.bodymt;
+        me.op.onclose(me.op);
+        me.op.setCookie(me.op.reminderClosed);
+        return false;
+    };
 })(me);
 
 this.op.onshow(this.op);

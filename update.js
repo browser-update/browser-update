@@ -1,7 +1,5 @@
-//browser-update.org notification script, <browser-update.org>
-//Copyright (c) 2007-2015, MIT Style License <browser-update.org/LICENSE.txt>
-//It is RECOMMEDED to directly link to this file and not to use a local copy
-//because we update and maintain the detection code
+//(c)2017, MIT Style License <browser-update.org/LICENSE.txt>
+//it is recommended to directly link to this file because we update the detection code
 
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
@@ -43,8 +41,7 @@ function $bu_getBrowser(ua_str) {
     
     if (!n)
         return {n:"x",v:0,t:names[n],mobile:mobile};
- 
-    //http://stackoverflow.com/questions/14403766/how-to-detect-the-stock-android-browser
+    
     //check for android stock browser
     if (ua.indexOf('Android')>-1) {
         var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
@@ -88,14 +85,12 @@ var $buo = function(op,test) {
 var jsv=24;
 var n = window.navigator,b;
 window._buorgres=this.op=op||{};
-var langset=this.op.l;
-this.op.l = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
-this.op.l=this.op.l.replace("_","-").toLowerCase();
-var apiver=this.op.apiver=this.op.api||this.op.c||-1;
-var ll=this.op.l.substr(0,2);
+var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
+this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
+this.op.apiver=this.op.api||this.op.c||-1;
 var vsakt = {i:12,f:50,o:42,s:10,n:20,c:55,y:16.9,v:1.5};
 var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.1};
-if (apiver<4)
+if (this.op.apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
     var vsmin={i:8,f:5,o:12.5,s:6.2,n:12};
@@ -121,7 +116,7 @@ this.op.onshow = op.onshow||function(o){};
 this.op.onclick = op.onclick||function(o){};
 this.op.onclose = op.onclose||function(o){};
 var pageurl = this.op.pageurl = op.pageurl || location.hostname || "x";
-if (langset)
+if (op.l)
     this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+pageurl;
 else
     this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+pageurl;
@@ -133,13 +128,11 @@ var bb=$bu_getBrowser();
 if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
     return;
 
-function setCookie(hours) {
-    var d = new Date(new Date().getTime()+3600000*hours);
-    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+this.op.setCookie=function(hours) {
+    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
 }
-if (this.op.reminder>0) {
-    setCookie(this.op.reminder);
-}
+if (this.op.reminder>0)
+    this.op.setCookie(this.op.reminder);
 
 if (this.op.nomessage) {
     op.onshow(this.op);
@@ -156,6 +149,7 @@ if (this.op.betatest || (location.hash=="#test-bu-beta") || (!this.op.test && (l
 
 var e=document.createElement("script");
 e.src="//browser-update.org/update.show.min.js"; 
+e.src=(/file:/.test(location.href)) ? "update.show.js":"//browser-update.org/update.show.min.js"; //REMOVE
 document.body.appendChild(e);
 
 };
