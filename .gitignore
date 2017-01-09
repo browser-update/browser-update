@@ -5,3 +5,4 @@ ads.php
 update.min.js
 crowdin.yaml
 *.mo
+*.po
