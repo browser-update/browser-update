@@ -334,15 +334,7 @@ input.small {
     position: relative;        
 }
 
-.steps div.example {
-    border-bottom:1px solid #A29330;
-    background: #FDF2AB url(/img/dialog-warning.gif) no-repeat 1em 0.55em;
-    padding: 5px 36px 5px 40px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color:#000;
-    font-size: 12px;
-}
+
 
 .steps li::before {
     content: counter(listNumbering,decimal);
@@ -706,4 +698,44 @@ h3 {
     padding: 1px 3px;
     border-radius: 4px;
     background: rgba(230,230,230,0);    
+}
+
+.testwarning {
+    background: repeating-linear-gradient( 45deg, #ffd545, #ffd545 10px, #FFF754 10px, #FFF754 20px );
+    padding: 20px 20px;
+    font-size: 16px;
+}
+
+/* display of bar inside the page */
+
+.example {
+    background: #FDF2AB url(/img/dialog-warning.gif) no-repeat 1em 0.55em;
+    background-position: 8px 17px; 
+    z-index:111111;     
+    border-bottom:1px solid #A29330;    
+    text-align:left; 
+    cursor:pointer;        
+    background-color: #fff8ea;    
+    font: 17px Calibri,Helvetica,Arial,sans-serif;    
+    /*box-shadow: 0 0 5px rgba(0,0,0,0.2);*/
+}
+.example div { 
+    padding: 11px 12px 11px 30px;  
+    line-height: 1.7em; 
+}
+.example div a,.example div a:visited, .greenbut { 
+    text-indent: 0; 
+    color: #fff;    
+    text-decoration: none;    
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);    
+    padding: 1px 10px;    
+    border-radius: 4px;    
+    font-weight: normal;    
+    background: #5ab400;    
+    white-space: nowrap;   
+    margin: 0 2px; display: inline-block;
+}
+
+#buorgig { 
+    background-color: #edbc68;
 }

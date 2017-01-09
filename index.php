@@ -46,12 +46,25 @@ include("header.php");
         <?php echo T_('Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update.')?>
         (<a href="#test-bu" onclick="$buo({},true);"><?php echo T_('Try it out!')?></a>)
         <div class="example">
-                <?php echo sprintf(T_('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html?force_outdated=true"')?>
+            <div><?php          
+            /*
+            T_textdomain('update'); 
+            $tt=T_('<b>Your web browser ({brow_name}) is out of date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>');
+            $tt=str_replace('{brow_name}', 'Internet Explorer 6', $tt);
+            $tt=str_replace('{ignore_but}', ' id="buorgig"', $tt);
+            $tt=str_replace('{up_but}', ' href="update.html?force_outdated=true"', $tt);
+            echo $tt;
+            T_textdomain('site');
+             
+             */
+            echo sprintf(T_('Your browser (%s) is <b>out-of-date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html?force_outdated=true"');
+            ?>
+            </div>
         </div>
     </li>
     <li>
         <?php echo sprintf(T_('By clicking the message, they will get to an <a href="%s">info page with reasons why to update (or change) and a list of browsers</a> available for their system.'), 'update.html?force_outdated=true')?>
-        <div style="text-align: center"><a href="update.html?force_outdated=true" title="<?php echo T_('update browser'); ?>"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/img/shot update.png" style="width:300px"/></a></div>
+        <div style="text-align: center"><a href="update.html?force_outdated=true" title="<?php echo T_('update browser'); ?>"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/img/shot update.png" style="width:400px"/></a></div>
     </li>
     <li>
         <?php echo T_('If the visitor ignores the advice, it won\'t reappear for some time.')?>
@@ -299,7 +312,7 @@ code();
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
 <?php
-if (!in_array($ll,['en','de'])) {       
+if (!in_array($ll,['en','de','es'])) {       
 ?>
 <div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
 <?php
