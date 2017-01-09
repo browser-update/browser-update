@@ -38,7 +38,8 @@ var $buoop = {
     l: false,                       // <?php echo T_('set a fixed language for the message, e.g. "en". This overrides the default detection.') . "\n"; ?>
     test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
     text: "",                       // <?php echo T_('custom notification text (html)') . "\n"; ?>
-                                    // <?php echo T_('Optionally include up to two placeholders "%s" which will be replaced with the browser version and contents of the link tag. Example: "Your browser (%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;"'). "\n";?>
+                                    // <?php echo T_('Placeholders {brow_name} will be replaced with the browser name, {up_but} with contents of the update link tag and {ignore_but} with contents for the ignore link.'). "\n";?>
+                                    // <?php echo T_('Example:'). ' '; echo T_('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.'). "\n";?>"
     text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
     newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
@@ -56,34 +57,50 @@ var $buoop = {
 
 <pre>
 .buorg {
+    background-position: 8px 17px; 
     position:absolute;
-    width:100%;
-    top:0px;
-    left:0px;
-    border-bottom:1px solid #A29330;
-    background:#FDF2AB no-repeat 1em 0.55em url(http://browser-update.org/img/dialog-warning.gif);\
-    text-align:left;
-    cursor:pointer;
-    font-family: Arial,Helvetica,sans-serif; color:#000;
-    font-size: 12px;
+    position:fixed;
+    z-index:111111;    
+    width:100%; 
+    top:0px; 
+    left:0px;    
+    border-bottom:1px solid #A29330;    
+    text-align:left; 
+    cursor:pointer;        
+    background-color: #fff8ea;    
+    font: 17px Calibri,Helvetica,Arial,sans-serif;    
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
-.buorg div {
-    padding:5px 36px 5px 40px;
+.buorg div { 
+    padding: 11px 12px 11px 30px;  
+    line-height: 1.7em; 
 }
-.buorg a {
-    color:#E25600;
-}
-#buorgclose {
-    position: absolute;
-    right: .5em;
-    top:.2em;
-    height: 20px;
-    width: 12px;
-    font-weight: bold;
-    font-size:14px;
-    padding:0;
+.buorg div a,.buorg div a:visited { 
+    text-indent: 0; 
+    color: #fff;    
+    text-decoration: none;    
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);    
+    padding: 1px 10px;    
+    border-radius: 4px;    
+    font-weight: normal;    
+    background: #5ab400;    
+    white-space: nowrap;   
+    margin: 0 2px; display: inline-block;
 }
 
+#buorgig{ 
+    background-color: #edbc68;
+}
+
+@media only screen and (max-width: 700px){
+.buorg div { 
+    padding:5px 12px 5px 9px; 
+    text-indent: 22px;
+    line-height: 1.3em;
+}
+.buorg {
+    background-position: 9px 8px;}
+}
 </pre>
 
 </div>
