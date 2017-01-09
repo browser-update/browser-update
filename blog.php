@@ -4,6 +4,20 @@ require_once("lib/lang.php");
 include("header.php");
 ?>
 
+<h2>Shrinked script size: now only 2 kB</h2>
+<small>January 4th, 2017</small>
+<div class="entry">
+    <p>
+        We've split the oudated browser detection script into two parts: 1) the detection if the browser is outdated and 2) the showing of the message to users with outdated browser.
+    </p>
+    <p>
+        The detection part is what you embed into your site (<code>update.js</code>). This is what all users will have to download. And this is is now only 2.2 kB in size gzipped, five times smaller than before
+        (>10kB).
+        Then, if the browser is outdated and needs to be notified, the message file (<code>update.show.js</code>) will be loaded, but this will only happen for about 1% of the users.
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=shrinked" onclick="SC('shrinked'); return false;">Comments</a></div>
+
 <h2>Collecting Feedback on Browser-Updates</h2>
 <small>October 19th, 2016</small>
 <div class="entry">
