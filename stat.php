@@ -26,15 +26,16 @@ margin-bottom: -13px;}
 
 <?php
 function getUpdatesJs() {
-    $namesFrom = array("i"=>1,"f"=>2,"o"=>3,"s"=>4,"c"=>5,""=>0);
-    $namesTo = array("i"=>1+6,"f"=>2+6,"o"=>3+6,"s"=>4+6,"c"=>5+6,""=>0+6);
+    $namesFrom = array("i"=>1,"f"=>2,"o"=>3,"s"=>4,"c"=>5,""=>0,"a"=>0);
+    $namesTo = array("i"=>1+6,"f"=>2+6,"o"=>3+6,"s"=>4+6,"c"=>5+6,""=>0+6,"a"=>6+0);
 
-    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE fromn!="n" AND ton!="n" AND time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC');
+    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC');
     $f=0;
     while ($a = mysql_fetch_assoc($q)) {
-         if ($namesFrom[$a['fromn']]==0||$namesFrom[$a['fromn']]==0 || $a['num']<1000)
+         if (!array_key_exists($a['fromn'], $namesFrom)|| !array_key_exists($a['ton'], $namesTo) || $a['num']<5000)
              continue;
-         if ($f!=0) echo ",";
+         if ($f!=0) 
+             echo ",";
          $f=1;
          echo '{"source":'.$namesFrom[$a['fromn']].',"target":'.$namesTo[$a['ton']].',"value":'.$a['num'].'}';
      }
