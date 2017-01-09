@@ -49,7 +49,7 @@ include("header.php");
             <div><?php          
             /*
             T_textdomain('update'); 
-            $tt=T_('<b>Your web browser ({brow_name}) is out of date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>');
+            $tt=T_ig('<b>Your web browser ({brow_name}) is out-of-date</b>. For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>');
             $tt=str_replace('{brow_name}', 'Internet Explorer 6', $tt);
             $tt=str_replace('{ignore_but}', ' id="buorgig"', $tt);
             $tt=str_replace('{up_but}', ' href="update.html?force_outdated=true"', $tt);
@@ -57,7 +57,7 @@ include("header.php");
             T_textdomain('site');
              
              */
-            echo sprintf(T_('Your browser (%s) is <b>out-of-date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html?force_outdated=true"');
+            echo sprintf(T_ig('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html?force_outdated=true"');
             ?>
             </div>
         </div>

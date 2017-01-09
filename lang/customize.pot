@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the browser-update-customize package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-customize\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-29 20:04+0200\n"
+"POT-Creation-Date: 2017-01-09 08:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,34 +79,43 @@ msgid "custom notification text (html)"
 msgstr ""
 
 #: customize.php:41
-#, php-format
 msgid ""
-"Optionally include up to two placeholders \"%s\" which will be replaced with "
-"the browser version and contents of the link tag. Example: \"Your browser "
-"(%s) is old.  Please &lt;a%s&gt;update&lt;/a&gt;\""
+"Placeholders {brow_name} will be replaced with the browser name, {up_but} "
+"with contents of the update link tag and {ignore_but} with contents for the "
+"ignore link."
 msgstr ""
 
 #: customize.php:42
-msgid "custom notification text for language \"xx\""
+msgid "Example:"
+msgstr ""
+
+#: customize.php:42
+msgid ""
+"Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or "
+"&lt;a{ignore_but}&gt;ignore&lt;/a&gt;."
 msgstr ""
 
 #: customize.php:43
-msgid "e.g. text_de for german and text_it for italian"
+msgid "custom notification text for language \"xx\""
 msgstr ""
 
 #: customize.php:44
-msgid "open link in new window/tab"
+msgid "e.g. text_de for german and text_it for italian"
 msgstr ""
 
 #: customize.php:45
+msgid "open link in new window/tab"
+msgstr ""
+
+#: customize.php:46
 msgid "the url to go to after clicking the notification"
 msgstr ""
 
-#: customize.php:50
+#: customize.php:51
 msgid "Change the style"
 msgstr ""
 
-#: customize.php:53
+#: customize.php:54
 msgid ""
 "The following CSS rules are applied by the notification. You can overwrite "
 "them in your own CSS. To do so you need to add some more specificity to the "

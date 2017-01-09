@@ -181,5 +181,6 @@ T_textdomain('update');
 //var_dump(setlocale(LC_MESSAGES, 'deutsch'));
 //var_dump([$detected_lang,locale_emulation()]);
 
-
-?>
+function T_ig($str) {
+    return T_($str);
+}
