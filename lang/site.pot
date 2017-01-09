@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-site\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 08:12+0100\n"
+"POT-Creation-Date: 2017-01-09 08:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,10 +81,6 @@ msgid ""
 "By clicking the message, they will get to an <a href=\"%s\">info page with "
 "reasons why to update (or change) and a list of browsers</a> available for "
 "their system."
-msgstr ""
-
-#: index.php:67
-msgid "update browser"
 msgstr ""
 
 #: index.php:70
@@ -202,12 +198,12 @@ msgstr ""
 
 #: update.testing.php:4
 msgid ""
-"This is the page that is shown to people with an outdated browser when they "
-"get the notification to update their browser."
+"This is the page that is shown to visitors with an out-of-date browser after "
+"they clicked the notification to update their browser."
 msgstr ""
 
 #: update.testing.php:5
-msgid "Your current browser may actually be up-to-date."
+msgid "This is not the information for your currently used browser."
 msgstr ""
 
 #: update.testing.php:7

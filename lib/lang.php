@@ -184,3 +184,11 @@ T_textdomain('update');
 function T_ig($str) {
     return T_($str);
 }
+
+function is_translated($str) {
+    global $ll;
+    if ($ll=="en" || T_($str)!=$str)
+        return True;
+    else
+        return False;
+}

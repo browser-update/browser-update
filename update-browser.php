@@ -129,11 +129,11 @@ function end_browserlist() {
     echo '</tr></table>';
 }
 
-/*
+
 if (isset($_GET['emulate']) || $force_outdated) {
     include("update.testing.php");
 }
-*/
+
 ?>
 <div class="noti">
 <?php

@@ -185,20 +185,20 @@ subprocess.call(['xgettext',
                  "--keyword=T_", 
                  "--keyword=T_ngettext:1,2", 
                  "--from-code=utf-8", 
-                 "--package-name=browser-update-update", 
+                 "--package-name=browser-update-site", 
                  "--language=PHP",
                  "--output=lang/site.pot"])     
 #%%
 import subprocess
 subprocess.call(['xgettext',
-                 "cutomize.php", 
+                 "customize.php", 
                  "--keyword=T_gettext", 
                  "--keyword=T_", 
                  "--keyword=T_ngettext:1,2", 
                  "--from-code=utf-8", 
-                 "--package-name=browser-update-update", 
+                 "--package-name=browser-update-customize", 
                  "--language=PHP",
-                 "--output=lang/site.pot"])                 
+                 "--output=lang/customize.pot"])                 
 #%% upload new sources for translations
 import subprocess
 subprocess.call(['crowdin-cli-py', 'upload', 'sources'])
