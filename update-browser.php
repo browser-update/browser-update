@@ -4,6 +4,7 @@ $extratranslation=true;
 require_once("lib/init.php");
 require_once("lib/lang.php");
 $choiceversion="base";
+$force_outdated=filter_input(INPUT_GET, 'force_outdated');
 
 $full_locale=get_full_locale();
 if (isset($_GET['lang'])) {
@@ -127,152 +128,141 @@ function start_browserlist() {
 function end_browserlist() {
     echo '</tr></table>';
 }
+
+/*
+if (isset($_GET['emulate']) || $force_outdated) {
+    include("update.testing.php");
+}
+*/
 ?>
 <div class="noti">
 <?php
-if (!is_outdated() and !filter_input(INPUT_GET, 'force_outdated')) {
+if (!is_outdated() and !$force_outdated) {
     m_uptodate();
     $choiceversion="uptod";
 } else {
-?>
-<table class="logos" id="browserlist">
-    <tr>
-        <?php
-        if ($sys=="Windows") {
-            // 5->2000/5.x=>xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1            
-            if ($ver<5.1 || $ver>90) {#before xp                
-                $choiceversion="osup";
-                $u_upwin=sprintf("https://support.microsoft.com/%s/help/14223/windows-xp-end-of-support",$full_locale_minus);
-                m_ancient_os("Windows",$u_upwin);
-            }
-            else if ($ver<=6) {#xp,vista
-                if (is("Chrome")|| is("Internet Explorer")||is("Opera"))
-                    m_discontinued();
-                else
-                    m_outofdate();                
-                if ($ll=="de" && !is("Opera")) {
-                    $choiceversion="docl";
-                    include('cltest.php');
 
-                    brow("Firefox",$u_ff,"Mozilla Foundation","f",False,"",$addf);
-                    brow("Cliqz Browser",$u_cl,"Cliqz","cl",False,"",$addcl); 
-                    if (is("Chrome"))
-                        brow("Chrome",$u_ch,"Google","c",True);
-                    if (is("Internet Explorer"))
-                        brow("Edge",$u_ie,"Microsoft","i",True);
-                    if (is("Opera"))                
-                        brow("Opera",$u_op,"Opera Software","o",True);   
-                    
-                }
-                else {                    
-                    brow("Firefox",$u_ff,"Mozilla Foundation","f");
-                    if (is("Chrome"))
-                        brow("Chrome",$u_ch,"Google","c",True);
-                    if (is("Internet Explorer"))
-                        brow("Edge",$u_ie,"Microsoft","i",True);
-                    if (is("Opera"))                
-                        brow("Opera",$u_op,"Opera Software","o",True);
-                }
-            }
-            else {# 7 and above
-                if (is("Internet Explorer") && $ver<10)
-                    m_discontinued();
-                else
-                    m_outofdate();
-                
-                if ($ll=="de" && !is("Opera")) {
-                    $choiceversion="docl";
-                    include('cltest.php');
-                    
-                    brow("Firefox",$u_ff,"Mozilla Foundation","f",False,"",$addf);
-                    brow("Cliqz Browser",$u_cl,"Cliqz","cl",False,"",$addcl);
-                    brow("Chrome",$u_ch,"Google","c",False,"",$addch);
-                    if (is("Internet Explorer"))
-                        brow("Edge",$u_ie,"Microsoft","i",$ver<10);                     
-                }
-                else {
-                    brow("Firefox",$u_ff,"Mozilla Foundation","f");
-                    brow("Opera",$u_op,"Opera Software","o");                
-                    brow("Chrome",$u_ch,"Google","c");
-                    if (is("Internet Explorer"))
-                        brow("Edge",$u_ie,"Microsoft","i",$ver<10);  
-                }
-            }
-        }
-        if ($sys=="MacOS") {
-            if ($ver<9) {
-                if ($ll=="en")
-                    $u_mac="http://www.apple.com/macos/how-to-upgrade/";
-                else
-                    $u_mac=sprintf("http://www.apple.com/%s/macos/how-to-upgrade/",$county);
-                $choiceversion="osup";
-                m_ancient_os("Mac OS", $u_mac);               
-            }
-            else {
-                m_outofdate();
-            }
-            $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($full_locale_minus));                       
-            brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
-            brow("Opera",$u_op,"Opera Software","o",$ver<9);
-            brow("Chrome",$u_ch,"Google","c",$ver<9);            
-            brow("Safari",$u_sa,"Apple","s",$ver<10);             
-        }
-        if ($sys=="Android") {
-            $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
-            $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
-            $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
-            
-            if ($ver<1)#old firefox did not give a version info
-                $ver="4.1";
-            
-            if ($ver<4.0) {
-                $choiceversion="osup";
-                m_ancient_os("Android");
-            }
-            else {
-                if (is("Android Browser"))
-                    m_discontinued();
-                else 
-                    m_outofdate();
-                brow("Firefox",$u_ff,"Mozilla Foundation","f");
-                brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
-                brow("Chrome",$u_ch,"Google","c",$ver<4.1);
-            }
-        }
-        if ($sys=="Windows Phone") {
-            $choiceversion="osup";
-            $url=sprintf("https://support.microsoft.com/de-de/help/12662/windows-phone-update-your-windows-phone",strtolower($full_locale_minus));
-            echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"Windows Phone");
-            echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
-            //echo T_("Or download this alternative browsers:");
-            brow("Opera Mini","http://www.opera.com/mobile/mini/windows","Opera Software","o");            
-        }
-        if ($sys=="Ubuntu"||$sys=="Linux") {            
+if ($sys=="Windows") {
+    // 5->2000/5.x=>xp/2003 6.0->vista, 6.1->win7, 6.2->win8, 6.3->win 8.1            
+    if ($ver<5.1 || $ver>90) {#before xp                
+        $choiceversion="osup";
+        $u_upwin=sprintf("https://support.microsoft.com/%s/help/14223/windows-xp-end-of-support",$full_locale_minus);
+        m_ancient_os("Windows",$u_upwin);
+    }
+    else if ($ver<=6) {#xp,vista
+        if (is("Chrome")|| is("Internet Explorer")||is("Opera"))
+            m_discontinued();
+        else
+            m_outofdate();      
+        start_browserlist();                       
+        brow("Firefox",$u_ff,"Mozilla Foundation","f");
+        if (is("Chrome"))
+            brow("Chrome",$u_ch,"Google","c",True);
+        if (is("Internet Explorer"))
+            brow("Edge",$u_ie,"Microsoft","i",True);
+        if (is("Opera"))                
+            brow("Opera",$u_op,"Opera Software","o",True);
+        end_browserlist();
+    }
+    else {# 7 and above
+        if (is("Internet Explorer") && $ver<10)
+            m_discontinued();
+        else
             m_outofdate();
-            brow("Firefox",$u_ff,"Mozilla Foundation","f");
-            brow("Chrome",$u_ch,"Google","c");
-            brow("Opera",$u_op,"Opera Software","o");
-            //brow("Chromium",,"Open Source","cm");
-            //brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");           
-        }
-        if ($sys=="iOS") {
-            $url=sprintf("https://support.apple.com/%s/HT204204",strtolower($full_locale_minus));
-            echo '<h2 class="whatnow"><b>'.T_('Your browser is out-of-date.')."</b></h2>";
-           
-            echo '<h2>'.sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones").'</h2>';
-            echo '<h2>';
-            if ($ver<=6) {
-                $choiceversion="osna";
-                echo sprintf(T_("Unfortunately, %s has stopped supporting your device with updates."),"Apple");                
-            }
-            else {
-                $choiceversion="osup";
-                echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$url.'" onmousedown="countBrowser(\'os\')',"iOS");
-            }
-        }   echo '</h2>';  
-        ?>
-    </tr>
-</table>
+
+        start_browserlist();
+        brow("Firefox",$u_ff,"Mozilla Foundation","f");
+        brow("Opera",$u_op,"Opera Software","o");                
+        brow("Chrome",$u_ch,"Google","c");
+        if (is("Internet Explorer"))
+            brow("Edge",$u_ie,"Microsoft","i",$ver<10);  
+        end_browserlist();
+    }
+}
+if ($sys=="MacOS") {
+    if ($ver<9) {
+        if ($ll=="en")
+            $u_mac="http://www.apple.com/macos/how-to-upgrade/";
+        else
+            $u_mac=sprintf("http://www.apple.com/%s/macos/how-to-upgrade/",$county);
+        $choiceversion="osup";
+        m_ancient_os("Mac OS", $u_mac);               
+    }
+    else {
+        m_outofdate();
+    }
+
+    start_browserlist();
+    $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($full_locale_minus));                       
+    brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
+    brow("Opera",$u_op,"Opera Software","o",$ver<9);
+    brow("Chrome",$u_ch,"Google","c",$ver<9);            
+    brow("Safari",$u_sa,"Apple","s",$ver<10);
+    end_browserlist();
+}
+if ($sys=="Android") {
+    $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
+    $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
+    $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
+
+    if ($ver<1)#old firefox did not give a version info
+        $ver="4.1";
+
+    if ($ver<4.0) {
+        $choiceversion="osup";
+        m_ancient_os("Android");
+    }
+    else {
+        if (is("Android Browser"))
+            m_discontinued();
+        else 
+            m_outofdate();
+
+        start_browserlist();
+        brow("Firefox",$u_ff,"Mozilla Foundation","f");
+        brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
+        brow("Chrome",$u_ch,"Google","c",$ver<4.1);
+        end_browserlist();
+    }
+}
+if ($sys=="Windows Phone") {
+    $choiceversion="osup";
+    $url=sprintf("https://support.microsoft.com/de-de/help/12662/windows-phone-update-your-windows-phone",strtolower($full_locale_minus));
+    echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"Windows Phone");
+    echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
+    //echo T_("Or download this alternative browsers:");
+
+    start_browserlist();
+    brow("Opera Mini","http://www.opera.com/mobile/mini/windows","Opera Software","o");           
+    end_browserlist();
+}
+if ($sys=="Ubuntu"||$sys=="Linux") {            
+    m_outofdate();
+
+    start_browserlist();
+    brow("Firefox",$u_ff,"Mozilla Foundation","f");
+    brow("Chrome",$u_ch,"Google","c");
+    brow("Opera",$u_op,"Opera Software","o");
+    //brow("Chromium",,"Open Source","cm");
+    //brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");   
+    end_browserlist();
+}
+if ($sys=="iOS") {
+    $url=sprintf("https://support.apple.com/%s/HT204204",strtolower($full_locale_minus));
+    echo '<h2 class="whatnow"><b>'.T_('Your browser is out-of-date.')."</b></h2>";
+
+    echo '<h2>'.sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones").'</h2>';
+    echo '<h2>';
+    if ($ver<=6) {
+        $choiceversion="osna";
+        echo sprintf(T_("Unfortunately, %s has stopped supporting your device with updates."),"Apple");                
+    }
+    else {
+        $choiceversion="osup";
+        echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),$url.'" onmousedown="countBrowser(\'os\')',"iOS");
+    }
+}
+?>
 
 <h2 class="whatnow">
     <?php echo sprintf(T_('For more <a href="%s">security</a>,    <a href="%s">speed</a>,    <a href="%s">comfort</a> and    <a href="%s">fun</a>.'),'#security','#speed','#comfort','#fun');?>
@@ -297,8 +287,7 @@ if (false) {
     //for translations
     T_("Advertisement");
     T_("Sponsored");
-    sprintf(T_('This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site.'),'Internet Explorer 6',' href="update.html"');
-    //sprintf(T_('Your browser (%s) is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a%s>Learn how to update your browser</a>'),'Internet Explorer 6',' href="update.html"');
+    T_('<b>Your web browser ({brow_name}) is out-of-date</b>. Update your browser for more security, comfort and the best experience on this site. <a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a>');
 }
 ?>
 
