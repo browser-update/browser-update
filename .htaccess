@@ -45,7 +45,7 @@ RewriteRule ^/?([a-z]{2}((_|-)[a-zA-Z]{2})?)/$ index.php?lang=$1 [L,QSA]
 
 AddCharset utf-8 .js
 
-<FilesMatch "update.?.js">
+<FilesMatch "update.*.js">
   Header set Cache-Control "public, max-age=172800"
   ExpiresDefault "access plus 2 days"
   SetOutputFilter DEFLATE
