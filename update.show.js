@@ -6,11 +6,12 @@ var ll=op.ll;
 var pageurl = op.pageurl || location.hostname || "x";
 var bb=$bu_getBrowser();
 var burl=(/file:/.test(location.href)) ? "":"//browser-update.org/";
-if (op.l)
-    this.op.url= burl+ll+"/update-browser.html#"+tv+":"+pageurl;
-else
-    this.op.url= burl+"update-browser.html#"+tv+":"+pageurl;
-
+if (!op.url) {
+    if (op.l)
+        this.op.url= burl+ll+"/update-browser.html#"+tv+":"+pageurl;
+    else
+        this.op.url= burl+"update-browser.html#"+tv+":"+pageurl;
+}
 var frac=1000;
 if (Math.random()*frac<1 && !this.op.test && !this.op.betatest) {
     var i = new Image();
@@ -56,7 +57,7 @@ t.cs = 'Váš prohlížeč (%s) je <b>zastaralý</b>. Jsou známy <b>bezpečnost
 t.he = 'הדפדפן שלך (%s) <b>אינו מעודכן</b>. יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
 t.nb='Nettleseren din (%s) er <b>utdatert</b>. Den har kjente <b>sikkerhetshull</b> og <b>kan ikke vise alle funksjonene</b> på denne og andre websider. <a%s>Lær hvordan du kan oppdatere din nettleser</a>';
 t["zh-tw"]='您的瀏覽器(%s) 需要更新。該瀏覽器有諸多安全漏洞，無法顯示本網站的所有功能。 <a%s>瞭解如何更新瀏覽器</a>';
-t.zh='您的浏览器(%s) 需要更新。该浏览器有诸多安全漏洞，无法显示本网站的所有功能。 <a%s>了解如何更新浏览器</a>';
+t.zh='<b>您的网页浏览器 ({brow_name}) 已过期</b>。更新您的浏览器，以提高安全性和舒适性，并获得访问本网站的最佳体验。<a{up_but}>更新浏览器</a> <a{ignore_but}>忽略</a>';
 t.fi='Selaimesi (%s) on <b>vanhentunut</b>. Siinä on tunnettuja tietoturvaongelmia eikä se välttämättä tue kaikkia ominaisuuksia tällä tai muilla sivustoilla. <a%s>Lue lisää siitä kuinka päivität selaimesi</a>.';
 t.tr='Tarayıcınız (%s) <b>güncel değil</b>. Eski versiyon olduğu için <b>güvenlik açıkları</b> vardır ve görmek istediğiniz bu web sitesinin ve diğer web sitelerinin <b>tüm özelliklerini hatasız bir şekilde</b> gösteremeyecektir. <a%s>Tarayıcınızı nasıl güncelleyebileceğinizi öğrenin</a>';
 t.ro='Browser-ul (%s) tau este <b>invechit</b>. Detine <b>probleme de securitate</b> cunoscute si poate <b>sa nu afiseze corect</b> toate elementele acestui si altor site-uri. <a%s>Invata cum sa-ti actualizezi browserul.</a>';
@@ -150,6 +151,10 @@ hm.style.marginTop = (div.clientHeight)+"px";
     };
 })(me);
 
+if (this.op.noclose) {
+    var el=(document.getElementById("buorga")||document.getElementById("buorgig"));
+    el.parentNode.removeChild(el);
+}
 this.op.onshow(this.op);
 
 };
