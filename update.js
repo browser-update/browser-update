@@ -51,12 +51,12 @@ function $bu_getBrowser(ua_str) {
         //    return {n:n,v:v,t:names[n]+" "+v,donotnotify:"mobile on android",mobile:mobile};
     }
     
-    //do not notify ver old systems since their is no up-to-date browser available
+    //do not notify old systems since there is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/.test(ua)) 
         donotnotify="oldOS";
 
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==38 || Math.round(v)==45 || Math.round(v)==52))
+    if (n=="f" && (Math.round(v)==45 || Math.round(v)==52))
         donotnotify="ESR";
 
     if (n=="so") {
@@ -88,8 +88,8 @@ window._buorgres=this.op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 this.op.apiver=this.op.api||this.op.c||-1;
-var vsakt = {i:12,f:50,o:42,s:10,n:20,c:55,y:16.9,v:1.5};
-var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.1};
+var vsakt = {i:12,f:51,o:42,s:10,n:20,c:56,y:16.9,v:1.6};
+var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.2};
 if (this.op.apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
