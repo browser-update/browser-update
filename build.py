@@ -61,22 +61,36 @@ write_file("update.show.min.js",minned)
 
 
 #%% Convert strings to javascript format
-st="This website would like to remind you: Your browser (%s) is <b>out of date</b>. <a%s>Update your browser</a> for more security, comfort and the best experience on this site."
+st='<b>Your web browser ({brow_name}) is out-of-date</b>. Update your browser for more security, comfort and the best experience on this site. <a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a>'
 import polib
+from glob import glob
 paths = glob('lang/*/LC_MESSAGES/')
 paths=[p[5:10] for p in paths]
 for p in paths:
     #print("build %s"%p)
-    if p[:2] not in ["vi","hi","sk"]:
-        continue
+    #if p[:2] not in ["vi","hi","sk"]:
+    #    continue
     
     try:
         po = polib.pofile('lang/%s/LC_MESSAGES/update.po'%p)
     except OSError:        
         print("no update.po found")
+    if p in ["rm_CH","en_SE"]:
+        continue
+        
+    if p in ["zh_TW"]:
+         for i in po:
+            if i.msgid==st:
+                print("t[\"%s\"]='%s';"%(p[:5].lower().replace("_","-"),i.msgstr.replace("\n","").replace("'","\\'")))
+                break
+    else:
+        for i in po:
+            if i.msgid==st:
+                #if i.msgstr!="":
+                print("t.%s='%s';"%(p[:2],i.msgstr.replace("\n","").replace("'","\\'")))
+                break
+        
+#%% download maxmind geoip database
 
-    for i in po:
-        if i.msgid==st:
-            print("t.%s='%s';"%(p[:2],i.msgstr))
-            break
-    
+#wget http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz
+#gunzip GeoLite2-Country.mmdb.gz
