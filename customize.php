@@ -28,10 +28,10 @@ var $buoop = {
     vs: {i:8,f:25,o:17,s:9,c:22},  // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
                                    // f:22 ---> Firefox <= 22
                                    // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
-    reminder: 24,                   // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
-                                    // <?php echo T_('0 = show all the time') . "\n"; ?>
-    reminderClosed: 150,             // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
-    onshow: function(infos){},      // <?php echo T_('callback functions after notification has appeared / was clicked / closed') . "\n"; ?>
+    reminder: 24,                  // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
+                                   // <?php echo T_('0 = show all the time') . "\n"; ?>
+    reminderClosed: 150,           // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
+    onshow: function(infos){},     // <?php echo T_('callback functions after notification has appeared / was clicked / closed') . "\n"; ?>
     onclick: function(infos){},
     onclose: function(infos){},
 
@@ -39,13 +39,14 @@ var $buoop = {
     test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
     text: "",                       // <?php echo T_('custom notification text (html)') . "\n"; ?>
                                     // <?php echo T_('Placeholders {brow_name} will be replaced with the browser name, {up_but} with contents of the update link tag and {ignore_but} with contents for the ignore link.'). "\n";?>
-                                    // <?php echo T_('Example:'). ' '; echo T_('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.'). "\n";?>"
+                                    // <?php echo T_('Example:'). ' '; echo T_('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.'). "\n";?>
     text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
                                     // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
     newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
     url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
-    nomessage: false,               // Do not show a message if the browser is out of date, just call the onshow callback function
-    api: xxx                        // This is the version of the browser-update api to use. Please do not remove.
+    noclose:false,                  // <?php echo T_('Do not show the "ignore" button to close the notification') . "\n"; ?>
+    nomessage: false,               // <?php echo T_('Do not show a message if the browser is out of date, just call the onshow callback function') . "\n"; ?>
+    api: xxx                        // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>
 };
 </pre>
 <h3><?php echo T_('Change the style'); ?></h3>
