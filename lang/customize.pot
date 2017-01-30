@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-customize\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-09 08:07+0100\n"
+"POT-Creation-Date: 2017-01-10 13:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -111,11 +111,26 @@ msgstr ""
 msgid "the url to go to after clicking the notification"
 msgstr ""
 
-#: customize.php:51
+#: customize.php:47
+msgid "Do not show the \"ignore\" button to close the notification"
+msgstr ""
+
+#: customize.php:48
+msgid ""
+"Do not show a message if the browser is out of date, just call the onshow "
+"callback function"
+msgstr ""
+
+#: customize.php:49
+msgid ""
+"This is the version of the browser-update api to use. Please do not remove."
+msgstr ""
+
+#: customize.php:52
 msgid "Change the style"
 msgstr ""
 
-#: customize.php:54
+#: customize.php:55
 msgid ""
 "The following CSS rules are applied by the notification. You can overwrite "
 "them in your own CSS. To do so you need to add some more specificity to the "
