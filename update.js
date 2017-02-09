@@ -148,8 +148,7 @@ if (this.op.betatest || (location.hash=="#test-bu-beta") || (!this.op.test && (l
 */
 
 var e=document.createElement("script");
-e.src="//browser-update.org/update.show.min.js"; 
-e.src=(/file:/.test(location.href)) ? "update.show.js":"//browser-update.org/update.show.min.js"; //REMOVE
+e.src = op.jsurl||(/file:/.test(location.href) && "http://browser-update.org/update.show.min.js") || "//browser-update.org/update.show.min.js";
 document.body.appendChild(e);
 
 };
