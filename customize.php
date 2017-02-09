@@ -46,6 +46,7 @@ var $buoop = {
     url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
     noclose:false,                  // <?php echo T_('Do not show the "ignore" button to close the notification') . "\n"; ?>
     nomessage: false,               // <?php echo T_('Do not show a message if the browser is out of date, just call the onshow callback function') . "\n"; ?>
+    jsshowurl: "//browser-update.org/update.show.min.js", // <?php echo T_('URL where the script, that shows the notification, is located. This is only loaded if the user actually has an outdated browser.') . "\n"; ?>
     api: xxx                        // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>
 };
 </pre>
