@@ -5,7 +5,7 @@ var tv=jsv;//"base";
 var ll=op.ll;
 var pageurl = op.pageurl || location.hostname || "x";
 var bb=$bu_getBrowser();
-var burl=(/file:/.test(location.href)) ? "":"//browser-update.org/";
+var burl=op.burl || ((/file:/.test(location.href)) ? "https://browser-update.org/":"//browser-update.org/");
 if (!op.url) {
     if (op.l)
         op.url= burl+ll+"/update-browser.html#"+tv+":"+pageurl;
