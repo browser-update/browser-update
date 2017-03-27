@@ -45,7 +45,7 @@ $ver=$sysx[1];
 $sysn=$sysx[2];
 
 $u_ff="https://www.mozilla.com/firefox/";
-$u_op="https://www.opera.com/?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
+$u_op="https://www.opera.com/";
 $u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("https://www.microsoft.com/%s/windows/microsoft-edge",$full_locale_minus);
 
@@ -193,7 +193,7 @@ if ($sys=="MacOS") {
     }
 
     start_browserlist();
-    $u_sa=sprintf("https://support.apple.com/de-de/HT204416",strtolower($full_locale_minus));                       
+    $u_sa=sprintf("https://support.apple.com/%s/HT204416",strtolower($full_locale_minus));                       
     brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
     brow("Opera",$u_op,"Opera Software","o",$ver<9);
     brow("Chrome",$u_ch,"Google","c",$ver<9);            
@@ -202,7 +202,7 @@ if ($sys=="MacOS") {
 }
 if ($sys=="Android") {
     $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
-    $u_op="https://www.opera.com/mobile/operabrowser?utm_medium=roc&utm_source=team23_de&utm_campaign=browser-update_org";
+    $u_op="https://play.google.com/store/apps/details?id=com.opera.browser";
     $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
 
     if ($ver<1)#old firefox did not give a version info
@@ -227,7 +227,7 @@ if ($sys=="Android") {
 }
 if ($sys=="Windows Phone") {
     $choiceversion="osup";
-    $url=sprintf("https://support.microsoft.com/de-de/help/12662/windows-phone-update-your-windows-phone",strtolower($full_locale_minus));
+    $url=sprintf("https://support.microsoft.com/%s/help/12662/windows-phone-update-your-windows-phone",strtolower($full_locale_minus));
     echo sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"Windows Phone");
     echo sprintf(T_('Please try to <a href="%s">update %s</a> to get the latest version of your browser.'),"Windows Phone",$url);
     //echo T_("Or download this alternative browsers:");
@@ -330,7 +330,7 @@ if (false) {
     <?php
     if ($ll=="en") {
         ?>
-        <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>        
+        <li>Consider <a href="http://portableapps.com/apps/internet" target="_blank" rel="noopener" title="install portable browser" onmousedown="countBrowser('port')">installing a portable version of the browser</a></li>        
         <?php
         include("update.feedback.php");
     }
