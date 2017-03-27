@@ -25,7 +25,8 @@ include("header.php");
 <script src="update.js"></script>
 
 <div class="noti">
-    <p>User-Agent-String:<?php echo $_SERVER['HTTP_USER_AGENT'];?></p>
+    <p>User-Agent-String (Header):<span id="heua"><?php echo $_SERVER['HTTP_USER_AGENT'];?></span></p>
+    <p>User-Agent-String (Javascript): <span id="jsua"></span></p>
     <p>Lang: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];?></p>
     Detected Browser as:
     <p id="det"></p>        
@@ -35,8 +36,13 @@ include("header.php");
 var br=$bu_getBrowser();
 var aaa="";
 if (br.donotnotify)
-    aaa="<br/>Not notified because: "+ br.donotnotify;
+    aaa+="<br/>Not notified because: "+ br.donotnotify;
+if (navigator.userAgent!="<?php echo $_SERVER['HTTP_USER_AGENT']?>") {
+    aaa+="<br/>Warning: Your browser is misconfigured. Identification via Javascript and and HTTP-Headers does not match!";
+}
 document.getElementById('det').innerHTML=br.t+aaa;
+document.getElementById('jsua').innerHTML=navigator.userAgent;
+
 </script>
 
 <?php include("footer.php");?>
