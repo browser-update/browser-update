@@ -99,7 +99,7 @@ function request_lang()
 	$lang = array_map('lang_normalize', $lang);
 	if (isset($_GET['lang']))
 	{
-		$lang = array_merge(array($_GET['lang']), $lang);
+		$lang = array($_GET['lang']);
 	}
 	foreach ($lang as $ll)
 	{

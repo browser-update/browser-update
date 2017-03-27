@@ -170,12 +170,19 @@ else if ($what=="noti"){
     );    
 }
 else {//updates
-    $q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
+    try {
+        require_once 'lib/geoip.php';
+        $country_=get_country_from_ip($_SERVER['REMOTE_ADDR']);
+    } catch (Exception $e) {
+        $country_="xx";
+    }    
+    $q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s',country='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
 	mysql_real_escape_string($host),
 	mysql_real_escape_string($_GET["from"]),
 	mysql_real_escape_string(floatval($_GET["fromv"])),
 	mysql_real_escape_string($_GET["to"]),
 	mysql_real_escape_string(get_lang()),
+        mysql_real_escape_string($country_),
 	$time,
         mysql_real_escape_string($tv),
         mysql_real_escape_string($cv),
@@ -184,7 +191,6 @@ else {//updates
         mysql_real_escape_string($sys[1])
 	);
 }
-echo $q;
 mysql_query($q) 
 	or die (mysql_error(). $q);
 ?>

@@ -314,7 +314,7 @@ code();
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
 <?php
-if (!in_array($ll,['en','de','es'])) {       
+if (!in_array($ll,['en','de','es','fr'])) {       
 ?>
 <div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
 <?php

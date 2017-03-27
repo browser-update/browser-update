@@ -173,7 +173,7 @@ subprocess.call(['xgettext',
                  "--package-name=browser-update-update", 
                  "--language=PHP",
                  "--output=lang/update.pot"])
-#%%
+#%% extract site strings
 import subprocess
 subprocess.call(['xgettext',
                  "blog.php",
@@ -188,7 +188,7 @@ subprocess.call(['xgettext',
                  "--package-name=browser-update-site", 
                  "--language=PHP",
                  "--output=lang/site.pot"])     
-#%%
+#%% extract customize strings
 import subprocess
 subprocess.call(['xgettext',
                  "customize.php", 

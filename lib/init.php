@@ -47,15 +47,15 @@ function is_outdated() {
 
     $vs="?(\d+[.]\d+)";
     if(
-        det("opr.$vs",42)||
-        det("opera.*version $vs",42)||
-        det("trident.$vs",9)||
-        det("trident.*rv:$vs",11)||
-        det("msie.$vs",12)||
-        det("edge.$vs",14)||
-        det("firefox.$vs",50)||
-        det("version.$vs.*safari",10)||
-        det("chrome.$vs",55)
+        det("opr.$vs",currentv("o"))||
+        det("opera.*version $vs",currentv("o"))||
+        det("trident.*rv:$vs",currentv("i"))||
+        det("trident.$vs",currentv("i"))||            
+        det("msie.$vs",currentv("i"))||
+        det("edge.$vs",currentv("i"))||
+        det("firefox.$vs",currentv("f"))||
+        det("version.$vs.*safari",currentv("s"))||
+        det("chrome.$vs",currentv("c"))
     )
         return true;
 }
@@ -103,9 +103,10 @@ function get_system($ua) {
         "Ubuntu"=>"Ubuntu",
         "Linux"=>"Linux"
     ];
+    $ua_r=  str_replace("_", ".", $ua);
     $names=["4.0"=>"NT 4.0","5.0"=>"2000","5.1"=>"XP","5.2"=>"Server 2003","6.0"=>"Vista","6.1"=>"7","6.2"=>"8","6.3"=>"8.1"];
     foreach($pats as $k =>$v) {
-        if(preg_match("#".$k."#i", $ua, $regs)) {
+        if(preg_match("#".$k."#i", $ua_r, $regs)) {
             $ver=$regs[1];
             $displayname=$v."&nbsp;".$names[$ver];
             $shortname=substr($v,0,1);
@@ -115,8 +116,8 @@ function get_system($ua) {
             if ($v=="MacOS") {
                 $displayname=$v."&nbsp;10.".$regs[1];
             }
-            if ($v=="MacOS") {
-                $shortname="p";
+            if ($v=="Windows Phone") {
+                $shortname="P";
             }
             return array($v,$ver,$displayname,$shortname);
         }
@@ -175,7 +176,14 @@ function get_browserx($ua) {
 
 function get_full_locale() {
     //tries to get full locale. But it may be only the language
-    $lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+    if (isset($_GET["lang"]) && strlen($_GET["lang"])>1)
+        if (strlen($_GET["lang"])==5)
+            return $_GET["lang"];
+        else
+            return request_lang();
+    else
+        $lll = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+    
     $lll = explode (",", $lll);
     $lll = explode (";", $lll[0]);
     return substr($lll[0],0,5);
