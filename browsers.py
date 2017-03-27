@@ -23,11 +23,12 @@ def get_version(wikiname, regex):
     return version
 #%%
 browsers_d={
-    "c":52,
-    "f":48,
-    "o":38,
+    "c":56,
+    "f":51,
+    "o":42,
     "i":11,
-    "s":9.1
+    "s":10,
+    "vivaldi": 1.6
 }
 #%%
 browsers_d["f"]=get_version("Firefox",r"Stable release.{0,150}Standard[^\d]*(\d*\.*\d*)")

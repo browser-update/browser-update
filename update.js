@@ -88,7 +88,7 @@ window._buorgres=this.op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 this.op.apiver=this.op.api||this.op.c||-1;
-var vsakt = {i:12,f:51,o:42,s:10,n:20,c:56,y:16.9,v:1.6};
+var vsakt = {i:12,f:52,o:43,s:10,n:20,c:56,y:16.9,v:1.6};
 var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.2};
 if (this.op.apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
