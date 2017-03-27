@@ -6,3 +6,5 @@ update.min.js
 crowdin.yaml
 *.mo
 *.po
+.idea/
+xgettext.*
