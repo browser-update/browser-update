@@ -35,3 +35,6 @@ The page currently translated into more than 30 languages.
 If you want to improve the translations or translate into a new language please
 see our [translation manual](https://github.com/browser-update/browser-update/wiki/How-to-Translate).
 
+## Cross-Browser-Testing
+
+We are using the [browserstack.com](http://browserstack.com) cross browser testing tool to make sure the notification and website is shown correctly on all kinds of browsers and devices.
