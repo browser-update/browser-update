@@ -72,7 +72,14 @@ var uas=[
     ["","Yandex Browser 13.1","Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.12785 YaBrowser/13.12.1599.12785 Safari/537.36","Windows 7"],
     ["","Yandex Browser 16.7","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 YaBrowser/16.7.0.3342 Safari/537.36","Windows 10"],
     ["","Chrome 49","Mozilla/5.0 (Windows NT 5.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.1700.41 Safari/537.36","win xp"],
-    ["","","",""],
+    ["","Firefox 51","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:51.0) Gecko/20100101 Firefox/51.0","MacOS 10.12"],
+    ["Firefox on iOS","iOS 8.3 mobile","Mozilla/5.0 (iPad; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4","iOS"],
+    ["Chrome on iOS","iOS 10.3 mobile","Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1","iOS"],
+    ["Mobile Safari","iOS 10.3 mobile","Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/603.1.23 (KHTML, like Gecko) Version/10.0 Mobile/14E5239e Safari/602.1","iOS"],
+    ["Chrome on iOS desktop mode","","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12","iOS"],
+    ["Android Webview Old","","Mozilla/5.0 (Linux; U; Android 4.1.1; en-gb; Build/KLP) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30","Android 4.1"],    
+    ["Android Webview >K","","Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/_BuildID_) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36","Android 4.4"],
+    ["Android Webview >L","","Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.65 Mobile Safari/537.36","Android 5.1"],
     ["","","",""],
     ["","","",""]
 ];
@@ -105,6 +112,28 @@ for (i in uas) {
 }
 
 $("#dc").html(JSON.stringify(vs));
+
+
+
+/*
+         function iPhoneVersion() {
+          var h = window.screen.height,w = window.screen.width;
+          if (w === 375 && h === 667) {
+            return "6";
+          }
+          else if (w === 414 && h === 736) {
+            return "6+";
+          }
+          else if (w === 320 && h === 568) {
+            return "5";
+          }
+          else if (h <= 480) {
+            return "2-4";
+          }
+          return 'none';
+        }        
+    http://mediag.com/news/popular-screen-resolutions-designing-for-all/
+ */
 </script>
 
 

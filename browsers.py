@@ -28,7 +28,8 @@ browsers_d={
     "o":42,
     "i":11,
     "s":10,
-    "vivaldi": 1.6
+    "vivaldi": 1.8,
+    "ios":10.3
 }
 #%%
 browsers_d["f"]=get_version("Firefox",r"Stable release.{0,150}Standard[^\d]*(\d*\.*\d*)")

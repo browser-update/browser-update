@@ -22,11 +22,6 @@ $full_locale_minus=str_replace("_","-",$full_locale);
 
 include("header.php");
 
-function has($t) {
-	global $ua_;
-	return !(strpos($ua_,$t)===false);
-}
-
 $bx_=get_browserx($ua_);
 $browid=$bx_[0];
 $brown=$bx_[1];
@@ -251,7 +246,7 @@ if ($sys=="iOS") {
     $url=sprintf("https://support.apple.com/%s/HT204204",strtolower($full_locale_minus));
     echo '<h2 class="whatnow"><b>'.T_('Your browser is out-of-date.')."</b></h2>";
 
-    echo '<h2>'.sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPads and iPhones").'</h2>';
+    echo '<h2>'.sprintf(T_('On %s the built-in browser can only be updated together with the operating system.'),"iPad/iPhone").'</h2>';
     echo '<h2>';
     if ($ver<=6) {
         $choiceversion="osna";
