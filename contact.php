@@ -50,6 +50,16 @@ Rob Schneider (japanese translation), and many more ...
     <a href="https://www.df.eu/" rel="nofollow"><img src="/img/df_logo.svg" width="180" alt="domain factory"></a>
 </p>
 
+<h2>Browser-Testing</h2>
+<a href="http://browserstack.com"><img src="/img/blog/logo-browserstack.png" style="float:right; width: 200px"></a>
+<p>
+We are using the excellent <a href="http://browserstack.com">browserstack.com</a> cross browser testing tool to make sure the notification and website
+is shown correctly on all kinds of browsers and devices.
+</p>
+<p>
+This is especially important since we are, of course, targeting a wide range of old browser.
+</p>
+
 <h2>Impressum/Imprint</h2>
 
 <p>browser-update.org ist ein Projekt der <a href="http://www.team23.de/">Team23 Internetagentur</a>. Inhaltlicher Verantwortlicher gemäß TMG ist die GmbH & Co. KG. Vertretungsberechtigte Gesellschafter sind Fabian Ziegler, David Danier.</p>

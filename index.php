@@ -228,7 +228,8 @@ function printolder($months,$version) {
     <a href="https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/">WCF2</a>,
     <a href="http://dev.cmsmadesimple.org/projects/browserupdate">CMS made simple</a>,
     <a href="http://xenforo.com/community/resources/customisable-browser-update-org-widget.764/">XenForo</a>,
-    <a href="http://modules.processwire.com/modules/markup-browser-update/">ProcessWire</a>.							
+    <a href="http://modules.processwire.com/modules/markup-browser-update/">ProcessWire</a>,
+    <a href="http://rapidweaver.marathia.com/stacks/BrowserUpdate/">Rapidweaver</a>.    
 </p>
 
 <h2><?php echo T_('Why you should tell users to update')?></h2>
@@ -314,7 +315,7 @@ code();
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
 <?php
-if (!in_array($ll,['en','de','es','fr'])) {       
+if (!in_array($ll,['en','de','es','fr','pl'])) {       
 ?>
 <div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
 <?php
