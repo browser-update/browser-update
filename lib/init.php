@@ -47,6 +47,7 @@ function is_outdated() {
 
     $vs="?(\d+[.]\d+)";
     if(
+        det("iphone.os.$vs",currentv("ios"))||
         det("opr.$vs",currentv("o"))||
         det("opera.*version $vs",currentv("o"))||
         det("trident.*rv:$vs",currentv("i"))||
@@ -58,6 +59,11 @@ function is_outdated() {
         det("chrome.$vs",currentv("c"))
     )
         return true;
+}
+
+function has($t) {
+	global $ua_;
+	return !(strpos($ua_,$t)===false);
 }
 
 function currentv($browser,$set="desktop"){
@@ -108,9 +114,9 @@ function get_system($ua) {
     foreach($pats as $k =>$v) {
         if(preg_match("#".$k."#i", $ua_r, $regs)) {
             $ver=$regs[1];
-            $displayname=$v."&nbsp;".$names[$ver];
+            $displayname=$v."&nbsp;".$ver;
             $shortname=substr($v,0,1);
-            if (isset($names[$ver])) {
+            if ($v=="Windows" && isset($names[$ver])) {
                 $displayname=$v."&nbsp;".$names[$ver];
             }
             if ($v=="MacOS") {

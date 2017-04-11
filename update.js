@@ -5,17 +5,19 @@ function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
     function ignore(reason,pattern){if (RegExp(pattern,"i").test(ua)) return reason;}
-    var ig=ignore("bot","bot|spider|googlebot|facebook|slurp|bingbot|google page speed|google web preview|mediapartnersadsbot|AOLBuild|Baiduspider|DuckDuckBot|Teoma")||
+    var ig=ignore("bot","bot|spider|googlebot|facebook|slurp|bingbot|google page speed|search console|google web preview|mediapartnersadsbot|AOLBuild|Baiduspider|DuckDuckBot|Teoma|Gecko Expeditor")||
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobilew without upgrade path or landing page","iphone|ipod|ipad|kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia") ||
+        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7") ||
         ignore("android(chrome) web view","; wv");
+    var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     if (ig) 
         return {n:"x",v:0,t:"other browser",donotnotify:ig};    
 
-    var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     var pats=[
+        ["CriOS.VV","c"],
+        ["FxiOS.VV","f"],
         ["Trident.*rv:VV","i"],
         ["Trident.VV","io"],
         ["MSIE.VV","i"],
@@ -25,7 +27,7 @@ function $bu_getBrowser(ua_str) {
         ["YaBrowser.VV","y"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
-        ["Version.VV.{0,10}Safari","s"],
+        ["Version.VV.*Safari","s"],
         ["Safari.VV","so"],
         ["Opera.*Version.VV","o"],
         ["Opera.VV","o"],
@@ -42,18 +44,29 @@ function $bu_getBrowser(ua_str) {
     if (!n)
         return {n:"x",v:0,t:names[n],mobile:mobile};
     
+    //do not notify old systems since there is no up-to-date browser available
+    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/i.test(ua)) 
+        donotnotify="oldOS";
+    
+    //iOS
+    if (/iphone|ipod|ipad|ios/i.test(ua)) {
+        ua.replace("_",".").match(new RegExp("iPhone.OS.(\\d+\\.?\\d?)"),"i");//
+        n="iOS"
+        v=parseFloat(RegExp.$1); 
+        var h = Math.max(window.screen.height, window.screen.width);
+        if (h<=480 || window.devicePixelRatio<2) //iphone <5  // old iPads         
+              return {n:"s",v:v,t:"iOS "+v,donotnotify:"iOS without upgrade path",mobile:mobile};
+        return {n:"s",v:v,t:"iOS "+v,donotnotify:false,mobile:mobile};
+        //h>568iphone 6+
+    }
     //check for android stock browser
-    if (ua.indexOf('Android')>-1) {
+    if (ua.indexOf('Android')>-1 && n=="s") {
         var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
         if (ver <= 534)
             return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify,mobile:mobile};
         //else
         //    return {n:n,v:v,t:names[n]+" "+v,donotnotify:"mobile on android",mobile:mobile};
     }
-    
-    //do not notify old systems since there is no up-to-date browser available
-    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/.test(ua)) 
-        donotnotify="oldOS";
 
     //do not notify firefox ESR
     if (n=="f" && (Math.round(v)==45 || Math.round(v)==52))
@@ -88,8 +101,8 @@ window._buorgres=this.op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 this.op.apiver=this.op.api||this.op.c||-1;
-var vsakt = {i:12,f:52,o:43,s:10,n:20,c:56,y:16.9,v:1.6};
-var vsdefault = {i:10,f:-4,o:-4,s:-2,n:12,c:-4,a:534,y:-1,v:-0.2};
+var vsakt = {i:12,f:52,o:43,s:10,n:20,c:56,y:17.3,v:1.8};
+var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-1,v:-0.2};
 if (this.op.apiver<4)
     var vsmin={i:9,f:10,o:20,s:7,n:12};
 else
