@@ -5,7 +5,7 @@ function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
     function ignore(reason,pattern){if (RegExp(pattern,"i").test(ua)) return reason;}
-    var ig=ignore("bot","bot|spider|googlebot|facebook|slurp|bingbot|google page speed|search console|google web preview|mediapartnersadsbot|AOLBuild|Baiduspider|DuckDuckBot|Teoma|Gecko Expeditor")||
+    var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
