@@ -18,19 +18,40 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 include("header.php");
 
+
+$bx_=get_browserx($ua_);
+$browid=$bx_[0];
+$brown=$bx_[1];
+$browver=$bx_[2];
+
+$sysx=get_system($ua_);
+$sys=$sysx[0];
+$ver=$sysx[1];
+$sysn=$sysx[2];
 ?>
 
 
 
 <script src="update.js"></script>
 
-<div class="noti">
-    <p>User-Agent-String (Header):<span id="heua"><?php echo $_SERVER['HTTP_USER_AGENT'];?></span></p>
-    <p>User-Agent-String (Javascript): <span id="jsua"></span></p>
-    <p>Lang: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];?></p>
-    Detected Browser as:
-    <p id="det"></p>        
+<div class="debug">
+    <h2>Identification<h2>
+    <p>User-Agent-String (HTTP Header):<span id="heua"><?php echo $_SERVER['HTTP_USER_AGENT'];?></span></p>
+    <p>User-Agent-String (Javascript): <span id="jsua">Error</span></p>
+    
+    <h2>Detection<h2>
+    <p>Detected Browser as (Javascript):<span id="det">Error</span></p>      
+    <p>Browser (Header): <span id=""><?php echo $brown." ". $browver . "($browid)"?></span></p>
+    <p>System (Header): <span id=""><?php echo $sysn?></span></p>
+    <h2>Language<h2>
+    <p>Lang (HTTP Header): <span><?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE']?></span></p>
+    <p>Lang (Javascript): <span id="lang">Error</span></p>    
 </div>
+<style>
+.debug span {
+    display: block;
+}    
+</style>    
 
 <script type="text/javascript">
 var br=$bu_getBrowser();
@@ -42,7 +63,7 @@ if (navigator.userAgent!="<?php echo $_SERVER['HTTP_USER_AGENT']?>") {
 }
 document.getElementById('det').innerHTML=br.t+aaa;
 document.getElementById('jsua').innerHTML=navigator.userAgent;
-
+document.getElementById('lang').innerHTML=$buoop.ll;
 </script>
 
 <?php include("footer.php");?>

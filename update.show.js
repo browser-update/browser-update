@@ -101,6 +101,7 @@ if (t.indexOf("{brow_name}")===-1) {//legacy style
     #buorga{display:block;}\
     @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";    
     div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorga">&times;</a></div></div>'+style;    
+    op.addmargin=true;
 }
 else if (op.position && op.position==="bottom"){
     style += "<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111;    width:100%; bottom:0px; left:0px;    border-bottom:1px solid #A29330;    text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
@@ -130,14 +131,16 @@ else {
     .buorg div a,.buorg div a:visited{   text-indent: 0; color: #fff;    text-decoration: none;    box-shadow: 0 0 2px rgba(0,0,0,0.4);    padding: 1px 10px;    border-radius: 4px;    font-weight: normal;    background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
     #buorgig{ background-color: #edbc68;}\
     @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
-    @keyframes buorgfly {    from {transform:translateY(-50px)}    to {transform:translateY(0px)}} .buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>";  
+    @keyframes buorgfly {    from {transform:translateY(-50px)}    to {transform:translateY(0px)}} .buorg { animation-name: buorgfly; animation-duration: .5s; animation-timing-function: ease-out;}</style>";  
     t=t.replace("{brow_name}",bb.t).replace("{up_but}",' id="buorgul" href="'+op.url+'"'+tar).replace("{ignore_but}",' id="buorgig" href=""');
-
     div.innerHTML= '<div>'+t+'</div>'+style;
+    op.addmargin=true;
 }
 op.text=t;
-if (op.container)
+if (op.container) {
     op.container.appendChild(div);
+    op.addmargin=false;
+}
 else
     document.body.insertBefore(div,document.body.firstChild);
 
@@ -164,16 +167,19 @@ document.getElementById("buorgul").onclick = function(e) {
 }
 catch(e) {}
 
-var hm=document.getElementsByTagName("html")[0]||document.body;
-this.op.bodymt = hm.style.marginTop;
-hm.style.marginTop = (div.clientHeight)+"px";
+if (op.addmargin) {
+    var hm=document.getElementsByTagName("html")[0]||document.body;
+    this.op.bodymt = hm.style.marginTop;
+    hm.style.marginTop = (div.clientHeight)+"px";
+}
 (function(me) {
     (document.getElementById("buorga")||document.getElementById("buorgig")).onclick = function(e) {
         e = e || window.event;
         if (e.stopPropagation) e.stopPropagation();
         else e.cancelBubble = true;
         me.op.div.style.display = "none";
-        hm.style.marginTop = me.op.bodymt;
+        if (me.op.addmargin)
+            hm.style.marginTop = me.op.bodymt;
         me.op.onclose(me.op);
         me.op.setCookie(me.op.reminderClosed);
         return false;
