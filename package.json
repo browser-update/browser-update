@@ -16,7 +16,8 @@
   ],
   "files": [
     "update.js",
-    "update.min.js"
+    "update.min.js",
+    "update.show.min.js"
   ],
   "author": "Thomas Hümmer",
   "license": "MIT",

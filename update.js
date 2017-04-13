@@ -51,7 +51,7 @@ function $bu_getBrowser(ua_str) {
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
         ua.replace("_",".").match(new RegExp("iPhone.OS.(\\d+\\.?\\d?)"),"i");//
-        n="iOS"
+        n="iOS";
         v=parseFloat(RegExp.$1); 
         var h = Math.max(window.screen.height, window.screen.width);
         if (h<=480 || window.devicePixelRatio<2) //iphone <5  // old iPads         
@@ -60,7 +60,7 @@ function $bu_getBrowser(ua_str) {
         //h>568iphone 6+
     }
     //check for android stock browser
-    if (ua.indexOf('Android')>-1 && n=="s") {
+    if (ua.indexOf('Android')>-1 && n==="s") {
         var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
         if (ver <= 534)
             return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify,mobile:mobile};
