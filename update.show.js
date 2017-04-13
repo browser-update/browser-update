@@ -135,8 +135,11 @@ else {
 
     div.innerHTML= '<div>'+t+'</div>'+style;
 }
-this.op.text=t;
-document.body.insertBefore(div,document.body.firstChild);
+op.text=t;
+if (op.container)
+    op.container.appendChild(div);
+else
+    document.body.insertBefore(div,document.body.firstChild);
 
 var me=this;
 div.onclick=function(){

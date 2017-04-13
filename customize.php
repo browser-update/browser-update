@@ -23,33 +23,65 @@ T_textdomain('customize');
     <?php echo T_('The following options can be passed to the script:'); ?>
 </p>
 
-<pre>
-var $buoop = {
-    vs: {i:8,f:25,o:17,s:9,c:22},  // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
-                                   // f:22 ---> Firefox <= 22
-                                   // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
-    reminder: 24,                  // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
-                                   // <?php echo T_('0 = show all the time') . "\n"; ?>
-    reminderClosed: 150,           // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
-    onshow: function(infos){},     // <?php echo T_('callback functions after notification has appeared / was clicked / closed') . "\n"; ?>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="javascript">$buoop = {
+    vs: {i:8,f:25,o:17,s:9,c:22},  
+    // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
+    // f:22 ---> Firefox <= 22
+    // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
+
+    reminder: 24,                  
+    // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
+    // <?php echo T_('0 = show all the time') . "\n"; ?>
+
+    reminderClosed: 150,           
+    // <?php echo T_('if the user explicitly closes message it reappears after x hours') . "\n"; ?>
+
+    onshow: function(infos){},     
     onclick: function(infos){},
     onclose: function(infos){},
+    // <?php echo T_('callback functions after notification has appeared / was clicked / closed') . "\n"; ?>
 
-    l: false,                       // <?php echo T_('set a fixed language for the message, e.g. "en". This overrides the default detection.') . "\n"; ?>
-    test: false,                    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
-    text: "",                       // <?php echo T_('custom notification text (html)') . "\n"; ?>
-                                    // <?php echo T_('Placeholders {brow_name} will be replaced with the browser name, {up_but} with contents of the update link tag and {ignore_but} with contents for the ignore link.'). "\n";?>
-                                    // <?php echo T_('Example:'). ' '; echo T_('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.'). "\n";?>
-    text_xx: "",                    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>
-                                    // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
-    newwindow: true,                // <?php echo T_('open link in new window/tab') . "\n"; ?>
-    url: null,                      // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
-    noclose:false,                  // <?php echo T_('Do not show the "ignore" button to close the notification') . "\n"; ?>
-    nomessage: false,               // <?php echo T_('Do not show a message if the browser is out of date, just call the onshow callback function') . "\n"; ?>
-    jsshowurl: "//browser-update.org/update.show.min.js", // <?php echo T_('URL where the script, that shows the notification, is located. This is only loaded if the user actually has an outdated browser.') . "\n"; ?>
-    api: xxx                        // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>
-};
-</pre>
+    l: false,                       
+    // <?php echo T_('set a fixed language for the message, e.g. "en". This overrides the default detection.') . "\n"; ?>
+
+    test: false,                    
+    // <?php echo T_('true = always show the bar (for testing)') . "\n"; ?>
+
+    text: "",                       
+    // <?php echo T_('custom notification text (html)') . "\n"; ?>
+    // <?php echo T_('Placeholders {brow_name} will be replaced with the browser name, {up_but} with contents of the update link tag and {ignore_but} with contents for the ignore link.'). "\n";?>
+    // <?php echo T_('Example:'). ' '; echo T_('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.'). "\n";?>
+
+    text_xx: "",                    
+    // <?php echo T_('custom notification text for language "xx"') . "\n"; ?>                                  
+    // <?php echo T_('e.g. text_de for german and text_it for italian') . "\n"; ?>
+
+    newwindow: true,                
+    // <?php echo T_('open link in new window/tab') . "\n"; ?>
+
+    url: null,                      
+    // <?php echo T_('the url to go to after clicking the notification') . "\n"; ?>
+
+    noclose:false,                  
+    // <?php echo T_('Do not show the "ignore" button to close the notification') . "\n"; ?>
+
+    nomessage: false,               
+    // <?php echo T_('Do not show a message if the browser is out of date, just call the onshow callback function') . "\n"; ?>
+
+    jsshowurl: "//browser-update.org/update.show.min.js", 
+    // <?php echo T_('URL where the script, that shows the notification, is located. This is only loaded if the user actually has an outdated browser.') . "\n"; ?>
+
+    container: document.body, 
+    // <?php echo T_('Element where the notification will be injected.') . "\n"; ?>
+
+    api: xxx                        
+    // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>
+
+};</code></pre>
+
 <h3><?php echo T_('Change the style'); ?></h3>
 
 <p>
@@ -57,8 +89,7 @@ var $buoop = {
     <code>body .buorg {font-size:20px}</code> 
 </p>
 
-<pre>
-.buorg {
+<pre><code class="css">.buorg {
     background-position: 8px 17px; 
     position:absolute;
     position:fixed;
@@ -102,8 +133,7 @@ var $buoop = {
 }
 .buorg {
     background-position: 9px 8px;}
-}
-</pre>
+}</code></pre>
 
 </div>
 
