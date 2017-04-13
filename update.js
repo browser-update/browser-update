@@ -50,14 +50,13 @@ function $bu_getBrowser(ua_str) {
     
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
-        ua.replace("_",".").match(new RegExp("iPhone.OS.(\\d+\\.?\\d?)"),"i");//
+        ua.replace("_",".").match(new RegExp("OS.(\\d+\\.?\\d?)"),"i");//
         n="iOS";
         v=parseFloat(RegExp.$1); 
         var h = Math.max(window.screen.height, window.screen.width);
-        if (h<=480 || window.devicePixelRatio<2) //iphone <5  // old iPads         
+        if (h<=480 || window.devicePixelRatio<2) //iphone <5 and old iPads  // (h>568 -->iphone 6+)
               return {n:"s",v:v,t:"iOS "+v,donotnotify:"iOS without upgrade path",mobile:mobile};
-        return {n:"s",v:v,t:"iOS "+v,donotnotify:false,mobile:mobile};
-        //h>568iphone 6+
+        return {n:"s",v:v,t:"iOS "+v,donotnotify:false,mobile:mobile};//identify as safari
     }
     //check for android stock browser
     if (ua.indexOf('Android')>-1 && n==="s") {
