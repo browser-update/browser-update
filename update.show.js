@@ -3,21 +3,20 @@ var op=this.op=window._buorgres;
 var jsv=24;
 var tv=jsv;//"base";
 var ll=op.ll;
-var pageurl = op.pageurl || location.hostname || "x";
 var bb=$bu_getBrowser();
-var burl=op.burl || "https://browser-update.org";
+var burl=op.burl || "https://browser-update.org/";
 if (!op.url) {
     if (op.l)
-        op.url= burl+ll+"/update-browser.html#"+tv+":"+pageurl;
+        op.url= burl+ll+"/update-browser.html#"+tv+":"+op.pageurl;
     else
-        op.url= burl+"update-browser.html#"+tv+":"+pageurl;
+        op.url= burl+"update-browser.html#"+tv+":"+op.pageurl;
 }
 var frac=1000;
 if (Math.random()*frac<1 && !this.op.test && !this.op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-    i.src=burl+"count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(pageurl) + "&jsv="+jsv+"&tv="+tv+"&extra="+extra;
+    i.src=burl+"count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+jsv+"&tv="+tv+"&extra="+extra;
 }
 
 function busprintf() {

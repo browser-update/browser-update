@@ -118,23 +118,19 @@ for (b in vsdefault) {
     if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
 }
-this.op.vsf=vs;
+op.vsf=vs;
 if (op.reminder<0.1 || op.reminder===0)
-    this.op.reminder=0;
+    op.reminder=0;
 else
-    this.op.reminder=op.reminder||24;
-this.op.reminderClosed=op.reminderClosed||(24*7);
-this.op.onshow = op.onshow||function(o){};
-this.op.onclick = op.onclick||function(o){};
-this.op.onclose = op.onclose||function(o){};
-var pageurl = this.op.pageurl = op.pageurl || location.hostname || "x";
-if (op.l)
-    this.op.url= op.url||"//browser-update.org/"+ll+"/update-browser.html#"+jsv+":"+pageurl;
-else
-    this.op.url= op.url||"//browser-update.org/update-browser.html#"+jsv+":"+pageurl;
-this.op.newwindow=(op.newwindow!==false);
+    op.reminder=op.reminder||24;
+op.reminderClosed=op.reminderClosed||(24*7);
+op.onshow = op.onshow||function(o){};
+op.onclick = op.onclick||function(o){};
+op.onclose = op.onclose||function(o){};
+op.pageurl = op.pageurl || location.hostname || "x";
+op.newwindow=(op.newwindow!==false);
 
-this.op.test=test||op.test||(location.hash=="#test-bu")||(location.hash=="#test-bu-beta")||false;
+op.test=test||op.test||(location.hash=="#test-bu")||(location.hash=="#test-bu-beta")||false;
 
 var bb=$bu_getBrowser();
 if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
