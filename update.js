@@ -109,6 +109,8 @@ else
 var myvs=op.vs||{};
 var vs =op.vs||vsdefault;
 for (b in vsdefault) {
+    if (vs[b] === 0)
+        continue;
     if (!vs[b])
         vs[b]=vsdefault[b];    
     if (vsakt[b] && vs[b]>=vsakt[b])
@@ -133,7 +135,7 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash=="#test-bu")||(location.hash=="#test-bu-beta")||false;
 
 var bb=$bu_getBrowser();
-if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
+if (!this.op.test && bb && bb.n && vs[bb.n] && (bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
     return;
 
 this.op.setCookie=function(hours) {
