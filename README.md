@@ -13,7 +13,7 @@ Go to [browser-update.org](http://browser-update.org), choose the browsers you w
 Or use the npm package:
 
 ## npm usage
-Install it:
+Install it using npm:
 
     npm install mq-js --save
 
@@ -21,19 +21,24 @@ And load it:
 
 ````js
 var browserUpdate = require('browser-update');
-
 browserUpdate({ [configuration-options] })
 ````
 
-or
+If you want to include only the browser-detection script and
+the notification will be loaded from the cdn only if needed (to save some kilobytes), use this:
+
+````
+var browserUpdate = require('browser-update/update.npm.js');
+browserUpdate({ [configuration-options] })
+````
+
+If you have an ES6 compatible build environment, you can of course use the import statement:
 
 ````js
 import browserUpdate from 'browser-update';
-
-browserUpdate({ [configuration-options] })
 ````
 
-Options are documented [here](http://browser-update.org/customize.html)
+See the [available options](http://browser-update.org/customize.html) to see how you can customize it to your needs.
 
 ## Unobtrusive
 Unobtrusive here means:
