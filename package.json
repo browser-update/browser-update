@@ -1,8 +1,8 @@
 {
   "name": "browser-update",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Remind users to update their browser in an unobtrusive way.",
-  "main": "update.js",
+  "main": "update.npm.full.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +15,8 @@
     "web"
   ],
   "files": [
-    "update.js",
-    "update.min.js",
-    "update.show.min.js"
+    "update.npm.full.js",
+    "update.npm.js"
   ],
   "author": "Thomas Hümmer",
   "license": "MIT",

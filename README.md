@@ -10,6 +10,31 @@ We want to remind these unobtrusively to update their browser.
 ## How to use
 Go to [browser-update.org](http://browser-update.org), choose the browsers you want to be notified and embed the code into your website.
 
+Or use the npm package:
+
+## npm usage
+Install it:
+
+    npm install mq-js --save
+
+And load it:
+
+````js
+var browserUpdate = require('browser-update');
+
+browserUpdate({ [configuration-options] })
+````
+
+or
+
+````js
+import browserUpdate from 'browser-update';
+
+browserUpdate({ [configuration-options] })
+````
+
+Options are documented [here](http://browser-update.org/customize.html)
+
 ## Unobtrusive
 Unobtrusive here means:
 * We take care not to  erroneously notify users by constantly tweaking the detection code
