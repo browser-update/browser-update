@@ -243,24 +243,26 @@ div.id="buorg";
 div.className="buorg";
 
 var style='<style>.buorg {background: #FDF2AB no-repeat 14px center url('+burl+'img/small/'+bb.n+'.png);}</style>';
-var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
-    .buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }\
-    .buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
-    #buorgig{ background-color: #edbc68;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
+var style2='<style>.buorg {background-color: #edbc68; background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
+    .buorg p { padding: 11px 12px 11px 30px; margin: 0; line-height: 1.7em; }\
+    .buorg__button { text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #428300; border: 2px solid #428300;   white-space: nowrap;    margin: 0 2px; display: inline-block; transition: 0.3s;}\
+    .buorg__button:hover, .buorg__button:focus { color: #000; background: #e6f2d9; text-decoration: none; } \
+    .buorg__update {margin-left: 5px;}\
+    .buorg__ignore{background:#bd0000; border-color:#bd0000;}\
+    .buorg__ignore:hover, .buorg__ignore:focus {background:#f9ecec; color: #000}\
+    @media only screen and (max-width: 700px){.buorg p { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
     @keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}} \
     .buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
 
 if (t.indexOf("{brow_name}")===-1) {//legacy style
-    t=busprintf(t,bb.t,' id="buorgul" href="'+op.url+'"'+tar);
+    t=busprintf(t,bb.t,' id="buorgul" class="buorg__button buorg__update" href="'+op.url+'"'+tar);
 
     style += "<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}\
-    .buorg div { padding:5px 36px 5px 40px; }\
-    .buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}\
-    #buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
-    #buorga{display:block;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";
-    div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorga">&times;</a></div></div>'+style;
+    .buorg p { padding:5px 36px 5px 40px; }\
+    .buorg__close{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
+    .buorg__update{display:block;}\
+    @media only screen and (max-width: 700px){.buorg p { padding:5px 15px 5px 9px; }}</style>";
+    div.innerHTML= '<div><p>'+t+'</p><div id="buorgclose" class="buorg__close"><a id="buorga">&times;</a></div></div>'+style;
     op.addmargin=true;
 }
 else {
@@ -268,14 +270,14 @@ else {
         style2 += "<style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}} \</style>";
     }
     else if (op.position === "corner") {
-        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}\
+        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg b {display:block;} .buorg span { display: block; } .buorg__button {margin: 4px 2px;}\
         </style>";
     }
     else {
         op.addmargin = true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href=""');
-    div.innerHTML = '<div>' + t + '</div>' + style+style2;
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" class="buorg__button buorg__update" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" class="buorg__button buorg__ignore" href=""');
+    div.innerHTML = '<p>' + t + '</p>' + style+style2;
 }
 
 op.text=t;
