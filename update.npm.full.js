@@ -98,11 +98,11 @@ var jsv=24;
 var n = window.navigator,b,vsmin;
 window._buorgres=this.op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
-this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
-this.op.apiver=this.op.api||this.op.c||-1;
+op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
+op.apiver=op.api||op.c||-1;
 var vsakt = {i:12,f:52,o:43,s:10,n:20,c:56,y:17.3,v:1.8};
 var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-1,v:-0.2};
-if (this.op.apiver<4)
+if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7,n:12};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2,n:12};
@@ -133,17 +133,17 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash=="#test-bu")||(location.hash=="#test-bu-beta")||false;
 
 var bb=$bu_getBrowser();
-if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
+if (!op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
     return;
 
-this.op.setCookie=function(hours) {
+op.setCookie=function(hours) {
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
 };
-if (this.op.reminder>0)
-    this.op.setCookie(this.op.reminder);
+if (op.reminder>0)
+    op.setCookie(op.reminder);
 
-if (this.op.nomessage) {
-    op.onshow(this.op);
+if (op.nomessage) {
+    op.onshow(op);
     return;
 }
 
@@ -166,7 +166,7 @@ if (!op.url) {
         op.url= burl+"update-browser.html#"+tv+":"+op.pageurl;
 }
 var frac=1000;
-if (Math.random()*frac<1 && !this.op.test && !this.op.betatest) {
+if (Math.random()*frac<1 && !op.test && !op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
@@ -238,7 +238,7 @@ var tar="";
 if (op.newwindow)
     tar=' target="_blank" rel="noopener"';
 
-var div = this.op.div = document.createElement("div");
+var div = op.div = document.createElement("div");
 div.id="buorg";
 div.className="buorg";
 
@@ -311,7 +311,7 @@ catch(e) {}
 
 if (op.addmargin) {
     var hm=document.getElementsByTagName("html")[0]||document.body;
-    this.op.bodymt = hm.style.marginTop;
+    op.bodymt = hm.style.marginTop;
     hm.style.marginTop = (div.clientHeight)+"px";
 }
 (function(me) {
@@ -328,11 +328,11 @@ if (op.addmargin) {
     };
 })(me);
 
-if (this.op.noclose) {
+if (op.noclose) {
     var el=(document.getElementById("buorga")||document.getElementById("buorgig"));
     el.parentNode.removeChild(el);
 }
-this.op.onshow(this.op);
+op.onshow(op);
 
 };
 

@@ -12,7 +12,7 @@ if (!op.url) {
         op.url= burl+"update-browser.html#"+tv+":"+op.pageurl;
 }
 var frac=1000;
-if (Math.random()*frac<1 && !this.op.test && !this.op.betatest) {
+if (Math.random()*frac<1 && !op.test && !op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
@@ -84,7 +84,7 @@ var tar="";
 if (op.newwindow)
     tar=' target="_blank" rel="noopener"';
 
-var div = this.op.div = document.createElement("div");
+var div = op.div = document.createElement("div");
 div.id="buorg";
 div.className="buorg";
 
@@ -157,7 +157,7 @@ catch(e) {}
 
 if (op.addmargin) {
     var hm=document.getElementsByTagName("html")[0]||document.body;
-    this.op.bodymt = hm.style.marginTop;
+    op.bodymt = hm.style.marginTop;
     hm.style.marginTop = (div.clientHeight)+"px";
 }
 (function(me) {
@@ -174,11 +174,11 @@ if (op.addmargin) {
     };
 })(me);
 
-if (this.op.noclose) {
+if (op.noclose) {
     var el=(document.getElementById("buorga")||document.getElementById("buorgig"));
     el.parentNode.removeChild(el);
 }
-this.op.onshow(this.op);
+op.onshow(op);
 
 };
 
