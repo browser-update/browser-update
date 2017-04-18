@@ -9,7 +9,7 @@ function $bu_getBrowser(ua_str) {
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7") ||
+        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7|537.85.10") ||
         ignore("android(chrome) web view","; wv");
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     if (ig) 
