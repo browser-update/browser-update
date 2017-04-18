@@ -13,11 +13,9 @@ if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])
 }
 
 require_once("lib/lang.php");
+$title=T_("Notify visitors to update their browser");
 include("header.php");
 ?>
-
-   
-<div class="left">
     
 <div class="message">
     <p id="mainmessage">
@@ -44,7 +42,7 @@ include("header.php");
     </li>
     <li>
         <?php echo T_('Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update.')?>
-        (<a href="#test-bu" onclick="$buo({},true);"><?php echo T_('Try it out!')?></a>)
+        (<a href="#test-bu" onclick="test_bar()"><?php echo T_('Try it out!')?></a>)
         <div class="example">
             <div><?php          
             
@@ -204,6 +202,15 @@ function printolder($months,$version) {
     <?php echo T_('Notify mobile browsers.')?>
     </label>
 </div>
+<div>
+    <label for="f-style"><?php echo T_('Position')?></label>
+    <select id="f-style" onchange="code()">
+        <option value="" selected><?php echo T_('top')?></option>
+        <option value="bottom"><?php echo T_('bottom')?></option>            
+        <option value="corner"><?php echo T_('corner')?></option>
+    </select>
+    <button onclick="test_bar()"><?php echo T_('Try it out!')?></button>
+</div>
 <p>
     <?php echo sprintf(T_('The script and service is open source under the <a%s>MIT License</a>.'),' href="https://github.com/browser-update/browser-update/blob/master/LICENSE.txt"')?>
 </div>
@@ -241,19 +248,14 @@ function printolder($months,$version) {
 
 <h2><?php echo sprintf(T_('Help this project by <a%s>using the update-notification</a> on your site, <a%s>sharing</a> or <a%s>translating</a> this page.'),' href="#install"',' href="#sharebuttons" onclick="document.getElementById(\'sharebuttons\').style.display=\'block\';"',' href="contact.html"')?></h2>
 <div id="sharebuttons"> <div class="addthis_inline_share_toolbox"></div></div>
-</div>
+
+
 
 <script>
-var $buoop = {c:4};
-function $buo_f(){ 
- var e = document.createElement("script"); 
- e.src = "//browser-update.org/update.min.js"; 
- document.body.appendChild(e);
-};
-try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-catch(e){window.attachEvent("onload", $buo_f)}
+var $buoop = {api:4};
 </script>
-	
+<script src="/update.min.js"></script>	
+
 <style>
     .generate #browserversionchooser label {
         width: 120px;
@@ -288,19 +290,33 @@ catch(e){window.attachEvent("onload", $buo_f)}
 <script>
     
 function _get(name,defaultval) {
-    if (document.getElementById("op"+name).checked!=defaultval)
+    if (document.getElementById("op"+name).checked!==defaultval)
         return name+":"+(!defaultval)+",";
     else
         return "";
 }
-function getomat(id) {
-    return document.getElementById('f-'+ id).value;
+function getomat(name) {
+    return document.getElementById('f-'+ name).value;
+}
+function _get2(name,defaultval) {
+    var val=document.getElementById("f-"+name).value;
+    if (val!==defaultval)
+        return name+':"'+val+'",';
+    else
+        return "";
+}
+
+function test_bar() {
+    var el=document.getElementById("buorg");
+    if (el)
+        el.parentNode.removeChild(el);
+    $buo({'position':getomat('style')},true);
 }
 //+_get("newos",true)
 function code() {
     var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = '<'+'script> \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+'api:4}; \n\
+var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:4}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\
