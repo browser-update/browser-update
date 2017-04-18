@@ -3,6 +3,10 @@ require_once("lib/init.php");
 require_once("lib/lang.php");
 
 $extratranslation=true;
+
+T_textdomain('customize');
+$title=T_('Customize and test');
+T_textdomain('update');
 include("header.php");
 T_textdomain('customize');
 ?>

@@ -28,7 +28,7 @@ If you want to include only the browser-detection script and
 the notification will be loaded from our cdn only if
  really an outdated browser is detected (to save some kilobytes), use this:
 
-````
+````js
 var browserUpdate = require('browser-update/update.npm.js');
 browserUpdate({ [configuration-options] })
 ````
