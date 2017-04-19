@@ -13,6 +13,38 @@ Go to [browser-update.org](http://browser-update.org), choose the browsers you w
 Or use the npm package:
 
 ## npm usage
+Install it:
+
+    npm install mq-js --save
+
+And load it:
+
+````js
+var browserUpdate = require('browser-update');
+
+browserUpdate({ [configuration-options] })
+````
+
+or
+
+````js
+import browserUpdate from 'browser-update';
+
+browserUpdate({ [configuration-options] })
+````
+
+Options are documented [here](http://browser-update.org/customize.html)
+
+## Unobtrusive
+Unobtrusive here means:
+* We take care not to  erroneously notify users by constantly tweaking the detection code
+* users of small niche browsers are not notified, users who have no possibility to update are not notified
+* We do not block the users form using a website in any way
+* The website can be used without any additional step
+* The notification will only appear once a day by default
+* If the user **activly** closes the notification, it will reappear after a week
+
+## npm usage
 Install it using npm:
 
     npm install browser-update --save

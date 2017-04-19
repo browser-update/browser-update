@@ -83,7 +83,6 @@ write_file("update.npm.full.js",t_upjs+t_showjs)
 import subprocess
 subprocess.call(['npm', 'publish'])
 
-
 #%% Convert strings to javascript format
 st='<b>Your web browser ({brow_name}) is out-of-date</b>. Update your browser for more security, comfort and the best experience on this site. <a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a>'
 import polib

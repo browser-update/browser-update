@@ -139,6 +139,7 @@ if (!op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (documen
 op.setCookie=function(hours) {
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
 };
+
 if (op.reminder>0)
     op.setCookie(op.reminder);
 
