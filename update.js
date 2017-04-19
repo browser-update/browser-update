@@ -9,7 +9,7 @@ function $bu_getBrowser(ua_str) {
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7") ||
+        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7|537.85.10") ||
         ignore("android(chrome) web view","; wv");
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     if (ig) 
@@ -98,11 +98,11 @@ var jsv=24;
 var n = window.navigator,b,vsmin;
 window._buorgres=this.op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
-this.op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
-this.op.apiver=this.op.api||this.op.c||-1;
+op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
+op.apiver=op.api||op.c||-1;
 var vsakt = {i:12,f:52,o:43,s:10,n:20,c:56,y:17.3,v:1.8};
 var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-1,v:-0.2};
-if (this.op.apiver<4)
+if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7,n:12};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2,n:12};
@@ -133,17 +133,18 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash=="#test-bu")||(location.hash=="#test-bu-beta")||false;
 
 var bb=$bu_getBrowser();
-if (!this.op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && this.op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
+if (!op.test && (!bb || !bb.n || bb.n=="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0) || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
     return;
 
-this.op.setCookie=function(hours) {
+op.setCookie=function(hours) {
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
 };
-if (this.op.reminder>0)
-    this.op.setCookie(this.op.reminder);
 
-if (this.op.nomessage) {
-    op.onshow(this.op);
+if (op.reminder>0)
+    op.setCookie(op.reminder);
+
+if (op.nomessage) {
+    op.onshow(op);
     return;
 }
 

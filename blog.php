@@ -1,6 +1,7 @@
 <?php
 require_once("lib/init.php");
 require_once("lib/lang.php");
+$title="Blog - Inform users to update their browser";
 include("header.php");
 ?>
 

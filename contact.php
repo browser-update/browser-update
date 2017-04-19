@@ -1,16 +1,18 @@
 <?php
 require_once("lib/init.php");
 require_once("lib/lang.php");
+$title="Contact";
 include("header.php");
 ?>
 
 <div class="left">
 <h2>Translations</h2>
 <p>
-New translations  of this site or corrections to existing translations are always appreciated.
-Sart translating using <a href="https://crowdin.com/project/browser-update">this online translation tool</a>.
+New translations  of this site or improvements of existing translations are always appreciated.
+Start translating using <a href="https://crowdin.com/project/browser-update">the crowdin online translation tool</a>.
 <a href="https://crowdin.com/page/quick-start">Learn how to translate</a>.
 </p>
+
 <h2>Development</h2>
 <p>
         This is an open-source project. The development takes place on the Github
@@ -97,7 +99,7 @@ Umsatzsteuer-Identifikationsnummer: DE 217 549 808
 <p>
     Installing the script on your website does not track users in any way.
     We do not set identification cookies or record IP-adresses.
-    No information about the user except anonymous browser statistics and language is recorded.
+    No information about the user except anonymous browser statistics and language are recorded.
 </p>
 <h3>This website</h3>
 <p>
