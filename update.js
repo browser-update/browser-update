@@ -34,17 +34,19 @@ function $bu_getBrowser(ua_str) {
         ["Netscape.VV","n"]
     ];
     for (var i=0; i < pats.length; i++) {
-        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d?)"),"i"))) {
+        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d+)"),"i"))) {
             n=pats[i][1];
             break;
         }        
     }
-    if (n==="v"||n==="y") {//zero pad semver for easy comparing
+    var semver=n==="v"||n==="y";
+    if (semver) {//zero pad semver for easy comparing
         var parts = (RegExp.$1).split('.');
-        var v=parseFloat(parts[0] + "." + ("00".substring(0, 2 - parts[1].length) + parts[1]));
+        var v=(parts[0] + "." + ("00".substring(0, 2 - parts[1].length) + parts[1]));
     }
-    else
-        var v=parseFloat(RegExp.$1); 
+    else {
+        var v=Math.round(parseFloat(RegExp.$1)*10)/10;
+    }
     
     if (!n)
         return {n:"x",v:0,t:names[n],mobile:mobile};
@@ -106,7 +108,7 @@ var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserL
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
 var vsakt = {i:12,f:53,o:44,s:10.1,n:20,c:58,y:17.04,v:1.10};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.2,v:-0.2};
+var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
