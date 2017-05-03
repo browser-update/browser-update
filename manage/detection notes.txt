@@ -1,0 +1,16 @@
+# UC-Browser
+
+http://stackoverflow.com/questions/38089868/javascript-how-to-detect-if-the-user-is-using-uc-browser-mini/40433933
+
+## on desktop
+    Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 UBrowser/5.4.5426.1034 Safari/537.36
+
+## UC Browser
+Mozilla/5.0 (..) .. UCBrowser/10.7.9.856 U2/1.0.0 ..
+
+## UC Mini with Speed Mode on (enabled by default)
+UCWEB/2.0 (..) .. UCBrowser/10.7.9.856 U2/1.0.0 Mobile
+
+
+# iPad / iphone
+

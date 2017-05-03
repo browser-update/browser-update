@@ -132,6 +132,7 @@ function get_browserx($ua) {
         ["Edge.VV","e"],
         ["OS VV.*like mac","iOS"],
         ["Vivaldi.VV","vivaldi"],
+        ["UCBrowser.VV","uc"],
         ["OPR.VV","o"],
         ["YaBrowser.VV","yandex"],
         ["Chrome.VV","c"],
@@ -152,8 +153,9 @@ function get_browserx($ua) {
         'n'=>'Netscape',
         'c'=>"Chrome",
         'a'=>"Android Browser",
-        'y'=>"Yandex Browser",
-        'v'=>"Vivaldi",
+        'yandex'=>"Yandex Browser",
+        'vivaldi'=>"Vivaldi",
+        'uc'=>"UC Browser",
         'x'=>"other"];
     $id="x";
     foreach($pats as $el) {
@@ -162,7 +164,7 @@ function get_browserx($ua) {
         if(preg_match("#".$pa."#i", $ua, $regs)) {
             $ver=$regs[1];
             $id=$na;
-            if ($id=="vivaldi"||$id=="yandex") { //these browser use semver version numbers, add leading zeros to the minor version
+            if ($id=="vivaldi"||$id=="yandex"||$id=="uc") { //these browser use semver version numbers, add leading zeros to the minor version
                 $parts=explode(".",$ver);        
                 $ver=floatval($parts[0] . "." . str_pad($parts[1], 2, "0", STR_PAD_LEFT));
             }            

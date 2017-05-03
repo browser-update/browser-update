@@ -80,7 +80,10 @@ $uas=[
     ["","Chrome 58","Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36","Windows 10"],
     ["","Edge 14.1","Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/14.14332","Windows 10"],
     ["","Vivaldi 1.10","Mozilla/5.0 (Windows NT 6.1; win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.82 Safari/537.36 vivaldi/1.10.818.44"," Windows 7"],
-    ["","","",""],
+    ["","Vivaldi 1.06","Mozilla/5.0 (Windows NT 6.1; win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.82 Safari/537.36 vivaldi/1.6.818.44"," Windows 7"],
+    ["","Yandex Browser 17.04","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 YaBrowser/17.4.0.3342 Safari/537.36","Windows 10"],    
+    ["","UC Browser 11.03 mobile","Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.0.907 Mobile Safari/537.36","Android 7.0"],
+    ["","UC Browser 9.09 mobile","Mozilla/5.0 (Linux; U; Android 4.2.2; en-us; iris 352E Build/JDQ39) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.9.2.467 U3/0.8.0 Mobile Safari/533.1","Android 4.2.2"],
     ["","","",""]
 ];
 

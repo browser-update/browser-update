@@ -43,7 +43,7 @@ $u_ff="https://www.mozilla.com/firefox/";
 $u_op="https://www.opera.com/";
 $u_ch="https://www.google.com/chrome/browser/desktop/";
 $u_ie=sprintf("https://www.microsoft.com/%s/windows/microsoft-edge",$full_locale_minus);
-
+$u_vivaldi="https://vivaldi.com/";
  
 function brow($name, $url, $vendor, $char, $na=False,$add="",$add2="") {
     global $choiceversion,$ll;
@@ -170,7 +170,9 @@ if ($sys=="Windows") {
         brow("Opera",$u_op,"Opera Software","o");                
         brow("Chrome",$u_ch,"Google","c");
         if (is("Internet Explorer"))
-            brow("Edge",$u_ie,"Microsoft","i",$ver<10);  
+            brow("Edge",$u_ie,"Microsoft","i",$ver<10); 
+        else
+            brow("Vivaldi",$u_vivaldi,"Vivaldi Technologies","vi",False,"<style>.bvi a { background-image: url('/img/big/vi.png'); background-size: 110px auto;}</style>");
         end_browserlist();
     }
 }
@@ -217,6 +219,9 @@ if ($sys=="Android") {
         brow("Firefox",$u_ff,"Mozilla Foundation","f");
         brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
         brow("Chrome",$u_ch,"Google","c",$ver<4.1);
+        if (is("UC Browser"))
+            brow("UC Browser","https://play.google.com/store/apps/details?id=com.UCMobile.intl","UCWeb","uc",False,"<style>.buc a { background-image: url('/img/big/uc.png'); background-size: 110px auto;}</style>");
+
         end_browserlist();
     }
 }
@@ -268,7 +273,6 @@ if ($sys=="iOS") {
 display_browser("Yandex Browser", "https://browser.yandex.com",)
 display_browser("Seamonkey", "http://www.seamonkey-project.org/releases/#2.33")
 display_browser("Maxthon", "http://maxthon.com")
-display_browser("Vivaldi", "https://vivaldi.com/")
 */
 }
 
