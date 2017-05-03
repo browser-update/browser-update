@@ -23,41 +23,34 @@ function cache_output($function,$hours=0.1) {
 	}
 	 return $data;
 }
+function normalize_ua($uastr) {
+    return str_replace("_",".",str_replace(array("/","+","\n","\t")," ", strtolower($uastr)));
+}
 
 $ua_=$_SERVER['HTTP_USER_AGENT'];
-
 if (isset($_GET['emulate']))
     $ua_=$_GET['emulate'];
-$ua_=str_replace("_",".",str_replace(array("/","+","\n","\t")," ", strtolower($ua_)));
+$ua_=normalize_ua($ua_);
 
-function det($str, $version) {
-    global $ua_;
-    if(!preg_match("#".$str."#", $ua_, $regs))
-        return false;
-    return $regs[1]<$version;
-}
 $currentbrowsers=False;
-
-function is_outdated() {
-    global $currentbrowsers;
-    if (!$currentbrowsers) {        
-        $browsers_file = file_get_contents("browsers.json");
+function is_outdated($uastr=False) {
+    global $ua_,$currentbrowsers;
+    if (!$uastr)
+        $uastr=$ua_;
+    if (!$currentbrowsers) {    
+        $browsers_file = file_get_contents(dirname(__FILE__) . "/../browsers.json");
         $currentbrowsers = json_decode($browsers_file, true);
     }
 
     $vs="?(\d+[.]\d+)";
-    if(
-        det("iphone.os.$vs",currentv("ios"))||
-        det("opr.$vs",currentv("o"))||
-        det("opera.*version $vs",currentv("o"))||
-        det("trident.*rv:$vs",currentv("i"))||
-        det("trident.$vs",currentv("i"))||            
-        det("msie.$vs",currentv("i"))||
-        det("edge.$vs",currentv("i"))||
-        det("firefox.$vs",currentv("f"))||
-        det("version.$vs.*safari",currentv("s"))||
-        det("chrome.$vs",currentv("c"))
-    )
+    
+    $bx_=get_browserx($uastr);
+    $browid=$bx_[0];
+    $brown=$bx_[1];
+    $browver=$bx_[2];
+    
+    
+    if($browver<currentv($browid))
         return true;
 }
 
@@ -137,9 +130,10 @@ function get_browserx($ua) {
         ["Trident.VV","io"],
         ["MSIE.VV","i"],
         ["Edge.VV","e"],
-        ["Vivaldi.VV","v"],
+        ["OS VV.*like mac","iOS"],
+        ["Vivaldi.VV","vivaldi"],
         ["OPR.VV","o"],
-        ["YaBrowser.*Chrome.VV","y"],
+        ["YaBrowser.VV","yandex"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
         ["Android.*Webkit.VV","a"],
@@ -168,6 +162,10 @@ function get_browserx($ua) {
         if(preg_match("#".$pa."#i", $ua, $regs)) {
             $ver=$regs[1];
             $id=$na;
+            if ($id=="vivaldi"||$id=="yandex") { //these browser use semver version numbers, add leading zeros to the minor version
+                $parts=explode(".",$ver);        
+                $ver=floatval($parts[0] . "." . str_pad($parts[1], 2, "0", STR_PAD_LEFT));
+            }            
             break;
         }        
     }

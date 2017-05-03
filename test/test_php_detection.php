@@ -29,18 +29,13 @@
         
     }
 </style>
-<div class="noti">      
-</div>
 <table>
-    
-</table>
+<?php
 
-<div>Current browsers:<span id ="dc"></span></div>
+require '../lib/init.php';
 
-
-<script type="text/javascript">
-var uas=[
-    ["Current Browser",false,navigator.userAgent],
+$uas=[
+    ["Current Browser",false,$_SERVER['HTTP_USER_AGENT']],
     ["FF 47","Firefox 47","Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0"],
     ["Android 2.2","Android Browser mobile","Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"],
     ["Blackberry 6+7",false,"Mozilla/5.0 (BlackBerry; U; BlackBerry AAAA; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/X.X.X.X Mobile Safari/534.11+"],
@@ -82,66 +77,28 @@ var uas=[
     ["Android Webview >L","Webview","Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.65 Mobile Safari/537.36","Android 5.1"],
     ["","iOS 9.1 mobile","Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1","iOS 9"],
     ["","Vivaldi 1.09","Mozilla/5.0 (Windows NT 6.1; win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.82 Safari/537.36 vivaldi/1.9.818.44"," Windows 7"],
-    ["","","",""],
-    ["","","",""],
+    ["","Chrome 58","Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36","Windows 10"],
+    ["","Edge 14.1","Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 Edge/14.14332","Windows 10"],
+    ["","Vivaldi 1.10","Mozilla/5.0 (Windows NT 6.1; win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.82 Safari/537.36 vivaldi/1.10.818.44"," Windows 7"],
     ["","","",""],
     ["","","",""]
 ];
 
+foreach ($uas as $ua) {
+    $uastr=$ua[2];
+    $nua=(normalize_ua($uastr));
+    $bx_=get_browserx($nua);
+    $browid=$bx_[0];
+    $brown=$bx_[1];
+    $browver=$bx_[2];
 
-var vs=$buoop.vsf;
-var op= {mobile:true};
-
-for (i in uas) {
-    //console.log();
-    var ua=uas[i];
-    str=ua[2];
-    bb=br=$bu_getBrowser(str);
-    outdated=false;
-    nn="<td class='normal'></td>";
-    if (br.donotnotify)
-        nn="<td class='red'>"+br.donotnotify+"</td>";
-    var name=br.t;
-    if (br.mobile)
-        name+=" mobile";
-    if (name==ua[1] || (br.donotnotify && ua[1]==false))
-        da="<td>"+name+"</td>";   
-    else
-        da="<td class='red'>"+name+"<br/>instead of "+ua[1] +"</td>";  
-    if ((bb.n=="x" || bb.donotnotify!==false || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
-        var notify="<td>"+"</td>";
-    else
-        var notify="<td class='green'>NOTIFY</td>";
-    $("table").append($("<tr><td>"+ua[0]+"</td>"+da+nn+notify+"<td><a href=\"http://browser-update.org/update-browser.html?emulate="+encodeURIComponent(ua[2])+"\">"+ua[2]+"</a></td><td>"+(ua[3]||"")+"</td></tr>"));
+    $sysx=get_system($nua);
+    $sys=$sysx[0];
+    $ver=$sysx[1];
+    $sysn=$sysx[2];   
+    
+    echo '<tr><td>'.$ua[0].'</td><td>'.$ua[1].'</td><td>'.$browid.' '.$brown.' '.$browver.'</td><td>'.(is_outdated($nua)?'':'up-to-date').'</td><td>'.$uastr.'</td></tr>';
 }
 
-$("#dc").html(JSON.stringify(vs));
-
-
-
-/*
-         function iPhoneVersion() {
-          var h = window.screen.height,w = window.screen.width;
-          if (w === 375 && h === 667) {
-            return "6";
-          }
-          else if (w === 414 && h === 736) {
-            return "6+";
-          }
-          else if (w === 320 && h === 568) {
-            return "5";
-          }
-          else if (h <= 480) {
-            return "2-4";
-          }
-          return 'none';
-        }        
-    http://mediag.com/news/popular-screen-resolutions-designing-for-all/
- */
-
-//http://www.learnwebcoding.com/javascript/web_browser_useragent_values.php
-</script>
-
-
-</body>
-</html>
+?>
+</table>
