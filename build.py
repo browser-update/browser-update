@@ -5,10 +5,12 @@
 
 
 #%% download latest translations from crowdin
+#pip install crowdin-cli-py --upgrade
 import subprocess
 subprocess.call(['crowdin-cli-py', 'download'])
 
 #%% Build translations
+#pip install polib
 import polib
 from glob import glob
 paths = glob('lang/*/LC_MESSAGES/')
@@ -62,8 +64,7 @@ write_file("update.show.min.js",minned)
 
 #%% build npm versions of the script
 t_upjs=read_file("update.js")
-t_upjs=t_upjs.replace("""var $buoop = window.$buoop || {};
-$buo($buoop);""","""module.exports = $buo;\n""")
+t_upjs=t_upjs.replace("""$buo(window.$buoop);""","""module.exports = $buo;\n""")
 
 write_file("update.npm.js",t_upjs)
 

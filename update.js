@@ -165,5 +165,4 @@ document.body.appendChild(e);
 
 };
 
-var $buoop = window.$buoop || {};
-$buo($buoop);
+$buo(window.$buoop);
