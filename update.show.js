@@ -4,7 +4,7 @@ var jsv=24;
 var tv=jsv;//"base";
 var ll=op.ll;
 var bb=$bu_getBrowser();
-var burl=op.burl || "https://browser-update.org/";
+var burl=op.burl || "http://browser-update.org/";
 if (!op.url) {
     if (op.l)
         op.url= burl+ll+"/update-browser.html#"+tv+":"+op.pageurl;
@@ -30,7 +30,7 @@ function busprintf() {
 
 
 var t={};
-t.en='<b>Your web browser ({brow_name}) is out of date.</b> For more security, comfort and the best experience on this site: <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>';
+t.en='<b>Your web browser ({brow_name}) is out of date.</b> Update your browser for more security, speed and the best experience on this site. <a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a>';
 
 
 //t.af='';

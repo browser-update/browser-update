@@ -104,7 +104,7 @@ function $bu_getBrowser(ua_str) {
 var $buo = function(op,test) {
 var jsv=24;
 var n = window.navigator,b,vsmin;
-window._buorgres=this.op=op||{};
+window._buorgres=this.op=op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;

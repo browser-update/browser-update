@@ -3,13 +3,13 @@
 
 function $bu_getBrowser(ua_str) {
     var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
-    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",x:"Other"};
+    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",x:"Other"};
     function ignore(reason,pattern){if (RegExp(pattern,"i").test(ua)) return reason;}
     var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
-        ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|UCBrowser|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ZuneWP7|537.85.10") ||
+        ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10") ||
         ignore("android(chrome) web view","; wv");
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     if (ig) 
@@ -20,6 +20,7 @@ function $bu_getBrowser(ua_str) {
         ["FxiOS.VV","f"],
         ["Trident.*rv:VV","i"],
         ["Trident.VV","io"],
+        ["UCBrowser.VV","uc"],
         ["MSIE.VV","i"],
         ["Edge.VV","e"],
         ["Vivaldi.VV","v"],
@@ -39,7 +40,7 @@ function $bu_getBrowser(ua_str) {
             break;
         }        
     }
-    var semver=n==="v"||n==="y";
+    var semver=n==="v"||n==="y"||n==="uc";
     if (semver) {//zero pad semver for easy comparing
         var parts = (RegExp.$1).split('.');
         var v=(parts[0] + "." + ("00".substring(0, 2 - parts[1].length) + parts[1]));
@@ -103,12 +104,12 @@ function $bu_getBrowser(ua_str) {
 var $buo = function(op,test) {
 var jsv=24;
 var n = window.navigator,b,vsmin;
-window._buorgres=this.op=op||{};
+window._buorgres=this.op=op=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:12,f:53,o:44,s:10.1,n:20,c:58,y:17.04,v:1.10};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02};
+var vsakt = {i:12,f:53,o:44,s:10.1,n:20,c:58,y:17.04,v:1.10,uc:11.3};
+var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
@@ -169,7 +170,7 @@ var jsv=24;
 var tv=jsv;//"base";
 var ll=op.ll;
 var bb=$bu_getBrowser();
-var burl=op.burl || "https://browser-update.org/";
+var burl=op.burl || "http://browser-update.org/";
 if (!op.url) {
     if (op.l)
         op.url= burl+ll+"/update-browser.html#"+tv+":"+op.pageurl;
@@ -195,7 +196,7 @@ function busprintf() {
 
 
 var t={};
-t.en='<b>Your web browser ({brow_name}) is out of date.</b> Update your browser for more security, speed and the best experience on this site. <a{up_but}>Update your browser</a> <a{ignore_but}>Ignore</a>';
+t.en='<b>Your web browser ({brow_name}) is out of date.</b> Update your browser for more security, speed and the best experience on this site. <a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a>';
 
 
 //t.af='';
@@ -204,7 +205,7 @@ t.bg='<b>Вашият браузър ({brow_name}) не е актуализир�
 t.ca='El teu navegador (%s) està <b>desactualitzat.</b> Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a%s>Aprèn a actualitzar el navegador</a>';
 t.cs='<b>Váš webový prohlížeč ({brow_name}) je zastaralý .</b> Pro větší bezpečnost, pohodlí a optimální zobrazení této stránky si prosím svůj prohlížeč aktualizujte. <a{up_but}>Aktualizovat prohlížeč</a> <a{ignore_but}>Ignorovat</a>';
 t.da='<b>Din netbrowser ({brow_name}) er forældet.</b> Opdater din browser for mere sikkerhed, komfort og den bedste oplevelse på denne side. <a{up_but}>Opdater browser</a> <a{ignore_but}>Ignorer</a>';
-t.de='<p><b>Ihr Browser ({brow_name}) ist veraltet.</b> Aktualisieren Sie Ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite.</p> <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
+t.de='<b>Ihr Browser ({brow_name}) ist veraltet.</b> <span>Aktualisieren Sie Ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite.</span> <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
 t.el='<b>Η έκδοση του προγράμματος περιήγησής σας ({brow_name}) είναι παλιά.</b> Ενημερώστε τον περιηγητή σας για περισσότερη ασφάλεια, άνεση και την βέλτιστη εμπειρία σε αυτή την ιστοσελίδα. <a{up_but}>Αναβάθμιση περιηγητή</a> <a{ignore_but}>Παράβλεψη</a>';
 t.es='<b>Tu navegador web ({brow_name}) no está actualizado.</b> Actualiza tu navegador para tener más seguridad y comodidad y tener la mejor experiencia en este sitio. <a{up_but}>Actualizar navegador</a> <a{ignore_but}>Ignorar</a>';
 //t.et='';
@@ -254,13 +255,13 @@ div.id="buorg";
 div.className="buorg";
 
 var style='<style>.buorg {background: #FDF2AB no-repeat 14px center url('+burl+'img/small/'+bb.n+'.png);}</style>';
-var style2='<style>.buorg {background-color: #edbc68; background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2); animation: buorgfly 1s ease-out;}\
-    .buorg p { padding: 11px 12px 11px 30px; margin: 0; line-height: 1.7em; }\
-    .buorg-button { text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400; white-space: nowrap; margin: 0 2px; display: inline-block;}\
-    .buorg-update {margin-left: 5px}\
-    .buorg-ignore {background:#edbc68}\
-    @media only screen and (max-width: 700px){.buorg p { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
-    @keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}}</style>';
+var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
+    .buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }\
+    .buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
+    #buorgig{ background-color: #edbc68;}\
+    @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
+    @keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}} \
+    .buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
 
 if (t.indexOf("{brow_name}")===-1) {//legacy style
     t=busprintf(t,bb.t,' id="buorgul" href="'+op.url+'"'+tar);
@@ -279,13 +280,14 @@ else {
         style2 += "<style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}} \</style>";
     }
     else if (op.position === "corner") {
-        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}</style>";
+        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}\
+        </style>";
     }
     else {
         op.addmargin = true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" class="buorg-button buorg-update" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" class="buorg-button buorg-ignore" href=""');
-    div.innerHTML = '<p>' + t + '</p>' + style+style2;
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href=""');
+    div.innerHTML = '<div>' + t + '</div>' + style+style2;
 }
 
 op.text=t;
