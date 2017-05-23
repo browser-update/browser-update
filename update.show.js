@@ -1,5 +1,5 @@
 var $buo_show = function() {
-var op=this.op=window._buorgres;    
+var op=window._buorgres;    
 var jsv=24;
 var tv=jsv;//"base";
 var ll=op.ll;
@@ -132,14 +132,13 @@ if (op.container) {
 else
     document.body.insertBefore(div,document.body.firstChild);
 
-var me=this;
 div.onclick=function(){
-    if (me.op.newwindow)
-        window.open(me.op.url,"_blank");
+    if (op.newwindow)
+        window.open(op.url,"_blank");
     else
-        window.location.href=me.op.url;
-    me.op.setCookie(me.op.reminderClosed);
-    me.op.onclick(me.op);
+        window.location.href=op.url;
+    op.setCookie(op.reminderClosed);
+    op.onclick(op);
     return false;
 };
 try {
@@ -147,9 +146,9 @@ document.getElementById("buorgul").onclick = function(e) {
     e = e || window.event;
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
-    me.op.div.style.display = "none";
-    hm.style.marginTop = me.op.bodymt;    
-    me.op.onclick(me.op);    
+    op.div.style.display = "none";
+    hm.style.marginTop = op.bodymt;    
+    op.onclick(op);    
     return true;
 };
 }
@@ -160,19 +159,17 @@ if (op.addmargin) {
     op.bodymt = hm.style.marginTop;
     hm.style.marginTop = (div.clientHeight)+"px";
 }
-(function(me) {
-    (document.getElementById("buorga")||document.getElementById("buorgig")).onclick = function(e) {
-        e = e || window.event;
-        if (e.stopPropagation) e.stopPropagation();
-        else e.cancelBubble = true;
-        me.op.div.style.display = "none";
-        if (me.op.addmargin)
-            hm.style.marginTop = me.op.bodymt;
-        me.op.onclose(me.op);
-        me.op.setCookie(me.op.reminderClosed);
-        return false;
-    };
-})(me);
+(document.getElementById("buorga")||document.getElementById("buorgig")).onclick = function(e) {
+    e = e || window.event;
+    if (e.stopPropagation) e.stopPropagation();
+    else e.cancelBubble = true;
+    op.div.style.display = "none";
+    if (op.addmargin)
+        hm.style.marginTop = op.bodymt;
+    op.onclose(op);
+    op.setCookie(op.reminderClosed);
+    return false;
+}
 
 if (op.noclose) {
     var el=(document.getElementById("buorga")||document.getElementById("buorgig"));
