@@ -8,3 +8,4 @@ crowdin.yaml
 *.po
 .idea/
 xgettext.*
+*/node_modules/

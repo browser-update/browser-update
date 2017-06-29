@@ -108,7 +108,7 @@ var op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:12,f:53,o:44,s:10.1,n:20,c:58,y:17.04,v:1.10,uc:11.3};
+var vsakt = {i:12,f:54,o:46,s:10.1,n:20,c:59,y:17.04,v:1.10,uc:11.3};
 var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
