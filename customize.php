@@ -80,7 +80,7 @@ T_textdomain('customize');
     // <?php echo T_('URL where the script, that shows the notification, is located. This is only loaded if the user actually has an outdated browser.') . "\n"; ?>
 
     container: document.body, 
-    // <?php echo T_('Element where the notification will be injected.') . "\n"; ?>
+    // <?php echo T_('DOM Element where the notification will be injected.') . "\n"; ?>
 
     api: xxx                        
     // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>

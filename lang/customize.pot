@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: browser-update-customize\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-10 13:56+0100\n"
+"POT-Creation-Date: 2017-09-26 16:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: customize.php:11
+#: customize.php:8 customize.php:15
 msgid "Customize and test"
 msgstr ""
 
-#: customize.php:14
+#: customize.php:18
 msgid "Test the script"
 msgstr ""
 
-#: customize.php:17
+#: customize.php:21
 msgid ""
 "If you open your website with <code>#test-bu</code> appended to the url, the "
 "bar will always show up. Example: <code>http://browser-update.org/#test-bu</"
@@ -33,104 +33,114 @@ msgid ""
 "browser tab."
 msgstr ""
 
-#: customize.php:20
+#: customize.php:24
 msgid "Options"
 msgstr ""
 
-#: customize.php:23
+#: customize.php:27
 msgid "The following options can be passed to the script:"
 msgstr ""
 
-#: customize.php:28
+#: customize.php:35
 msgid ""
 "Specifies browser versions to notify. Negative numbers specify how much "
 "versions behind current version to notify."
 msgstr ""
 
-#: customize.php:31
+#: customize.php:41
 msgid "after how many hours should the message reappear"
 msgstr ""
 
-#: customize.php:32
+#: customize.php:42
 msgid "0 = show all the time"
 msgstr ""
 
-#: customize.php:33
+#: customize.php:45
 msgid "if the user explicitly closes message it reappears after x hours"
 msgstr ""
 
-#: customize.php:34
+#: customize.php:50
 msgid ""
 "callback functions after notification has appeared / was clicked / closed"
 msgstr ""
 
-#: customize.php:38
+#: customize.php:53
 msgid ""
 "set a fixed language for the message, e.g. \"en\". This overrides the "
 "default detection."
 msgstr ""
 
-#: customize.php:39
+#: customize.php:56
 msgid "true = always show the bar (for testing)"
 msgstr ""
 
-#: customize.php:40
+#: customize.php:59
 msgid "custom notification text (html)"
 msgstr ""
 
-#: customize.php:41
+#: customize.php:60
 msgid ""
 "Placeholders {brow_name} will be replaced with the browser name, {up_but} "
 "with contents of the update link tag and {ignore_but} with contents for the "
 "ignore link."
 msgstr ""
 
-#: customize.php:42
+#: customize.php:61
 msgid "Example:"
 msgstr ""
 
-#: customize.php:42
+#: customize.php:61
 msgid ""
 "Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or "
 "&lt;a{ignore_but}&gt;ignore&lt;/a&gt;."
 msgstr ""
 
-#: customize.php:43
+#: customize.php:64
 msgid "custom notification text for language \"xx\""
 msgstr ""
 
-#: customize.php:44
+#: customize.php:65
 msgid "e.g. text_de for german and text_it for italian"
 msgstr ""
 
-#: customize.php:45
+#: customize.php:68
 msgid "open link in new window/tab"
 msgstr ""
 
-#: customize.php:46
+#: customize.php:71
 msgid "the url to go to after clicking the notification"
 msgstr ""
 
-#: customize.php:47
+#: customize.php:74
 msgid "Do not show the \"ignore\" button to close the notification"
 msgstr ""
 
-#: customize.php:48
+#: customize.php:77
 msgid ""
 "Do not show a message if the browser is out of date, just call the onshow "
 "callback function"
 msgstr ""
 
-#: customize.php:49
+#: customize.php:80
+msgid ""
+"URL where the script, that shows the notification, is located. This is only "
+"loaded if the user actually has an outdated browser."
+msgstr ""
+
+#: customize.php:83
+msgid "DOM Element where the notification will be injected."
+msgstr ""
+
+#: customize.php:86
 msgid ""
 "This is the version of the browser-update api to use. Please do not remove."
 msgstr ""
 
-#: customize.php:52
+#: customize.php:90
 msgid "Change the style"
 msgstr ""
 
-#: customize.php:55
+#: customize.php:93
 msgid ""
 "The following CSS rules are applied by the notification. You can overwrite "
 "them in your own CSS. To do so you need to add some more specificity to the "

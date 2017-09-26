@@ -1,6 +1,8 @@
 <?php
 require_once("lib/init.php");
 
+$apiver=5;
+
 //rederict people coming from search engines that have outdated browsers to the update page
 if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])
         &&
@@ -13,7 +15,7 @@ if (preg_match('#(\.|/)(google|bing|yahoo)\.#i',$_SERVER['HTTP_REFERER'])
 }
 
 require_once("lib/lang.php");
-$title=T_("Notify visitors to update their browser");
+$title=T_("Notifies visitors to update their browser");
 include("header.php");
 ?>
     
@@ -100,7 +102,7 @@ include("header.php");
 
 
 <textarea id="f-code" rows="9">&lt;script>
-var $buoop = {api:4};
+var $buoop = {api:<?php echo $apiver?>};
 function $buo_f(){ 
  var e = document.createElement("script"); 
  e.src = "//browser-update.org/update.min.js"; 
@@ -111,78 +113,85 @@ catch(e){window.attachEvent("onload", $buo_f)}
 &lt;/script></textarea>
 <p><?php echo T_('The following browsers will be notified:')?></p>
 <?php
-function printolder($months,$version) {
-    echo sprintf(T_('older than %d months (currently %s)'), $months, '&lt;= '. ( $version));
+function p_dates($browserid,$default) {
+    /*
+    $releases_per_month=array('f'=>7/12,'c'=>8/12,'o'=>8/12,'i'=>1,'s'=>1,'v'=>8/12*0.1);
+    foreach (array(3,6,12,24) as $ms) {
+        p_month($ms,currentv($browserid)-int($ms*$releases_per_month[$browserid]),$ms==-$default);
+    }
+    */
+    $tt=sprintf(T_('Every outdated version'));
+    echo '<option value="'.(-0.01).'"' .($default==-0.01 ? 'selected' : '').'>'.$tt.'</option>';  
+    
+    foreach (array_reverse(range(currentv($browserid)-6,currentv($browserid)-1)) as $v) {
+        p_ver($v,$v==-$default);
+    }
+    foreach (array_reverse(range(1,6)) as $v) {
+        $tt=sprintf(T_('more than %g versions behind (currently <= %g)'),$v,currentv($browserid)-$v);
+        echo '<option value="'.(-$v).'"' .($default==-$v ? 'selected' : '').'>'.$tt.'</option>';
+    }
+}
+
+function p_month($months,$version, $selected=false) {
+    echo '<option value="-'.$months.'m" '.($selected ? 'selected' : '').'>';
+    echo sprintf(T_('older than %g months (currently <=%g)'), $months,  $version);
+    echo '</option>';
+}
+function p_ver($version, $selected=false) {
+    $tt="<= $version";
+    echo '<option value="'.$version.'" '.($selected ? 'selected' : '').'>'.$tt.'</option>';    
 }
 ?>
 <ul id="browserversionchooser">
     <li class="bi">
         <label for="f-i">IE/Edge</label> 
         <select id="f-i" onchange="code()">    
-            <option value="13">&lt;= 13</option>
-            <option value="12">&lt;= 12</option>
-            <option value="11">&lt;= 11</option>
-            <option value="10" selected>&lt;= 10</option>
-            <option value="9">&lt;= 9</option>
-            <option value="8">&lt;= 8</option>
+        <?php 
+            p_dates("i",-5);
+        ?>
         </select>
     </li>
     <li class="bf">
         <label for="f-f">Firefox</label>  
         <select id="f-f" onchange="code()">
-            <option value="-2"><?php printolder(3, currentv("f")-2)?></option>
-            <option value="-4" selected><?php printolder(6, currentv("f")-4)?></option>
-            <option value="-6" ><?php printolder(9, currentv("f")-6)?></option>
-            <option value="-8" ><?php printolder(12, currentv("f")-8)?></option>
-            <option value="40">&lt;= 40</option>
-            <option value="35">&lt;= 35</option>
-            <option value="30">&lt;= 30</option>
-            <option value="25">&lt;= 25</option>
+            <?php 
+                p_dates("f",-4);
+            ?>
         </select>
     </li>
     <li class="bo">
         <label for="f-o">Opera</label> 
         <select id="f-o" onchange="code()">
-            <option value="-2"><?php printolder(3, currentv("o")-2)?></option>
-            <option value="-4" selected><?php printolder(6, currentv("o")-4)?></option>
-            <option value="-6"><?php printolder(9, currentv("o")-6)?></option>
-            <option value="-8"><?php printolder(12, currentv("o")-8)?></option>
-            <option value="30">&lt;= 30</option>
-            <option value="25">&lt;= 25</option>
-            <option value="20">&lt;= 20</option>
-            <option value="15">&lt;= 15</option>
+            <?php 
+                p_dates("o",-4);
+            ?>
         </select>
     </li>
     <li class="bs">
         <label for="f-s">Safari</label>  
         <select id="f-s" onchange="code()">
-            <option value="9">&lt;= 9</option>
-            <option value="8" selected>&lt;= 8</option>
-            <option value="7">&lt;= 7</option>
-            <option value="6">&lt;= 6</option>            
+            <?php
+                p_dates("s",-2);
+            ?>            
         </select>
     </li>
     <li class="bc">
         <label for="f-c">Chrome</label>
         <select id="f-c" onchange="code()">
-            <option value="-2"><?php printolder(3, currentv("c")-2)?></option>
-            <option value="-4" selected><?php printolder(6, currentv("c")-4)?></option>            
-            <option value="-6"><?php printolder(9, currentv("c")-6)?></option>
-            <option value="-8"><?php printolder(12, currentv("c")-8)?></option>  
-            <option value="50">&lt;= 50</option>
-            <option value="40">&lt;= 40</option>
-            <option value="30">&lt;= 30</option>
+            <?php                
+                p_dates("c",-4);
+            ?>
         </select>            
     </li>
 </ul>
 <div>
-    <input type="checkbox" id="opunsecure" onchange="code();"/>
+    <input type="checkbox" checked="checked" id="opunsecure" onchange="code();"/>
     <label for="opunsecure">
-    <?php echo T_('Also notify all browser versions with security vulnerabilities.')?>
+    <?php echo T_('Notify all browser versions with severe security issues.')?>
     </label>
 </div>
 <div>
-    <input type="checkbox" checked="checked" id="opunsupported" onchange="code();"/>
+    <input type="checkbox" id="opunsupported" onchange="code();"/>
     <label for="unsupported">
     <?php echo T_('Also notify all browsers that are not supported by the vendor anymore.')?>
     </label>
@@ -223,6 +232,7 @@ function printolder($months,$version) {
     <?php echo T_('There are plugins for:');?>
     <a href="https://www.npmjs.com/package/browser-update">npm</a>,
     <a href="http://wordpress.org/extend/plugins/wp-browser-update">WordPress</a>,
+    <a href="https://www.npmjs.com/package/vue-browserupdate">vue.js</a>,
     <a href="https://www.npmjs.com/package/ember-cli-browser-update">ember-cli</a>,
     <a href="http://typo3.org/extensions/repository/view/browserupdnotify/current/">TYPO3</a>, 
     <a href="https://contao.org/de/extension-list/view/browser_update.html">Contao</a>,
@@ -314,9 +324,9 @@ function test_bar() {
 }
 //+_get("newos",true)
 function code() {
-    var notify = 'vs:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
+    var notify = 'notify:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = '<'+'script> \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:4}; \n\
+var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:<?php echo $apiver?>}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\
