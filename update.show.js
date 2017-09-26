@@ -1,3 +1,4 @@
+"use strict";
 var $buo_show = function() {
 var op=window._buorgres;    
 var jsv=24;

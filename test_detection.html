@@ -6,7 +6,14 @@
 </head>
 <body>
 
-
+<script>
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+    else {
+        $buoop={}
+    }
+</script>
 <script src="update.js"></script>
 <script src="js/zepto.min.js"></script>
 <style>
@@ -31,6 +38,7 @@
 </style>
 <div class="noti">      
 </div>
+<input id="config" size="100"/>
 <table>
     
 </table>
@@ -89,40 +97,61 @@ var uas=[
     ["","Yandex Browser 17.04","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 YaBrowser/17.4.0.3342 Safari/537.36","Windows 10"],    
     ["","UC Browser 11.03 mobile","Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.0.907 Mobile Safari/537.36","Android 7.0"],
     ["","UC Browser 9.09 mobile","Mozilla/5.0 (Linux; U; Android 4.2.2; en-us; iris 352E Build/JDQ39) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.9.2.467 U3/0.8.0 Mobile Safari/533.1","Android 4.2.2"],
-    ["","","",""]
+    ["","Safari 6.1","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1 Safari/537.78.2","MacOS 10.8"],
+    ["","Safari 6.1","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.78.2 (KHTML, like Gecko) Version/6.1.6 Safari/537.78.2","MacOS 10.7"],
+    ["","","",""],
+    ["","","",""]   
 ];
+$("#config").val(decodeURIComponent(window.location.hash.substr(1)));
+function test() {
+
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+    else {
+        $buoop={}
+    }
+    
+    $buo($buoop);
+    
+    var vs=$buoop.vsf;
+    var op= {mobile:true};
+    $("table").html("<tr><td>Title</td><td>Detected as</td><td>detection note</td><td>notify</td><td>US string</td><td>system</td></tr>");
+    
+    for (i in uas) {
+        //console.log();
+        var ua=uas[i];
+        str=ua[2];
+        bb=br=$bu_getBrowser(str);
+        outdated=false;
+        nn="<td class='normal'></td>";
+        if (br.donotnotify)
+            nn="<td class='red'>"+br.donotnotify+"</td>";
+        var name=br.t;
+        if (br.mobile)
+            name+=" mobile";
+        if (name==ua[1] || (br.donotnotify && ua[1]==false))
+            da="<td>"+name+"</td>";   
+        else
+            da="<td class='red'>"+name+"<br/>instead of "+ua[1] +"</td>";  
+        if ((bb.n=="x" || bb.donotnotify!==false || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
+            var notify="<td>"+"</td>";
+        else
+            var notify="<td class='green'>NOTIFY</td>";
+        $("table").append($("<tr><td>"+ua[0]+"</td>"+da+nn+notify+"<td><a href=\"http://browser-update.org/update-browser.html?emulate="+encodeURIComponent(ua[2])+"\">"+ua[2]+"</a></td><td>"+(ua[3]||"")+"</td></tr>"));
+    }
+
+    $("#dc").html(JSON.stringify(vs));
 
 
-var vs=$buoop.vsf;
-var op= {mobile:true};
-
-for (i in uas) {
-    //console.log();
-    var ua=uas[i];
-    str=ua[2];
-    bb=br=$bu_getBrowser(str);
-    outdated=false;
-    nn="<td class='normal'></td>";
-    if (br.donotnotify)
-        nn="<td class='red'>"+br.donotnotify+"</td>";
-    var name=br.t;
-    if (br.mobile)
-        name+=" mobile";
-    if (name==ua[1] || (br.donotnotify && ua[1]==false))
-        da="<td>"+name+"</td>";   
-    else
-        da="<td class='red'>"+name+"<br/>instead of "+ua[1] +"</td>";  
-    if ((bb.n=="x" || bb.donotnotify!==false || bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) ))
-        var notify="<td>"+"</td>";
-    else
-        var notify="<td class='green'>NOTIFY</td>";
-    $("table").append($("<tr><td>"+ua[0]+"</td>"+da+nn+notify+"<td><a href=\"http://browser-update.org/update-browser.html?emulate="+encodeURIComponent(ua[2])+"\">"+ua[2]+"</a></td><td>"+(ua[3]||"")+"</td></tr>"));
 }
 
-$("#dc").html(JSON.stringify(vs));
+test();
 
 
-
+window.onhashchange = function() { 
+    test();
+}
 /*
          function iPhoneVersion() {
           var h = window.screen.height,w = window.screen.width;
