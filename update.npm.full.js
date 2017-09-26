@@ -2,9 +2,9 @@
 //it is recommended to directly link to this file because we update the detection code
 
 function $bu_getBrowser(ua_str) {
-    var n,t,ua=ua_str||navigator.userAgent,donotnotify=false;
+    var n,ua=ua_str||navigator.userAgent,donotnotify=false;
     var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",x:"Other"};
-    function ignore(reason,pattern){if (RegExp(pattern,"i").test(ua)) return reason;}
+    function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;}
     var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
@@ -31,8 +31,7 @@ function $bu_getBrowser(ua_str) {
         ["Version.VV.*Safari","s"],
         ["Safari.VV","so"],
         ["Opera.*Version.VV","o"],
-        ["Opera.VV","o"],
-        ["Netscape.VV","n"]
+        ["Opera.VV","o"]
     ];
     for (var i=0; i < pats.length; i++) {
         if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d+)"),"i"))) {
@@ -76,17 +75,17 @@ function $bu_getBrowser(ua_str) {
     }
 
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==45 || Math.round(v)==52))
+    if (n==="f" && Math.round(v)===52)
         donotnotify="ESR";
 
-    if (n=="so") {
+    if (n==="so") {
         v=4.0;
         n="s";
     }
-    if (n=="i" && v==7 && window.XDomainRequest) {
+    if (n==="i" && v===7 && window.XDomainRequest) {
         v=8;
     }
-    if (n=="io") {
+    if (n==="io") {
         n="i";
         if (v>6) v=11;
         else if (v>5) v=10;
@@ -95,7 +94,7 @@ function $bu_getBrowser(ua_str) {
         else if (v>3) v=7;
         else v=9;
     }
-    if (n=="e") {
+    if (n==="e") {
         return {n:"i",v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
     }
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
@@ -104,25 +103,29 @@ function $bu_getBrowser(ua_str) {
 var $buo = function(op,test) {
 var jsv=24;
 var n = window.navigator,b,vsmin;
-var op = window._buorgres=op||{};
+op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:12,f:54,o:46,s:10.1,n:20,c:59,y:17.04,v:1.10,uc:11.3};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
+var vsakt = {i:15,f:55,o:47,s:11,c:61,y:17.09,v:1.11,uc:11.4};
+var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2};
-var myvs=op.vs||{};
 var vs =op.vs||vsdefault;
+var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
 for (b in vsdefault) {
     if (!vs[b])
-        vs[b]=vsdefault[b];    
-    if (vsakt[b] && vs[b]>=vsakt[b])
-        vs[b]=vsakt[b]-0.2;
-    if (vsakt[b] && vs[b]<0)
-        vs[b]=vsakt[b]+vs[b];
+        vs[b]=vsdefault[b]
+    if (vsakt[b]) {
+        if (/m/.test(vs[b]))
+            vs[b]=vsakt[b]+vs[b].replace('m','')*releases_per_month[b]
+        if (vs[b]>=vsakt[b])
+            vs[b]=vsakt[b]-0.2
+        else if (vs[b]<0)
+            vs[b]=vsakt[b]+vs[b]
+    }
     if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
 }
@@ -173,9 +176,9 @@ var bb=$bu_getBrowser();
 var burl=op.burl || "http://browser-update.org/";
 if (!op.url) {
     if (op.l)
-        op.url= burl+ll+"/update-browser.html#"+tv+":"+op.pageurl;
+        op.url= burl+ll+"/update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
     else
-        op.url= burl+"update-browser.html#"+tv+":"+op.pageurl;
+        op.url= burl+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
 }
 var frac=1000;
 if (Math.random()*frac<1 && !op.test && !op.betatest) {
@@ -215,7 +218,7 @@ t.fr='<b>Votre navigateur web ({brow_name}) n\'est pas à jour.</b> Mettez votre
 t.ga='Tá an líonléitheoir agat (%s) <b>as dáta.</b> Tá <b>laigeachtaí slándála</b> a bhfuil ar eolas ann agus b\'fhéidir <b>nach taispeánfaidh sé gach gné</b> den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a nuashonrú</a>';
 t.gl = 'O seu navegador (%s) está <b>desactualizado.</b> Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>';
 t.he = 'הדפדפן שלך (%s) <b>אינו מעודכן.</b> יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
-t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </ b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
+t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
 //t.hr='';
 t.hu='<b>Az ön ({brow_name}) böngészője elavult.</b> Frissítse a böngészőjét több biztonság, kényelem és a legjobb felhasználói élmény érdekében ezen az oldalon. <a{up_but}>Böngésző frissítése</a> <a{ignore_but}>Mellőzés</a>';
 t.id='<b>Peramban web Anda ({brow_name}) sudah lawas.</b> Perbarui peramban Anda untuk pengalaman terbaik yang lebih aman dan nyaman di situs ini. <a{up_but}>Perbarui peramban</a> <a{ignore_but}>Abaikan</a>';
@@ -255,33 +258,32 @@ div.id="buorg";
 div.className="buorg";
 
 var style='<style>.buorg {background: #FDF2AB no-repeat 14px center url(https://browser-update.org/img/small/'+bb.n+'.png);}</style>';
-var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
-    .buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }\
-    .buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
-    #buorgig{ background-color: #edbc68;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
-    @keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}} \
-    .buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
+var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}'
+    +'.buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }'
+    +'.buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}'
+    +'#buorgig{ background-color: #edbc68;}'
+    +'@media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}'
+    +'@keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}}'
+    +'.buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
 
 if (t.indexOf("{brow_name}")===-1) {//legacy style
     t=busprintf(t,bb.t,' id="buorgul" href="'+op.url+'"'+tar);
 
-    style += "<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}\
-    .buorg div { padding:5px 36px 5px 40px; }\
-    .buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}\
-    #buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
-    #buorga{display:block;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";
+    style += '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}'
+    +'.buorg div { padding:5px 36px 5px 40px; }'
+    +'.buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}'
+    +'#buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}'
+    +'#buorga{display:block;}'
+    +'@media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>';
     div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorga">&times;</a></div></div>'+style;
     op.addmargin=true;
 }
 else {
     if (op.position === "bottom") {
-        style2 += "<style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}} \</style>";
+        style2 += '<'+'style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}}</style>';
     }
     else if (op.position === "corner") {
-        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}\
-        </style>";
+        style2 += '<'+'style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}</style>';
     }
     else {
         op.addmargin = true;

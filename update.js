@@ -32,8 +32,7 @@ function $bu_getBrowser(ua_str) {
         ["Version.VV.*Safari","s"],
         ["Safari.VV","so"],
         ["Opera.*Version.VV","o"],
-        ["Opera.VV","o"],
-        ["Netscape.VV","n"]
+        ["Opera.VV","o"]
     ];
     for (var i=0; i < pats.length; i++) {
         if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d+)"),"i"))) {
@@ -77,17 +76,17 @@ function $bu_getBrowser(ua_str) {
     }
 
     //do not notify firefox ESR
-    if (n=="f" && (Math.round(v)==45 || Math.round(v)==52))
+    if (n==="f" && Math.round(v)===52)
         donotnotify="ESR";
 
-    if (n=="so") {
+    if (n==="so") {
         v=4.0;
         n="s";
     }
-    if (n=="i" && v==7 && window.XDomainRequest) {
+    if (n==="i" && v===7 && window.XDomainRequest) {
         v=8;
     }
-    if (n=="io") {
+    if (n==="io") {
         n="i";
         if (v>6) v=11;
         else if (v>5) v=10;
@@ -96,7 +95,7 @@ function $bu_getBrowser(ua_str) {
         else if (v>3) v=7;
         else v=9;
     }
-    if (n=="e") {
+    if (n==="e") {
         return {n:"i",v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
     }
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
@@ -105,25 +104,29 @@ function $bu_getBrowser(ua_str) {
 var $buo = function(op,test) {
 var jsv=24;
 var n = window.navigator,b,vsmin;
-var op = window._buorgres=op||{};
+op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:12,f:54,o:46,s:10.1,n:20,c:59,y:17.04,v:1.10,uc:11.3};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,n:12,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
+var vsakt = {i:15,f:55,o:47,s:11,c:61,y:17.09,v:1.11,uc:11.4};
+var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2};
-var myvs=op.vs||{};
 var vs =op.vs||vsdefault;
+var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
 for (b in vsdefault) {
     if (!vs[b])
-        vs[b]=vsdefault[b];    
-    if (vsakt[b] && vs[b]>=vsakt[b])
-        vs[b]=vsakt[b]-0.2;
-    if (vsakt[b] && vs[b]<0)
-        vs[b]=vsakt[b]+vs[b];
+        vs[b]=vsdefault[b]
+    if (vsakt[b]) {
+        if (/m/.test(vs[b]))
+            vs[b]=vsakt[b]+vs[b].replace('m','')*releases_per_month[b]
+        if (vs[b]>=vsakt[b])
+            vs[b]=vsakt[b]-0.2
+        else if (vs[b]<0)
+            vs[b]=vsakt[b]+vs[b]
+    }
     if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
 }

@@ -8,9 +8,9 @@ var bb=$bu_getBrowser();
 var burl=op.burl || "http://browser-update.org/";
 if (!op.url) {
     if (op.l)
-        op.url= burl+ll+"/update-browser.html#"+tv+":"+op.pageurl;
+        op.url= burl+ll+"/update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
     else
-        op.url= burl+"update-browser.html#"+tv+":"+op.pageurl;
+        op.url= burl+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
 }
 var frac=1000;
 if (Math.random()*frac<1 && !op.test && !op.betatest) {
@@ -50,7 +50,7 @@ t.fr='<b>Votre navigateur web ({brow_name}) n\'est pas à jour.</b> Mettez votre
 t.ga='Tá an líonléitheoir agat (%s) <b>as dáta.</b> Tá <b>laigeachtaí slándála</b> a bhfuil ar eolas ann agus b\'fhéidir <b>nach taispeánfaidh sé gach gné</b> den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a nuashonrú</a>';
 t.gl = 'O seu navegador (%s) está <b>desactualizado.</b> Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>';
 t.he = 'הדפדפן שלך (%s) <b>אינו מעודכן.</b> יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
-t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </ b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
+t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
 //t.hr='';
 t.hu='<b>Az ön ({brow_name}) böngészője elavult.</b> Frissítse a böngészőjét több biztonság, kényelem és a legjobb felhasználói élmény érdekében ezen az oldalon. <a{up_but}>Böngésző frissítése</a> <a{ignore_but}>Mellőzés</a>';
 t.id='<b>Peramban web Anda ({brow_name}) sudah lawas.</b> Perbarui peramban Anda untuk pengalaman terbaik yang lebih aman dan nyaman di situs ini. <a{up_but}>Perbarui peramban</a> <a{ignore_but}>Abaikan</a>';
@@ -90,33 +90,32 @@ div.id="buorg";
 div.className="buorg";
 
 var style='<style>.buorg {background: #FDF2AB no-repeat 14px center url(https://browser-update.org/img/small/'+bb.n+'.png);}</style>';
-var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}\
-    .buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }\
-    .buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}\
-    #buorgig{ background-color: #edbc68;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}\
-    @keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}} \
-    .buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
+var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}'
+    +'.buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }'
+    +'.buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}'
+    +'#buorgig{ background-color: #edbc68;}'
+    +'@media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; text-indent: 22px;line-height: 1.3em;}.buorg {background-position: 9px 8px;}}'
+    +'@keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}}'
+    +'.buorg { animation-name: buorgfly; animation-duration: 1s; animation-timing-function: ease-out;}</style>';
 
 if (t.indexOf("{brow_name}")===-1) {//legacy style
     t=busprintf(t,bb.t,' id="buorgul" href="'+op.url+'"'+tar);
 
-    style += "<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}\
-    .buorg div { padding:5px 36px 5px 40px; }\
-    .buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}\
-    #buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}\
-    #buorga{display:block;}\
-    @media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>";
+    style += '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}'
+    +'.buorg div { padding:5px 36px 5px 40px; }'
+    +'.buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}'
+    +'#buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}'
+    +'#buorga{display:block;}'
+    +'@media only screen and (max-width: 700px){.buorg div { padding:5px 15px 5px 9px; }}</style>';
     div.innerHTML= '<div>'+t+'<div id="buorgclose"><a id="buorga">&times;</a></div></div>'+style;
     op.addmargin=true;
 }
 else {
     if (op.position === "bottom") {
-        style2 += "<style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}} \</style>";
+        style2 += '<'+'style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}}</style>';
     }
     else if (op.position === "corner") {
-        style2 += "<style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}\
-        </style>";
+        style2 += '<'+'style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}</style>';
     }
     else {
         op.addmargin = true;

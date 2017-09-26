@@ -31,10 +31,11 @@ T_textdomain('customize');
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <pre><code class="javascript">$buoop = {
-    vs: {i:8,f:25,o:17,s:9,c:22},  
+    notify: {i:8,f:25,o:17,s:9,c:22},  
     // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
     // f:22 ---> Firefox <= 22
     // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
+    // c:"-5m" ---> Chrome versions which are older than 3 months
 
     reminder: 24,                  
     // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
