@@ -109,12 +109,12 @@ var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserL
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
 var vsakt = {i:15,f:55,o:47,s:11,c:61,y:17.09,v:1.11,uc:11.4};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
+var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2};
-var vs =op.vs||vsdefault;
+var vs =op.notify||op.vs||vsdefault;
 var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
 for (b in vsdefault) {
     if (!vs[b])

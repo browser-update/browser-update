@@ -1,5 +1,6 @@
 //(c)2017, MIT Style License <browser-update.org/LICENSE.txt>
 //it is recommended to directly link to this file because we update the detection code
+"use strict";
 
 function $bu_getBrowser(ua_str) {
     var n,ua=ua_str||navigator.userAgent,donotnotify=false;
@@ -108,12 +109,12 @@ var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserL
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
 var vsakt = {i:15,f:55,o:47,s:11,c:61,y:17.09,v:1.11,uc:11.4};
-var vsdefault = {i:-2,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
+var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
     vsmin={i:8,f:5,o:12.5,s:6.2};
-var vs =op.vs||vsdefault;
+var vs =op.notify||op.vs||vsdefault;
 var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
 for (b in vsdefault) {
     if (!vs[b])
@@ -167,6 +168,7 @@ $buo_show();
 
 module.exports = $buo;
 
+"use strict";
 var $buo_show = function() {
 var op=window._buorgres;    
 var jsv=24;
@@ -217,7 +219,7 @@ t.fi='<b>Selaimesi ({brow_name}) on vanhentunut.</b> Päivitä selaimesi paranta
 t.fr='<b>Votre navigateur web ({brow_name}) n\'est pas à jour.</b> Mettez votre navigateur à jour pour plus de sécurité, de confort et une expérience optimale sur ce site. <a{up_but}>Mettre le navigateur à jour</a> <a{ignore_but}>Ignorer</a>';
 t.ga='Tá an líonléitheoir agat (%s) <b>as dáta.</b> Tá <b>laigeachtaí slándála</b> a bhfuil ar eolas ann agus b\'fhéidir <b>nach taispeánfaidh sé gach gné</b> den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a nuashonrú</a>';
 t.gl = 'O seu navegador (%s) está <b>desactualizado.</b> Ten coñecidos <b>fallos de seguranza</b> e podería <b>non mostrar tódalas características</b> deste e outros sitios web. <a%s>Aprenda como pode actualizar o seu navegador</a>';
-t.he = 'הדפדפן שלך (%s) <b>אינו מעודכן.</b> יש לו <b>בעיות אבטחה ידועות</b> ועשוי <b>לא להציג את כל התכונות</b> של אתר זה ואתרים אחרים. <a%s>למד כיצד לעדכן את הדפדפן שלך</a>';
+t.he = 'הדפדפן שלך<b>הדפדפן שלך ({brow_name}) אינו מעודכן</b>. עדכן את הדפדפן שלך בשביל אבטחה טובה יותר, נוחיות והחוויה הטובה ביותר באתר הזה. <a{up_but}>עדכן דפדפן</a> <a{ignore_but}>התעלם</a>';
 t.hi='यह वेबसाइट आपको याद दिलाना चाहती हैं: आपका ब्राउज़र (%s) <b> आउट ऑफ़ डेट </b> हैं। <a%s> और अधिक सुरक्षा, आराम और इस साइट पर सबसे अच्छा अनुभव करने लिए आपके ब्राउज़र को अपडेट करें</a>।';
 //t.hr='';
 t.hu='<b>Az ön ({brow_name}) böngészője elavult.</b> Frissítse a böngészőjét több biztonság, kényelem és a legjobb felhasználói élmény érdekében ezen az oldalon. <a{up_but}>Böngésző frissítése</a> <a{ignore_but}>Mellőzés</a>';
