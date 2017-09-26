@@ -2,6 +2,7 @@ dev/
 /config.php
 ads.php
 .spyderproject
+.spyproject
 update.min.js
 crowdin.yaml
 *.mo

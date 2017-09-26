@@ -60,5 +60,5 @@ browsers_m
 #%%
 import json
 j={"current":{"desktop":browsers_d,"mobile":browsers_m}}
-with open("browsers.json", 'w') as f:
+with open("../browsers.json", 'w') as f:
     json.dump(j, f, sort_keys=True, indent=4, separators=(',', ': '))  

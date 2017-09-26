@@ -68,7 +68,6 @@ t_upjs=t_upjs.replace("""$buo(window.$buoop);""","""module.exports = $buo;\n""")
 
 write_file("update.npm.js",t_upjs)
 
-
 #combine both files into a single one
 t_upjs=t_upjs.replace("""var e=document.createElement("script");
 e.src = op.jsshowurl||(/file:/.test(location.href) && "http://browser-update.org/update.show.min.js") || "//browser-update.org/update.show.min.js";
@@ -78,6 +77,12 @@ document.body.appendChild(e);
 t_showjs=read_file("update.show.js")
 t_showjs=t_showjs.replace("""$buo_show();""","")
 write_file("update.npm.full.js",t_upjs+t_showjs)
+
+
+#build cloudflare versions
+t_upjs=t_upjs.replace("""module.exports = $buo;\n""","")
+
+write_file("../bup_private/cloudflare app/source/update.cloudflare.js",t_upjs+t_showjs)
 
 
 #%% publish to npm

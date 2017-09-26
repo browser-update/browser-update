@@ -84,6 +84,9 @@ $uas=[
     ["","Yandex Browser 17.04","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 YaBrowser/17.4.0.3342 Safari/537.36","Windows 10"],    
     ["","UC Browser 11.03 mobile","Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.0.907 Mobile Safari/537.36","Android 7.0"],
     ["","UC Browser 9.09 mobile","Mozilla/5.0 (Linux; U; Android 4.2.2; en-us; iris 352E Build/JDQ39) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 UCBrowser/9.9.2.467 U3/0.8.0 Mobile Safari/533.1","Android 4.2.2"],
+    ["","Safari 8.0","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Version/8.0.8 Safari/600.8.9 ","OS X 10.10"],
+    ["","","",""],
+    ["","","",""],
     ["","","",""]
 ];
 

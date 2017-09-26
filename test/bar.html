@@ -28,7 +28,7 @@ if (window.location.hash.length>5) {
     $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
 }
 
-$buoop.jsshowurl="update.show.js";
+$buoop.jsshowurl="../update.show.js";
 
 //test attaching to a custom elemebt
 //$buoop.container=document.getElementById('container');
@@ -58,7 +58,7 @@ function boo(xx) {
     <div id="options"></div>
 </div>
 
-<script src="update.js"></script>
+<script src="../update.js"></script>
 <script type="text/javascript">
 document.getElementById('options').innerHTML=JSON.stringify($buoop);    
     
