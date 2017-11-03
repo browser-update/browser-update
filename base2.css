@@ -286,13 +286,6 @@ h2  {
 	margin: 0;
         padding-left: 25px;
 }
-.generate #browserversionchooser label {
-    width: 55px;
-}
-.generate label {
-	display: inline-block;
-	max-width: 90%;
-}
 
 .generate textarea {
 	display: block;
