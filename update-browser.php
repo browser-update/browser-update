@@ -194,7 +194,7 @@ if ($sys=="MacOS") {
     brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
     brow("Opera",$u_op,"Opera Software","o",$ver<9);
     brow("Chrome",$u_ch,"Google","c",$ver<9);            
-    brow("Safari",$u_sa,"Apple","s",$ver<10);
+    brow("Safari",$u_sa,"Apple","s",$ver<11);
     end_browserlist();
 }
 if ($sys=="Android") {
@@ -209,7 +209,7 @@ if ($sys=="Android") {
 
     if ($ver<4.0) {
         $choiceversion="osup";
-        m_ancient_os("Android");
+        m_ancient_os("Android","https://support.google.com/nexus/answer/4457705");
     }
     else {
         if (is("Android Browser"))
