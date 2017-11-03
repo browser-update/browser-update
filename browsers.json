@@ -38,7 +38,7 @@
       "ios": 9
     },
     "s": {
-      "macos": 13
+      "macos": 11
     },
     "y": {
       "android": 4.1,
@@ -134,12 +134,61 @@
   },
   "infos": {
       "samsung": {
+        "name": "Samsung Internet",
+        "vendor": "Samsung",
+        "name_ko":"삼성 인터넷",
         "releases": "http://developer.samsung.com/internet/android/releases",
         "dev docs": "http://developer.samsung.com/internet",
         "apk": "https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-internet-for-android/",
-        "ua string": "http://developer.samsung.com/internet/user-agent-string-format",
+        "ua string doc": "http://developer.samsung.com/internet/user-agent-string-format",
         "example ua string": "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
         "download": "https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser"
+    },
+    "f": {
+        "name": "Firefox",
+        "vendor": "Mozilla Foundation",
+        "security bulletins": "https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/",
+        "ua string doc": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox",
+        "requirements": "https://www.mozilla.org/en-US/firefox/56.0.2/system-requirements/"
+    },
+    "c": {
+        "name": "Chrome",
+        "vendor": "Google",
+        "core": "Chromium",
+        "engine": "Blink",
+        "cve": "https://www.cvedetails.com/vulnerability-list/vendor_id-1224/product_id-15031/opec-1/Google-Chrome.html",
+        "releases": "https://chromereleases.googleblog.com/",
+        "requirements": "https://www.google.de/chrome/browser/desktop/index.html"
+    },
+    "o": {
+        "name": "Opera",
+        "vendor": "Opera Software",
+        "core": "Chromium",
+        "engine": "Blink",
+        "releases":"https://www.opera.com/docs/history/"
+    },
+    "s": {
+        "name": "Safari",
+        "vendor": "Apple",
+        "engine": "Webkit",
+        "security bulletins":"https://support.apple.com/de-de/HT201222",
+        "requirements":"https://en.wikipedia.org/wiki/Safari_version_history"
+    },
+    "y": {
+        "name": "Yandex Browser",
+        "name_ru": "Яндекс.Браузер",
+        "vendor": "Yandex",
+        "vendor_ru": "Яндекс",
+        "security bulletins":"https://browser.yandex.com/security/changelogs/",
+        "core": "Chromium",
+        "engine": "Blink"        
+    },
+    "e": {
+        "name":"Edge",
+        "vendor":"Microsoft",
+        "core": "EdgeHTML",
+        "security bulletins":["https://technet.microsoft.com/de-de/security/bulletins","https://portal.msrc.microsoft.com/en-US/security-guidance"],
+        "cve":"http://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-32367/Microsoft-Edge.html"
     }
   }
 }
