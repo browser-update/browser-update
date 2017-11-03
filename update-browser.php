@@ -200,8 +200,10 @@ if ($sys=="MacOS") {
 if ($sys=="Android") {
     $u_ff="https://play.google.com/store/apps/details?id=org.mozilla.firefox";
     $u_op="https://play.google.com/store/apps/details?id=com.opera.browser";
-    $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";
-
+    $u_ch="https://play.google.com/store/apps/details?id=com.android.chrome";    
+    $u_samsung="https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser";
+    $u_uc="https://play.google.com/store/apps/details?id=com.UCMobile.intl";
+        
     if ($ver<1)#old firefox did not give a version info
         $ver="4.1";
 
@@ -220,7 +222,9 @@ if ($sys=="Android") {
         brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
         brow("Chrome",$u_ch,"Google","c",$ver<4.1);
         if (is("UC Browser"))
-            brow("UC Browser","https://play.google.com/store/apps/details?id=com.UCMobile.intl","UCWeb","uc",False,"<style>.buc a { background-image: url('/img/big/uc.png'); background-size: 110px auto;}</style>");
+            brow("UC Browser",$u_uc,"UCWeb","uc",False,"<style>.buc a { background-image: url('/img/big/uc.png'); background-size: 110px auto;}</style>");
+        if (is("Samsung Internet"))
+            brow("Samsung Internet",$u_samsung,"Samsung","samsung",$ver<5.0,"<style>.bsamsung a { background-image: url('/img/big/samsung.png'); background-size: 110px auto;}</style>");
 
         end_browserlist();
     }

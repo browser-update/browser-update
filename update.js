@@ -4,13 +4,13 @@
 
 function $bu_getBrowser(ua_str) {
     var n,ua=ua_str||navigator.userAgent,donotnotify=false;
-    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',n:'Netscape',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",x:"Other"};
+    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other"};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;}
     var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
         ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
-        ignore("niche browser","Dorado|Whale|SamsungBrowser|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10") ||
+        ignore("niche browser","Dorado|Whale|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobile without upgrade path or landing page","kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10") ||
         ignore("android(chrome) web view","; wv");
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     if (ig) 
@@ -27,6 +27,7 @@ function $bu_getBrowser(ua_str) {
         ["Vivaldi.VV","v"],
         ["OPR.VV","o"],
         ["YaBrowser.VV","y"],
+        ["SamsungBrowser.VV","samsung"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
         ["Version.VV.*Safari","s"],
@@ -108,8 +109,8 @@ op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:15,f:55,o:47,s:11,c:61,y:17.09,v:1.11,uc:11.4};
-var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03};
+var vsakt = {i:15,f:56,o:48,s:11,c:62,y:17.09,v:1.12,uc:11.4,samsung:6.2};
+var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
