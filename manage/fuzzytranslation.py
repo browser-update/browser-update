@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 12 14:21:31 2016
-
-@author: TH
+replacing new strings with old translations
 """
-#%%
 import polib
-#%%
 
 #old (translated) string
 #new renamed string
@@ -78,6 +74,7 @@ valid_entries = [e for e in po if not e.obsolete]
 for entry in valid_entries:
     print(entry.msgid)
 #%%
+
 
 #%% getting files
 from glob import glob
@@ -158,50 +155,3 @@ for p in paths:
     po.save()
     
     po.save_as_mofile('lang/%s/LC_MESSAGES/customize.mo'%p)
-
-
-#%% extract strings
-import subprocess
-subprocess.call(['xgettext',
-                 "header.php", 
-                 "footer.php", 
-                 "update-browser.php",
-                 "--keyword=T_gettext", 
-                 "--keyword=T_", 
-                 "--keyword=T_ngettext:1,2", 
-                 "--from-code=utf-8", 
-                 "--package-name=browser-update-update", 
-                 "--language=PHP",
-                 "--output=lang/update.pot"])
-#%% extract site strings
-import subprocess
-subprocess.call(['xgettext',
-                 "blog.php",
-                 "stat.php",
-                 "index.php", 
-                 "contact.php",
-                 "update.testing.php", 
-                 "--keyword=T_gettext", 
-                 "--keyword=T_", 
-                 "--keyword=T_ngettext:1,2", 
-                 "--from-code=utf-8", 
-                 "--package-name=browser-update-site", 
-                 "--language=PHP",
-                 "--output=lang/site.pot"])     
-#%% extract customize strings
-import subprocess
-subprocess.call(['xgettext',
-                 "customize.php", 
-                 "--keyword=T_gettext", 
-                 "--keyword=T_", 
-                 "--keyword=T_ngettext:1,2", 
-                 "--from-code=utf-8", 
-                 "--package-name=browser-update-customize", 
-                 "--language=PHP",
-                 "--output=lang/customize.pot"])                 
-#%% upload new sources for translations
-import subprocess
-subprocess.call(['crowdin-cli-py', 'upload', 'sources'])
-
-#subprocess.call(['java', '-jar', 'manage\crowdin-cli.jar', 'upload', 'sources','--config','manage\crowdin.yaml'])
-#subprocess.call(['java', '-jar', 'manage\crowdin-cli.jar', 'upload', 'sources'])
