@@ -135,6 +135,7 @@ function get_browserx($ua) {
         ["UCBrowser.VV","uc"],
         ["OPR.VV","o"],
         ["YaBrowser.VV","yandex"],
+        ["SamsungBrowser.VV","samsung"],
         ["Chrome.VV","c"],
         ["Firefox.VV","f"],
         ["Android.*Webkit.VV","a"],
@@ -154,6 +155,7 @@ function get_browserx($ua) {
         'c'=>"Chrome",
         'a'=>"Android Browser",
         'yandex'=>"Yandex Browser",
+        'samsung'=>"Samsung Internet",
         'vivaldi'=>"Vivaldi",
         'uc'=>"UC Browser",
         'x'=>"other"];
