@@ -17,7 +17,7 @@ Install it using npm:
 
     npm install browser-update --save
 
-And load it:
+And load it (using browserify, webpack or similar):
 
 ````js
 var browserUpdate = require('browser-update');
