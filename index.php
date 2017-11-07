@@ -187,8 +187,8 @@ function p_ver($version, $selected=false) {
     </li>
 </ul>
 <div>
-    <input type="checkbox" checked="checked" id="opunsecure" onchange="code();"/>
-    <label for="opunsecure">
+    <input type="checkbox" checked="checked" id="opinsecure" onchange="code();"/>
+    <label for="opinsecure">
     <?php echo T_('Notify all browser versions with severe security issues.')?>
     </label>
 </div>
@@ -386,7 +386,7 @@ function test_bar() {
 function code() {
     var notify = 'notify:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = '<'+'script> \n\
-var $buoop = {'+notify+_get("unsecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:<?php echo $apiver?>}; \n\
+var $buoop = {'+notify+_get("insecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:<?php echo $apiver?>}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\

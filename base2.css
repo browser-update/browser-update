@@ -513,8 +513,9 @@ a.l {
     display: block;
     padding: 4px;
 
-    padding-top: 110px;    
+    padding-top: 117px;    
     background-repeat: no-repeat;
+    background-size: 110px auto;
     background-position: center 4px;
     text-decoration: none;
     text-align: center;
@@ -687,7 +688,6 @@ h3 {
 
 #cookiebar a {
     cursor: pointer;
-    border: 1px solid #ccc;
     padding: 1px 3px;
     border-radius: 4px;
     background: rgba(230,230,230,0);    
