@@ -33,23 +33,26 @@ if (isset($_GET['emulate']))
 $ua_=normalize_ua($ua_);
 
 $currentbrowsers=False;
-function is_outdated($uastr=False) {
-    global $ua_,$currentbrowsers;
-    if (!$uastr)
-        $uastr=$ua_;
+function get_browser_json() {
+    global $currentbrowsers;    
     if (!$currentbrowsers) {    
         $browsers_file = file_get_contents(dirname(__FILE__) . "/../browsers.json");
         $currentbrowsers = json_decode($browsers_file, true);
     }
+    return $currentbrowsers;
+}
 
-    $vs="?(\d+[.]\d+)";
+function is_outdated($uastr=False) {
+    global $ua_;
+    if (!$uastr)
+        $uastr=$ua_;
     
     $bx_=get_browserx($uastr);
     $browid=$bx_[0];
     $brown=$bx_[1];
     $browver=$bx_[2];
     
-    
+//    echo "brow, ". $browver . " " .$browid. " ". currentv($browid);
     if($browver<currentv($browid))
         return true;
 }
@@ -60,12 +63,7 @@ function has($t) {
 }
 
 function currentv($browser,$set="desktop"){
-    global $currentbrowsers;
-    if (!$currentbrowsers) {        
-        $browsers_file = file_get_contents("browsers.json");
-        $currentbrowsers = json_decode($browsers_file, true);
-    }
-    return $currentbrowsers["current"][$set][$browser];
+    return get_browser_json()["current"][$set][$browser];
 }
 
 function countSites() {
@@ -133,6 +131,7 @@ function get_browserx($ua) {
         ["OS VV.*like mac","iOS"],
         ["Vivaldi.VV","vivaldi"],
         ["UCBrowser.VV","uc"],
+        ["Android.*OPR.VV","o_a"],
         ["OPR.VV","o"],
         ["YaBrowser.VV","yandex"],
         ["SamsungBrowser.VV","samsung"],
@@ -150,6 +149,7 @@ function get_browserx($ua) {
         'e'=>"Edge",
         'f'=>'Firefox',
         'o'=>'Opera',
+        'o_a'=>'Opera',
         's'=>'Safari',
         'n'=>'Netscape',
         'c'=>"Chrome",

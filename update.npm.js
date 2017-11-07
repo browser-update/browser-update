@@ -110,7 +110,8 @@ var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserL
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
 var vsakt = {i:15,f:56,o:48,s:11,c:62,y:17.09,v:1.12,uc:11.4,samsung:6.2};
-var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-0.3};
+var vsdefault = {i:-5,f:-4,o:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
+var vsunsecure = {};//{c:61,f:55,y:16.09,s:10.0};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
 else
@@ -130,6 +131,8 @@ for (b in vsdefault) {
     }
     if (vsmin[b] && vs[b]<vsmin[b])
         vs[b]=vsmin[b];    
+    if (op.unsecure && vsunsecure[b] && vs[b]<vsunsecure[b])
+        vs[b]=vsunsecure[b];      
 }
 op.vsf=vs;
 if (op.reminder<0.1 || op.reminder===0)
