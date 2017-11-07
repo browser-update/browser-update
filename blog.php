@@ -4,9 +4,56 @@ require_once("lib/lang.php");
 $title="Blog - Inform users to update their browser";
 include("header.php");
 ?>
+<!--
+<h2>Notification placement</h2>
+<small>November 2017</small>
+<div class="entry">
+    <p>
+        
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=placement" onclick="SC('placement'); return false;">Comments</a></div>
+-->
+
+<h2>Added more browsers to detection and choices</h2>
+<small>October 2017</small>
+<div class="entry">
+    <p>
+        Additionally to the main browsers Firefox, Chrome, Edge, Opera and Safari we are now
+         detecting and offering UC Browser(Android), Vivaldi (Windows, MacOS, Linux)<!--, Yandex Browser (Android, Windows, MacOS, Linux)--> and Samsung Internet Browser (Android).
+    </p>
+    <p>
+        We continue to whitelist a lot small niche browsers in order not to annoy people who choose to use a special browser for whatever reason.
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=morebrowsers" onclick="SC('morebrowsers'); return false;">Comments</a></div>
+
+<h2>Notification formats</h2>
+<small>September 2017</small>
+<div class="entry">
+    <p>
+        We now offer different formats of notification. 
+        Additionally to the default style, showing the notification bar at the top, you can also show it at the top bottom or in the corner of your page.
+     </p>
+     <p>
+         Of course you can still <a href="customize.html">customize</a> the complete bar to your needs.        
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=placement" onclick="SC('placement'); return false;">Comments</a></div>
+
+<h2>NPM installabale version</h2>
+<small>April 2017</small>
+<div class="entry">
+    <p>
+        Browser-update can now available as an <a href="https://www.npmjs.com/package/browser-update">npm package</a>. You can now install it easily using your browserify or webpack toolchain.
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=npm" onclick="SC('npm'); return false;">Comments</a></div>
+
+
 
 <h2>Shrinked script size: now only 2 kB</h2>
-<small>January 4th, 2017</small>
+<small>January 2017</small>
 <div class="entry">
     <p>
         We've split the oudated browser detection script into two parts: 1) the detection if the browser is outdated and 2) the showing of the message to users with outdated browser.
@@ -19,8 +66,39 @@ include("header.php");
 </div>
 <div class="com"><a href="blog-entry.html?n=shrinked" onclick="SC('shrinked'); return false;">Comments</a></div>
 
+
+<h2>New notification bar design with "ignore" button</h2>
+<small>January 2017</small>
+<div class="entry">
+    <p>
+        The new notification bar design now offers an Ignore button istead of the "closing cross" to improve the usability and giving the explicit choice betwwen taking action and ignoring the message.
+    </p>
+    <p>You can <a href="customize.html">hide the ignore button</a>  if you like urge the user a bit more to take action.</p>
+</div>
+<div class="com"><a href="blog-entry.html?n=newbar" onclick="SC('newbar'); return false;">Comments</a></div>
+
+<h2>Fine-tuned detecion of operating system and adapted choice</h2>
+<small>November 2016</small>
+<div class="entry">
+    <p>
+        We improved the detection of browsers in combination with the Operatin System a User has (Android, Windows, MacOS, Linux) and the Version of the Operating System.
+    </p>
+    <p>
+        We keep track which browsers are available for which Operating system.
+    </p>
+    <p>
+        If there is now browser available anymore for the system we hint the user to update their system and link to a site explaining this.
+    </p>
+   <p>
+        Also some browsers (Safari, Microsoft Edge) can only be updated together with the system. Here we tell the user to choose another browser or update their system.
+   </p>    
+</div>
+<div class="com"><a href="blog-entry.html?n=npm" onclick="SC('npm'); return false;">Comments</a></div>
+
+
+
 <h2>Collecting Feedback on Browser-Updates</h2>
-<small>October 19th, 2016</small>
+<small>October 2016</small>
 <div class="entry">
     <p>
         We implemented a small <a href="/en/update-browser.html">feedback form on the browser update page</a> 
@@ -36,8 +114,9 @@ include("header.php");
 <div class="com"><a href="blog-entry.html?n=feedback" onclick="SC('feedback'); return false;">Comments</a></div>
 
 
+
 <h2>Improved notification and more options</h2>
-<small>September 6th, 2016</small>
+<small>September 2016</small>
 <div class="entry">
     <p>
     We now check for more browsers if they are up-to-date: Yandex Browser, Pale Moon Browser, and Vivaldi Browser. 
@@ -67,7 +146,7 @@ include("header.php");
 <div class="com"><a href="blog-entry.html?n=detectionx" onclick="SC('detectionx'); return false;">Comments</a></div>
 
 <h2>Testing update notification for mobile Browsers: Stock Android Browser</h2>
-<small>September 4th, 2016</small>
+<small>September 2016</small>
 <div class="entry">
     <p>
     For a long time we have ignored mobile Browsers here at browser-update.org on purpose. 
@@ -88,7 +167,7 @@ include("header.php");
 
 
 <h2>New translation tool</h2>
-<small>August 26th, 2016</small>
+<small>August 2016</small>
 <div class="entry">
 <p>
     This site can now be translated using a <a href="https://crowdin.com/project/browser-update">convenient online tool</a>. 
