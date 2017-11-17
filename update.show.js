@@ -12,14 +12,14 @@ if (!op.url) {
     else
         op.url= burl+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
 }
-var frac=1000;
-if (Math.random()*frac<1 && !op.test && !op.betatest) {
+/*
+if (Math.random()*1000<1 && !op.test && !op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
     i.src="https://browser-update.org/count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+jsv+"&tv="+tv+"&extra="+extra;
 }
-
+*/
 function busprintf() {
     var args=arguments;
     var data = args[ 0 ];
@@ -118,7 +118,7 @@ else {
         style2 += '<'+'style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}</style>';
     }
     else {
-        op.addmargin = true;
+        op.addmargin=true;
     }
     t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href=""');
     div.innerHTML = '<div>' + t + '</div>' + style+style2;
