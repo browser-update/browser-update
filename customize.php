@@ -82,7 +82,7 @@ T_textdomain('customize');
     container: document.body, 
     // <?php echo T_('DOM Element where the notification will be injected.') . "\n"; ?>
 
-    position: "top"
+    style: "top"
     // <?php echo T_('The position where the notification should be shown. Available options are:') . '"top", "bottom", "corner"' . "\n"; ?>
 
     api: xxx                        

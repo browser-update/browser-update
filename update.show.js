@@ -111,16 +111,16 @@ if (t.indexOf("{brow_name}")===-1) {//legacy style
     op.addmargin=true;
 }
 else {
-    if (op.position === "bottom") {
+    if (op.style === "bottom") {
         style2 += '<'+'style>.buorg {bottom:0; top:auto; border-top:1px solid #A29330; } @keyframes buorgfly {from {opacity:0;transform:translateY(50px)} to {opacity:1;transform:translateY(0px)}}</style>';
     }
-    else if (op.position === "corner") {
+    else if (op.style === "corner") {
         style2 += '<'+'style>.buorg { width:300px; top:50px; right:50px; left:auto; border:1px solid #A29330; } .buorg div b {display:block;} .buorg div span { display: block; } .buorg div a {margin: 4px 2px;}</style>';
     }
     else {
         op.addmargin=true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href=""');
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href="'+burl+"block-ignore-browser-update-warning.html"+'" target="_blank"');
     div.innerHTML = '<div>' + t + '</div>' + style+style2;
 }
 
