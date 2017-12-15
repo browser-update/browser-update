@@ -168,6 +168,11 @@ if (op.addmargin) {
         hm.style.marginTop = op.bodymt;
     op.onclose(op);
     op.setCookie(op.reminderClosed);
+    
+    if(ll==="en" && Math.random()*20<1) {
+        op.setCookie(24*365);
+        return true;
+    }
     return false;
 }
 

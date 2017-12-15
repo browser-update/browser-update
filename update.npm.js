@@ -110,7 +110,7 @@ op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:15,f:57,o:49,o_a:43,s:11,c:62,y:17.10,v:1.12,uc:11.4,samsung:7.0};
+var vsakt = {i:15,f:57,o:50,o_a:43,s:11,c:63,y:17.10,v:1.13,uc:11.4,samsung:7.0};
 var vsdefault = {i:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
 var vsinsecure = {};//{i:10,e:12.10166,c:61,f:55,y:16.09,s:10.0};
 if (op.apiver<4)
@@ -148,11 +148,11 @@ op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||(location.hash==="#test-bu-beta")||false;
-/*
+
 if (Math.random()*1200<1 && !op.test) {
     var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+jsv;
 }
-*/
+
 var bb=$bu_getBrowser();
 if (!op.test) {
     if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0))
