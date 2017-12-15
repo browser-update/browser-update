@@ -155,7 +155,7 @@ if (Math.random()*1200<1 && !op.test) {
 
 var bb=$bu_getBrowser();
 if (!op.test) {
-    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0))
+    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || document.cookie.indexOf("browserupdateorg=pause")>-1)
         return;
     if (bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) )    
         return;

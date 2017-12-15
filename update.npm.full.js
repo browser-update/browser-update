@@ -155,7 +155,7 @@ if (Math.random()*1200<1 && !op.test) {
 
 var bb=$bu_getBrowser();
 if (!op.test) {
-    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0))
+    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || document.cookie.indexOf("browserupdateorg=pause")>-1)
         return;
     if (bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) )    
         return;
@@ -347,11 +347,6 @@ if (op.addmargin) {
         hm.style.marginTop = op.bodymt;
     op.onclose(op);
     op.setCookie(op.reminderClosed);
-    /*
-    if(ll==="en" && Math.random()*20<1) {
-        op.setCookie(24*365);
-        return true;
-    }*/
     return false;
 }
 
