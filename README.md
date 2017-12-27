@@ -52,8 +52,8 @@ See the [available options](http://browser-update.org/customize.html) to see how
 * Translated into > 30 languages
 * Browser detection less than 3kb gzipped + rest gets only lazy loaded when an outdated browser was detected
 * Giving users reasons why an [up-to-date browser is important](http://browser-update.org/update.html)
-* Only showing browsers that are available for the users device and operating system.
-* Only notify users that actually can be update to a newser browser on their devices
+* Only showing browsers that are actually available for the users device and operating system (Android, Windows Phone, Windows, MacOS, iOS).
+* Only notify users that actually can update to a newer browser on their devices
 * Hide notification from bots
 
 More information, our motivation and the features can be found on our [web site](http://browser-update.org).
