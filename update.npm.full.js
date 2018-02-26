@@ -110,7 +110,7 @@ op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:15,f:57,o:50,o_a:43,s:11,c:63,y:17.10,v:1.13,uc:11.4,samsung:7.0};
+var vsakt={e:15,i:15,f:58,o:51,o_a:45,s:11,c:64,y:18,v:1.14,uc:11.5,samsung:7.0};
 var vsdefault = {i:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
 var vsinsecure = {};//{i:10,e:12.10166,c:61,f:55,y:16.09,s:10.0};
 if (op.apiver<4)
@@ -150,7 +150,7 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash==="#test-bu")||(location.hash==="#test-bu-beta")||false;
 
 if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+jsv;
+    var i = new Image();
 }
 
 var bb=$bu_getBrowser();
@@ -187,16 +187,16 @@ var bb=$bu_getBrowser();
 var burl=op.burl || "http://browser-update.org/";
 if (!op.url) {
     if (op.l)
-        op.url= burl+ll+"/update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
+        op.url= burl+ll+"/update-browser.html"+(op.test?"?force_outdated=true":"");
     else
-        op.url= burl+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+tv+":"+op.pageurl;
+        op.url= burl+"update-browser.html"+(op.test?"?force_outdated=true":"");
 }
 /*
 if (Math.random()*1000<1 && !op.test && !op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-    i.src="https://browser-update.org/count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+jsv+"&tv="+tv+"&extra="+extra;
+
 }
 */
 function busprintf() {
@@ -262,13 +262,13 @@ t=op["text_"+ll]||op.text||t[ll]||t.en;
 
 var tar="";
 if (op.newwindow)
-    tar=' target="_blank" rel="noopener"';
+    tar=' target="_blank" rel="noopener noreferrer"';
 
 var div = op.div = document.createElement("div");
 div.id="buorg";
 div.className="buorg";
 
-var style='<style>.buorg {background: #FDF2AB no-repeat 14px center url(https://browser-update.org/img/small/'+bb.n+'.png);}</style>';
+var style='<style>.buorg {background: #FDF2AB no-repeat 14px center ;}</style>';
 var style2='<style>.buorg {background-position: 8px 17px; position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer;        background-color: #fff8ea;    font: 17px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}'
     +'.buorg div { padding: 11px 12px 11px 30px;  line-height: 1.7em; }'
     +'.buorg div a,.buorg div a:visited{ text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}'
