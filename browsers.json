@@ -1,21 +1,35 @@
 {
   "current": {
     "desktop": {
-      "c": 63.0,
-      "f": 57.0,
+      "c": 64.0,
+      "f": 58.0,
       "i": 15.0,
-      "e": 15.0,
-      "o": 50.0,
-      "o_a":43.0,
+      "e": 16.0,
+      "o": 51.0,
+      "o_a": 45.0,
       "pale moon": 27.4,
       "s": 11,
-      "vivaldi": 1.13,
-      "yandex": 17.10,
-      "iOS": 11.1,
+      "v": 1.14,
+      "y": 18.1,
+      "iOS": 11.2,
       "a": 700,
-      "uc": 11.04,
+      "uc": 11.05,
       "samsung": 7.0
     }
+  },
+  "insecure_below": {
+    "i": 11,
+    "e": 13,
+    "c": 62,
+    "f": 56,
+    "y": 17.1,
+    "s": "10.1.2",
+    "ios": "9.3.5",
+    "v": "1.12",
+    "uc": "11.3",
+    "samsung": "5.0",
+    "o_a": 40,
+    "o": 45
   },
   "releases": {
     "c": {
@@ -67,7 +81,7 @@
       "10.1": "17-03-27",
       "11": "17-09-11"
     },
-    "yandex": {
+    "y": {
       "17.9": "17-09-22"
     },
     "i": {
@@ -111,16 +125,17 @@
       "core": "Chromium",
       "engine": "Blink",
       "releases": "http://developer.samsung.com/internet/android/releases",
+      "blog": "https://medium.com/samsung-internet-dev",
       "dev docs": "http://developer.samsung.com/internet",
       "apk": "https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-internet-for-android/",
       "ua string doc": "http://developer.samsung.com/internet/user-agent-string-format",
       "example ua string": "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
-      "download": "https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser",
       "updates": "independent",
       "first release": "2012",
       "available_for": {
         "android": 5
-      }
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser"
     },
     "f": {
       "name": "Firefox",
@@ -137,6 +152,10 @@
         "macos": 9,
         "ios": 9,
         "linux": true
+      },
+      "download_url": "https://www.mozilla.com/firefox/",
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
       }
     },
     "c": {
@@ -155,6 +174,11 @@
         "macos": 9,
         "ios": 9,
         "linux": true
+      },
+      "blocks_ads": true,
+      "download_url": "https://www.google.com/chrome/browser/desktop/",
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=com.android.chrome"
       }
     },
     "o": {
@@ -163,9 +187,7 @@
       "core": "Chromium",
       "engine": "Blink",
       "releases": "https://www.opera.com/docs/history/",
-      "updates": "independent",
-      "link": "https://opera.com",
-      "link_a": "https://play.google.com/store/apps/details?id=com.opera.browser",
+      "download_url": "https://opera.com",
       "first release": "1996",
       "available_for": {
         "android": 4.1,
@@ -173,6 +195,10 @@
         "macos": 9,
         "ios": 9,
         "linux": true
+      },
+      "blocks_ads": true,
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=com.opera.browser"
       }
     },
     "s": {
@@ -186,9 +212,10 @@
       "available_for": {
         "macos": 11,
         "ios": 11
-      }
+      },
+      "download_urls": "https://support.apple.com/{full_locale_minus_lower}/HT204416"
     },
-    "yandex": {
+    "y": {
       "name": "Yandex Browser",
       "name_ru": "Яндекс.Браузер",
       "vendor": "Yandex",
@@ -196,7 +223,6 @@
       "security bulletins": "https://browser.yandex.com/security/changelogs/",
       "core": "Chromium",
       "engine": "Blink",
-      "updates": "independent",
       "first release": "2012",
       "available_for": {
         "android": 4.1,
@@ -204,7 +230,8 @@
         "macos": 9,
         "ios": 9,
         "linux": true
-      }
+      },
+      "download_url": "https://browser.yandex.com"
     },
     "i": {
       "name": "Internet Explorer",
@@ -214,7 +241,8 @@
       "available_for": {
         "win": 7,
         "winmob": 10
-      }
+      },
+      "download_url": "https://www.microsoft.com/{full_locale_minus}/windows/microsoft-edge"
     },
     "e": {
       "name": "Edge",
@@ -230,14 +258,62 @@
       "available_for": {
         "win": 10,
         "winmob": 10
-      }
+      },
+      "download_url": "https://www.microsoft.com/{full_locale_minus}/windows/microsoft-edge"
     },
-    "vivaldi": {
+    "v": {
+      "name": "Vivaldi",
+      "vendor": "Vivaldi Technologies",
+      "core": "Chromium",
+      "engine": "Blink",
+      "updates": "independent",
       "available_for": {
         "win": 7,
         "macos": 9,
         "linux": true
-      }
+      },
+      "download_url": "https://vivaldi.com/"
+    },
+    "brave": {
+      "name": "Brave",
+      "link": "https://brave.com",
+      "blocks_ads": true,
+      "download_url": "https://brave.com/bro957"
+    },
+    "uc": {
+      "name": "UC Browser",
+      "link": "ucweb.com",
+      "vendor": "UCWeb",
+      "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl"
+    },
+    "palemoon": {
+      "name": "Pale Moon",
+      "core": "Firefox",
+      "engine": "Gecko",
+      "vendor": "Open Source",
+      "download_urls": {
+        "linux": "http://linux.palemoon.org/"
+      },
+      "download_url": "https://www.palemoon.org/"
+    },
+    "a": {
+      "name": "Android Browser"
+    },
+    "ios": {
+      "name": "iOS Browser"
+    },
+    "o_a": {
+      "name": "Opera for Android",
+      "vendor": "Opera Software",
+      "core": "Chromium",
+      "engine": "Blink",
+      "available_for": {
+        "android": 4.1
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.opera.browser"
+    },
+    "unknown": {
+      "name": "Unknown Browser"
     }
   }
 }

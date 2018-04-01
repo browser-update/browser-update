@@ -146,8 +146,8 @@ function p_ver($version, $selected=false) {
 ?>
 <ul id="browserversionchooser">
     <li class="bi">
-        <label for="f-i">IE/Edge</label> 
-        <select id="f-i" onchange="code()">    
+        <label for="f-e">IE/Edge</label> 
+        <select id="f-e" onchange="code()">    
         <?php 
             p_dates("i",-5);
         ?>
@@ -380,13 +380,13 @@ function test_bar() {
     var el=document.getElementById("buorg");
     if (el)
         el.parentNode.removeChild(el);
-    $buo({'position':getomat('style')},true);
+    $buo({'style':getomat('style')},true);
 }
 //+_get("newos",true)
 function code() {
-    var notify = 'notify:{i:'+ getomat('i') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
+    var notify = 'notify:{e:'+ getomat('e') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
     var code = '<'+'script> \n\
-var $buoop = {'+notify+_get("insecure",false)+_get("unsupported",true)+_get("mobile",true)+_get2("style","")+'api:<?php echo $apiver?>}; \n\
+var $buoop = {'+notify+_get("insecure",false)+_get("unsupported",false)+_get("mobile",true)+_get2("style","")+'api:<?php echo $apiver?>}; \n\
 function $buo_f(){ \n\
  var e = document.createElement("script"); \n\
  e.src = "//browser-update.org/update.min.js"; \n\
