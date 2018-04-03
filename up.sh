@@ -2,7 +2,7 @@
 
 git fetch upstream
 git checkout master
-git rebase upstream/master
+git merge upstream/master
 js=update.npm.full.js
 git checkout upstream/master $js
 
