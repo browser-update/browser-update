@@ -150,7 +150,7 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash==="#test-bu")||(location.hash==="#test-bu-beta")||false;
 
 if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();
+    var i = new Image();    
 }
 
 var bb=$bu_getBrowser();
@@ -196,7 +196,7 @@ if (Math.random()*1000<1 && !op.test && !op.betatest) {
     var i = new Image();
     var txt=op["text_"+ll]||op.text||"";
     var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-
+    
 }
 */
 function busprintf() {
