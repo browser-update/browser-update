@@ -106,8 +106,8 @@ op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-op.jsv="2.3.2";
-var vsakt = {e:15,i:15,f:58,o:51,o_a:45,s:11,c:64,y:18,v:1.14,uc:11.5,samsung:7.0};
+op.jsv="2.3.3npm";
+var vsakt = {e:15,i:15,f:59,o:52,o_a:45,s:11.1,c:66,y:18.2,v:1.14,uc:11.5,samsung:6.4};
 var vsdefault = {e:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
 var vsinsecure = {};//{i:10,e:12.10166,c:61,f:55,y:16.09,s:10.0};
 if (op.apiver<4)
