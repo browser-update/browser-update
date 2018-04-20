@@ -1,11 +1,10 @@
 "use strict";
 var $buo_show = function() {
-var op=window._buorgres;    
-var ll=op.ll;
+var op=window._buorgres;
 var bb=$bu_getBrowser();
 var burl=op.burl || ("http"+(/MSIE/i.test(navigator.userAgent)?"":"s")+"://browser-update.org/");
 if (!op.url) {
-    op.url= burl+((op.l && (ll+"/"))||"")+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+op.jsv+":"+op.pageurl;
+    op.url= burl+((op.l && (op.l+"/"))||"")+"update-browser.html"+(op.test?"?force_outdated=true":"")+"#"+op.jsv+":"+op.pageurl;
 }
 /*
 if (Math.random()*1000<1 && !op.test && !op.betatest) {
@@ -25,16 +24,15 @@ function busprintf() {
 }
 
 
-var t={};
-t.en='<b class="buorg-mainmsg">Your web browser ({brow_name}) is out of date.</b> <span class="buorg-moremsg">Update your browser for more security, speed and the best experience on this site.</span> <span class="buorg-buttons"><a{up_but}>Update browser</a> <a{ignore_but}>Ignore</a></span>';
-
+var t={},ta;
+t.en={m1:'Your web browser ({brow_name}) is out of date.',m2:'Update your browser for more security, speed and the best experience on this site.',bu:'Update browser',bi:'Ignore',mr:'You will be reminded in a week.',bn:'Never show again'}
 //t.af='';
 t.ar='<b> متصفح الويب ({brow_name}) الخاص بك قديم.</b> قُم بتحديث متصفحك للحصول على مزيدٍ من الحماية والراحة وتجربة أفضل على هذا الموقع. <a{up_but}> تحديث المتصفح</a> <a{ignore_but}> تجاهل</a>';
 t.bg='<b>Вашият браузър ({brow_name}) не е актуализиран.</b> Актуализирайте го за повече сигурност, удобство и най-добро изживяване на сайта. <a{up_but}>Актуализирайте браузъра</a> <a{ignore_but}>Игнорирайте</a>';
 t.ca='El teu navegador (%s) està <b>desactualitzat.</b> Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a%s>Aprèn a actualitzar el navegador</a>';
 t.cs='<b>Váš webový prohlížeč ({brow_name}) je zastaralý .</b> Pro větší bezpečnost, pohodlí a optimální zobrazení této stránky si prosím svůj prohlížeč aktualizujte. <a{up_but}>Aktualizovat prohlížeč</a> <a{ignore_but}>Ignorovat</a>';
 t.da='<b>Din netbrowser ({brow_name}) er forældet.</b> Opdater din browser for mere sikkerhed, komfort og den bedste oplevelse på denne side. <a{up_but}>Opdater browser</a> <a{ignore_but}>Ignorer</a>';
-t.de='<b>Ihr Browser ({brow_name}) ist veraltet.</b> Aktualisieren Sie Ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite. <a{up_but}>Browser aktualisieren</a> <a{ignore_but}>Ignorieren</a>';
+t.de={m1:'Ihr Browser ({brow_name}) ist veraltet.',m2:'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Komfort und die einwandfreie Nutzung dieser Webseite.',bu:'Browser aktualisieren',bi:'Ignorieren'}//,mr:'Sie werden in einer Woche errinnert',bn:'Nicht mehr benachrichtigen'}
 t.el='<b>Η έκδοση του προγράμματος περιήγησής σας ({brow_name}) είναι παλιά.</b> Ενημερώστε τον περιηγητή σας για περισσότερη ασφάλεια, άνεση και την βέλτιστη εμπειρία σε αυτή την ιστοσελίδα. <a{up_but}>Αναβάθμιση περιηγητή</a> <a{ignore_but}>Παράβλεψη</a>';
 t.es='<b>Tu navegador web ({brow_name}) no está actualizado.</b> Actualiza tu navegador para tener más seguridad y comodidad y tener la mejor experiencia en este sitio. <a{up_but}>Actualizar navegador</a> <a{ignore_but}>Ignorar</a>';
 //t.et='';
@@ -71,7 +69,9 @@ t.uk='<b>Ваш браузер ({brow_name}) є застарілим.</b> Оно
 t.vi='<b>Trình duyệt web của bạn ({brow_name}) đã cũ.</b> Hãy nâng cấp trình duyệt của bạn để được an toàn và thuận lợi hơn đồng thời có được trải nghiệm tốt nhất với trang này';
 t.zh='<b>您的网页浏览器 ({brow_name}) 已过期。</b>更新您的浏览器，以提高安全性和舒适性，并获得访问本网站的最佳体验。<a{up_but}>更新浏览器</a> <a{ignore_but}>忽略</a>';
 t["zh-tw"]='<b>您的網頁瀏覽器  ({brow_name}) 已經過時。</b> 請更新您的瀏覽器，以在此網站取得更安全、舒適的最佳瀏覽體驗。<a{up_but}>更新瀏覽器</a><a{ignore_but}>忽略</a>';
-t=op["text_"+ll]||op.text||t[ll]||t.en;
+t=ta=op["text_"+op.ll]||op.text||t[op.llfull]||t[op.ll]||t.en;
+if (ta.m1)
+    t='<b class="buorg-mainmsg">'+t.m1+'</b> <span class="buorg-moremsg">'+t.m2+'</span> <span class="buorg-buttons"><a{up_but}>'+t.bu+'</a> <a{ignore_but}>'+t.bi+'</a></span>'
 
 var tar="";
 if (op.newwindow)
@@ -82,19 +82,19 @@ div.id="buorg";
 div.className="buorg";
 
 var style='<style>.buorg-icon {width: 22px; height: 16px; vertical-align: middle; position: relative; top: -0.05em; display: inline-block; background: no-repeat 0px center url(https://browser-update.org/img/small/'+bb.n+'.png);}</style>';
-var style2='<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:center; cursor:pointer;        background-color: #fff8ea;    font: 18px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}'
+var style2='<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:center; cursor:pointer;   color:#000;     background-color: #fff8ea;    font: 18px Calibri,Helvetica,Arial,sans-serif;    box-shadow: 0 0 5px rgba(0,0,0,0.2);}'
     +'.buorg div { padding: 9px;  line-height: 1.7em; }'
     +'.buorg .buorg-buttons { display: block; text-align: center; }'
     +'.buorg div a { text-indent: 0; color: #fff; text-decoration: none; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}'
     +'#buorgig { background-color: #edbc68; position: relative;}'
     +'@media only screen and (max-width: 700px){.buorg div { padding:5px 12px 5px 9px; line-height: 1.3em;}}'
     +'@keyframes buorgfly {from {opacity:0;transform:translateY(-50px)} to {opacity:1;transform:translateY(0px)}}'
-    +'.buorg { animation: 1s ease-out 0s buorgfly}</style>';
+    +'.buorg { animation: 1s ease-out 0s buorgfly} .buorg-fadeout {transition: visibility 0s 8.5s, opacity 8s ease-out .5s;}</style>';
 
 if (t.indexOf("{brow_name}")===-1) {//legacy style
     t=busprintf(t,bb.t,' id="buorgul" href="'+op.url+'"'+tar);
 
-    style += '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; font: 13px Arial,sans-serif;color:#000;}'
+    style += '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; color:#000; font: 13px Arial,sans-serif;color:#000;}'
     +'.buorg div { padding:5px 36px 5px 40px; }'
     +'.buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}'
     +'#buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}'
@@ -113,7 +113,7 @@ else {
     else {
         op.addmargin=true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" href="'+burl+"block-ignore-browser-update-warning.html"+'" target="_blank"');
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig"');
     div.innerHTML = '<div><span class="buorg-icon"> </span>' + t + '</div>' + style+style2;
 }
 
@@ -147,7 +147,7 @@ document.getElementById("buorgul").onclick = function(e) {
 }
 catch(e) {}
 
-if (op.addmargin) {
+if (op.addmargin && op.shift_page_down!==false) {
     var hm=document.getElementsByTagName("html")[0]||document.body;
     op.bodymt = hm.style.marginTop;
     hm.style.marginTop = (div.clientHeight)+"px";
@@ -157,14 +157,14 @@ if (op.addmargin) {
     if (e.stopPropagation) e.stopPropagation();
     else e.cancelBubble = true;
     op.onclose(op);
-    if (op.addmargin)
+    if (op.addmargin && op.shift_page_down!==false)
         hm.style.marginTop = op.bodymt;      
     op.setCookie(op.reminderClosed);    
-    if(!op.no_permanent_hide && ll==="en" && op.reminderClosed==24*7) {
-        op.div.innerHTML='<div><span class="buorg-moremsg">You will be reminded in a week.</span> <span class="buorg-buttons"><a id="buorgpermanent" href="'+burl+"block-ignore-browser-update-warning.html"+'" target="_blank" onclick="">Never show again</a></span></div>' + style+style2
-            +'<style>.buorg {transition: visibility 0s 8.5s, opacity 8s ease-out .5s;}</style>';
+    if(!op.no_permanent_hide && ta.bn && op.reminderClosed==24*7) {
+        op.div.innerHTML='<div><span class="buorg-moremsg">'+ta.mr+'</span> <span class="buorg-buttons"><a id="buorgpermanent" href="'+burl+"block-ignore-browser-update-warning.html"+'" target="_blank">'+ta.bn+'</a></span></div>' + style+style2;
         div.onclick=null;
-        document.getElementById("buorgpermanent").onclick = function(e) {        
+        div.className="buorg buorg-fadeout";
+        document.getElementById("buorgpermanent").onclick = function(e) {
             op.setCookie(24*365);
             op.div.style.display = "none";
         }
