@@ -11,6 +11,7 @@
 <p>Testing the bar</p>    
     
 <div id="container" style="position: relative;"></div>
+<input type="checkbox" id="clearcookie" checked/> Clear cookie before showing
 <script> 
 var $buoop = {
     test: true,//
@@ -23,9 +24,14 @@ var $buoop = {
     //url:"http://test.de",
     
 };
-
-if (window.location.hash.length>5) {
-    $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+try {
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+}
+catch(e){
+    window.alert("error in config string syntax");
+    throw e;
 }
 
 $buoop.jsshowurl="../update.show.js";
@@ -34,8 +40,10 @@ $buoop.jsshowurl="../update.show.js";
 //$buoop.container=document.getElementById('container');
 
 //remove cookie
-var d = new Date(0);
-document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+if (document.getElementById("clearcookie").checked) {
+    var d = new Date(0);
+    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+}
 /*
 function boo(xx) {
 	if(xx) {

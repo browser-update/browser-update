@@ -30,7 +30,7 @@ Start translating using <a href="https://crowdin.com/project/browser-update">the
             Thomas Hümmer ( jossele <var>æ</var> gmx.de )
     </li>
     <li>
-            David Danier ( david.danier <var>æ</var> team23.de )
+            David Danier ( danier <var>æ</var> team23.de )
     </li>
 </ul>
 <p>Translators:
@@ -67,21 +67,21 @@ This is especially important since we are, of course, targeting a wide range of 
 <p>browser-update.org ist ein Projekt der <a href="http://www.team23.de/">Team23 Internetagentur</a>. Inhaltlicher Verantwortlicher gemäß TMG ist die GmbH & Co. KG. Vertretungsberechtigte Gesellschafter sind Fabian Ziegler, David Danier.</p>
 
 <p>
-Team23 GmbH & Co. KG<br/>
-Provinostraße 52 / Gebäude A2<br/>
+Team23 GmbH<br/>
+Beim Glaspalast 1<br/>
 D-86153 Augsburg
 </p>
 
 <p>
-Telefon: +49 821 2170975<br/>
-Telefax: +49 8152 909411<br/>
-E-Mail: ziegler@team23.de<br/>
+Telefon: +49 821 207 085 0<br/>
+Telefax: +49 821 207 085 29<br/>
+E-Mail: info@team23.de<br/>
 </p>
 <p>
 Eintragung im Handelsregister.<br/>
 Registergericht: Augsburg<br/>
-Registernummer: HRA 17483<br/>
-Umsatzsteuer-Identifikationsnummer: DE 217 549 808
+Registernummer: HRB 26700<br/>
+Umsatzsteuer-Identifikationsnummer: DE 308 873 371
 </p>
 
 <h2>Copyright</h2>
