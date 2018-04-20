@@ -9,7 +9,7 @@ function $bu_getBrowser(ua_str) {
     var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
 //        ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
         ignore("complicated device browser","SMART-TV|SmartTV") ||
-        ignore("niche browser","Dorado|Whale|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("niche browser","Dorado|Whale|k-meleon|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
         ignore("mobile without upgrade path or landing page","kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10") ||
         ignore("android(chrome) web view","; wv");
     var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
@@ -97,21 +97,18 @@ function $bu_getBrowser(ua_str) {
         else if (v>3) v=7;
         else v=9;
     }
-    if (n==="e") {
-        return {n:"i",v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
-    }
     return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
 }
 
 var $buo = function(op,test) {
-var jsv=24;
 var n = window.navigator,b,vsmin;
 op = window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
 op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:15,f:57,o:50,o_a:43,s:11,c:63,y:17.10,v:1.13,uc:11.4,samsung:7.0};
-var vsdefault = {i:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
+op.jsv="2.3.2";
+var vsakt = {e:15,i:15,f:58,o:51,o_a:45,s:11,c:64,y:18,v:1.14,uc:11.5,samsung:7.0};
+var vsdefault = {e:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
 var vsinsecure = {};//{i:10,e:12.10166,c:61,f:55,y:16.09,s:10.0};
 if (op.apiver<4)
     vsmin={i:9,f:10,o:20,s:7};
@@ -119,6 +116,7 @@ else
     vsmin={i:8,f:5,o:12.5,s:6.2};
 var vs =op.notify||op.vs||vsdefault;
 var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
+vs.e=vs.e||vs.i;
 for (b in vsdefault) {
     if (!vs[b])
         vs[b]=vsdefault[b]
@@ -135,6 +133,7 @@ for (b in vsdefault) {
     if ((op.insecure||op.unsecure) && vsinsecure[b] && vs[b]<vsinsecure[b])
         vs[b]=vsinsecure[b];      
 }
+vs.i=vs.i||vs.e;
 op.vsf=vs;
 if (op.reminder<0.1 || op.reminder===0)
     op.reminder=0;
@@ -147,15 +146,15 @@ op.onclose = op.onclose||function(o){};
 op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
 
-op.test=test||op.test||(location.hash==="#test-bu")||(location.hash==="#test-bu-beta")||false;
+op.test=test||op.test||(location.hash==="#test-bu")||false;
 
 if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+jsv;
+    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+op.jsv;
 }
 
 var bb=$bu_getBrowser();
 if (!op.test) {
-    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || document.cookie.indexOf("browserupdateorg=pause")>-1)
+    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || (document.cookie.indexOf("browserupdateorg=pause")>-1 && location.hash!=="#ignorecookie-bu"))
         return;
     if (bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) )    
         return;
