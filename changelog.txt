@@ -1,0 +1,61 @@
+Changes to the notification / detection script
+==========
+
+3.0.8 3.5.17
+- option url_permanent_hide allows to set a url where to go if the users presses the permanent hide button
+- custom improvements
+  - set style explicit on buttons and not on all links, to allow to use custom text with links
+  - do not make the whole bar clickable (if update button is present). this is also to allow custom text with links
+  - do not change throw error when ignore-button is not present
+  - fixes #391
+  - fixes #390
+  
+3.0.7 1.5.17
+- ignore new viasat sparrow browser
+- updated versions: samsung to 7.0
+
+3.0.6 23.4.18
+- mark also one version prior to the latest version as supported for chrome, opera and firefox to give more time for users to transition to the latest version
+- update chrome version to 66
+
+3.0.5 23.4.18
+- mark IE 11 as supported
+- mark FF 52 as "LTS"
+- set current chrome from 66 to 65, to not notify unsupported chrome 65 which has been released only 6 days ago. wait 10 days for that.
+- mark ios < 8 as no_os_update=true
+- mark ios > 11 as no_os_update=false
+
+3.0.4 22.4.18
+- almost all css selectors via classes
+
+3.0.3 21.4.18
+- if test is on a debug script is loaded and information stating this is only a test message, and additionally more information on the detection
+
+3.0.2 21.4.18
+- renamed translation strings
+- detecting amazon silk, but ignored for now, TODO
+
+3.0.1 21.4.18
+- require instead of notify: specify version which is required on the site. This is easier with minor version comparison
+
+3.0.0 20.4.18
+Big rewrite:
+- excessive tests
+- $bu_get_browser() now returns an object with a lot of information around the browser:
+   - if it is insecure
+   - if it is still updated
+   - years since release
+   - the rendering eingine
+  - if it is on mobile
+  - if the underlying operating system can be updated if the browser updates are limited by the os (like e.g. on iOs, very old macs, or very old windows systems)
+- semantic version comparison
+- Option to not shift the page down when the bar is shown on top
+- new (backwards compatible) html layout of the message that can be customized more flexible
+- the bar can now be permanently hidden to be more friendly to users that can for some reason not update their browser (for now until translations flow in only for english)
+- by default the browser-update page now opens in https (except for IE, which in old versions might not work)
+- the message text is now modular in order to show different messages for browsers with severe security issues
+- now notifying severely insecure versions if insecure: true is configured
+- now notifying unsupported versions if unsupported: true is configured
+
+2.3.3 19.4.18
+- new browser versions
