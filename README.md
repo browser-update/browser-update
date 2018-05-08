@@ -39,6 +39,22 @@ If you have an ES6 compatible build environment, you can of course use the impor
 import browserUpdate from 'browser-update';
 ````
 
+Options can be something like:
+````js
+{
+    required: {
+        e:-2,
+        i:11,
+        f:-3,
+        o:-3,
+        s:10.1,
+        c:"64.0.3282.16817",
+        samsung: 7.0
+        vivaldi: 1.2
+    },
+    insecure:true
+}
+````
 See the [available options](http://browser-update.org/customize.html) to see how you can customize it to your needs.
 
 ## Features
@@ -55,6 +71,7 @@ See the [available options](http://browser-update.org/customize.html) to see how
 * Only showing browsers that are actually available for the users device and operating system (Android, Windows Phone, Windows, MacOS, iOS).
 * Only notify users that actually can update to a newer browser on their devices
 * Hide notification from bots
+* Well tested
 
 More information, our motivation and the features can be found on our [web site](http://browser-update.org).
 
