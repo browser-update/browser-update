@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:16,i:14,f:59,o:52,o_a:45.1,s:11.1,c:66,y:"18.2",v:1.14,uc:11.5,samsung:7.0,ios:11.3};
+    this.vsakt = {e:16,i:15,f:59,o:52,o_a:45.1,s:11.1,c:66,y:"18.2",v:1.14,uc:11.5,samsung:7.0,ios:11.3};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     //c:64.0.3282.167
     this.vsinsecure_below = {i:11,e:13,c:62,f:56,y:17.1,s:"10.1.2",ios:"9.3.5",v:"1.12",uc:"11.3",samsung:"5.0",o_a:40,o:45};
@@ -166,7 +166,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.1.2";
+op.jsv="3.1.3";
 
 var required_min={i:10,f:11,o:21,s:8,c:30}
 
@@ -174,6 +174,7 @@ var vs=op.notify||op.vs||{};//old style config: maximum version to notify
 vs.e=vs.e||vs.i;
 var required=op.required||{};//minimum browser versions needed
 required.e=required.e||required.i;
+required.i=required.i||required.e;
 for (b in $bu_.vsdefault) {
     if (vs[b]) {//old style: browsers to notify
         if ($bu_.less(vs[b],0)>=0) // required <= 0
@@ -188,7 +189,6 @@ for (b in $bu_.vsdefault) {
     if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
         required[b]=required_min[b]
 }
-required.i=required.i||required.e;
 required.ios=required.ios||required.s;
 
 op.required=required;

@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.1.3
+- fixed specifying Internet Explorer (and fallback from Edge), fixes #375
+
 3.1.2
 - New style text formatting for more languages
 - better compatibility for taiwanese chinese
