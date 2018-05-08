@@ -1,5 +1,24 @@
 Changes to the notification / detection script
 ==========
+3.1.2
+- New style text formatting for more languages
+- better compatibility for taiwanese chinese
+
+3.1.1
+- improve test mode:
+  - show script version
+  - show reasons to show or hide notification
+  - improved style
+- fixed bug with permanent hide
+- rename no_os_update to no_device update to clarify
+- ignore chrome os (for now)
+- mark old android browser as insecure
+- op.hide_reasons: list of reasons for the bar to be hidden
+
+3.1.0
+- do not make whole bar clickable if custom text is set
+- check for %s in text to decide if legacy style should be used
+- state when the user will be reminded again in days, option to permanent hide if reminderClosed > 1 day
 
 3.0.8 3.5.17
 - option url_permanent_hide allows to set a url where to go if the users presses the permanent hide button
@@ -9,7 +28,7 @@ Changes to the notification / detection script
   - do not change throw error when ignore-button is not present
   - fixes #391
   - fixes #390
-  
+
 3.0.7 1.5.17
 - ignore new viasat sparrow browser
 - updated versions: samsung to 7.0

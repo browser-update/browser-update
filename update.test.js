@@ -11,26 +11,36 @@ var $buo_test_ = function () {
 
 
     var style = '<style>' +
-        '.buorg-test {position:absolute;width: 130px; bottom:-15px; right:10px; text-align:center; color:#000; background-color: #ff93a8;font-size: 10px; padding:5px;line-height:1;}' +
-        '.buorg-test-sub {position:absolute; width: 100%; top:20px; left:0; background-color: #ff93a8; padding: 5px;}' +
+        '.buorg-test {position:absolute;width: 130px; top:5px; right:10px; text-align:center; color:#000; background-color: #ff93a8;font-size: 10px; padding:5px;line-height:1;}' +
+        '.buorg-test-sub {}' +
         '.buorg-test div {padding:0;line-height:1;}' +
         '</style>';
 
-    var h = '<div>Test-Mode</div>' + style;
+    if (op.style === "bottom")
+        style += '<style>.buorg-test {top:auto; bottom:5px;} </style>';
+    if (op.style === "corner")
+        style += '<style>.buorg-test {top:auto; bottom:-100px;} </style>';
+
+    var h = '<div>Notification Test-Mode</div><div>(v'+op.jsv+')</div>' + style;
+
 
     h += '<div class="buorg-test-sub">'
     h += "<div>Browser would normally be notified: " + op.notified + "</div>";
 
-    if (op.notified !== false)
-        h += "<div>Reasons: " + op.reasons.join(",") + "</div>";
+    if (op.reasons.length>0)
+        h += "<div><b>Reasons to show</b>: " + op.reasons.join(",") + "</div>";
 
-    h += "<div>Browser info</div>";
+    if (op.hide_reasons.length>0)
+        h += "<div><b>Reasons to hide</b>: " + op.hide_reasons.join(",") + "</div>"
+
+    h += "<div><b>Browser info</b></div>";
     h += "<span>is_latest:" + bb.is_latest + "</span>, ";
     h += "<span>is_insecure:" + bb.is_insecure + "</span>, ";
     h += "<span>other:" + bb.other + "</span>, ";
-    h += "<span>no_os_update:" + bb.no_os_update + "</span>";
+    h += "<span>no_device_update:" + bb.no_device_update + "</span>";
 
-    h += "</div>";
+    h += '</div>'
+
     div.innerHTML = h;
     div.onclick = function (e) {
         e = e || window.event;

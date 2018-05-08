@@ -12,13 +12,13 @@ var $bu_= new function() {
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
     this.get_browser = function(ua) {
-    var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_os_update:false};
+    var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
-    r.other=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
+    r.other=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
 //        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
         ignore("niche browser","Dorado|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
+        ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
 
@@ -56,7 +56,7 @@ var $bu_= new function() {
     r.v=parseFloat(r.fullv);
     //do not notify old systems since there is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/i.test(ua)) 
-        r.no_os_update=true;
+        r.no_device_update=true;
     
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
@@ -67,7 +67,7 @@ var $bu_= new function() {
         r.engine='ios';
         var h = Math.max(window.screen.height, window.screen.width);
         if (!r.v>11.0 && (h<=480 || window.devicePixelRatio<2) || r.v<8) //iphone <5 and old iPads  // (h>568 -->iphone 6+)
-              r.no_os_update=true;
+              r.no_device_update=true;
     }
     //check for android stock browser
     if (ua.indexOf('Android')>-1 && r.n==="s") {
@@ -75,6 +75,7 @@ var $bu_= new function() {
         if (v <= 534) {
             r.n="a";
             r.fullv=r.v=v;
+            r.is_insecure=true;
         }
     }
 
@@ -97,7 +98,7 @@ var $bu_= new function() {
     
     r.vmaj=Math.round(r.v);
 
-    r.is_insecure= !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
+    r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
     if ((r.n==="f" && (r.vmaj===52 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
@@ -165,7 +166,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.0.8";
+op.jsv="3.1.2";
 
 var required_min={i:10,f:11,o:21,s:8,c:30}
 
@@ -211,21 +212,26 @@ if (Math.random()*1200<1 && !op.test) {
 op.test=test||op.test||location.hash==="#test-bu";
 
 op.reasons=[];
+op.hide_reasons=[];
 function check_show(op) {
     var bb=$bu_.get_browser(op.override_ua);
     op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
-    if (bb.other!==false || bb.lts)// || (bb.is_supported && !op.notify_also_supported))
-        return false
+    if (bb.other!==false)
+        op.hide_reasons.push("is other browser:" + bb.other)
+    if ( bb.lts)// || (bb.is_supported && !op.notify_also_supported))
+        op.hide_reasons.push("LTS support")
     if (bb.mobile&&op.mobile===false)
-        return false
-    if (bb.no_os_update)
-        return false
+        op.hide_reasons.push("do not notify mobile")
+    if (bb.no_device_update)
+        op.hide_reasons.push("no device update")
     if (op.is_below_required)
         op.reasons.push("below required")
     if ((op.insecure||op.unsecure) && bb.is_insecure)
         op.reasons.push("insecure")
     if (op.unsupported && !bb.is_supported)
         op.reasons.push("no vendor support")
+    if (op.hide_reasons.length>0)
+        return false
     if (op.reasons.length>0)
         return true
     return false
@@ -254,3 +260,5 @@ document.body.appendChild(e);
 };
 
 $buo(window.$buoop);
+
+
