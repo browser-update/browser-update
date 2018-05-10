@@ -7,7 +7,8 @@
 #%% download latest translations from crowdin
 #pip install crowdin-cli-py --upgrade
 import subprocess
-subprocess.call(['crowdin-cli-py', 'download'])
+if subprocess.call(['crowdin-cli-py', 'download'])==1:
+    raise ValueError("Download failes, maybe you need to adjust paths in corwdin.yaml!")
 
 #%% Build translations
 #pip install polib
@@ -62,7 +63,9 @@ minned=minify(text, mangle=False, mangle_toplevel=False)
 write_file("update.show.min.js",minned)
 
 
-#%% build npm versions of the script
+# build npm versions of the script
+import re
+
 t_upjs=read_file("update.js")
 t_upjs=t_upjs.replace("""$buo(window.$buoop);""","""module.exports = $buo;\n""")
 
@@ -73,17 +76,24 @@ t_upjs=t_upjs.replace("""var e=document.createElement("script");
 e.src = op.jsshowurl||(/file:/.test(location.href) && "http://browser-update.org/update.show.min.js") || "//browser-update.org/update.show.min.js";
 document.body.appendChild(e);
 ""","$buo_show();")
+t_upjs_npm=re.sub(r'jsv="([^"]*)";','jsv="\\1npm";',t_upjs)
 
 t_showjs=read_file("update.show.js")
 t_showjs=t_showjs.replace("""$buo_show();""","")
-write_file("update.npm.full.js",t_upjs+t_showjs)
+
+write_file("update.npm.full.js",t_upjs_npm+t_showjs)
 
 
 #build cloudflare versions
-t_upjs=t_upjs.replace("""module.exports = $buo;\n""","")
+t_upjs_cf=re.sub(r'jsv="([^"]*)";','jsv="\\1cf";',t_upjs)
 
-write_file("../bup_private/cloudflare app/source/update.cloudflare.js",t_upjs+t_showjs)
+write_file("update.cloudflare.js",t_upjs_cf+t_showjs)
 
+
+#%%
+upload()
+#
+clear_cache()
 
 #%% publish to npm
 import subprocess
@@ -108,7 +118,7 @@ for p in paths:
     if p in ["rm_CH","en_SE"]:
         continue
         
-    if p in ["zh_TW"]:
+    if p in ["zh_TW","sr_CS"]:
          for i in po:
             if i.msgid==st:
                 print("t[\"%s\"]='%s';"%(p[:5].lower().replace("_","-"),i.msgstr.replace("\n","").replace("'","\\'")))
@@ -116,8 +126,11 @@ for p in paths:
     else:
         for i in po:
             if i.msgid==st:
-                #if i.msgstr!="":
-                print("t.%s='%s';"%(p[:2],i.msgstr.replace("\n","").replace("'","\\'")))
+                if i.msgstr!="":
+                    print("t.%s='%s';"%(p[:2],i.msgstr.replace("\n","").replace("'","\\'")))
+                else:
+                    print("//t.%s='%s';"%(p[:2],""))
+                                    
                 break
         
 #%% download maxmind geoip database

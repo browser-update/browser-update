@@ -26,12 +26,14 @@ margin-bottom: -13px;}
 
 <?php
 function getUpdatesJs() {
+    global $mysqli;
     $namesFrom = array("i"=>1,"f"=>2,"o"=>3,"s"=>4,"c"=>5,""=>0,"a"=>0);
     $namesTo = array("i"=>1+6,"f"=>2+6,"o"=>3+6,"s"=>4+6,"c"=>5+6,""=>0+6,"a"=>6+0);
 
-    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC');
+    $q=$mysqli->query('SELECT fromn,ton,COUNT(*) as num FROM `updates` WHERE time > UNIX_TIMESTAMP("2007-12-10") GROUP BY fromn, ton ORDER BY num DESC')
+        or die($mysqli->sqlstate. $q);
     $f=0;
-    while ($a = mysql_fetch_assoc($q)) {
+    while ($a = mysqli_fetch_assoc($q)) {
          if (!array_key_exists($a['fromn'], $namesFrom)|| !array_key_exists($a['ton'], $namesTo) || $a['num']<5000)
              continue;
          if ($f!=0) 
@@ -83,7 +85,7 @@ var data={
 {"name":"Other"},{"name":"IE"},{"name":"Firefox"},{"name":"Opera"},{"name":"Safari"},{"name":"Chrome"}
 ],
 "links": [
-    <?php echo cache_output('getUpdatesJs')?>
+    <?php echo cache_output('getUpdatesJs',$hours=24)?>
 ]
 };
 </script>
@@ -209,6 +211,7 @@ run(data);
     <tbody>
 <?php
 function browserMigration() {
+    global $mysqli;
     $names = array(
             "i"=>'Internet Explorer',
             "f"=>'Firefox',
@@ -219,14 +222,15 @@ function browserMigration() {
             ""=>'?',
             "x"=>'Other'
     );
-    $q=mysql_query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton HAVING num>1000 ORDER BY num DESC');
-     while ($a = mysql_fetch_assoc($q)) {
+    $q=$mysqli->query('SELECT fromn,ton,COUNT(*) as num FROM `updates` GROUP BY fromn, ton HAVING num>1000 ORDER BY num DESC')
+        or die($mysqli->sqlstate. $q);
+     while ($a = mysqli_fetch_assoc($q)) {
          if ($names[$a['fromn']]==""||$names[$a['fromn']]=="?")
              continue;
          echo '<tr><td>'.$names[$a['fromn']].'</td><td>'.$names[$a['ton']].'</td><td>'.$a['num'].'</td></tr>';
      }
 }
-echo cache_output('browserMigration');
+echo cache_output('browserMigration',$hours=24);
 ?>
     </tbody>
 </table>

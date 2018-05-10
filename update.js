@@ -2,140 +2,196 @@
 //it is recommended to directly link to this file because we update the detection code
 "use strict";
 
-function $bu_getBrowser(ua_str) {
-    var n,ua=ua_str||navigator.userAgent,donotnotify=false;
-    var names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other"};
-    function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;}
-    var ig=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|microsoft|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
-//        ignore("discontinued browser","camino|flot|k-meleon|fennec|galeon|chromeframe|coolnovo") ||
-        ignore("complicated device browser","SMART-TV|SmartTV") ||
-        ignore("niche browser","Dorado|Whale|MIDP|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10") ||
-        ignore("android(chrome) web view","; wv");
-    var mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
-    if (ig) 
-        return {n:"x",v:0,t:"other browser",donotnotify:ig};    
+var $bu_= new function() {
+    var s=this;
+    this.vsakt = {e:16,i:15,f:59,o:52,o_a:45.1,s:11.1,c:66,y:"18.2",v:1.14,uc:11.5,samsung:7.0,ios:11.3};
+    //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
+    //c:64.0.3282.167
+    this.vsinsecure_below = {i:11,e:13,c:62,f:56,y:17.1,s:"10.1.2",ios:"9.3.5",v:"1.12",uc:"11.3",samsung:"5.0",o_a:40,o:45};
+    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.1,v:1.12,uc:11.4,samsung:6.1,ios:9};
+    this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
+
+    this.get_browser = function(ua) {
+    var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false};
+    function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
+    r.other=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Gecko Expeditor")||
+//        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
+        ignore("TV","SMART-TV|SmartTV") ||
+        ignore("niche browser","Dorado|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
+//        ignore("android(chrome) web view","; wv");
+    r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
 
     var pats=[
-        ["CriOS.VV","c"],
-        ["FxiOS.VV","f"],
-        ["Trident.*rv:VV","i"],
-        ["Trident.VV","io"],
-        ["UCBrowser.VV","uc"],
-        ["MSIE.VV","i"],
-        ["Edge.VV","e"],
-        ["Vivaldi.VV","v"],
-        ["Android.*OPR.VV","o_a"],
-        ["OPR.VV","o"],
-        ["YaBrowser.VV","y"],
-        ["SamsungBrowser.VV","samsung"],
-        ["Chrome.VV","c"],
-        ["Firefox.VV","f"],
-        ["Version.VV.*Safari","s"],
-        ["Safari.VV","so"],
+        ["CriOS.VV","c",'ios'],
+        ["FxiOS.VV","f",'ios'],
+        ["Trident.*rv:VV","i",'i'],
+        ["Trident.VV","io",'i'],
+        ["UCBrowser.VV","uc",'c'],
+        ["MSIE.VV","i",'i'],
+        ["Edge.VV","e",'e'],
+        ["Vivaldi.VV","v",'c'],
+        ["Android.*OPR.VV","o_a",'c'],
+        ["OPR.VV","o",'c'],
+        ["YaBrowser.VV","y",'c'],
+        ["SamsungBrowser.VV","samsung",'c'],
+        ["Silk.VV","silk",'c'],
+        ["Chrome.VV","c",'c'],
+        ["Firefox.VV","f",'f'],
+        [" OS.VV.*Safari","ios",'ios'],
+        ["Version.VV.*Safari","s",'s'],
+        ["Safari.VV","so",'s'],
         ["Opera.*Version.VV","o"],
         ["Opera.VV","o"]
     ];
+    var VV="(\\d+\\.?\\d+\\.?\\d*\\.?\\d*)";
     for (var i=0; i < pats.length; i++) {
-        if (ua.match(new RegExp(pats[i][0].replace("VV","(\\d+\\.?\\d+)"),"i"))) {
-            n=pats[i][1];
+        if (ua.match(new RegExp(pats[i][0].replace("VV",VV),"i"))) {
+            r.n=pats[i][1];
+            r.engine=pats[i][2];
             break;
         }        
     }
-    var semver=n==="v"||n==="y"||n==="uc";
-    if (semver) {//zero pad semver for easy comparing
-        var parts = (RegExp.$1).split('.');
-        var v=(parts[0] + "." + ("00".substring(0, 2 - parts[1].length) + parts[1]));
-    }
-    else {
-        var v=Math.round(parseFloat(RegExp.$1)*10)/10;
-    }
-    
-    if (!n)
-        return {n:"x",v:0,t:names[n],mobile:mobile};
-    
+    r.fullv=RegExp.$1;
+    r.v=parseFloat(r.fullv);
     //do not notify old systems since there is no up-to-date browser available
     if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5|os x 10.6|os x 10.7/i.test(ua)) 
-        donotnotify="oldOS";
+        r.no_device_update=true;
     
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
-        ua.replace("_",".").match(new RegExp("OS.(\\d+\\.?\\d?)","i"));//
-        n="iOS";
-        v=parseFloat(RegExp.$1); 
+        ua.match(new RegExp("OS."+VV,"i"));//
+        r.n="ios";
+        r.fullv=RegExp.$1;
+        r.v=parseFloat(r.fullv);
+        r.engine='ios';
         var h = Math.max(window.screen.height, window.screen.width);
-        if (h<=480 || window.devicePixelRatio<2) //iphone <5 and old iPads  // (h>568 -->iphone 6+)
-              return {n:"s",v:v,t:"iOS "+v,donotnotify:"iOS without upgrade path",mobile:mobile};
-        return {n:"s",v:v,t:"iOS "+v,donotnotify:false,mobile:mobile};//identify as safari
+        if (!r.v>11.0 && (h<=480 || window.devicePixelRatio<2) || r.v<8) //iphone <5 and old iPads  // (h>568 -->iphone 6+)
+              r.no_device_update=true;
     }
     //check for android stock browser
-    if (ua.indexOf('Android')>-1 && n==="s") {
-        var ver=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
-        if (ver <= 534)
-            return {n:"a",v:ver,t:names["a"],mob:true,donotnotify:donotnotify,mobile:mobile};
-        //else
-        //    return {n:n,v:v,t:names[n]+" "+v,donotnotify:"mobile on android",mobile:mobile};
+    if (ua.indexOf('Android')>-1 && r.n==="s") {
+        var v=parseInt((/WebKit\/([0-9]+)/i.exec(ua) || 0)[1],10) || 2000;
+        if (v <= 534) {
+            r.n="a";
+            r.fullv=r.v=v;
+            r.is_insecure=true;
+        }
     }
 
-    //do not notify firefox ESR
-    if (n==="f" && Math.round(v)===52)
-        donotnotify="ESR";
+    if (r.n==="so") {
+        r.v=r.fullv=4.0;
+        r.n="s";
+    }
+    if (r.n==="io") {
+        r.n="i";
+        if (r.v>6) r.v=11;
+        else if (r.v>5) r.v=10;
+        else if (r.v>4) r.v=9;
+        else if (r.v>3.1) r.v=8;
+        else if (r.v>3) r.v=7;
+        else r.v=9;
+        r.fullv=r.v;
+    }
+    r.t=s.names[r.n]+" "+r.v;
+    r.is_supported=r.is_latest= !s.vsakt[r.n] ? undefined : s.less(r.fullv,s.vsakt[r.n])<=0;
+    
+    r.vmaj=Math.round(r.v);
 
-    if (n==="so") {
-        v=4.0;
-        n="s";
+    r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
+    
+    if ((r.n==="f" && (r.vmaj===52 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
+        r.is_supported=true;
+        r.is_insecure=false;
+        if (r.n==="f")
+            r.lts=true;
     }
-    if (n==="i" && v===7 && window.XDomainRequest) {
-        v=8;
+    if ((r.n==="c"||r.n==="f"||r.n==="o") && s.less(r.fullv,parseFloat(s.vsakt[r.n])-1)<=0)
+        r.is_supported=true; //mark also the version before the current version as supported to make the transitions smoother
+    if (r.n==="ios" && r.v>10.3)
+        r.is_supported=true;
+    if (r.n==="a" || r.n==="x")
+        r.t=s.names[r.n];
+    if (r.n==="e")
+        r.t=s.names[r.n]+" "+r.vmaj;    
+    var releases_per_year={'f':7,'c':8,'o':8,'i':1,'e':1,'s':1}//,'v':1}
+    if (releases_per_year[r.n]) {
+        r.age_years=Math.round(((s.vsakt[r.n]-r.v)/releases_per_year[r.n])*10)/10 || 0
     }
-    if (n==="io") {
-        n="i";
-        if (v>6) v=11;
-        else if (v>5) v=10;
-        else if (v>4) v=9;
-        else if (v>3.1) v=8;
-        else if (v>3) v=7;
-        else v=9;
-    }
-    if (n==="e") {
-        return {n:"i",v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
-    }
-    return {n:n,v:v,t:names[n]+" "+v,donotnotify:donotnotify,mobile:mobile};
+    var engines={e:"Edge.VV",c:"Chrome.VV",f:"Firefox.VV",s:"Version.VV",i:"MSIE.VV","ios":" OS.VV"}
+    if (r.engine) {
+        ua.match(new RegExp(engines[r.engine].replace("VV",VV),"i"))
+        r.engine_version=parseFloat(RegExp.$1)
+    }    
+    return r;
 }
+this.semver = function(vstr) {
+    if (vstr instanceof Array)
+        return vstr
+    var x = (vstr+(".0.0.0")).split('.')
+    return [parseInt(x[0]) || 0, parseInt(x[1]) || 0, parseInt(x[2]) || 0, parseInt(x[3]) || 0]
+}
+this.less= function(v1,v2) {
+    //semantic version comparison: returns 1 if v1<v2 , 0 if equal, -1 if v1>v2
+    v1=s.semver(v1)
+    v2=s.semver(v2)
+    for (var i=0; ;i++) {
+        if (i>=v1.length) return i>=v2.length ? 0 : 1;
+        if (i>=v2.length) return -1;
+        var diff = v2[i]-v1[i]
+        if (diff) return diff>0 ? 1 : -1;
+    }
+}
+/*
+this.sub= function(v,minus) {
+    //semantic version subtraction
+    v=s.semver(v)
+    minus=s.semver(minus)
+    for (var i=0; ;i++) {
+        if (i>=v.length||i>minus.length) break;
+        v[i]-=v[minus];
+    }
+    return v.join('.')
+}
+*/
+}
+
+window.$bu_getBrowser=$bu_.get_browser;
 
 var $buo = function(op,test) {
-var jsv=24;
-var n = window.navigator,b,vsmin;
-op = window._buorgres=op||{};
+var n = window.navigator,b;
+op=window._buorgres=op||{};
 var ll = op.l||(n.languages ? n.languages[0] : null) || n.language || n.browserLanguage || n.userLanguage||document.documentElement.getAttribute("lang")||"en";
-op.ll=ll=ll.replace("_","-").toLowerCase().substr(0,2);
+op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
+op.ll=op.llfull.substr(0,2);
+op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-var vsakt = {i:15,f:57,o:50,o_a:43,s:11,c:63,y:17.10,v:1.13,uc:11.4,samsung:7.0};
-var vsdefault = {i:-5,f:-4,o:-4,o_a:-4,s:-1.7,c:-4,a:534,y:-0.02,v:-0.02,uc:-0.03,samsung:-1};
-var vsinsecure = {};//{i:10,e:12.10166,c:61,f:55,y:16.09,s:10.0};
-if (op.apiver<4)
-    vsmin={i:9,f:10,o:20,s:7};
-else
-    vsmin={i:8,f:5,o:12.5,s:6.2};
-var vs =op.notify||op.vs||vsdefault;
-var releases_per_month={'f':7/12,'c':8/12,'o':8/12,'i':1/12,'s':1/12,'v':1/12}
-for (b in vsdefault) {
-    if (!vs[b])
-        vs[b]=vsdefault[b]
-    if (vsakt[b]) {
-        if (/m/.test(vs[b]))
-            vs[b]=vsakt[b]+vs[b].replace('m','')*releases_per_month[b]
-        if (vs[b]>=vsakt[b])
-            vs[b]=vsakt[b]-0.2
-        else if (vs[b]<0)
-            vs[b]=vsakt[b]+vs[b]
+op.jsv="3.1.3";
+
+var required_min={i:10,f:11,o:21,s:8,c:30}
+
+var vs=op.notify||op.vs||{};//old style config: maximum version to notify
+vs.e=vs.e||vs.i;
+var required=op.required||{};//minimum browser versions needed
+required.e=required.e||required.i;
+required.i=required.i||required.e;
+for (b in $bu_.vsdefault) {
+    if (vs[b]) {//old style: browsers to notify
+        if ($bu_.less(vs[b],0)>=0) // required <= 0
+            required[b]= parseFloat($bu_.vsakt[b])+parseFloat(vs[b])+0.01
+        else
+            required[b] = parseFloat(vs[b]) + 0.01
     }
-    if (vsmin[b] && vs[b]<vsmin[b])
-        vs[b]=vsmin[b];    
-    if ((op.insecure||op.unsecure) && vsinsecure[b] && vs[b]<vsinsecure[b])
-        vs[b]=vsinsecure[b];      
+    if (!required[b])
+        required[b]=$bu_.vsdefault[b]
+    if ($bu_.less(required[b],0)>=0) // required <= 0
+        required[b]=$bu_.vsakt[b]+required[b]
+    if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
+        required[b]=required_min[b]
 }
-op.vsf=vs;
+required.ios=required.ios||required.s;
+
+op.required=required;
 if (op.reminder<0.1 || op.reminder===0)
     op.reminder=0;
 else
@@ -147,19 +203,45 @@ op.onclose = op.onclose||function(o){};
 op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
 
-op.test=test||op.test||(location.hash==="#test-bu")||(location.hash==="#test-bu-beta")||false;
+op.test=test||op.test||(location.hash==="#test-bu")||false;
 
 if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+jsv;
+    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+op.jsv;
 }
 
-var bb=$bu_getBrowser();
-if (!op.test) {
-    if (!bb || !bb.n || bb.n==="x" || bb.donotnotify!==false || document.cookie.indexOf("browserupdateorg=pause")>-1)
-        return;
-    if (bb.v>vs[bb.n] || (bb.mobile&&op.mobile===false) )    
-        return;
-}
+op.test=test||op.test||location.hash==="#test-bu";
+
+op.reasons=[];
+op.hide_reasons=[];
+function check_show(op) {
+    var bb=$bu_.get_browser(op.override_ua);
+    op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
+    if (bb.other!==false)
+        op.hide_reasons.push("is other browser:" + bb.other)
+    if ( bb.lts)// || (bb.is_supported && !op.notify_also_supported))
+        op.hide_reasons.push("LTS support")
+    if (bb.mobile&&op.mobile===false)
+        op.hide_reasons.push("do not notify mobile")
+    if (bb.no_device_update)
+        op.hide_reasons.push("no device update")
+    if (op.is_below_required)
+        op.reasons.push("below required")
+    if ((op.insecure||op.unsecure) && bb.is_insecure)
+        op.reasons.push("insecure")
+    if (op.unsupported && !bb.is_supported)
+        op.reasons.push("no vendor support")
+    if (op.hide_reasons.length>0)
+        return false
+    if (op.reasons.length>0)
+        return true
+    return false
+ }
+
+op.notified=check_show(op);
+op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1 && op.reminder>0;
+
+if (!op.test && (!op.notified || op.already_shown))
+    return;
 
 op.setCookie=function(hours) {
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
@@ -173,9 +255,10 @@ if (op.nomessage) {
 }
 
 var e=document.createElement("script");
-e.src = op.jsshowurl||(/file:/.test(location.href) && "http://browser-update.org/update.show.min.js") || "//browser-update.org/update.show.min.js";
+e.src = op.jsshowurl||op.domain+"/update.show.min.js";
 document.body.appendChild(e);
-
 };
 
 $buo(window.$buoop);
+
+

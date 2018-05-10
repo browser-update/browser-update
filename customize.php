@@ -21,6 +21,10 @@ T_textdomain('customize');
     <?php echo T_('If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab.'); ?>
 </p>
 
+<p>
+    <?php echo T_('Append <code>#ignorecookie-bu</code> to test the detection. This will only show the bar in browsers configured to be outdated. It will ignore the cookie set to show the notification only once a day and show the notification every time you load the page.'); ?>
+</p>
+
 <h3><?php echo T_('Options'); ?></h3>
 
 <p>
@@ -35,7 +39,8 @@ T_textdomain('customize');
     // <?php echo T_('Specifies browser versions to notify. Negative numbers specify how much versions behind current version to notify.') . "\n"; ?> 
     // f:22 ---> Firefox <= 22
     // c:-5 ---> Chrome <= 35 if current Chrome version is 40.
-    // c:"-5m" ---> Chrome versions which are older than 3 months
+    <?php /* //c:"-5m" ---> Chrome versions which are older than 3 months*/?>
+    // <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration">more info</a>
 
     reminder: 24,                  
     // <?php echo T_('after how many hours should the message reappear') . "\n"; ?>
@@ -84,6 +89,9 @@ T_textdomain('customize');
 
     style: "top"
     // <?php echo T_('The position where the notification should be shown. Available options are:') . '"top", "bottom", "corner"' . "\n"; ?>
+
+    no_permanent_hide: false
+    // <?php echo T_('Do not give the user the option to permanently hide the notification'). "\n"; ?>
 
     api: xxx                        
     // <?php echo T_('This is the version of the browser-update api to use. Please do not remove.') . "\n"; ?>

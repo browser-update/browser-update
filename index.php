@@ -19,6 +19,8 @@ T_textdomain('site');
 $title=T_("Notifies visitors to update their browser");
 T_textdomain('update');
 include("header.php");
+//T_bindtextdomain('site', 'lang_nocache/');
+//T_bindtextdomain('site', rtrim(BU_LANG_PATH, DIRECTORY_SEPARATOR));
 ?>
     
 <div class="message">
@@ -35,7 +37,7 @@ include("header.php");
         <?php echo sprintf(str_replace('%d','%s',T_('<b>%s</b> sites are using this notification')), number_format(intval(cache_output('countSites')),0,".", " ")) ?>
     </p>
     <p>
-        <?php echo sprintf(str_replace('%d','%s',T_('<b>%s</b> visitors have already updated their browser')), number_format(intval(cache_output('countUpdates')),0,".", " ")) ?>
+        <a href="stats.html" style="text-decoration: none; color:#333;"><?php echo sprintf(str_replace('%d','%s',T_('<b>%s</b> visitors have already updated their browser')), number_format(intval(cache_output('countUpdates')),0,".", " ")) ?></a>
     </p>
 </div>
     
@@ -68,7 +70,7 @@ include("header.php");
     </li>
     <li>
         <?php echo sprintf(T_('By clicking the message, they will get to an <a href="%s">info page with reasons why to update (or change) and a list of browsers</a> available for their system.'), 'update.html?force_outdated=true')?>
-        <div style="text-align: center"><a href="update.html?force_outdated=true" title="<?php T_textdomain('update'); echo T_ig('update browser'); T_textdomain('site');?>"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/img/shot update.png" style="width:400px"/></a></div>
+        <div style="text-align: center"><a href="update.html?force_outdated=true" title="<?php T_textdomain('update'); echo T_ig('update browser'); T_textdomain('site');?>"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/img/shot update.png" style="width:400px; max-width: 100%;"/></a></div>
     </li>
     <li>
         <?php echo T_('If the visitor ignores the advice, it won\'t reappear for some time.')?>
@@ -149,7 +151,7 @@ function p_ver($version, $selected=false) {
         <label for="f-e">IE/Edge</label> 
         <select id="f-e" onchange="code()">    
         <?php 
-            p_dates("i",-5);
+            p_dates("e",-6);
         ?>
         </select>
     </li>
@@ -329,26 +331,7 @@ var $buoop = {api:4};
         text-align: center;
         font-size: 33px;
     }
-    
-    .advantages li {
-        margin: 10px;
-        padding-left: 40px;
-        background-repeat: no-repeat;
-        background-position: left top;
-        color: #777;
-        display: inline-block;
-        width: 300px;
-        height: 150px;
-        text-align: center;
-        vertical-align: top;
-    }    
-    
-    .advantages li h3 {
-        font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 6px;
-    }    
-    
+        
     .help {
         font-size: 20px;
         margin: 30px;
@@ -401,7 +384,7 @@ code();
 </script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58186ba14c41b9a2"></script>
 <?php
-if (!in_array($ll,['en','de'])){//,'es','fr','pl'])) {       
+if (!in_array($ll,['en','de','es','in'])){//,'es','fr','pl'])) {       
 ?>
 <div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
 <?php

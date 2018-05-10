@@ -1,20 +1,21 @@
 {
   "current": {
     "desktop": {
-      "c": 64.0,
-      "f": 58.0,
+      "c": 66.0,
+      "f": 59.0,
       "i": 15.0,
       "e": 16.0,
-      "o": 51.0,
-      "o_a": 45.0,
-      "pale moon": 27.4,
-      "s": 11,
-      "v": 1.14,
-      "y": 18.1,
-      "iOS": 11.3,
+      "o": 52.0,
+      "o_a": 45.1,
+      "pale moon": 27.9,
+      "s": 11.1,
+      "v": 1.15,
+      "y": 18.3,
+      "ios": 11.3,
       "a": 700,
-      "uc": 11.05,
-      "samsung": 7.0
+      "uc": 11.5,
+      "samsung": 7.0,
+      "silk": 65
     }
   },
   "insecure_below": {
@@ -82,8 +83,7 @@
       "11": "17-09-11"
     },
     "y": {
-      "17.9": "17-09-22",
-      "18.1": "18-06-12"
+      "17.9": "17-09-22"
     },
     "i": {
       "10": "13-02-26",
@@ -149,7 +149,7 @@
       "first release": "2002",
       "available_for": {
         "android": 4.1,
-        "win": 7,
+        "win": 5,
         "macos": 9,
         "ios": 9,
         "linux": true
@@ -174,12 +174,14 @@
         "win": 7,
         "macos": 9,
         "ios": 9,
-        "linux": true
+        "linux": true,
+        "fire": 4.1
       },
       "blocks_ads": true,
       "download_url": "https://www.google.com/chrome/browser/desktop/",
       "download_urls": {
-        "android": "https://play.google.com/store/apps/details?id=com.android.chrome"
+        "android": "https://play.google.com/store/apps/details?id=com.android.chrome",
+        "fireos_en": "https://www.technipages.com/kindle-fire-how-to-install-google-chrome-via-apk-file"
       }
     },
     "o": {
@@ -206,7 +208,7 @@
       "name": "Safari",
       "vendor": "Apple",
       "engine": "Webkit",
-      "security bulletins": "https://support.apple.com/de-de/HT201222",
+      "security bulletins": "https://support.apple.com/HT201222",
       "requirements": "https://en.wikipedia.org/wiki/Safari_version_history",
       "updates": "tied to os",
       "first release": "2003",
@@ -214,7 +216,7 @@
         "macos": 11,
         "ios": 11
       },
-      "download_urls": "https://support.apple.com/{full_locale_minus_lower}/HT204416"
+      "download_url": "https://support.apple.com/HT204416"
     },
     "y": {
       "name": "Yandex Browser",
@@ -240,10 +242,8 @@
       "core": "Trident",
       "lifecycle": "https://support.microsoft.com/de-de/help/17454/lifecycle-faq-internet-explorer",
       "available_for": {
-        "win": 7,
-        "winmob": 10
       },
-      "download_url": "https://www.microsoft.com/{full_locale_minus}/windows/microsoft-edge"
+      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge"
     },
     "e": {
       "name": "Edge",
@@ -260,7 +260,7 @@
         "win": 10,
         "winmob": 10
       },
-      "download_url": "https://www.microsoft.com/{full_locale_minus}/windows/microsoft-edge"
+      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge"
     },
     "v": {
       "name": "Vivaldi",
@@ -285,7 +285,10 @@
       "name": "UC Browser",
       "link": "ucweb.com",
       "vendor": "UCWeb",
-      "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl"
+      "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl",
+      "available_for": {
+        "android": 5
+      }
     },
     "palemoon": {
       "name": "Pale Moon",
@@ -295,16 +298,24 @@
       "download_urls": {
         "linux": "http://linux.palemoon.org/"
       },
+      "available_for": {
+        "win": 7,
+        "linux": true
+      },
       "download_url": "https://www.palemoon.org/"
     },
     "a": {
       "name": "Android Browser"
     },
     "ios": {
-      "name": "iOS Browser"
+      "name": "iOS Browser",
+      "available_for": {
+        "ios": 10.3
+      }
     },
     "o_a": {
-      "name": "Opera for Android",
+      "name": "Opera",
+      "internal name": "Opera for Android",
       "vendor": "Opera Software",
       "core": "Chromium",
       "engine": "Blink",
@@ -315,6 +326,11 @@
     },
     "unknown": {
       "name": "Unknown Browser"
+    },
+    "silk": {
+      "name": "Silk",
+      "vendor": "Amazon",
+      "ua string doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html"
     }
   }
 }

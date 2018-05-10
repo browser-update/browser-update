@@ -14,6 +14,14 @@ include("header.php");
 </div>
 <div class="com"><a href="blog-entry.html?n=placement" onclick="SC('placement'); return false;">Comments</a></div>
 -->
+<h2>Faster server</h2>
+<small>November 2017</small>
+<div class="entry">
+    <p>
+       We moved to a new server to have better response times for the more than 1&nbsp;000&nbsp;000 users who are updating their browser through browser-update.org each month.
+    </p>
+</div>
+<div class="com"><a href="blog-entry.html?n=newserver" onclick="SC('newserver'); return false;">Comments</a></div>
 
 <h2>Added more browsers to detection and choices</h2>
 <small>October 2017</small>
