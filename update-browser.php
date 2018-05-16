@@ -192,9 +192,17 @@ if ($sys=="MacOS") {
     start_browserlist();
     $u_sa=sprintf("https://support.apple.com/%s/HT204416",strtolower($full_locale_minus));                       
     brow("Firefox",$u_ff,"Mozilla Foundation","f",$ver<9);
-    brow("Opera",$u_op,"Opera Software","o",$ver<9);
+    
     brow("Chrome",$u_ch,"Google","c",$ver<9);            
     brow("Safari",$u_sa,"Apple","s",$ver<11);
+    /*if ($ll=="de" && $ver>=9){// && dice(50)) {
+        $add="<style>.bur a {background-image: url('/img/big/ur.png');}</style><img src='http://ads.g4-tracking.com/aff_i?offer_id=1665&aff_id=45390' width='1 height='1' />";
+        $choiceversion="ur";  
+        //$add.="<span>Le navigateur français.</span><span style='color:#ccc; font-size:0.7em;position: absolute;right: 3px;bottom: 3px;'><!--sponsored--></span><style>.bo a {border: 2px solid #ddd;}</style>";
+        brow("UR Browser","http://bit.ly/2zewwbk","Sponsored","ur",False,$add);
+    }
+    else    */
+        brow("Opera",$u_op,"Opera Software","o",$ver<9);
     end_browserlist();
 }
 if ($sys=="Android") {
@@ -222,9 +230,9 @@ if ($sys=="Android") {
         brow("Opera",$u_op,"Opera Software","o",$ver<4.1);
         brow("Chrome",$u_ch,"Google","c",$ver<4.1);
         if (is("UC Browser"))
-            brow("UC Browser",$u_uc,"UCWeb","uc",False,"<style>.buc a { background-image: url('/img/big/uc.png'); background-size: 110px auto;}</style>");
+            brow("UC Browser",$u_uc,"UCWeb","uc",False,"<style>.buc a { background-image: url('/img/big/uc.png');}</style>");
         if (is("Samsung Internet"))
-            brow("Samsung Internet",$u_samsung,"Samsung","samsung",$ver<5.0,"<style>.bsamsung a { background-image: url('/img/big/samsung.png'); background-size: 110px auto;}</style>");
+            brow("Samsung Internet",$u_samsung,"Samsung","samsung",$ver<5.0,"<style>.bsamsung a { background-image: url('/img/big/samsung.png');}</style>");
 
         end_browserlist();
     }
@@ -248,7 +256,11 @@ if ($sys=="Ubuntu"||$sys=="Linux") {
     brow("Chrome",$u_ch,"Google","c");
     brow("Opera",$u_op,"Opera Software","o");
     //brow("Chromium",,"Open Source","cm");
-    //brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");   
+    //brow("Pale Moon","http://linux.palemoon.org/","Open Source","pa");
+    if (is("Yandex Browser"))
+        brow("Yandex","https://browser.yandex.com","Yandex","ya",False,"<style>.bya a { background-image: url('/img/big/ya.png');}</style>");
+    else
+        brow("Vivaldi",$u_vivaldi,"Vivaldi Technologies","vi",False,"<style>.bvi a { background-image: url('/img/big/vi.png');}</style>");
     end_browserlist();
 }
 if ($sys=="iOS") {
@@ -273,16 +285,20 @@ if ($sys=="iOS") {
 </h2>    
 <?php
 
-/*
-display_browser("Yandex Browser", "https://browser.yandex.com",)
-display_browser("Seamonkey", "http://www.seamonkey-project.org/releases/#2.33")
-display_browser("Maxthon", "http://maxthon.com")
-*/
 }
 
 ?>
 </div>
-
+<script>
+var $buoop = {nomessage:true};    
+</script>
+<script src="/update.min.js"></script>
+<script>
+var cv="<?php echo $choiceversion;?>";
+var jsv=((window.location.hash||"").match(/.*(.*):/i)||["",""])[0]||"";
+var second=false;
+countView();
+</script>
 <?php
 include("ads.php");
 
@@ -296,26 +312,24 @@ if (false) {
 
 <div>
     <h2><?php echo T_('Why do I need an up-to-date browser?'); ?></h2>
-    <div id="advc">
-        <ul class="advantages">
-            <li class="security" id="security">
-                <h3><?php echo T_('Security'); ?></h3>
-                <div><?php echo T_('Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates.')?></div>
-            </li>
-            <li class="speed" id="speed">
-                <h3><?php echo T_('Speed'); ?></h3>
-                <div><?php echo T_('Every new browser generation improves speed')?></div>
-            </li>
-            <li class="compatibility" id="fun">
-                <h3><?php echo T_('Compatibility & new Technology')?></h3>
-                <div><?php echo T_('You can view sites that are using the latest technology')?></div>
-            </li>
-            <li class="comfort" id="comfort">
-                <h3><?php echo T_('Comfort & better experience')?></h3>
-                <div><?php echo T_('Have a more comfortable experience with new features, extensions and better customisability.')?></div>
-            </li>
-        </ul>
-    </div>
+    <ul class="advantages">
+        <li style="background-image: url('/img/security.png')" id="security">
+            <h3><?php echo T_('Security'); ?></h3>
+            <div><?php echo T_('Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates.')?></div>
+        </li>
+        <li style="background-image: url('/img/speed.png')" id="speed">
+            <h3><?php echo T_('Speed'); ?></h3>
+            <div><?php echo T_('Every new browser generation improves speed')?></div>
+        </li>
+        <li style="background-image: url('/img/compatibility.png')" id="fun">
+            <h3><?php echo T_('Compatibility & new Technology')?></h3>
+            <div><?php echo T_('You can view sites that are using the latest technology')?></div>
+        </li>
+        <li style="background-image: url('/img/comfort.png')" id="comfort">
+            <h3><?php echo T_('Comfort & better experience')?></h3>
+            <div><?php echo T_('Have a more comfortable experience with new features, extensions and better customisability.')?></div>
+        </li>
+    </ul>
 
     <div>
         <h2><?php echo T_('Why this website?')?></h2>
