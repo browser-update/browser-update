@@ -2,10 +2,10 @@
   "current": {
     "desktop": {
       "c": 66.0,
-      "f": 59.0,
+      "f": 60.0,
       "i": 15.0,
-      "e": 16.0,
-      "o": 52.0,
+      "e": 17.0,
+      "o": 53.0,
       "o_a": 45.1,
       "pale moon": 27.9,
       "s": 11.1,
@@ -14,7 +14,7 @@
       "ios": 11.3,
       "a": 700,
       "uc": 11.5,
-      "samsung": 7.0,
+      "samsung": 6.4,
       "silk": 65
     }
   },
@@ -127,12 +127,12 @@
       "engine": "Blink",
       "releases": "http://developer.samsung.com/internet/android/releases",
       "blog": "https://medium.com/samsung-internet-dev",
-      "dev docs": "http://developer.samsung.com/internet",
+      "dev_docs": "http://developer.samsung.com/internet",
       "apk": "https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-internet-for-android/",
-      "ua string doc": "http://developer.samsung.com/internet/user-agent-string-format",
-      "example ua string": "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
+      "ua_string_doc": "http://developer.samsung.com/internet/user-agent-string-format",
+      "example_ua_string": "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
       "updates": "independent",
-      "first release": "2012",
+      "first_release": "2012",
       "available_for": {
         "android": 5
       },
@@ -142,11 +142,11 @@
       "name": "Firefox",
       "vendor": "Mozilla Foundation",
       "engine": "Gecko",
-      "security bulletins": "https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/",
-      "ua string doc": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox",
+      "security_bulletins": "https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/",
+      "ua_string_doc": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox",
       "requirements": "https://www.mozilla.org/en-US/firefox/56.0.2/system-requirements/",
       "updates": "independent",
-      "first release": "2002",
+      "first_release": "2002",
       "available_for": {
         "android": 4.1,
         "win": 5,
@@ -168,7 +168,7 @@
       "releases": "https://chromereleases.googleblog.com/",
       "requirements": "https://www.google.de/chrome/browser/desktop/index.html",
       "updates": "independent",
-      "first release": "2008",
+      "first_release": "2008",
       "available_for": {
         "android": 4.1,
         "win": 7,
@@ -191,7 +191,7 @@
       "engine": "Blink",
       "releases": "https://www.opera.com/docs/history/",
       "download_url": "https://opera.com",
-      "first release": "1996",
+      "first_release": "1996",
       "available_for": {
         "android": 4.1,
         "win": 7,
@@ -207,11 +207,11 @@
     "s": {
       "name": "Safari",
       "vendor": "Apple",
-      "engine": "Webkit",
-      "security bulletins": "https://support.apple.com/HT201222",
+      "engine": "WebKit",
+      "security_bulletins": "https://support.apple.com/HT201222",
       "requirements": "https://en.wikipedia.org/wiki/Safari_version_history",
       "updates": "tied to os",
-      "first release": "2003",
+      "first_release": "2003",
       "available_for": {
         "macos": 11,
         "ios": 11
@@ -223,10 +223,10 @@
       "name_ru": "Яндекс.Браузер",
       "vendor": "Yandex",
       "vendor_ru": "Яндекс",
-      "security bulletins": "https://browser.yandex.com/security/changelogs/",
+      "security_bulletins": "https://browser.yandex.com/security/changelogs/",
       "core": "Chromium",
       "engine": "Blink",
-      "first release": "2012",
+      "first_release": "2012",
       "available_for": {
         "android": 4.1,
         "win": 7,
@@ -239,8 +239,9 @@
     "i": {
       "name": "Internet Explorer",
       "vendor": "Microsoft",
-      "core": "Trident",
-      "lifecycle": "https://support.microsoft.com/de-de/help/17454/lifecycle-faq-internet-explorer",
+      "engine": "Trident",
+      "first_release": "1995",
+      "lifecycle": "https://support.microsoft.com/help/17454/lifecycle-faq-internet-explorer",
       "available_for": {
       },
       "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge"
@@ -248,19 +249,33 @@
     "e": {
       "name": "Edge",
       "vendor": "Microsoft",
-      "core": "EdgeHTML",
-      "security bulletins": [
-        "https://technet.microsoft.com/de-de/security/bulletins",
-        "https://portal.msrc.microsoft.com/en-US/security-guidance"
+      "engine": "EdgeHTML",
+      "first_release": "2015",
+      "security_bulletins": [
+        "https://technet.microsoft.com/security/bulletins",
+        "https://portal.msrc.microsoft.com/security-guidance"
       ],
       "cve": "http://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-32367/Microsoft-Edge.html",
       "updates": "tied to os",
-      "first release": "2015",
       "available_for": {
         "win": 10,
         "winmob": 10
       },
-      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge"
+      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge",
+      "dev_docs": ["https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"]
+    },
+    "e_a": {
+      "name": "Edge for Android",
+      "vendor": "Microsoft",
+      "engine": "blink",
+      "core": "chromium",
+      "first_release": "2018",
+      "updates": "independent",
+      "available_for": {
+        "android": 4.4
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
+      "dev_docs": "https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"
     },
     "v": {
       "name": "Vivaldi",
@@ -277,41 +292,59 @@
     },
     "brave": {
       "name": "Brave",
+      "vendor": "Brave Software",
       "link": "https://brave.com",
       "blocks_ads": true,
-      "download_url": "https://brave.com/bro957"
+      "download_url": "https://brave.com/bro957",
+      "updates": "independent",
+      "available_for": {
+        "android": 5,
+        "win": 7,
+        "macos":9,
+        "linux":true
+      }
     },
     "uc": {
       "name": "UC Browser",
-      "link": "ucweb.com",
+      "link": "https://ucweb.com",
       "vendor": "UCWeb",
       "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl",
       "available_for": {
         "android": 5
-      }
+      },
+      "updates": "independent"
     },
     "palemoon": {
       "name": "Pale Moon",
+      "link": "https://palemoon.org",
       "core": "Firefox",
-      "engine": "Gecko",
+      "engine": "Goanna (Gecko)",
       "vendor": "Open Source",
       "download_urls": {
-        "linux": "http://linux.palemoon.org/"
+        "linux": "http://linux.palemoon.org"
       },
       "available_for": {
         "win": 7,
         "linux": true
       },
-      "download_url": "https://www.palemoon.org/"
+      "download_url": "https://www.palemoon.org/",
+      "updates": "independent"
     },
     "a": {
-      "name": "Android Browser"
+      "name": "Android Browser",
+      "vendor": "Google",
+      "core": "Chromium",
+      "engine": "WebKit",
+      "updates": "tied to os"
     },
     "ios": {
       "name": "iOS Browser",
+      "vendor": "Apple",
+      "engine": "WebKit",
       "available_for": {
         "ios": 10.3
-      }
+      },
+      "updates": "tied to os"
     },
     "o_a": {
       "name": "Opera",
@@ -322,7 +355,8 @@
       "available_for": {
         "android": 4.1
       },
-      "download_url": "https://play.google.com/store/apps/details?id=com.opera.browser"
+      "download_url": "https://play.google.com/store/apps/details?id=com.opera.browser",
+      "updates": "independent"
     },
     "unknown": {
       "name": "Unknown Browser"
@@ -330,7 +364,7 @@
     "silk": {
       "name": "Silk",
       "vendor": "Amazon",
-      "ua string doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html"
+      "ua_string_doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html"
     }
   }
 }

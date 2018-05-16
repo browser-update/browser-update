@@ -1,13 +1,22 @@
 Changes to the notification / detection script
 ==========
-3.1.3
+3.1.6 16.5.18
+- samsung internet latest version is 6.4, 7.0 is still beta
+- updated browser versions of vivalid, edge and opera
+- show hide permanent also for reminderClosed<24 (hours) but then hide the text ("you will be reminded in x days")
+
+3.1.5 9.5.18
+- better handling of left-to-right languages (arabic, hebrew, persian)
+- more translations of new text
+
+3.1.4 8.5.18
 - fixed specifying Internet Explorer (and fallback from Edge), fixes #375
 
-3.1.2
+3.1.2 8.5.18
 - New style text formatting for more languages
 - better compatibility for taiwanese chinese
 
-3.1.1
+3.1.1 8.5.18
 - improve test mode:
   - show script version
   - show reasons to show or hide notification
