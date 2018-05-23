@@ -1,8 +1,11 @@
 Changes to the notification / detection script
 ==========
+3.1.7 22.5.18
+- ignore waterfox browser
+
 3.1.6 16.5.18
 - samsung internet latest version is 6.4, 7.0 is still beta
-- updated browser versions of vivalid, edge and opera
+- updated browser versions of vivaldi, edge and opera
 - show hide permanent also for reminderClosed<24 (hours) but then hide the text ("you will be reminded in x days")
 
 3.1.5 9.5.18
