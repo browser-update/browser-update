@@ -1,5 +1,20 @@
 Changes to the notification / detection script
 ==========
+
+3.1.13 17.6.18
+- ignore prerender bot
+- minimum versions only for old api
+
+3.1.12 12.6.18
+- updated chrome, ios and uc browser current version
+- updated insecure versions for edge, yandex, firefox, chrome
+
+3.1.10 3.6.18
+- ignore new waterfox user agent string
+
+3.1.9
+- fix bug in npm version
+
 3.1.7 22.5.18
 - ignore waterfox browser
 
