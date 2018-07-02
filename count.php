@@ -96,7 +96,6 @@ function get_domain($domain, $debug = false)
 
 	return join('.', $arr);
 }
-require("config.php");
 require("lib/init.php");
 
 $time	= time();
@@ -124,7 +123,7 @@ else
 if (!isset($_GET["jsv"]))
     $jsv=0;
 else
-    $jsv = intval($_GET["jsv"]);
+    $jsv = $_GET["jsv"];
 
 $s=0;
 if (isset($_GET["second"]))
@@ -133,41 +132,57 @@ if (isset($_GET["second"]))
 $what=filter_input(INPUT_GET, 'what');
 $sys=get_system($ua_);
 
+$bx_=get_browserx($ua_);
+$browid=$bx_[0];
+$brown=$bx_[1];
+$browver=$bx_[2];
+
+$q=False;
+require_once("config.php");
+
 if ($what=="brow"){
-    $q=sprintf("INSERT DELAYED INTO browsers SET ua='%s', info='%s', country='%s', lang='%s', time=NOW(),sysn='%s', sysv=%f",
-        mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),
-        mysql_real_escape_string($_SERVER['HTTP_ACCEPT_LANGUAGE']),
-        mysql_real_escape_string(get_country()),
-        mysql_real_escape_string(get_lang()),
-        mysql_real_escape_string($sys[3]),
-        mysql_real_escape_string($sys[1])
+    
+    $q=sprintf("INSERT INTO browsers SET ua='%s', info='%s', country='%s', lang='%s', time=NOW(),sysn='%s', sysv=%f, n='%s',v='%d',outdated='%d'",
+        $mysqli->real_escape_string($_SERVER['HTTP_USER_AGENT']),
+        $mysqli->real_escape_string($_SERVER['HTTP_ACCEPT_LANGUAGE']),
+        $mysqli->real_escape_string(get_country()),
+        $mysqli->real_escape_string(get_lang()),
+        $mysqli->real_escape_string($sys[3]),
+        $mysqli->real_escape_string($sys[1]),
+        $mysqli->real_escape_string($browid),
+        $mysqli->real_escape_string($browver),
+        is_outdated() ? 1 : 0
     );
 }
 else if ($what=="view"){
+    /*
     $q=sprintf("INSERT DELAYED INTO viewschoice SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
-	mysql_real_escape_string($host),
-	mysql_real_escape_string($_GET["from"]),
-	mysql_real_escape_string(floatval($_GET["fromv"])),
-	mysql_real_escape_string(get_lang()),
+	$mysqli->real_escape_string($host),
+	$mysqli->real_escape_string($_GET["from"]),
+	$mysqli->real_escape_string(floatval($_GET["fromv"])),
+	$mysqli->real_escape_string(get_lang()),
 	$time,
-        mysql_real_escape_string($tv),
-        mysql_real_escape_string($cv),
+        $mysqli->real_escape_string($tv),
+        $mysqli->real_escape_string($cv),
         $s,
-        mysql_real_escape_string($sys[3]),
-        mysql_real_escape_string($sys[1])
+        $mysqli->real_escape_string($sys[3]),
+        $mysqli->real_escape_string($sys[1])
 	);
+     */
 }
 else if ($what=="noti"){
-    $q=sprintf("INSERT DELAYED INTO noti SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=NOW(), scriptversion=%d, textversion='%s', ua='%s',more='%s'",
-        mysql_real_escape_string(filter_input(INPUT_GET, 'ref')),
-        mysql_real_escape_string($_GET["from"]),
-        mysql_real_escape_string(floatval($_GET["fromv"])),
-        mysql_real_escape_string(get_lang()),
-        $jsv,
-        mysql_real_escape_string($tv),
-        "",//mysql_real_escape_string($_SERVER['HTTP_USER_AGENT']),        
-        mysql_real_escape_string(urldecode(filter_input(INPUT_GET, 'extra')))
-    );    
+    /*
+    $q=sprintf("INSERT DELAYED INTO noti SET referer='%s', fromn='%s', fromv=%f, lang='%s', time=NOW(), scriptversion='%d', textversion='%s', ua='%s',more='%s'",
+        $mysqli->real_escape_string(filter_input(INPUT_GET, 'ref')),
+        $mysqli->real_escape_string($_GET["from"]),
+        $mysqli->real_escape_string(floatval($_GET["fromv"])),
+        $mysqli->real_escape_string(get_lang()),
+        $mysqli->real_escape_string($jsv),
+        $mysqli->real_escape_string($tv),
+        "",//$mysqli->real_escape_string($_SERVER['HTTP_USER_AGENT']),        
+        $mysqli->real_escape_string(urldecode(filter_input(INPUT_GET, 'extra')))
+    );   
+     */ 
 }
 else {//updates
     try {
@@ -177,20 +192,21 @@ else {//updates
         $country_="xx";
     }    
     $q=sprintf("INSERT DELAYED INTO updates SET referer='%s', fromn='%s', fromv=%f, ton='%s', lang='%s',country='%s', time=%d, textversion='%s', choiceversion='%s', second=%d, sysn='%s', sysv=%f",
-	mysql_real_escape_string($host),
-	mysql_real_escape_string($_GET["from"]),
-	mysql_real_escape_string(floatval($_GET["fromv"])),
-	mysql_real_escape_string($_GET["to"]),
-	mysql_real_escape_string(get_lang()),
-        mysql_real_escape_string($country_),
+	$mysqli->real_escape_string($host),
+	$mysqli->real_escape_string($_GET["from"]),
+	$mysqli->real_escape_string(floatval($_GET["fromv"])),
+	$mysqli->real_escape_string($_GET["to"]),
+	$mysqli->real_escape_string(get_lang()),
+        $mysqli->real_escape_string($country_),
 	$time,
-        mysql_real_escape_string($tv),
-        mysql_real_escape_string($cv),
+        $mysqli->real_escape_string($tv),
+        $mysqli->real_escape_string($cv),
         $s,
-        mysql_real_escape_string($sys[3]),
-        mysql_real_escape_string($sys[1])
+        $mysqli->real_escape_string($sys[3]),
+        $mysqli->real_escape_string($sys[1])
 	);
 }
-mysql_query($q) 
-	or die (mysql_error(). $q);
-?>
+if ($q) {
+    $mysqli->query($q)
+		or trigger_error($mysqli->sqlstate(). $q, E_USER_ERROR);
+}

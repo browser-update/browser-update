@@ -1,13 +1,13 @@
 <?php
 
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
-
+ini_set('display_errors', 1);
 define('BU_PATH', dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR);
 define('BU_LIB_PATH', BU_PATH . 'lib' . DIRECTORY_SEPARATOR);
 $default_lang = 'en';
 
 
-function cache_output($function,$hours=0.1) {
+function cache_output($function,$hours=2) {
 	$cachefile = "cache/" . md5($function) . '.cache.html';
 
 	if (!file_exists($cachefile) || filemtime($cachefile) < (time() - 3600*$hours)) {
@@ -66,16 +66,38 @@ function currentv($browser,$set="desktop"){
     return get_browser_json()["current"][$set][$browser];
 }
 
+class Browser {
+    public $props;
+    private $browser;
+    function __construct() {
+        $this->browserx=get_browserx();
+        try {
+            $this->props = get_browser_json()["infos"][$this->browserx[0]];
+        } catch (Exception $ex) {
+            $this->props = get_browser_json()["infos"]["unknown"];
+        }
+    }
+    public function blocks_ads() {
+        try {
+            $this->props["blocks_ads"];
+        } catch (Exception $ex) {
+            return false;
+        }        
+    }
+}
+
 function countSites() {
+    global $mysqli;
     require_once("config.php");
-    $r = mysql_query("SELECT COUNT(DISTINCT referer) FROM updates") or die(mysql_error(). $q);
-    list($num) = mysql_fetch_row($r);
+    $r = $mysqli->query("SELECT COUNT(DISTINCT referer) FROM updates") or die($mysqli->sqlstate. $q);
+    list($num) = mysqli_fetch_row($r);
     return $num;
 }
 function countUpdates() {
+    global $mysqli;
     require_once("config.php");
-    $r = mysql_query("SELECT COUNT(*) FROM updates") or die(mysql_error(). $q);
-    list($num) = mysql_fetch_row($r);
+    $r = $mysqli->query("SELECT COUNT(*) FROM updates") or die($mysqli->sqlstate. $q);
+    list($num) = mysqli_fetch_row($r);
     return $num;
 }
 
