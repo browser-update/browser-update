@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:17,i:15,f:60,o:53 ,o_a:45.1,s:11.1,c:67,y:"18.4",v:1.15,uc:12.5,samsung:6.4,ios:11.4};
+    this.vsakt={e:17,i:15,f:60,o:53,o_a:45.1,s:11.1,c:67,y:"18.4",v:1.15,uc:12.5,samsung:6.4,ios:11.4};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {i:11,e:15,c:63,f:"57.0.1",y:18.1,s:"10.1.2",ios:"9.3.5",v:"1.12",uc:"12.1",samsung:"6.0",o_a:42,o:49};
     this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.4,v:1.12,uc:12.1,samsung:6.1,ios:9};
@@ -266,7 +266,7 @@ var $buo_show = function () {
     var op = window._buorgres;
     var bb = $bu_getBrowser();
     var burl = op.burl || ("http" + (/MSIE/i.test(navigator.userAgent) ? "" : "s") + "://browser-update.org/");
-    if (!op.url) {
+    if (op.url === undefined) {
         op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv + ":" + op.pageurl;
     }
     op.url_permanent_hide=op.url_permanent_hide || (burl + "block-ignore-browser-update-warning.html");

@@ -11,3 +11,4 @@ crowdin.yaml
 xgettext.*
 */node_modules/
 /nbproject/private/
+.idea/
