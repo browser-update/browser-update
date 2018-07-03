@@ -1,6 +1,6 @@
 {
   "name": "@regru/browser-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,7 @@
     "web"
   ],
   "files": [
-    "update.npm.full.js",
-    "update.npm.js"
+    "update.npm.full.js"
   ],
   "author": "Thomas Hümmer",
   "license": "MIT",

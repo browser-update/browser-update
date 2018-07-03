@@ -32,8 +32,6 @@ const settings = {
 
     // The position where the notification should be shown. Available options are:"top", "bottom", "corner"
     style : 'bottom',
-
-    url : null,
 };
 
 document.addEventListener( 'DOMContentLoaded', function() {

@@ -266,8 +266,8 @@ var $buo_show = function () {
     var op = window._buorgres;
     var bb = $bu_getBrowser();
     var burl = op.burl || ("http" + (/MSIE/i.test(navigator.userAgent) ? "" : "s") + "://browser-update.org/");
-    if (op.url === undefined) {
-        op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv + ":" + op.pageurl;
+    if (!op.url) {
+        op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv ;
     }
     op.url_permanent_hide=op.url_permanent_hide || (burl + "block-ignore-browser-update-warning.html");
     /*
@@ -443,6 +443,7 @@ if (ignorebutton) {
 
 
 op.onshow(op);
+};/*
 
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
@@ -453,3 +454,4 @@ if (op.test && !op.dont_show_debuginfo) {
 };
 
 
+*/

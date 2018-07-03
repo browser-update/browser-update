@@ -12,5 +12,5 @@ perl -pi -e 's/i\.src=[^;]+;//' $js
 perl -pi -e 's/\+"#"\+tv\+":"\+op.pageurl//' $js
 perl -pi -e 's/url\(.+?\)//' $js
 perl -pi -e 's/"noopener"/"noopener noreferrer"/' $js
-perl -pi -e 's/if \(!op.url\)/if \(op.url === undefined\)/' $js
+perl -pi -e 's/\+\s?":"\s?\+\s?op.pageurl//' $js
 git diff
