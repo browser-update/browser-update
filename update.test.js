@@ -11,7 +11,7 @@ var $buo_test_ = function () {
 
 
     var style = '<style>' +
-        '.buorg-test {position:absolute;width: 130px; top:5px; right:10px; text-align:center; color:#000; background-color: #ff93a8;font-size: 10px; padding:5px;line-height:1;}' +
+        '.buorg-test {position:absolute;width: 220px; top:5px; right:10px; text-align:center; color:#000; background-color: #ff93a8;font-size: 10px; padding:5px;line-height:1;text-align:left;}' +
         '.buorg-test-sub {}' +
         '.buorg-test div {padding:0;line-height:1;}' +
         '</style>';
@@ -21,7 +21,7 @@ var $buo_test_ = function () {
     if (op.style === "corner")
         style += '<style>.buorg-test {top:auto; bottom:-100px;} </style>';
 
-    var h = '<div>Notification Test-Mode</div><div>(v'+op.jsv+')</div>' + style;
+    var h = '<div>Browser Notification Debug-Mode (v'+op.jsv+')</div>' + style;
 
 
     h += '<div class="buorg-test-sub">'
@@ -37,7 +37,8 @@ var $buo_test_ = function () {
     h += "<span>is_latest:" + bb.is_latest + "</span>, ";
     h += "<span>is_insecure:" + bb.is_insecure + "</span>, ";
     h += "<span>other:" + bb.other + "</span>, ";
-    h += "<span>no_device_update:" + bb.no_device_update + "</span>";
+    h += "<span>no_device_update:" + bb.no_device_update + "</span>, ";
+    h += "<span>cookie set:" + (document.cookie.indexOf("browserupdateorg=pause")>-1) + "</span>";
 
     h += '</div>'
 
