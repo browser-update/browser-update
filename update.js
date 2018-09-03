@@ -287,7 +287,12 @@ function check_show(op) {
  }
 
 op.notified=check_show(op);
-op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1;
+
+//as per documentation: "reminder: ... 0 = show all the time" no need to check cookies
+op.already_shown = false;
+if(op.reminder !== 0){
+    op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1;
+}
 
 if (!op.test && (!op.notified || op.already_shown))
     return;
