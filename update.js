@@ -245,7 +245,12 @@ if (op.reminder<0.1 || op.reminder===0)
     op.reminder=0;
 else
     op.reminder=op.reminder||24;
-op.reminderClosed=op.reminderClosed||(24*7);
+
+if(op.reminderClosed<0.1 || op.reminderClosed===0)
+   op.remindClosed=0;
+else
+   op.reminderClosed=op.reminderClosed||(24*7);
+
 op.onshow = op.onshow||function(o){};
 op.onclick = op.onclick||function(o){};
 op.onclose = op.onclose||function(o){};
@@ -287,6 +292,8 @@ function check_show(op) {
  }
 
 op.notified=check_show(op);
+
+op.already_shown = false;
 op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1;
 
 if (!op.test && (!op.notified || op.already_shown))
