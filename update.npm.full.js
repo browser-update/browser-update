@@ -492,13 +492,13 @@ if (ignorebutton) {
 
 
 op.onshow(op);
-
+/*
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
     e.src = op.domain + "/update.test.js";
     document.body.appendChild(e);
 }
-
+*/
 };
 
 
