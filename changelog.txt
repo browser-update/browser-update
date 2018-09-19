@@ -1,5 +1,14 @@
 Changes to the notification / detection script
 ==========
+3.2.0 26.7.18
+- fix when permanently ignoring did not work on some sites (where reminder=0 was set), fixes #399
+- updated chrome version
+- ignore CM browser
+- add option "notify_lts" to also notify firefox browser that has still "Long term support" (LTS). Normal behaviour is to ignore this version as long as it is supported, fixes #362
+- better detection of firefox ESR. E.g. Firefox 52.0.2 is no ESR version, Firefox 52.2 is!, fixes #362
+- in test mode, print if the cookie to temporarily ignore the bar is set
+- better readability of debug message in test mode
+- better detection if iOS devices can be updated to the latest version of iOS
 
 3.1.13 17.6.18
 - ignore prerender bot
