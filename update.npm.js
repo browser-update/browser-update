@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:17,i:15,f:60,o:53 ,o_a:45.1,s:11.1,c:68,y:"18.6",v:1.15,uc:12.5,samsung:6.4,ios:11.4};
+    this.vsakt = {e:17,i:15,f:62,o:56,o_a:47,s:11.1,c:69,y:18.6,v:2.0,uc:12.9,samsung:7.4,ios:12};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {i:11,e:15,c:63,f:"57.0.1",y:18.1,s:"10.1.2",ios:"9.3.5",v:"1.12",uc:"12.1",samsung:"6.0",o_a:42,o:49};
-    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.6,v:1.12,uc:12.1,samsung:6.1,ios:9};
+    this.vsinsecure_below = {i:11,e:15,c:64,f:59,y:18.4,s:"10.1.2",ios:"9.3.5",v:"1.14",uc:"12.6",samsung:"6.4",o_a:44,o:51};
+    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.6,v:1.12,uc:12.1,samsung:6.4,ios:9};
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -123,7 +123,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && ((r.vmaj===52 && r.v>=52.1) || (r.vmaj===60 && r.v>=60.1))) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===52 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
@@ -214,7 +214,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.0npm";
+op.jsv="3.2.2npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -241,11 +241,8 @@ for (b in $bu_.vsdefault) {
 required.ios=required.ios||required.s;
 
 op.required=required;
-if (op.reminder<0.1 || op.reminder===0)
-    op.reminder=0;
-else
-    op.reminder=op.reminder||24;
-op.reminderClosed=op.reminderClosed||(24*7);
+op.reminder=op.reminder<0.1 ? 0 : op.reminder||(24*7);
+op.reminderClosed=op.reminderClosed<1 ? 0 : op.reminderClosed||(24*7);
 op.onshow = op.onshow||function(o){};
 op.onclick = op.onclick||function(o){};
 op.onclose = op.onclose||function(o){};
