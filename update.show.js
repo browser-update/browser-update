@@ -127,11 +127,15 @@ var updatebutton=document.getElementById("buorgul");
 if (updatebutton) {
     updatebutton.onclick = function (e) {
         div.onclick = null;
-        div.style.display = "none";
-        if (op.addmargin)
-            hm.style.marginTop = op.bodymt;
-        op.setCookie(op.reminderClosed);
         op.onclick(op);
+        if (op.noclose)
+            return
+        op.setCookie(op.reminderClosed);
+        if (!op.noclose) {
+            div.style.display = "none";
+            if (op.addmargin)
+                hm.style.marginTop = op.bodymt;
+        }
     };
 }
 if (!custom_text) {//make whole bar clickable except if custom text is set
@@ -173,20 +177,20 @@ if (ignorebutton) {
         op.div.style.display = "none";
         return false;
     }
-    if (op.noclose) {
+    if (op.noclose || op.reminderClosed==0) {
         ignorebutton.parentNode.removeChild(ignorebutton)
     }
 }
 
 
 op.onshow(op);
-
+/*
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
     e.src = op.domain + "/update.test.js";
     document.body.appendChild(e);
 }
-
+*/
 };
 
 $buo_show();
