@@ -1,5 +1,14 @@
 Changes to the notification / detection script
 ==========
+3.2.2 4.10.18
+- updated versions of almost all browsers
+- if option "noclose" is specified, the bar also does not close if the update button is pressed
+- reminderClosed: 0 can be passed. Then the user cannot close the bar, fixes #414
+
+3.2.1 26.7.18
+- fixed firefox esr detection
+- updated firefox version
+
 3.2.0 26.7.18
 - fix when permanently ignoring did not work on some sites (where reminder=0 was set), fixes #399
 - updated chrome version
