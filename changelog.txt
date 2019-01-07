@@ -1,6 +1,9 @@
 Changes to the notification / detection script
 ==========
-3.2.5
+3.2.6 7.1.19
+- fixed which versions of edge are not supported anymore
+
+3.2.5 19.12.18
 - updated firefox, opera, chrome, vivaldi, yandex versions
 - ingnore firexo focus
 

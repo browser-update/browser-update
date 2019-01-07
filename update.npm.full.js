@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:18,i:15,f:64,o:57,o_a:48.2,s:12.0,c:71,y:"18.11",v:2.2,uc:12.9,samsung:7.4,ios:12.1};
+    this.vsakt = {e:18,i:15,f:64,o:57,o_a:48.2,s:"12.0.2",c:71,y:"18.11",v:2.2,uc:"12.9.7",samsung:8.2,ios:12.1};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {i:11,e:16,c:64,f:59,y:"18.11",s:"10.1.2",ios:"9.3.5",v:"2.0",uc:"12.6",samsung:"6.4",o_a:44,o:51};
-    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.6,v:1.14,uc:12.1,samsung:6.4,ios:9};
+    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.10,v:2.0,uc:12.4,samsung:7.0,ios:9};
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -135,8 +135,10 @@ var $bu_= new function() {
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
         r.t=s.names[r.n];
-    if (r.n==="e")
-        r.t=s.names[r.n]+" "+r.vmaj;    
+    if (r.n==="e") {
+        r.t = s.names[r.n] + " " + r.vmaj;
+        r.is_supported = s.less(r.fullv, "15.15063") != 1
+    }
     var releases_per_year={'f':7,'c':8,'o':8,'i':1,'e':1,'s':1}//,'v':1}
     if (releases_per_year[r.n]) {
         r.age_years=Math.round(((s.vsakt[r.n]-r.v)/releases_per_year[r.n])*10)/10 || 0
@@ -214,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.5npm";
+op.jsv="3.2.6npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
