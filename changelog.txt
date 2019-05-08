@@ -1,11 +1,30 @@
 Changes to the notification / detection script
 ==========
+
+3.2.11 8.5.19
+- fixed bug where specifying required version "0" did not mean "latest version", as specified in the docs, fixes #436
+- updated browser versions
+
+3.2.10 9.4.19
+- updated browser versions
+- changed firefox download link as it did not work in IE 11
+
+3.2.9 10.2.19
+- updated firefox, ios, opera, chrome, uc, vivaldi browser versions
+
+3.2.8
+- mark safari 12.0.1 as latest version...
+
+3.2.7 8.1.19
+- correct handling of semver version strings with negative numbers
+
 3.2.6 7.1.19
 - fixed which versions of edge are not supported anymore
+- updated browser versions
 
 3.2.5 19.12.18
 - updated firefox, opera, chrome, vivaldi, yandex versions
-- ingnore firexo focus
+- ingnore firefox focus for now
 
 3.2.4 12.11.18
 - updated browser versions

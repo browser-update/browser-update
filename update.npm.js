@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:18,i:15,f:64,o:57,o_a:48.2,s:"12.0.2",c:71,y:"18.11",v:2.2,uc:"12.9.7",samsung:8.2,ios:12.1};
+    this.vsakt = {e:18,i:15,f:66,o:60,o_a:50.3,s:"12.1",c:74,y:"19.4",v:2.4,uc:"12.10",samsung:9.2,ios:12.1};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {i:11,e:16,c:64,f:59,y:"18.11",s:"10.1.2",ios:"9.3.5",v:"2.0",uc:"12.6",samsung:"6.4",o_a:44,o:51};
-    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.10,v:2.0,uc:12.4,samsung:7.0,ios:9};
+    this.vsinsecure_below = {i:11,e:16,c:64,f:59,y:"18.11",s:"11.1.1",ios:"9.3.5",v:"2.0",uc:"12.6",samsung:"6.4",o_a:44,o:55};
+    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:19.3,v:2.1,uc:12.8,samsung:7.9,ios:9};
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -216,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.6npm";
+op.jsv="3.2.11npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -233,10 +233,10 @@ for (b in $bu_.vsdefault) {
         else
             required[b] = parseFloat(vs[b]) + 0.01
     }
-    if (!required[b])
+    if (!(b in required))
         required[b]=$bu_.vsdefault[b]
     if ($bu_.less(required[b],0)>=0) // required <= 0
-        required[b]=$bu_.vsakt[b]+required[b]
+        required[b]=parseFloat($bu_.vsakt[b])+required[b] // TODO: make it work for string version
     if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
         required[b]=required_min[b]
 }
