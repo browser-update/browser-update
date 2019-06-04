@@ -1,0 +1,25 @@
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+# https://medium.com/@gogl.alex/how-to-properly-set-up-eslint-with-prettier-for-vue-or-nuxt-in-vscode-e42532099a9c
+
+# os: linux (default)
+
+dist: xenial # Faster.
+
+sudo: false
+
+language: node_js
+
+node_js: 11
+
+cache: npm
+
+# install: npm ci (default)
+
+# before_script: npm run build
+
+# script: npm test (default)
+
+# Output the 'eslint' configuration.
+after_script: grep -rn eslintConfig -A 7 package.json
+
+# End.

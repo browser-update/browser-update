@@ -4,7 +4,8 @@
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "update.npm.full.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "fix": "# Todo: semistandard --fix",
+    "test": "eslint ./*.js # semistandard"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,19 @@
   "bugs": {
     "url": "https://github.com/browser-update/browser-update/issues"
   },
-  "homepage": "http://browser-update.org"
+  "homepage": "https://browser-update.org",
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "peerDependencies": {
+    "semistandard": "^13.0.1"
+  }
 }
