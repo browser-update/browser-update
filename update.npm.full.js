@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt={e:18,i:15,f:65,o:58,o_a:48.2,s:"12.0.1",c:72,y:"18.11",v:2.3,uc:"12.10",samsung:8.2,ios:12.1};
+    this.vsakt={e:18,i:15,f:66,o:60,o_a:50.3,s:"12.1",c:74,y:"19.4",v:2.4,uc:"12.10",samsung:9.2,ios:12.1};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {i:11,e:15,c:64,f:59,y:18.4,s:"10.1.2",ios:"9.3.5",v:"1.14",uc:"12.6",samsung:"6.4",o_a:44,o:51};
     this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.6,v:1.12,uc:12.1,samsung:6.4,ios:9};
