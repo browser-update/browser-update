@@ -1,5 +1,16 @@
 Changes to the notification / detection script
 ==========
+3.2.14 13.7.19
+- some translation fixes
+- improve accessibility of message
+
+3.2.13 13.7.19
+- updated browser versions
+
+3.2.12 8.5.19
+- updated catalan, czech, farsi, hungarian and albanian translations of script
+- better accessibility
+- finnish translation
 
 3.2.11 8.5.19
 - fixed bug where specifying required version "0" did not mean "latest version", as specified in the docs, fixes #436
