@@ -110,8 +110,8 @@ else {
     else {
         op.addmargin = true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig"');
-    div.innerHTML = '<div class="buorg-pad"><span class="buorg-icon"> </span>' + t + '</div>' + style + style2;
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" role="button" tabindex="0"');
+    div.innerHTML = '<div class="buorg-pad" role="status" aria-live="polite"><span class="buorg-icon"> </span>' + t + '</div>' + style + style2;
 }
 
 op.text = t;
