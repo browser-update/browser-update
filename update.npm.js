@@ -307,7 +307,8 @@ e.src = op.jsshowurl||op.domain+"/update.show.min.js";
 document.body.appendChild(e);
 };
 
-module.exports = $buo;
-
+if( typeof( module ) !== 'undefined' ) {
+    module.exports = $buo;
+}
 
 
