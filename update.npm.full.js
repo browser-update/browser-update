@@ -305,9 +305,9 @@ if (op.nomessage) {
 $buo_show();
 };
 
-module.exports = $buo;
-
-
+if( typeof( module ) !== 'undefined' ) {
+    module.exports = $buo;
+}
 
 "use strict";
 var $buo_show = function () {
