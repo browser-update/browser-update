@@ -4,9 +4,9 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:18,i:15,f:68,o:62,o_a:50.4,s:"12.1",c:75,y:"19.6",v:2.6,uc:"12.10",samsung:9.2,ios:12.1};
+    this.vsakt = {e:18,i:12,f:69,o:63,o_a:52.4,s:"12.1.2",c:77,y:"19.9",v:2.7,uc:"12.13",samsung:9.4,ios:12.4};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {i:11,e:16,c:70,f:62,y:"18.11",s:"11.1.1",ios:"9.3.5",v:"2.0",uc:"12.6",samsung:"6.4",o_a:44,o:55};
+    this.vsinsecure_below = {i:11,e:16,c:70,f:62,y:"18.11",s:"11.1.1",ios:"9.3.5",v:"2.0",uc:"12.8",samsung:"7.0",o_a:44,o:55};
     this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:19.5,v:2.3,uc:12.8,samsung:7.9,ios:9};
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
@@ -216,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.14npm";
+op.jsv="3.2.15npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -225,7 +225,11 @@ vs.e=vs.e||vs.i;
 vs.i=vs.i||vs.e;
 var required=op.required||{};//minimum browser versions needed
 required.e=required.e||required.i;
-required.i=required.i||required.e;
+if (!required.i) {
+    required.i=required.e;
+    $bu_.vsakt.i=$bu_.vsakt.e;
+}
+
 for (b in $bu_.vsdefault) {
     if (vs[b]) {//old style: browsers to notify
         if ($bu_.less(vs[b],0)>=0) // required <= 0
@@ -235,8 +239,8 @@ for (b in $bu_.vsdefault) {
     }
     if (!(b in required))
         required[b]=$bu_.vsdefault[b]
-    if ($bu_.less(required[b],0)>=0) // required <= 0
-        required[b]=parseFloat($bu_.vsakt[b])+required[b] // TODO: make it work for string version
+    if ($bu_.less(required[b],0)>=0) // required <= 0 --> relative to current version
+        required[b]=parseFloat($bu_.vsakt[b])+parseFloat(required[b]) // TODO: make it work for string version
     if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
         required[b]=required_min[b]
 }
@@ -307,7 +311,10 @@ e.src = op.jsshowurl||op.domain+"/update.show.min.js";
 document.body.appendChild(e);
 };
 
-module.exports = $buo;
+
+if( typeof( module ) !== 'undefined' ) {
+    module.exports = $buo;
+}
 
 
 

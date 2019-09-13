@@ -1,5 +1,11 @@
 Changes to the notification / detection script
 ==========
+3.2.15
+- fixed internet explorer versions to notify when just an edge version to notify was specified with negative numbers (e.g. e:-3). Fixes #440. Fixes #430.
+- updated browser versions
+- fixed accessibility
+- npm now always works in the browser
+
 3.2.14 13.7.19
 - some translation fixes
 - improve accessibility of message
