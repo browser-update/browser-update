@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+3.2.16
+- fix another edge case in IE11: notification fallback if not specifying any version now works as expected
+- updated firefox ESR versions
+
 3.2.15
 - fixed internet explorer versions to notify when just an edge version to notify was specified with negative numbers (e.g. e:-3). Fixes #440. Fixes #430.
 - updated browser versions

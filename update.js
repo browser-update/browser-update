@@ -123,7 +123,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===52 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===68 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
@@ -216,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.15";
+op.jsv="3.2.16";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -237,7 +237,7 @@ for (b in $bu_.vsdefault) {
         else
             required[b] = parseFloat(vs[b]) + 0.01
     }
-    if (!(b in required))
+    if (!(b in required) || required[b]==null)
         required[b]=$bu_.vsdefault[b]
     if ($bu_.less(required[b],0)>=0) // required <= 0 --> relative to current version
         required[b]=parseFloat($bu_.vsakt[b])+parseFloat(required[b]) // TODO: make it work for string version
