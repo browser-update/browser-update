@@ -1,6 +1,11 @@
 Changes to the notification / detection script
 ==========
-3.2.16
+3.3.0 13.9.19
+- now you can use custom notification messages for different browsers (experimental).
+  Explanation here: https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser
+  Fixes #433, Fixes #388
+
+3.2.16 13.9.19
 - fix another edge case in IE11: notification fallback if not specifying any version now works as expected
 - updated firefox ESR versions
 
