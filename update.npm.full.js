@@ -13,10 +13,10 @@ var $bu_= new function() {
     this.get_browser = function(ua) {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
-    r.other=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
+    r.other=ignore("bot","Chrome-Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
 //        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("niche browser","Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
         ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
@@ -216,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.3.0npm";
+op.jsv="3.3.2npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -383,7 +383,7 @@ t.uk= {'msg': 'Ваш браузер ({brow_name}) застарілий.','msgmo
 t.vi = '<b>Trình duyệt web của bạn ({brow_name}) đã cũ.</b> Hãy nâng cấp trình duyệt của bạn để được an toàn và thuận lợi hơn đồng thời có được trải nghiệm tốt nhất với trang này';
 t.zh= {'msg': '您的网页浏览器（{brow_name}）已过期。','msgmore': '更新您的浏览器，以便在该网站上获得更安全、更快速和最好的体验。','bupdate': '更新浏览器','bignore': '忽略', 'remind': '会在{days}天后提醒您。', 'bnever': '不再显示'}
 t["zh-tw"]=t["zh-hans-cn"] = {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
-var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_for_" + bb.n] || op.text
+var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_in_" + op.ll] || op["text_for_" + bb.n] || op["text_for_"  + bb.n + "_in_" + op.ll] || op.text
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
     if (typeof custom_text === 'string')

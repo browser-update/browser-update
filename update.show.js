@@ -65,7 +65,7 @@ t.uk= {'msg': 'Ваш браузер ({brow_name}) застарілий.','msgmo
 t.vi = '<b>Trình duyệt web của bạn ({brow_name}) đã cũ.</b> Hãy nâng cấp trình duyệt của bạn để được an toàn và thuận lợi hơn đồng thời có được trải nghiệm tốt nhất với trang này';
 t.zh= {'msg': '您的网页浏览器（{brow_name}）已过期。','msgmore': '更新您的浏览器，以便在该网站上获得更安全、更快速和最好的体验。','bupdate': '更新浏览器','bignore': '忽略', 'remind': '会在{days}天后提醒您。', 'bnever': '不再显示'}
 t["zh-tw"]=t["zh-hans-cn"] = {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
-var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_for_" + bb.n] || op.text
+var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_in_" + op.ll] || op["text_for_" + bb.n] || op["text_for_"  + bb.n + "_in_" + op.ll] || op.text
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
     if (typeof custom_text === 'string')

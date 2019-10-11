@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.2 10.10.19
+- whitelist chrome-lighthouse bot (google page speed), brave browser (for now) and Falkon browser, fixes #451, fixes #450
+
 3.3.0 13.9.19
 - now you can use custom notification messages for different browsers (experimental).
   Explanation here: https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser
