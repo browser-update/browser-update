@@ -4,19 +4,19 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt={e:18,i:15,f:66,o:60,o_a:50.3,s:"12.1",c:74,y:"19.4",v:2.4,uc:"12.10",samsung:9.2,ios:12.1};
+    this.vsakt={e:18,i:12,f:69,o:63,o_a:52.4,s:"12.1.2",c:77,y:"19.9",v:2.7,uc:"12.13",samsung:9.4,ios:12.4};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {i:11,e:15,c:64,f:59,y:18.4,s:"10.1.2",ios:"9.3.5",v:"1.14",uc:"12.6",samsung:"6.4",o_a:44,o:51};
-    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:18.6,v:1.12,uc:12.1,samsung:6.4,ios:9};
+    this.vsinsecure_below = {i:11,e:16,c:70,f:62,y:"18.11",s:"11.1.1",ios:"9.3.5",v:"2.0",uc:"12.8",samsung:"7.0",o_a:44,o:55};
+    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:19.5,v:2.3,uc:12.8,samsung:7.9,ios:9};
     this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
 
     this.get_browser = function(ua) {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
-    r.other=ignore("bot","bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
+    r.other=ignore("bot","Chrome-Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
 //        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","Dorado|LBBROWSER|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("niche browser","Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
         ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
@@ -123,7 +123,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===52 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===68 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
@@ -135,8 +135,10 @@ var $bu_= new function() {
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
         r.t=s.names[r.n];
-    if (r.n==="e")
-        r.t=s.names[r.n]+" "+r.vmaj;    
+    if (r.n==="e") {
+        r.t = s.names[r.n] + " " + r.vmaj;
+        r.is_supported = s.less(r.fullv, "15.15063") != 1
+    }
     var releases_per_year={'f':7,'c':8,'o':8,'i':1,'e':1,'s':1}//,'v':1}
     if (releases_per_year[r.n]) {
         r.age_years=Math.round(((s.vsakt[r.n]-r.v)/releases_per_year[r.n])*10)/10 || 0
@@ -214,7 +216,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.2.2npm";
+op.jsv="3.3.2npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -223,7 +225,11 @@ vs.e=vs.e||vs.i;
 vs.i=vs.i||vs.e;
 var required=op.required||{};//minimum browser versions needed
 required.e=required.e||required.i;
-required.i=required.i||required.e;
+if (!required.i) {
+    required.i=required.e;
+    $bu_.vsakt.i=$bu_.vsakt.e;
+}
+
 for (b in $bu_.vsdefault) {
     if (vs[b]) {//old style: browsers to notify
         if ($bu_.less(vs[b],0)>=0) // required <= 0
@@ -231,10 +237,10 @@ for (b in $bu_.vsdefault) {
         else
             required[b] = parseFloat(vs[b]) + 0.01
     }
-    if (!required[b])
+    if (!(b in required) || required[b]==null)
         required[b]=$bu_.vsdefault[b]
-    if ($bu_.less(required[b],0)>=0) // required <= 0
-        required[b]=$bu_.vsakt[b]+required[b]
+    if ($bu_.less(required[b],0)>=0) // required <= 0 --> relative to current version
+        required[b]=parseFloat($bu_.vsakt[b])+parseFloat(required[b]) // TODO: make it work for string version
     if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
         required[b]=required_min[b]
 }
@@ -303,7 +309,10 @@ if (op.nomessage) {
 $buo_show();
 };
 
-module.exports = $buo;
+
+if( typeof( module ) !== 'undefined' ) {
+    module.exports = $buo;
+}
 
 
 
@@ -335,23 +344,22 @@ var $buo_show = function () {
 
 
 var t = {}, ta;
-t.en = {
-    msg: 'Your web browser ({brow_name}) is out of date.', msgmore: 'Update your browser for more security, speed and the best experience on this site.',        bupdate: 'Update browser',        bignore: 'Ignore',        remind: 'You will be reminded in {days} days.',        bnever: 'Never show again'    }
+t.en = {'msg': 'Your web browser ({brow_name}) is out of date.', 'msgmore': 'Update your browser for more security, speed and the best experience on this site.', 'bupdate': 'Update browser', 'bignore': 'Ignore','remind': 'You will be reminded in {days} days.','bnever': 'Never show again'}
 t.ar= {'msg': 'متصفح الإنترنت الخاص بك ({brow_name}) غير مُحدّث.','msgmore': 'قم بتحديث المتصفح الخاص بك لمزيد من الأمان والسرعة ولأفضل تجربة على هذا الموقع.','bupdate': 'تحديث المتصفح','bignore': 'تجاهل', 'remind': 'سيتم تذكيرك في غضون {days} أيام.', 'bnever': 'لا تظهر مرة أخرى'}
 t.bg = '<b>Вашият браузър ({brow_name}) не е актуализиран.</b> Актуализирайте го за повече сигурност, удобство и най-добро изживяване на сайта. <a{up_but}>Актуализирайте браузъра</a> <a{ignore_but}>Игнорирайте</a>';
-t.ca = 'El teu navegador ({brow_name}) està <b>desactualitzat.</b> Té <b>vulnerabilitats</b> conegudes i pot <b>no mostrar totes les característiques</b> d\'aquest i altres llocs web. <a{up_but}>Aprèn a actualitzar el navegador</a>';
-t.cs = '<b>Váš webový prohlížeč ({brow_name}) je zastaralý .</b> Pro větší bezpečnost, pohodlí a optimální zobrazení této stránky si prosím svůj prohlížeč aktualizujte. <a{up_but}>Aktualizovat prohlížeč</a> <a{ignore_but}>Ignorovat</a>';
+t.ca= {'msg': 'El teu navegador ({brow_name}) està desactualitzat.','msgmore': 'Actualitzeu el vostre navegador per obtenir més seguretat, velocitat i una millor experiència en aquest lloc.','bupdate': 'Actualitza el navegador','bignore': 'Ignorar', 'remind': 'T\'ho recordarem d\'aquí a {days} dies.', 'bnever': 'No ho tornis a mostrar'}
+t.cs= {'msg': 'Váš prohlížeč ({brow_name}) je zastaralý.','msgmore': 'Aktualizujte prohlížeč pro lepší zabezpečení, rychlost a nejlepší zážitek z tohoto webu.','bupdate': 'Aktualizovat prohlížeč','bignore': 'Ignorovat', 'remind': 'Znovu budete upozorněni za {days} dnů.', 'bnever': 'Již nezobrazovat'}
 t.da= {'msg': 'Din web browser ({brow_name}) er forældet','msgmore': 'Opdater din browser for mere sikkerhed, hastighed og den bedste oplevelse på denne side.','bupdate': 'Opdater browser','bignore': 'Ignorer', 'remind': 'Du vil blive påmindet om {days} dage.', 'bnever': 'Vis aldrig igen'}
 t.de= {'msg': 'Ihr Webbrowser ({brow_name}) ist veraltet.','msgmore': 'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Geschwindigkeit und den besten Komfort auf dieser Seite.','bupdate': 'Browser aktualisieren','bignore': 'Ignorieren', 'remind': 'Sie werden in {days} Tagen wieder erinnert.', 'bnever': 'Nie wieder anzeigen'}
 t.el= {'msg': 'Το πρόγραμμα περιήγησής σας ({brow_name}) είναι απαρχαιωμένο.','msgmore': 'Ενημερώστε το πρόγραμμα περιήγησής σας για περισσότερη ασφάλεια, ταχύτητα και την καλύτερη εμπειρία σ\' αυτόν τον ιστότοπο.','bupdate': 'Ενημερώστε το πρόγραμμα περιήγησης','bignore': 'Αγνοήστε', 'remind': 'Θα σας το υπενθυμίσουμε σε {days} ημέρες.', 'bnever': 'Να μην εμφανιστεί ξανά'}
 t.es= {'msg': 'Su navegador web ({brow_name}) está desactualizado.','msgmore': 'Actualice su navegador para obtener más seguridad, velocidad y para disfrutar de la mejor experiencia en este sitio.','bupdate': 'Actualizar navegador','bignore': 'Ignorar', 'remind': 'Se le recordará en {days} días.', 'bnever': 'No mostrar de nuevo'}
-t.fa = '<b> متصفح الويب ({brow_name}) الخاص بك قديم</b>. قُم بتحديث متصفحك للحصول على مزيدٍ من الحماية والراحة وتجربة أفضل على هذا الموقع. <a{up_but}> تحديث المتصفح</a> <a{ignore_but}> تجاهل</a>';
-t.fi = '<b>Selaimesi ({brow_name}) on vanhentunut.</b> Päivitä selaimesi parantaaksesi turvallisuutta, mukavuutta ja käyttökokemusta tällä sivustolla. <a{up_but}>Päivitä selain</a> <a{ignore_but}>Ohita</a>';
+t.fa= {'msg': 'مرورگر شما ({brow_name}) قدیمی است.','msgmore': 'برای ایمنی، سرعت و تجربه بهتر مرورگر خود را به‌روز کنید.','bupdate': 'به‌روزرسانی مرورگر','bignore': 'نادیده گرفتن', 'remind': 'به شما تا {days} روز دیگر دوباره یاد‌آوری خواهد شد.', 'bnever': 'هرگز نمایش نده'}
+t.fi= {'msg': 'Selaimesi ({brow_name}) on vanhentunut.','msgmore': 'Päivitä selaimesi saadaksesi tietoturvapäivityksiä, nopeutta sekä parhaan käyttökokemuksen sivustolla.','bupdate': 'Päivitä selain','bignore': 'Ohita', 'remind': 'Saat uuden muistutuksen {days} päivän päästä.', 'bnever': 'Älä näytä uudestaan'}
 t.fr= {'msg': 'Votre navigateur Web ({brow_name}) n\'est pas à jour.','msgmore': 'Mettez à jour votre navigateur pour plus de sécurité et de rapidité et la meilleure expérience sur ce site.','bupdate': 'Mettre à jour le navigateur','bignore': 'Ignorer', 'remind': 'Vous serez rappelé dans {days} jours.', 'bnever': 'Ne plus afficher'}
 t.gl = 'Tá an líonléitheoir agat (%s) <b>as dáta.</b> Tá <b>laigeachtaí slándála</b> a bhfuil ar eolas ann agus b\'fhéidir <b>nach taispeánfaidh sé gach gné</b> den suíomh gréasáin seo ná cinn eile. <a%s>Foghlaim conas do líonléitheoir a nuashonrú</a>';
 t.he= {'msg': 'דפדפן ({brow_name}) שלך אינו מעודכן.','msgmore': 'עדכן/י את הדפדפן שלך לשיפור האבטחה והמהירות וכדי ליהנות מהחוויה הטובה ביותר באתר זה.','bupdate': 'עדכן דפדפן','bignore': 'התעלם', 'remind': 'תקבל/י תזכורת בעוד  {days} ימים.', 'bnever': 'אל תציג שוב'}
 t.hi= {'msg': 'आपका वेब ब्राउज़र ({brow_name}) पुराना है।','msgmore': 'इस साइट पर अधिक सुरक्षा, गति और सर्वोत्तम अनुभव करने के लिए अपने ब्राउज़र को अपडेट करें ।','bupdate': 'ब्राउज़र अपडेट करें','bignore': 'नजरअंदाज करें', 'remind': 'आपको {days} दिनों में याद दिलाया जाएगा।', 'bnever': 'फिर कभी मत दिखाना'}
-t.hu = '<b>Az ön ({brow_name}) böngészője elavult.</b> Frissítse a böngészőjét több biztonság, kényelem és a legjobb felhasználói élmény érdekében ezen az oldalon. <a{up_but}>Böngésző frissítése</a> <a{ignore_but}>Mellőzés</a>';
+t.hu= {'msg': 'Az Ön webböngészője ({brow_name}) elavult.','msgmore': 'Frissítse böngészőjét a nagyobb biztonság, sebesség és élmény érdekében!','bupdate': 'Böngésző frissítése','bignore': 'Mellőzés', 'remind': 'Újra emlékeztetünk {days} napon belül.', 'bnever': 'Ne mutassa többet'}
 t.id = '<b>Browser Anda ({brow_name}) sudah usang.</b> Perbarui browser Anda untuk pengalaman terbaik yang lebih aman dan nyaman di situs ini. <a{up_but}>Perbarui Browser</a> <a{ignore_but}>Abaikan</a>';
 t.it= {'msg': 'Il tuo browser ({brow_name}) non è aggiornato.','msgmore': 'Aggiorna il browser per una maggiore sicurezza, velocità e la migliore esperienza su questo sito.','bupdate': 'Aggiorna browser','bignore': 'Ignora', 'remind': 'Riceverai un promemoria tra {days} giorni.', 'bnever': 'Non mostrare di nuovo'}
 t.ja= {'msg': 'お使いのブラウザ ({brow_name}) は最新版ではございません。','msgmore': 'このサイトでのさらなるセキュリティ、速度および最高の体験のためにお使いのブラウザーを更新してください。','bupdate': 'ブラウザをアップデートする','bignore': '無視する', 'remind': '{days}後にお知らせします。', 'bnever': '今後表示しない'}
@@ -366,7 +374,7 @@ t.ro = '<b>Browserul dumneavoastră ({brow_name}) nu este actualizat.</b> Actual
 t.ru= {'msg': 'Ваш браузер ({brow_name}) устарел.','msgmore': 'Обновите ваш браузер для повышения уровня безопасности, скорости и комфорта использования этого сайта.','bupdate': 'Обновить браузер','bignore': 'Игнорировать', 'remind': 'Вы получите напоминание через {days} дней.', 'bnever': 'Больше не показывать '}
 t.sk= {'msg': 'Váš internetový prehliadač ({brow_name}) je zastaraný.','msgmore': 'Pre väčšiu bezpečnosť, rýchlosť a lepšiu skúsenosť s touto stránkou si aktualizujte svoj prehliadač.','bupdate': 'Aktualizovať prehliadač','bignore': 'Ignorovať', 'remind': 'Bude vám to pripomenuté o {days} dní.', 'bnever': 'Už nikdy viac neukazovať'}
 t.sl = 'Vaš brskalnik (%s) je <b>zastarel.</b> Ima več <b>varnostnih pomankljivosti</b> in morda <b>ne bo pravilno prikazal</b> te ali drugih strani. <a%s>Poglejte kako lahko posodobite svoj brskalnik</a>';
-t.sq = '<b>Shfletuesi juaj ({brow_name}) është i vjetruar.</b> Përditësojeni shfletuesin tuaj për më tepër siguri, rehati dhe për funksionimin më të mirë në këtë sajt. <a{up_but}>Përditësojeni shfletuesin</a> <a{ignore_but}>Shpërfille</a>';
+t.sq= {'msg': 'Shfletuesi juaj ({brow_name}) është i vjetruar.','msgmore': 'Përditësoni shfletuesin tuaj për më tepër siguri, shpejtësi dhe më të mirin e funksionimeve në këtë sajt.','bupdate': 'Përditëso shfletuesin','bignore': 'Shpërfille', 'remind': 'Do të rikujtoheni pas {days} ditësh.', 'bnever': 'Mos e shfaq kurrë më'}
 t.sr = 'Vaš pretraživač (%s) je <b>zastareo.</b> Ima poznate <b>sigurnosne probleme</b> i najverovatnije <b>neće prikazati sve funkcionalnisti</b> ovog i drugih sajtova. <a%s>Nauči više o nadogradnji svog pretraživača</a>';
 t.sv= {'msg': 'Din webbläsare ({brow_name}) är föråldrad. ','msgmore': 'Uppdatera din webbläsare för mer säkerhet, hastighet och den bästa upplevelsen på den här sajten. ','bupdate': 'Uppdatera webbläsaren','bignore': 'Ignorera', 'remind': 'Du får en påminnelse om {days} dagar.', 'bnever': 'Visa aldrig igen'}
 t.th = '<b>เว็บเบราว์เซอร์ ({brow_name}) ของคุณตกรุ่นแล้ว </b> อัพเดทเบราว์เซอร์ของคุณเพื่อเพิ่มความปลอดภัย ความสะดวกและประสบการณ์การใช้งานที่ดีที่สุดในเว็บไซท์นี้ <a{up_but}>อัพเดทเบราว์เซอร์</a> <a{ignore_but}>ไม่สนใจ</a>';
@@ -375,8 +383,17 @@ t.uk= {'msg': 'Ваш браузер ({brow_name}) застарілий.','msgmo
 t.vi = '<b>Trình duyệt web của bạn ({brow_name}) đã cũ.</b> Hãy nâng cấp trình duyệt của bạn để được an toàn và thuận lợi hơn đồng thời có được trải nghiệm tốt nhất với trang này';
 t.zh= {'msg': '您的网页浏览器（{brow_name}）已过期。','msgmore': '更新您的浏览器，以便在该网站上获得更安全、更快速和最好的体验。','bupdate': '更新浏览器','bignore': '忽略', 'remind': '会在{days}天后提醒您。', 'bnever': '不再显示'}
 t["zh-tw"]=t["zh-hans-cn"] = {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
-var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op.text
-t = ta = custom_text || t[op.llfull] || t[op.ll] || t.en;
+var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_in_" + op.ll] || op["text_for_" + bb.n] || op["text_for_"  + bb.n + "_in_" + op.ll] || op.text
+t = ta = t[op.llfull] || t[op.ll] || t.en;
+if (custom_text) {
+    if (typeof custom_text === 'string')
+        t=ta=custom_text;
+    else {
+        for (var i in custom_text) {
+            ta[i] = custom_text[i]
+        }
+    }
+}
 if (ta.msg)
     t = '<b class="buorg-mainmsg">' + t.msg + '</b> <span class="buorg-moremsg">' + t.msgmore + '</span> <span class="buorg-buttons"><a{up_but}>' + t.bupdate + '</a> <a{ignore_but}>' + t.bignore + '</a></span>'
 
@@ -420,8 +437,8 @@ else {
     else {
         op.addmargin = true;
     }
-    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig"');
-    div.innerHTML = '<div class="buorg-pad"><span class="buorg-icon"> </span>' + t + '</div>' + style + style2;
+    t = t.replace("{brow_name}", bb.t).replace("{up_but}", ' id="buorgul" href="' + op.url + '"' + tar).replace("{ignore_but}", ' id="buorgig" role="button" tabindex="0"');
+    div.innerHTML = '<div class="buorg-pad" role="status" aria-live="polite"><span class="buorg-icon"> </span>' + t + '</div>' + style + style2;
 }
 
 op.text = t;
@@ -473,7 +490,7 @@ if (ignorebutton) {
             hm.style.marginTop = op.bodymt;
         op.setCookie(op.reminderClosed);
         if (!op.no_permanent_hide && ta.bnever && ta.remind) {
-            op.div.innerHTML = '<div class="buorg-pad"><span class="buorg-moremsg">' + (op.reminderClosed > 24 ? ta.remind.replace("{days}", Math.round(op.reminderClosed/24)):"") + '</span> <span class="buorg-buttons"><a id="buorgpermanent" href="' + op.url_permanent_hide +'"' + tar + '>' + ta.bnever + '</a></span></div>' + style + style2;
+            op.div.innerHTML = '<div class="buorg-pad"><span class="buorg-moremsg">' + (op.reminderClosed > 24 ? ta.remind.replace("{days}", Math.round(op.reminderClosed/24)):"") + '</span> <span class="buorg-buttons"><a id="buorgpermanent" role="button" tabindex="0" href="' + op.url_permanent_hide +'"' + tar + '>' + ta.bnever + '</a></span></div>' + style + style2;
             div.className = "buorg buorg-fadeout";
             document.getElementById("buorgpermanent").onclick = function (e) {
                 op.setCookie(24 * 365);
@@ -493,13 +510,13 @@ if (ignorebutton) {
 
 
 op.onshow(op);
-/*
+
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
     e.src = op.domain + "/update.test.js";
     document.body.appendChild(e);
 }
-*/
+
 };
 
 

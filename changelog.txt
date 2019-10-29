@@ -1,9 +1,72 @@
 Changes to the notification / detection script
 ==========
+3.3.2 10.10.19
+- whitelist chrome-lighthouse bot (google page speed), brave browser (for now) and Falkon browser, fixes #451, fixes #450
+
+3.3.0 13.9.19
+- now you can use custom notification messages for different browsers (experimental).
+  Explanation here: https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser
+  Fixes #433, Fixes #388
+
+3.2.16 13.9.19
+- fix another edge case in IE11: notification fallback if not specifying any version now works as expected
+- updated firefox ESR versions
+
+3.2.15
+- fixed internet explorer versions to notify when just an edge version to notify was specified with negative numbers (e.g. e:-3). Fixes #440. Fixes #430.
+- updated browser versions
+- fixed accessibility
+- npm now always works in the browser
+
+3.2.14 13.7.19
+- some translation fixes
+- improve accessibility of message
+
+3.2.13 13.7.19
+- updated browser versions
+
+3.2.12 8.5.19
+- updated catalan, czech, farsi, hungarian and albanian translations of script
+- better accessibility
+- finnish translation
+
+3.2.11 8.5.19
+- fixed bug where specifying required version "0" did not mean "latest version", as specified in the docs, fixes #436
+- updated browser versions
+
+3.2.10 9.4.19
+- updated browser versions
+- changed firefox download link as it did not work in IE 11
+
+3.2.9 10.2.19
+- updated firefox, ios, opera, chrome, uc, vivaldi browser versions
+
+3.2.8
+- mark safari 12.0.1 as latest version...
+
+3.2.7 8.1.19
+- correct handling of semver version strings with negative numbers
+
+3.2.6 7.1.19
+- fixed which versions of edge are not supported anymore
+- updated browser versions
+
+3.2.5 19.12.18
+- updated firefox, opera, chrome, vivaldi, yandex versions
+- ingnore firefox focus for now
+
+3.2.4 12.11.18
+- updated browser versions
+
+3.2.3 22.10.18
+- updated FF, Chrome, Safari version
+- updated translations (farsi, english, hungarian)
+
 3.2.2 4.10.18
 - updated versions of almost all browsers
 - if option "noclose" is specified, the bar also does not close if the update button is pressed
 - reminderClosed: 0 can be passed. Then the user cannot close the bar, fixes #414
+- updated translations
 
 3.2.1 26.7.18
 - fixed firefox esr detection

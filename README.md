@@ -49,7 +49,7 @@ Options can be something like:
         o:-3,
         s:10.1,
         c:"64.0.3282.16817",
-        samsung: 7.0
+        samsung: 7.0,
         vivaldi: 1.2
     },
     insecure:true

@@ -1,3 +1,6 @@
+package-lock.json
+composer.*
+vendor/
 dev/
 /config.php
 ads.php
@@ -9,6 +12,6 @@ crowdin.yaml
 *.po
 .idea/
 xgettext.*
-*/node_modules/
+/node_modules/
 /nbproject/private/
-.idea/
+nbproject/
