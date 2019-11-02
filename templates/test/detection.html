@@ -1,0 +1,182 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Test browser detection</title>
+</head>
+<body>
+
+<script>
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+    else {
+        $buoop={}
+    }
+</script>
+<script src="/update.js"></script>
+<script src="/static/zepto.min.js"></script>
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 10px;
+    }
+    .red {
+        background-color: rgb(255,200,200);
+    }
+    .green {
+        background-color: rgb(200,255,200);
+    }    
+    td {
+        border: 1px solid #aaa;
+    }
+    table {
+        border-collapse: collapse;
+        
+    }
+</style>
+<div class="noti">      
+</div>
+<input id="config" size="100"/>
+
+<div>Current browser config:<span id ="dc"></span></div>
+<div>Latest:<span id ="latest"></span></div>
+
+
+<table>
+    
+</table>
+
+<script type="text/javascript">
+var uas=[["Current Browser",$bu_getBrowser().t,navigator.userAgent]].concat({{ uas|tojson }})
+
+function test() {
+    $("#config").val(decodeURIComponent(window.location.hash.substr(1)));
+
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+    else {
+        $buoop={}
+    }
+    $buoop.nomessage=true;
+    $buo($buoop);
+    
+    var vs=$buoop.vsf;
+    $("table").html(
+      "<tr>\n\
+        <td>Title</td>\
+        <td>Detected as</td>\
+        <td>ver</td>\
+        <td>full ver</td>\
+        <td>notify</td>\
+        <td>is below</td>\
+        <td>hide_reasons</td>\
+        <td>require</td>\
+        <td>is other</td>\
+        <td>is insecure</td>\
+        <td>is latest</td>\
+        <td>is supported</td>\
+        <td>mobile</td>\
+        <td>no_os_update</td>\
+        <td>age (years)</td>\
+        <td>engine</td>\
+        <td>system</td>\
+        <td>UA string</td>\
+    </tr>");
+
+
+    for (i in uas) {
+        var ua=uas[i];
+        var notify;
+        str=ua[2];
+        bb=$bu_getBrowser(str);
+        $buoop.override_ua=str;
+        outdated=false;
+        nn="<td class='normal'></td>";
+        str=str.substring(11) //strip Mozilla/5.0
+        var name=bb.t;
+        //if (bb.mobile)
+        //    name+=" mobile";
+        var dacond=!(name==ua[1] || (bb.donotnotify && ua[1]==false));
+        if (dacond)
+            da=name+"<br/>instead of "+ua[1];  
+        else
+            da=name
+        $buo($buoop);
+
+        function td(value, cond,name) { 
+            if (value===undefined)
+                value="?"
+            if (name && value!=="?") { 
+                if (value)
+                    value=name;
+                else
+                    value="";
+            }
+            if (cond===true)
+                return "<td class='green'>"+value+"</td>"
+            if (cond===false)
+                return "<td class='red'>"+value+"</td>"
+            return "<td>"+value+"</td>"
+        }
+        $("table").append($("<tr>"
+                +td(ua[0])
+                +td(da,!dacond)
+                +td(bb.v)
+                +td(bb.fullv)
+                +td($buoop.notified,!!$buoop.notified,$buoop.reasons.join(","))
+                +td($buoop.is_below_required,$buoop.is_below_required,"below")
+                +td($buoop.hide_reasons)
+                +td($buoop.required[bb.n])
+                +td(bb.other,!bb.other,bb.other||" ")
+                +td(bb.is_insecure,!bb.is_insecure,"insecure")
+                +td(bb.is_latest,bb.is_latest,"latest")
+                +td(bb.is_supported,bb.is_supported, "supported")
+                +td(bb.mobile,undefined, "mobile")
+                +td(bb.no_os_update,bb.no_os_update,"no os update")
+                +td(bb.age_years)
+                +td(bb.engine+" "+bb.engine_version)        
+                +td(ua[3]||"")
+                +td("<a href=\"http://browser-update.org/update-browser.html?emulate="+encodeURIComponent(ua[2])+"\">"+str+"</a>")
+                +"</tr>"
+        ));
+    }
+
+    $("#dc").html(JSON.stringify(vs));
+    $("#latest").html(JSON.stringify($bu_.vsakt));
+
+}
+
+test();
+
+
+window.onhashchange = function() { 
+    test();
+}
+/*
+         function iPhoneVersion() {
+          var h = window.screen.height,w = window.screen.width;
+          if (w === 375 && h === 667) {
+            return "6";
+          }
+          else if (w === 414 && h === 736) {
+            return "6+";
+          }
+          else if (w === 320 && h === 568) {
+            return "5";
+          }
+          else if (h <= 480) {
+            return "2-4";
+          }
+          return 'none';
+        }        
+    http://mediag.com/news/popular-screen-resolutions-designing-for-all/
+ */
+
+//http://www.learnwebcoding.com/javascript/web_browser_useragent_values.php
+</script>
+
+
+</body>
+</html>

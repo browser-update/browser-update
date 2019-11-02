@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Overview of (almost all) major browsers</h1>
+    <p>Underlying data can be <a href="https://github.com/browser-update/browser-update/blob/master/browsers.json">found
+        and improved on github</a>.</p>
+
+    <table>
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Vendor</td>
+            <td>Latest Version</td>
+            <td>Insecure below</td>
+            <td>Engine</td>
+            <td>Updates</td>
+        </tr>
+        </thead>
+    {% for id,b in browsers.items() %}
+        <tr>
+            <td class="browser-name-col" style="background-image: url(/static/img/big/{{ id }}.png)"><a
+                    href="{{ b.link }}">{{ b.name }}</a></td>
+            <td>{{ b.vendor }}</td>
+            <td>{{ browserdata.current.desktop[id] }}</td>
+            <td>{{ browserdata.insecure_below[id] }}</td>
+            <td>{{ b.engine }}</td>
+            <td>{{ b.updates }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    {% for id,b in browsers.items() %}
+        <h2 id="browser-{{ id }}" class="browser-head"
+            style="background-image: url(/static/img/big/{{ id }}.png)">{{ b.name }}</h2>
+        <p>Vendor: {{ b.vendor }} {% if b.vendor_non_profit %} (Non-profit Organization) {% endif %} </p>
+        <p>Price: {% if not b.price %} Free {% endif %} </p>
+        <p>License: {% if b.license == "full open source" %} fully open source {% else %} only core is open source {% endif %} </p>
+        <p>Updates: {{ b.updates }}</p>
+        <p>Latest version: {{ browserdata.current.desktop[id] }}</p>
+        <p>
+            Engine: {{ b.engine }},
+            {% if b.core %} Core: {{ b.core }}{% endif %}
+        </p>
+        <p>First release: {{ b.first_release }}</p>
+        <p>{% if b.download_url %}<a href="{{ b.download_url }}">Download Link</a>{% endif %}</p>
+        <p>
+            Information:
+            {% if b.releases %}<a href="{{ b.releases }}">Releases</a>{% endif %}
+            {% if b.blog %}<a href="{{ b.blog }}">Developer Blog</a>{% endif %}
+            {% if b.requirements %}<a href="{{ b.requirements }}">System requirements</a>{% endif %}
+            {% if b.lifecycle %}<a href="{{ b.lifecycle }}">lifecycle</a>{% endif %}
+        </p>
+        Information for web developers:
+        {% if b.dev_docs %}<a href="{{ b.dev_docs }}">Information for Webdevelopers</a>{% endif %}
+        {% if b.ua_string_doc %}<a href="{{ b.ua_string_doc }}">Documentation of user agent string</a>{% endif %}
+        </p>
+        <p>
+            Security:
+            {% if b.cve %}<a href="{{ b.cve }}">CVE</a>{% endif %}
+            {% if b.security_bulletins %}<a href="{{ b.security_bulletins }}">Security Bulletins</a>{% endif %}
+            {% if browserdata.insecure_below[id] %}Insecure below version
+                {{ browserdata.insecure_below[id] }}{% endif %}
+
+        </p>
+        {% if b.example_ua_string %}
+            <p>
+                Example user agent string:
+                <code>{{ b.example_ua_string }}</code>
+            </p>
+        {% endif %}
+        {% if b.successor %}
+            <p class="important">
+                Browser is discontinued. Successor is
+                <a href="#browser-{{ b.successor }}">{{ browsers[b.successor].name }}</a>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    <style>
+        .browser-head {
+            background-size: 120px auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            padding-top: 120px;
+        }
+        .browser-name-col {
+            background-size: 15px auto;
+            background-position: left center;
+            background-repeat: no-repeat;
+            padding-left: 20px;
+        }
+    </style>
+
+
+
+{% endblock %}

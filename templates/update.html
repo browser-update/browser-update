@@ -1,0 +1,338 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if testing %}
+        <div class="testwarning">
+            {{ _s('This is the page that is shown to visitors with an out-of-date browser after they clicked the notification to update their browser.') }}
+            {{ _s('This is not the information for your currently used browser.') }}
+            <form method="get">
+                <select id="emulate" name="emulate" onchange="emulate_changed()">
+                    {% for val, title in test_uas %}
+                        <option value="{{ val }}" {% if emulate==val %}selected{% endif %}>{{ title }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Test"/>
+            </form>
+            <a class="button" href="update-browser.html">
+                {{ _s('Check if my browser is up-to-date!') }}
+            </a>
+        </div>
+    {% endif %}
+
+
+    <div class="noti">
+
+        {% if  status.uptodate %}
+            <div class="whatnow">
+                {{ _('Your browser is up-to-date.') }}
+            </div>
+        {% endif %}
+
+        {% if  status.normal_update_possible and not status.unknown and not status.ancient_os and not status.discontinued and not status.uptodate %}
+            <div class="whatnow">
+                <p>
+                    {{ _('Your browser is out-of-date.') }}</p>
+                <p>
+                    {{ _('Please download one of these up-to-date, free and excellent browsers:') }}
+                </p>
+            </div>
+        {% endif %}
+
+        {% if status.discontinued %}
+            <div class="whatnow">
+                <p>
+                    {{ _('Your web browser ({brow_name}) is out of date.').format(brow_name=('<span class="curb">'+browser.name+'</span>')|safe) }}
+                </p>
+                <p>
+                    {# Note: Example: [The browser] is not updated for Windows 7 anymore. #}
+                    {{ _('It is not updated anymore for {system_name}.').format(system_name=system.title)|safe }}
+                </p>
+                <p>
+                    {{ _('Please download one of these up-to-date, free and excellent browsers:') }}
+                    {# _('Please download one of these alternative up-to-date, free and excellent browsers, which are even better:') #}
+                </p>
+            </div>
+        {% endif %}
+
+        {% if not status.uptodate and status.device_not_updated_anymore %}
+            <div class="whatnow">
+                <p>
+                    {{ _('Your browser is out-of-date.') }}
+                </p>
+                {% if status.tied_to_system %}
+                    <p>
+                        {{ _('On {system_name} the built-in browser can only be updated together with the operating system.').format(system_name=status.device_name or system.title) }}
+                    </p>
+                {% endif %}
+                <p>
+                    {{ _('Unfortunately, {vendor_name} has stopped supplying your device with updates.'.format(vendor_name=system.vendor)) }}
+                </p>
+            </div>
+
+        {% elif not status.uptodate and (status.ancient_os or status.tied_to_system) %}
+            <div class="whatnow">
+                <p>
+                    {{ _('Your browser is out-of-date.') }}
+                </p>
+                {% if status.tied_to_system %}
+                    <p>
+                        {{ _('On {system_name} the built-in browser can only be updated together with the operating system.').format(system_name=status.device_name or system.title) }}
+                    </p>
+                {% else %}
+                    <p>
+                        {{ _('On top of that your operating system ({system_name}) is so old and insecure that there is no up-to-date browser available anymore.').format(system_name=system.title) }}
+                    </p>
+                {% endif %}
+                <p>
+                    {{ _('Please try to <a{link}>update {system_name}</a> to get the latest version of your browser.').format(link=(' href="%s" onmousedown="countBrowser(\'os\')"'%status.os_update_url)|safe ,system_name=system.name) }}
+                </p>
+            </div>
+        {% endif %}
+
+        {% if status.unknown %}
+            <div class="whatnow">
+                {{ _('We cannot identify your browser.') }}
+                <br/>
+                {{ _('You can try to install one of these up-to-date, free and excellent browsers:') }}
+            </div>
+        {% endif %}
+
+        {% if not status.uptodate and not status.system_not_updated_anymore and not status.tied_to_system and not status.ancient_os %}
+
+            {% if browsers|length >0 %}
+                <table class="logos" id="browserlist">
+                    <tr>
+                        {% for b in browsers %}
+                            <td class="b">
+                                {% if not b.na %}
+                                    <a class="l" href="{{ b.url }}" {%  if ".exe" not in b.url and ".dmg" not in b.url %}target="_blank"{% endif %} rel="noopener"
+                                       style="background-image: url(/static/img/big/{{ b.id }}.png)"
+                                       title="{{ _('Download updated {browser_name} web browser from official {vendor_name} website!').format(browser_name=b.display_name,vendor_name=b.vendor) }}"
+                                       onmousedown="countBrowser('{{ b.id }}')">
+                                {% else %}
+                                    <a class="l notavailable"
+                                       style="background-image: url(/static/img/big/{{ b.id }}.png)">
+                                {% endif %}
+                                <span class="bro">{{ b.display_name }}</span>
+                                <span class="vendor">{{ b.vendor }}</span>
+                                {% if  b.na %}
+                                    <span class="na"> {{ _('Most recent version not available for your system.') }} {{ _('Please choose another browser.') }} </span>
+                                {% endif %}
+                                {{ b.add }}
+                                </a>
+                                {{ b.add2 }}
+
+                            </td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            {% endif %}
+
+            <div class="whatnow">
+                {{ _('For more <a{security_link}>security</a>,    <a{speed_link}>speed</a> and    <a{comfort_link}>comfort</a>.').format(security_link=' href="#security"',speed_link=' href="#speed"',comfort_link=' href="#comfort"') }}
+            </div>
+            <div class="whatnow-small">
+                {{ _('The download is safe from the vendor\'s official website.') }}
+            </div>
+        {% endif %}
+    </div>
+
+
+    <script>
+        var $buoop = {nomessage: true};
+    </script>
+    <script src="/update.min.js"></script>
+    <script>
+        var cv = "{{ choiceversion }}";
+        var jsv = ((window.location.hash || "").match(/.*(.*):/i) || ["", ""])[0] || "";
+        function countView() {
+            var f = $bu_getBrowser();
+            var i = new Image();
+            tv=0;
+            i.src = "/cnt?what=view&cv=" + cv + "&tv=" + tv + "&ref=" + ref + "&from=" + f.n + "&fromv=" + f.v + "&dice=" + dice + "&rnd=" + Math.random();
+        }
+    </script>
+    {% include 'ads.html' %}
+
+
+    <h2>{{ _('Why do I need an up-to-date browser?') }}</h2>
+    <ul class="advantages">
+        <li style="background-image: url('/static/img/security.png')" id="security">
+            <h3>{{ _('Security') }}</h3>
+            <div>{{ _('Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates.') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/speed.png')" id="speed">
+            <h3>{{ _('Speed') }}</h3>
+            <div>{{ _('Every new browser generation improves speed') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/compatibility.png')" id="fun">
+            <h3>{{ _('New technologies') }}</h3>
+            <div>{{ _('You can view sites that are using the latest technology') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/comfort.png')" id="comfort">
+            <h3>{{ _('Comfort & better experience') }}</h3>
+            <div>{{ _('Have a more comfortable experience with new features, extensions and better customisability.') }}</div>
+        </li>
+    </ul>
+
+    <div>
+        <h2>{{ _('Why this website?') }}</h2>
+        <p>
+            {{ _('This is an initiative by websites and blogs to raise security awareness and bring forward the web.') }}
+            <a href="./">{{ _('About the Project') }}</a>
+        </p>
+    </div>
+
+
+    {% if request.lang in ['en'] or system.id in ["win", "macos"] %}
+        <h2>{{ _('I can\'t update my browser') }}</h2>
+        <ul>
+            <li>{{ _('If you can\'t change your browser because of compatibility issues, think about installing a second browser for browsing and keep the old one for compatibility.') }}</li>
+            {% if system.id in ["win", "macos", "linux"] %}
+                <li>{{ _('Ask your admin to update your browser if you cannot install updates yourself.') }}</li>
+            {% endif %}
+            {% if request.lang in ['en','de','fi','nl','sv','no'] and system.id in ["win", "macos"] %}
+                <li><a href="http://portableapps.com/{{ 'de/' if request.lang=='de' }}apps/internet" target="_blank"
+                       rel="noopener"
+                       title="install portable browser" onmousedown="countBrowser('port')">
+                    {# Note: Protable in the sense of portable apps, which need not to be installed on the system: http://portableapps.com/apps/internet #}
+                    {{ _x('Try to use a "portable" version of the browser') }}
+                </a>
+                </li>
+            {% endif %}
+            {% if request.lang in ['en','nl','no'] %}
+                {% include 'feedback.html' %}
+            {% endif %}
+        </ul>
+    {% endif %}
+
+    {% if _x_is_translated('Your current browser is') %}
+        {% include 'browser-info.html' %}
+    {% endif %}
+
+    <!--[if lte IE 8]>
+<style>
+body .bc a {
+background-image: url('/img/big/ch-small.png');
+}
+</style>
+<![endif]-->
+
+
+    <script>
+        var dice = Math.round(Math.random() * 100);
+        var __f = $bu_getBrowser();
+        var ref = (document.referrer || "").substring(0, 50);
+        ref = ref || ((window.location.hash || "").match(/.*@(.*)/i) || (window.location.hash || "").match(/.*:(.*)/i) || ["", ""])[1] || "";
+        ref = escape(ref);
+        var tv = ((window.location.hash || "").match(/#(.*):/i) || ["", ""])[1] || "";
+
+        function countBrowser(to) {
+            var __f = $bu_getBrowser();
+            var f = __f;
+            var s = "";
+            var i = new Image();
+            i.src = "/cnt?cv=" + cv + "&tv=" + tv + "&ref=" + ref + "&from=" + f.n + "&fromv=" + f.v + "&to=" + to + s + "&dice=" + dice + "&rnd=" + Math.random();
+            if (to=="y" || to=="y_ad") {
+                //setTimeout(function(){ location.assign("https://browser.yandex.com");  }, 3000);
+            }
+            else {
+                setTimeout(function () {
+                    location.reload();
+                }, 3000);
+                //setTimeout(function(){ location.assign("post-browser-update.html");  }, 1000);
+            }
+            gtag('event', 'browser_download', {
+                'event_category': 'Download',
+                'id': to,
+                'cv': cv,
+                'from': f.n,
+                'from_full': f.n + " " + f.v,
+                'event_label': to
+            });
+        }
+
+        countView();
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
+    <script>
+        if (document.cookie.indexOf('noanalytics=true') > -1) {
+            var gaProperty = 'UA-110098170-1';
+            window['ga-disable-' + gaProperty] = true;
+        }
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        var myref = ((window.location.hash || "").match(/.*@(.*)/i) || (window.location.hash || "").match(/.*:(.*)/i) || ["", ""])[1] || "";
+        if (myref)
+            myref = "https://" + myref;
+        /*
+         gtag('set', {
+         'document_referrer': document.referrer|| myref,
+         'referrer': document.referrer|| myref,
+         'dr': document.referrer|| myref,
+         'source': "referral"
+         });
+         */
+        gtag('config', 'UA-110098170-1', {
+            'page_title': 'Update your Browser - Browser-Update.org',
+            'page_location': 'http://browser-update.org/update-browser.html',
+            'page_path': '/update-browser.html',
+            'campaignName': "standard",
+            'anonymize_ip': true,
+            'custom_map': {
+                'dimension1': 'cv',
+                'dimension2': 'jsv',
+                'dimension3': 'to',
+                'dimension4': 'from',
+                'dimension5': 'from_full'
+            }
+        });
+        /*
+
+         'document_referrer': document.referrer|| myref,
+         'referrer': document.referrer|| myref,
+         'dr': document.referrer|| myref,
+         'source': "referral"
+         */
+        gtag('event', 'show_screen', {
+            'event_category': 'Offer',
+            'jsv': jsv,
+            'event_label': jsv,
+            'from': __f.n,
+            'from_full': __f.n + " " + __f.v
+        });
+
+    </script>
+
+    {#
+<script>
+    /*
+var myref=((window.location.hash||"").match(/.*@(.*)/i)||(window.location.hash||"").match(/.*:(.*)/i)||["",""])[1]||"";
+if (myref)
+    myref="http://"+myref;
+  */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-110098170-1', 'auto');
+//ga('set', 'referrer', myref);
+ga('set', 'location', 'http://browser-update.org/update-browser.html');
+ga('set', 'hostname', 'browser-update.org');
+ga('set', 'page', '/update-browser.html');
+ga('set', 'title', 'Update Page');
+ga('send', 'pageview');
+</script>
+#}
+
+{% endblock %}
+

@@ -1,0 +1,261 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h2>{{ _c('Customize and test') }}</h2>
+
+
+    <h3>{{ _c('Test the script') }}</h3>
+
+    <p>
+        {{ _c('If you open your website with <code>#test-bu</code> appended to the url, the bar will always show up. Example: <code>http://browser-update.org/#test-bu</code>. Make sure the page is properly reloaded by opening the url in an new browser tab.') | safe }}
+    </p>
+
+    <h3>{{ _c('Options') }}</h3>
+
+    <p>
+        {{ _c('The following options can be passed to the script:') }}
+    </p>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <pre><code class="javascript">$buoop = {
+    required: {i:8,f:25,o:17,s:9,c:22},
+    // {{ _c('Specifies required browser versions') }}
+    // {{ _c('Browsers older than this will be notified.') }}{# Note: Firefox < 22 gets notified.  #}
+    // f:22 ---> Firefox < 22 {{ _c('gets notified') }}
+    // {{ _c('Negative numbers specify how much versions behind current version.') }}
+    // c:-5 ---> Chrome < 35  {{ _c('gets notified if latest Chrome version is {version}').format(version=40) }}.
+    // <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration">{# Note: link to a page with more details, but in english language #}{{ _s('more details (in english)') }}</a>
+    {# //c:"-5m" ---> Chrome versions which are older than 3 months*#}
+    reminder: 24,
+    // {{ _c('after how many hours should the message reappear') }}
+    // {{ _c('0 = show all the time') }}
+
+    reminderClosed: 150,
+    // {{ _c('if the user explicitly closes message it reappears after x hours') }}
+
+    onshow: function(infos){},
+    onclick: function(infos){},
+    onclose: function(infos){},
+    // {{ _c('callback functions after notification has appeared / was clicked / closed') }}
+
+    l: false,
+    // {{ _c('set a fixed language for the message, e.g. "en". This overrides the default detection.') }}
+
+    test: false,
+    // {{ _c('true = always show the bar (for testing)') }}
+
+    text: "",
+    // {{ _c('custom notification text (html)') }}
+    // {{ _c('Placeholders {brow_name} will be replaced with the browser name, {up_but} with contents of the update link tag and {ignore_but} with contents for the ignore link.') }}
+    // {{ _c('Example:') }} "{{ _c('Your browser, {brow_name}, is too old: &lt;a{up_but}&gt;update&lt;/a&gt; or &lt;a{ignore_but}&gt;ignore&lt;/a&gt;.')|safe  }}"
+    // <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser">{# Note: link to a page with more details, but in english language #}{{ _s('more details (in english)') }}</a>
+
+    text_in_xx: "",
+    // {{ _c('custom notification text for language "xx"') }}
+    // {{ _c('e.g. text_de for german and text_it for italian') }}
+
+    newwindow: true,
+    // {{ _c('open link in new window/tab') }}
+
+    url: null,
+    // {{ _c('the url to go to after clicking the notification') }}
+
+    noclose:false,
+    // {{ _c('Do not show the "ignore" button to close the notification') }}
+
+    nomessage: false,
+    // {{ _c('Do not show a message if the browser is out of date, just call the onshow callback function') }}
+
+    jsshowurl: "//browser-update.org/update.show.min.js",
+    // {{ _c('URL where the script, that shows the notification, is located. This is only loaded if the user actually has an outdated browser.') }}
+
+    container: document.body,
+    // {{ _c('DOM Element where the notification will be injected.') }}
+
+    no_permanent_hide: false
+    // {{ _c('Do not give the user the option to permanently hide the notification') }}
+
+    api: xxx
+    // {{ _c('This is the version of the browser-update api to use. Please do not remove.') }}
+
+};</code></pre>
+
+    <table class="bordered">
+        <tr>
+            <th>{{ _c('Parameter') }}</th>
+            <th>{{ _c('Description') }}</th>
+            <th>{{ _c('Values') }}</th>
+            <th>{{ _c('Default value') }}</th>
+            <th>{{ _c('Type') }}</th>
+        </tr>
+        <tr>
+            <td><code>style</code></td>
+            <td>{{ _c('The position where the notification should be shown. Available options are:') }} "top", "bottom",
+                "corner"
+            </td>
+            <td>"top", "bottom", "corner"</td>
+            <td>"top"</td>
+            <td>string</td>
+        </tr>
+        <tr>
+            <td><code>shift_page_down</code></td>
+            <td>Shift down the page in order not to obscure content behind the notification bar. Adds
+                <code>margin-top</code> to the <code>&lt;body&gt;</code> tag.
+            </td>
+            <td>true, false</td>
+            <td>true</td>
+            <td>boolean</td>
+        </tr>
+        <tr>
+            <td><code>notify_esr</code></td>
+            <td>
+                Also notify <a href="https://www.mozilla.org/de/firefox/organizations/">Firefox ESR</a> (Extended Support releases) versions if they are below requirement - although they are still supported.
+                Default is to not notify them.
+                They are supported by mozilla for about a year after their initial release.
+            </td>
+            <td>true, false</td>
+            <td>false</td>
+            <td>boolean</td>
+        </tr>
+        <tr>
+            <td><code>text</code></td>
+            <td>
+                {{ _c('custom notification text (html)') }}<br/>
+                <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser">{# Note: link to a page with more details, but in english language #}{{ _s('more details (in english)') }}</a>
+            </td>
+            <td></td>
+            <td><code>    text: {
+       'msg':'Your web browser ({brow_name}) is out of date.',
+       'msgmore': 'Update your browser for...',
+       'bupdate': 'Update browser',
+       'bignore': 'Ignore',
+       'remind': 'You will be reminded in {days} days.',
+       'bnever': 'Never show again'
+    }</code></td>
+            <td>dictionary or string</td>
+        </tr>
+        <tr>
+            <td><code>text_for_x</code></td>
+            <td>
+                custom notification text for browser x<br/>
+                <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser">{# Note: link to a page with more details, but in english language #}{{ _s('more details (in english)') }}</a>
+            </td>
+            <td></td>
+            <td><code>undefined</code></td>
+            <td>dictionary or string</td>
+        </tr>
+        <tr>
+            <td><code>text_in_xx</code></td>
+            <td>
+                {{ _c('custom notification text for language "xx"') }}<br/>
+                {{ _c('e.g. text_de for german and text_it for italian') }}<br/>
+                <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#user-content-different-messages-depening-on-browser">{# Note: link to a page with more details, but in english language #}{{ _s('more details (in english)') }}</a>
+            </td>
+            <td></td>
+            <td><code>undefined</code></td>
+            <td>dictionary or string</td>
+        </tr>
+        <tr>
+            <td><code>text_for_x_in_xx</code></td>
+            <td>
+                custom notification text for browser x in language xx<br/>
+                <code> text_for_i: {'msg':'Internet Explorer is not supported on this site.'}</code>
+
+            </td>
+            <td></td>
+            <td><code>undefined</code></td>
+            <td>dictionary or string</td>
+        </tr>
+    </table>
+
+    <h3>{{ _c('Change the style') }}</h3>
+
+    <p>
+        {{ _c('The following CSS rules are applied by the notification. You can overwrite them in your own CSS. To do so you need to add some more specificity to the css-rules: e.g. ') }}
+        <code>body .buorg {font-size:20px}</code>
+    </p>
+
+    <pre><code class="css">
+
+    .buorg {
+        position: absolute;
+        position: fixed;
+        z-index: 111111;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        border-bottom: 1px solid #A29330;
+        text-align: center;
+        color: #000;
+        background-color: #fff8ea;
+        font: 18px Calibri, Helvetica, sans-serif;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        animation: 1s ease-out 0s buorgfly
+    }
+
+    .buorg-pad {
+        padding: 9px;
+        line-height: 1.7em;
+    }
+
+    .buorg-buttons {
+        display: block;
+        text-align: center;
+    }
+
+    #buorgig, #buorgul, #buorgpermanent {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+        padding: 1px 10px;
+        border-radius: 4px;
+        font-weight: normal;
+        background: #5ab400;
+        white-space: nowrap;
+        margin: 0 2px;
+        display: inline-block;
+    }
+
+    #buorgig {
+        background-color: #edbc68;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .buorg div {
+            padding: 5px 12px 5px 9px;
+            line-height: 1.3em;
+        }
+    }
+
+    @keyframes buorgfly {
+        from {
+            opacity: 0;
+            transform: translateY(-50px)
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px)
+        }
+    }
+
+    .buorg-fadeout {
+        transition: visibility 0s 8.5s, opacity 8s ease-out .5s;
+    }
+
+    .buorg-icon {
+        width: 22px;
+        height: 16px;
+        vertical-align: middle;
+        position: relative;
+        top: -0.05em;
+        display: inline-block;
+        background: no-repeat 0px center;
+    }</code></pre>
+
+
+{% endblock %}

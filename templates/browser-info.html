@@ -1,0 +1,91 @@
+<h2>{{ _('What is my current browser?') }}</h2>
+<div class="centered">
+    <p class="centered">
+        {# Note: The name of the browser follows in the next line. Example: Your current browser ist ... Internet Explorer 7 on Windows 7.  #}
+        {{ _x('Your current browser is')  }}
+    </p>
+
+    <div class="browserbox">
+        <div class="browserinfo" style="background-image: url(/static/img/big/{{ browser.n }}.png)">
+
+        </div>
+        <h3 class="large"> {{ browser.t }} </h3>
+        <p>(Version {{ browser.fullv }})</p>
+        <p>on {{ system.title }}.</p>
+        {% if browser.age %}
+            {# Note: [The browser was] ... release 5 months ago #}
+            <p>{{ _('released {months} months ago').format(months=browser.age_years*12|round) }}</p>
+        {% endif %}
+        {% if browser.is_supported %}
+            <p>{{ _x("Your browser is still supported by the vendor.") }}</p>
+        {% else %}
+            {# Note: It (the browser) is not ...  #}
+            <p>{{ _x("It is not supported by the vendor anymore.") }}</p>
+        {% endif %}
+        {% if not browser.is_latest %}
+            {# Note: "[The Browser (e.g. Chrome 22.0)] is not the latest version. #}
+            <p>{{ _x("It is not the latest version.") }}</p>
+            <p>{{ _x("You can upgrade to a newer version of {browser_name}.").format(browser_name=browser.name) }}</p>
+        {% endif %}
+        {# <p>updated {} months ago</p> #}
+        {% if browser.is_insecure %}
+            <p class="warning">
+                {{ _x("Your browser has severe security issues.") }}
+                {{ _x("You could get a virus by just viewing a malicious website.") }}
+            </p>
+        {% else %}
+            <p>
+                {{ _x("Your browser is safe.") }}
+            </p>
+        {% endif %}
+
+        <p>
+            {{ _x('Your browser identifies itself with ("User agent string"):') }}<br/>
+            <code class="small">
+                {{ emulate or request.user_agent }}
+            </code>
+        </p>
+    </div>
+    <!--<a class="button ignore centered">Feedback: This information is wrong</a>--> {# TODO #}
+</div>
+<style>
+    .browserbox {
+        padding: 10px 20px;
+        margin: 10px auto;
+        max-width: 400px;
+        background-color: #eee;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .browserbox p {
+        margin: 5px 0;
+    }
+
+    .browserinfo {
+        float: left;
+        width: 120px;
+        height: 120px;
+        background-size: 110px auto;
+        background-repeat: no-repeat;
+        background-position: 0 5px;
+    }
+
+    .large {
+        font-size: 30px;
+        margin: 0;
+        color: #636363;
+    }
+
+    .warning {
+        color: #e25600;
+    }
+
+    .small {
+        font-size: 0.8em;
+    }
+
+    .centered {
+        tex-align: center;
+    }
+</style>

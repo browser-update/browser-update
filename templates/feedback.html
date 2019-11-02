@@ -1,0 +1,10 @@
+<li>Give Feedback: I cannot/won't update because...
+    <form id="feedbackform" method="post" action="feedback.html"
+          onsubmit="f=$bu_getBrowser();document.getElementById('detected_field').value=f.n+f.v;document.getElementById('site_field').value=myref">
+        {{ form.hidden_tag() }}
+        {{ form.text(size=32,maxlength=300) }}
+        {# <p>{{ form.submit() }}</p>  #}
+
+        <input type="submit" value="Send Feedback"/>
+    </form>
+</li>

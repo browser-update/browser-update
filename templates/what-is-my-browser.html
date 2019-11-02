@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% include 'browser-info.html' %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
+    <script>
+        if (document.cookie.indexOf('noanalytics=true') > -1) {
+            var gaProperty = 'UA-110098170-1';
+            window['ga-disable-' + gaProperty] = true;
+        }
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+    </script>
+
+{% endblock %}
+

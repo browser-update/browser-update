@@ -1,0 +1,92 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bar Test BUP</title>
+<style>
+</style>
+</head>
+<body>
+<p>Testing the bar</p>    
+    
+<div id="container" style="position: relative;"></div>
+<input type="checkbox" id="clearcookie" checked/> Clear cookie before showing
+<script> 
+var $buoop = {
+    test: true//
+    //text: "your %s is out if date" // custom notification html text
+//    container:document.getElementById('container'),
+//    noclose:true//,
+//    url:"http://test.de",
+//    ,l:"fr"
+};
+try {
+    if (window.location.hash.length>5) {
+        $buoop=JSON.parse(decodeURIComponent(window.location.hash.substr(1)));
+    }
+}
+catch(e){
+    window.alert("error in config string syntax");
+    throw e;
+}
+
+$buoop.jsshowurl="../update.show.js";
+$buoop.domain="";
+
+//test attaching to a custom elemebt
+//$buoop.container=document.getElementById('container');
+
+//remove cookie
+if (document.getElementById("clearcookie").checked) {
+    var d = new Date(0);
+    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+}
+/*
+function boo(xx) {
+	if(xx) {
+		bla=xx.f;
+		window.alert(bla)
+	}
+}
+    */
+//boo({})
+</script> 
+
+<div class="noti">
+    <h3>Detection</h3>
+    <table>
+        <tr><td>User-Agent-String (Javascript):</td><td><span id="str">xxx</span></td></tr>
+        <tr><td>Detected as (Javascript):</td><td><span id="det">xxx</span></td></tr>
+        <tr><td>Detected Language (Javascript):</td><td><span id="lang">xxx</span></td></tr>
+    </table>
+    <h3>Options: </h3>
+    <div id="options"></div>
+</div>
+
+<script src="/update.js"></script>
+<script type="text/javascript">
+document.getElementById('options').innerHTML=JSON.stringify($buoop);    
+    
+
+document.getElementById('str').innerHTML=navigator.userAgent;
+var br=$bu_getBrowser();
+var aaa="";
+if (br.donotnotify)
+    aaa="<br/>Not notified because: "+ br.donotnotify;
+document.getElementById('det').innerHTML=br.t+aaa;
+document.getElementById('lang').innerHTML=$buoop.ll;
+
+/* 
+//test standard inclusion code
+function $buo_f(){ 
+ var e = document.createElement("script"); 
+ e.src = "../update.js"; 
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+*/
+</script>
+
+</body>

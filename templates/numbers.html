@@ -1,0 +1,10 @@
+<div class="numbs">
+    <p>
+        {{ _s('<b>%s</b> sites are using this notification').replace("%d","%s").format(numbers.sites) | safe }}
+    </p>
+    <p>
+        <a href="stats.html" style="text-decoration: none; color:#333;">
+            {{ _s('<b>%s</b> visitors have already updated their browser').replace("%d","%s").format(numbers.updates) | safe }}
+        </a>
+    </p>
+</div>
