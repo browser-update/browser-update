@@ -12,7 +12,7 @@ var $buo_show = function () {
      var i = new Image();
      var txt=op["text_"+ll]||op.text||"";
      var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-     i.src="https://browser-update.org/count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
+     i.src="https://browser-update.org/cnt?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
      }
      */
     function busprintf() {

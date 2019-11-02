@@ -4,11 +4,11 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {e:18,i:12,f:69,o:63,o_a:52.4,s:"12.1.2",c:77,y:"19.9",v:2.7,uc:"12.13",samsung:9.4,ios:12.4};
+    this.vsakt = {c:78,f:70,s:"12.1.2",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {i:11,e:16,c:70,f:62,y:"18.11",s:"11.1.1",ios:"9.3.5",v:"2.0",uc:"12.8",samsung:"7.0",o_a:44,o:55};
-    this.vsdefault = {e:-3,i:11,f:-3,o:-3,o_a:-3,s:-1,c:-3,a:535,y:19.5,v:2.3,uc:12.8,samsung:7.9,ios:9};
-    this.names={i:'Internet Explorer',e:"Edge",f:'Firefox',o:'Opera',o_a:'Opera',s:'Safari',c:"Chrome",a:"Android Browser", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",samsung:"Samsung Internet",x:"Other",ios:"iOS",silk:"Silk"};
+    this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
+    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
+    this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
@@ -67,8 +67,15 @@ var $bu_= new function() {
         r.fullv=RegExp.$1;
         r.v=parseFloat(r.fullv);
         r.engine='ios';
-        r.available = {"ios": s.available_ios(ua,v)}
-        if (r.available.ios<11)
+        var av=s.available_ios(ua,v);
+        /*
+        var newmap={10:"10.3.4",11:"12.4.3",12:"12.4.3",13:s.vsakt["ios"]};
+
+        if (av in newmap)
+            av=newmap[av];
+        */
+        r.available = {"ios": av};
+        if (parseFloat(r.available.ios)<11)
             r.no_device_update=true;
     }
     //winxp/vista/2003
@@ -216,7 +223,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.3.2npm";
+op.jsv="3.3.3npm";
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -258,7 +265,7 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 
 if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();    i.src="//browser-update.org/count.php?what=brow&jsv="+op.jsv;
+    var i = new Image();    i.src="//browser-update.org/cnt?what=brow&jsv="+op.jsv;
 }
 
 op.test=test||op.test||location.hash==="#test-bu";
@@ -296,7 +303,7 @@ if (!op.test && (!op.notified || op.already_shown))
     return;
 
 op.setCookie=function(hours) {
-    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/';
+    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=None; Secure';
 };
 if (op.reminder>0)
     op.setCookie(op.reminder);
@@ -330,7 +337,7 @@ var $buo_show = function () {
      var i = new Image();
      var txt=op["text_"+ll]||op.text||"";
      var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-     i.src="https://browser-update.org/count.php?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
+     i.src="https://browser-update.org/cnt?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
      }
      */
     function busprintf() {

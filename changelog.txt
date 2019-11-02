@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.3 1.11.19
+- updated versions
+
 3.3.2 10.10.19
 - whitelist chrome-lighthouse bot (google page speed), brave browser (for now) and Falkon browser, fixes #451, fixes #450
 
