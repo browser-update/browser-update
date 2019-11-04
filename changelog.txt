@@ -1,5 +1,14 @@
 Changes to the notification / detection script
 ==========
+3.3.5 4.11.19
+- fix bot detection
+- update slovenian translation
+
+3.3.4 3.11.19
+- ignore edge on android for now
+- ignore some more bots
+- updated a few translations
+
 3.3.3 1.11.19
 - updated versions
 
