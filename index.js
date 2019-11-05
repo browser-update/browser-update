@@ -1,8 +1,8 @@
 import browserUpdate from './update.npm.full.js';
 
-const OUTDATE_DIFF = -0.01;
+var OUTDATE_DIFF = -0.01;
 
-const settings = {
+var settings = {
 
     // Уведомляемые версии браузеров. Отрицательное число означает отсчет версий от текущей.
     notify : {
