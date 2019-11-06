@@ -4,7 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.vsakt = {c:78,f:70,s:"12.1.2",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
+    this.version="3.3.7";
+    this.vsakt = {c:78,f:70,s:"13.0.3",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
@@ -60,6 +61,13 @@ var $bu_= new function() {
         r.no_device_update=true;
         r.available={}
     }
+    //Safari on iOS 13 in Desktop mode
+    if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
+        r.n="ios";
+        r.engine='ios';
+        r.fullv=r.v=13;
+        r.no_device_update=true;//For now, never show a message, TODO!
+    }
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
         ua.match(new RegExp("OS."+VV,"i"));//
@@ -67,7 +75,7 @@ var $bu_= new function() {
         r.fullv=RegExp.$1;
         r.v=parseFloat(r.fullv);
         r.engine='ios';
-        var av=s.available_ios(ua,v);
+        var av=s.available_ios(ua,r.v);
         /*
         var newmap={10:"10.3.4",11:"12.4.3",12:"12.4.3",13:s.vsakt["ios"]};
 
@@ -155,7 +163,7 @@ var $bu_= new function() {
         ua.match(new RegExp(engines[r.engine].replace("VV",VV),"i"))
         r.engine_version=parseFloat(RegExp.$1)
     }    
-    return r;
+    return r
 }
 this.semver = function(vstr) {
     if (vstr instanceof Array)
@@ -223,7 +231,7 @@ op.llfull=ll.replace("_","-").toLowerCase().substr(0,5);
 op.ll=op.llfull.substr(0,2);
 op.domain=op.domain!==undefined?op.domain:(/file:/.test(location.href)?"https:":"")+"//browser-update.org";
 op.apiver=op.api||op.c||-1;
-op.jsv="3.3.5";
+op.jsv=$bu_.version;
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
@@ -264,8 +272,8 @@ op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 
-if (Math.random()*1200<1 && !op.test) {
-    var i = new Image();    i.src="//browser-update.org/cnt?what=brow&jsv="+op.jsv;
+if (Math.random()*1000<1 && !op.test) {//for every 1000th user collect anonymous statistics on which browser is used
+    var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
 }
 
 op.test=test||op.test||location.hash==="#test-bu";
