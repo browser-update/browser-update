@@ -272,7 +272,7 @@ op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 
-if (Math.random()*1000<1 && !op.test) {//for every 1000th user collect anonymous statistics on which browser is used
+if (Math.random()*1000<1 && !op.test && !op.statistics) {//for every 1000th user collect anonymous statistics on which browser is used
     var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
 }
 
