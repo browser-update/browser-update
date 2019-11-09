@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.7";
+    this.version="3.3.8";
     this.vsakt = {c:78,f:70,s:"13.0.3",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
@@ -272,7 +272,7 @@ op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 
-if (Math.random()*1000<1 && !op.test && !op.statistics) {//for every 1000th user collect anonymous statistics on which browser is used
+if (Math.random()*1000<1 && !op.test && !op.nostatistics) {//for every 1000th user collect anonymous statistics on which browser is used
     var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
 }
 

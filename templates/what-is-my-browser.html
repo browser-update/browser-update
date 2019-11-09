@@ -3,6 +3,46 @@
 {% block content %}
 
     {% include 'browser-info.html' %}
+
+    <h2>Is my browser up-to-date?</h2>
+        {% if  status.uptodate %}
+            <p>{{ _('Your browser is out-of-date.') }}</p>
+        {% else %}
+            <p>
+                {{ _('Your browser is up-to-date.') }}
+            </p>
+        {% endif %}
+
+        {% if not browser.is_latest %}
+            {# Note: "[The Browser (e.g. Chrome 22.0)] is not the latest version. #}
+
+            <p>{{ _x("It is not the latest version.") }}</p>
+            <p>{{ _x("You can upgrade to a newer version of {browser_name}.").format(browser_name=browser.name) }}</p>
+        {% endif %}
+
+
+
+    <h2>Is my browser secure?</h2>
+        {% if browser.is_insecure %}
+            <p class="warning">
+                {{ ("Your browser has severe security issues.") }}
+                {{ ("You could get a virus by just viewing a malicious website.") }}
+            </p>
+        {% else %}
+            <p>
+                {{ _x("Your browser is safe.") }}
+            </p>
+        {% endif %}
+    <h2>What is my user agent string?</h2>
+
+         {{ ('Your browser identifies itself with ("User agent string"):') }}<br/>
+        <code class="small">
+            {{ emulate or request.user_agent }}
+        </code>
+
+
+
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
     <script>
         if (document.cookie.indexOf('noanalytics=true') > -1) {

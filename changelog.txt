@@ -1,7 +1,10 @@
 Changes to the notification / detection script
 ==========
-3.3.7
-- Workaround for Safari on iPadOS 13 pretending to be desktop User agent, fixes #459
+3.3.8 9.11.19
+- option do disable anonymous browser statistics on every 1000th visit
+
+3.3.7 6.11.19
+- Workaround for Safari on iPadOS 13 pretending to be desktop user agent, fixes #459
 
 3.3.6 5.11.19
 - note on browser statistics
