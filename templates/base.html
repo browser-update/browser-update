@@ -1,0 +1,100 @@
+<!DOCTYPE html >
+<html lang="{{ request.lang }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{{ title }} - Browser-Update.org</title>
+    <meta name="description" content=""/>
+    <meta name="keywords"
+          content="browser, webbrowser, upgrade browser, update browser, choice, change browser, firefox, safari, opera, firefox, upgrade internet explorer, internet explorer update, ie, safari, konqueror"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/png"/>
+    <link rel="icon" href="/static/img/favicon.png" type="image/png"/>
+
+    <meta name="robots" content="index,follow"/>
+    {#  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek'
+          rel='stylesheet' type='text/css'/> Now ebedded directly#}
+    <link rel="stylesheet" href="/static/base2.css" type="text/css"/>
+    {% if detected_lang=="en_SE" %}
+        <script>
+            var _jipt = [];
+            _jipt.push(['project', 'browser-update']);
+        </script>
+        <script src="//cdn.crowdin.com/jipt/jipt.js"></script>
+    {% endif %}
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="/static/drecksie.css" type="text/css" />
+    <![endif]-->
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="/static/drecksie6.css" type="text/css" />
+    <![endif]-->
+    {% block extraheader %}
+        {% if "sulvo" in ad %}
+            <script id="sulvo" type="text/javascript" src="//live.demand.supply/up.js" data-cfasync="false"></script>
+        {% endif %}
+    {% endblock %}
+</head>
+<body>
+<div class="header">
+    <div class="innerhead">
+        <h1><a href="{{ g.langprefix }}/">Browser-Update.org</a></h1>
+        <div class="tagline">{{ _('An initiative by websites to inform users to update their web browser') }}</div>
+        <div id="menu">
+
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <nav>
+                <div><a href="{{ g.langprefix }}/">{{ _('About the Project') }}</a></div>
+                {% if not slimmed %}
+                    <div><a href="{{ g.langprefix }}/update-browser.html#3">{{ _('Update your Browser') }}</a></div>
+                    <div><a href="{{ g.langprefix }}/stat.html">{{ _('Statistics') }}</a></div>
+                    <div><a href="/blog.html">{{ _('Blog') }}</a></div>
+                {% endif %}
+                <div><a href="{{ g.langprefix }}/contact.html">{{ _('Contact') }}</a></div>
+
+                <div id="lang2">
+                    <a>Languages ▼</a>
+                    <div>
+                        {% for id, name in languages.items() %}
+                            <a href="/{{ id }}/{{ current_page }}">{{ name }}</a>
+                        {% endfor %}
+                        <a href="{{ g.langprefix }}/contact.html"><b>translate...</b></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div id="co">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}no content{% endblock %}
+
+
+
+    {% if debug %}
+        <div class="debug"> Debug: Locale: {{ request.full_locale }}
+            Header: {{ request.accept_languages }} {{ show_cookiebar }}</div>
+
+    {% endif %}
+
+    <script src="//fc.webmasterpro.de/counter.php?name=browserupdate&amp;style=none"></script>
+    <noscript>
+        <div><img src="//fc.webmasterpro.de/as_noscript.php?name=browserupdate" style="width:1px;height:1px;" alt=""/>
+        </div>
+    </noscript>
+
+</div>
+</body>
+</html>

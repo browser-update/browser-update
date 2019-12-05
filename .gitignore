@@ -15,3 +15,7 @@ xgettext.*
 /node_modules/
 /nbproject/private/
 nbproject/
+.well-known/
+__pycache__/
+ads/
+static/root/ads.txt

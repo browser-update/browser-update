@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% for post in posts %}
+    <h2 class="commenttitle">
+    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">
+        {{ post.title }}
+    </a>
+    </h2>
+    <small class="centered">{{ format_date(post.date) }}</small>
+
+    {{ post.html|safe }}
+
+{% endfor %}
+
+{% endblock %}

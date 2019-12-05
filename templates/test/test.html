@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script>
+$buoop={}
+</script>
+<script src="/update.js"></script>
+
+<div class="debug">
+    <h2>Identification</h2>
+    <p>User-Agent-String (HTTP Header):<span id="heua">{{ request.headers.get('User-Agent') }}</span></p>
+    <p>User-Agent-String (Javascript): <span id="jsua">Error</span></p>
+    
+    <h2>Detection</h2>
+    <p>Detected Browser as (Javascript):<span id="det">Error</span></p>      
+    <p>Browser (Header): <span id="">{{ browser.t }}</span></p>
+    <p>System (Header): <span id="">{{ system.title }}</span></p>
+
+    <h2>Language</h2>
+    <p>Lang (HTTP Header): <span>{{ request.headers.get('Accept-Language') }}</span></p>
+    <p>Lang (Javascript): <span id="lang">Error</span></p>
+
+    <h2>More</h2>
+    {{ info }}
+</div>
+<style>
+.debug span {
+    display: block;
+}    
+</style>    
+
+<script>
+var server_ua="{{ request.headers.get('User-Agent') }}"
+var br=$bu_getBrowser();
+var aaa="";
+if (br.donotnotify)
+    aaa+="<br/>Not notified because: "+ br.donotnotify;
+if (navigator.userAgent!=server_ua) {
+    aaa+="<br/>Warning: Your browser is misconfigured. Identification via Javascript and and HTTP-Headers does not match!";
+}
+document.getElementById('det').innerHTML=br.t+aaa;
+document.getElementById('jsua').innerHTML=navigator.userAgent;
+document.getElementById('lang').innerHTML=$buoop.ll;
+</script>
+
+
+{% endblock %}

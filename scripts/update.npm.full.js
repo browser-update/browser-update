@@ -5,7 +5,7 @@
 var $bu_= new function() {
     var s=this;
     this.version="3.3.8";
-    this.vsakt={c:78,f:70,s:"13.0.3",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
+    this.vsakt = {c:78,f:70,s:"13.0.3",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
@@ -273,7 +273,7 @@ op.newwindow=(op.newwindow!==false);
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 
 if (Math.random()*1000<1 && !op.test && !op.nostatistics) {//for every 1000th user collect anonymous statistics on which browser is used
-    var i = new Image();    
+    var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
 }
 
 op.test=test||op.test||location.hash==="#test-bu";
@@ -337,7 +337,7 @@ var $buo_show = function () {
     var bb = $bu_getBrowser();
     var burl = op.burl || ("http" + (/MSIE/i.test(navigator.userAgent) ? "" : "s") + "://browser-update.org/");
     if (!op.url) {
-        op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv ;
+        op.url = burl + ((op.l && (op.l + "/")) || "") + "update-browser.html" + (op.test ? "?force_outdated=true" : "") + "#" + op.jsv + ":" + op.pageurl;
     }
     op.url_permanent_hide=op.url_permanent_hide || (burl + "block-ignore-browser-update-warning.html");
     /*
@@ -345,7 +345,7 @@ var $buo_show = function () {
      var i = new Image();
      var txt=op["text_"+ll]||op.text||"";
      var extra=encodeURIComponent("frac="+frac+"&txt="+txt+"&apiver="+op.apiver);
-     
+     i.src="https://browser-update.org/cnt?what=noti&from="+bb.n+"&fromv="+bb.v + "&ref="+ escape(op.pageurl) + "&jsv="+op.jsv+"&tv="+op.style+"&extra="+extra;
      }
      */
     function busprintf() {
@@ -415,12 +415,12 @@ if (ta.msg)
 
 var tar = "";
 if (op.newwindow)
-    tar = ' target="_blank" rel="noopener noreferrer"';
+    tar = ' target="_blank" rel="noopener"';
 
 var div = op.div = document.createElement("div");
 div.id = div.className= "buorg";
 
-var style = '<style>.buorg-icon {width: 22px; height: 16px; vertical-align: middle; position: relative; top: -0.05em; display: inline-block; background: no-repeat 0px center ;}</style>';
+var style = '<style>.buorg-icon {width: 22px; height: 16px; vertical-align: middle; position: relative; top: -0.05em; display: inline-block; background: no-repeat 0px center url(https://browser-update.org/static/img/small/' + bb.n + '.png);}</style>';
 var style2 = '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:center;  color:#000; background-color: #fff8ea; font: 18px Calibri,Helvetica,sans-serif; box-shadow: 0 0 5px rgba(0,0,0,0.2);animation: buorgfly 1s ease-out 0s;}'
     + '.buorg-pad { padding: 9px;  line-height: 1.7em; }'
     + '.buorg-buttons { display: block; text-align: center; }'

@@ -326,10 +326,6 @@ e.src = op.jsshowurl||op.domain+"/update.show.min.js";
 document.body.appendChild(e);
 };
 
-
-if( typeof( module ) !== 'undefined' ) {
-    module.exports = $buo;
-}
-
+$buo(window.$buoop);
 
 

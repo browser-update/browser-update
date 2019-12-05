@@ -1,6 +1,6 @@
 {
   "name": "@regru/browser-update",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "index.js",
   "scripts": {

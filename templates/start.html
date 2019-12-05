@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="message">
+    <p id="mainmessage">
+    {{ _s("Browser-update.org is a tool to unobtrusively notify visitors that they should update their web browser in order to use your website.")}}
+    </p>
+    <p>
+    {{ _s("This is done with care not to annoy, lock out or erroneously notify visitors!") }}
+    </p>    
+</div>
+
+{% include 'numbers.html' %}
+    
+<h2>{{ _s('How it works')}}</h2>
+<ol class="steps">
+    <li>
+        {{ (_s('Include our small javascript <a href="%s">notification</a> on your website').format('#install') ) | safe }}
+    </li>
+    <li>
+        {{ _s('Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update.')}}
+        (<a href="#test-bu" onclick="test_bar();return false;">{{ _s('Try it out!')}}</a>)
+        <div class="example">
+            <div> {{ update_message | safe}}</div>
+        </div>
+    </li>
+    <li>
+        {{ _s('By clicking the message, they will get to an <a href="%s">info page with reasons why to update (or change) and a list of browsers</a> available for their system.').format('update.html?force_outdated=true') | safe}}
+        <div style="text-align: center"><a href="update.html?force_outdated=true" title="{{ _u('update browser') }}"><img alt="download firefox/internet explorer/chrome/opera to update your browser" src="/static/img/shot update.png" style="width:400px; max-width: 100%;"/></a></div>
+    </li>
+    <li>
+        {{ _s('If the visitor ignores the advice, it won\'t reappear for some time.')}}
+    </li>
+</ol>
+
+{% if _x_is_translated('Advantages and features')%}
+<h2>{{ _x('Advantages and features')}}</h2>
+<ul class="advantages">
+    <li>
+        <h3>{{ _x('Unobtrusive')}}</h3>
+        {{ _x('The user will be notified only once a day by default. The notification is small and does not block the user from using the site.')| safe}}
+    </li>
+    <li>
+        <h3>{{ _x('Low maintenance and up-to-date')}}</h3>
+        {{ _x('We take care not to erroneously notify users by constantly tweaking and improving the detection code. Users are presented with an up-to-date list of browsers that are available for their system.')| safe}}
+    </li>
+    <li>
+        <h3>{{ _x('Customizable')}}</h3>
+            {{ _x('You can <a href="%s">customize</a> the style of the message, the text and other options.').format('customize.html') | safe}}
+    </li>
+    <li>
+        <h3>{{ _x('Localized')}}</h3>
+        {{ _x('The message is automatically displayed in the user\'s language.')}}
+    </li>
+    {% if _x_is_translated('Lightweight')%}
+    <li>
+        <h3>{{ _x('Complete and Tested')}}</h3>
+        {# Note: Example: Works for Firefox, Chrome, Safari, Edge, ... on Windows, Android, Linux, ...  #}
+        {{ _x('Works for {list_of_browsers}, ... on {list_of_systems}, ...').format(list_of_browsers="Chrome, Firefox, Edge, Safari, IE, Android Browser, Samsung, Opera, Chrome, Vivalid, Yandex",list_of_systems="Windows, MacOS, Android, iOS, Linux")}}
+    </li>
+    <li>
+        <h3>{{ _x('Lightweight')}}</h3>
+        {{ _x('Just {size}kb in size').format(size=3)}}
+    </li>
+    <li>
+        <h3>{{ _x('Helpful')}}</h3>
+        {#  _s('Help the user to update.') #}
+        {# Note: "[The service] is offering browsers available... #}
+        {{ _x('Offering various browsers available for the user\'s operating system.') }}
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+<h2 id="install">{{ _s('Install the browser update notification on your site') | safe }}</h2>
+<p>
+    {{ _s('Just include this code anywhere in the source of your page.') }}
+</p>
+		
+{% include 'code.html' %}
+
+<p>
+    {{ _s('There are plugins for:')}}
+</p>
+<div class="plugins">
+    <a href="https://www.npmjs.com/package/browser-update">npm</a>
+    <a href="http://wordpress.org/extend/plugins/wp-browser-update">WordPress</a>
+    <a href="https://www.npmjs.com/package/vue-browserupdate">vue.js</a>
+    <a href="https://www.npmjs.com/package/ember-cli-browser-update">ember-cli</a>
+    <a href="https://emberobserver.com/addons/ember-browser-update">ember</a>
+    <a href="http://typo3.org/extensions/repository/view/browserupdnotify/current/">TYPO3</a>
+    <a href="https://contao.org/de/extension-list/view/browser_update.html">Contao</a>
+    <a href="http://www.vbulletin.org/forum/showthread.php?t=239559">vBulletin</a>
+    <a href="http://www.concrete5.org/marketplace/addons/scala-it-browser-update-notification/">concrete5</a>
+    <a href="http://modxcms.com/extras/package/737">MODx</a>
+    <a href="https://drupal.org/project/bu">Drupal</a>
+    <a href="http://trac.habariproject.org/habari-extras/browser/plugins/browserupdate">Habari</a>
+    <a href="https://github.com/vishy93/Browser_Update_Magento_Plugin">Magento</a>
+    <a href="https://www.woltlab.com/pluginstore/index.php/File/1363-Warnhinheis-bei-veralteten-Browsern/">WCF2</a>
+    <a href="http://dev.cmsmadesimple.org/projects/browserupdate">CMS made simple</a>
+    <a href="http://xenforo.com/community/resources/customisable-browser-update-org-widget.764/">XenForo</a>
+    <a href="http://modules.processwire.com/modules/markup-browser-update/">ProcessWire</a>
+    <a href="http://rapidweaver.marathia.com/stacks/BrowserUpdate/">Rapidweaver</a>
+    <a href="https://extensions.joomla.org/extension/browser-update/">Joomla</a>
+</div>
+
+{% if _x_is_translated('Why you should tell users to update') %}
+
+<h2>{{ _x('Why you should tell users to update')}}</h2>
+<ul>
+    <li>{{ _x('Reduced development costs and time')}}</li>
+    <li>{{ _x('Newer browsers let you use more features and new technologies on your website, resulting in a better browsing experience for your users.')}}</li>
+    <li>{{ _x('Numerous <a%s>benefits for your visitors</a>: security, speed, features, ...').format(' href="update.html"') | safe}}</li>
+</ul>
+
+
+<h2 class="help">{{ _x('Help this project by <a{link_use}>using the update-notification</a> on your site, <a{link_share}>sharing</a> or <a{link_trans}>translating</a> this page.').format(link_use=' href="#install"',link_share='',link_trans=' href="contact.html"') | safe}}</h2>
+{% endif %}
+
+
+
+<script>
+var $buoop = {api:4};
+</script>
+<script src="/update.min.js"></script>
+
+
+{% if request.lang not in ['en','de'] %}
+    <div class="cookiebar" id="cookiebar" style='right:auto;font-size:16px'>This site is not yet fully translated into your language. <a href="contact.html">Please help by translating it!</a></div>
+{% endif %}
+
+
+
+{% endblock %}

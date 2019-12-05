@@ -1,0 +1,149 @@
+<div class="generate">
+
+
+<textarea id="f-code" rows="9">&lt;script>
+var $buoop = {api:{{ apiver }}};
+function $buo_f(){
+ var e = document.createElement("script");
+ e.src = "//browser-update.org/update.min.js";
+ document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+&lt;/script></textarea>
+<p>{{ _s('Required browser version:')}}</p>
+
+<ul id="browserversionchooser">
+    {% for id, br in browsers.items()  %}
+    <li class="b{{ id }}">
+        <label for="f-{{ id }}">{{ br.title }}</label>
+        <select id="f-{{ id }}" onchange="code()">
+            {% for val, title in br.options.items()  %}
+               <option value="{{ val }}" {% if br.default==val %}selected{% endif %}>{{ title }}</option>
+            {% endfor %}
+        </select>
+    </li>
+    {% endfor %}
+</ul>
+<div>
+    <input type="checkbox" checked="checked" id="opinsecure" onchange="code();"/>
+    <label for="opinsecure">
+    {{ _s('Notify all browser versions with severe security issues.')}} (<a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#notifying-insecure-browsers">{{ _s('more details (in english)').replace(' (in english)','') }}</a>)
+    </label>
+</div>
+<div>
+    <input type="checkbox" id="opunsupported" onchange="code();"/>
+    <label for="unsupported">
+    {{ _s('Also notify all browsers that are not supported by the vendor anymore.')}} (<a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#notifying-unsupported-browsers">{{ _s('more details (in english)').replace(' (in english)','') }}</a>)
+    </label>
+</div>
+<!--
+<div>
+    <input type="checkbox" checked="checked" id="opnewos" onchange="code();"/>
+    <label for="opnewos">
+    _('Only notify users that can install a new browser without having to update their operating system.')
+    </label>
+</div>
+-->
+<div>
+    <input type="checkbox" checked="checked" id="opmobile" onchange="code();"/>
+    <label for="opmobile">
+    {{ _s('Notify mobile browsers.')}}
+    </label>
+</div>
+<div>
+    <label for="f-style">{{ _s('Position')}}</label>
+    <select id="f-style" onchange="code()">
+        <option value="" selected>{{ _s('top')}}</option>
+        <option value="bottom">{{ _s('bottom')}}</option>
+        <option value="corner">{{ _s('corner')}}</option>
+    </select>
+    <button onclick="test_bar()">{{ _s('Try it out!')}}</button>
+</div>
+<p>
+    {{ _s('The script and service is open source under the <a%s>MIT License</a>.').format(' href="https://github.com/browser-update/browser-update/blob/master/LICENSE.txt"') | safe}}
+    {{ _s('The script is not tracking users in any way and does not collect any personal information.') }}
+</p>
+<p>
+    {{ _s('You can <a href="%s">customize</a> the style of the message, the text and other options.').format('customize.html') | safe}}
+</p>
+</div>
+
+<style>
+    .generate {
+        border: none;
+        padding: 10px 10px;
+    }
+    .generate #browserversionchooser label {
+        width: 75px;
+        display: inline-block;
+    }
+    .generate textarea {
+        height: 13em;
+        width: 97%;
+        border: none;
+    }
+    #browserversionchooser select {
+        background: white;
+        padding: 5px;
+    }
+    #browserversionchooser li {
+        background-size: 28px 28px;
+        background-repeat: no-repeat;
+        padding-left: 28px;
+        display: block;
+        padding: 9px;
+        background-position: left center;
+        padding-left: 40px;
+    }
+    .bf {	background-image: url('/static/img/big/f.png');}
+    .be {	background-image: url('/static/img/big/e.png');}
+    .bo {	background-image: url('/static/img/big/o.png');}
+    .bc {	background-image: url('/static/img/big/c.png');}
+    .bs {	background-image: url('/static/img/big/s.png');}
+
+</style>
+
+<script>
+
+function _get(name,defaultval) {
+    if (document.getElementById("op"+name).checked!==defaultval)
+        return name+":"+(!defaultval)+",";
+    else
+        return "";
+}
+function getomat(name) {
+    return document.getElementById('f-'+ name).value;
+}
+function _get2(name,defaultval) {
+    var val=document.getElementById("f-"+name).value;
+    if (val!==defaultval)
+        return name+':"'+val+'",';
+    else
+        return "";
+}
+
+function test_bar() {
+    var el=document.getElementById("buorg");
+    if (el)
+        el.parentNode.removeChild(el);
+    $buo({'style':getomat('style'),dont_show_debuginfo:true},true);
+    return false;
+}
+//+_get("newos",true)
+function code() {
+    var notify = 'required:{e:'+ getomat('e') +',f:'+ getomat('f') +',o:'+ getomat('o') +',s:'+ getomat('s') +',c:'+ getomat('c') +'},';
+    var code = '<'+'script> \n\
+var $buoop = {'+notify+_get("insecure",false)+_get("unsupported",false)+_get("mobile",true)+_get2("style","")+'api:{{ apiver }} }; \n\
+function $buo_f(){ \n\
+ var e = document.createElement("script"); \n\
+ e.src = "//browser-update.org/update.min.js"; \n\
+ document.body.appendChild(e);\n\
+};\n\
+try {document.addEventListener("DOMContentLoaded", $buo_f,false)}\n\
+catch(e){window.attachEvent("onload", $buo_f)}\n\
+<'+'/script>';
+	document.getElementById('f-code').value=code;
+}
+code();
+</script>

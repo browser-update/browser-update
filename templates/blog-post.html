@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h2>{{ post.title }}</h2>
+    <small class="centered">{{ post.date }}</small>
+
+    {{ post.html|safe }}
+    {{ post.comment }}
+
+
+    {% if post.comment %}
+        <div id="disqus_thread" style="border: solid 1px #aaa; margin: 40px 0;padding: 10px;"></div>
+        <script>
+            var disqus_shortname = 'browserupdateorg'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{ post.comment }}';
+            var disqus_url = 'https://browser-update.org{{ url_for('post', name=post.path.replace('posts/', '')) }}';
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+
+
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test detection</title>
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 10px;
+    }
+    .red {
+        background-color: rgb(255,200,200);
+    }
+    .green {
+        background-color: rgb(200,255,200);
+    }
+    td {
+        border: 1px solid #aaa;
+    }
+    table {
+        border-collapse: collapse;
+
+    }
+</style>
+
+</head>
+<body>
+
+<table>
+        <tr>
+            <td>Title (t)</td>
+            <td>meant</td>
+            <td>v</td>
+            <td>fullv</td>
+            <td>id (n)</td>
+            <td>is_latest</td>
+            <td>is_insecure</td>
+            <td>is_supported</td>
+            <td>s.id</td>
+            <td>s.v</td>
+            <td>s.title</td>
+            <td>uastr</td>
+        </tr>
+    {% for b in browsers %}
+        <tr>
+            <td>{{ b.b.t|nobreak }}</td>
+            {% if b.meant==b.b.t %}
+                <td></td>
+            {% else %}
+                {{ b.meant|colortd(False) }}
+            {% endif %}
+            <td>{{ b.b.v }}</td>
+            <td>{{ b.b.fullv }}</td>
+            <td>{{ b.b.n }}</td>
+            {{ b.b.is_latest|colortd }}
+            {{ b.b.is_insecure|colortd }}
+            {{ b.b.is_supported|colortd }}
+            <td>{{ b.s.id }}</td>
+            <td>{{ b.s.v }}</td>
+            {{ b.s.title|nobreak|colortd }}
+            <td>{{ b.uastr }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

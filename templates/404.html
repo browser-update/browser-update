@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Page Not Found</h1>
+
+    <div class="centered">
+        <p>The requested URL was not found on the server.</p>
+
+        <p>
+            <a class="button" href="/update-browser.html">
+                {{ _s('Check if my browser is up-to-date!') }}
+            </a>
+        </p>
+
+
+        <p>
+            <a href="/">{{ _('About the Project') }}</a>
+        </p>
+    </div>
+{% endblock %}

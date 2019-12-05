@@ -1,0 +1,423 @@
+{
+  "current": {
+    "desktop": {
+      "c": "78.0.3904.87",
+      "f": 70.0,
+      "s": "13.0.3",
+      "e": 18.0,
+      "i": 15.0,
+      "ios": "13.2",
+      "samsung": 10.1,
+      "o": 64.0,
+      "o_a": 54.1,
+      "y": "19.10",
+      "v": 2.8,
+      "uc": "12.13",
+      "a": 700,
+      "silk": 70,
+      "waterfox": "56.2",
+      "pale moon": 28.4
+    }
+  },
+  "insecure_below": {
+    "c": "78.0.3904.87",
+    "f": 62,
+    "s": "11.1.1",
+    "e": 16,
+    "i": 11,
+    "ios": "12.4.3",
+    "samsung": "8.0",
+    "o": 55,
+    "o_a": 50,
+    "y": "19.6",
+    "v": "2.5",
+    "uc": "12.10",
+    "silk": 64
+  },
+  "releases": {
+    "c": {
+      "45": "15-09-01",
+      "46": "15-10-13",
+      "47": "15-12-01",
+      "48": "16-01-20",
+      "49": "16-03-02",
+      "50": "16-04-13",
+      "51": "16-05-25",
+      "52": "16-07-20",
+      "53": "16-08-31",
+      "54": "16-10-12",
+      "55": "16-12-01",
+      "56": "17-01-25",
+      "57": "17-03-09",
+      "58": "17-04-19",
+      "59": "17-06-05",
+      "60": "17-07-25",
+      "61": "17-09-05",
+      "62": "17-10-17"
+    },
+    "f": {
+      "38": "15-05-12",
+      "39": "15-07-02",
+      "40": "15-08-11",
+      "41": "15-09-22",
+      "42": "15-11-03",
+      "43": "15-12-15",
+      "44": "16-01-26",
+      "45": "16-03-08",
+      "46": "16-04-26",
+      "47": "16-06-07",
+      "48": "16-08-02",
+      "49": "16-09-20",
+      "50": "16-11-15",
+      "51": "17-01-24",
+      "52": "17-03-07",
+      "53": "17-04-19",
+      "54": "17-06-13",
+      "55": "17-08-08",
+      "56": "17-09-28"
+    },
+    "s": {
+      "8": "14-10-16",
+      "9": "15-09-30",
+      "9.1": "16-03-21",
+      "10": "16-09-20",
+      "10.1": "17-03-27",
+      "11": "17-09-11"
+    },
+    "y": {
+      "17.9": "17-09-22"
+    },
+    "i": {
+      "10": "13-02-26",
+      "11": "13-10-17",
+      "12": "15-03-30",
+      "13": "15-09-18",
+      "14": "16-02-18",
+      "15": "16-09-07",
+      "16": "17-09-26"
+    },
+    "o": {
+      "35": "16-02-02",
+      "36": "16-03-14",
+      "37": "16-05-04",
+      "38": "16-06-08",
+      "39": "16-08-02",
+      "40": "16-09-20",
+      "41": "16-10-25",
+      "42": "16-12-13",
+      "43": "17-02-07",
+      "44": "17-03-21",
+      "45": "17-05-10",
+      "46": "17-06-22",
+      "47": "17-08-09",
+      "48": "17-09-27"
+    },
+    "samsung": {
+      "6.2": "17-09-30",
+      "6.0": "17-08-26",
+      "5.4": "17-05-17",
+      "5.0": "16-12-16",
+      "4.0": "16-02-02"
+    }
+  },
+  "infos": {
+"f": {
+      "name": "Firefox",
+      "link":"https://firefox.com",
+      "vendor": "Mozilla Foundation",
+      "vendor non-profit": true,
+      "license": "full open source",
+      "description": "Most popular full open source browser",
+      "price": 0,
+      "blocks ads": "addon",
+      "engine": "Gecko",
+      "marketshare": 20,
+      "security_bulletins": "https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/",
+      "ua_string_doc": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox",
+      "requirements": "https://www.mozilla.org/en-US/firefox/56.0.2/system-requirements/",
+      "updates": "independent",
+      "first_release": "2002",
+      "available_for": {
+        "android": 4.1,
+        "win": 5,
+        "macos": 9,
+        "ios": 9,
+        "linux": true
+      },
+      "download_url": "https://www.mozilla.org/firefox/",
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
+      }
+    },
+    "samsung": {
+      "name": "Samsung Internet",
+      "vendor": "Samsung",
+      "name_ko": "삼성 인터넷",
+      "core": "Chromium",
+      "engine": "Blink",
+      "releases": "http://developer.samsung.com/internet/android/releases",
+      "blog": "https://medium.com/samsung-internet-dev",
+      "dev_docs": "http://developer.samsung.com/internet",
+      "apk": "https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-internet-for-android/",
+      "ua_string_doc": "http://developer.samsung.com/internet/user-agent-string-format",
+      "example_ua_string": "Mozilla/5.0 (Linux; Android 5.0.2; SAMSUNG SM-G925F Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36",
+      "updates": "independent",
+      "first_release": "2012",
+      "available_for": {
+        "android": 5
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.sec.android.app.sbrowser"
+    },
+
+    "c": {
+      "name": "Chrome",
+      "vendor": "Google",
+      "link": "https://www.google.com/chrome/",
+      "core": "Chromium",
+      "engine": "Blink",
+      "marketshare": 50,
+      "cve": "https://www.cvedetails.com/vulnerability-list/vendor_id-1224/product_id-15031/opec-1/Google-Chrome.html",
+      "releases": "https://chromereleases.googleblog.com/",
+      "requirements": "https://www.google.de/chrome/browser/desktop/index.html",
+      "updates": "independent",
+      "first_release": "2008",
+      "available_for": {
+        "android": 4.1,
+        "win": 7,
+        "macos": 9,
+        "ios": 9,
+        "linux": true,
+        "fire": 4.1
+      },
+      "blocks_ads": true,
+      "download_url": "https://www.google.com/chrome/browser/desktop/",
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=com.android.chrome",
+        "fireos_en": "https://www.technipages.com/kindle-fire-how-to-install-google-chrome-via-apk-file"
+      }
+    },
+    "o": {
+      "name": "Opera",
+      "vendor": "Opera Software",
+      "link": "https://opera.com",
+      "core": "Chromium",
+      "engine": "Blink",
+      "releases": "https://www.opera.com/docs/history/",
+      "download_url": "https://opera.com",
+      "first_release": "1996",
+      "available_for": {
+        "android": 4.1,
+        "win": 7,
+        "macos": 9,
+        "ios": 9,
+        "linux": true
+      },
+      "blocks_ads": true,
+      "download_urls": {
+        "android": "https://play.google.com/store/apps/details?id=com.opera.browser"
+      },
+      "updates": "independent"
+    },
+    "s": {
+      "name": "Safari",
+      "link": "https://www.apple.com/safari",
+      "vendor": "Apple",
+      "engine": "WebKit",
+      "security_bulletins": "https://support.apple.com/HT201222",
+      "requirements": "https://en.wikipedia.org/wiki/Safari_version_history",
+      "updates": "tied to os",
+      "first_release": "2003",
+      "available_for": {
+        "macos": 12,
+        "ios": 11
+      },
+      "download_url": "https://support.apple.com/HT204416"
+    },
+    "y": {
+      "name": "Yandex Browser",
+      "name_ru": "Яндекс.Браузер",
+      "name_uk": "Яндекс.Браузер",
+      "link": "https://browser.yandex.com",
+      "vendor": "Yandex",
+      "vendor_ru": "Яндекс",
+      "security_bulletins": "https://browser.yandex.com/security/changelogs/",
+      "core": "Chromium",
+      "engine": "Blink",
+      "updates": "independent",
+      "first_release": "2012",
+      "available_for": {
+        "android": 4.1,
+        "win": 7,
+        "macos": 9,
+        "ios": 9,
+        "linux": true
+      },
+      "download_url": "https://browser.yandex.com",
+      "download_urls": {
+        "win": "https://download.yandex.ru/downloadable_soft/browser/7005/Yandex.exe",
+        "macos": "https://download.cdn.yandex.net/downloadable_soft/browser/7332/Yandex.dmg"
+      }
+    },
+    "i": {
+      "name": "Internet Explorer",
+      "vendor": "Microsoft",
+      "engine": "Trident",
+      "first_release": "1995",
+      "lifecycle": "https://support.microsoft.com/help/17454/lifecycle-faq-internet-explorer",
+      "available_for": {
+      },
+      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge",
+      "successor": "e"
+    },
+    "e": {
+      "name": "Edge",
+      "vendor": "Microsoft",
+      "engine": "EdgeHTML",
+      "first_release": "2015",
+      "security_bulletins": [
+        "https://technet.microsoft.com/security/bulletins",
+        "https://portal.msrc.microsoft.com/security-guidance"
+      ],
+      "cve": "http://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-32367/Microsoft-Edge.html",
+      "updates": "tied to os",
+      "available_for": {
+        "win": 10,
+        "winmob": 10
+      },
+      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge",
+      "dev_docs": ["https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"]
+    },
+    "e_a": {
+      "name": "Edge for Android",
+      "vendor": "Microsoft",
+      "engine": "Blink",
+      "core": "chromium",
+      "first_release": "2018",
+      "updates": "independent",
+      "available_for": {
+        "android": 4.4
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
+      "dev_docs": "https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"
+    },
+    "v": {
+      "name": "Vivaldi",
+      "vendor": "Vivaldi Technologies",
+      "core": "Chromium",
+      "engine": "Blink",
+      "link": "https://vivaldi.com",
+      "updates": "independent",
+      "available_for": {
+        "win": 7,
+        "macos": 9,
+        "linux": true
+      },
+      "download_url": "https://vivaldi.com/"
+    },
+    "brave": {
+      "name": "Brave",
+      "vendor": "Brave Software",
+      "link": "https://brave.com",
+      "blocks_ads": true,
+      "download_url": "https://brave.com/bro957",
+      "download_urls": {
+        "win": "https://laptop-updates.brave.com/download/BRO957"
+      },
+      "updates": "independent",
+      "available_for": {
+        "android": 5,
+        "win": 7,
+        "macos":9,
+        "linux":true
+      }
+    },
+    "uc": {
+      "name": "UC Browser",
+      "link": "https://ucweb.com",
+      "vendor": "UCWeb",
+      "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl",
+      "available_for": {
+        "android": 5
+      },
+      "updates": "independent"
+    },
+    "palemoon": {
+      "name": "Pale Moon",
+      "link": "https://palemoon.org",
+      "core": "Firefox",
+      "engine": "Goanna (Gecko)",
+      "vendor": "Open Source",
+      "download_urls": {
+        "linux": "http://linux.palemoon.org"
+      },
+      "available_for": {
+        "win": 7,
+        "linux": true
+      },
+      "download_url": "https://www.palemoon.org/",
+      "updates": "independent"
+    },
+    "a": {
+      "name": "Android Browser",
+      "vendor": "Google",
+      "core": "Chromium",
+      "engine": "WebKit",
+      "updates": "tied to os",
+      "successor": "c"
+    },
+    "ios": {
+      "name": "iOS Browser",
+      "vendor": "Apple",
+      "engine": "WebKit",
+      "available_for": {
+        "ios": 10.3
+      },
+      "updates": "tied to os"
+    },
+    "o_a": {
+      "name": "Opera Mobile",
+      "link": "https://opera.com",
+      "internal name": "Opera for Android",
+      "vendor": "Opera Software",
+      "core": "Chromium",
+      "engine": "Blink",
+      "available_for": {
+        "android": 4.1
+      },
+      "download_url": "https://play.google.com/store/apps/details?id=com.opera.browser",
+      "updates": "independent"
+    },
+    "unknown": {
+      "name": "Unknown Browser"
+    },
+    "silk": {
+      "name": "Silk",
+      "vendor": "Amazon",
+      "ua_string_doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html"
+    },
+    "amigo": {
+      "name": "Amigo (MRCHROME)",
+      "name_ru": "Амиго Браузер",
+      "vendor": "Mail.ru",
+      "download_url": "https://amigo.mail.ru",
+      "link": "https://amigo.mail.ru",
+      "example_ua_string": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.191 Amigo/54.0.2840.191 MRCHROME SOC Safari/537.36"
+    },
+    "waterfox": {
+      "name": "Waterfox",
+      "link": "https://waterfoxproject.org",
+      "core": "Firefox",
+      "engine": "Gecko",
+      "vendor": "Open Source",
+      "download_url": "https://waterfoxproject.org",
+      "available_for": {
+        "android": 4.1,
+        "win": 5,
+        "macos": 9,
+        "ios": 9,
+        "linux": true
+      },
+      "updates": "independent"
+    }
+  }
+}
