@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.9 8.1.20
+- updated all browser versions
+
 3.3.8 9.11.19
 - option do disable anonymous browser statistics on every 1000th visit
 
