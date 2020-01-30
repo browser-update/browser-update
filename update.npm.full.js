@@ -281,7 +281,7 @@ op.test=test||op.test||location.hash==="#test-bu";
 op.reasons=[];
 op.hide_reasons=[];
 function check_show(op) {
-    var bb=$bu_.get_browser(op.override_ua);
+    var bb=op.browser=$bu_.get_browser(op.override_ua);
     op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
     if (bb.other!==false)
         op.hide_reasons.push("is other browser:" + bb.other)
