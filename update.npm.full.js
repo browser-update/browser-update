@@ -5,7 +5,7 @@
 var $bu_= new function() {
     var s=this;
     this.version="3.3.9";
-    this.vsakt = {c:79,f:72,s:"13.0.4",e:18,i:12,ios:"13.3",samsung:10.2,o:65,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
+    this.vsakt = {c:80,f:72,s:"13.0.4",e:80,i:12,ios:"13.3",samsung:10.2,o:65,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
     //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
@@ -50,7 +50,7 @@ var $bu_= new function() {
             r.n=pats[i][1];
             r.engine=pats[i][2];
             break;
-        }        
+        }
     }
     r.fullv=RegExp.$1;
     r.v=parseFloat(r.fullv);
@@ -133,11 +133,11 @@ var $bu_= new function() {
     }
     r.t=s.names[r.n]+" "+r.v;
     r.is_supported=r.is_latest= !s.vsakt[r.n] ? undefined : s.less(r.fullv,s.vsakt[r.n])<=0;
-    
+
     r.vmaj=Math.round(r.v);
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
-    
+
     if ((r.n==="f" && (r.vmaj===68 || r.vmaj===60)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
@@ -162,7 +162,7 @@ var $bu_= new function() {
     if (r.engine) {
         ua.match(new RegExp(engines[r.engine].replace("VV",VV),"i"))
         r.engine_version=parseFloat(RegExp.$1)
-    }    
+    }
     return r
 }
 this.semver = function(vstr) {
