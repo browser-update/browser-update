@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.4.0 8.2.20
+- updated all browser versions
+
 3.3.9 8.1.20
 - updated all browser versions
 
