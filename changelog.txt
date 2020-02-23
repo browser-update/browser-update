@@ -1,5 +1,10 @@
 Changes to the notification / detection script
 ==========
+3.3.12 23.2.20
+- updated edge and chrome versions
+- fix edge on android detection (where the latest version is still based off chrome 73)
+- added option to test the script easier: Add "#ignorecookie-bu" to your url and reload the page. Then the bar will always show no matter if the "the user already saw it cookie was set", see #430
+
 3.3.11 23.2.20
 - ignore certain OPPO opera browser that cannot be updated
 - fixed to not show to iphone 6 anymore, since it does not support ios 13, fixes #472
