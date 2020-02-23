@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.9";
-    this.vsakt = {c:79,f:72,s:"13.0.4",e:18,i:12,ios:"13.3",samsung:10.2,o:65,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
-    //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
+    this.version="3.3.11";
+    this.vsakt = {c:80,f:72,s:"13.0.4",e:79,i:12,ios:"13.3",samsung:10.2,o:65,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
+    //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
+    this.vsinsecure_below = {c:74,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -17,8 +17,8 @@ var $bu_= new function() {
     r.other=ignore("bot","Pagespeed|pingdom|Preview|ktxn|dynatrace|Ruxit|PhantomJS|Headless|Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
 //        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","EdgA|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
+        ignore("niche browser","Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobile without upgrade path or landing page","OPR/44.12.2246|cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
 
@@ -30,6 +30,8 @@ var $bu_= new function() {
         ["UCBrowser.VV","uc",'c'],
         ["MSIE.VV","i",'i'],
         ["Edge.VV","e",'e'],
+        ["Edg.VV","e",'c'],
+        ["EdgA.VV","e_a",'c'],
         ["Vivaldi.VV","v",'c'],
         ["Android.*OPR.VV","o_a",'c'],
         ["OPR.VV","o",'c'],
@@ -70,7 +72,7 @@ var $bu_= new function() {
     }
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
-        ua.match(new RegExp("OS."+VV,"i"));//
+        ua.match(new RegExp("OS."+VV,"i"));
         r.n="ios";
         r.fullv=RegExp.$1;
         r.v=parseFloat(r.fullv);
@@ -82,6 +84,8 @@ var $bu_= new function() {
         if (av in newmap)
             av=newmap[av];
         */
+        if (av < 12 && int(r.v)==11)// all devices with ios 11 support ios 12
+            av=12
         r.available = {"ios": av};
         if (parseFloat(r.available.ios)<11)
             r.no_device_update=true;
@@ -200,7 +204,7 @@ this.available_ios=function(ua,v) {
     if (h == 812)// && pr == 3)// X
         return 11 + 4
     if ((h == 736 || h == 667))// && pr == 3)// 6+/6s+/7+ and 8+ or // 6+/6s+/7+ and 8+ in zoom mode + // 6/6s/7 and 8
-        return 8 + 5
+        return 12//latest version for iphone 6 is 12, 13 is for 6S
     if (h == 568) // 5/5C/5s/SE or 6/6s/7 and 8 in zoom mode
         return 10
     if (h == 480) // i4/4s
@@ -281,7 +285,7 @@ op.test=test||op.test||location.hash==="#test-bu";
 op.reasons=[];
 op.hide_reasons=[];
 function check_show(op) {
-    var bb=$bu_.get_browser(op.override_ua);
+    var bb=op.browser=$bu_.get_browser(op.override_ua);
     op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
     if (bb.other!==false)
         op.hide_reasons.push("is other browser:" + bb.other)

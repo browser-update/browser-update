@@ -1,5 +1,17 @@
 Changes to the notification / detection script
 ==========
+3.3.11 23.2.20
+- ignore certain OPPO opera browser that cannot be updated
+- fixed to not show to iphone 6 anymore, since it does not support ios 13, fixes #472
+- all devices with ios 11 support ios 12
+
+3.3.10 23.2.20
+- updated browser versions
+- removed npm dependency -> only a dev dependency
+- added browser info to the options object, so you can get the information on the current browser, fixes #471
+- correct detection of new edge browser
+- offer new edge browser on all supported platforms, but for now only to current IE or edge users
+
 3.3.9 8.1.20
 - updated all browser versions
 
