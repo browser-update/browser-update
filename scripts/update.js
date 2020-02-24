@@ -4,12 +4,12 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.12";
+    this.version="3.3.13";
     this.vsakt = {c:"80.0.3987.116",f:72,s:"13.0.4",e:80,i:12,ios:"13.3",samsung:10.2,o:65,e_a:44,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
-    this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', "e_a":"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
+    this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
@@ -84,7 +84,7 @@ var $bu_= new function() {
         if (av in newmap)
             av=newmap[av];
         */
-        if (av < 12 && int(r.v)===11)// all devices with ios 11 support ios 12
+        if (av < 12 && Math.round(r.v)===11)// all devices with ios 11 support ios 12
             av=12
         r.available = {"ios": av};
         if (parseFloat(r.available.ios)<11)
@@ -265,6 +265,8 @@ for (b in $bu_.vsdefault) {
 }
 required.ios=required.ios||required.s;
 
+if (required.e<79 && required.e>70)
+    required.e=required.e-60
 op.required=required;
 op.reminder=op.reminder<0.1 ? 0 : op.reminder||(24*7);
 op.reminderClosed=op.reminderClosed<1 ? 0 : op.reminderClosed||(24*7);
