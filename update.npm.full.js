@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.13";
-    this.vsakt = {c:"80.0.3987.116",f:72,s:"13.0.4",e:80,i:12,ios:"13.3",samsung:10.2,o:65,e_a:44,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
+    this.version="3.3.14";
+    this.vsakt = {c:"80.0.3987.116",f:73,s:"13.0.4",e:80,i:12,ios:"13.3",samsung:10.2,o:65,e_a:44,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:74,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
@@ -15,12 +15,12 @@ var $bu_= new function() {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
     r.other=ignore("bot","Pagespeed|pingdom|Preview|ktxn|dynatrace|Ruxit|PhantomJS|Headless|Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
-//        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("niche browser","OculusBrowser|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
         ignore("mobile without upgrade path or landing page","OPR/44.12.2246|cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
+    r.discontinued=(/netscape|greenbrowser|camino|flot|fennec|galeon|coolnovo/i.test(ua));
 
     var pats=[
         ["CriOS.VV","c",'ios'],
@@ -148,8 +148,6 @@ var $bu_= new function() {
         if (r.n==="f")
             r.esr=true;
     }
-    if ((r.n==="c"||r.n==="f"||r.n==="o"||r.n==="e") && s.less(r.fullv,parseFloat(s.vsakt[r.n])-1)<=0)
-        r.is_supported=true; //mark also the version before the current version as supported to make the transitions smoother
     if (r.n==="ios" && r.v>10.3)
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
@@ -158,6 +156,9 @@ var $bu_= new function() {
         r.t = s.names[r.n] + " " + r.vmaj;
         r.is_supported = s.less(r.fullv, "18.15063") != 1
     }
+    if (r.n in ["c","f","o","e"] && s.less(r.fullv,parseFloat(s.vsakt[r.n])-1)<=0)
+        r.is_supported=true; //mark also the version before the current version as supported to make the transitions smoother
+
     var releases_per_year={'f':7,'c':8,'o':8,'i':1,'e':1,'s':1}//,'v':1}
     if (releases_per_year[r.n]) {
         r.age_years=Math.round(((s.vsakt[r.n]-r.v)/releases_per_year[r.n])*10)/10 || 0
@@ -265,7 +266,9 @@ for (b in $bu_.vsdefault) {
 }
 required.ios=required.ios||required.s;
 
-if (required.e<79 && required.e>70)
+if (required.i<79 && required.i>65)
+    required.i=required.i-60
+if (required.e<79 && required.e>65)
     required.e=required.e-60
 op.required=required;
 op.reminder=op.reminder<0.1 ? 0 : op.reminder||(24*7);
@@ -296,8 +299,10 @@ function check_show(op) {
         op.hide_reasons.push("Extended support (ESR)")
     if (bb.mobile&&op.mobile===false)
         op.hide_reasons.push("do not notify mobile")
-    //if (bb.is_latest)
-    //    op.hide_reasons.push("is latest version of the browser")
+    if (op.apiver<2018.5 || op.apiver>2020.1) {//TODO: remove
+        if (bb.is_latest)//the latest versions of a browser can not be notified
+            op.hide_reasons.push("is latest version of the browser")
+    }
     if (bb.no_device_update)
         op.hide_reasons.push("no device update")
     if (op.is_below_required)
