@@ -4,6 +4,7 @@ Changes to the notification / detection script
 - ignore oculus quest browser
 - created a detailed test-page for the script https://browser-update.org/test/bar.html
 - updated firefox version
+- mark discontinued browsers
 
 3.3.13 24.2.20
 - take care of edge version jump between 18 and 79 when specifying relative to latest version
