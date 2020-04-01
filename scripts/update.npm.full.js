@@ -4,11 +4,11 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.14";
-    this.vsakt = {c:"80.0.3987.116",f:73,s:"13.0.4",e:80,i:12,ios:"13.3",samsung:10.2,o:65,e_a:44,o_a:55.2,y:"19.12.3",v:2.10,uc:"12.13"};
+    this.version="3.3.16";
+    this.vsakt = {c:"80.0.3987.116",f:74,s:"13.1",e:80,i:12,ios:"13.3",samsung:11.1,o:67,e_a:45,o_a:55.2,y:"20.3.1",v:2.11,uc:"13.0.2"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:74,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
-    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
+    this.vsinsecure_below = {c:76,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:9.0,o:62,o_a:52,y:"20.0",v:"2.6",uc:"12.10"};
+    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:9.1,o:-3,o_a:-3,y:20.0,v:2.6,uc:12.11,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -325,9 +325,13 @@ op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1 && !op.ign
 if (!op.test && (!op.notified || op.already_shown))
     return;
 
-op.setCookie=function(hours) {
+op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=None; Secure';
 };
+
+if (op.already_shown && (op.ignorecookie || op.test))
+    op.setCookie(-10)// remove old cookies if in test mode
+
 if (op.reminder>0)
     op.setCookie(op.reminder);
 
