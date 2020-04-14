@@ -4,23 +4,23 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.8";
-    this.vsakt = {c:78,f:70,s:"13.0.3",e:18,i:12,ios:"13.2",samsung:10.1,o:64,o_a:54.1,y:"19.10",v:2.8,uc:"12.13"};
-    //severly insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:74,f:62,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:"8.0",o:55,o_a:50,y:"19.6",v:"2.5",uc:"12.10"};
-    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:7.9,o:-3,o_a:-3,y:19.5,v:2.3,uc:12.8,a:535};
-    this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
+    this.version="3.3.16";
+    this.vsakt = {c:"80.0.3987.116",f:74,s:"13.1",e:80,i:12,ios:"13.3",samsung:11.1,o:67,e_a:45,o_a:55.2,y:"20.3.1",v:2.11,uc:"13.0.2"};
+    //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
+    this.vsinsecure_below = {c:76,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:9.0,o:62,o_a:52,y:"20.0",v:"2.6",uc:"12.10"};
+    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:9.1,o:-3,o_a:-3,y:20.0,v:2.6,uc:12.11,a:535};
+    this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
     var n,ua=(ua||navigator.userAgent).replace("_","."),r={n:"x",v:0,t:"other browser",age_years:undefined,no_device_update:false,available:s.vsakt};
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
     r.other=ignore("bot","Pagespeed|pingdom|Preview|ktxn|dynatrace|Ruxit|PhantomJS|Headless|Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
-//        ignore("discontinued browser","camino|flot|fennec|galeon|coolnovo") ||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","EdgA|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
-        ignore("mobile without upgrade path or landing page","cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
+        ignore("niche browser","OculusBrowser|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
+        ignore("mobile without upgrade path or landing page","OPR/44.12.2246|cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
+    r.discontinued=(/netscape|greenbrowser|camino|flot|fennec|galeon|coolnovo/i.test(ua));
 
     var pats=[
         ["CriOS.VV","c",'ios'],
@@ -30,6 +30,8 @@ var $bu_= new function() {
         ["UCBrowser.VV","uc",'c'],
         ["MSIE.VV","i",'i'],
         ["Edge.VV","e",'e'],
+        ["Edg.VV","e",'c'],
+        ["EdgA.VV","e_a",'c'],
         ["Vivaldi.VV","v",'c'],
         ["Android.*OPR.VV","o_a",'c'],
         ["OPR.VV","o",'c'],
@@ -70,7 +72,7 @@ var $bu_= new function() {
     }
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
-        ua.match(new RegExp("OS."+VV,"i"));//
+        ua.match(new RegExp("OS."+VV,"i"));
         r.n="ios";
         r.fullv=RegExp.$1;
         r.v=parseFloat(r.fullv);
@@ -82,6 +84,8 @@ var $bu_= new function() {
         if (av in newmap)
             av=newmap[av];
         */
+        if (av < 12 && Math.round(r.v)===11)// all devices with ios 11 support ios 12
+            av=12
         r.available = {"ios": av};
         if (parseFloat(r.available.ios)<11)
             r.no_device_update=true;
@@ -144,16 +148,17 @@ var $bu_= new function() {
         if (r.n==="f")
             r.esr=true;
     }
-    if ((r.n==="c"||r.n==="f"||r.n==="o") && s.less(r.fullv,parseFloat(s.vsakt[r.n])-1)<=0)
-        r.is_supported=true; //mark also the version before the current version as supported to make the transitions smoother
     if (r.n==="ios" && r.v>10.3)
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
         r.t=s.names[r.n];
     if (r.n==="e") {
         r.t = s.names[r.n] + " " + r.vmaj;
-        r.is_supported = s.less(r.fullv, "15.15063") != 1
+        r.is_supported = s.less(r.fullv, "18.15063") != 1
     }
+    if (r.n in ["c","f","o","e"] && s.less(r.fullv,parseFloat(s.vsakt[r.n])-1)<=0)
+        r.is_supported=true; //mark also the version before the current version as supported to make the transitions smoother
+
     var releases_per_year={'f':7,'c':8,'o':8,'i':1,'e':1,'s':1}//,'v':1}
     if (releases_per_year[r.n]) {
         r.age_years=Math.round(((s.vsakt[r.n]-r.v)/releases_per_year[r.n])*10)/10 || 0
@@ -200,7 +205,7 @@ this.available_ios=function(ua,v) {
     if (h == 812)// && pr == 3)// X
         return 11 + 4
     if ((h == 736 || h == 667))// && pr == 3)// 6+/6s+/7+ and 8+ or // 6+/6s+/7+ and 8+ in zoom mode + // 6/6s/7 and 8
-        return 8 + 5
+        return 12//latest version for iphone 6 is 12, 13 is for 6S
     if (h == 568) // 5/5C/5s/SE or 6/6s/7 and 8 in zoom mode
         return 10
     if (h == 480) // i4/4s
@@ -235,7 +240,7 @@ op.jsv=$bu_.version;
 
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
-var vs=op.notify||op.vs||{};//old style config: maximum version to notify
+var vs=op.notify||op.vs||{};//legacy config: maximum version to notify
 vs.e=vs.e||vs.i;
 vs.i=vs.i||vs.e;
 var required=op.required||{};//minimum browser versions needed
@@ -246,7 +251,7 @@ if (!required.i) {
 }
 
 for (b in $bu_.vsdefault) {
-    if (vs[b]) {//old style: browsers to notify
+    if (vs[b]) {//legacy style config: browsers to notify
         if ($bu_.less(vs[b],0)>=0) // required <= 0
             required[b]= parseFloat($bu_.vsakt[b])+parseFloat(vs[b])+0.01
         else
@@ -254,13 +259,17 @@ for (b in $bu_.vsdefault) {
     }
     if (!(b in required) || required[b]==null)
         required[b]=$bu_.vsdefault[b]
-    if ($bu_.less(required[b],0)>=0) // required <= 0 --> relative to current version
+    if ($bu_.less(required[b],0)>=0) // case for required <= 0 --> relative to latest version
         required[b]=parseFloat($bu_.vsakt[b])+parseFloat(required[b]) // TODO: make it work for string version
     if (required_min[b] && $bu_.less(required[b],required_min[b])===1) // required < required_min
         required[b]=required_min[b]
 }
 required.ios=required.ios||required.s;
 
+if (required.i<79 && required.i>65)
+    required.i=required.i-60
+if (required.e<79 && required.e>65)
+    required.e=required.e-60
 op.required=required;
 op.reminder=op.reminder<0.1 ? 0 : op.reminder||(24*7);
 op.reminderClosed=op.reminderClosed<1 ? 0 : op.reminderClosed||(24*7);
@@ -277,11 +286,12 @@ if (Math.random()*1000<1 && !op.test && !op.nostatistics) {//for every 1000th us
 }
 
 op.test=test||op.test||location.hash==="#test-bu";
+op.ignorecookie=op.ignorecookie||location.hash==="#ignorecookie-bu";
 
 op.reasons=[];
 op.hide_reasons=[];
 function check_show(op) {
-    var bb=$bu_.get_browser(op.override_ua);
+    var bb=op.browser=$bu_.get_browser(op.override_ua);
     op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
     if (bb.other!==false)
         op.hide_reasons.push("is other browser:" + bb.other)
@@ -289,6 +299,10 @@ function check_show(op) {
         op.hide_reasons.push("Extended support (ESR)")
     if (bb.mobile&&op.mobile===false)
         op.hide_reasons.push("do not notify mobile")
+    if (op.apiver<2018.5 || op.apiver>2020.1) {//TODO: remove
+        if (bb.is_latest)//the latest versions of a browser can not be notified
+            op.hide_reasons.push("is latest version of the browser")
+    }
     if (bb.no_device_update)
         op.hide_reasons.push("no device update")
     if (op.is_below_required)
@@ -305,14 +319,19 @@ function check_show(op) {
  }
 
 op.notified=check_show(op);
-op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1;
+
+op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1 && !op.ignorecookie;
 
 if (!op.test && (!op.notified || op.already_shown))
     return;
 
-op.setCookie=function(hours) {
+op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
     document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=None; Secure';
 };
+
+if (op.already_shown && (op.ignorecookie || op.test))
+    op.setCookie(-10)// remove old cookies if in test mode
+
 if (op.reminder>0)
     op.setCookie(op.reminder);
 
