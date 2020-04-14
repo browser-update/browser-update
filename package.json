@@ -1,11 +1,10 @@
 {
   "name": "@regru/browser-update",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "index.js",
   "scripts": {
-    "fix": "# Todo: semistandard --fix",
-    "test": "eslint ./*.js # semistandard"
+    "test": "eslint ./*.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +22,7 @@
   "bugs": {
     "url": "https://github.com/regru/browser-update-cleaned-up/issues"
   },
-  "homepage": "http://browser-update.org",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
+  "homepage": "https://browser-update.org",
   "eslintConfig": {
     "env": {
       "browser": true
@@ -38,8 +33,5 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0"
-  },
-  "peerDependencies": {
-    "semistandard": "^13.0.1"
   }
 }

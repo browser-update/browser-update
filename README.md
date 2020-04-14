@@ -64,7 +64,7 @@ See the [available options](http://browser-update.org/customize.html) to see how
     * We do not block the users form using a website in any way
     * The website can be used without taking additional steps
     * The notification will only appear once a day by default
-    * If the user **activly** closes the notification, it will reappear after a week
+    * If the user **actively** closes the notification, it will reappear after a week
 * Translated into > 30 languages
 * Browser detection less than 3kb gzipped + rest gets only lazy loaded when an outdated browser was detected
 * Giving users reasons why an [up-to-date browser is important](http://browser-update.org/update.html)
