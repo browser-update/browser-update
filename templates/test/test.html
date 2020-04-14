@@ -22,6 +22,9 @@ $buoop={}
 
     <h2>More</h2>
     {{ info }}
+
+    <h2>Javascript detection details</h2>
+    <pre id="jsdetails"></pre>
 </div>
 <style>
 .debug span {
@@ -41,6 +44,7 @@ if (navigator.userAgent!=server_ua) {
 document.getElementById('det').innerHTML=br.t+aaa;
 document.getElementById('jsua').innerHTML=navigator.userAgent;
 document.getElementById('lang').innerHTML=$buoop.ll;
+document.getElementById('jsdetails').innerHTML=JSON.stringify($buoop, null, 2);
 </script>
 
 
