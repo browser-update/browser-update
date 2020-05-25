@@ -4,11 +4,11 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.16";
-    this.vsakt = {c:"80.0.3987.116",f:74,s:"13.1",e:80,i:12,ios:"13.3",samsung:11.1,o:67,e_a:45,o_a:55.2,y:"20.3.1",v:2.11,uc:"13.0.2"};
+    this.version="3.3.17";
+    this.vsakt = {c:"83",f:76,s:"13.1",e:83,i:12,ios:"13.3",samsung:11.1,o:68,e_a:45,o_a:55.2,y:"20.4.3",v:3.0,uc:"13.1.2"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:76,f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:9.0,o:62,o_a:52,y:"20.0",v:"2.6",uc:"12.10"};
-    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:9.1,o:-3,o_a:-3,y:20.0,v:2.6,uc:12.11,a:535};
+    this.vsinsecure_below = {c:"78.0.3904.87",f:72,s:"11.1.1",e:16,i:11,ios:"12.4.3",samsung:9.0,o:62,o_a:52,y:"20",v:"2.7",uc:"12.10"};
+    this.vsdefault = {c:-3,f:-3,s:-1,e:-3,i:11,ios:10,samsung:9.1,o:-3,o_a:-3,y:20.3,v:2.6,uc:13.0,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -280,12 +280,6 @@ op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
-
-if (Math.random()*1000<1 && !op.test && !op.nostatistics) {//for every 1000th user collect anonymous statistics on which browser is used
-    var i = new Image();    i.src="//browser-update.org/browserstat?jsv="+op.jsv;
-}
-
-op.test=test||op.test||location.hash==="#test-bu";
 op.ignorecookie=op.ignorecookie||location.hash==="#ignorecookie-bu";
 
 op.reasons=[];

@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+3.3.17 25.5.15
+- updated browser versions
+- removed browser statistic collection for every 1000th user
+
 3.3.16 1.4.20
 - updated browser versions
 
