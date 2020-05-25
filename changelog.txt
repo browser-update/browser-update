@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.18 25.5.15
+- latest version of iOS is for most devices 12.3, fixes #490
+
 3.3.17 25.5.15
 - updated browser versions
 - removed browser statistic collection for every 1000th user
