@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.19 26.5.15
+- Chrome version 82 was skipped by google. Taking this into account we prolong the grace period until chrome 83 is available on all devices. For now marking Chrome 81 as latest version.
+
 3.3.18 25.5.15
 - latest version of iOS is for most devices 12.3, fixes #490
 
