@@ -142,7 +142,7 @@ if (updatebutton) {
         op.setCookie(op.reminderClosed);
         if (!op.noclose) {
             div.style.display = "none";
-            if (op.addmargin)
+            if (op.addmargin && op.shift_page_down !== false)
                 hm.style.marginTop = op.bodymt;
         }
     };
