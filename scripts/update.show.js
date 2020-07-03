@@ -88,7 +88,7 @@ var div = op.div = document.createElement("div");
 div.id = div.className= "buorg";
 
 var style = '<style>.buorg-icon {width: 22px; height: 16px; vertical-align: middle; position: relative; top: -0.05em; display: inline-block; background: no-repeat 0px center url(https://browser-update.org/static/img/small/' + bb.n + '.png);}</style>';
-var style2 = '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:center;  color:#000; background-color: #fff8ea; font: 18px Calibri,Helvetica,sans-serif; box-shadow: 0 0 5px rgba(0,0,0,0.2);animation: buorgfly 1s ease-out 0s;}'
+var style2 = '<style>.buorg {position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:center;  color:#000; background-color: #fff8ea; font: 18px Calibri,Helvetica,sans-serif; box-shadow: 0 0 5px rgba(0,0,0,0.2);animation: buorgfly 1s ease-out 0s;}'
     + '.buorg-pad { padding: 9px;  line-height: 1.7em; }'
     + '.buorg-buttons { display: block; text-align: center; }'
     + '#buorgig,#buorgul,#buorgpermanent { color: #fff; text-decoration: none; cursor:pointer; box-shadow: 0 0 2px rgba(0,0,0,0.4); padding: 1px 10px; border-radius: 4px; font-weight: normal; background: #5ab400;    white-space: nowrap;    margin: 0 2px; display: inline-block;}'
@@ -101,7 +101,7 @@ if (ta.msg && (op.ll=="ar"||op.ll=="he"||op.ll=="fa"))
 if (!ta.msg && t.indexOf && t.indexOf("%s") !== -1) {//legacy style
     t = busprintf(t, bb.t, ' id="buorgul" href="' + op.url + '"' + tar);
 
-    style += '<style>.buorg {position:absolute;position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; color:#000; font: 13px Arial,sans-serif;color:#000;}'
+    style += '<style>.buorg {position:fixed;z-index:111111; width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; text-align:left; cursor:pointer; color:#000; font: 13px Arial,sans-serif;color:#000;}'
         + '.buorg div { padding:5px 36px 5px 40px; }'
         + '.buorg>div>a,.buorg>div>a:visited{color:#E25600; text-decoration: underline;}'
         + '#buorgclose{position:absolute;right:6px;top:0px;height:20px;width:12px;font:18px bold;padding:0;}'
