@@ -1,12 +1,16 @@
 Changes to the notification / detection script
 ==========
-3.3.19 26.5.15
+3.3.20 11.8.20
+- added uzbek and estonian translations
+- Updated browser versions
+
+3.3.19 26.5.20
 - Chrome version 82 was skipped by google. Taking this into account we prolong the grace period until chrome 83 is available on all devices. For now marking Chrome 81 as latest version.
 
-3.3.18 25.5.15
+3.3.18 25.5.20
 - latest version of iOS is for most devices 12.3, fixes #490
 
-3.3.17 25.5.15
+3.3.17 25.5.20
 - updated browser versions
 - removed browser statistic collection for every 1000th user
 

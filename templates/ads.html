@@ -1,0 +1,148 @@
+{% if ad=="sulvo sticky" %}
+    <div data-ad="browser-update.org_sticky_mobile_bottom_neu" data-devices="m:1,t:0,d:0" class="demand-supply"
+         {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+{% elif ad=="google mob" %}
+    <div class="adc ad-googlemob ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- bup mobile ad -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6685985339905097"
+                 data-ad-slot="2539858788"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+{% elif ad=="brave mob" %}
+    <div class="adc ad-googlemob ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad">
+            <a href="https://laptop-updates.brave.com/download/BRO957"><img src="/static/img/ads/brave.png"/></a>{#  https://play.google.com/store/apps/details?id=com.brave.browser&referrer=urpc%3DBRO957 #}
+            <script src="//fc.webmasterpro.de/counter.php?name=bupzwuggel"></script>
+        </div>
+    </div>
+
+{% elif ad=="google" %}
+
+    <div class="adc ad-google ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad" style="width:336px; height:280px">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- BU-Large rect -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:336px;height:280px"
+                 data-ad-client="ca-pub-6685985339905097"
+                 data-ad-slot="4807514388"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            {#
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- bup responsive desktop -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-6685985339905097"
+                 data-ad-slot="8145996871"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script> #}
+        </div>
+    </div>
+
+
+{% elif ad=="yandex_ru" %}
+
+    <div class="adc ad-yandex ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad" style="width:336px;">
+            <div class="first-ad">
+                <a href="https://download.yandex.ru/downloadable_soft/browser/7005/Yandex.exe"
+                   onmousedown="countBrowser('y_ad')"><img src="/static/img/ads/yandex.png"/></a>
+            </div>
+        </div>
+        <div class="second-ad">
+            <div data-ad="browser-update.org_336x280_second_large_rect" data-devices="m:1,t:1,d:1"
+                 class="demand-supply"
+                 {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+        </div>
+    </div>
+{% elif ad=="yandex_ru_android" %}
+
+    <div class="adc ad-yandex ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad" style="width:336px;">
+            <div class="first-ad">
+                <a href="https://redirect.appmetrica.yandex.com/serve/26556431129904411?c=browserupdate28022020"
+                   onmousedown="countBrowser('y_ad_android')"><img src="/static/img/ads/yandex.png"/></a>
+            </div>
+        </div>
+    </div>
+
+{% elif ad=="sulvo_test" %}
+
+    <div class="adc ad-sulvo ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad">
+            <div class="first-ad">
+                 <div data-ad="browser-update.org_responsive_r" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+            </div>
+            <div class="second-ad">
+                <div data-ad="browser-update.org_336x280_second_large_rect" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+            </div>
+        </div>
+    </div>
+{% elif ad=="brave desktop sulvo" %}
+
+    <div class="adc ad-sulvo ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad">
+            <div class="first-ad">
+                 <div data-ad="browser-update.org_336x280_large_rect" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+            </div>
+            <div class="second-ad">
+                {# <div data-ad="browser-update.org_336x280_second_large_rect" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>  #}
+                <a href="https://laptop-updates.brave.com/download/BRO957"><img src="/static/img/ads/brave.png"/></a>
+                <script src="//fc.webmasterpro.de/counter.php?name=bupzwuggel"></script>
+            </div>
+        </div>
+    </div>
+
+
+{% else %}
+
+    <div class="adc ad-sulvo ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad">
+            <div class="first-ad">
+                 <div data-ad="browser-update.org_336x280_large_rect" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+            </div>
+            <div class="second-ad">
+                <div data-ad="browser-update.org_336x280_second_large_rect" data-devices="m:1,t:1,d:1" class="demand-supply" {% if no_tracking %}data-gdpr="1"{% endif %}></div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+{% if show_cookiebar %}
+    <div class="cookiebar" id="cookiebar">{{ _('This website uses cookies') }}
+        <a onclick="document.getElementById('cookiebar').style.display='none'">{{ _('Close') }}</a>
+    </div>
+{% endif %}
+
+<script>
+    /*
+     window.setTimeout(function () {
+     var els = document.getElementsByClassName("adc");
+     for (var i = 0; i < els.length; i++) {
+     if (els[i].offsetHeight > 100)
+     els[i].className += " ad-shown"
+     }
+     }, 3000)
+     */
+</script>
