@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+3.3.22 17.8.22
+- Fix broken conditional when using `shift_page_down`
+- remove old config check
+
 3.3.21 14.8.21
 - Fix cookie stuff. Remove "Secure" to also send the cookie in insecure contexts. Use "Same-Site: Lax"
 

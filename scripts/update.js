@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.21";
+    this.version="3.3.22";
     this.vsakt = {c:"84",f:79,s:"13.1.2",e:84,i:12,ios:"13.3",samsung:12.0,o:70,e_a:45.06,o_a:59.1,y:"20.8",v:3.2,uc:"13.2.8"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"78.0.3904.87",f:72,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:9.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
@@ -293,10 +293,8 @@ function check_show(op) {
         op.hide_reasons.push("Extended support (ESR)")
     if (bb.mobile&&op.mobile===false)
         op.hide_reasons.push("do not notify mobile")
-    if (op.apiver<2018.5 || op.apiver>2020.1) {//TODO: remove
-        if (bb.is_latest)//the latest versions of a browser can not be notified
+    if (bb.is_latest)//the latest versions of a browser can not be notified
             op.hide_reasons.push("is latest version of the browser")
-    }
     if (bb.no_device_update)
         op.hide_reasons.push("no device update")
     if (op.is_below_required)
