@@ -10,9 +10,9 @@ $buoop={}
     <h2>Identification</h2>
     <p>User-Agent-String (HTTP Header):<span id="heua">{{ request.headers.get('User-Agent') }}</span></p>
     <p>User-Agent-String (Javascript): <span id="jsua">Error</span></p>
-    
+
     <h2>Detection</h2>
-    <p>Detected Browser as (Javascript):<span id="det">Error</span></p>      
+    <p>Detected Browser as (Javascript):<span id="det">Error</span></p>
     <p>Browser (Header): <span id="">{{ browser.t }}</span></p>
     <p>System (Header): <span id="">{{ system.title }}</span></p>
 
@@ -29,8 +29,8 @@ $buoop={}
 <style>
 .debug span {
     display: block;
-}    
-</style>    
+}
+</style>
 
 <script>
 var server_ua="{{ request.headers.get('User-Agent') }}"

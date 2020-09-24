@@ -71,6 +71,17 @@
                  {% if no_tracking %}data-gdpr="1"{% endif %}></div>
         </div>
     </div>
+{% elif ad=="yandex_ru_android" %}
+
+    <div class="adc ad-yandex ad-shown">
+        <div class="adt">{{ _("Advertisement") }}</div>
+        <div class="ad" style="width:336px;">
+            <div class="first-ad">
+                <a href="https://redirect.appmetrica.yandex.com/serve/26556431129904411?c=browserupdate28022020"
+                   onmousedown="countBrowser('y_ad_android')"><img src="/static/img/ads/yandex.png"/></a>
+            </div>
+        </div>
+    </div>
 
 {% elif ad=="sulvo_test" %}
 
