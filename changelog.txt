@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+3.3.24 3.10.20
+- change order of specifity for custom notification text (1. use text_for_$BROWSER_in_$LANG, 2. fall back to text_for_$BROWSER, 3. fall back to text_in_$LANG, 4. fall back to text, 5. use default text), fixes #325
+- fixed links on update page
+
 3.3.23 3.10.20
 - added firefox 78 as an ESR version still supported. Removed version 60 and 68.
 - updated browser versions

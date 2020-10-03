@@ -68,7 +68,7 @@ t.uz= {'msg': 'Sizning ({brow_name}) veb-brauzeringiz eskirgan','msgmore': 'Xavf
 t.vi= {'msg': 'Trình duyệt web của bạn ({brow_name}) đã lỗi thời.','msgmore': 'Cập nhật trình duyệt của bạn để có thêm bảo mật, tốc độ và trải nghiệm tốt nhất trên trang web này.','bupdate': 'Cập nhật trình duyệt','bignore': 'Bỏ qua', 'remind': 'Bạn sẽ được nhắc nhở sau {days} ngày.', 'bnever': 'Không bao giờ hiển thị lại'}
 t.zh= {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
 t["zh-tw"]= t["zh-hans-cn"] ={'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
-var custom_text = op["text_" + op.llfull] || op["text_" + op.ll] || op["text_in_" + op.ll] || op["text_for_" + bb.n] || op["text_for_"  + bb.n + "_in_" + op.ll] || op.text
+var custom_text = op["text_for_"  + bb.n + "_in_" + op.ll] || op["text_for_" + bb.n] || op["text_" + op.llfull] || op["text_in_" + op.ll] || op["text_" + op.ll]  ||   op.text
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
     if (typeof custom_text === 'string')

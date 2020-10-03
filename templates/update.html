@@ -131,7 +131,7 @@
             {% endif %}
 
             <div class="whatnow">
-                {{ _('For more <a{security_link}>security</a>,    <a{speed_link}>speed</a> and    <a{comfort_link}>comfort</a>.').format(security_link=' href="#security"',speed_link=' href="#speed"',comfort_link=' href="#comfort"') }}
+                {{ _('For more <a{security_link}>security</a>,    <a{speed_link}>speed</a> and    <a{comfort_link}>comfort</a>.').format(security_link=' href="#security"'|safe,speed_link=' href="#speed"'|safe,comfort_link=' href="#comfort"'|safe) }}
             </div>
             <div class="whatnow-small">
                 {{ _('The download is safe from the vendor\'s official website.') }}

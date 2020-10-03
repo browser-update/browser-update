@@ -1,6 +1,6 @@
 {
   "name": "browser-update",
-  "version": "3.3.21",
+  "version": "3.3.24",
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "update.npm.full.js",
   "scripts": {
