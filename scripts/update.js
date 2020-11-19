@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.24";
-    this.vsakt = {c:"85",f:81,s:"13.1.2",e:85,i:12,ios:"13.3",samsung:12.0,o:71,e_a:45.07,o_a:59.1,y:"20.9.1",v:3.3,uc:"13.3"};
+    this.version="3.3.25";
+    this.vsakt = {c:"87.0.4280",f:83,s:"13.1.2",e:86,i:12,ios:"13.3",samsung:12.0,o:71,e_a:45.09,o_a:59.1,y:"20.9.1",v:3.3,uc:"13.3"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"78.0.3904.87",f:72,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:9.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
+    this.vsinsecure_below = {c:"86.0.0.4240.111",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:9.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -19,6 +19,7 @@ var $bu_= new function() {
         ignore("niche browser","OculusBrowser|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|QupZilla|Otter|Midori|qutebrowser") ||
         ignore("mobile without upgrade path or landing page","OPR/44.12.2246|cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
+    r.embedded=/"QtWebEngine|Teams|Electron/i.test(ua);
     r.mobile=(/iphone|ipod|ipad|android|mobile|phone|ios|iemobile/i.test(ua));
     r.discontinued=(/netscape|greenbrowser|camino|flot|fennec|galeon|coolnovo/i.test(ua));
 
@@ -289,6 +290,8 @@ function check_show(op) {
     op.is_below_required = required[bb.n] && $bu_.less(bb.fullv,required[bb.n])===1; //bb.fullv<required
     if (bb.other!==false)
         op.hide_reasons.push("is other browser:" + bb.other)
+    if (bb.embedded!==false)
+        op.hide_reasons.push("is embedded browser:" + bb.embedded)
     if ( bb.esr && !op.notify_esr)// || (bb.is_supported && !op.notify_also_supported))
         op.hide_reasons.push("Extended support (ESR)")
     if (bb.mobile&&op.mobile===false)

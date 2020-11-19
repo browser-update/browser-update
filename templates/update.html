@@ -115,8 +115,8 @@
                                     <a class="l notavailable"
                                        style="background-image: url(/static/img/big/{{ b.id }}.png)">
                                 {% endif %}
-                                <span class="bro">{{ b.display_name }}</span>
-                                <span class="vendor">{{ b.vendor }}</span>
+                                <span class="bro">{{ b.display_name }} </span>
+                                <span class="vendor">{{ b.vendor }}{% if b.sponsored %} <br/><i style="font-size:100%; color:#444;">{{ _("Sponsored") }}!</i> {% endif %}</span>
                                 {% if  b.na %}
                                     <span class="na"> {{ _('Most recent version not available for your system.') }} {{ _('Please choose another browser.') }} </span>
                                 {% endif %}

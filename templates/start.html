@@ -107,6 +107,12 @@
     <a href="https://plugins.bludit.com/plugin/header-content">Bludit CMS</a>
 </div>
 
+    {% if _x_is_translated('You can also <a{}>self host</a> the script on your site.') %}
+<p>
+    {{ _x('You can also <a{}>self host</a> the script on your site.').format(' href="https://github.com/browser-update/browser-update/wiki/Self-hosting"'|safe ) |safe }}
+</p>
+{% endif %}
+
 {% if _x_is_translated('Why you should tell users to update') %}
 
 <h2>{{ _x('Why you should tell users to update')}}</h2>
