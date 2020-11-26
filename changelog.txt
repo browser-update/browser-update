@@ -3,6 +3,8 @@ Changes to the notification / detection script
 
 3.3.26 26.11.20
 - fix insecure chrome version number (note: this did not lead to false positive notifications), fixes #515
+- whitelist basilisk
+
 3.3.25 19.11.20
 - ignore embedded browsers: QtWebEngine, Microcoft Teams, Electron (add a special notification later) fixes #509 fixes #511
 - Mark chrome vulnerable below version 86.0.0.4240.111 because of an actively used zero-day exploit.
