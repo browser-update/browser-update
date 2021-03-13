@@ -1,5 +1,11 @@
 Changes to the notification / detection script
 ==========
+3.3.28 12.3.21
+- updated browser versions
+- set pause cookie with secure context if over https, fixes #455
+
+3.3.27 13.12.20
+- ignore slimjet (but this is only possible if the browser identifies correctly. is has to be turned on in the slimjet browsers options)
 
 3.3.26 26.11.20
 - fix insecure chrome version number (note: this did not lead to false positive notifications), fixes #515
