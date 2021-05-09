@@ -85,15 +85,39 @@
     {% if debug %}
         <div class="debug"> Debug: Locale: {{ request.full_locale }}
             Header: {{ request.accept_languages }} {{ show_cookiebar }}</div>
-
     {% endif %}
-    <!--
+
+    {#
     <script src="//fc.webmasterpro.de/counter.php?name=browserupdate&amp;style=none"></script>
     <noscript>
         <div><img src="//fc.webmasterpro.de/as_noscript.php?name=browserupdate" style="width:1px;height:1px;" alt=""/>
         </div>
     </noscript>
-    -->
+    #}
 </div>
+
+{% if not slimmed %}
+
+    <footer>
+        <div class="footer-column">
+            <div><a href="{{ g.langprefix }}/#install">{{ _s('Install the browser update notification on your site') | safe }}</a></div>
+            <div><a href="{{ g.langprefix }}/browsers.html">{{ _('List of Webbrowsers') }}</a></div>
+            <div><a href="{{ g.langprefix }}/browsers-marked-as-insecure.html">{{ _('Insecure browser versions') }}</a></div>
+        </div>
+
+        <div class="footer-column">
+            <div><a href="{{ g.langprefix }}/what-is-my-browser.html'">{{  _x('What is my webbrowser?') }}</a></div>
+            <div><a href="{{ g.langprefix }}/stat.html">{{ _('Statistics') }}</a></div>
+            <div><a href="{{ g.langprefix }}/customize.html">{{ _c('Customize and test') }}</a></div>
+        </div>
+        <div class="footer-column">
+            <div><a href="{{ g.langprefix }}/">{{ _('About the Project') }}</a></div>
+            <div><a href="/blog.html">{{ _('Blog') }}</a></div>
+            <div><a href="{{ g.langprefix }}/contact.html">{{ _('Contact') }}</a></div>
+        </div>
+
+    </footer>
+{% endif %}
+
 </body>
 </html>

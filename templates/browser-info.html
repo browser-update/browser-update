@@ -13,7 +13,7 @@
         <p>(Version {{ browser.fullv }})</p>
         <p>on {{ system.title }}.</p>
         {% if browser.age %}
-            {# Note: [The browser was] ... release 5 months ago #}
+            {# Note: [The browser was] ... released 5 months ago #}
             <p>{{ _('released {months} months ago').format(months=browser.age_years*12|round) }}</p>
         {% endif %}
         {% if browser.is_supported %}

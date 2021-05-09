@@ -1,8 +1,17 @@
 Changes to the notification / detection script
 ==========
+3.3.29 12.3.21
+- added footer
+- page to show browser versions currently marked as insecure https://browser-update.org/browsers-marked-as-insecure.html
+- linked page that lists browsers
+- added and updated translations (fix danish, updated chinese, added welsh)
+- new image with updated edge logo
+- added cymraeg language (welsh)
+
 3.3.28 12.3.21
 - updated browser versions
 - set pause cookie with secure context if over https, fixes #455
+- add npm to version for npm packages
 
 3.3.27 13.12.20
 - ignore slimjet (but this is only possible if the browser identifies correctly. is has to be turned on in the slimjet browsers options)

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ _('Insecure browser versions') }}</h1>
+
+        {{ _s('Browsers currently marked as insecure:') }}
+    These browsers have actively exploited vulnerabilities and therefore get notified if the <code>insecure:true</code> option is set.
+        <ul>
+        {% for name,version in insecure_versions.items()  %}
+            <li>{{ name }} < {{ version }} </li>
+        {% endfor %}
+        </ul>
+
+
+        <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#notifying-insecure-browsers">{{ _s('more details (in english)').replace(' (in english)','') }}</a>
+
+    </div>
+
+    {#
+    <h1>Older browsers still supported</h1>
+    <ul>
+        <li>Internet Explorer 11</li>
+        <li>Firefox 78 ESR</li>
+    </ul>
+
+    <!--Add safari-->
+     #}
+{% endblock %}

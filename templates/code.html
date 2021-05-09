@@ -28,7 +28,19 @@ catch(e){window.attachEvent("onload", $buo_f)}
 <div>
     <input type="checkbox" checked="checked" id="opinsecure" onchange="code();"/>
     <label for="opinsecure">
-    {{ _s('Notify all browser versions with severe security issues.')}} (<a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#notifying-insecure-browsers">{{ _s('more details (in english)').replace(' (in english)','') }}</a>)
+    {{ _s('Notify all browser versions with severe security issues.')}}
+        <div class="infotip">ⓘ
+            <div class="tooltop">
+                {{ _s('Currently notifying:') }}
+                <ul>
+                {% for name,version in insecure_versions.items()  %}
+                    <li>{{ name }} < {{ version }} </li>
+                {% endfor %}
+                </ul>
+                <a href="https://github.com/browser-update/browser-update/wiki/Details-on-configuration#notifying-insecure-browsers">{{ _s('more details (in english)').replace(' (in english)','') }}</a>
+
+            </div>
+        </div>
     </label>
 </div>
 <div>
@@ -45,7 +57,7 @@ catch(e){window.attachEvent("onload", $buo_f)}
     </label>
 </div>
 -->
-<div>
+<div style="display: none;">
     <input type="checkbox" checked="checked" id="opmobile" onchange="code();"/>
     <label for="opmobile">
     {{ _s('Notify mobile browsers.')}}
