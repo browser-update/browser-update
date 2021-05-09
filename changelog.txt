@@ -1,5 +1,8 @@
 Changes to the notification / detection script
 ==========
+3.3.29 19.04.21
+- fix ignore cookie not being set
+
 3.3.28 12.3.21
 - updated browser versions
 - set pause cookie with secure context if over https, fixes #455
