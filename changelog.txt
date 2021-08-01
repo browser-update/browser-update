@@ -1,6 +1,15 @@
 Changes to the notification / detection script
 ==========
-3.3.29 12.3.21
+
+3.3.31 31.7.21
+- update browser versions
+
+3.3.30 9.5.21
+- fix ignore cookie not being set (npm version)
+- set pause cookie with secure context if over https, fixes #455
+- updated browser versions
+
+3.3.29 19.04.21
 - added footer
 - page to show browser versions currently marked as insecure https://browser-update.org/browsers-marked-as-insecure.html
 - linked page that lists browsers

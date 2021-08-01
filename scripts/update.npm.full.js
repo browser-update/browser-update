@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.29npm";
-    this.vsakt = {c:"89",f:87,s:"13.1.2",e:89,i:12,ios:"13.3",samsung:"13.0.1",o:74,e_a:"46.01.2.5140",o_a:61,y:"21.2.3",v:3.6,uc:"13.3.8"};
+    this.version="3.3.31npm";
+    this.vsakt = {c:"92",f:"90",s:"14",e:"92",i:"12",ios:"13.3",samsung:"14.0.1",o:"77",e_a:"46.05",o_a:"63.3",y:"21.6.3",v:"4.0",uc:"13.3.8"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"88.0.4324.150",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
@@ -321,8 +321,8 @@ if (!op.test && (!op.notified || op.already_shown))
     return;
 
 op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
-    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=Lax';//+/https:/.test(location.href)?'; Secure':''
-};
+    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=Lax'+(/https:/.test(location.href)?'; Secure':'')
+}
 
 if (op.already_shown && (op.ignorecookie || op.test))
     op.setCookie(-10)// remove old cookies if in test mode
