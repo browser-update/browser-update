@@ -41,6 +41,8 @@ $buoop.domain="";
 if (document.getElementById("clearcookie").checked) {
     var d = new Date(0);
     document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
+    // also delete storage if set
+    localStorage.removeItem('browserupdateorg');
 }
 /*
 function boo(xx) {
