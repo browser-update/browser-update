@@ -279,6 +279,7 @@ op.onclick = op.onclick||function(o){};
 op.onclose = op.onclose||function(o){};
 op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
+// if true sets the HttpOnly cookie flag
 op.httpOnly=op.httpOnly || false;
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
