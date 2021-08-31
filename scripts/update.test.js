@@ -39,6 +39,7 @@ var $buo_test_ = function () {
     h += "<span>other:" + bb.other + "</span>, ";
     h += "<span>no_device_update:" + bb.no_device_update + "</span>, ";
     h += "<span>cookie set:" + (document.cookie.indexOf("browserupdateorg=pause")>-1) + "</span>";
+    h += "<span>localStorage set:" + (Number(localStorage.getItem(browserupdateorg)) > 0) + "</span>";
 
     h += '</div>'
 
