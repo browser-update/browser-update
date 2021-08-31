@@ -279,6 +279,7 @@ op.onclick = op.onclick||function(o){};
 op.onclose = op.onclose||function(o){};
 op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
+op.httpOnly=op.httpOnly || false;
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 op.ignorecookie=op.ignorecookie||location.hash==="#ignorecookie-bu";
@@ -321,7 +322,11 @@ if (!op.test && (!op.notified || op.already_shown))
     return;
 
 op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
-    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=Lax'+(/https:/.test(location.href)?'; Secure':'')
+    document.cookie = 'browserupdateorg=pause; expires='
+        + (new Date(new Date().getTime()+3600000*hours)).toGMTString()
+        + '; path=/; SameSite=Lax'
+        + (/https:/.test(location.href)?'; Secure':'')
+        + (op.httpOnly ? '; HttpOnly' : '');
 };
 
 if (op.already_shown && (op.ignorecookie || op.test))
