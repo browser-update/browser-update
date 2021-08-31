@@ -143,7 +143,7 @@ if (updatebutton) {
         op.onclick(op);
         if (op.noclose)
             return
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         if (!op.noclose) {
             div.style.display = "none";
             if (op.addmargin && op.shift_page_down !== false)
@@ -158,7 +158,7 @@ if (!custom_text) {//make whole bar clickable except if custom text is set
             window.open(op.url, "_blank");
         else
             window.location.href = op.url;
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         op.onclick(op);
     };
 }
@@ -175,12 +175,12 @@ if (ignorebutton) {
         op.onclose(op);
         if (op.addmargin && op.shift_page_down !== false)
             hm.style.marginTop = op.bodymt;
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         if (!op.no_permanent_hide && ta.bnever && ta.remind) {
             op.div.innerHTML = '<div class="buorg-pad"><span class="buorg-moremsg">' + (op.reminderClosed > 24 ? ta.remind.replace("{days}", Math.round(op.reminderClosed/24)):"") + '</span> <span class="buorg-buttons"><a id="buorgpermanent" role="button" tabindex="0" href="' + op.url_permanent_hide +'"' + tar + '>' + ta.bnever + '</a></span></div>' + style + style2;
             div.className = "buorg buorg-fadeout";
             document.getElementById("buorgpermanent").onclick = function (e) {
-                op.setCookie(24 * 365);
+                op.pauseFor(24 * 365);
                 op.div.style.display = "none";
             }
             op.div.style.opacity = 0;
