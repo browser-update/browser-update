@@ -39,7 +39,8 @@ $buoop.domain="";
 
 //remove cookie
 if (document.getElementById("clearcookie").checked) {
-    localStorage.removeItem('browserupdateorg');
+    var d = new Date(0);
+    document.cookie = 'browserupdateorg=pause; expires='+d.toGMTString()+'; path=/';
 }
 /*
 function boo(xx) {

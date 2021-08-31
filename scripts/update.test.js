@@ -38,7 +38,7 @@ var $buo_test_ = function () {
     h += "<span>is_insecure:" + bb.is_insecure + "</span>, ";
     h += "<span>other:" + bb.other + "</span>, ";
     h += "<span>no_device_update:" + bb.no_device_update + "</span>, ";
-    h += "<span>cookie set:" + (Number(localStorage.getItem('browserupdateorg')) > 0) + "</span>";
+    h += "<span>cookie set:" + (document.cookie.indexOf("browserupdateorg=pause")>-1) + "</span>";
 
     h += '</div>'
 
