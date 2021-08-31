@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.28";
-    this.vsakt = {c:"89",f:86,s:"13.1.2",e:89,i:12,ios:"13.3",samsung:"13.0.1",o:74,e_a:"46.01.2.5140",o_a:61,y:"21.2.3",v:3.6,uc:"13.3.8"};
+    this.version="3.3.31npm";
+    this.vsakt = {c:"92",f:"90",s:"14",e:"92",i:"12",ios:"13.3",samsung:"14.0.1",o:"77",e_a:"46.05",o_a:"63.3",y:"21.6.3",v:"4.0",uc:"13.3.8"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"88.0.4324.150",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
@@ -322,12 +322,8 @@ if (!op.test && (!op.notified || op.already_shown))
     return;
 
 op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
-    document.cookie = 'browserupdateorg=pause; expires='
-        + (new Date(new Date().getTime()+3600000*hours)).toGMTString()
-        + '; path=/; SameSite=Lax'
-        + (/https:/.test(location.href)?'; Secure':'')
-        + (op.httpOnly ? '; HttpOnly' : '');
-};
+    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=Lax'+(/https:/.test(location.href)?'; Secure':'')
+}
 
 if (op.already_shown && (op.ignorecookie || op.test))
     op.setCookie(-10)// remove old cookies if in test mode
@@ -383,6 +379,7 @@ t.ar= {'msg': 'متصفح الإنترنت الخاص بك ({brow_name}) غير 
 t.bg= {'msg': 'Вашият уеб браузър ({brow_name}) е остарял.','msgmore': 'Актуализирайте браузъра си за повече сигурност, бързина и най-доброто изживяване на този сайт.','bupdate': 'Актуализиране на браузъра','bignore': 'игнорирай', 'remind': 'Ще ви бъде напомнено след {days} дни.', 'bnever': 'Никога повече да не се показва'}
 t.ca= {'msg': 'El teu navegador ({brow_name}) està desactualitzat.','msgmore': 'Actualitzeu el vostre navegador per obtenir més seguretat, velocitat i una millor experiència en aquest lloc.','bupdate': 'Actualitza el navegador','bignore': 'Ignorar', 'remind': 'T\'ho recordarem d\'aquí a {days} dies.', 'bnever': 'No ho tornis a mostrar'}
 t.cs= {'msg': 'Váš prohlížeč ({brow_name}) je zastaralý.','msgmore': 'Aktualizujte prohlížeč pro lepší zabezpečení, rychlost a nejlepší zážitek z tohoto webu.','bupdate': 'Aktualizovat prohlížeč','bignore': 'Ignorovat', 'remind': 'Znovu budete upozorněni za {days} dnů.', 'bnever': 'Již nezobrazovat'}
+t.cy= {'msg': 'Mae eich porwr gwe ({brow_name}) angen ei ddiweddaru.','msgmore': 'Diweddarwch eich porwr i gael mwy o ddiogelwch, cyflymder a\'r profiad gorau ar y safle hwn.','bupdate': 'Diweddaru porwr','bignore': 'Anwybyddu', 'remind': 'Byddwn yn eich atgoffa mewn {days} diwrnod.', 'bnever': 'Peidiwch â dangos eto'}
 t.da= {'msg': 'Din web browser ({brow_name}) er forældet','msgmore': 'Opdater din browser for mere sikkerhed, hastighed og den bedste oplevelse på denne side.','bupdate': 'Opdater browser','bignore': 'Ignorer', 'remind': 'Du vil blive påmindet om {days} dage.', 'bnever': 'Vis aldrig igen'}
 t.de= {'msg': 'Ihr Webbrowser ({brow_name}) ist veraltet.','msgmore': 'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Geschwindigkeit und den besten Komfort auf dieser Seite.','bupdate': 'Browser aktualisieren','bignore': 'Ignorieren', 'remind': 'Sie werden in {days} Tagen wieder erinnert.', 'bnever': 'Nie wieder anzeigen'}
 t.el= {'msg': 'Το πρόγραμμα περιήγησής σας ({brow_name}) είναι απαρχαιωμένο.','msgmore': 'Ενημερώστε το πρόγραμμα περιήγησής σας για περισσότερη ασφάλεια, ταχύτητα και την καλύτερη εμπειρία σ\' αυτόν τον ιστότοπο.','bupdate': 'Ενημερώστε το πρόγραμμα περιήγησης','bignore': 'Αγνοήστε', 'remind': 'Θα σας το υπενθυμίσουμε σε {days} ημέρες.', 'bnever': 'Να μην εμφανιστεί ξανά'}
@@ -418,8 +415,9 @@ t.tr= {'msg': 'Web tarayıcınız ({brow_name}) güncel değil.','msgmore': 'Dah
 t.uk= {'msg': 'Ваш браузер ({brow_name}) застарілий.','msgmore': 'Оновіть свій браузер для більшої безпеки, швидкості та повноцінної роботи цього сайту.','bupdate': 'Оновити браузер','bignore': 'Пропустити', 'remind': 'Ви отримаєте нагадування через {days} днів.', 'bnever': 'Більше не показувати'}
 t.uz= {'msg': 'Sizning ({brow_name}) veb-brauzeringiz eskirgan','msgmore': 'Xavfsizlik, tezkorlik va ushbu sayt imkoniyatlaridan to`liq foydalanish uchun brauzeringizni yangilang.','bupdate': 'Brauzeringizni yangilang','bignore': 'E’tibor bermaslik', 'remind': 'Sizga {days} kundan so`ng eslatammiz.', 'bnever': 'Hech qachon qayta ko\'rsatmang'}
 t.vi= {'msg': 'Trình duyệt web của bạn ({brow_name}) đã lỗi thời.','msgmore': 'Cập nhật trình duyệt của bạn để có thêm bảo mật, tốc độ và trải nghiệm tốt nhất trên trang web này.','bupdate': 'Cập nhật trình duyệt','bignore': 'Bỏ qua', 'remind': 'Bạn sẽ được nhắc nhở sau {days} ngày.', 'bnever': 'Không bao giờ hiển thị lại'}
-t.zh= {'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
+t.zh= {'msg': '您的网页浏览器（{brow_name}）已过期。','msgmore': '更新您的浏览器，以便在该网站上获得更安全、更快速和最好的体验。','bupdate': '更新浏览器','bignore': '忽略', 'remind': '会在{days}天后提醒您。', 'bnever': '不再显示'}
 t["zh-tw"]= t["zh-hans-cn"] ={'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
+
 var custom_text = op["text_for_"  + bb.n + "_in_" + op.ll] || op["text_for_" + bb.n] || op["text_" + op.llfull] || op["text_in_" + op.ll] || op["text_" + op.ll]  ||   op.text
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
