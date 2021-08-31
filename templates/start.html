@@ -16,7 +16,7 @@
 <h2>{{ _s('How it works')}}</h2>
 <ol class="steps">
     <li>
-        {{ (_s('Include our small javascript <a href="%s">notification</a> on your website').format('#install') ) | safe }}
+        {{ (_s('Include our small javascript <a href="%s">notification</a> on your website','#install') ) | safe }}
     </li>
     <li>
         {{ _s('Visitors with out-dated browser will be informed by a small, undisturbing message box, that their browser is not up-to-date and it is recommended to update.')}}
@@ -123,7 +123,7 @@
 </ul>
 
 
-<h2 class="help">{{ _x('Help this project by <a{link_use}>using the update-notification</a> on your site, <a{link_share}>sharing</a> or <a{link_trans}>translating</a> this page.').format(link_use=' href="#install"',link_share='',link_trans=' href="contact.html"') | safe}}</h2>
+<div class="help">{{ _x('Help this project by <a{link_use}>using the update-notification</a> on your site, <a{link_share}>sharing</a> or <a{link_trans}>translating</a> this page.').format(link_use=' href="#install"',link_share='',link_trans=' href="contact.html"') | safe}}</div>
 {% endif %}
 
 
