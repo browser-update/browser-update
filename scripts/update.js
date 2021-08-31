@@ -279,11 +279,10 @@ op.onclick = op.onclick||function(o){};
 op.onclose = op.onclose||function(o){};
 op.pageurl = op.pageurl || location.hostname || "x";
 op.newwindow=(op.newwindow!==false);
-// if true sets the HttpOnly cookie flag
-op.httpOnly=op.httpOnly || false;
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 op.ignorecookie=op.ignorecookie||location.hash==="#ignorecookie-bu";
+op.use_local_storage=op.use_local_storage||false;
 
 op.reasons=[];
 op.hide_reasons=[];
@@ -317,23 +316,34 @@ function check_show(op) {
 
 op.notified=check_show(op);
 
+// checks the record set by pauseFor() 
 op.isPaused=function() {
-    const timeStamp = Number(localStorage.getItem('browserupdateorg'));
-    const isExpired = (Number.isNaN(timeStamp) || timeStamp < new Date().getTime());
-    // cleanup the expired storage item
-    if(isExpired) {
-      localStorage.removeItem('browserupdateorg');
+    if(op.use_local_storage) {
+        const timeStamp = Number(localStorage.getItem('browserupdateorg'));
+        const isExpired = (Number.isNaN(timeStamp) || timeStamp < new Date().getTime());
+        // cleanup the expired storage item
+        if(isExpired) {
+        localStorage.removeItem('browserupdateorg');
+        }
+        return !isExpired;
+    } else {
+        return document.cookie.indexOf("browserupdateorg=pause")>-1;
     }
-    return !isExpired;
 }
   
-//sets a local storage entry that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
-//zero or negative value clears the storage
+//sets a record that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
 op.pauseFor=function(hours) {
-    if(hours <= 0) {
-        localStorage.removeItem('browserupdateorg');
+    if(op.use_local_storage) {
+        if(hours <= 0) {
+            localStorage.removeItem('browserupdateorg');
+        } else {
+            localStorage.setItem('browserupdateorg', (new Date(new Date().getTime()+3600000*hours)).getTime().toString());
+        }
     } else {
-        localStorage.setItem('browserupdateorg', (new Date(new Date().getTime()+3600000*hours)).getTime().toString());
+        document.cookie = 'browserupdateorg=pause; expires='
+            +(new Date(new Date().getTime()+3600000*hours)).toGMTString()
+            +'; path=/; SameSite=Lax'
+            +(/https:/.test(location.href)?'; Secure':'');
     }
 };
 
