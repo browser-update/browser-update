@@ -1,5 +1,7 @@
 Changes to the notification / detection script
 ==========
+3.3.32 13.10.21
+- updated browser versions, fixes #539
 
 3.3.31 31.7.21
 - update browser versions

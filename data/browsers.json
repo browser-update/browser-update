@@ -1,38 +1,39 @@
 {
   "current": {
     "desktop": {
-      "c": "78.0.3904.87",
-      "f": 70.0,
-      "s": "13.0.3",
-      "e": 18.0,
-      "i": 15.0,
-      "ios": "13.2",
-      "samsung": 10.1,
-      "o": 64.0,
-      "o_a": 54.1,
-      "y": "19.10",
-      "v": 2.8,
-      "uc": "12.13",
-      "a": 700,
-      "silk": 70,
-      "waterfox": "56.2",
-      "pale moon": 28.4
+      "c": "94.0.4606.81",
+      "f": "93",
+      "s": "15",
+      "e": "94",
+      "e_a": "93",
+      "i": "15.0",
+      "ios": "14.7.1",
+      "samsung": "15.0.2.47",
+      "o": "80",
+      "o_a": "65",
+      "y": "21.9.1",
+      "v": "4.3",
+      "uc": "13.3.8",
+      "a": "700",
+      "silk": "80",
+      "waterfox": "56.3",
+      "pale moon": "29.3"
     }
   },
   "insecure_below": {
-    "c": "78.0.3904.87",
-    "f": 62,
+    "c": "88.0.4324.150",
+    "f": 76,
     "s": "11.1.1",
     "e": 16,
     "i": 11,
     "ios": "12.4.3",
-    "samsung": "8.0",
-    "o": 55,
-    "o_a": 50,
-    "y": "19.6",
-    "v": "2.5",
+    "samsung": "12.0",
+    "o": 62,
+    "o_a": 52,
+    "y": "20.0",
+    "v": "2.6",
     "uc": "12.10",
-    "silk": 64
+    "silk": 78
   },
   "releases": {
     "c": {
@@ -123,7 +124,7 @@
   "infos": {
 "f": {
       "name": "Firefox",
-      "link":"https://firefox.com",
+      "link":"https://www.mozilla.org/firefox/new",
       "vendor": "Mozilla Foundation",
       "vendor non-profit": true,
       "license": "full open source",
@@ -144,7 +145,7 @@
         "ios": 9,
         "linux": true
       },
-      "download_url": "https://www.mozilla.org/firefox/",
+      "download_url": "https://www.mozilla.org/firefox/new",
       "download_urls": {
         "android": "https://play.google.com/store/apps/details?id=org.mozilla.firefox"
       }
@@ -152,6 +153,7 @@
     "samsung": {
       "name": "Samsung Internet",
       "vendor": "Samsung",
+      "link": "https://www.samsung.com/de/apps/samsung-internet/",
       "name_ko": "삼성 인터넷",
       "core": "Chromium",
       "engine": "Blink",
@@ -255,7 +257,8 @@
       "download_url": "https://browser.yandex.com",
       "download_urls": {
         "win": "https://download.yandex.ru/downloadable_soft/browser/7005/Yandex.exe",
-        "macos": "https://download.cdn.yandex.net/downloadable_soft/browser/7332/Yandex.dmg"
+        "macos": "https://download.cdn.yandex.net/downloadable_soft/browser/7332/Yandex.dmg",
+        "android": "https://redirect.appmetrica.yandex.com/serve/26556431129904411?c=browserupdate28022020"
       }
     },
     "i": {
@@ -266,25 +269,39 @@
       "lifecycle": "https://support.microsoft.com/help/17454/lifecycle-faq-internet-explorer",
       "available_for": {
       },
-      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge",
+      "download_url": "https://www.microsoft.com/edge",
       "successor": "e"
     },
-    "e": {
+    "e_old": {
       "name": "Edge",
       "vendor": "Microsoft",
       "engine": "EdgeHTML",
       "first_release": "2015",
+      "updates": "tied to os",
+      "available_for": {
+        "winmob": 10,
+        "win": 10
+      },
+      "download_url": "https://www.microsoft.com/edge",
+      "dev_docs": ["https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"]
+    },
+    "e": {
+      "name": "Edge",
+      "vendor": "Microsoft",
+      "engine": "Blink",
+      "first_release": "2020",
       "security_bulletins": [
         "https://technet.microsoft.com/security/bulletins",
         "https://portal.msrc.microsoft.com/security-guidance"
       ],
       "cve": "http://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-32367/Microsoft-Edge.html",
-      "updates": "tied to os",
+      "updates": "independent",
       "available_for": {
-        "win": 10,
-        "winmob": 10
+        "winmob": 10,
+        "win": 7,
+        "macos":12
       },
-      "download_url": "https://www.microsoft.com/{full_locale_minus_lower}/windows/microsoft-edge",
+      "download_url": "https://www.microsoft.com/edge",
       "dev_docs": ["https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"]
     },
     "e_a": {
@@ -298,7 +315,8 @@
         "android": 4.4
       },
       "download_url": "https://play.google.com/store/apps/details?id=com.microsoft.emmx",
-      "dev_docs": "https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/"
+      "dev_docs": "https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/",
+      "example_ua_string":"Mozilla/5.0 (Linux; Android 8.0; Pixel XL Build/OPP3.170518.006) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.0 Mobile Safari/537.36 EdgA/41.1.35.1"
     },
     "v": {
       "name": "Vivaldi",
@@ -319,9 +337,10 @@
       "vendor": "Brave Software",
       "link": "https://brave.com",
       "blocks_ads": true,
-      "download_url": "https://brave.com/bro957",
+      "download_url": "https://brave.com",
       "download_urls": {
-        "win": "https://laptop-updates.brave.com/download/BRO957"
+        "win": "https://brave.com",
+        "android": "https://laptop-updates.brave.com/download/BRO957"
       },
       "updates": "independent",
       "available_for": {
@@ -329,12 +348,17 @@
         "win": 7,
         "macos":9,
         "linux":true
-      }
+      },
+      "core": "Chromium",
+      "engine": "Blink",
+      "sponsored": true
     },
     "uc": {
       "name": "UC Browser",
       "link": "https://ucweb.com",
       "vendor": "UCWeb",
+      "core": "Chromium",
+      "engine": "Blink",
       "download_url": "https://play.google.com/store/apps/details?id=com.UCMobile.intl",
       "available_for": {
         "android": 5
@@ -360,7 +384,7 @@
     "a": {
       "name": "Android Browser",
       "vendor": "Google",
-      "core": "Chromium",
+      "core": "",
       "engine": "WebKit",
       "updates": "tied to os",
       "successor": "c"
@@ -393,7 +417,11 @@
     "silk": {
       "name": "Silk",
       "vendor": "Amazon",
-      "ua_string_doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html"
+      "link": "https://www.amazon.de/Amazon-com-Silk-Browser/dp/B01M35MQV4",
+      "ua_string_doc": "https://docs.aws.amazon.com/silk/latest/developerguide/user-agent.html",
+      "core": "Chromium",
+      "engine": "Blink",
+      "example_ua_string":"(Android 5.1.1; KFSUWI) Silk/77.3.1 like Chrome/77.0.3865.116"
     },
     "amigo": {
       "name": "Amigo (MRCHROME)",
@@ -417,7 +445,21 @@
         "ios": 9,
         "linux": true
       },
-      "updates": "independent"
+      "updates": "independent",
+      "example_ua_string": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:65.0) Gecko/20100101 Firefox/65.0 Waterfox/56.2.7"
+    },
+    "kaios": {
+      "name": "KaiOS Browser",
+      "link": "https://www.kaiostech.com/",
+      "core": "Firefox",
+      "engine": "Gecko",
+      "vendor": "KaiOS Technologies",
+      "download_url": "",
+      "available_for": {
+        "kaios": true
+      },
+      "updates": "tied to os",
+      "example_ua_string": "Mozilla/5.0 (Mobile; LYF/F90M/LYF-F90M-000-02-21-131117; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.0"
     }
   }
 }
