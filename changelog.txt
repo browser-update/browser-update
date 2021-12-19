@@ -1,8 +1,17 @@
 Changes to the notification / detection script
 ==========
+
+-------
+3.3.35 19.12.21
+- test/bar.html: fix issues when not using correct json format and use a textarea
+- whitelist motorola edge in order not to detect it as edge browser, fixes #544
+- include update.show.js with NPM package, fixes #546
+- firefox 78 ESR is outdated now, fixes #538
+
 3.3.33 23.10.21
 - fix detection of opera mobile
 - add normal files to npm package (update.js, ...) in order to use browser-update scripts not as a module, fixes #518
+- update versions
 
 3.3.32 13.10.21
 - updated browser versions, fixes #539

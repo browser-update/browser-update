@@ -1,6 +1,6 @@
 {
   "name": "browser-update",
-  "version": "3.3.33",
+  "version": "3.3.35",
   "description": "Remind users to update their browser in an unobtrusive way.",
   "main": "update.npm.full.js",
   "scripts": {
@@ -17,10 +17,10 @@
   "files": [
     "update.npm.full.js",
     "update.npm.js",
-    "update.js",
-    "update.min.js",
-    "update.show.js",
-    "update.show.min.js"
+    "scripts/update.js",
+    "scripts/update.min.js",
+    "scripts/update.show.js",
+    "scripts/update.show.min.js"
   ],
   "author": "Thomas Hümmer",
   "license": "MIT",
