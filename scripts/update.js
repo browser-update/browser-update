@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.36";
-    this.vsakt = {c:"96",f:"95",s:"14.1.2",e:"96",i:"12",ios:"13.3",samsung:"15.0.2",o:"80",e_a:"96",o_a:"65",y:"21.9.1",v:"4.3",uc:"13.3.8"};
+    this.version="3.3.38";
+    this.vsakt = {c:"97",f:"96",s:"15.2",e:"97",i:"12",ios:"15.0",samsung:"15.0.2",o:"83",e_a:"97",o_a:"66.2",y:"22.1.0",v:"5.1",uc:"13.4.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"88.0.4324.150",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
@@ -27,7 +27,7 @@ var $bu_= new function() {
         ["CriOS.VV","c",'ios'],
         ["FxiOS.VV","f",'ios'],
         ["Trident.*rv:VV","i",'i'],
-        ["Trident.VV","io",'i'],
+        ["Trident.VV","i",'i'],
         ["UCBrowser.VV","uc",'c'],
         ["MSIE.VV","i",'i'],
         ["Edge.VV","e",'e'],
@@ -43,7 +43,7 @@ var $bu_= new function() {
         ["Firefox.VV","f",'f'],
         [" OS.VV.*Safari","ios",'ios'],
         ["Version.VV.*Safari","s",'s'],
-        ["Safari.VV","so",'s'],
+        ["Safari.VV","s",'s'],
         ["Opera.*Version.VV","o"],
         ["Opera.VV","o"]
     ];
@@ -81,7 +81,6 @@ var $bu_= new function() {
         var av=s.available_ios(ua,r.v);
         /*
         var newmap={10:"10.3.4",11:"12.4.3",12:"12.4.3",13:s.vsakt["ios"]};
-
         if (av in newmap)
             av=newmap[av];
         */
@@ -94,6 +93,7 @@ var $bu_= new function() {
     //winxp/vista/2003
     if (/windows.nt.5.1|windows.nt.5.2|windows.nt.6.0/i.test(ua)) {
         r.available={"c":49.9,"f":52.9}
+        r.no_device_update=true;
     }
     //old mac
     if (/os x 10.6/i.test(ua)) {
@@ -121,21 +121,6 @@ var $bu_= new function() {
         }
     }
 
-    // Special treatment of some browsers
-    if (r.n==="so") {
-        r.v=r.fullv=4.0;
-        r.n="s";
-    }
-    if (r.n==="io") {
-        r.n="i";
-        if (r.v>6) r.v=11;
-        else if (r.v>5) r.v=10;
-        else if (r.v>4) r.v=9;
-        else if (r.v>3.1) r.v=8;
-        else if (r.v>3) r.v=7;
-        else r.v=9;
-        r.fullv=r.v;
-    }
     r.t=s.names[r.n]+" "+r.v;
     r.is_supported=r.is_latest= !s.vsakt[r.n] ? undefined : s.less(r.fullv,s.vsakt[r.n])<=0;
     
@@ -189,6 +174,7 @@ this.less= function(v1,v2) {
     }
 }
 this.available_ios=function(ua,v) {
+    //https://support.apple.com/de-de/guide/iphone/iphe3fa5df43/ios
     var h = Math.max(window.screen.height, window.screen.width),pr = window.devicePixelRatio
     if (/ipad/i.test(ua)) {
         if (h == 1024 && pr == 2) // iPad 3 (iOS 9), 4, 5, Mini 2, Mini 3, Mini 4, Air, Air 2, Pro 9.7
@@ -203,10 +189,12 @@ this.available_ios=function(ua,v) {
     }
     if (pr == 1)// 1/3G/3GS
         return 6//for 3GS
-    if (h == 812)// && pr == 3)// X
-        return 11 + 4
+    if (pr == 3)
+        return 15
+    if (h == 812)// X
+        return 15
     if ((h == 736 || h == 667))// && pr == 3)// 6+/6s+/7+ and 8+ or // 6+/6s+/7+ and 8+ in zoom mode + // 6/6s/7 and 8
-        return 12//latest version for iphone 6 is 12, 13 is for 6S
+        return 15//slightly wrong as latest version for iphone 6 is 12
     if (h == 568) // 5/5C/5s/SE or 6/6s/7 and 8 in zoom mode
         return 10
     if (h == 480) // i4/4s

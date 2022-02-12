@@ -244,6 +244,7 @@ background-image: url('/img/big/ch-small.png');
                 }, 3000);
                 //setTimeout(function(){ location.assign("post-browser-update.html");  }, 1000);
             }
+            {% if analytics %}
             gtag('event', 'browser_download', {
                 'event_category': 'Download',
                 'id': to,
@@ -252,12 +253,13 @@ background-image: url('/img/big/ch-small.png');
                 'from_full': f.n + " " + f.v,
                 'event_label': to
             });
+            {% endif %}
         }
 
         countView();
     </script>
 
-
+{% if analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
     <script>
         if (document.cookie.indexOf('noanalytics=true') > -1) {
@@ -312,7 +314,7 @@ background-image: url('/img/big/ch-small.png');
         });
 
     </script>
-
+{% endif %}
     {#
 <script>
     /*

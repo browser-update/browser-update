@@ -58,6 +58,7 @@
 
     {% include 'ads.html' %}
 
+    {% if analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
     <script>
         if (document.cookie.indexOf('noanalytics=true') > -1) {
@@ -90,7 +91,7 @@
             'source': "referral"
         });
     </script>
-    <!--
+    {#
     <script>
         /*
     var myref=((window.location.hash||"").match(/.*@(.*)/i)||(window.location.hash||"").match(/.*:(.*)/i)||["",""])[1]||"";
@@ -110,6 +111,7 @@
     ga('set', 'title', 'Update Page',);
     ga('send', 'pageview');
     </script>
-    -->
+     #}
+{% endif %}
 
 {% endblock %}
