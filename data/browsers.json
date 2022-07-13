@@ -1,18 +1,18 @@
 {
   "current": {
     "desktop": {
-      "c": "98",
-      "f": "97",
-      "s": "15.2",
-      "e": "97",
-      "e_a": "97",
+      "c": "103",
+      "f": "102",
+      "s": "15.4",
+      "e": "103",
+      "e_a": "100",
       "i": "15.0",
-      "ios": "15.2",
-      "samsung": "15.0.2.47",
-      "o": "83",
+      "ios": "15.6",
+      "samsung": "17.0.7",
+      "o": "89",
       "o_a": "66.2",
-      "y": "22.1.0",
-      "v": "5.1",
+      "y": "22.7.0",
+      "v": "5.13",
       "uc": "13.4.0",
       "a": "700",
       "silk": "80",
@@ -256,9 +256,9 @@
       },
       "download_url": "https://browser.yandex.com",
       "download_urls": {
-        "win": "https://download.yandex.ru/downloadable_soft/browser/7005/Yandex.exe",
-        "macos": "https://download.cdn.yandex.net/downloadable_soft/browser/7332/Yandex.dmg",
-        "android": "https://redirect.appmetrica.yandex.com/serve/26556431129904411?c=browserupdate28022020"
+        "win": "https://browser.yandex.com",
+        "macos": "https://browser.yandex.com",
+        "android": "https://browser.yandex.com"
       }
     },
     "i": {

@@ -1,10 +1,16 @@
 Changes to the notification / detection script
 ==========
+3.3.40 13.7.22
+- updated  browser versions
+
+3.3.39 11.3.22
+- updated  browser versions
 
 3.3.38 11.2.22
 - updated all browser versions, fixes #549
 - latest version of mobile safari updates, improve update availability detection for iphones, fixes #548
 - remove treatment of strange reall old safari and internet explorer strings. not needed anymore.
+- remove analytics
 
 3.3.37 21.12.21
 - updated browser versions
