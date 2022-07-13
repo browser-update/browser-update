@@ -4,7 +4,7 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.40npm";
+    this.version="3.3.41npm";
     this.vsakt = {c:"103",f:"102",s:"15.4",e:"103",i:"12",ios:"15.2",samsung:"17.0.7",o:"89",e_a:"100",o_a:"66.2",y:"22.7.0",v:"5.4",uc:"13.4.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"88.0.4324.150",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
@@ -230,10 +230,12 @@ op.jsv=$bu_.version;
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
 var vs=op.notify||op.vs||{};//legacy config: maximum version to notify
-vs.e=vs.e||vs.i;
+if (vs.e!==0)
+    vs.e=vs.e||vs.i;
 vs.i=vs.i||vs.e;
 var required=op.required||{};//minimum browser versions needed
-required.e=required.e||required.i;
+if (required.e!==0)
+    required.e=required.e||required.i;
 if (!required.i) {
     required.i=required.e;
     $bu_.vsakt.i=$bu_.vsakt.e;

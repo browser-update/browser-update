@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+
+3.3.41 13.7.22
+- fix #552 "Edge Version Issue", when providing e:0 to reuired
+
 3.3.40 13.7.22
 - updated  browser versions
 
