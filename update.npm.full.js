@@ -261,6 +261,7 @@ if (required.i<79 && required.i>65)
     required.i=required.i-60
 if (required.e<79 && required.e>65)
     required.e=required.e-60
+op.nonce = op.nonce || undefined;
 op.required=required;
 op.reminder=op.reminder<0.1 ? 0 : op.reminder||(24*7);
 op.reminderClosed=op.reminderClosed<1 ? 0 : op.reminderClosed||(24*7);
@@ -538,6 +539,9 @@ op.onshow(op);
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
     e.src = op.domain + "/update.test.js";
+    if(op.nonce !== undefined) {
+        e.nonce = op.nonce;
+    }
     document.body.appendChild(e);
 }
 

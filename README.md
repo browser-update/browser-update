@@ -57,6 +57,26 @@ Options can be something like:
 ````
 See the [available options](http://browser-update.org/customize.html) to see how you can customize it to your needs.
 
+### Content Security Policy support
+
+As of version XX.XX.XX, browser-update supports nonce-based Content Security Policies (CSP). Supply a `nonce` value in the configuration option to automatically include it in your scripts:
+````js
+{
+    required: {
+        f:-3,
+        o:-3
+    },
+    nonce:'4Yt32UEYkdZ/J8FKu7z0jA=='
+}
+````
+
+As a result, the nonce is now included in all script tags the library adds to the DOM:
+````html
+<script src="https://example.com/update.show.min.js" nonce="4Yt32UEYkdZ/J8FKu7z0jA==">
+````
+
+Read more about Content Security Policies from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+
 ## Features
 * Unobtrusive
     * We take care not to  erroneously notify users by constantly tweaking the detection code
@@ -72,6 +92,7 @@ See the [available options](http://browser-update.org/customize.html) to see how
 * Only notify users that actually can update to a newer browser on their devices
 * Hide notification from bots
 * Well tested
+* Content Security Policy (CSP) support with nonce configuration option
 
 More information, our motivation and the features can be found on our [web site](http://browser-update.org).
 
