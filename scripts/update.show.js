@@ -201,6 +201,9 @@ op.onshow(op);
 if (op.test && !op.dont_show_debuginfo) {
     var e = document.createElement("script");
     e.src = op.domain + "/update.test.js";
+    if(op.nonce !== undefined) {
+        e.nonce = op.nonce;
+    }
     document.body.appendChild(e);
 }
 
