@@ -44,25 +44,26 @@
         </p>
         <p>First release: {{ b.first_release }}</p>
         <p>{% if b.download_url %}<a href="{{ b.download_url }}">Download Link</a>{% endif %}</p>
-        <p>
-            Information:
-            {% if b.releases %}<a href="{{ b.releases }}">Releases</a>{% endif %}
-            {% if b.blog %}<a href="{{ b.blog }}">Developer Blog</a>{% endif %}
-            {% if b.requirements %}<a href="{{ b.requirements }}">System requirements</a>{% endif %}
-            {% if b.lifecycle %}<a href="{{ b.lifecycle }}">lifecycle</a>{% endif %}
-        </p>
+
+        <p>Information:</p>
+            <ul>
+            {% if b.releases %}<li><a href="{{ b.releases }}">Releases</a></li>{% endif %}
+            {% if b.blog %}<li><a href="{{ b.blog }}">Developer Blog</a></li>{% endif %}
+            {% if b.requirements %}<li><a href="{{ b.requirements }}">System requirements</a></li>{% endif %}
+            {% if b.lifecycle %}<li><a href="{{ b.lifecycle }}">lifecycle</a></li>{% endif %}
+            </ul>
+
         Information for web developers:
         {% if b.dev_docs %}<a href="{{ b.dev_docs }}">Information for Webdevelopers</a>{% endif %}
         {% if b.ua_string_doc %}<a href="{{ b.ua_string_doc }}">Documentation of user agent string</a>{% endif %}
         </p>
-        <p>
-            Security:
-            {% if b.cve %}<a href="{{ b.cve }}">CVE</a>{% endif %}
-            {% if b.security_bulletins %}<a href="{{ b.security_bulletins }}">Security Bulletins</a>{% endif %}
-            {% if browserdata.insecure_below[id] %}Insecure below version
-                {{ browserdata.insecure_below[id] }}{% endif %}
-
-        </p>
+        <p>Security:</p>
+            <ul>
+            {% if b.cve %}<li><a href="{{ b.cve }}">CVE</a></li>{% endif %}
+            {% if b.security_bulletins %}<li><a href="{{ b.security_bulletins }}">Security Bulletins</a></li>{% endif %}
+            {% if browserdata.insecure_below[id] %}<li>Insecure below version
+                {{ browserdata.insecure_below[id] }}</li>{% endif %}
+            </ul>
         {% if b.example_ua_string %}
             <p>
                 Example user agent string:

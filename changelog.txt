@@ -1,5 +1,12 @@
 Changes to the notification / detection script
 ==========
+3.3.43 11.10.22
+- update browser versions
+- updated insecure versions
+- improved list of browsers page
+- new firefox ESR realsesis 102, fixes #559
+- removed supported status from Internet explorer 11
+
 3.3.42 4.9.22
 - update browser versions
 
