@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+
+3.3.44 23.10.22
+- current firefox ESR is 102 mark as supported and secure
+
 3.3.43 11.10.22
 - update browser versions
 - updated insecure versions

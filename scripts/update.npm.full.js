@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.43npm";
+    this.version="3.3.44npm";
     this.vsakt = {c:"106",f:"105",s:"15.6",e:"106",i:"12",ios:"15.6",samsung:"17.0.7",o:"89",e_a:"104",o_a:"70",y:"22.7.0",v:"5.4",uc:"13.4.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"105.0.5195.79",f:"100.3",s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
+    this.vsinsecure_below = {c:"100.0.5195.102",f:"100.3",s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -128,12 +128,13 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if (r.n==="f" && (r.vmaj===102)) {
+    if ((r.n==="f" && (r.vmaj===102)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
             r.esr=true;
     }
+    
     if (r.n==="ios" && r.v>10.3)
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
