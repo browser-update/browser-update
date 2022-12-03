@@ -34,11 +34,19 @@
                 <p>
                     {{ _('Your browser is out-of-date.') }}
                 </p>
+                {% if browser.is_insecure %}
+                    <p>
+                        {{ _x("Your browser has severe security issues.") }}
+                        {{ _x("You could get a virus by just viewing a malicious website.") }}
+                    </p>
+                {% endif %}
                 <p>
                     {{ _('Please download one of these up-to-date, free and excellent browsers:') }}
                 </p>
             </div>
         {% endif %}
+
+
 
         {% if status.discontinued %}
             <div class="whatnow">

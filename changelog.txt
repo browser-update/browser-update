@@ -1,6 +1,15 @@
 Changes to the notification / detection script
 ==========
 
+3.3.46 3.12.22
+- mark chrome before 108.0.5359.94 and edge before 107.0.1418.62 as insecure, because it has an actively used breach
+- show a different message for insecure browsers, that is more clear for why the message is shown ("Your web browser ({brow_name}) has a serious security vulnerability!"). So far only activated for english and german. Testing it.
+- also show on the main message on browser-update.org/update-browser.html if browser is insecure
+
+3.3.45 22.11.22
+- update browser versions
+- mark chrome 105 as insecure
+
 3.3.44 23.10.22
 - current firefox ESR is 102 mark as supported and secure
 
