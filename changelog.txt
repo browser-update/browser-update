@@ -1,6 +1,12 @@
 Changes to the notification / detection script
 ==========
 
+3.3.47 5.12.22
+ - chrome/edge/vivaldi does not transmit the minor version any more. so we have to notify just major version that are insecure
+   ---> mark chrome before 108.0 and edge before 107.0 as insecure
+   (https://www.chromium.org/updates/ua-reduction/)
+- add insecure message to customization documentation
+
 3.3.46 3.12.22
 - mark chrome before 108.0.5359.94 and edge before 107.0.1418.62 as insecure, because it has an actively used breach
 - show a different message for insecure browsers, that is more clear for why the message is shown ("Your web browser ({brow_name}) has a serious security vulnerability!"). So far only activated for english and german. Testing it.

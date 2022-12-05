@@ -84,7 +84,7 @@ if (custom_text) {
         }
     }
 }
-else if (op.browser.is_insecure && ta.insecure) {
+if (op.browser.is_insecure && ta.insecure) {
     ta.msg=ta.insecure
 }
 if (ta.msg)
