@@ -1,6 +1,67 @@
 Changes to the notification / detection script
 ==========
 
+3.3.47 5.12.22
+ - chrome/edge/vivaldi does not transmit the minor version any more. so we have to notify just major version that are insecure
+   ---> mark chrome before 108.0 and edge before 107.0 as insecure
+   (https://www.chromium.org/updates/ua-reduction/)
+- add insecure message to customization documentation
+
+3.3.46 3.12.22
+- mark chrome before 108.0.5359.94 and edge before 107.0.1418.62 as insecure, because it has an actively used breach
+- show a different message for insecure browsers, that is more clear for why the message is shown ("Your web browser ({brow_name}) has a serious security vulnerability!"). So far only activated for english and german. Testing it.
+- also show on the main message on browser-update.org/update-browser.html if browser is insecure
+
+3.3.45 22.11.22
+- update browser versions
+- mark chrome 105 as insecure
+
+3.3.44 23.10.22
+- current firefox ESR is 102 mark as supported and secure
+
+3.3.43 11.10.22
+- update browser versions
+- updated insecure versions
+- improved list of browsers page
+- new firefox ESR realsesis 102, fixes #559
+- removed supported status from Internet explorer 11
+
+3.3.42 4.9.22
+- update browser versions
+
+3.3.41 13.7.22
+- fix #552 "Edge Version Issue", when providing e:0 to reuired
+
+3.3.40 13.7.22
+- updated  browser versions
+
+3.3.39 11.3.22
+- updated  browser versions
+
+3.3.38 11.2.22
+- updated all browser versions, fixes #549
+- latest version of mobile safari updates, improve update availability detection for iphones, fixes #548
+- remove treatment of strange reall old safari and internet explorer strings. not needed anymore.
+- remove analytics
+
+3.3.37 21.12.21
+- updated browser versions
+- fix detection of opera desktop, fixes #547
+
+3.3.35 19.12.21
+- test/bar.html: fix issues when not using correct json format and use a textarea
+- whitelist motorola edge in order not to detect it as edge browser, fixes #544
+- include update.show.js with NPM package, fixes #546
+- firefox 78 ESR is outdated now, fixes #538
+
+3.3.33 23.10.21
+- fix detection of opera mobile
+- add normal files to npm package (update.js, ...) in order to use browser-update scripts not as a module, fixes #518
+- update versions
+
+3.3.32 13.10.21
+- updated browser versions, fixes #539
+
 3.3.31 31.7.21
 - update browser versions
 

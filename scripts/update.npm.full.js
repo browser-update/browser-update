@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.31npm";
-    this.vsakt = {c:"92",f:"90",s:"14",e:"92",i:"12",ios:"13.3",samsung:"14.0.1",o:"77",e_a:"46.05",o_a:"63.3",y:"21.6.3",v:"4.0",uc:"13.3.8"};
+    this.version="3.3.47npm";
+    this.vsakt = {c:"108",f:"107",s:"16.0",e:"107",i:"12",ios:"15.6",samsung:"17.0.7",o:"93.0.4585.37",e_a:"104",o_a:"70",y:"22.11.0",v:"5.5.2805.50",uc:"13.4.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"88.0.4324.150",f:76,s:"11.1.1",e:16,i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"2.7",uc:"13.1"};
+    this.vsinsecure_below = {c:"108.0",f:"100.3",s:"11.1.1",e:"107",i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"5.5.2805.50",uc:"13.1"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -16,7 +16,7 @@ var $bu_= new function() {
     function ignore(reason,pattern){if (new RegExp(pattern,"i").test(ua)) return reason;return false}
     r.other=ignore("bot","Pagespeed|pingdom|Preview|ktxn|dynatrace|Ruxit|PhantomJS|Headless|Lighthouse|bot|spider|archiver|transcoder|crawl|checker|monitoring|prerender|screenshot|python-|php|uptime|validator|fetcher|facebook|slurp|google|yahoo|node|mail.ru|github|cloudflare|addthis|thumb|proxy|feed|fetch|favicon|link|http|scrape|seo|page|search console|AOLBuild|Teoma|Expeditor")||
         ignore("TV","SMART-TV|SmartTV") ||
-        ignore("niche browser","OculusBrowser|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|Basilisk|QupZilla|Otter|Midori|qutebrowser|slimjet") ||
+        ignore("niche browser","motorola edge|Comodo.Dragon|OculusBrowser|Falkon|Brave|Classic Browser|Dorado|LBBROWSER|Focus|waterfox|Firefox/56.2|Firefox/56.3|Whale|MIDP|k-meleon|sparrow|wii|Chromium|Puffin|Opera Mini|maxthon|maxton|dolfin|dolphin|seamonkey|opera mini|netfront|moblin|maemo|arora|kazehakase|epiphany|konqueror|rekonq|symbian|webos|PaleMoon|Basilisk|QupZilla|Otter|Midori|qutebrowser|slimjet") ||
         ignore("mobile without upgrade path or landing page","OPR/44.12.2246|cros|kindle|tizen|silk|blackberry|bb10|RIM|PlayBook|meego|nokia|ucweb|ZuneWP7|537.85.10");
 //        ignore("android(chrome) web view","; wv");
     r.embedded=/"QtWebEngine|Teams|Electron/i.test(ua);
@@ -27,7 +27,7 @@ var $bu_= new function() {
         ["CriOS.VV","c",'ios'],
         ["FxiOS.VV","f",'ios'],
         ["Trident.*rv:VV","i",'i'],
-        ["Trident.VV","io",'i'],
+        ["Trident.VV","i",'i'],
         ["UCBrowser.VV","uc",'c'],
         ["MSIE.VV","i",'i'],
         ["Edge.VV","e",'e'],
@@ -43,7 +43,7 @@ var $bu_= new function() {
         ["Firefox.VV","f",'f'],
         [" OS.VV.*Safari","ios",'ios'],
         ["Version.VV.*Safari","s",'s'],
-        ["Safari.VV","so",'s'],
+        ["Safari.VV","s",'s'],
         ["Opera.*Version.VV","o"],
         ["Opera.VV","o"]
     ];
@@ -60,7 +60,7 @@ var $bu_= new function() {
 
     // Special treatment of some systems
     //do not notify old systems since there is no up-to-date browser available
-    if (/windows.nt.5.0|windows.nt.4.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5/i.test(ua)) {
+    if (/windows.nt.5|windows.nt.4|windows.nt.6.0|windows.95|windows.98|os x 10.2|os x 10.3|os x 10.4|os x 10.5/i.test(ua)) {
         r.no_device_update=true;
         r.available={}
     }
@@ -81,7 +81,6 @@ var $bu_= new function() {
         var av=s.available_ios(ua,r.v);
         /*
         var newmap={10:"10.3.4",11:"12.4.3",12:"12.4.3",13:s.vsakt["ios"]};
-
         if (av in newmap)
             av=newmap[av];
         */
@@ -94,6 +93,7 @@ var $bu_= new function() {
     //winxp/vista/2003
     if (/windows.nt.5.1|windows.nt.5.2|windows.nt.6.0/i.test(ua)) {
         r.available={"c":49.9,"f":52.9}
+        r.no_device_update=true;
     }
     //old mac
     if (/os x 10.6/i.test(ua)) {
@@ -121,21 +121,6 @@ var $bu_= new function() {
         }
     }
 
-    // Special treatment of some browsers
-    if (r.n==="so") {
-        r.v=r.fullv=4.0;
-        r.n="s";
-    }
-    if (r.n==="io") {
-        r.n="i";
-        if (r.v>6) r.v=11;
-        else if (r.v>5) r.v=10;
-        else if (r.v>4) r.v=9;
-        else if (r.v>3.1) r.v=8;
-        else if (r.v>3) r.v=7;
-        else r.v=9;
-        r.fullv=r.v;
-    }
     r.t=s.names[r.n]+" "+r.v;
     r.is_supported=r.is_latest= !s.vsakt[r.n] ? undefined : s.less(r.fullv,s.vsakt[r.n])<=0;
     
@@ -143,12 +128,13 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===78)) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===102)) || (r.n==="i" && r.vmaj===11)) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
             r.esr=true;
     }
+    
     if (r.n==="ios" && r.v>10.3)
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
@@ -189,6 +175,7 @@ this.less= function(v1,v2) {
     }
 }
 this.available_ios=function(ua,v) {
+    //https://support.apple.com/de-de/guide/iphone/iphe3fa5df43/ios
     var h = Math.max(window.screen.height, window.screen.width),pr = window.devicePixelRatio
     if (/ipad/i.test(ua)) {
         if (h == 1024 && pr == 2) // iPad 3 (iOS 9), 4, 5, Mini 2, Mini 3, Mini 4, Air, Air 2, Pro 9.7
@@ -203,10 +190,12 @@ this.available_ios=function(ua,v) {
     }
     if (pr == 1)// 1/3G/3GS
         return 6//for 3GS
-    if (h == 812)// && pr == 3)// X
-        return 11 + 4
+    if (pr == 3)
+        return 15
+    if (h == 812)// X
+        return 15
     if ((h == 736 || h == 667))// && pr == 3)// 6+/6s+/7+ and 8+ or // 6+/6s+/7+ and 8+ in zoom mode + // 6/6s/7 and 8
-        return 12//latest version for iphone 6 is 12, 13 is for 6S
+        return 15//slightly wrong as latest version for iphone 6 is 12
     if (h == 568) // 5/5C/5s/SE or 6/6s/7 and 8 in zoom mode
         return 10
     if (h == 480) // i4/4s
@@ -242,10 +231,12 @@ op.jsv=$bu_.version;
 var required_min=(op.apiver<2018&&{i:10,f:11,o:21,s:8,c:30})||{};
 
 var vs=op.notify||op.vs||{};//legacy config: maximum version to notify
-vs.e=vs.e||vs.i;
+if (vs.e!==0)
+    vs.e=vs.e||vs.i;
 vs.i=vs.i||vs.e;
 var required=op.required||{};//minimum browser versions needed
-required.e=required.e||required.i;
+if (required.e!==0)
+    required.e=required.e||required.i;
 if (!required.i) {
     required.i=required.e;
     $bu_.vsakt.i=$bu_.vsakt.e;
@@ -401,14 +392,14 @@ var $buo_show = function () {
 
 
 var t = {}, ta;
-t.en= {'msg': 'Your web browser ({brow_name}) is out of date.', 'msgmore': 'Update your browser for more security, speed and the best experience on this site.', 'bupdate': 'Update browser', 'bignore': 'Ignore','remind': 'You will be reminded in {days} days.','bnever': 'Never show again'}
+t.en= {'msg': 'Your web browser ({brow_name}) is out of date.', 'msgmore': 'Update your browser for more security, speed and the best experience on this site.', 'bupdate': 'Update browser', 'bignore': 'Ignore','remind': 'You will be reminded in {days} days.','bnever': 'Never show again','insecure':'Your web browser ({brow_name}) has a serious security vulnerability!'}
 t.ar= {'msg': 'متصفح الإنترنت الخاص بك ({brow_name}) غير مُحدّث.','msgmore': 'قم بتحديث المتصفح الخاص بك لمزيد من الأمان والسرعة ولأفضل تجربة على هذا الموقع.','bupdate': 'تحديث المتصفح','bignore': 'تجاهل', 'remind': 'سيتم تذكيرك في غضون {days} أيام.', 'bnever': 'لا تظهر مرة أخرى'}
 t.bg= {'msg': 'Вашият уеб браузър ({brow_name}) е остарял.','msgmore': 'Актуализирайте браузъра си за повече сигурност, бързина и най-доброто изживяване на този сайт.','bupdate': 'Актуализиране на браузъра','bignore': 'игнорирай', 'remind': 'Ще ви бъде напомнено след {days} дни.', 'bnever': 'Никога повече да не се показва'}
 t.ca= {'msg': 'El teu navegador ({brow_name}) està desactualitzat.','msgmore': 'Actualitzeu el vostre navegador per obtenir més seguretat, velocitat i una millor experiència en aquest lloc.','bupdate': 'Actualitza el navegador','bignore': 'Ignorar', 'remind': 'T\'ho recordarem d\'aquí a {days} dies.', 'bnever': 'No ho tornis a mostrar'}
 t.cs= {'msg': 'Váš prohlížeč ({brow_name}) je zastaralý.','msgmore': 'Aktualizujte prohlížeč pro lepší zabezpečení, rychlost a nejlepší zážitek z tohoto webu.','bupdate': 'Aktualizovat prohlížeč','bignore': 'Ignorovat', 'remind': 'Znovu budete upozorněni za {days} dnů.', 'bnever': 'Již nezobrazovat'}
 t.cy= {'msg': 'Mae eich porwr gwe ({brow_name}) angen ei ddiweddaru.','msgmore': 'Diweddarwch eich porwr i gael mwy o ddiogelwch, cyflymder a\'r profiad gorau ar y safle hwn.','bupdate': 'Diweddaru porwr','bignore': 'Anwybyddu', 'remind': 'Byddwn yn eich atgoffa mewn {days} diwrnod.', 'bnever': 'Peidiwch â dangos eto'}
 t.da= {'msg': 'Din web browser ({brow_name}) er forældet','msgmore': 'Opdater din browser for mere sikkerhed, hastighed og den bedste oplevelse på denne side.','bupdate': 'Opdater browser','bignore': 'Ignorer', 'remind': 'Du vil blive påmindet om {days} dage.', 'bnever': 'Vis aldrig igen'}
-t.de= {'msg': 'Ihr Webbrowser ({brow_name}) ist veraltet.','msgmore': 'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Geschwindigkeit und den besten Komfort auf dieser Seite.','bupdate': 'Browser aktualisieren','bignore': 'Ignorieren', 'remind': 'Sie werden in {days} Tagen wieder erinnert.', 'bnever': 'Nie wieder anzeigen'}
+t.de= {'msg': 'Ihr Webbrowser ({brow_name}) ist veraltet.','msgmore': 'Aktualisieren Sie Ihren Browser für mehr Sicherheit, Geschwindigkeit und den besten Komfort auf dieser Seite.','bupdate': 'Browser aktualisieren','bignore': 'Ignorieren', 'remind': 'Sie werden in {days} Tagen wieder erinnert.', 'bnever': 'Nie wieder anzeigen','insecure':'Ihr Webbrowser ({brow_name}) hat eine ernsthafte Sicherheitslücke!'}
 t.el= {'msg': 'Το πρόγραμμα περιήγησής σας ({brow_name}) είναι απαρχαιωμένο.','msgmore': 'Ενημερώστε το πρόγραμμα περιήγησής σας για περισσότερη ασφάλεια, ταχύτητα και την καλύτερη εμπειρία σ\' αυτόν τον ιστότοπο.','bupdate': 'Ενημερώστε το πρόγραμμα περιήγησης','bignore': 'Αγνοήστε', 'remind': 'Θα σας το υπενθυμίσουμε σε {days} ημέρες.', 'bnever': 'Να μην εμφανιστεί ξανά'}
 t.es= {'msg': 'Su navegador web ({brow_name}) está desactualizado.','msgmore': 'Actualice su navegador para obtener más seguridad, velocidad y para disfrutar de la mejor experiencia en este sitio.','bupdate': 'Actualizar navegador','bignore': 'Ignorar', 'remind': 'Se le recordará en {days} días.', 'bnever': 'No mostrar de nuevo'}
 t.et= {'msg': 'Teie veebilehitseja ({brow_name}) on vananenud.','msgmore': 'Veebilehitseja uuendamisega kaasneb nii parem turvalisus, kiirus kui ka kasutusmugavus.','bupdate': 'Uuenda veebilehitsejat','bignore': 'Eira', 'remind': 'Uus meeldetuletus {days} päeva pärast.', 'bnever': 'Ära kunagi enam näita'}
@@ -427,7 +418,7 @@ t.lt= {'msg': 'Jūsų naršyklė ({brow_name}) yra pasenusi.','msgmore': 'Atsina
 t.lv= {'msg': 'Jūsu pārlūkprogramma ({brow_name}) ir novecojusi.','msgmore': 'Atjaunojiet savu pārlūkprogrammu lielākai drošībai, ātrumam un labākai pieredzei ar šo vietni.','bupdate': 'Atjaunināt pārlūkprogrammu','bignore': 'Ignorēt', 'remind': 'Jums tiks parādīts atgādinājums pēc {days} dienām.', 'bnever': 'Vairs nerādīt'}
 t.ms= {'msg': 'Pelayar web anda ({brow_name}) sudah lapuk.','msgmore': 'Kemas kini pelayar anda untuk lebih keselamatan, kelajuan dan pengalaman terbaik di laman web ini.','bupdate': 'Kemas kini pelayar','bignore': 'Abaikan', 'remind': 'Anda akan diingatkan dalam {days} hari.', 'bnever': 'Jangan tunjukkan lagi'}
 t.nl= {'msg': 'Uw webbrowser ({brow_name}) is verouderd.','msgmore': 'Update uw browser voor meer veiligheid, snelheid en om deze site optimaal te kunnen gebruiken.','bupdate': 'Browser updaten','bignore': 'Negeren', 'remind': 'We zullen u er in {days} dagen aan herinneren.', 'bnever': 'Nooit meer tonen'}
-t.no= {'msg': 'Nettleseren din ({brow_name}) er utdatert.','msgmore': 'Oppdater nettleseren din for økt sikkerhet, hastighet og den beste opplevelsen på dette nettstedet.','bupdate': 'Oppdater nettleser','bignore': 'Ignorer', 'remind': 'Du vil få en påminnelse om {days} dager.', 'bnever': 'Aldri vis igjen'}
+t.no=t.nn=t.nb= {'msg': 'Nettleseren din ({brow_name}) er utdatert.','msgmore': 'Oppdater nettleseren din for økt sikkerhet, hastighet og den beste opplevelsen på dette nettstedet.','bupdate': 'Oppdater nettleser','bignore': 'Ignorer', 'remind': 'Du vil få en påminnelse om {days} dager.', 'bnever': 'Aldri vis igjen'}
 t.pl= {'msg': 'Twoja przeglądarka ({brow_name}) jest nieaktualna.','msgmore': 'Zaktualizuj przeglądarkę, by korzystać z tej strony bezpieczniej, szybciej i po prostu sprawniej.','bupdate': 'Aktualizuj przeglądarkę','bignore': 'Ignoruj', 'remind': 'Przypomnimy o tym za {days} dni.', 'bnever': 'Nie pokazuj więcej'}
 t.pt= {'msg': 'Seu navegador da web ({brow_name}) está desatualizado.','msgmore': 'Atualize seu navegador para ter mais segurança e velocidade, além da melhor experiência neste site.','bupdate': 'Atualizar navegador','bignore': 'Ignorar', 'remind': 'Você será relembrado em {days} dias.', 'bnever': 'Não mostrar novamente'}
 t.ro= {'msg': 'Browserul tău ({brow_name}) nu este actualizat.','msgmore': 'Actualizează browserul pentru o mai mare siguranță, viteză și cea mai bună experiență pe acest site.','bupdate': 'Actualizează browser','bignore': 'Ignoră', 'remind': 'Ți se va reaminti peste {days} zile.', 'bnever': 'Nu mai arăta'}
@@ -446,6 +437,9 @@ t.zh= {'msg': '您的网页浏览器（{brow_name}）已过期。','msgmore': '�
 t["zh-tw"]= t["zh-hans-cn"] ={'msg': '您的網路瀏覽器（{brow_name}）已過舊。','msgmore': '更新您的瀏覽器以獲得更佳的安全性、速度以及在此網站的最佳體驗。','bupdate': '更新瀏覽器','bignore': '忽略', 'remind': '您將在 {days} 天後收到提醒。', 'bnever': '不要再顯示'}
 
 var custom_text = op["text_for_"  + bb.n + "_in_" + op.ll] || op["text_for_" + bb.n] || op["text_" + op.llfull] || op["text_in_" + op.ll] || op["text_" + op.ll]  ||   op.text
+
+
+
 t = ta = t[op.llfull] || t[op.ll] || t.en;
 if (custom_text) {
     if (typeof custom_text === 'string')
@@ -455,6 +449,9 @@ if (custom_text) {
             ta[i] = custom_text[i]
         }
     }
+}
+if (op.browser.is_insecure && ta.insecure) {
+    ta.msg=ta.insecure
 }
 if (ta.msg)
     t = '<b class="buorg-mainmsg">' + t.msg + '</b> <span class="buorg-moremsg">' + t.msgmore + '</span> <span class="buorg-buttons"><a{up_but}>' + t.bupdate + '</a> <a{ignore_but}>' + t.bignore + '</a></span>'

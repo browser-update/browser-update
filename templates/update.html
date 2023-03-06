@@ -34,11 +34,19 @@
                 <p>
                     {{ _('Your browser is out-of-date.') }}
                 </p>
+                {% if browser.is_insecure %}
+                    <p>
+                        {{ _x("Your browser has severe security issues.") }}
+                        {{ _x("You could get a virus by just viewing a malicious website.") }}
+                    </p>
+                {% endif %}
                 <p>
                     {{ _('Please download one of these up-to-date, free and excellent browsers:') }}
                 </p>
             </div>
         {% endif %}
+
+
 
         {% if status.discontinued %}
             <div class="whatnow">
@@ -244,6 +252,7 @@ background-image: url('/img/big/ch-small.png');
                 }, 3000);
                 //setTimeout(function(){ location.assign("post-browser-update.html");  }, 1000);
             }
+            {% if analytics %}
             gtag('event', 'browser_download', {
                 'event_category': 'Download',
                 'id': to,
@@ -252,12 +261,13 @@ background-image: url('/img/big/ch-small.png');
                 'from_full': f.n + " " + f.v,
                 'event_label': to
             });
+            {% endif %}
         }
 
         countView();
     </script>
 
-
+{% if analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110098170-1"></script>
     <script>
         if (document.cookie.indexOf('noanalytics=true') > -1) {
@@ -312,7 +322,7 @@ background-image: url('/img/big/ch-small.png');
         });
 
     </script>
-
+{% endif %}
     {#
 <script>
     /*

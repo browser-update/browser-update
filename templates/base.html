@@ -10,6 +10,11 @@
     <link rel="shortcut icon" href="/static/img/favicon.png" type="image/png"/>
     <link rel="icon" href="/static/img/favicon.png" type="image/png"/>
     <meta name="robots" content="index,follow"/>
+
+    {% block extraheader %}
+        {% include 'adheader.html' %}
+    {% endblock %}
+
     {#  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext,cyrillic,greek'
           rel='stylesheet' type='text/css'/> Now ebedded directly#}
     <link rel="stylesheet" href="/static/base2.css" type="text/css"/>
@@ -26,11 +31,6 @@
     <!--[if lte IE 6]>
     <link rel="stylesheet" href="/static/drecksie6.css" type="text/css" />
     <![endif]-->
-    {% block extraheader %}
-        {% if "sulvo" in ad %}
-            <script id="sulvo" type="text/javascript" src="//live.demand.supply/up.js" data-cfasync="false"></script>
-        {% endif %}
-    {% endblock %}
 </head>
 <body>
 <div class="header">

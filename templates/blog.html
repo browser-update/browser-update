@@ -11,8 +11,14 @@
     </h2>
     <small class="centered">{{ format_date(post.date) }}</small>
 
-    {{ post.html|safe }}
 
+
+    {% if post.cropped %}
+        {{ post.html_cropped|safe }}
+        <p><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">read full post</a></p>
+    {% else %}
+        {{ post.html|safe }}
+    {% endif %}
 {% endfor %}
 
 {% endblock %}
