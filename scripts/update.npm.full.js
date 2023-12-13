@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.47npm";
-    this.vsakt = {c:"108",f:"107",s:"16.0",e:"107",i:"12",ios:"15.6",samsung:"17.0.7",o:"93.0.4585.37",e_a:"104",o_a:"70",y:"22.11.0",v:"5.5.2805.50",uc:"13.4.0"};
+    this.version="3.3.50npm";
+    this.vsakt = {c:"120",f:"120",s:"16.6",e:"120",i:"12",ios:"15.6",samsung:"23",o:"105",e_a:"119",o_a:"79",y:"22.11.0",v:"6.4",uc:"13.5.8"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"108.0",f:"100.3",s:"11.1.1",e:"107",i:11,ios:"12.3",samsung:12.0,o:62,o_a:52,y:"20",v:"5.5.2805.50",uc:"13.1"};
+    this.vsinsecure_below = {c:"119",f:"115",s:"11.1.1",e:"119",i:11,ios:"12.3",samsung:12.0,o:62,o_a:78,y:"20",v:"6.0",uc:"13.4"};
     this.vsdefault = {c:-3,f:-3,s:-1,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -128,7 +128,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===102)) || (r.n==="i" && r.vmaj===11)) {
+    if ((r.n==="f" && (r.vmaj===115)) || (r.n==="c" && (r.vmaj===114))) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")

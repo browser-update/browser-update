@@ -22,7 +22,27 @@
                 {{ _('Update browser') }}</a>
         </p>
     </div>
-
+	
+    <h2>{{ _('Why do I need an up-to-date browser?') }}</h2>
+    <ul class="advantages">
+        <li style="background-image: url('/static/img/security.png')" id="security">
+            <h3>{{ _('Security') }}</h3>
+            <div>{{ _('Newer browsers protect you better against viruses, scams and other threats. Outdated browsers have security holes which are fixed in updates.') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/speed.png')" id="speed">
+            <h3>{{ _('Speed') }}</h3>
+            <div>{{ _('Every new browser generation improves speed') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/compatibility.png')" id="fun">
+            <h3>{{ _('New technologies') }}</h3>
+            <div>{{ _('You can view sites that are using the latest technology') }}</div>
+        </li>
+        <li style="background-image: url('/static/img/comfort.png')" id="comfort">
+            <h3>{{ _('Comfort & better experience') }}</h3>
+            <div>{{ _('Have a more comfortable experience with new features, extensions and better customisability.') }}</div>
+        </li>
+    </ul>
+	
     <style>
         body div .msg {
             text-align: center;

@@ -1,5 +1,13 @@
 Changes to the notification / detection script
 ==========
+3.3.50 19.7.23
+- updated versions
+- added chrome extended support
+- updated firefox ESR, fixes #578
+- removed supported status from IE11
+
+3.3.48 19.7.23
+- updated versions
 
 3.3.47 5.12.22
  - chrome/edge/vivaldi does not transmit the minor version any more. so we have to notify just major version that are insecure
