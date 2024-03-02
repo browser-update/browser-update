@@ -1,9 +1,11 @@
 Changes to the notification / detection script
 ==========
-3.3.50 19.7.23
+3.3.51 2.3.24
+- updated versions
+
+3.3.50 13.12.23
 - updated versions
 - added chrome extended support
-- updated firefox ESR, fixes #578
 - removed supported status from IE11
 
 3.3.48 19.7.23
