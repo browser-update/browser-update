@@ -1,11 +1,22 @@
 Changes to the notification / detection script
 ==========
-3.3.51 2.3.24
+3.3.53 05.06.24
 - updated versions
 
-3.3.50 13.12.23
+
+3.3.52 20.4.24
+- updated versions
+- all iOS devices <15 marked as unsupported
+- all iOS devices <15 marked as not able to update
+- iOS 15.8.2 marked as insecure
+
+3.3.51 20.2.24
+- updated versions
+
+3.3.50 19.7.23
 - updated versions
 - added chrome extended support
+- updated firefox ESR, fixes #578
 - removed supported status from IE11
 
 3.3.48 19.7.23

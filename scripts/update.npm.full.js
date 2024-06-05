@@ -1,14 +1,14 @@
-//(c)2019, MIT Style License <browser-update.org/LICENSE.txt>
+//(c)2024, MIT Style License <browser-update.org/LICENSE.txt>
 //it is recommended to directly link to this file because we update the detection code
 "use strict";
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.51npm";
-    this.vsakt = {c:"122",f:"123",s:"17.3.1",e:"122",i:"12",ios:"15.6",samsung:"23",o:"105",e_a:"120",o_a:"79",y:"22.11.0",v:"6.4",uc:"13.5.8"};
+    this.version="3.3.53npm";
+    this.vsakt = {c:"125",f:"126",s:"17.4.1",e:"124",i:"12",ios:"17.4.1",samsung:"25",o:"109",e_a:"123",o_a:"80",y:"23.9.1",v:"6.6",uc:"13.6.8"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"119",f:"115",s:"11.1.1",e:"119",i:11,ios:"12.3",samsung:12.0,o:62,o_a:78,y:"20",v:"6.0",uc:"13.4"};
-    this.vsdefault = {c:-3,f:-3,s:-2,e:17,i:11,ios:10,samsung:9.9,o:-3,o_a:-3,y:20.4,v:2.6,uc:13.0,a:535};
+    this.vsinsecure_below = {c:"119",f:"115",s:"11.1.1",e:"119",i:11,ios:"15.8.2",samsung:12.0,o:62,o_a:78,y:"20",v:"6.0",uc:"13.4"};
+    this.vsdefault = {c:-3,f:-3,s:-2,e:17,i:11,ios:12,samsung:-3,o:-3,o_a:-3,y:-1,v:-1,uc:-0.2,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
     this.get_browser = function(ua) {
@@ -87,7 +87,7 @@ var $bu_= new function() {
         if (av < 12 && Math.round(r.v)===11)// all devices with ios 11 support ios 12
             av=12
         r.available = {"ios": av};
-        if (parseFloat(r.available.ios)<11)
+        if (parseFloat(r.available.ios)<15)
             r.no_device_update=true;
     }
     //winxp/vista/2003
@@ -128,14 +128,14 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===115)) || (r.n==="c" && (r.vmaj===114))) {
+    if ((r.n==="f" && (r.vmaj===115)) || (r.n==="c" && (r.vmaj===120))) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
             r.esr=true;
     }
     
-    if (r.n==="ios" && r.v>10.3)
+    if (r.n==="ios" && r.v>=15)
         r.is_supported=true;
     if (r.n==="a" || r.n==="x")
         r.t=s.names[r.n];
