@@ -1,5 +1,9 @@
 Changes to the notification / detection script
 ==========
+
+3.3.55 28.10.24
+- updated versions
+
 3.3.54 29.09.24
 - updated versions
 
