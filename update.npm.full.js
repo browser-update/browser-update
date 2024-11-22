@@ -273,6 +273,7 @@ op.newwindow=(op.newwindow!==false);
 
 op.test=test||op.test||(location.hash==="#test-bu")||false;
 op.ignorecookie=op.ignorecookie||location.hash==="#ignorecookie-bu";
+op.use_local_storage=op.use_local_storage||false;
 
 op.reasons=[];
 op.hide_reasons=[];
@@ -306,20 +307,47 @@ function check_show(op) {
 
 op.notified=check_show(op);
 
-op.already_shown=document.cookie.indexOf("browserupdateorg=pause")>-1 && !op.ignorecookie;
+// checks the record set by pauseFor() 
+op.isPaused=function() {
+    if(op.use_local_storage) {
+        const timeStamp = Number(localStorage.getItem('browserupdateorg'));
+        const isExpired = (Number.isNaN(timeStamp) || timeStamp < new Date().getTime());
+        // cleanup the expired storage item
+        if(isExpired) {
+        localStorage.removeItem('browserupdateorg');
+        }
+        return !isExpired;
+    } else {
+        return document.cookie.indexOf("browserupdateorg=pause")>-1;
+    }
+}
+  
+//sets a record that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
+op.pauseFor=function(hours) {
+    if(op.use_local_storage) {
+        if(hours <= 0) {
+            localStorage.removeItem('browserupdateorg');
+        } else {
+            localStorage.setItem('browserupdateorg', (new Date(new Date().getTime()+3600000*hours)).getTime().toString());
+        }
+    } else {
+        document.cookie = 'browserupdateorg=pause; expires='
+            +(new Date(new Date().getTime()+3600000*hours)).toGMTString()
+            +'; path=/; SameSite=Lax'
+            +(/https:/.test(location.href)?'; Secure':'');
+    }
+};
+
+op.already_shown=op.isPaused() && !op.ignorecookie;
 
 if (!op.test && (!op.notified || op.already_shown))
     return;
 
-op.setCookie=function(hours) { //sets a cookie that the user has already seen the notification, closed it or permanently wants to hide it. No information on the user is stored.
-    document.cookie = 'browserupdateorg=pause; expires='+(new Date(new Date().getTime()+3600000*hours)).toGMTString()+'; path=/; SameSite=Lax'+(/https:/.test(location.href)?'; Secure':'')
-}
-
 if (op.already_shown && (op.ignorecookie || op.test))
-    op.setCookie(-10)// remove old cookies if in test mode
+    op.pauseFor(-1)// remove old cookies if in test mode
 
 if (op.reminder>0)
-    op.setCookie(op.reminder);
+    op.pauseFor(op.reminder);
 
 if (op.nomessage) {
     op.onshow(op);
@@ -487,7 +515,7 @@ if (updatebutton) {
         op.onclick(op);
         if (op.noclose)
             return
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         if (!op.noclose) {
             div.style.display = "none";
             if (op.addmargin && op.shift_page_down !== false)
@@ -502,7 +530,7 @@ if (!custom_text) {//make whole bar clickable except if custom text is set
             window.open(op.url, "_blank");
         else
             window.location.href = op.url;
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         op.onclick(op);
     };
 }
@@ -519,12 +547,12 @@ if (ignorebutton) {
         op.onclose(op);
         if (op.addmargin && op.shift_page_down !== false)
             hm.style.marginTop = op.bodymt;
-        op.setCookie(op.reminderClosed);
+        op.pauseFor(op.reminderClosed);
         if (!op.no_permanent_hide && ta.bnever && ta.remind) {
             op.div.innerHTML = '<div class="buorg-pad"><span class="buorg-moremsg">' + (op.reminderClosed > 24 ? ta.remind.replace("{days}", Math.round(op.reminderClosed/24)):"") + '</span> <span class="buorg-buttons"><a id="buorgpermanent" role="button" tabindex="0" href="' + op.url_permanent_hide +'"' + tar + '>' + ta.bnever + '</a></span></div>' + style + style2;
             div.className = "buorg buorg-fadeout";
             document.getElementById("buorgpermanent").onclick = function (e) {
-                op.setCookie(24 * 365);
+                op.pauseFor(24 * 365);
                 op.div.style.display = "none";
             }
             op.div.style.opacity = 0;
