@@ -4,8 +4,8 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.55";
-    this.vsakt = {c:"130",f:"131",s:"17.6",e:"130",i:"12",ios:"17.6",samsung:"27",o:"114",e_a:"129",o_a:"84",y:"24.7.8",v:"6.9",uc:"13.7.8"};
+    this.version="3.3.56";
+    this.vsakt = {c:"132",f:"134",s:"17.6",e:"130",i:"12",ios:"17.6",samsung:"27",o:"114",e_a:"130",o_a:"84",y:"24.7.8",v:"6.9",uc:"13.9.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
     this.vsinsecure_below = {c:"126",f:"126",s:"11.1.1",e:"119",i:11,ios:"16.5",samsung:12.0,o:62,o_a:78,y:"20",v:"6.0",uc:"13.4"};
     this.vsdefault = {c:-3,f:-3,s:-2,e:17,i:11,ios:12,samsung:-3,o:-3,o_a:-3,y:-1,v:-1,uc:-0.2,a:535};
@@ -128,7 +128,7 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===115 || r.vmaj===128)) || (r.n==="c" && (r.vmaj===120))) {
+    if ((r.n==="f" && (r.vmaj===128)) || (r.n==="c" && (r.vmaj===126 || r.vmaj===130))) {
         r.is_supported=true;
         r.is_insecure=false;
         if (r.n==="f")
