@@ -1,13 +1,13 @@
-//(c)2024, MIT Style License <browser-update.org/LICENSE.txt>
+//(c)2025, MIT Style License <browser-update.org/LICENSE.txt>
 //it is recommended to directly link to this file because we update the detection code
 "use strict";
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.56";
-    this.vsakt = {c:"132",f:"134",s:"17.6",e:"130",i:"12",ios:"17.6",samsung:"27",o:"114",e_a:"130",o_a:"84",y:"24.7.8",v:"6.9",uc:"13.9.0"};
+    this.version="3.3.58";
+    this.vsakt = {c:"134",f:"135",s:"18.3",e:"133",i:"12",ios:"18.3",samsung:"27.0.6",o:"117",e_a:"133",o_a:"87.5",y:"25.2",v:"7.1",uc:"14.1.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"126",f:"126",s:"11.1.1",e:"119",i:11,ios:"16.5",samsung:12.0,o:62,o_a:78,y:"20",v:"6.0",uc:"13.4"};
+    this.vsinsecure_below = {c:"130",f:"132",s:"11.1.1",e:"130",i:11,ios:"16.5",samsung:"26.0",o:"115",o_a:"84",y:"20",v:"7.0",uc:"13.8.3"};
     this.vsdefault = {c:-3,f:-3,s:-2,e:17,i:11,ios:12,samsung:-3,o:-3,o_a:-3,y:-1,v:-1,uc:-0.2,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -64,12 +64,13 @@ var $bu_= new function() {
         r.no_device_update=true;
         r.available={}
     }
-    //Safari on iOS 13 in Desktop mode
+    //Safari on iOS >=13 in Desktop mode
     if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
+        ua.match(new RegExp("Version."+VV,"i"));
         r.n="ios";
         r.engine='ios';
-        r.fullv=r.v=13;
-        r.no_device_update=true;//For now, never show a message, TODO!
+        r.fullv=RegExp.$1;
+        r.v=parseFloat(r.fullv);
     }
     //iOS
     if (/iphone|ipod|ipad|ios/i.test(ua)) {
@@ -128,11 +129,12 @@ var $bu_= new function() {
 
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
-    if ((r.n==="f" && (r.vmaj===128)) || (r.n==="c" && (r.vmaj===126 || r.vmaj===130))) {
+    // extended stable, LTS and ESR releases
+    esr=["f:128","c:126","c:132","e:132"]; // Firefox ESR, Chrome LTS, Chrome ESR
+    if (esr.indexOf(r.n+":"+r.vmaj)>-1) {
         r.is_supported=true;
         r.is_insecure=false;
-        if (r.n==="f")
-            r.esr=true;
+        r.esr=true;
     }
     
     if (r.n==="ios" && r.v>=15)
@@ -176,6 +178,9 @@ this.less= function(v1,v2) {
 }
 this.available_ios=function(ua,v) {
     //https://support.apple.com/de-de/guide/iphone/iphe3fa5df43/ios
+    //https://en.wikipedia.org/wiki/IOS_version_history
+    //https://www.ios-resolution.com/
+    
     var h = Math.max(window.screen.height, window.screen.width),pr = window.devicePixelRatio
     if (/ipad/i.test(ua)) {
         if (h == 1024 && pr == 2) // iPad 3 (iOS 9), 4, 5, Mini 2, Mini 3, Mini 4, Air, Air 2, Pro 9.7
@@ -190,10 +195,13 @@ this.available_ios=function(ua,v) {
     }
     if (pr == 1)// 1/3G/3GS
         return 6//for 3GS
-    if (pr == 3)
+    if (h >= 812 && pr == 3)// >=XR
+        return 16
+    if (h >= 812 && pr == 3)// >=X
+        return 16
+    if (pr == 3) //6plus, 7plus, 8plus, >=X
         return 15
-    if (h == 812)// X
-        return 15
+
     if ((h == 736 || h == 667))// && pr == 3)// 6+/6s+/7+ and 8+ or // 6+/6s+/7+ and 8+ in zoom mode + // 6/6s/7 and 8
         return 15//slightly wrong as latest version for iphone 6 is 12
     if (h == 568) // 5/5C/5s/SE or 6/6s/7 and 8 in zoom mode
