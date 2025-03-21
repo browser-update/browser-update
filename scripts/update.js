@@ -130,7 +130,7 @@ var $bu_= new function() {
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
     // extended stable, LTS and ESR releases
-    esr=["f:128","c:126","c:132","e:132"]; // Firefox ESR, Chrome LTS, Chrome ESR
+    var esr=["f:128","c:126","c:132","e:132"]; // Firefox ESR, Chrome LTS, Chrome ESR
     if (esr.indexOf(r.n+":"+r.vmaj)>-1) {
         r.is_supported=true;
         r.is_insecure=false;

@@ -3,6 +3,7 @@ Changes to the notification / detection script
 
 3.3.58 21.03.25
 - fix detection of iOS in desktop mode
+- fix #588
 
 3.3.57 02.03.25
 - updated versions
