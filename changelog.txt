@@ -1,6 +1,10 @@
 Changes to the notification / detection script
 ==========
 
+3.3.59 12.07.25
+- updated LTS (Long term support versions) and Extended stable versions for Edge, Firefox, Chrome. Added Firefox 115 Extended stable
+- updated versions
+
 3.3.58 21.03.25
 - fix detection of iOS in desktop mode
 - fix #588

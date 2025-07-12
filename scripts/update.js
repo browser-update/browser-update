@@ -4,10 +4,10 @@
 
 var $bu_= new function() {
     var s=this;
-    this.version="3.3.58";
-    this.vsakt = {c:"134",f:"135",s:"18.3",e:"133",i:"12",ios:"18.3",samsung:"27.0.6",o:"117",e_a:"133",o_a:"87.5",y:"25.2",v:"7.1",uc:"14.1.0"};
+    this.version="3.3.59";
+    this.vsakt = {c:"138",f:"140",s:"18.6",e:"138",i:"12",ios:"18.5",samsung:"28.0.2",o:"120",e_a:"138",o_a:"90",y:"25.6",v:"7.5",uc:"14.1.0"};
     //severely insecure below(!) this version, insecure means remote code execution that is actively being exploited
-    this.vsinsecure_below = {c:"130",f:"132",s:"11.1.1",e:"130",i:11,ios:"16.5",samsung:"26.0",o:"115",o_a:"84",y:"20",v:"7.0",uc:"13.8.3"};
+    this.vsinsecure_below = {c:"136",f:"136",s:"11.1.1",e:"130",i:11,ios:"16.5",samsung:"26.0",o:"115",o_a:"84",y:"20",v:"7.0",uc:"13.8.3"};
     this.vsdefault = {c:-3,f:-3,s:-2,e:17,i:11,ios:12,samsung:-3,o:-3,o_a:-3,y:-1,v:-1,uc:-0.2,a:535};
     this.names={c:"Chrome",f:'Firefox',s:'Safari',e:"Edge",i:'Internet Explorer',ios:"iOS",samsung:"Samsung Internet",o:'Opera',o_a:'Opera', e_a:"Edge", y:"Yandex Browser",v:"Vivaldi",uc:"UC Browser",a:"Android Browser",x:"Other",silk:"Silk"};
 
@@ -130,7 +130,10 @@ var $bu_= new function() {
     r.is_insecure= r.is_insecure|| !s.vsinsecure_below[r.n] ? undefined :  s.less(r.fullv,s.vsinsecure_below[r.n])===1;
     
     // extended stable, LTS and ESR releases
-    var esr=["f:128","c:126","c:132","e:132"]; // Firefox ESR, Chrome LTS, Chrome ESR
+    var esr=["f:115","f:128","f:140", // Firefox ESR
+        "c:132", // Chrome LTS
+        "c:138", // Chrome Extended Stable, updated every 8 weeks
+        "e:138"];// Edge Extended Stable, updated every 8 weeks
     if (esr.indexOf(r.n+":"+r.vmaj)>-1) {
         r.is_supported=true;
         r.is_insecure=false;
