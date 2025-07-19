@@ -1,9 +1,12 @@
 Changes to the notification / detection script
 ==========
+3.3.60 19.07.25
+- changed latest safari version from 18.6 to 18.5
 
 3.3.59 12.07.25
 - updated LTS (Long term support versions) and Extended stable versions for Edge, Firefox, Chrome. Added Firefox 115 Extended stable
 - updated versions
+- added link to Keycloak addon
 
 3.3.58 21.03.25
 - fix detection of iOS in desktop mode
